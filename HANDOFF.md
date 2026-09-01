@@ -13,8 +13,15 @@ universal `0.282` additive floor was invalid, independent skew budgets are
 impossible, and the stronger disk surrogate is not the live target.
 Proposition 6.7 removes endpoint selection from tripling as well: its exact
 tetrahedral frame has a `3n` internal-edge error and leaves one sharp
-three-state diamond. The multiplier-two residue remains the preferred direct
-gate; the tetrahedral diamond is the named multiplier-three gate after it.
+three-state diamond. Proposition 6.8 gives a second tripling route by
+composing independently optimal orders `n` and `2n`; its bi-balanced
+Hadamard cross block proves the `1:2` diamond unless (6.42)--(6.43) both
+hold. Fixed finite anchor lists cost only an `O(n)` border. Proposition 6.9
+kills every fixed-temperature signed-Eulerian target, including the former
+`c=3` fallback. The multiplier-two residue remains the preferred immediate
+gate; after it, the new two-state `1:2` residue is the preferred
+multiplier-three gate, with the tetrahedral diamond as the independent
+alternative.
 The finite Paley residual ledger below remains valid evidence for the
 stronger `L=1/2` route, but it is not the only acceptance path and should not
 be resumed by default.
@@ -25,7 +32,7 @@ remains open are not the live status; use this header and the highest-numbered
 applicable proposition. Proposition 15.750 supersedes every earlier Type-I
 status line.
 
-**Date:** 2026-09-01 (through Propositions 6.3--6.7 and 15.750; required bi-tight levels 2 and 3 and multi-level Type I are
+**Date:** 2026-09-01 (through Propositions 6.3--6.9 and 15.750; required bi-tight levels 2 and 3 and multi-level Type I are
 closed, residual (ii) is closed for every boundary at
 `k in {4p,4p+2,4p+4}` for every prime `p>=11`, and the exceptional
 and generic branches at `p=13,k=58`, the generic `p=17,k=74` row, and the
@@ -100,7 +107,7 @@ excluding any of its 56 actual line boundaries in two orbits. The positive
 `z=7` remainder stays open. The historical p=13 orbit/mesh `k=6` work is
 not a close and is not a current proof input.
 
-## 6.5--6.7 — exact direct amplification residues
+## 6.5--6.9 — exact direct amplification residues
 
 For an optimal `A` and a skew signing `R`, use Hadamard blocks
 `[[A_ij,-R_ij],[R_ij,A_ij]]`. Both endpoints are `A`, every hereditary cut
@@ -137,6 +144,35 @@ resulting distance-product and distinguished-endpoint spectral shields, but
 does not control their complement. That unshielded tetrahedral diamond is
 the exact open unit for this tripling construction; do not resume endpoint
 selection or report the shields as closure of the ray.
+
+Proposition 6.8 avoids the three-state form by taking an independently
+optimal order-`2n` signing `B`. Pair coordinates within the relative-sign
+classes of positive and negative extrema of `A` and `B`, and tile the paired
+rectangular core by a near-order Paley Hadamard submatrix. If `k_A,k_B` count
+the nonconstant row and column pairs, then exactly
+
+`|x^T C y| <= 4 sqrt(q k_A k_B)+6n`, where `q/n=1+o_Dini(1)`.
+
+The universal headroom between
+`(m_n^(2/3)+m_(2n)^(2/3))^(3/2)` and `m_n+m_(2n)` has leading constant
+`(3sqrt(3)-1-2sqrt(2))/pi=0.435360...`. Therefore every pair with
+`k_A k_B<=n^2/100` is closed. The exact residual is the conjunction of
+`k_A k_B>n^2/100` and the strict reverse of the statewise shield (6.43).
+Refining by any fixed finite anchor signature preserves the core estimate and
+adds only `O(n)` border. This is the concrete halving route; do not turn it
+into a finite state census. Once the multiplier-two ray is proved, closing
+this residual yields the multiplier-three estimate through
+`H(3n)<=H(n)+H(2n)+o_Dini(n)`.
+
+Proposition 6.9 proves that the fixed-temperature free-energy fallback is
+dead. Symmetric conference signings satisfy
+
+`E exp(+-c Q_C/sqrt(n)) <= cosh(c sqrt(1-1/n))^(n/2)`.
+
+Thus their free-energy rate is `(1/2)log cosh(c)<c/2` for every fixed
+`c>0`; at `c=3` the old target fails by `0.345335747...n`. Do not resume a
+fixed-`c` character, SOS, or signed-Eulerian attack. A growing `c_n` route is
+not formally excluded, but it needs an error estimate uniform in `c_n`.
 
 ## 15.750 — isolated-chart parity halving closes multi-level Type I
 
@@ -1412,8 +1448,9 @@ general counter-mechanism and must not be retried. The bounded next pass is:
    positivity alone;
 2. the seven `p=19` profiles left by 15.693, beginning with 15.694's three
    exact bad-line patterns for the four slack-20 rows;
-3. closest-global all-subsets or the corrected `c=3` signed-Eulerian target
-   for the direct asymptotic route (`c=2` is rigorously false);
+3. closest-global all-subsets; the former fixed-`c` signed-Eulerian target is
+   dead for every `c>0` by Proposition 6.9 (only growing temperature escapes
+   that theorem);
 4. Mathon's ratio-dense conference family, where the genuine missing theorem
    is switched-row variance `Omega(r^2)`, not irrationality or parity.
 

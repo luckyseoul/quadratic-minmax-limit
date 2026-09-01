@@ -16,7 +16,15 @@ is the preferred front unless the human explicitly selects the stronger
 Paley `L=1/2` route. Proposition 6.7 also gives an exact equal-endpoint
 tetrahedral tripling frame. Its single-skew distance-product and
 distinguished-endpoint shields do not close the unshielded tetrahedral
-diamond. Do not reopen endpoint selection on either frame, an independent
+diamond. Proposition 6.8 supplies a genuinely different `1:2` composition
+using independently optimal orders `n` and `2n`; its bi-balanced Hadamard
+cross block closes every pair with `k_A k_B <= n^2/100` and leaves exactly
+(6.42)--(6.43). The fixed-anchor signature refinement is the preferred next
+attack on that two-state residue. Proposition 6.9 kills the uniform
+signed-Eulerian free-energy target for every fixed temperature `c>0`, not
+only `c=2`; do not list `c=3` as viable. A growing `c_n -> infinity` route
+is not ruled out, but it must control its error uniformly in `c_n`.
+Do not reopen endpoint selection on either frame, an independent
 skew budget, a finite pair census, the implication from three pairwise
 diamonds to the tetrahedral diamond, or a statewise random-skew union bound.
 Do not present the disk surrogate as an equivalent target: its asymptotic

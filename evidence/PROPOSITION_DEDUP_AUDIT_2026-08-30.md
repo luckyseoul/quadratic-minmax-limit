@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-01
 
-**Scope:** Propositions 6.3--6.7, every assigned proposition through
+**Scope:** Propositions 6.3--6.9, every assigned proposition through
 Proposition 15.750, the live predicate wiring, and the attack scripts present
 during the audit
 
@@ -13,7 +13,7 @@ or finite-prime rerun from being mistaken for a new mathematical attack
 
 The duplication concern was correct.
 
-### Original-question correction and two-ray gate (Propositions 6.3--6.7)
+### Original-question correction and two-ray gate (Propositions 6.3--6.9)
 
 The binding plan had silently strengthened MathOverflow 413935 from existence
 of the limit to existence plus identification of its value.  That made the
@@ -49,6 +49,28 @@ recorded as a convergence theorem. Exact order-two data rule out deriving it
 from three pairwise diamonds, while the actual low-energy bulk rules out the
 literal statewise random-skew union bound at the required constant. Neither
 no-go excludes a correlated or `A`-dependent three-skew construction.
+
+### Post-audit direct corrections (Propositions 6.8--6.9)
+
+Proposition 6.8 supplies the first independent `1:2` composition reduction.
+It is not nested doubling: the order-`2n` block is independently optimal and
+the rectangular cross block is paired simultaneously against its positive
+and negative extrema and those of the order-`n` block. A Paley-Hadamard tile
+then proves the exact cross estimate
+`|x^T C y|<=4sqrt(q k_A k_B)+6n` and closes every pair with
+`k_A k_B<=n^2/100`. The remaining conjunction (6.42)--(6.43) is the exact
+two-state gate. A fixed-anchor signature refinement is authorized because it
+preserves the spectral core with only `O(n)` border; an enumerative pair
+census is still not authorized.
+
+Proposition 6.9 retracts the claim, repeated in the 2026-08-29 cold notes,
+that the signed-Eulerian target remains viable at `c=3`. Symmetric conference
+signings obey
+`E exp(+-c Q_C/sqrt(n))<=cosh(c sqrt(1-1/n))^(n/2)`, so the required fixed-
+temperature lower bound fails by a linear margin for every fixed `c>0`.
+The only unexcluded version has `c=c_n->infinity` and would require uniform
+control of its error. Fixed-`c` SOS, character, and shell variants are now
+duplicates of a disproved target.
 
 ### Post-audit correction (15.720)
 

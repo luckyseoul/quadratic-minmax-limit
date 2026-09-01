@@ -48,6 +48,9 @@ def test_solution_does_not_assert_limit_theorem():
     assert "no longer acceptance gates" in long_goal
     assert "Existence CLOSED; value unidentified" in long_goal
     assert "Proposition 6.3" in long_goal
+    assert "Proposition 6.8" in long_goal
+    assert "Proposition 6.9" in long_goal
+    assert "(6.42)--(6.43)" in long_goal
     assert "multipliers 2 and 3" in long_goal
     assert "Dini-summable" in long_goal
 
@@ -66,6 +69,17 @@ def test_solution_does_not_assert_limit_theorem():
     assert "**Proposition 6.5 (equal-endpoint skew reduction).**" in text
     assert "**Proposition 6.6 (balanced Paley-skew shielding).**" in text
     assert "**Proposition 6.7 (tetrahedral tripling frame and exact diamond).**" in text
+    assert "**Proposition 6.8 (bi-balanced Hadamard shield" in text
+    assert "**Proposition 6.9 (conference obstruction to every fixed-temperature" in text
+    assert "{\\cal J}=\\begin{pmatrix}" in text
+    assert "\\sqrt{q\\,k_A(x)k_B(y)}" in text
+    assert "\\sqrt{q,k_A(x)k_B(y)}" not in text
+    assert "three diagonal\nmatching terms" in text
+    assert "k_A(x)k_B(y)>{n^2\\over100}" in text
+    assert "false for every fixed" in text
+    binding_docs = text + readme + long_goal
+    assert "c=3` remains viable" not in binding_docs
+    assert "c=3 remains viable" not in binding_docs
     assert "the **tetrahedral diamond**---is open" in text
     assert "does not prove the multiplier-three ray" in text
     assert "Every hereditary endpoint inequality (6.10) is automatic" in text

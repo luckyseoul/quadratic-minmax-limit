@@ -4,6 +4,13 @@
 **Status:** proved algebra and a general counter-mechanism; kills the local/product
 route but does not prove \(k_\star=o(n^2)\) or settle \(L\)
 
+> **Supersession notice (2026-09-01).** The local/product no-go and the exact
+> cut-code identity remain valid. The claim below that fixed temperature
+> `c=3` survives is false and is superseded by Proposition 6.9 and
+> `NOTE_2026-09-01_FIXED_C_FREE_ENERGY_CONFERENCE_BARRIER.md`: symmetric
+> conference signings violate the proposed lower bound by a linear margin for
+> every fixed `c>0`.
+
 Let \(C\) be a fixed signing on \(K_n\), put \(N=\binom n2\), and for a
 signing \(A\) define \(W=A\circ C\). Distance in this note includes both
 Seidel switching and global sign:
@@ -353,10 +360,14 @@ The fractional-moment construction rules out (12) for
 \[
 c<\frac{\log2}{\sqrt{\log2}-1/2}=2.0843108\ldots.
 \]
-The clean surviving target is \(c=3\):
+The historical candidate was \(c=3\):
 \[
 \inf_a\log P_a(\tanh(3/\sqrt n))\ge-\frac34n-o(n).
 \]
+
+Proposition 6.9 disproves this candidate. In fact every fixed-\(c\) instance
+of (12) fails on the infinite symmetric Paley conference family. Only a
+growing-temperature formulation remains logically possible.
 
 Classical covering-radius information does not approach this scale. The dual
 already contains a broad range of Eulerian weights, so Delsarte external
@@ -364,17 +375,20 @@ distance loses the \(n^{3/2}\) term. Nor can the ordinary fixed-\(L^q\)
 moment-norm lower bound see it:
 for each fixed \(q\), degree-two hypercontractivity gives
 \(\|Q_a\|_q=O_q(n)\), whereas the target is order \(n^{3/2}\). A useful
-cut-code attack therefore has to preserve the multiplicative phases among
-many Eulerian shells, at a temperature above the fractional-moment barrier;
-termwise absolute values destroy the critical cancellation.
+cut-code attack would therefore have to preserve the multiplicative phases
+among many Eulerian shells. Proposition 6.9 now rules out every fixed
+temperature, so any surviving version must use a growing temperature with a
+uniform error estimate; termwise absolute values still destroy the critical
+cancellation.
 
 ## Consequence for the attack
 
 The old local/product route is closed as a path. The replacement choices are:
 
 1. exploit (6) using the exact global/cardinality-minimal quantifier;
-2. prove the corrected signed-Eulerian free-energy bound (12), for example
-   at \(c=3\), possibly through a high-level character/SOS hierarchy;
+2. ~~prove the fixed-temperature signed-Eulerian bound (12)~~ -- disproved
+   for every fixed \(c>0\) by Proposition 6.9; a growing-temperature variant
+   would need a new error analysis uniform in \(c\);
 3. prove an eventual Paley character-transport estimate strong enough for the
    actual \(o(p^3)\) deficit target; or
 4. on the adversarial side, establish a uniform Boolean-radius gap for a

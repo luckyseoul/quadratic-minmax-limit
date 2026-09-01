@@ -16,7 +16,7 @@ min-max ±1 quadratic form converges. The limit **L is OPEN**. This repo is a
 proof ledger with 665 source-backed computational proposition modules through
 15.750 plus reviewed analytic arguments in `solution.md`. Machine gates use
 explicit `True`/`False` predicates, and soft-closing is banned by test
-(`tests/test_main_chain_docs.py`); Propositions 6.3--6.7 are proved in prose,
+(`tests/test_main_chain_docs.py`); Propositions 6.3--6.9 are proved in prose,
 not represented as computational predicates.
 
 ## Status
@@ -25,7 +25,7 @@ not represented as computational predicates.
 
 **Main claim:** L = lim_n α_n is **OPEN** (2026-09-01).
 
-### Current audit (2026-09-01; through Proposition 15.750 and Propositions 6.3--6.7)
+### Current audit (2026-09-01; through Proposition 15.750 and Propositions 6.3--6.9)
 
 - **Original-question correction and new direct gate.** MathOverflow 413935
   asks whether the limit exists; identifying its value is optional.  With
@@ -61,6 +61,17 @@ not represented as computational predicates.
   distinguished-endpoint spectral shields are proved. Their unshielded
   tetrahedral complement remains open, so multiplier three is not closed.
 
+- **Independent 1:2 reduction.** Proposition 6.8 composes independently
+  optimal signings of orders `n` and `2n`. Pairing coordinates inside the
+  positive/negative extremizer signatures and tiling the rectangular cross
+  block by a near-order Paley Hadamard core gives
+  `|x^T C y| <= 4 sqrt(q k_A k_B)+6n`. The exact 1:2 diamond is therefore
+  proved whenever `k_A k_B <= n^2/100`; only the pair-central,
+  high-joint-energy complement (6.42)--(6.43) remains. Fixed finite anchor
+  lists preserve the estimate with only an `O(n)` border, giving a concrete
+  halving/refinement route. This is a strict infinite-family reduction, not
+  closure of tripling.
+
 - **Multi-level Type-I close.** Proposition 15.750 closes this all-prime
   Paley gate. For `p>=11`, an isolated vertex is transported to infinity;
   square-direction Johnson rigidity forces exactly three parallel units,
@@ -76,11 +87,13 @@ not represented as computational predicates.
 - **Hamming-stability route.** Local edge optimality, switching minimality,
   Max-Lipschitz control, and all product second moments can coexist at distance
   \(\Theta(n^2)\) from Paley. A successful proof must instead use closest
-  global/cardinality minimality (and its all-subsets witness hierarchy), or an
-  augmented-cut-code signed-Eulerian free-energy inequality above the
-  fractional-moment barrier. The proposed `c=2` target is false; the surviving
-  target is `c=3` with
-  `log P_a(tanh(3/sqrt(n))) >= -3n/4-o(n)`.
+  global/cardinality minimality (and its all-subsets witness hierarchy).
+  Proposition 6.9 closes the former augmented-cut-code fallback at every
+  fixed temperature: symmetric conference signings satisfy
+  `E cosh(c Q_C/sqrt(n)) <= cosh(c sqrt(1-1/n))^(n/2)`, which is below the
+  required `exp(cn/2-o(n))` by a linear margin for every fixed `c>0`. In
+  particular `c=3` is false, not viable. Only a growing-temperature criterion
+  with error uniform in `c_n` remains logically possible on that route.
 - **Bi-tight correction.** Proposition 15.55's kernel claim, and therefore
   15.167's final spectral implication, is false: `ker(G-(n/2)P1)` also
   contains `ker G`. Proposition 15.720 replaces it. A centered bi-tight
@@ -994,7 +1007,7 @@ Proposition 15.721 supersedes the active all-finite shell statuses in
 | 15.688 | paired-cube quarter-integrality separates the `H=1` and `H>=2` branches and combines with the exact stabilizer weights to give the sharp lift floor `4p E[B]>=p-3`; completion-bounded enumeration corrects the residue-zero minimum to a 143-profile census | removes every positive-residue row at the `p=19,s=16` second boundary; the endpoint and top-level gates remain open |
 | 15.689 | the published `PG(2,19)` complete-arc spectrum, undetermined infinity points, repair, and retained-conic-secant bounds exclude every residue-zero profile of slack at most twelve | reduces `p=19` from 143 to exactly 14 high-slack profiles `{16:7,20:4,24:1,28:1,32:1}`; the endpoint and top-level gates remain open |
 | 15.690 | exact square-torus character orthogonality and affine autocorrelation give `S_K=12(q-1)||delta||^2/n`; abstract equivariant spectra and PSD autocorrelations violate the desired bound | identifies the dilation inequality with strong R1 itself and proves character/PSD-only routes insufficient; R1 remains open |
-| 15.691 | a fractional-moment argument constructs signings with `log P_a(tanh(c/sqrt(n)))<=-(c/2-sqrt(log 2))^2 n+o(n)` | disproves the original signed-Eulerian `c=2` target; the corrected `c=3` target remains open and no top-level gate changes |
+| 15.691 | a fractional-moment argument constructs signings with `log P_a(tanh(c/sqrt(n)))<=-(c/2-sqrt(log 2))^2 n+o(n)` | historically disproved the original `c=2` target; Proposition 6.9 now supersedes its proposed `c=3` fallback and kills every fixed-`c` uniform target |
 | 15.692 | over `F_2`, affine incidence satisfies `A^T A=I+J`, making the even-point Radon map an isomorphism with inverse `x=A^T r`; exact even-support witnesses defeat every profile's first-two-moment relaxation | reduces the fourteen `p=19` survivors to nonlinear inverse-weight equations `wt(A^T r)=16`; no endpoint or top-level gate closes |
 | 15.693 | in the four-deletion slack-16 branch, the complete repaired 14-arc would have four deleted plus at least one unused infinity point of secant index one, while the exhaustive classification permits at most four | excludes all seven slack-16 profiles and reduces `p=19` to `{20:4,24:1,28:1,32:1}`; slack 20 now forces exactly five repair deletions |
 | 15.694 | equality in `slack(S)>=4 sum mu_A(x)` forces every slack-20 witness to split into an 11-arc and a 5-arc, with each deleted point on one core secant and only eight allowed per-line occupancy types | reduces the four slack-20 rows to three bad-line patterns and 13-arcs with `c1>=7` or `8`; the classified maximum is 9, so the endpoint remains open |
@@ -1608,7 +1621,9 @@ Lemma D is complete and is no longer on the work list.
 | `scripts/p31_complete_22arc_public_audit.py` | Deterministic public-class audit producing `evidence/p31_complete_22arc_public_11_audit.json` |
 | `evidence/p7_infinity7_positive_z7_global_semigroup_summary.json` | Compact hash-pinned affine/global-join and Hilbert-basis certificate for 15.718 |
 | `evidence/p7_infinity7_positive_z7_projected_stabilization_summary.json` | Compact hash-pinned finite projected-semigroup stabilization certificate for 15.719 |
-| `evidence/NOTE_2026-08-29_global_minimality_and_local_stability_no_go.md` | General local-stability counter-mechanism, closest-global hierarchy, Mathon barrier, and corrected signed-Eulerian target after the `c=2` no-go |
+| `evidence/NOTE_2026-09-01_ONE_TWO_BIBALANCED_HADAMARD.md` | Exact independent `1:2` diamond, four-extremizer paired Hadamard shield, residual (6.42)--(6.43), and fixed-anchor refinement |
+| `evidence/NOTE_2026-09-01_FIXED_C_FREE_ENERGY_CONFERENCE_BARRIER.md` | Sharp half-projection Laplace bound and infinite conference counterfamily killing every fixed-temperature free-energy target |
+| `evidence/NOTE_2026-08-29_global_minimality_and_local_stability_no_go.md` | General local-stability counter-mechanism, closest-global hierarchy, Mathon barrier, and historical fixed-temperature target now superseded by Proposition 6.9 |
 | `evidence/NOTE_2026-08-29_dilation_energy_normalization_and_no_go.md` | Exact R1 dilation-energy identity and representation/PSD/autocorrelation route obstructions |
 | `evidence/STRATEGY_2026-08-29_COLD_REVIEW.md` | Cold reconstruction of the original problem, actual asymptotic gate, killed shortcuts, and bounded four-team Ultra attack |
 | `evidence/p11_size8_boundary_SHA256SUMS` | Seven-file permanent-archive manifest for Proposition 15.670 |

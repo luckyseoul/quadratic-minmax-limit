@@ -1,4 +1,4 @@
-# Status (2026-09-01; through Proposition 15.750 and Propositions 6.3--6.7)
+# Status (2026-09-01; through Proposition 15.750 and Propositions 6.3--6.9)
 
 **The original question has been separated from the stronger Paley value
 program.**  MathOverflow 413935 asks for existence, not an identified value.
@@ -45,6 +45,33 @@ single-skew specialization reduces the second ray to
 at the sharp target `3 sqrt(3)m_n+o_Dini(n^(3/2))`. Difference-product and
 distinguished-endpoint spectral shields are proved, but their tetrahedral
 complement remains open. Thus neither amplification ray is yet closed.
+
+Proposition 6.8 gives a second, genuinely two-state route to the multiplier-
+three estimate. It composes independently optimal signings of orders `n` and
+`2n`, pairs coordinates inside the signatures of their positive and negative
+extremizers, and uses a rectangular Paley-Hadamard core. With paired-cut
+counts `k_A,k_B`, its cross block obeys
+
+`|x^T C y| <= 4 sqrt(q k_A k_B)+6n`, with `q/n=1+o_Dini(1)`.
+
+The available headroom is at least
+`((3sqrt(3)-1-2sqrt(2))/pi-o(1)) n^(3/2)`, whose constant is
+`0.435360...>0.4`. Hence the exact `1:2` diamond is proved on
+`k_A k_B<=n^2/100`; only (6.42)--(6.43) remains. Any fixed finite list of
+additional anchors can be incorporated by signature refinement with only an
+`O(n)` border. Once doubling is closed, closing this two-state residue would
+give `H(3n)<=H(n)+H(2n)+o_Dini(n)` and hence the required second ray.
+
+Proposition 6.9 also removes a stale fallback. For every symmetric conference
+signing and every fixed `c>0`,
+
+`E cosh(c Q_C/sqrt(n)) <= cosh(c sqrt(1-1/n))^(n/2)`.
+
+Its exponential rate is `(1/2)log cosh(c)<c/2`, so the formerly proposed
+uniform signed-Eulerian free-energy lower bound is false for **every** fixed
+temperature. At `c=3` the linear failure margin is `0.345335747...n`.
+Only a growing-temperature criterion with error uniform in the temperature
+escapes this conference obstruction.
 
 The status below records the still-valid, stronger Paley `L=1/2` route.  It is
 no longer the sole acceptance path for the original problem.
@@ -732,11 +759,11 @@ is only `Phi(C_p)-m_{p^2+1}=o(p^3)` on a ratio-dense Paley tail
 random-plus-edge-descent construction kills local/product Paley stability:
 correct-scale edge-local minima can remain `Theta(n^2)` from the signed
 Paley orbit, and the product-frame second moments are signing-independent.
-The surviving replacements are closest-global all-subsets witnesses, the
-full-Max+ dilation-energy form of strong R1, and a signed even-Eulerian
-free-energy bound above the fractional-moment barrier. The original `c=2`
-free-energy target is false by a linear-margin fractional-moment
-construction; `c=3` remains viable. Character orthogonality normalizes the
+The surviving replacements are closest-global all-subsets witnesses and the
+full-Max+ dilation-energy form of strong R1. The historical fixed-temperature
+signed even-Eulerian proposal is superseded by Proposition 6.9: every fixed
+`c>0`, including `c=3`, fails by a linear margin on symmetric conference
+signings. A growing-temperature variant is not ruled out. Character orthogonality normalizes the
 dilation energy exactly but cannot upper-bound it, and PSD/autocorrelation
 surrogates admit explicit violations. See
 `evidence/STRATEGY_2026-08-29_COLD_REVIEW.md`.

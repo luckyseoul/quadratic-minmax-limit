@@ -40,7 +40,13 @@ Anything else — including “honest OPEN,” “structure shipped,” “censu
   equal-endpoint tetrahedral frame for multiplier 3, with only a \(3n\)
   internal-edge error. Its single-skew form is an exact three-state diamond;
   two spectral shields are proved, but the unshielded complement remains
-  open.
+  open. Proposition 6.8 gives an independent `1:2` composition: its
+  bi-balanced Hadamard cross block proves the exact two-state diamond when
+  `k_A k_B<=n^2/100`, leaving only (6.42)--(6.43). Fixed finite anchor
+  refinement changes only the `O(n)` border. Proposition 6.9 proves that the
+  former signed-Eulerian fallback fails for every fixed temperature `c>0`,
+  including `c=3`; only a growing-temperature formulation remains logically
+  possible.
 - \(\rho=1\) on that Paley family, so \(\Phi(C_n)=\frac12 n\sqrt{n-1}\) and \(\alpha_{n_k}\to 1/2\) **if** E(1) holds there.
 - 15.167's majorization algebra is conditionally valid, but its final bi-tight implication is **retracted** because `ker(G-(n/2)P1)` contains `ker G`. Proposition 15.720 instead excludes the required bi-tight levels 2 and 3 for every prime `p>=5` by a degree congruence. Its bi-tight level-4 corollary does not exclude one-sided tight level 4.
 - Propositions 15.726--15.727 historically narrowed the first general
@@ -93,7 +99,8 @@ Closing the sole open residual-(ii) unit completes the remaining E1 ledger,
 but it is not necessary for a different proof of convergence and is not goal
 completion. The direct convergence front is to close the multiplier-two
 diamond on the exact residue (6.20), then close Proposition 6.7's unshielded
-tetrahedral diamond or prove the `1:2` split in Proposition 6.3. Endpoint
+tetrahedral diamond or close Proposition 6.8's two-state residual
+(6.42)--(6.43). Endpoint
 selection is retired on both explicit frames; independent skew-norm budgets
 and an all-pairs composition theorem are not the live target. The disk
 surrogate is strictly stronger, not equivalent: its asymptotic form would

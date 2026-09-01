@@ -40,7 +40,12 @@ Dini-summable amplification estimates, at multipliers \(2\) and \(3\), for
 and Proposition 6.6 proves that diamond off one explicit Hamming-central/
 joint-energy residue. Proposition 6.7 gives an equal-endpoint tetrahedral
 tripling frame and two exact spectral shields, but leaves their complement
-open. Neither amplification ray is complete.
+open. Proposition 6.8 instead composes independently optimal orders \(n\)
+and \(2n\): a bi-balanced Hadamard cross block proves the exact \(1:2\)
+diamond outside a pair-central/high-joint-energy residue. Proposition 6.9
+proves that the formerly proposed fixed-\(c\) free-energy route is false for
+every fixed \(c>0\), including \(c=3\). Neither required amplification ray
+is complete.
 
 **Stronger value-specific target — not a theorem.** Sandwich + Paley
 denseness (\(\rho=1\) on \(n=p^2+1\)) + E(1) on that family would give
@@ -84,7 +89,7 @@ remaining `z=7` pointed systems and identify their projected high-catalog
 semigroups through grade six, but exclude no source boundary.  All 56 actual
 `z=7` line boundaries in two orbits remain open.
 
-The intended Type I two-level close is 15.272 (\(k=1\cup k=3\) span \(\Rightarrow G_+\succ0\)), not Gsum and not Aut-Schur. **Status (2026-09-01; through Propositions 6.3--6.7 and 15.750).** The direct multiplier-2 and multiplier-3 estimates are open: Proposition 6.6 narrows multiplier two to (6.20), while Proposition 6.7 narrows multiplier three to an unshielded tetrahedral diamond. Neither proposition closes its ray. The optional Paley \(L=1/2\) route also remains open at residual (ii). Details: `evidence/share/denseness_path_package.md` § Caveats.
+The intended Type I two-level close is 15.272 (\(k=1\cup k=3\) span \(\Rightarrow G_+\succ0\)), not Gsum and not Aut-Schur. **Status (2026-09-01; through Propositions 6.3--6.9 and 15.750).** The direct multiplier-2 and multiplier-3 estimates are open: Proposition 6.6 narrows multiplier two to (6.20); Proposition 6.7 narrows direct tripling to an unshielded tetrahedral diamond; and Proposition 6.8 gives a different \(1:2\) reduction with residual (6.42)--(6.43). None closes its ray. Proposition 6.9 kills every fixed-temperature version of the signed-Eulerian free-energy target, so \(c=3\) is no longer a live fallback. The optional Paley \(L=1/2\) route also remains open at residual (ii). Details: `evidence/share/denseness_path_package.md` § Caveats.
 
 > **Reader note.** Soft-close of \(L=\tfrac12\) via scheme-min Gsum was
 > **retracted** 2026-08-06. Aut-Schur remains false. Historical “\(L\) OPEN”
@@ -838,6 +843,205 @@ gives \(\|w\|_2^2=h\), while skewness gives
  w^*Rw=i\sqrt3\bigl(u_1^TRu_2+u_2^TRu_3+u_3^TRu_1\bigr).
 \]
 Thus \(|C_R|\le4\Lambda h/\sqrt3\), completing the proof. \(\square\)
+
+**Proposition 6.8 (bi-balanced Hadamard shield for the \(1:2\)
+composition).**  Let \(A\) and \(B\) be independently optimal signings of
+orders \(n\) and \(2n\), and put
+\[
+ M=m_n,\qquad N=m_{2n},\qquad
+ T=(M^{2/3}+N^{2/3})^{3/2}.
+\]
+Choose positive and negative extremizers \(z_+,z_-\) of \(A\), and
+\(w_+,w_-\) of \(B\).  For every sufficiently large \(n\) there is an
+\(n\)-by-\(2n\) sign matrix \(C\) such that the order-\(3n\) signing
+\[
+ {\cal J}=\begin{pmatrix}A&C\\ C^T&B\end{pmatrix}               \tag{6.38}
+\]
+has the exact two-state form
+\[
+ \Phi({\cal J})=
+ \max_{x,y}\bigl(|Q_A(x)+Q_B(y)|+|x^TCy|\bigr).                 \tag{6.39}
+\]
+
+More precisely, pair the row coordinates within the two relative-sign
+classes of \(z_+\circ z_-\), and pair the column coordinates within the two
+classes of \(w_+\circ w_-\).  For a state \(x\), let \(k_A(x)\) be the
+number of row pairs on which \(z_+\circ x\) is nonconstant, and define
+\(k_B(y)\) analogously.  Then all four Boolean states
+\(\mathord\pm z_+,\mathord\pm z_-\) have \(k_A=0\), and likewise on the
+\(B\)-side.  The matrix \(C\) can be chosen so that
+\[
+ |x^TCy|\le4\sqrt{q\,k_A(x)k_B(y)}+6n,                          \tag{6.40}
+\]
+where \(q/n=1+O(\exp(-c\sqrt{\log n})+n^{-1})\).  Consequently
+\[
+ k_A(x)k_B(y)\le {n^2\over100}
+ \quad\Longrightarrow\quad
+ |Q_A(x)+Q_B(y)|+|x^TCy|\le T.                                 \tag{6.41}
+\]
+The exact residual for this construction consists only of pairs satisfying
+both
+\[
+ k_A(x)k_B(y)>{n^2\over100}                                    \tag{6.42}
+\]
+and
+\[
+ 4\sqrt{q\,k_A(x)k_B(y)}+6n
+   >T-|Q_A(x)+Q_B(y)|.                                         \tag{6.43}
+\]
+Thus the construction shields fixed linear Hamming strips around every
+chosen positive and negative extremizer on either side.  It is a proved
+infinite-family reduction, not a proof of the multiplier-three ray.
+
+*Proof.*  Flipping all signs of \(x\) fixes the two quadratic terms in
+\(Q_{\cal J}\) and reverses \(x^TCy\).  The identity
+\(\max(|a+b|,|a-b|)=|a|+|b|\) proves (6.39).
+
+For positive \(a,b\), the function
+\[
+ f(a,b)=(a^{2/3}+b^{2/3})^{3/2}-a-b
+\]
+is increasing in each variable.  Proposition 5.2 therefore gives the
+uniform headroom
+\[
+ {T-M-N\over n^{3/2}}
+ \ge d_0-o(1),\qquad
+ d_0={3\sqrt3-1-2\sqrt2\over\pi}
+     =0.4353604839\ldots .                                     \tag{6.44}
+\]
+No doubling estimate is used here.
+
+Gauge the rows by \(z_+\) and the columns by \(w_+\).  Pair coordinates
+inside the two level sets of each relative-sign vector.  There are
+\(r\le n/2\) row pairs and \(s\le n\) column pairs, with at most two
+unpaired coordinates on either side.  On a row pair \(\{i,i'\}\) put
+\(u_a=(x_i-x_{i'})/2\), after gauging, and define \(v_b\) analogously on
+column pairs.  Then \(k_A=|\operatorname{supp}u|\) and
+\(k_B=|\operatorname{supp}v|\).
+
+The effective prime-number theorem in the progression \(3\bmod4\), as in
+Proposition 6.6, supplies a prime \(p\ge n\) with
+\(p-n\le n\exp(-c\sqrt{\log n})\).  A Paley Hadamard matrix of order
+\(q=p+1\) exists.  Take any \(r\)-by-\(s\) submatrix \(E\), so
+\[
+ \|E\|_{\rm op}\le\sqrt q,qquad
+ {q\over n}=1+O(\exp(-c\sqrt{\log n})+n^{-1}).                 \tag{6.45}
+\]
+On row pair \(a\) and column pair \(b\), put the sign tile
+\[
+ E_{ab}\begin{pmatrix}1&-1\\-1&1\end{pmatrix}.
+\]
+Fill entries incident to unpaired coordinates arbitrarily and undo the
+gauges.  The paired core is exactly \(4u^TEv\).  At most \(6n\) entries
+lie on the border, hence
+\[
+ x^TCy=4u^TEv+\operatorname{border},\qquad
+ |\operatorname{border}|\le6n,
+\]
+which proves (6.40).  If \(k_Ak_B\le n^2/100\), its leading term is at
+most \((0.4+o(1))n^{3/2}\).  Since \(0.4<d_0\), (6.44) proves (6.41) for
+all sufficiently large \(n\).  Complementing this conclusion and retaining
+the sharper statewise headroom gives (6.42)--(6.43). \(\square\)
+
+For any fixed finite lists of row and column anchors, one may refine the
+coordinate classes by their complete relative-sign signatures and pair
+inside each class.  Every listed anchor then has zero paired difference.
+There are at most \(2^{R-1}\) and \(2^{S-1}\) leftovers for \(R\) row and
+\(S\) column anchors, so fixed \(R,S\) change only the \(O(n)\) border in
+(6.40).  This is the precise finite-anchor halving extension of Proposition
+6.8.  If the small block in (6.38) is instead \(-A_0\), while \(B\) is the
+equal-endpoint doubling frame whose two diagonal blocks are \(A_0\), then
+regrouping recovers Proposition 6.7's \(K_3\), up to its three diagonal
+matching terms of total size at most \(3n\).  Thus nested doubling gives no
+new tripling control; the new two-state gate depends essentially on taking
+\(B\) independently optimal.
+
+**Proposition 6.9 (conference obstruction to every fixed-temperature
+free-energy target).**  Let \(P\) be an orthogonal projection on
+\(\mathbb R^n\) with rank \(n/2\) and diagonal entries \(P_{ii}=1/2\).
+For every \(t>0\),
+\[
+ \mathbb E_x e^{-t x^TPx}
+ \le\left({1+e^{-2t}\over2}\right)^{n/2}.                      \tag{6.46}
+\]
+Consequently, if \(C\) is a symmetric conference signing,
+\(C^2=(n-1)I\), then for every \(\beta\ge0\),
+\[
+ \mathbb E_x e^{\mathord\pm\beta Q_C(x)}
+ \le\cosh\!\left(\beta\sqrt{n-1}\right)^{n/2},               \tag{6.47}
+\]
+and hence, along any sequence of symmetric conference signings \(C_n\) whose
+orders tend to infinity, for every fixed \(c>0\),
+\[
+ \limsup_{n\to\infty}{1\over n}
+ \log\mathbb E_x\cosh\!\left({c\over\sqrt n}Q_{C_n}(x)\right)
+ \le {1\over2}\log\cosh c < {c\over2}.                      \tag{6.48}
+\]
+There are infinitely many such Paley conference matrices.  Therefore the
+uniform fixed-\(c\) sufficient target
+\[
+ \inf_A\log\mathbb E_x\cosh\!\left({c\over\sqrt n}Q_A(x)\right)
+ \ge {c\over2}n-o(n)                                          \tag{6.49}
+\]
+is false for every fixed \(c>0\).  At \(c=3\) it fails by at least
+\[
+ {3-\log\cosh3\over2}\,n-o(n)
+ =0.3453357477\ldots n-o(n).                                  \tag{6.50}
+\]
+
+*Proof.*  Write \(P=U^TU\), where \(UU^T=I_{n/2}\), and let \(u_i\) be
+the columns of \(U\).  The Gaussian Fourier identity and averaging the
+Rademacher signs give
+\[
+ \mathbb E_xe^{-t x^TPx}
+ =(4\pi t)^{-n/4}\int e^{-\|\xi\|^2/(4t)}
+       \prod_i\cos\langle u_i,\xi\rangle\,d\xi.
+\]
+Take absolute values, put \(v_i=\sqrt2u_i\), and note that
+\(\|v_i\|=1\) and \(\sum_i\tfrac12v_iv_i^T=I\).  Apply the geometric
+rank-one Brascamp--Lieb inequality with weights \(1/2\) to
+\[
+ f(s)=e^{-s^2/(4t)}\cos^2(s/\sqrt2).
+\]
+The integral is at most \((\int_{\mathbb R}f)^{n/2}\), while
+\[
+ \int_{\mathbb R}f(s)\,ds
+ =\sqrt{4\pi t}\,{1+e^{-2t}\over2}.
+\]
+The Gaussian normalization cancels, proving (6.46).
+
+Put \(\lambda=\sqrt{n-1}\) and
+\(P_\pm=(I\pm C/\lambda)/2\).  These are rank-\(n/2\) projections with
+diagonal \(1/2\), and
+\[
+ Q_C(x)=\lambda\bigl(n/2-x^TP_-x\bigr),\qquad
+ -Q_C(x)=\lambda\bigl(n/2-x^TP_+x\bigr).
+\]
+Applying (6.46) to the two signs gives (6.47); taking
+\(\beta=c/\sqrt n\) gives (6.48).  Paley matrices of order \(q+1\) for
+primes \(q\equiv1\pmod4\) supply the infinite counterfamily. \(\square\)
+
+Equivalently, for the signed even-Eulerian polynomial
+\[
+ \mathbb E_x\cosh(\beta Q_C(x))
+ = (\cosh\beta)^{\binom n2}P_C(\tanh\beta),
+\]
+Proposition 6.9 gives
+\[
+ \limsup {1\over n}\log P_{C_n}(\tanh(c/\sqrt n))
+ \le {1\over2}\log\cosh c-{c^2\over4},                         \tag{6.51}
+\]
+strictly below the formerly proposed lower bound
+\((c/2-c^2/4)n-o(n)\) for every fixed \(c>0\).  This does not rule out a
+growing temperature \(c=c_n\to\infty\). With
+\(t_n=c_n\sqrt{1-1/n}\), the conference loss relative to \(c_n n/2\) is
+\[
+ {n\over2}\bigl(c_n-\log\cosh t_n\bigr)
+ ={\log2\over2}n+{c_n\over2(1+\sqrt{1-1/n})}+o(n)
+ =O(n+c_n)=o(c_n n).
+\]
+Thus a growing-temperature criterion with a correspondingly uniform error
+remains logically possible.
 
 ---
 
@@ -4057,7 +4261,9 @@ This is the natural rigidity route to Theorem E(1): a matching lower bound \(\rh
    Proposition 6.5 makes the multiplier-two endpoints equal and reduces the
    ray to the exact mixed-state diamond (6.13); Proposition 6.6 proves it
    outside the explicit residue (6.20). That residue remains, and the
-   multiplier-three or `1:2` split is independently required.
+   multiplier-three estimate is independently required. Proposition 6.7
+   reduces direct tripling to its tetrahedral diamond, while Proposition 6.8
+   reduces the alternative `1:2` composition to (6.42)--(6.43).
 2. Asymptotic conference optimality + \(\rho(C_k)\to\rho_*\) (Theorem E) — reduced by Theorem G to product-minimisation of \(\rho\cdot\|A\|_{\mathrm{op}}\).
 3. Extension regularity \(\delta_n/\sqrt n\to\ell\) (Theorem F), or the stronger \(\gamma(A^*)=(\tfrac32\alpha_n+o(1))\sqrt n\).
 4. Maximizer delocalisation + discrepancy feeding (3).
@@ -4220,6 +4426,10 @@ Exact \(m_n\) harvest under SCRATCH (86-worker Gray `exact_m_parallel.py`):
 5. N. Alon, K. Makarychev, Y. Makarychev, A. Naor, Quadratic forms on graphs, *Invent. Math.* (2006).
 6. B. S. Kashin, S. J. Szarek, On the Gram matrices of systems of uniformly bounded functions, *Proc. Steklov Inst.* (2003).
 7. Yu. Nesterov, Semidefinite relaxation and nonconvex quadratic optimization, *Optim. Methods Softw.* (1998).
+8. H. J. Brascamp and E. H. Lieb, Best constants in Young's inequality, its
+   converse, and its generalization to more than three functions,
+   *Adv. Math.* **20** (1976), 151--173,
+   doi:10.1016/0001-8708(76)90184-5.
 
 ## Prop 15.105 (2026-07-31) — Φ variance = κ_orth; 16-criterion
 
@@ -8989,13 +9199,16 @@ by a linear margin. The corrected sufficient target is
 \]
 
 The fractional-moment construction rules out (15.691.2) for
-`c<2.0843108...`; the clean surviving choice is
+`c<2.0843108...`; the historical candidate left by this proposition was
 
 \[
 \inf_a\log P_a(\tanh(3/\sqrt n))\ge-3n/4-o(n).  \tag{15.691.3}
 \]
 
-No top-level gate is changed.
+Proposition 6.9 supersedes that status: (15.691.2) is false for every fixed
+`c>0`, including (15.691.3), on symmetric conference signings. Only a
+growing-temperature version remains logically possible. No top-level gate is
+closed.
 
 Evidence: `evidence/NOTE_2026-08-29_global_minimality_and_local_stability_no_go.md`.
 

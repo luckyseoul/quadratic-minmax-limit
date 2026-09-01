@@ -4,6 +4,13 @@
 **Verdict:** \(L\) is still open, but the search space is materially narrower
 and the next multi-agent pass has three bounded targets
 
+> **Supersession notice (2026-09-01).** The fixed-`c` free-energy target in
+> this historical review is dead. Proposition 6.9 proves a conference-matrix
+> counterexample for every fixed `c>0`, including `c=3`. Retain the
+> local/product and spectral-class no-go results; do not use the old
+> free-energy recommendation. See
+> `NOTE_2026-09-01_FIXED_C_FREE_ENERGY_CONFERENCE_BARRIER.md`.
+
 ## 1. The original problem, stripped back down
 
 For a signing \(a\) of the edges of \(K_n\),
@@ -92,16 +99,16 @@ The corrected fixed-\(c\) sufficient target is
 \tag{3'}
 \]
 The fractional-moment obstruction rules this out for
-\(c<\log2/(\sqrt{\log2}-1/2)=2.0843108\ldots\). The clean surviving choice
-is \(c=3\):
+\(c<\log2/(\sqrt{\log2}-1/2)=2.0843108\ldots\). The historical candidate
+was \(c=3\):
 \[
 \inf_a\log P_a(\tanh(3/\sqrt n))\ge-\frac34n-o(n).
 \]
 
-So the likely final solution is not a circle or a finite census. Its shape is
-either a global signed free-energy inequality such as (3'), or a rigidity
-theorem saying that the only signings able to suppress that free energy are
-asymptotically conference-like in the relevant Boolean sense.
+Proposition 6.9 disproves (3') for every fixed \(c>0\), including this
+candidate. Thus the fixed-temperature branch is closed. A global rigidity
+theorem remains possible, as does a genuinely growing-temperature inequality
+with error uniform in the temperature.
 
 ## 3. What the cold audit killed
 
@@ -224,9 +231,10 @@ allowed to widen its target.
    15.693, starting with 15.694's three equality-case bad-line patterns,
    then stop. If they close, move to the existing \(p=17\) row; do not
    generate later shells.
-3. **Global team:** attack either the all-subsets hierarchy (4) or the
-   signed-Eulerian free-energy inequality (3), with the acceptance condition
-   being the actual asymptotic deficit (1), not exact gap two.
+3. **Global team:** attack the all-subsets hierarchy (4). The historical
+   fixed-temperature signed-Eulerian alternative (3) is superseded and
+   disproved by Proposition 6.9; only a new growing-temperature formulation
+   could reopen that branch.
 4. **Red team:** test counterexample geometry only: Mathon's ratio-dense
    conference family for a uniform \(\rho<1\) gap, and square-order
    nonregularizability beginning at order 50. A fixed gap wins; isolated

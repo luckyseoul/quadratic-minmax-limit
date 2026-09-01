@@ -1287,11 +1287,13 @@ even-Eulerian high-temperature identity
 The initially proposed \(\beta=2/\sqrt n\) lower bound
 \(\log P_a\ge-o(n)\) would prove the target constant, but a
 fractional-moment construction now disproves it by a linear margin. The
-corrected fixed-\(c\) target is
-\(\log P_a(\tanh(c/\sqrt n))\ge(c/2-c^2/4)n-o(n)\); the construction rules
-out every \(c<2.0843108\ldots\), while \(c=3\) remains a clean viable
-target. Classical Delsarte and fixed-\(L^q\) norms still discard the phase
-consistency needed at this scale.
+corrected fixed-\(c\) target proposed at the time was
+\(\log P_a(\tanh(c/\sqrt n))\ge(c/2-c^2/4)n-o(n)\); the construction there
+rules out every \(c<2.0843108\ldots\). This historical paragraph is
+superseded by Proposition 6.9: symmetric conference signings disprove the
+target for every fixed \(c>0\), including \(c=3\). Classical Delsarte and
+fixed-\(L^q\) norms still discard the phase consistency needed at this scale;
+only a growing-temperature version remains logically possible.
 
 The conference-class audit corrected another shortcut. Spectral defect zero
 identifies all conference classes, not Paley. Craigen's Lemma 7 proves only
@@ -2435,6 +2437,41 @@ unresolved ranges are critical `p=5,7`, `p=11,k>=50`, and
 `p>=13,k>=4p+6`. Multi-level Type I and the quadratic-minmax limit also
 remain open.
 
+## 7cg. Bi-balanced Hadamard shielding for the independent 1:2 split (2026-09-01)
+
+Proposition 6.8 composes independently optimal signings of orders `n` and
+`2n`. Coordinates are paired within the relative-sign classes of positive
+and negative extrema on both sides. A rectangular submatrix of a near-order
+Paley Hadamard matrix, expanded by the tile `[[1,-1],[-1,1]]`, gives the
+exact bound
+
+`|x^T C y| <= 4 sqrt(q k_A k_B)+6n`.
+
+The universal headroom between the `2/3`-power composition target and the
+sum of the two internal norms has leading constant
+`(3sqrt(3)-1-2sqrt(2))/pi=0.435360...`. Therefore the full `1:2` diamond is
+proved when `k_A k_B<=n^2/100`; only (6.42)--(6.43) remains. Refinement by
+any fixed finite anchor list changes only the `O(n)` border. This is an
+infinite-family reduction, not closure of the multiplier-three ray.
+
+## 7ch. Conference matrices kill every fixed-temperature free-energy target (2026-09-01)
+
+For any rank-`n/2` projection with diagonal `1/2`, Gaussian Fourier inversion
+and the geometric Brascamp--Lieb inequality give
+
+`E exp(-t x^T P x) <= ((1+exp(-2t))/2)^(n/2)`.
+
+Applying this to the two eigenspace projections of a symmetric conference
+matrix gives
+
+`E exp(+-beta Q_C) <= cosh(beta sqrt(n-1))^(n/2)`.
+
+Hence at every fixed `c>0` the normalized free-energy rate is at most
+`(1/2)log cosh(c)<c/2`. At `c=3` the old target fails by
+`0.345335747...n`. The infinite Paley conference family makes this an
+asymptotic counterexample, so every historical claim that `c=3` remains
+viable is superseded. A growing-temperature formulation is not ruled out.
+
 ---
 
 ## 8. What is not in the older literature
@@ -2520,5 +2557,6 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 68. G. Somlai, *A new proof of Rédei's theorem on the number of directions*, Arch. Math. **122** (2024), 575--580, [doi:10.1007/s00013-024-01979-x](https://doi.org/10.1007/s00013-024-01979-x) (modern explicit restatement of Szőnyi's bound and proof context).
 69. X.-d. Hou and A. Iezzi, *An Application of the Hasse-Weil Bound to Rational Functions over Finite Fields*, [arXiv:1906.09487](https://arxiv.org/abs/1906.09487) (general rational-function value-set context; it does not supply the missing discriminant/resolvent estimates in 15.725).
 70. D. Bartoli and L. Storme, *The second and the third smallest arrangements of hyperplanes in finite projective spaces*, Finite Fields Appl. **37** (2016), 225--239, [doi:10.1016/j.ffa.2015.10.001](https://doi.org/10.1016/j.ffa.2015.10.001), [HAL manuscript](https://inria.hal.science/hal-01276476) (Corollary 2.7, Theorem 1 in the public manuscript, gives the upper endpoint `d<=2(q+2)/3+2` under its other hypotheses, including `d>3+2sqrt(q)` and existence of the configuration, for which a unique-trisecant construction is the second-smallest hyperplane arrangement. It is **not** a size ceiling for such 3-arcs. The odd-order existence gap stated in the construction section is left open, which retracts the former 15.729 equality/one-defect interpretation).
+71. H. J. Brascamp and E. H. Lieb, *Best constants in Young's inequality, its converse, and its generalization to more than three functions*, Adv. Math. **20** (1976), 151--173, [doi:10.1016/0001-8708(76)90184-5](https://doi.org/10.1016/0001-8708(76)90184-5) (geometric rank-one inequality used in Proposition 6.9's half-projection Laplace bound).
 
 Secondary: Paley construction (Wikipedia, quoting the 1933 Hadamard-conjecture sentence); conference matrix (Wikipedia, van Lint–Seidel sum-of-two-squares obstruction).
