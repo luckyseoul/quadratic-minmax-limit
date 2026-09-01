@@ -413,7 +413,7 @@
     "residual_ii_a_ND": "CLOSED",
     "residual_ii_exhaustiveness": "OPEN \u2014 freeness-fail does not force S\u2208{2,4} and f_e=3\u2212S",
     "residual_ii_full": "OPEN: bounded k\u22644p\u22122 is closed; multi-level even k\u22654p remains",
-    "type_I_multilevel": "OPEN \u2014 multi-level Max\u2212 bad case",
+    "type_I_multilevel": "CLOSED",
     "gsum_disj_lb_proved_general": false,
     "e1_closed_general": false,
     "bound_proved_general": false,

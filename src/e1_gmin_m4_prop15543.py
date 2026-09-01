@@ -36,7 +36,7 @@ Theorem B — PROVED as a corollary (does not close Aut_e).
 
 Theorem C — OPEN.  A_full on r-classes is still not a p-law
   (15.540: 0 vs −4p³/15).  Mixed A still den 13,409.
-  type_I flags stay False.
+  This mechanism does not close Type I; Proposition 15.750 closes it independently.
 
 ============================================================================
 Backend: Fraction identities + y_∞=+1 1D masks.  Writes

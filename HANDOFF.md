@@ -11,7 +11,7 @@ direct gate.  The finite Paley residual ledger below remains valid evidence
 for the stronger `L=1/2` route, but it is not the only acceptance path and
 should not be resumed by default.
 
-**Date:** 2026-09-01 (through Propositions 6.3--6.4 and 15.749; required bi-tight levels 2 and 3 are
+**Date:** 2026-09-01 (through Propositions 6.3--6.4 and 15.750; required bi-tight levels 2 and 3 and multi-level Type I are
 closed, residual (ii) is closed for every boundary at
 `k in {4p,4p+2,4p+4}` for every prime `p>=11`, and the exceptional
 and generic branches at `p=13,k=58`, the generic `p=17,k=74` row, and the
@@ -25,15 +25,15 @@ row, and branch-B `t=3` for `p=1 mod 4,p>=29` remain open)
 **Mandatory preflight:** read
 `evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md` before launching another
 solver, projection, shell, channel, orbit, or timeout. It accounts for every
-assigned proposition through 15.749 and maps the former scratch scripts to
+assigned proposition through 15.750 and maps the former scratch scripts to
 closed, dead, necessary-only, or live routes.  The 2026-08-31 worktree
 cleanup and remote archive are recorded in
 `evidence/NOTE_2026-08-31_DIRTY_WORKTREE_TRIAGE.md`.
 
 **Corrected gate:** the required bi-tight levels 2 and 3 are TRUE by 15.720.
 The old spectral-floor/15.167 arrow is retracted, and QVAR/R1 are no longer
-acceptance units. The two genuine leftovers—multi-level Type I and non-Walsh
-residual (ii)—remain False, so L is OPEN. Propositions 15.734--15.735 and
+acceptance units. Proposition 15.750 closes multi-level Type I; non-Walsh
+residual (ii) is the sole false E1 unit, so L is OPEN. Propositions 15.734--15.735 and
 15.737 close `k in {4p,4p+2,4p+4}` for every `p>=11`, without a
 boundary-size hypothesis. They do not close critical `p=5,7`, `p=11` at
 `k>=50`, `p=13,k=60,u=6` or later p13 layers, any `p>=17,t>=4` row, or branch-B `t=3`
@@ -85,6 +85,25 @@ for both signs. This is not all of the projective size-eight case: 15.713--
 excluding any of its 56 actual line boundaries in two orbits. The positive
 `z=7` remainder stays open. The historical p=13 orbit/mesh `k=6` work is
 not a close and is not a current proof input.
+
+## 15.750 — isolated-chart parity halving closes multi-level Type I
+
+The authoritative predicate `type_I_multilevel_bad_case_ND_closed()` is now
+True for every prime `p>=5` and every distinguished edge. For `p>=11`, put
+`H=G union {e}` and use the edge multiset `W=G+2e`. An isolated vertex of
+`H` transports to infinity. Square-direction Johnson rigidity plus the `l1`
+budget forces exactly three parallel units and zero signed off-fibre block
+sums. The induced signed mass makes one nonsquare direction have
+`2p E[T] in {4,6}`. The central Krawtchouk parity bound forces `T` even, so
+the sharp 15.688 floor for `T/2` gives `4p E[T/2]>=p-3`, a contradiction.
+
+At `p=5,7`, the tracked JSON artifacts are exact integer Farkas identities;
+the leaf verifier regenerates `C`, validates every Boolean eigenvector, and
+checks `A^T lambda=0`, `b^T lambda<0` with arbitrary-precision integers. It
+uses neither SciPy nor eigenshell caches. Signed-PSL 2-transitivity normalizes
+any edge to the canonical certified edge. This does not close residual (ii),
+E1, or the limit. Do not reopen the historical `3A+B`, Aut_e, or finite-LP
+routes as global Type-I gates.
 
 ## 15.749 — translated-cut moments close `p=13,t=4,u=4`
 
@@ -3384,7 +3403,7 @@ estimates remain; none is proved. See
 |---|---|---|
 | 1 | `phi_F_ge_6_proved_general` | QVAR on k≥7 (all p≥13) **and** principal `\|\|δ\|\|^2 ≤ n(n+10)^2/[6(n-14)(n-6)]`. Crude `E[s^4]≤2n^3` is too weak. |
 | 2 | `residual_ii_k_eq_4p_empty` / `multilevel_ND_k_ge_4p_proved` | Historical 2026-08-21 target. Propositions 15.734--15.735 and 15.737 later close `k in {4p,4p+2,4p+4}` for every `p>=11`; 15.738--15.742 additionally close all of `p=13,k=58`, 15.743 closes `p=17,k=74`, 15.744--15.745 close `u=3,0` at `p=13,k=60`, and 15.746--15.749 close `u=4`. Critical `p=5,7`, `p=11` at `k>=50`, `p=13,k=60,u=6` and later p13 layers, every `p>=17,t>=4` row, and branch-B `t=3` for `p=1 mod 4,p>=29` remain, so the all-prime predicate remains False. |
-| 3 | `type_I_multilevel_bad_case_ND_closed` | `\|μ\|≤(p-2)/(2p^2)` on \|κ\|=1, equivalently `\|R̄₄\| ≤ \|L\|(p^4-1)+4(p-2)`. `\|μ\|≤\|T\|` does not close; `\|μ\|≤maj` is false at p=7. |
+| 3 | `type_I_multilevel_bad_case_ND_closed=True` | **Closed by 15.750.** The older `|μ|`, `3A+B`, and Aut_e estimates remain incomplete as mechanisms but are no longer global gates. |
 
 Historical dump: all three then-live leftovers were False; Gsum False;
 pairing False. Current API correction: `e1_closed_general()` is the global
@@ -3453,7 +3472,7 @@ overridden twice.
 |---|---|---|
 | \(\lambda_{\min}(\Phi)\ge6\) on \(Z\) | `phi_F_ge_6_proved_general=False` | Open. Exceptional QVAR is closed through `k=6` and remains on `k>=7` from `p=13`; principal blocks retain the delta-variance target. |
 | Residual (ii), even \(k\ge4p\) | `residual_ii_k_eq_4p_empty=False` | Open globally. Propositions 15.734--15.735 and 15.737 close `k in {4p,4p+2,4p+4}` for every `p>=11`; 15.738--15.742 additionally close all of `p=13,k=58`, 15.743 closes `p=17,k=74`, 15.744--15.745 close `u=3,0` at `p=13,k=60`, and 15.746--15.749 close `u=4`. Critical `p=5,7`, `p=11` at `k>=50`, `p=13,k=60,u=6` and later p13 layers, every `p>=17,t>=4` row, and branch-B `t=3` for `p=1 mod 4,p>=29` remain. The all-prime legacy predicate therefore stays False. |
-| Type I, Max− not two-level \(\{-1,-3\}\) | `type_I_multilevel_bad_case_ND_closed=False` | Open. Remainder is \(A_{\mathrm{full}}\). |
+| Type I, Max− not two-level \(\{-1,-3\}\) | `type_I_multilevel_bad_case_ND_closed=True` | Closed by Proposition 15.750 using isolated-chart parity halving and exact `p=5,7` Farkas certificates. |
 | Lemma D | True | Closed. Do not unflip. |
 
 **Historical next attack, superseded as an E(1) gate by 15.720.** Complete
@@ -3538,7 +3557,10 @@ Official class is leftover Max− together with \(s_+\ge2\). leftover-only (\(s_
 
 ## Type I
 
-Two-level Max− is closed (15.272). Multi-level is open. Dead as a multi-level kill: Aut\(_e\) (15.559), Max± of \(C\) (15.565), Type+ 1D Johnson (15.577), Galois support plus \(F\) (15.580), \(\lvert\mu\rvert\le\lvert L\rvert\) on \(\lvert\kappa\rvert=1\) (unsigned \(\lvert\nu_{\mathrm{part}}\rvert\) exceeds \(\lvert L\rvert\)). Remainder is \(A_{\mathrm{full}}\).
+Two-level Max− is closed (15.272), and multi-level Type I is closed by
+15.750. The older Aut\(_e\), Max± of \(C\), Type+ 1D Johnson, Galois support,
+`3A+B`, and \(\lvert\mu\rvert\) routes remain dead or incomplete as
+mechanisms; they must not be mistaken for current global predicates.
 
 ## Do not reopen
 
@@ -3578,6 +3600,9 @@ deleted so the reversal is traceable.
 | `src/e1_gmin_m4_prop15748.py` | Literal-root interpolation reducing `P=5` to the two-root survivor family |
 | `src/e1_gmin_m4_prop15749.py` | Exact translated-cut dual bounds, `Q=4` moment intersection, and seven-root quartic close of `u=4` |
 | `tests/test_prop15749.py` | Focused deterministic checks for the Prop 15.749 duals, lists, hashes, and scoped status |
+| `src/e1_gmin_m4_prop15750.py` | Uniform isolated-chart parity-halving proof closing multi-level Type I |
+| `src/e1_type_i_small_prime_exact.py` | Cache-free exact verifier for the tracked `p=5,7` Farkas identities |
+| `tests/test_prop15750.py`, `tests/test_type_i_small_prime_exact.py` | Focused theorem, corruption, cache-independence, and wiring checks |
 | `scripts/p13_support330_boolean_classifier.py` | Atomic exact no-new-support classifier with optional exact sharding and nonproof GPU cross-check |
 | `evidence/p13_support330_boolean_classifier.json` | Exact unsharded infeasibility certificate for the 364-member support-330 catalog |
 | `evidence/NOTE_2026-08-31_p31_endpoint_paley_hard_profile.md` | Full proof ledger for 15.728 and its explicitly open scope |
@@ -3600,6 +3625,7 @@ deleted so the reversal is traceable.
 | `evidence/NOTE_2026-08-31_p13_t4_u0_close.md` | Exact 15.745 row maxima, collision-one transverse sign bound, and `695<719` contradiction |
 | `evidence/NOTE_2026-08-31_p13_support330_u4_reduction.md` | Exact 15.746 support-330 catalog, `P=3/P=5` split, mean-12 reduction, and `F6=0` constraint |
 | `evidence/NOTE_2026-09-01_p13_u4_translated_cut_moment_close.md` | Proof ledger for the Prop 15.749 translated-cut moment close |
+| `evidence/NOTE_2026-09-01_TYPE_I_ISOLATED_HALVING_CLOSE.md` | Proof ledger and exact certificate manifest for the Prop 15.750 all-prime Type-I close |
 | `evidence/e1_gmin_m4_prop15749.json` | Hash-pinned deterministic output for the 522 rows, 492 triples, and 12-point intersection |
 | `evidence/NOTE_2026-08-31_p31_public_11_of_12_arc_audit.md` | Historical exhaustive finite certificate for eleven public `p=31` complete 22-arc classes; not needed for the later symbolic endpoint close |
 | `scripts/p31_complete_22arc_public_audit.py` | Deterministic replay of the public eleven-class `c_1` and unique-secant audit |

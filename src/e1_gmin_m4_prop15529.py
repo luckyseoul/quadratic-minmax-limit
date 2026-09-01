@@ -29,7 +29,7 @@ Theorem B — PROVED as a negative (field kernel).
 
 Theorem C — OPEN.  The identity still carries den 13 and 409
   through A (15.269 J/K).  Live Δ_conn is not a p-rational.
-  type_I flags stay False.  Aut_e 3A+B still G>T.
+  This mechanism does not close Type I; Proposition 15.750 closes it independently.  Aut_e 3A+B still G>T.
 
 ============================================================================
 Backend: y_∞=+1 caches + vectorized I.  Writes

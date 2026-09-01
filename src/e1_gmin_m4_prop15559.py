@@ -38,7 +38,7 @@ Theorem B — PROVED as DEAD on Aut_e naming of A_full.
 Theorem C — OPEN.  Aut_e does act on the mixed Max+
   ensemble, so 3A+B>0 remains the G>T hinge on mixed μ
   (15.275 J).  That is residual-(i) L^∞, not an Aut_e
-  name of A_full.  type_I flags stay False.
+  name of A_full.  This mechanism does not close Type I; Proposition 15.750 closes it independently.
 
 ============================================================================
 Backend: inversion perm + y_∞=+1 caches.  Writes

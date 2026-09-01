@@ -36,7 +36,7 @@ Theorem C — DEAD this path.  Max± of C write at most Φ−4
   such proof must use a ±1 vector that is not Max± of C,
   or produce z∈U_− with f_e=+1.  The second is the Aut_e
   3A+B / G>T leftover (15.275 I–K), DEAD as a naming
-  path (15.559).  type_I flags stay False.
+  path (15.559).  This mechanism does not close Type I; Proposition 15.750 closes it independently.
 
 ============================================================================
 Backend: Fraction score algebra.  Writes

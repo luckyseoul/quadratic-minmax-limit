@@ -88,14 +88,15 @@ def test_FWW_global_m4_strictly_below_one(p):
 # ---------------------------------------------------------------- honesty guards
 
 
-def test_does_not_close_type_I():
+def test_3AB_route_remains_open_but_type_I_is_closed_elsewhere():
     from e1_gmin_m4_prop15275 import (
         type_I_aut_e_3AB_positive_general,
         type_I_multilevel_bad_case_ND_closed,
     )
     assert type_I_aut_e_3AB_positive_general() is False
-    assert type_I_multilevel_bad_case_ND_closed() is False
-    assert M.type_I_still_open() is True
+    assert type_I_multilevel_bad_case_ND_closed() is True
+    assert M.type_I_3AB_route_still_open() is True
+    assert M.type_I_still_open() is False
 
 
 def test_does_not_flip_other_leftovers():

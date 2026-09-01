@@ -68,11 +68,13 @@ def test_four_level_exists_does_not_empty_K():
 def test_maj_does_not_close_type_I():
     E = prove_E()
     assert E["proved"] is True
+    assert E["maj_route_closes_type_I"] is False
+    assert E["type_I_ND"] is True
     assert LIVE_MU[7] > mu_part_majorant(7)
-    assert type_I_multilevel_bad_case_ND_closed() is False
+    assert type_I_multilevel_bad_case_ND_closed() is True
 
 
-def test_floor_and_imports_still_open():
+def test_floor_routes_still_open_while_type_i_is_closed_elsewhere():
     F = prove_open()
     assert F["proved"] is False
     assert F["Q_tau_named_in_p"] is False
@@ -82,12 +84,12 @@ def test_floor_and_imports_still_open():
     assert F["lemma_D_2plane"] is True
 
 
-def test_flags_untouched():
+def test_only_type_i_is_closed_among_these_live_flags():
     assert e1_closed_general() is False
     assert gsum_disj_lb_proved_general() is False
     assert phi_F_ge_6_proved_general() is False
     assert residual_ii_k_eq_4p_empty() is False
-    assert type_I_multilevel_bad_case_ND_closed() is False
+    assert type_I_multilevel_bad_case_ND_closed() is True
     assert lemma_D_existence_written() is True
     assert lemma_D_2plane_amplitudes_proved() is True
 

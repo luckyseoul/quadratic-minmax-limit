@@ -36,7 +36,7 @@ Theorem C — DEAD as a Type I kill.  A–B name Max− ẑ-support
   and the 02 complete sum F.  The Type I pairing E[S f_e]_−
   expands into named stars plus far 3-points; the unnamed
   remainder is the Q3_T / A_full channel (15.564 E), not F.
-  F does not force f_e=+1 on U_−.  type_I flags stay False.
+  F does not force f_e=+1 on U_−.  This mechanism does not close Type I; Proposition 15.750 closes it independently.
 
 ============================================================================
 Backend: 15.564 Gauss + Max− caches p=5,7.  Writes

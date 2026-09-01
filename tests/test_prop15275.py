@@ -436,8 +436,8 @@ def test_three_orbit_maxminus_kills_bad_case():
         assert Fminus_zero_far_at_fplus(p) != -5
     assert type_I_zero_far_bad_case_empty() is True
     assert type_I_three_orbit_family_bad_case_empty() is True
-    # ND still open: finer than 3-type split far is not this identity
-    assert type_I_multilevel_bad_case_ND_closed() is False
+    # The finer split remains open for this mechanism; 15.750 closes globally.
+    assert type_I_multilevel_bad_case_ND_closed() is True
 
 
 def test_split_far_delta_and_Y_plus_3():
@@ -496,8 +496,8 @@ def test_three_type_collapses_to_H():
             p + 1
         )
     assert type_I_three_type_Y_collapses_to_H() is True
-    # finer split still open
-    assert type_I_multilevel_bad_case_ND_closed() is False
+    # The finer split remains open for this mechanism; 15.750 closes globally.
+    assert type_I_multilevel_bad_case_ND_closed() is True
 
 
 def test_threeAB_conversion_and_T_threshold():
@@ -546,7 +546,7 @@ def test_wick_six_type_3ab_positive():
         wrong = 2 * ((p - 2) + t_wrong * (2 * p - 1)) / (p * p - 1)
         assert wrong != wick_3ab_edge(p, 1, 1, -1)
     assert type_I_wick_six_type_3ab_positive() is True
-    assert type_I_multilevel_bad_case_ND_closed() is False
+    assert type_I_multilevel_bad_case_ND_closed() is True
 
 
 def test_Q_chi_pointwise_identities():
@@ -570,7 +570,7 @@ def test_Q_chi_pointwise_identities():
         assert n_far_kappa3(p) + n_far_kappa1(p) == n_far
         assert r["leftover_dofs"] == 2
     assert type_I_split_far_3AB_identities_ok() is True
-    assert type_I_multilevel_bad_case_ND_closed() is False
+    assert type_I_multilevel_bad_case_ND_closed() is True
 
 
 def test_aut_e_3AB_sign_G_gt_T_conversion():
@@ -656,7 +656,7 @@ def test_aut_e_3AB_sign_G_gt_T_conversion():
     assert lemma_mu_le_L_census_p5p7()["proved"] is True
     # the sign itself is the leftover
     assert type_I_aut_e_3AB_positive_general() is False
-    assert type_I_multilevel_bad_case_ND_closed() is False
+    assert type_I_multilevel_bad_case_ND_closed() is True
 
 
 def test_mu_le_L_not_T_and_maj_false():
@@ -693,7 +693,7 @@ def test_mu_le_L_not_T_and_maj_false():
     assert three_AB_equal_G(1, T_bitight(7), 7) == 0
     assert lemma_mu_le_L_census_p5p7()["proved"] is True
     assert type_I_aut_e_3AB_positive_general() is False
-    assert type_I_multilevel_bad_case_ND_closed() is False
+    assert type_I_multilevel_bad_case_ND_closed() is True
 
 
 def test_p5_through_e_finite_from_C():
@@ -724,9 +724,9 @@ def test_p5_through_e_finite_from_C():
     assert three_AB_equal_G(1, -one_over_2p(5), 5) < 0
     # a wrong count C(n,4) (forgetting the 6-edge double count) is not 276
     assert comb(n, 4) != 276
-    # general flags stay open: |μ|≤maj is false, |κ|=3 general open
+    # The old general 3A+B route stays open; 15.750 closes globally.
     assert type_I_aut_e_3AB_positive_general() is False
-    assert type_I_multilevel_bad_case_ND_closed() is False
+    assert type_I_multilevel_bad_case_ND_closed() is True
 
 
 def test_two_level_is_not_this_flag():
@@ -744,18 +744,18 @@ def test_two_level_is_not_this_flag():
         assert es2_two_level_minus(p) != es2_plus(p)
         # 15.169 two-level H identities are a different witness
         assert Fraction(tl["E_S2_H_simplified"]) == Fraction(10) - Fraction(6, p)
-    # two-level Type I (dual-eq) is a different flag; this leftover is open
-    assert type_I_multilevel_bad_case_ND_closed() is False
+    # Two-level is distinct; the 15.275 leftover stays open only as a route.
+    assert type_I_multilevel_bad_case_ND_closed() is True
     assert type_I_k_3p_minus_2_closed_general() is True
     # they can both be True, but the *witness* for 15.275 is c>0 identities
     r = lemma_mass_identity(5)
     assert any(Fraction(s["c"]) > 0 and s["a_gt_one_over_p"] for s in r["samples"])
 
 
-def test_flag_and_gsum_untouched():
+def test_global_type_i_closed_independently_while_gsum_stays_open():
     assert gsum_disj_lb_proved_general() is False
     assert residual_i_dual_eq_empty_proved_general() is True
-    assert type_I_multilevel_bad_case_ND_closed() is False
+    assert type_I_multilevel_bad_case_ND_closed() is True
     for p in PRIMES:
         assert type_I_multilevel_identities_ok(p) is True
         assert type_I_k_3p_minus_2_params(p)["matches_thr"] is True
@@ -764,7 +764,7 @@ def test_flag_and_gsum_untouched():
 
 def test_main_json_and_not_two_level_claim():
     out = main()
-    assert out["proved"]["type_I_multilevel_bad_case_ND_closed"] is False
+    assert out["proved"]["type_I_multilevel_bad_case_ND_closed"] is True
     assert out["proved"]["two_level_claimed_here"] is False
     assert out["proved"]["gsum_disj_lb_proved_general"] is False
     assert out["proved"]["mass_identity"] is True

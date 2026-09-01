@@ -4,8 +4,9 @@ Prop 15.330 — Shared |H_+| denominator; 409 is not a Gauss/Jacobi
 integer; squared conference does not raise the 4-point rank.
 
 Does **not** flip phi_F_ge_6 / e1 / L / Aut-Schur / Gsum / pairing /
-15.279–15.329 flags.  Does **not** flip residual_ii or Type I ND.
-Floor stays OPEN.
+15.279–15.329 flags.  It does not close residual_ii or its own Type-I
+majorant route.  Proposition 15.750 later closes global Type I
+independently.  Floor stays OPEN.
 
 ============================================================================
 Setup.  Live Q_{++}/q² = 48/13 (p=5) and 1544/409 (p=7).  Live
@@ -52,7 +53,8 @@ Theorem E — PROVED as a negative (p=7 census).
   |μ|≤|L| at p=7.  ∎
 
 Theorem F — OPEN.  Q_τ still unnamed.  phi_F not imported.
-  Residual (ii) k=4p multi-level and Type I 3A+B>0 stay False.
+  Residual (ii) k=4p multi-level and Type I 3A+B>0 stay open as these
+  mechanisms; Proposition 15.750 closes global Type I independently.
   Lemma D writeup remains True and was re-checked (Cy=py, ẑ(0)=p
   at p=5,7,11); not cascaded into e1.
 
@@ -272,7 +274,7 @@ def prove_E() -> dict:
     L7 = -L_abs_gmin(7)
     live = LIVE_MU[7]
     ok = g7 == -live and live > maj7 and live <= L7
-    ok = ok and type_I_multilevel_bad_case_ND_closed() is False
+    type_i_closed = type_I_multilevel_bad_case_ND_closed()
     return {
         "proved": ok,
         "live_mu_p7": str(live),
@@ -281,10 +283,12 @@ def prove_E() -> dict:
         "live_gt_maj": live > maj7,
         "live_le_L": live <= L7,
         "maj_does_not_close": True,
-        "type_I_ND": False,
+        "type_I_ND": bool(type_i_closed),
+        "maj_route_closes_type_I": False,
         "theorem": (
             "maj ≤|L| is not a bound at p=7 (109/2863 > maj).  "
-            "Type I ND stays False."
+            "That route remains dead; Proposition 15.750 closes Type I "
+            "independently."
         ),
     }
 

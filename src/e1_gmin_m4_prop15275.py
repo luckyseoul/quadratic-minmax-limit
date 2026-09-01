@@ -211,7 +211,13 @@ PREDICATES
   type_I_p5_through_e_3AB_positive() = True  (finite, from C)
   type_I_aut_e_3AB_positive_general() = False  (|κ|=1 g_min>T open;
     |κ|=3 signed (μ,ν) remainder open; |μ|≤maj false)
-  type_I_multilevel_bad_case_ND_closed() = False  (3A+B>0 open)
+  type_I_multilevel_bad_case_ND_closed() = True   (closed independently by 15.750)
+
+The Aut_e / ``3A+B`` mechanism developed in this historical module still
+does not close its own leftover.  Proposition 15.750 bypasses that route:
+isolated-chart square-direction rigidity, parity halving, and exact p=5,7
+Farkas certificates close the global Type-I bad case.  Residual (ii), E1,
+and the limit remain open.
   gsum_disj_lb_proved_general stays False
   type_I_k_3p_minus_2_closed_general is *not* rewired here (15.170)
 
@@ -3174,20 +3180,20 @@ def type_I_multilevel_bad_case_ND_closed() -> bool:
     """
     Multi-level Type I bad case empty (hence Φ(H)≥Φ−2) for all primes p≥5.
 
-    False: 3A+B>0 is not proved for a general Aut_e far class.  On
-    |κ|=1 this is G>T through e; |μ|≤|L| would close that half but is
-    not proved for all p.  On |κ|=3 an independent signed (μ,ν) form is
-    required; its particular/Wick term is safe but its δ remainder is open.
-    Thus no bound stated only on |κ|=1 closes Type I.  |μ|≤|T| is not a
-    closing μ-bound; |μ|≤maj is false at p=7.  p=5 is a finite from-C
-    theorem covering both classes.
-    Wick particular, the conversion, through-e 15.260 moments,
-    and the 4-point pairing *are* Max+-free (J, K).  The μ_far=0
-    slice, the whole μ_far≥0 3-weight family, and the coarse
-    3-type *are* bad-case empty (H, I).  Gsum unused.  Two-level
-    {−1,−3} is a different path.
+    Proposition 15.750 closes this predicate by an independent route.  The
+    ``3A+B`` / Aut_e leftover recorded by :func:`theorem_G_leftover` remains
+    open *for that mechanism* and is not imported as a premise here.
+
+    The import is deliberately lazy: Proposition 15.750 imports prior
+    transport and lift-floor theorems, while this historical module is a
+    consumer of the final all-prime predicate.  This avoids a circular
+    proposition import and keeps p=5,7 verification in a leaf module.
     """
-    return bool(theorem_G_leftover()["proved"])
+    from e1_gmin_m4_prop15750 import (
+        type_I_multilevel_bad_case_closed_all_primes,
+    )
+
+    return bool(type_I_multilevel_bad_case_closed_all_primes())
 
 
 def hinge_status_275() -> dict:
@@ -3240,8 +3246,9 @@ def hinge_status_275() -> dict:
             "moments / pairing / T-vs-1/(2p) Max+-free.  p=5 finite "
             "from C.  |μ|≤|L| suffices (not |μ|≤|T|); |μ|≤maj false "
             "at p=7; census |μ|≤|L| at p=5,7.  General Aut_e 3A+B>0 "
-            "(g_min>T / |μ|≤|L|) keeps ND False.  Two-level is "
-            "15.169/15.216.  Gsum unused.  type_I / e1 / L unflipped."
+            "(g_min>T / |μ|≤|L|) remains open for this mechanism.  "
+            "Proposition 15.750 independently closes global Type I.  "
+            "Two-level is 15.169/15.216.  Gsum unused.  E1 / L unflipped."
         ),
     }
 

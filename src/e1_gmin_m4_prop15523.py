@@ -32,7 +32,7 @@ Theorem C — PROVED (field sum; certified p=5,7,11,13).
   Fail: the dropped-pairing value.  ∎
 
 Theorem D — OPEN.  Live Δ_conn (−328/65, −1144/2863) unnamed.
-  type_I_multilevel_bad_case_ND_closed stays False.
+  This mechanism does not close Type I; Proposition 15.750 closes it independently.
   type_I_aut_e_3AB_positive_general stays False (G>T).
 
 ============================================================================

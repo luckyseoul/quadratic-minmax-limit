@@ -14,15 +14,13 @@ REAL (checkable Fraction / prior-prop predicates):
   G. Deep freeness-fail at k=3p−1 ⇒ S≡3 tight size 3p ⇒ empty when
      its bi-tight alternative is impossible (15.720, level 3).
 
-OPEN (not claimed proved — no soft-close):
-  (i) Type I multi-level Max-minus bad case.  Later propositions close the
-      historical k=2p−1 and k=3p−2/two-level slices, not every Type-I class.
-      The live 15.275 split requires `G>T` on `|κ|=1` and an independent
-      signed `(μ,ν)` inequality on `|κ|=3`; a bound stated only on the
-      first class is not a multi-level close.
-  (ii) Non-Walsh residual (ii) for even k≥4p.  The affine and bounded even
+CURRENT GATE (no soft-close):
+  (i) Multi-level Type I is closed independently by Proposition 15.750.
+      The older 15.275 `3A+B` split remains incomplete as a mechanism but is
+      not a live global gate.
+  (ii) Non-Walsh residual (ii) for even k≥4p remains open. The bounded even
        range through 4p−2 is closed; the multi-level remainder is not.
-  Full m_n≥Φ−2 / E(1) / L remain OPEN until both residuals fully close
+  Full m_n≥Φ−2 / E(1) / L remain OPEN until residual (ii) closes
   (the required bi-tight levels are closed by 15.720).
 
 Does NOT set L closed. residual_closed_general=false (16N optional open).
@@ -257,8 +255,9 @@ def prove_theorem_C_D_type_I(primes: list[int] | None = None) -> dict:
     """
     C: freeness ND is prior 15.43.1 (not re-proved; flagged prior_proved).
     D: k=2p−1 fail class ND when 15.720 makes bi-tight empty (checkable).
-    The historical k=3p−2/two-level boundary is closed downstream.  This
-    function does not close the current multi-level Type-I gate.
+    The historical k=3p−2/two-level boundary is closed downstream. This
+    proposition does not close its multi-level mechanism; Proposition 15.750
+    closes the current global Type-I gate independently.
     """
     if primes is None:
         primes = [p for p in range(5, 60) if is_prime(p)]
@@ -271,18 +270,25 @@ def prove_theorem_C_D_type_I(primes: list[int] | None = None) -> dict:
     except Exception:
         k3pm2_closed = False
     historical_two_level = bool(ok_k2pm1 and k3pm2_closed)
+    try:
+        from e1_gmin_m4_prop15275 import type_I_multilevel_bad_case_ND_closed
+
+        multilevel_closed = bool(type_I_multilevel_bad_case_ND_closed())
+    except Exception:
+        multilevel_closed = False
     return {
         "proved_freeness_ND_prior": True,  # 15.43.1 already in solution/repo
         "proved_k_2p_minus_1_fail_ND": ok_k2pm1,
         "k_3p_minus_2_boundary_open": not k3pm2_closed,
         "type_I_historical_two_level_classes_closed": historical_two_level,
-        "type_I_all_classes_closed": False,
-        "type_I_multilevel_bad_case_closed": False,
+        "type_I_closed_by_this_proposition": False,
+        "type_I_all_classes_closed": multilevel_closed,
+        "type_I_multilevel_bad_case_closed": multilevel_closed,
         "theorem": (
             "Type I freeness ND = 15.43.1 (prior). Type I fail k=2p−1 ND when "
             "the level-2 bi-tight alternative is empty (15.43.3+15.44+15.720). "
             "The historical k=3p−2/two-level slice is closed downstream. "
-            "The current multi-level Type-I bad case remains open."
+            "Proposition 15.750 independently closes the multi-level bad case."
         ),
         "by_p_sample": {k: rows[k] for k in list(rows)[:5]},
         "n_checked": len(primes),
@@ -344,9 +350,9 @@ def prove_status() -> dict:
         "open_residuals": open_res,
         "note": (
             "15.720 closes required bi-tight levels. Historical two-level Type I "
-            "and affine/bounded residual-(ii) slices are closed; current multi-level "
-            "Type I and even-k>=4p residual (ii) remain open. E1/L use those live "
-            "predicates; the optional 16N route is also open."
+            "and affine/bounded residual-(ii) slices are closed; Proposition 15.750 "
+            "closes multi-level Type I. Even-k>=4p residual (ii) remains open. "
+            "E1/L use that live predicate; the optional 16N route is also open."
         ),
     }
 

@@ -101,7 +101,7 @@ def test_flags_untouched():
     assert phi_F_ge_6_proved_general() is False
     assert residual_ii_k_eq_4p_empty() is False
     assert type_I_aut_e_3AB_positive_general() is False
-    assert type_I_multilevel_bad_case_ND_closed() is False
+    assert type_I_multilevel_bad_case_ND_closed() is True
     assert D_form_on_lattice_general() is False
 
 

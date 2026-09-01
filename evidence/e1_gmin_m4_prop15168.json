@@ -7,8 +7,8 @@
     "type_I_freeness_ND_prior": true,
     "type_I_fail_k_2p_minus_1_ND": true,
     "type_I_historical_two_level_classes_closed": true,
-    "type_I_all_classes_closed": false,
-    "type_I_multilevel_bad_case_closed": false,
+    "type_I_all_classes_closed": true,
+    "type_I_multilevel_bad_case_closed": true,
     "deep_auto_freeness_k_le_3p_minus_2": true,
     "deep_fail_eq_k_3p_minus_1_impossible": true,
     "deep_all_ND_closed": false,
@@ -146,9 +146,10 @@
       "proved_k_2p_minus_1_fail_ND": true,
       "k_3p_minus_2_boundary_open": false,
       "type_I_historical_two_level_classes_closed": true,
-      "type_I_all_classes_closed": false,
-      "type_I_multilevel_bad_case_closed": false,
-      "theorem": "Type I freeness ND = 15.43.1 (prior). Type I fail k=2p\u22121 ND when the level-2 bi-tight alternative is empty (15.43.3+15.44+15.720). The historical k=3p\u22122/two-level slice is closed downstream. The current multi-level Type-I bad case remains open.",
+      "type_I_closed_by_this_proposition": false,
+      "type_I_all_classes_closed": true,
+      "type_I_multilevel_bad_case_closed": true,
+      "theorem": "Type I freeness ND = 15.43.1 (prior). Type I fail k=2p\u22121 ND when the level-2 bi-tight alternative is empty (15.43.3+15.44+15.720). The historical k=3p\u22122/two-level slice is closed downstream. Proposition 15.750 independently closes the multi-level bad case.",
       "by_p_sample": {
         "5": {
           "p": 5,
@@ -318,10 +319,9 @@
       "L_status": "OPEN",
       "residual_closed_general": false,
       "open_residuals": [
-        "non-Walsh residual (ii), even k\u22654p",
-        "Type I multi-level Max\u2212 bad case"
+        "non-Walsh residual (ii), even k\u22654p"
       ],
-      "note": "15.720 closes required bi-tight levels. Historical two-level Type I and affine/bounded residual-(ii) slices are closed; current multi-level Type I and even-k>=4p residual (ii) remain open. E1/L use those live predicates; the optional 16N route is also open."
+      "note": "15.720 closes required bi-tight levels. Historical two-level Type I and affine/bounded residual-(ii) slices are closed; Proposition 15.750 closes multi-level Type I. Even-k>=4p residual (ii) remains open. E1/L use that live predicate; the optional 16N route is also open."
     }
   },
   "L_wire": {
@@ -332,8 +332,7 @@
     "rule": "L closed iff bi-tight \u2227 E(1); denseness Prop 6.2"
   },
   "open_residual": [
-    "non-Walsh residual (ii), even k\u22654p",
-    "Type I multi-level Max\u2212 bad case"
+    "non-Walsh residual (ii), even k\u22654p"
   ],
   "F3": "E1/L only from real bi-tight \u2227 residual(i) \u2227 residual(ii)",
   "F13": "15.168\u2013171 E1 ND structure; residual/16N still open"

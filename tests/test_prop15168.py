@@ -105,13 +105,10 @@ def test_phi_and_L_star_still_consistent_with_15167():
 
 
 def test_e1_open_on_large_k_residual():
-    """Two-level Type I is closed, but the full multi-level chain is open."""
+    """Type I is closed; only the large-k residual remains."""
     assert e1_closed_general() is False
     open_ = e1_open_residuals()
-    assert open_ == [
-        "non-Walsh residual (ii), even k≥4p",
-        "Type I multi-level Max− bad case",
-    ]
+    assert open_ == ["non-Walsh residual (ii), even k≥4p"]
     ro = e1_residual_open()
     assert ro["E1_closed"] is False
     assert ro["open"] == open_
@@ -138,8 +135,9 @@ def test_theorems_partial_e1_structure():
     assert B["proved"] is True
     assert CD["proved_k_2p_minus_1_fail_ND"] is True
     assert CD["type_I_historical_two_level_classes_closed"] is True
-    assert CD["type_I_all_classes_closed"] is False
-    assert CD["type_I_multilevel_bad_case_closed"] is False
+    assert CD["type_I_closed_by_this_proposition"] is False
+    assert CD["type_I_all_classes_closed"] is True
+    assert CD["type_I_multilevel_bad_case_closed"] is True
     assert CD.get("k_3p_minus_2_boundary_open") is False
     assert EFG["proved_auto_freeness_k_le_3p_minus_2"] is True
     assert EFG["proved_fail_eq_k_3p_minus_1_impossible"] is True
@@ -152,6 +150,6 @@ def test_main_honest_e1_open():
     assert out["proved"]["E1_closed_general"] is False
     assert out["proved"]["L_closed"] is False
     assert out["L_status"] == "OPEN"
-    assert out["open_residual"] != []
+    assert out["open_residual"] == ["non-Walsh residual (ii), even k≥4p"]
     # 15.168 stores 16N/old residual as a separate unused False
     assert out["proved"]["residual_closed_general"] is False

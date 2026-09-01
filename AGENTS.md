@@ -39,7 +39,18 @@ guidance only for a deliberately selected Paley route.
 - Prefer an argument that closes an infinite family over a wider finite
   census unless the finite census is the explicitly recorded gate.
 
-## Current residual-(ii) gate after Proposition 15.749
+## Type-I closure at Proposition 15.750
+
+`type_I_multilevel_bad_case_ND_closed()` is True. For `p>=11`, the proof
+uses isolated signed-PSL transport, square-direction Johnson rigidity,
+central-Krawtchouk parity halving, and the sharp 15.688 lift floor. The
+`p=5,7` bases are tracked exact integer Farkas identities verified without
+SciPy or eigenshell caches; signed-PSL 2-transitivity handles every
+distinguished edge. Do not reopen the `3A+B`, Aut_e, finite-LP, or small-prime
+census routes as Type-I work. They remain incomplete historical mechanisms,
+not live global gates. Residual (ii), E1, and the limit remain open.
+
+## Current residual-(ii) gate after Proposition 15.750
 
 Do not reopen `p=13,k=58` or `p=17,k=74`.  Proposition 15.742 combines the
 `M_2=0` congruence with six multiplicative interval cuts and closes the

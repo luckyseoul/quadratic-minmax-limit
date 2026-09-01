@@ -1,4 +1,4 @@
-# Status (2026-09-01; through Proposition 15.749 and Propositions 6.3--6.4)
+# Status (2026-09-01; through Proposition 15.750 and Propositions 6.3--6.4)
 
 **The original question has been separated from the stronger Paley value
 program.**  MathOverflow 413935 asks for existence, not an identified value.
@@ -28,6 +28,20 @@ new finite census, is the first multiplier-two hinge.
 
 The status below records the still-valid, stronger Paley `L=1/2` route.  It is
 no longer the sole acceptance path for the original problem.
+
+**15.750 CLOSES the multi-level Type-I bad case for every prime `p>=5`.**
+For `p>=11`, transport an isolated vertex of `H=G union {e}` to infinity and
+apply the Max+ identity to the multiset `W=G+2e`. Johnson-slice rigidity and
+the exact `l1` budget force three parallel units in every square direction.
+A nonsquare direction then has `2p E[T]` equal to `4` or `6`; the exact
+central-Krawtchouk parity bound makes `T` even, and Proposition 15.688's
+sharp floor `4p E[T/2]>=p-3` contradicts that mass. For `p=5,7`, tracked
+integer Farkas identities verify `A^T lambda=0` and `b^T lambda<0` directly,
+without SciPy or eigenshell caches. Signed-PSL 2-transitivity transports any
+distinguished edge to the certified canonical edge. The live predicate
+`type_I_multilevel_bad_case_ND_closed()` is therefore **True**. Residual (ii)
+is still False, so E1 and `L=1/2` remain **OPEN**; the original convergence
+question also remains open.
 
 **15.749 CLOSES `p=13,t=4,u=4`; the exact `p=13,k=60` remainder is now
 only `u=6`.**  Propositions 15.747--15.748 first close the omitted-pair
@@ -502,15 +516,15 @@ Proposition 15.722 additionally excludes positive slack through
 `floor((p-4)/3)`. Proposition 15.727 additionally excludes equality at
 `p=17,19,23,29`; the endpoint from `p=31` onward and larger slack remain. The
 small-prime remainders, even
-`k>4p`, residual (ii), Type I, and `L` remain OPEN.
+`k>4p`, residual (ii), and `L` remain OPEN. Type I is closed by 15.750.
 
 **15.720 PROVES the required level-2 and level-3 bi-tight alternatives are
 empty for every prime `p>=5`.** The proof uses
 `ker(Gsum)=scheme+cross` from 15.272/15.207 and derives
 `d_i+d_j = 2ps mod (p^2-1)/2`; the handshake identity finishes. This
 replaces the invalid 15.55/15.167 spectral implication. Global QVAR,
-principal R1, and the spectral floor are no longer acceptance gates. The two
-remaining theorem gates are multi-level Type I and non-Walsh residual (ii),
+principal R1, and the spectral floor are no longer acceptance gates. The sole
+remaining theorem gate in the four-unit E1 ledger is non-Walsh residual (ii),
 so `L` remains OPEN. The same congruence excludes bi-tight level 4, but not
 one-sided tightness. Such covers actually exist (15.402); the known
 four-parallel-line family is harmless because 15.272/15.588 supplies a
@@ -1532,8 +1546,9 @@ HEAD 15.585. Sandwich and Paley \(\rho=1\) are proved. \(L=\tfrac12\) is not. Th
 
 1. \(\lambda_{\min}(\Phi)\ge6\) without treating \(G_{u,\mathrm{disj}}\) as a Gram (it is not PSD).
 2. Residual (ii): critical \(p=5,7\), \(p=11\) at \(k\ge50\), and \(p\ge13\) at \(k\ge4p+6\). The next exact front is the \(t=3\) resonance.
-3. Type I when Max− is not two-level.
-4. Lemma D: \(k=3\) existence and the 2-plane amplitude model.
+3. Multi-level Type I is **closed by Proposition 15.750**; the older `3A+B`
+   mechanism remains incomplete but is no longer a live gate.
+4. Lemma D is complete and is not a required open.
 
 **Non-required:** Path-C / 16N / Hypothesis H / 15.193 exhaustiveness.
 

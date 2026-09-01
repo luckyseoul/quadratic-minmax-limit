@@ -39,7 +39,7 @@ Theorem B — PROVED Max+-free (Johnson 3-point + Parseval).
 
 Theorem C — OPEN as a name of A / Δ_conn.  A_dbl is not 1D-only
   (A_free=0 at p=5, −1372/19 at p=7).  Live A_dbl still −500/13,
-  −31556/409.  Aut_e 3A+B still G>T.  type_I flags stay False.
+  −31556/409.  Aut_e 3A+B still G>T.  This mechanism does not close Type I; Proposition 15.750 closes it independently.
 
 ============================================================================
 Backend: field tables + 1D Fraction identities + y_∞=+1 caches.

@@ -70,7 +70,7 @@ Theorem F — OPEN.  3A+B>0 on Aut_e far classes is still
   the g_min>T hinge (15.275 J–K).  f_e≡−1 on a large
   {S=−1} occurs for some k=3p−2 sets that fail Type I
   Max+ {1,5} (p=5 sample), so Max−-only emptiness is
-  false.  type_I_multilevel_bad_case_ND_closed stays False.
+  false.  This mechanism does not close Type I; Proposition 15.750 closes it independently.
   type_I_aut_e_3AB_positive_general stays False.
 
 ============================================================================

@@ -37,7 +37,7 @@ Theorem B — PROVED as a negative on A_free (caches p=5,7).
 
 Theorem C — OPEN.  A_free is not named as a p-rational on all
   r-classes.  Mixed A still has den 13,409.  Aut_e G>T open.
-  type_I flags stay False.
+  This mechanism does not close Type I; Proposition 15.750 closes it independently.
 
 ============================================================================
 Backend: 15.538 identities + y_∞=+1 caches.  Writes

@@ -30,7 +30,7 @@ Theorem B — PROVED (p=5 mix; 15.543 A + 15.292 n_1d).
 Theorem C — OPEN for general p.  At p=7, μ_full takes three
   values {13,17,29}/(15 p²) of sign κ; |S|=2p−4 splits.
   A_full,dbl is 0 vs −4p³/15, not a p-law.  Aut_e G>T for
-  p>5 still open.  type_I flags stay False.
+  p>5 still open.  This mechanism does not close Type I; Proposition 15.750 closes it independently.
 
 ============================================================================
 Backend: p=5 1D/full masks + Fraction mix.  Writes

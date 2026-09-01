@@ -52,7 +52,7 @@ Theorem C — OPEN.  Naming I does not name live Δ_conn as a
   p-rational (15.529 C: A still has den 13,409).  The rewrite
       Δ_conn=2/((p²−1)p⁴) ∑_{Ω, ξ+η+θ=0} A χ(θ) S(−η/θ)
   still carries D through A.  Aut_e 3A+B still G>T.
-  type_I flags stay False.
+  This mechanism does not close Type I; Proposition 15.750 closes it independently.
 
 ============================================================================
 Backend: field tables + S-table + vectorized I.  Writes

@@ -112,7 +112,7 @@ def test_does_not_flip_other_leftovers():
     from e1_gmin_m4_prop15275 import type_I_multilevel_bad_case_ND_closed
     from e1_gmin_m4_prop15170 import gsum_disj_lb_proved_general
     assert residual_ii_k_ge_4p_ND_closed() is False
-    assert type_I_multilevel_bad_case_ND_closed() is False
+    assert type_I_multilevel_bad_case_ND_closed() is True
     assert gsum_disj_lb_proved_general() is False
 
 

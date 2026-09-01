@@ -3,7 +3,7 @@
 **Date:** 2026-09-01
 
 **Scope:** Propositions 6.3--6.4, every assigned proposition through
-Proposition 15.749, the live predicate wiring, and the attack scripts present
+Proposition 15.750, the live predicate wiring, and the attack scripts present
 during the audit
 
 **Purpose:** prevent a reformulation, solver/backend change, longer timeout,
@@ -46,8 +46,8 @@ bi-tight through 15.167, and GLOBAL QVAR/R1 are not E(1) acceptance gates.
 Proposition 15.720 supplies the valid replacement without a new small-prime
 run: `ker(Gsum)=scheme+cross` forces a bi-tight degree congruence modulo
 `(p^2-1)/2`, excluding the required levels 2 and 3 for every prime `p>=5`.
-After this correction, exactly two mathematical gates remain: multi-level
-Type I and non-Walsh residual (ii).
+After Proposition 15.750 below, exactly one mathematical gate remains in the
+four-unit E1 ledger: non-Walsh residual (ii).
 
 A second semantic check caught a nearby downstream misuse before commit:
 15.274/15.585 invoked the bi-tight result on one-sided `S≡±4` tight covers.
@@ -72,6 +72,18 @@ run from the existing eigenshell caches remains infeasible at both `p=5` and
 `p=7`, so the finite conclusions survive, but the old solver statuses were
 not evidence for them.  These runs do not create a general route and must not
 be extended to another prime.
+
+A later exactification and uniform audit now gives Proposition 15.750 and
+closes Type I without extending that finite search. The `p=5,7` numerical
+duals were used only to select supports; tracked positive integer multipliers
+now verify `A^T lambda=0` and `b^T lambda<0` from a regenerated Paley matrix.
+The `p=7` certificate is a full nonnegative-cone certificate, while `p=5`
+also uses the cardinality side condition. For every `p>=11`, isolated-chart
+square-direction rigidity forces the signed mass profile, a nonsquare
+direction has scaled lift mass four or six, and exact parity halving makes
+the sharp 15.688 floor contradictory. Signed-PSL 2-transitivity normalizes
+the distinguished edge. This is a proved all-prime theorem, not a census;
+do not reopen the old `3A+B`, Aut_e, or floating-LP routes.
 
 A fourth semantic check found the main source of the all-finite residual
 duplication. Proposition 15.267's signed PSL action can move any selected

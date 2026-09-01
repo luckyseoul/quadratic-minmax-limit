@@ -49,7 +49,7 @@ is the two-ray amplification theorem of Proposition 6.3 (or any other proof
 of convergence/non-existence).  The value-specific route to \(L=1/2\) is
 **E(1)** on \(n=p^2+1\).  On that optional Paley route, the live gate is the
 corrected dictionary returned by
-`src/e1_main_chain_status.py`; as of 2026-09-01 through Proposition 15.749 it
+`src/e1_main_chain_status.py`; as of 2026-09-01 through Proposition 15.750 it
 reads:
 
 1. **Required bi-tight levels 2 and 3:** TRUE by 15.720. The spectral floor,
@@ -67,21 +67,23 @@ reads:
    endpoint/profile artifacts are not live gates; only the lemmas and
    certificates explicitly retained by the dedup audit remain valid evidence.
    Read `evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md` before reopening one.
-3. **Type I, multi-level Max−:** OPEN. The `|κ|=1` condition is `G>T`;
-   `|κ|=3` independently requires the signed `(μ,ν)` inequality, whose
-   nonparticular δ remainder is not controlled.
+3. **Type I, multi-level Max−:** TRUE by Proposition 15.750. Isolated-chart
+   square rigidity and parity halving close `p>=11`; tracked exact integer
+   Farkas identities close `p=5,7`. The old `3A+B` route remains incomplete
+   but is no longer a global gate.
 4. **Lemma D:** TRUE.
 
 The older statement that residual (ii) was closed by 15.179/15.236/15.237
 covered an earlier, narrower split and is not the live multi-level predicate.
 Likewise, “residual (i) is the only leftover” is retired shorthand. The
-authoritative open functions are `residual_ii_k_ge_4p_ND_closed()` and
-`type_I_multilevel_bad_case_ND_closed()`. The valid bi-tight predicate is
+authoritative open function is `residual_ii_k_ge_4p_ND_closed()`;
+`type_I_multilevel_bad_case_ND_closed()` is now True. The valid bi-tight predicate is
 `required_bitight_levels_empty_all_primes()`.
 
 Path-C / 16N / 15.193 exhaustiveness is **not** required.
 
-Closing either open unit is progress on the Paley \(L=1/2\) route, but it is
+Closing the sole open residual-(ii) unit completes the remaining E1 ledger,
+but it is
 not necessary for a different proof of convergence and is not goal
 completion.  The direct convergence front is to prove the estimates at
 multipliers 2 and 3 from Proposition 6.3; an all-pairs composition theorem is
@@ -110,7 +112,7 @@ A session may end only if one of these happened:
 - one of the two fixed amplification rays in Proposition 6.3 is actually
   proved with a Dini-summable error, and the other ray remains the named direct
   convergence gate, or
-- one of the two open E(1) units **actually closed** (predicate True via a
+- the sole remaining open E(1) unit **actually closed** (predicate True via a
   real import), or
 - a live route was **killed as a path** by a general counter-mechanism (not a
   small-\(p\) census), and the writeup names the replacement route, or

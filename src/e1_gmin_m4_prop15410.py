@@ -33,7 +33,7 @@ Theorem C — p=7 HiGHS (encoding corrected 2026-08-30).
   Fail: claim the bad-case LP feasible.  ∎
 
 Theorem D — OPEN.  Aut_e far-class 3A+B>0 remains G>T.
-  type_I flags stay False.
+  This mechanism does not close Type I; Proposition 15.750 closes it independently.
 
 ============================================================================
 Backend: Fraction + p=5,7 caches + HiGHS.  Writes

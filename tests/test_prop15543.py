@@ -48,10 +48,10 @@ def test_abs_mu_1d_le_T():
 def test_type_I_flags_still_open():
     C = prove_open()
     assert C["proved"] is False
-    assert C["type_I_multilevel_bad_case_ND_closed"] is False
+    assert C["type_I_multilevel_bad_case_ND_closed"] is True
     assert C["type_I_aut_e_3AB_positive_general"] is False
     assert C["A_full_named_p_law"] is False
-    assert type_I_multilevel_bad_case_ND_closed() is False
+    assert type_I_multilevel_bad_case_ND_closed() is True
     assert type_I_aut_e_3AB_positive_general() is False
 
 
@@ -62,7 +62,7 @@ def test_flags_untouched():
     out = main()
     assert out["proved"]["mu_1d_named"] is True
     assert out["proved"]["mu_1d_le_T"] is True
-    assert out["proved"]["type_I_multilevel_bad_case_ND_closed"] is False
+    assert out["proved"]["type_I_multilevel_bad_case_ND_closed"] is True
     assert out["proved"]["type_I_aut_e_3AB_positive_general"] is False
     assert out["phi_F_ge_6"] is False
     assert out["L_status"] == "OPEN"

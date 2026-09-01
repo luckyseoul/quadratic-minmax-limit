@@ -13,8 +13,8 @@ m_n = min_{a_ij = ±1}  max_{x_j = ±1}  | Σ_{1≤i<j≤n} a_ij · x_i · x_j |
 
 Machine-assisted attack on a 2022 MathOverflow problem: whether the normalized
 min-max ±1 quadratic form converges. The limit **L is OPEN**. This repo is a
-proof ledger with 664 source-backed computational proposition modules through
-15.749 plus reviewed analytic arguments in `solution.md`. Machine gates use
+proof ledger with 665 source-backed computational proposition modules through
+15.750 plus reviewed analytic arguments in `solution.md`. Machine gates use
 explicit `True`/`False` predicates, and soft-closing is banned by test
 (`tests/test_main_chain_docs.py`); Propositions 6.3--6.4 are proved in prose,
 not represented as computational predicates.
@@ -25,7 +25,7 @@ not represented as computational predicates.
 
 **Main claim:** L = lim_n α_n is **OPEN** (2026-09-01).
 
-### Current audit (2026-09-01; through Proposition 15.749 and Propositions 6.3--6.4)
+### Current audit (2026-09-01; through Proposition 15.750 and Propositions 6.3--6.4)
 
 - **Original-question correction and new direct gate.** MathOverflow 413935
   asks whether the limit exists; identifying its value is optional.  With
@@ -45,6 +45,15 @@ not represented as computational predicates.
   signings must satisfy a simultaneous hereditary bound on every cut; finding
   orientations whose endpoints and mixed states all meet the upper target is
   still part of the problem.
+
+- **Multi-level Type-I close.** Proposition 15.750 closes this all-prime
+  Paley gate. For `p>=11`, an isolated vertex is transported to infinity;
+  square-direction Johnson rigidity forces exactly three parallel units,
+  a nonsquare direction then has scaled lift mass `4` or `6`, and exact
+  parity halving contradicts the sharp `p-3` lift floor. Tracked integer
+  Farkas identities close `p=5,7` without SciPy or eigenshell caches, and
+  signed-PSL 2-transitivity handles every distinguished edge. This leaves
+  residual (ii) as the sole false E(1) unit; E1 and the limit remain open.
 
 - **Paley value-specific target.** It is enough for \(L=1/2\) to prove the Paley-tail deficit
   \(\Phi(C_p)-m_{p^2+1}=o(p^3)\) on a ratio-dense tail. The current all-prime,
@@ -268,8 +277,8 @@ the limiting object is literally spherical:
 - the **gold hemisphere** is the finite-incidence, conic, and secant structure
   of the non-Walsh front;
 - the **white great-circle seam** is the implication chain joining the fronts;
-- the **top notch** is the still-open residual-(ii)/Type-I pair preventing
-  closure.
+- the **top notch** is the still-open residual-(ii) unit preventing closure;
+  Type I is closed by Proposition 15.750.
 
 The editable model is available as
 [`expected-solution-structure.step`](evidence/share/expected-solution-structure.step),
@@ -283,11 +292,11 @@ Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 |---|---|---|
 | required bi-tight levels 2 and 3 | `bitight_levels_2_3` | **TRUE** — 15.720 degree congruence; bi-tight level 4 is a corollary, while generic one-sided covers exist and only joint residual compatibility remains open |
 | residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Propositions 15.734--15.737 close `k in {4p,4p+2,4p+4}` for every prime `p>=11` and every boundary size. Propositions 15.738--15.742 close `p=13,k=58`, Proposition 15.743 closes `p=17,k=74`, 15.744--15.745 close `u=3,0` at `p=13,k=60`, and 15.746--15.749 close `u=4`. Critical `p=5,7`, `p=11,k>=50`, `p=13,k=60,u=6` and later p13 layers, every `p>=17,t>=4` layer (starting with `p=17,k=76`), and generic branch B at `p>=29,t=3` remain; the positive `p=7,z=7` subbranch also persists. Hence the global predicate stays false. |
-| Type I, multi-level Max− | `type_I_multilevel` | **OPEN** — on `|κ|=1` the missing sign is `G>T`; on `|κ|=3` the separate signed `(μ,ν)` inequality still has an uncontrolled δ remainder |
+| Type I, multi-level Max− | `type_I_multilevel` | **TRUE** — Proposition 15.750: isolated-chart square rigidity, parity halving, the sharp lift floor, and exact `p=5,7` Farkas certificates |
 | Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |
 
-Thus exactly two mathematical predicates remain false: residual (ii) and
-multi-level Type I. The spectral/QVAR–R1 front is optional and is removed
+Thus exactly one mathematical predicate remains false: residual (ii).
+The spectral/QVAR–R1 front is optional and is removed
 from the acceptance chain. Soft-close is forbidden. The acceptance package is
 **`evidence/share/denseness_path_package.md`**.
 
@@ -715,7 +724,7 @@ graph TD
     FLOOR --> QVAR["global mixed-k QVAR<br/><b>OPEN</b>"]
     FLOOR --> R1["principal <b>R1</b><br/>‖δ‖² ≤ n(λ̄−6)²/48<br/><b>OPEN</b>"]
     R1 -. p=11 exact test .-> R1TRACE["finite strong R1 <b>TRUE</b> by full census<br/>three broad-channel cones still <b>INSUFFICIENT</b> (15.668)"]
-    E1 --> TYPEI["Type I multi-level<br/>3A+B > 0<br/><b>OPEN</b>"]
+    E1 --> TYPEI["Type I multi-level<br/>isolated-chart parity halving<br/><b>CLOSED</b> (15.750)"]
     R1 -. sufficient .-> TYPEI
     E1 --> RES["residual (ii), even k≥4p<br/><b>OPEN</b>"]
     RES --> WALSH["Walsh / W1 / W2<br/><b>CLOSED</b> (15.628)"]
@@ -1029,6 +1038,7 @@ Proposition 15.721 supersedes the active all-finite shell statuses in
 | 15.747 | combine the exact six-cut second moment with projected height-four coefficient models at `Q=3,5` | **proved branch exclusion with exhaustive finite certificates:** the Boolean equation is impossible modulo seven and both height-four models are infeasible; the `P=3` branch is closed and every minimum `P=5,Q=3` cell is a literal |
 | 15.748 | interpolate the common `M2,M4,M6` roots supplied by those literals against the 69-element hard moment alphabet | **exhaustive finite interpolation certificate and proved open reduction:** `z>=3` is impossible, while `z=2` leaves 336 moment-level survivors per sign; only the opposite excess partition `(1,1,1,1,1)` remains |
 | 15.749 | impose all 74 translated cuts on each surviving `Q=4` row, recover its exact moment list, and compare it with every 15.748 nonroot evaluation | **exhaustive finite aggregate certificate and proved branch theorem:** exact cut duals give `-5<=q_a<=1`; 522 rows yield 492 triples, whose 12-point survivor intersection has `N4=0`. Five such roots plus the two literal roots force `M4=0`, contradicting the hard alphabet and closing `p=13,t=4,u=4` |
+| 15.750 | transport an isolated vertex, rigidify every square direction, halve a low-mass nonsquare lift by exact parity, and verify exact `p=5,7` Farkas bases | **proved all-prime theorem:** closes the multi-level Type-I bad case for every prime `p>=5` and every distinguished edge; residual (ii), E1, and the limit remain open |
 
 The size-eight scope is deliberately split. Proposition 15.662 closes all
 6,174 minimum-eight-odd-secant boundaries (the affine conics) for both
@@ -1362,10 +1372,9 @@ unidentified glue-class phase, unknown broad mass, or classified low shell.
    coefficient alphabet. The next
    attack must therefore impose simultaneous cross-direction compatibility or
    a new global invariant, not repeat the one-direction floor/halving argument.
-2. **Type I, multi-level Max−:** prove both far-class signs: `G>T` on
-   `|κ|=1`, and `χ_d((2p-1)μ+(p-2)ν)>-(p-2)/p` on `|κ|=3`, or
-   otherwise establish no descent. A `|μ|` bound stated only on `|κ|=1`
-   does not close the second half.
+Type I is no longer on the work list. Proposition 15.750 bypasses the old
+`3A+B` / Aut_e sign routes; those mechanism-local leftovers are not current
+global gates.
 
 The spectral floor, global mixed-`k` QVAR, and principal R1 remain worthwhile
 optional problems, but Proposition 15.720 removed them from the acceptance
@@ -1470,6 +1479,9 @@ Lemma D is complete and is no longer on the work list.
 | `src/e1_gmin_m4_prop15748.py` | Exact literal-root interpolation reducing `P=5` to excess partition `(1,1,1,1,1)` |
 | `src/e1_gmin_m4_prop15749.py` | Exact translated-cut dual bounds, `Q=4` moment intersection, and seven-root quartic close of `u=4` |
 | `tests/test_prop15749.py` | Focused deterministic checks of the Prop 15.749 dual identities, lists, hashes, and scoped status |
+| `src/e1_gmin_m4_prop15750.py` | All-prime isolated-chart parity-halving proof closing multi-level Type I |
+| `src/e1_type_i_small_prime_exact.py` | Leaf exact verifier for the tracked `p=5,7` integer Farkas identities |
+| `tests/test_prop15750.py`, `tests/test_type_i_small_prime_exact.py` | Uniform-proof arithmetic, all-edge normalization, corruption, cache-independence, and predicate-wiring checks |
 | `scripts/p13_support330_boolean_classifier.py` | Atomic exact no-new-support classifier with exact prefix sharding and optional nonproof GPU cross-check |
 | `evidence/p13_support330_boolean_classifier.json` | Exact unsharded infeasibility certificate exhausting the 364 support-330 candidates |
 | `evidence/NOTE_2026-08-24_r1_profile_glue_lattice.md` | Proof note for the lattice quotient, determinant, dual, and level |
@@ -1572,6 +1584,7 @@ Lemma D is complete and is no longer on the work list.
 | `evidence/NOTE_2026-08-31_p13_support330_u4_reduction.md` | Exact support-330 catalog, branchwise mean-12 consequences, and `F6=0` open reduction (15.746) |
 | `evidence/NOTE_2026-08-31_p13_u4_mass12_literal_interpolation.md` | Mass-12 cut obstruction, two height-four exclusions, and literal-root interpolation through 15.748 |
 | `evidence/NOTE_2026-09-01_p13_u4_translated_cut_moment_close.md` | Translated-cut moment-list proof closing `p=13,t=4,u=4` (15.749) |
+| `evidence/NOTE_2026-09-01_TYPE_I_ISOLATED_HALVING_CLOSE.md` | Uniform Type-I proof, exact base-certificate manifest, and replay instructions for 15.750 |
 | `evidence/e1_gmin_m4_prop15749.json` | Hash-pinned output for the 522 admissible rows, 492 moment triples, and 12-point intersection |
 | `evidence/NOTE_2026-08-31_p31_public_11_of_12_arc_audit.md` | Exhaustive finite certificate for the eleven publicly sourced complete 22-arc classes at `p=31`; explicitly not a twelve-class close |
 | `evidence/NOTE_2026-09-01_ORIGINAL_LIMIT_TWO_RAY.md` | Original-question correction, Dini two-ray theorem, Section 10 retraction, and exact four-state Hadamard-doubling hinge |

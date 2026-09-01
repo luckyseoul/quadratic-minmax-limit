@@ -1,0 +1,504 @@
+{
+  "prop": "15.750",
+  "title": "Isolated-chart parity halving closes multi-level Type I",
+  "result_status": "proved all-prime theorem with exact base certificates",
+  "statement": "the multi-level Type-I bad-case box is empty for every prime p>=5",
+  "small_prime_exact_Farkas_certificates": {
+    "5": {
+      "canonical_edge_exact_Farkas": {
+        "proved": true,
+        "p": 5,
+        "variables": 325,
+        "rows": 231,
+        "distinct_eigenvectors": 97,
+        "row_kinds": {
+          "lower": 133,
+          "minus_bad": 36,
+          "plus_ge": 22,
+          "plus_le": 39,
+          "sum_le": 1
+        },
+        "exact_lhs_nonzeros": 0,
+        "exact_rhs": -144,
+        "sha256": "f3e8c8a0f85fcaf95bc5b0556eced1a3699735e3bc11b78285bb4d25abd8008a",
+        "uses_scipy": false,
+        "uses_eigenshell_cache": false,
+        "uses_upper_bounds": false
+      },
+      "all_distinguished_edges": {
+        "p": 5,
+        "field": "F_(5^2)",
+        "first_map": "z -> -1/(z-a), with determinant 1",
+        "second_map": "z -> z-u, fixing infinity, with determinant 1",
+        "ordered_edge_target": [
+          "infinity",
+          0
+        ],
+        "PSL_2_is_two_transitive": true,
+        "canonical_matrix_edge_indices": [
+          0,
+          1
+        ],
+        "signed_lift_preserves_bad_box_system": true,
+        "proved": true
+      },
+      "proved": true
+    },
+    "7": {
+      "canonical_edge_exact_Farkas": {
+        "proved": true,
+        "p": 7,
+        "variables": 1225,
+        "rows": 1226,
+        "distinct_eigenvectors": 534,
+        "row_kinds": {
+          "lower": 692,
+          "minus_bad": 258,
+          "plus_ge": 121,
+          "plus_le": 155
+        },
+        "exact_lhs_nonzeros": 0,
+        "exact_rhs": -183080942655546889920122044166540790109205769337274605250328733322487896515595326393084939192014547940398187718851440595811297775331020945582271571324766236486821904268417408,
+        "sha256": "40a6e5156817a421dcc7debe75a55af5749ffd6cdcb12cda78ead75a3d0cc8db",
+        "uses_scipy": false,
+        "uses_eigenshell_cache": false,
+        "uses_upper_bounds": false
+      },
+      "all_distinguished_edges": {
+        "p": 7,
+        "field": "F_(7^2)",
+        "first_map": "z -> -1/(z-a), with determinant 1",
+        "second_map": "z -> z-u, fixing infinity, with determinant 1",
+        "ordered_edge_target": [
+          "infinity",
+          0
+        ],
+        "PSL_2_is_two_transitive": true,
+        "canonical_matrix_edge_indices": [
+          0,
+          1
+        ],
+        "signed_lift_preserves_bad_box_system": true,
+        "proved": true
+      },
+      "proved": true
+    }
+  },
+  "uniform_p_at_least_11": {
+    "domain": "every prime p>=11",
+    "proof_kind": "uniform theorem; samples are replays only",
+    "bad_case_setup": {
+      "G_edges": "3p-2",
+      "H": "G union {e}",
+      "H_edges": "3p-1",
+      "W": "G+2e as an edge multiset",
+      "W_edges_with_multiplicity": "3p",
+      "Max_plus_W_sum": 3,
+      "Max_minus_H_upper": -2
+    },
+    "signed_transport_dependency": "Proposition 15.721",
+    "quadratic_lift_dependency": "Proposition 15.688",
+    "johnson_pair_constancy": {
+      "p": 11,
+      "slice": "z in {+-1}^p with sum(z)=1",
+      "swap_remaining_coordinates": 9,
+      "swap_remaining_positive_signs": 5,
+      "linear_swap_forms_vanish": true,
+      "all_pair_coefficients_equal": true,
+      "proof": "swap a,b; then swap two remaining coordinates; finally use the remaining sign sum 1 to kill the common difference",
+      "proof_kind": "uniform exact Johnson-slice lemma",
+      "proved": true
+    },
+    "parity_bias": {
+      "domain": "odd p>=5, m=(p+1)/2, 1<=b<=p-1",
+      "base": "K_1=K_2=-binom(p,m)/p",
+      "recurrence": "(p-b)K_(b+1)=-K_b-bK_(b-1)",
+      "induction_range": "2<=b<=(p-1)/2",
+      "induction_ratio": "(b+1)/(p-b)<=1",
+      "other_half": "absolute-value complement symmetry",
+      "conclusion": "abs(K_m(b))<=binom(p,m)/p",
+      "probability_consequence": "each value of a nonconstant affine parity on J(p,m) has probability at least (p-1)/(2p)",
+      "proof_kind": "uniform exact recurrence induction",
+      "proved": true
+    },
+    "minimum_symbolic_gaps_at_p_11": {
+      "isolated_vertices_p2_minus_6p_plus_3": 58,
+      "positive_kappa_l1_gap_(p-1)(p-5)/2": 30,
+      "negative_kappa_parallel_gap_q_minus_3": 2,
+      "P_le_1_negative_mean_gap_p_minus_5": 6,
+      "nonsquare_all_three_mass_shortfall": 3,
+      "parity_gap_p_minus_1_minus_6": 4,
+      "lift_gap_p_minus_3_minus_6": 2
+    },
+    "symbolic_monotonicity": {
+      "p2_minus_6p_plus_3_increment": "2p-5>0",
+      "positive_kappa_gap_increment": "p-2>0",
+      "negative_kappa": "P=3-q*abs(kappa)<0 because q>=5",
+      "P_le_1_mean": "at most 5-p<0",
+      "nonsquare_shortfall": "3 for C_e=1 and 4 for C_e=-1",
+      "parity_gap": "p-7>=4",
+      "lift_gap": "p-9>=2"
+    },
+    "sample_exact_replays": {
+      "11": {
+        "-1": {
+          "p": 11,
+          "C_e": -1,
+          "isolated_transport": {
+            "p": 11,
+            "vertices": 122,
+            "H_edges": 32,
+            "isolated_vertex_lower_bound": 58,
+            "relative_flip_transport": {
+              "proved": true,
+              "flip_set_size_preserved": true,
+              "shells_preserved": true
+            },
+            "selected_isolated_vertex_maps_to_infinity": true,
+            "multiset_W_transport": "The signed-relative identity extends linearly from Boolean masks to all nonnegative integer edge multiplicities; apply the same transported edge permutation to H+e.",
+            "relative_flip_transport_extends_to_integer_edge_multisets": true,
+            "proved": true
+          },
+          "nonsquare_parallel_two": {
+            "p": 11,
+            "C_e": -1,
+            "tau_H": 4,
+            "nonsquare_directions": 6,
+            "sum_parallel_H_over_nonsquare_directions": 14,
+            "scaled_mean_formula": "2p E[T_d]=(p+1)P_d-2p+tau_H",
+            "scaled_mean_at_P_le_1_upper": -6,
+            "nonnegativity_forces_P_at_least": 2,
+            "mass_if_all_P_at_least_3": 18,
+            "mass_shortfall_from_all_P_at_least_3": 4,
+            "some_direction_has_P": 2,
+            "a_equals_2p_E_T": 6,
+            "proved": true
+          },
+          "parity_bias_replay": {
+            "p": 11,
+            "m": 6,
+            "denominator": 462,
+            "K_1": -42,
+            "K_2": -42,
+            "recurrence": "(p-b)K_(b+1)=-K_b-bK_(b-1)",
+            "recurrence_exact": true,
+            "max_p_times_absolute_K": 462,
+            "bias_bound_denominator": 462,
+            "each_nonconstant_parity_value_probability_at_least": "10/22",
+            "proved": true
+          },
+          "a_equals_2p_E_T": 6,
+          "nonconstant_or_odd_parity_floor": 10,
+          "parity_gap": 4,
+          "T_is_constantly_even": true,
+          "B_equals_T_over_2_is_nonzero": true,
+          "sharp_lift_floor_15_688": 8,
+          "lift_floor_gap": 2,
+          "contradiction": "4p E[B]=2p E[T]=a is below the Proposition 15.688 floor",
+          "closed": true,
+          "proved": true
+        },
+        "1": {
+          "p": 11,
+          "C_e": 1,
+          "isolated_transport": {
+            "p": 11,
+            "vertices": 122,
+            "H_edges": 32,
+            "isolated_vertex_lower_bound": 58,
+            "relative_flip_transport": {
+              "proved": true,
+              "flip_set_size_preserved": true,
+              "shells_preserved": true
+            },
+            "selected_isolated_vertex_maps_to_infinity": true,
+            "multiset_W_transport": "The signed-relative identity extends linearly from Boolean masks to all nonnegative integer edge multiplicities; apply the same transported edge permutation to H+e.",
+            "relative_flip_transport_extends_to_integer_edge_multisets": true,
+            "proved": true
+          },
+          "nonsquare_parallel_two": {
+            "p": 11,
+            "C_e": 1,
+            "tau_H": 2,
+            "nonsquare_directions": 6,
+            "sum_parallel_H_over_nonsquare_directions": 15,
+            "scaled_mean_formula": "2p E[T_d]=(p+1)P_d-2p+tau_H",
+            "scaled_mean_at_P_le_1_upper": -8,
+            "nonnegativity_forces_P_at_least": 2,
+            "mass_if_all_P_at_least_3": 18,
+            "mass_shortfall_from_all_P_at_least_3": 3,
+            "some_direction_has_P": 2,
+            "a_equals_2p_E_T": 4,
+            "proved": true
+          },
+          "parity_bias_replay": {
+            "p": 11,
+            "m": 6,
+            "denominator": 462,
+            "K_1": -42,
+            "K_2": -42,
+            "recurrence": "(p-b)K_(b+1)=-K_b-bK_(b-1)",
+            "recurrence_exact": true,
+            "max_p_times_absolute_K": 462,
+            "bias_bound_denominator": 462,
+            "each_nonconstant_parity_value_probability_at_least": "10/22",
+            "proved": true
+          },
+          "a_equals_2p_E_T": 4,
+          "nonconstant_or_odd_parity_floor": 10,
+          "parity_gap": 6,
+          "T_is_constantly_even": true,
+          "B_equals_T_over_2_is_nonzero": true,
+          "sharp_lift_floor_15_688": 8,
+          "lift_floor_gap": 4,
+          "contradiction": "4p E[B]=2p E[T]=a is below the Proposition 15.688 floor",
+          "closed": true,
+          "proved": true
+        }
+      },
+      "13": {
+        "-1": {
+          "p": 13,
+          "C_e": -1,
+          "isolated_transport": {
+            "p": 13,
+            "vertices": 170,
+            "H_edges": 38,
+            "isolated_vertex_lower_bound": 94,
+            "relative_flip_transport": {
+              "proved": true,
+              "flip_set_size_preserved": true,
+              "shells_preserved": true
+            },
+            "selected_isolated_vertex_maps_to_infinity": true,
+            "multiset_W_transport": "The signed-relative identity extends linearly from Boolean masks to all nonnegative integer edge multiplicities; apply the same transported edge permutation to H+e.",
+            "relative_flip_transport_extends_to_integer_edge_multisets": true,
+            "proved": true
+          },
+          "nonsquare_parallel_two": {
+            "p": 13,
+            "C_e": -1,
+            "tau_H": 4,
+            "nonsquare_directions": 7,
+            "sum_parallel_H_over_nonsquare_directions": 17,
+            "scaled_mean_formula": "2p E[T_d]=(p+1)P_d-2p+tau_H",
+            "scaled_mean_at_P_le_1_upper": -8,
+            "nonnegativity_forces_P_at_least": 2,
+            "mass_if_all_P_at_least_3": 21,
+            "mass_shortfall_from_all_P_at_least_3": 4,
+            "some_direction_has_P": 2,
+            "a_equals_2p_E_T": 6,
+            "proved": true
+          },
+          "parity_bias_replay": {
+            "p": 13,
+            "m": 7,
+            "denominator": 1716,
+            "K_1": -132,
+            "K_2": -132,
+            "recurrence": "(p-b)K_(b+1)=-K_b-bK_(b-1)",
+            "recurrence_exact": true,
+            "max_p_times_absolute_K": 1716,
+            "bias_bound_denominator": 1716,
+            "each_nonconstant_parity_value_probability_at_least": "12/26",
+            "proved": true
+          },
+          "a_equals_2p_E_T": 6,
+          "nonconstant_or_odd_parity_floor": 12,
+          "parity_gap": 6,
+          "T_is_constantly_even": true,
+          "B_equals_T_over_2_is_nonzero": true,
+          "sharp_lift_floor_15_688": 10,
+          "lift_floor_gap": 4,
+          "contradiction": "4p E[B]=2p E[T]=a is below the Proposition 15.688 floor",
+          "closed": true,
+          "proved": true
+        },
+        "1": {
+          "p": 13,
+          "C_e": 1,
+          "isolated_transport": {
+            "p": 13,
+            "vertices": 170,
+            "H_edges": 38,
+            "isolated_vertex_lower_bound": 94,
+            "relative_flip_transport": {
+              "proved": true,
+              "flip_set_size_preserved": true,
+              "shells_preserved": true
+            },
+            "selected_isolated_vertex_maps_to_infinity": true,
+            "multiset_W_transport": "The signed-relative identity extends linearly from Boolean masks to all nonnegative integer edge multiplicities; apply the same transported edge permutation to H+e.",
+            "relative_flip_transport_extends_to_integer_edge_multisets": true,
+            "proved": true
+          },
+          "nonsquare_parallel_two": {
+            "p": 13,
+            "C_e": 1,
+            "tau_H": 2,
+            "nonsquare_directions": 7,
+            "sum_parallel_H_over_nonsquare_directions": 18,
+            "scaled_mean_formula": "2p E[T_d]=(p+1)P_d-2p+tau_H",
+            "scaled_mean_at_P_le_1_upper": -10,
+            "nonnegativity_forces_P_at_least": 2,
+            "mass_if_all_P_at_least_3": 21,
+            "mass_shortfall_from_all_P_at_least_3": 3,
+            "some_direction_has_P": 2,
+            "a_equals_2p_E_T": 4,
+            "proved": true
+          },
+          "parity_bias_replay": {
+            "p": 13,
+            "m": 7,
+            "denominator": 1716,
+            "K_1": -132,
+            "K_2": -132,
+            "recurrence": "(p-b)K_(b+1)=-K_b-bK_(b-1)",
+            "recurrence_exact": true,
+            "max_p_times_absolute_K": 1716,
+            "bias_bound_denominator": 1716,
+            "each_nonconstant_parity_value_probability_at_least": "12/26",
+            "proved": true
+          },
+          "a_equals_2p_E_T": 4,
+          "nonconstant_or_odd_parity_floor": 12,
+          "parity_gap": 8,
+          "T_is_constantly_even": true,
+          "B_equals_T_over_2_is_nonzero": true,
+          "sharp_lift_floor_15_688": 10,
+          "lift_floor_gap": 6,
+          "contradiction": "4p E[B]=2p E[T]=a is below the Proposition 15.688 floor",
+          "closed": true,
+          "proved": true
+        }
+      },
+      "17": {
+        "-1": {
+          "p": 17,
+          "C_e": -1,
+          "isolated_transport": {
+            "p": 17,
+            "vertices": 290,
+            "H_edges": 50,
+            "isolated_vertex_lower_bound": 190,
+            "relative_flip_transport": {
+              "proved": true,
+              "flip_set_size_preserved": true,
+              "shells_preserved": true
+            },
+            "selected_isolated_vertex_maps_to_infinity": true,
+            "multiset_W_transport": "The signed-relative identity extends linearly from Boolean masks to all nonnegative integer edge multiplicities; apply the same transported edge permutation to H+e.",
+            "relative_flip_transport_extends_to_integer_edge_multisets": true,
+            "proved": true
+          },
+          "nonsquare_parallel_two": {
+            "p": 17,
+            "C_e": -1,
+            "tau_H": 4,
+            "nonsquare_directions": 9,
+            "sum_parallel_H_over_nonsquare_directions": 23,
+            "scaled_mean_formula": "2p E[T_d]=(p+1)P_d-2p+tau_H",
+            "scaled_mean_at_P_le_1_upper": -12,
+            "nonnegativity_forces_P_at_least": 2,
+            "mass_if_all_P_at_least_3": 27,
+            "mass_shortfall_from_all_P_at_least_3": 4,
+            "some_direction_has_P": 2,
+            "a_equals_2p_E_T": 6,
+            "proved": true
+          },
+          "parity_bias_replay": {
+            "p": 17,
+            "m": 9,
+            "denominator": 24310,
+            "K_1": -1430,
+            "K_2": -1430,
+            "recurrence": "(p-b)K_(b+1)=-K_b-bK_(b-1)",
+            "recurrence_exact": true,
+            "max_p_times_absolute_K": 24310,
+            "bias_bound_denominator": 24310,
+            "each_nonconstant_parity_value_probability_at_least": "16/34",
+            "proved": true
+          },
+          "a_equals_2p_E_T": 6,
+          "nonconstant_or_odd_parity_floor": 16,
+          "parity_gap": 10,
+          "T_is_constantly_even": true,
+          "B_equals_T_over_2_is_nonzero": true,
+          "sharp_lift_floor_15_688": 14,
+          "lift_floor_gap": 8,
+          "contradiction": "4p E[B]=2p E[T]=a is below the Proposition 15.688 floor",
+          "closed": true,
+          "proved": true
+        },
+        "1": {
+          "p": 17,
+          "C_e": 1,
+          "isolated_transport": {
+            "p": 17,
+            "vertices": 290,
+            "H_edges": 50,
+            "isolated_vertex_lower_bound": 190,
+            "relative_flip_transport": {
+              "proved": true,
+              "flip_set_size_preserved": true,
+              "shells_preserved": true
+            },
+            "selected_isolated_vertex_maps_to_infinity": true,
+            "multiset_W_transport": "The signed-relative identity extends linearly from Boolean masks to all nonnegative integer edge multiplicities; apply the same transported edge permutation to H+e.",
+            "relative_flip_transport_extends_to_integer_edge_multisets": true,
+            "proved": true
+          },
+          "nonsquare_parallel_two": {
+            "p": 17,
+            "C_e": 1,
+            "tau_H": 2,
+            "nonsquare_directions": 9,
+            "sum_parallel_H_over_nonsquare_directions": 24,
+            "scaled_mean_formula": "2p E[T_d]=(p+1)P_d-2p+tau_H",
+            "scaled_mean_at_P_le_1_upper": -14,
+            "nonnegativity_forces_P_at_least": 2,
+            "mass_if_all_P_at_least_3": 27,
+            "mass_shortfall_from_all_P_at_least_3": 3,
+            "some_direction_has_P": 2,
+            "a_equals_2p_E_T": 4,
+            "proved": true
+          },
+          "parity_bias_replay": {
+            "p": 17,
+            "m": 9,
+            "denominator": 24310,
+            "K_1": -1430,
+            "K_2": -1430,
+            "recurrence": "(p-b)K_(b+1)=-K_b-bK_(b-1)",
+            "recurrence_exact": true,
+            "max_p_times_absolute_K": 24310,
+            "bias_bound_denominator": 24310,
+            "each_nonconstant_parity_value_probability_at_least": "16/34",
+            "proved": true
+          },
+          "a_equals_2p_E_T": 4,
+          "nonconstant_or_odd_parity_floor": 16,
+          "parity_gap": 12,
+          "T_is_constantly_even": true,
+          "B_equals_T_over_2_is_nonzero": true,
+          "sharp_lift_floor_15_688": 14,
+          "lift_floor_gap": 10,
+          "contradiction": "4p E[B]=2p E[T]=a is below the Proposition 15.688 floor",
+          "closed": true,
+          "proved": true
+        }
+      }
+    },
+    "proved": true
+  },
+  "type_I_multilevel_bad_case_ND_closed": true,
+  "obsolete_3A_plus_B_route_used": false,
+  "finite_graph_census_used": false,
+  "scipy_or_optimizer_theorem_dependency": false,
+  "eigenshell_cache_theorem_dependency": false,
+  "residual_ii_closed": false,
+  "E1_closed": false,
+  "quadratic_minmax_limit_closed": false,
+  "L_status": "OPEN",
+  "proved": true
+}

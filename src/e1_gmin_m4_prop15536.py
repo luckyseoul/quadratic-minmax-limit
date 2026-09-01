@@ -31,7 +31,7 @@ Theorem C — OPEN as a name of Δ_conn.  Distinct Ω-triples have
   generic S not a single p-law (p=5: −10; p=7: −2; p=11 splits
   {−10,6,22}).  Even the 3-χ type (1,1,1) splits at p=7
   (S∈{−2,14}).  The contraction still carries den 13,409
-  through A.  Aut_e 3A+B still G>T.  type_I flags stay False.
+  through A.  Aut_e 3A+B still G>T.  This mechanism does not close Type I; Proposition 15.750 closes it independently.
 
 ============================================================================
 Backend: 15.534 field tables + S-table.  Writes

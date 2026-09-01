@@ -12064,6 +12064,149 @@ Evidence: `src/e1_gmin_m4_prop15749.py`, `tests/test_prop15749.py`,
 `evidence/e1_gmin_m4_prop15749.json`, and
 `evidence/NOTE_2026-09-01_p13_u4_translated_cut_moment_close.md`.
 
+## Proposition 15.750 — isolated-chart parity halving closes multi-level Type I
+
+Let \(p\ge5\) be prime, let \(e\) be a distinguished edge, and suppose that
+a Boolean edge set \(G\) is a multi-level Type-I bad case:
+
+\[
+ |G|=3p-2,\quad e\notin G,\quad
+ S_G=3-2f_e\quad\hbox{on Max+},                    \tag{15.750.1}
+\]
+
+while on Max−,
+
+\[
+ S_G\le-1,qquad S_G\le-3f_e.                     \tag{15.750.2}
+\]
+
+Put \(H=G\cup\{e\}\) and let \(W=G+2e\) be an edge multiset. Then
+
+\[
+ |H|=3p-1,\quad |W|=3p,\quad S_W=3\text{ on Max+},
+ \quad S_H\le-2\text{ on Max−}.                \tag{15.750.3}
+\]
+
+Assume first that \(p\ge11\). At least
+
+\[
+ p^2+1-2(3p-1)=p^2-6p+3>0                         \tag{15.750.4}
+\]
+
+vertices are isolated in \(H\). Proposition 15.721 transports one to
+infinity. Its signed relative-flip identity is linear in nonnegative integer
+edge multiplicities, so the same permutation transports \(W=H+e\), including
+the doubled edge. Both eigenshell conditions are preserved and every edge is
+finite in the resulting affine chart.
+
+Write \(q=(p-1)/2\) and \(m=(p+1)/2\). Fix a square direction, let \(P\)
+be the total \(W\)-multiplicity parallel to it, and let \(K_{st}\) be the
+signed edge sum between fibres \(s,t\). The affine Max+ cylinders give
+
+\[
+ P+\sum_{s<t}K_{st}z_sz_t=3
+ \quad\text{whenever }z_s\in\{\pm1\},\ \sum_sz_s=1. \tag{15.750.5}
+\]
+
+The Johnson-slice swap lemma makes all \(K_{st}\) equal. Indeed, swap two
+coordinates \(a,b\) while fixing a middle subset among the remaining
+coordinates. The difference is a linear form with coefficients
+\(K_{ak}-K_{bk}\); swapping two remaining coordinates makes these
+coefficients equal, and their dot product with a sign vector of sum one
+makes the common value zero. Varying \(a,b\) proves \(K_{st}=\kappa\).
+Since \(\sum_{s<t}z_sz_t=-q\),
+
+\[
+ P=3+q\kappa,\qquad
+ 3p-P\ge {p\choose2}|\kappa|=pq|\kappa|.          \tag{15.750.6}
+\]
+
+For \(p\ge11\), (15.750.6) forces \(\kappa=0\), hence \(P=3\). Summing over
+the \(m\) square directions gives positive and negative \(W\)-multiplicities
+\(3m\) and \(3q\), and signed total three.
+
+Let \(c=C_e\in\{\pm1\}\). Removing one copy of \(e\) gives
+\(\tau:=\sum C_{ab}H_{ab}=3-c\). In a nonsquare direction let \(P_d\)
+count parallel \(H\)-edges and define
+
+\[
+ T_d(z)={-S_H(z)-2\over2}\ge0.                    \tag{15.750.7}
+\]
+
+This is an integer-valued quadratic on \(J(p,m)\). Since
+\(\mathbb E[z_sz_t]=-1/p\),
+
+\[
+ a_d:=2p\mathbb E[T_d]=(p+1)P_d-2p+\tau.          \tag{15.750.8}
+\]
+
+Nonnegativity forces every \(P_d\ge2\). Their sum is \(3q\) if \(c=1\)
+and \(3q-1\) if \(c=-1\), both strictly below \(3m\). Thus some direction
+has \(P_d=2\), and there
+
+\[
+ a_d=4\quad(c=1),\qquad a_d=6\quad(c=-1).         \tag{15.750.9}
+\]
+
+The product of the edge features of \(H\) is a constant times the parity of
+the fibres meeting the odd-degree boundary of \(H\). Because
+
+\[
+ (-1)^{(|H|-S_H)/2}=\prod_{g\in H}f_g,
+\]
+
+\(T_d\bmod2\) is an affine fibre parity. For a nonconstant parity supported
+on \(b\) fibres, its bias on \(J(p,m)\) is \(K_m(b)/{p\choose m}\). The
+central Krawtchouk recurrence
+
+\[
+ (p-b)K_m(b+1)=-K_m(b)-bK_m(b-1),\qquad
+ K_m(1)=K_m(2)=-{1\over p}{p\choose m},            \tag{15.750.10}
+\]
+
+and induction through \(b\le(p-1)/2\), followed by complement symmetry,
+give
+
+\[
+ |K_m(b)|\le {1\over p}{p\choose m}qquad(1\le b\le p-1). \tag{15.750.11}
+\]
+
+Hence either value of a nonconstant affine parity has probability at least
+\((p-1)/(2p)\). If \(T_d\) were odd on that class, nonnegativity would give
+\(2p\mathbb E[T_d]\ge p-1\); constant odd parity would cost \(2p\).
+But (15.750.9) is at most six and \(p-1\ge10\). Thus \(T_d\) is everywhere
+even. Then \(B_d=T_d/2\) is a nonzero nonnegative integer-valued quadratic,
+so Proposition 15.688 yields
+
+\[
+ 4p\mathbb E[B_d]\ge p-3.                         \tag{15.750.12}
+\]
+
+Yet \(4p\mathbb E[B_d]=2p\mathbb E[T_d]=a_d\in\{4,6\}<p-3\), a
+contradiction.
+
+For \(p=5,7\), tracked positive integer Farkas multipliers give exact
+identities \(\sum_r\lambda_rA_r=0\) and
+\(\sum_r\lambda_rb_r<0\) for the canonical edge. The verifier regenerates
+the Paley matrix, checks every stored Boolean eigenvector, and evaluates
+both identities with arbitrary-precision integers; it invokes neither an
+optimizer nor an eigenshell cache. Finally, \(\operatorname{PSL}(2,p^2)\)
+is 2-transitive: determinant-one translate/invert maps send any ordered edge
+to \((\infty,0)\), and the signed lift preserves (15.750.1)--(15.750.2).
+Therefore
+
+\[
+ \boxed{\text{the multi-level Type-I bad case is empty for every prime }
+ p\ge5.}                                           \tag{15.750.13}
+\]
+
+This closes only Type I. Residual (ii), E1, \(L=1/2\), and the original
+convergence question remain open. Evidence:
+`src/e1_gmin_m4_prop15750.py`, `src/e1_type_i_small_prime_exact.py`,
+`evidence/e1_type_i_badcase_farkas_p5.json`,
+`evidence/e1_type_i_badcase_farkas_p7.json`, and
+`evidence/e1_gmin_m4_prop15750.json`.
+
 ## Proposition 15.723 — paired-cube obstruction to middle floor-plus-two lifts
 
 Put (p=2m-1\ge17). Let (A\ge0) be an integer-valued quadratic on

@@ -49,7 +49,7 @@ def test_does_not_flip_qvar_or_leftovers():
     assert L.leftover1_qvar_and_principal_proved() is False
     assert phi_F_ge_6_proved_general() is False
     assert residual_ii_k_eq_4p_empty() is False
-    assert type_I_multilevel_bad_case_ND_closed() is False
+    assert type_I_multilevel_bad_case_ND_closed() is True
     src = inspect.getsource(G.global_qvar_proved_general)
     assert "return True" not in src
     assert T["inequality_proved"] is False

@@ -45,5 +45,5 @@ def test_leftover_flags_untouched():
     from e1_gmin_m4_prop15275 import type_I_multilevel_bad_case_ND_closed
     from e1_gmin_m4_prop15278 import phi_F_ge_6_proved_general
 
-    assert type_I_multilevel_bad_case_ND_closed() is False
+    assert type_I_multilevel_bad_case_ND_closed() is True
     assert phi_F_ge_6_proved_general() is False

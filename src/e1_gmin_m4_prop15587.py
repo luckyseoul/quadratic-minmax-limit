@@ -6,9 +6,10 @@ Identifies the Type I census constant mu = census_gmin_kappa1(p) as an
 explicit 4-point moment of Max+, recomputed from an independent exhaustive
 Max+ enumeration, and pins the two bound targets L, T in closed form.
 
-Does **not** flip type_I / residual_ii / phi_F_ge_6 / e1 / L / Aut-Schur /
-Gsum / pairing.  Lemma D stays True.  This is identification, not the
-Type I kill: `type_I_aut_e_3AB_positive_general` stays False.
+This proposition itself does **not** close its Type-I route, residual_ii,
+phi_F_ge_6, e1, L, Aut-Schur, Gsum, or pairing.  Lemma D stays True.  It is
+an identification result: `type_I_aut_e_3AB_positive_general` stays False.
+Proposition 15.750 later closes global Type I by an independent argument.
 
 ============================================================================
 SETUP.  n = p^2+1, C Paley conference, Max+ = {y in {+-1}^n : Cy = py}.
@@ -44,9 +45,10 @@ Theorem E — CERTIFIED p=5,7.  max|m4| over ALL four-sets is 21/65 at p=5
   and 327/2863 at p=7, both strictly < 1.  (Used by the residual-(ii) pair-span
   side: a two-edge support is two-valued only if some |m4| = 1.)
 
-OPEN.  A-E are identification and finite certificates.  |mu| <= |L| is not
-proved Max+-free for general p, so type_I_aut_e_3AB_positive_general stays
-False.  mu at p >= 11 needs Max+ moments, which is the same wall as 15.586.
+OPEN FOR THIS ROUTE.  A-E are identification and finite certificates.
+|mu| <= |L| is not proved Max+-free for general p, so
+type_I_aut_e_3AB_positive_general stays False.  Proposition 15.750 makes
+this route unnecessary for global Type I.
 
 Writes evidence/e1_gmin_m4_prop15587.json
 """
@@ -184,9 +186,17 @@ def theorem_E_global_m4_lt_one(primes=(5, 7)) -> dict:
     return {"proved": bool(ok), "per_prime": rows}
 
 
-def type_I_still_open() -> bool:
+def type_I_3AB_route_still_open() -> bool:
+    """The historical 3A+B mechanism is still incomplete."""
     from e1_gmin_m4_prop15275 import type_I_aut_e_3AB_positive_general
     return not type_I_aut_e_3AB_positive_general()
+
+
+def type_I_still_open() -> bool:
+    """Current global status; Proposition 15.750 makes this false."""
+    from e1_gmin_m4_prop15275 import type_I_multilevel_bad_case_ND_closed
+
+    return not type_I_multilevel_bad_case_ND_closed()
 
 
 def main() -> dict:
@@ -198,10 +208,12 @@ def main() -> dict:
         "C_LT_closed_forms": theorem_C_LT_closed_forms(),
         "D_margin": theorem_D_margin(),
         "E_global_m4_lt_one": theorem_E_global_m4_lt_one(),
+        "type_I_3AB_route_still_open": type_I_3AB_route_still_open(),
         "type_I_still_open": type_I_still_open(),
     }
     print(f"Prop 15.587  mu identified={out['A_mu_is_kappa1_moment']['proved']}  "
-          f"Type I still open={out['type_I_still_open']}", flush=True)
+          f"3A+B route open={out['type_I_3AB_route_still_open']}  "
+          f"Type I globally open={out['type_I_still_open']}", flush=True)
     write_json_atomic(ROOT / "evidence" / "e1_gmin_m4_prop15587.json", out)
     return out
 

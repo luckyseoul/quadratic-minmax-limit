@@ -20,7 +20,7 @@ def test_main_chain_L_open_and_docs_ok():
     units = docs["four_e1_units"]
     assert units["bitight_levels_2_3"] is True
     assert units["residual_ii_k_ge_4p"] is False
-    assert units["type_I_multilevel"] is False
+    assert units["type_I_multilevel"] is True
     assert units["closed"] is False
 
 

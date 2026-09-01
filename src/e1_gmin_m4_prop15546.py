@@ -36,7 +36,7 @@ Theorem B — PROVED (p=7 mix; 15.543 A + live counts).
 Theorem C — OPEN for p≥11.  The two majorants are not shown
   to be p-laws (15 is 3(p−2) only at p=7; no partial slice
   at p=5).  A_full still takes three magnitudes.  Aut_e
-  3A+B for general p still G>T.  type_I flags stay False.
+  3A+B for general p still G>T.  This mechanism does not close Type I; Proposition 15.750 closes it independently.
 
 ============================================================================
 Backend: p=7 1D/full/part masks + Fraction mix.  Writes

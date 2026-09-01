@@ -59,7 +59,7 @@ def test_e1_still_open():
     h = hinge_status_193()
     assert h["bound_proved_general"] is False
     assert h["residual_ii_full"].startswith("OPEN")
-    assert h["type_I_multilevel"].startswith("OPEN")
+    assert h["type_I_multilevel"].startswith("CLOSED")
     out = main()
     assert out["proved"]["residual_ii_full_closed"] is False
     assert out["proved"]["residual_ii_affine_branch_closed"] is True
@@ -94,5 +94,4 @@ def test_global_close_names_follow_live_gate_not_bounded_history():
 
     for module in (p168, p169, p170, p171):
         opens = module.e1_open_residuals()
-        assert any("k≥4p" in item for item in opens)
-        assert any("multi-level" in item for item in opens)
+        assert opens == ["non-Walsh residual (ii), even k≥4p"]

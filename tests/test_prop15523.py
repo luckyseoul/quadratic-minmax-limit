@@ -62,10 +62,10 @@ def test_field_sum_matches_three_pairings():
 def test_type_I_flags_still_open():
     D = prove_open()
     assert D["proved"] is False
-    assert D["type_I_multilevel_bad_case_ND_closed"] is False
+    assert D["type_I_multilevel_bad_case_ND_closed"] is True
     assert D["type_I_aut_e_3AB_positive_general"] is False
     assert D["Delta_conn_named"] is False
-    assert type_I_multilevel_bad_case_ND_closed() is False
+    assert type_I_multilevel_bad_case_ND_closed() is True
     assert type_I_aut_e_3AB_positive_general() is False
 
 
@@ -77,7 +77,7 @@ def test_flags_untouched():
     assert out["proved"]["G_chi"] is True
     assert out["proved"]["three_pairings"] is True
     assert out["proved"]["field_sum"] is True
-    assert out["proved"]["type_I_multilevel_bad_case_ND_closed"] is False
+    assert out["proved"]["type_I_multilevel_bad_case_ND_closed"] is True
     assert out["proved"]["type_I_aut_e_3AB_positive_general"] is False
     assert out["phi_F_ge_6"] is False
     assert out["L_status"] == "OPEN"

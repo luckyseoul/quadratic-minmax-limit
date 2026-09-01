@@ -58,9 +58,9 @@ def test_p5_size13_shadow_and_flags_open():
     sh = p5_size_shadow()
     assert sh["ok"] is True
     assert sh["k"] == 13
-    assert C["type_I_multilevel_bad_case_ND_closed"] is False
+    assert C["type_I_multilevel_bad_case_ND_closed"] is True
     assert C["type_I_aut_e_3AB_positive_general"] is False
-    assert type_I_multilevel_bad_case_ND_closed() is False
+    assert type_I_multilevel_bad_case_ND_closed() is True
     assert type_I_aut_e_3AB_positive_general() is False
 
 
@@ -71,7 +71,7 @@ def test_flags_untouched():
     out = main()
     assert out["proved"]["johnson_ker_p_plus_1"] is True
     assert out["proved"]["zero_star_particular"] is True
-    assert out["proved"]["type_I_multilevel_bad_case_ND_closed"] is False
+    assert out["proved"]["type_I_multilevel_bad_case_ND_closed"] is True
     assert out["proved"]["type_I_aut_e_3AB_positive_general"] is False
     assert out["phi_F_ge_6"] is False
     assert out["L_status"] == "OPEN"

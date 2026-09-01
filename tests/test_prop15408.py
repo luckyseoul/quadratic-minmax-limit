@@ -100,9 +100,9 @@ def test_badcase_rows_encode_S_plus_3fe_not_S_plus_3kfe():
 def test_type_I_flags_still_open():
     F = prove_open()
     assert F["proved"] is False
-    assert F["type_I_multilevel_bad_case_ND_closed"] is False
+    assert F["type_I_multilevel_bad_case_ND_closed"] is True
     assert F["type_I_aut_e_3AB_positive_general"] is False
-    assert type_I_multilevel_bad_case_ND_closed() is False
+    assert type_I_multilevel_bad_case_ND_closed() is True
     assert type_I_aut_e_3AB_positive_general() is False
     assert phi_F_ge_6_proved_general() is False
     assert residual_ii_k_eq_4p_empty() is False
@@ -113,7 +113,7 @@ def test_flags_untouched():
     assert gsum_disj_lb_proved_general() is False
     assert phi_F_ge_6_proved_general() is False
     assert residual_ii_k_eq_4p_empty() is False
-    assert type_I_multilevel_bad_case_ND_closed() is False
+    assert type_I_multilevel_bad_case_ND_closed() is True
     assert type_I_aut_e_3AB_positive_general() is False
 
 
@@ -124,7 +124,7 @@ def test_main():
     assert out["proved"]["p5_typeI_01_exists"] is True
     assert out["proved"]["p5_typeI_unrestricted_fe_not_empty"] is True
     assert out["proved"]["p5_gap2_badcase_box_empty"] is True
-    assert out["proved"]["type_I_multilevel_bad_case_ND_closed"] is False
+    assert out["proved"]["type_I_multilevel_bad_case_ND_closed"] is True
     assert out["proved"]["type_I_aut_e_3AB_positive_general"] is False
     assert out["L_status"] == "OPEN"
     assert out["series"].startswith("15.x")
