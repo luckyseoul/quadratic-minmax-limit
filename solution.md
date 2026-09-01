@@ -53,7 +53,7 @@ denseness (\(\rho=1\) on \(n=p^2+1\)) + E(1) on that family would give
 \label{eq:limit}
 L=\lim_{n\to\infty}\alpha_n=\tfrac12.
 \end{equation}
-E(1) is **not proved** for all primes \(p\ge5\). Exactly one mathematical
+E(1) is **not proved** for all primes \(p\ge5\); E(1) and \(L=1/2\) are not complete. Exactly one mathematical
 obligation remains on this stronger Paley route (`GOAL.md`;
 `evidence/share/denseness_path_package.md` § Caveats): residual (ii) for
 even \(k\ge4p\). Proposition 15.720 closes the required bi-tight levels 2
@@ -61,7 +61,8 @@ and 3, and Proposition 15.750 closes multi-level Type I for every prime.
 Thus the spectral floor, global QVAR, principal R1, and the historical
 `3A+B` Type-I mechanism are no longer acceptance gates. Propositions
 15.734--15.749 close the first three all-prime shells and several later
-rows; the exact live residual is recorded in `STATUS.md`.
+rows; Proposition 15.751 closes the fourth shell `k=4p+6` for every
+`p>=13`. The exact live residual is recorded in `STATUS.md`.
 Lemma D existence / 2-plane is complete in `A3_PROOF.md`
 and 15.276. Aut-Schur is **false**. Gsum unused.
 
@@ -77,6 +78,7 @@ matrix of order \(n=p^2+1\) (over \(\mathbb F_{p^2}\)) admits a halfspace boolea
 conditional convergence theorem; \(\rho=1\) on \(n=p^2+1\);
 15.720 degree-congruence exclusion of required bi-tight levels 2 and 3;
 15.750 all-prime multi-level Type-I exclusion;
+15.751 fourth-shell exclusion for every prime \(p\ge13\);
 residual (ii) affine + even \(k\le 4p-2\) (15.179/236/237), **not**
 even \(k\ge4p\); residual (i) two-level Type I via 15.272
 \(k=1\cup k=3\Rightarrow G_+\succ0\Rightarrow\ker=\mathrm{sc}\) (15.207)
@@ -89,13 +91,14 @@ remaining `z=7` pointed systems and identify their projected high-catalog
 semigroups through grade six, but exclude no source boundary.  All 56 actual
 `z=7` line boundaries in two orbits remain open.
 
-The intended Type I two-level close is 15.272 (\(k=1\cup k=3\) span \(\Rightarrow G_+\succ0\)), not Gsum and not Aut-Schur. **Status (2026-09-01; through Propositions 6.3--6.9 and 15.750).** The direct multiplier-2 and multiplier-3 estimates are open: Proposition 6.6 narrows multiplier two to (6.20); Proposition 6.7 narrows direct tripling to an unshielded tetrahedral diamond; and Proposition 6.8 gives a different \(1:2\) reduction with residual (6.42)--(6.43). None closes its ray. Proposition 6.9 kills every fixed-temperature version of the signed-Eulerian free-energy target, so \(c=3\) is no longer a live fallback. The optional Paley \(L=1/2\) route also remains open at residual (ii). Details: `evidence/share/denseness_path_package.md` § Caveats.
+The intended Type I two-level close is 15.272 (\(k=1\cup k=3\) span \(\Rightarrow G_+\succ0\)), not Gsum and not Aut-Schur. **Status (2026-09-01; through Propositions 6.3--6.9 and 15.751).** The direct multiplier-2 and multiplier-3 estimates are open: Proposition 6.6 narrows multiplier two to (6.20); Proposition 6.7 narrows direct tripling to an unshielded tetrahedral diamond; and Proposition 6.8 gives a different \(1:2\) reduction with residual (6.42)--(6.43). None closes its ray. Proposition 6.9 kills every fixed-temperature version of the signed-Eulerian free-energy target, so \(c=3\) is no longer a live fallback. The optional Paley \(L=1/2\) route also remains open at residual (ii). Details: `evidence/share/denseness_path_package.md` § Caveats.
 
 > **Reader note.** Soft-close of \(L=\tfrac12\) via scheme-min Gsum was
 > **retracted** 2026-08-06. Aut-Schur remains false. Historical “\(L\) OPEN”
 > remarks in Props 15.20–15.171 refer to those older routes. Likewise,
 > statements inside Propositions 15.1--15.749 that multi-level Type I remains
-> open are as-of records superseded by Proposition 15.750.
+> open are as-of records superseded by Proposition 15.750. Earlier statements
+> listing generic branch-B \(t=3\) as open are superseded by Proposition 15.751.
 
 ---
 
@@ -12812,6 +12815,105 @@ convergence question remain open. Evidence:
 `evidence/e1_type_i_badcase_farkas_p5.json`,
 `evidence/e1_type_i_badcase_farkas_p7.json`, and
 `evidence/e1_gmin_m4_prop15750.json`.
+
+## Proposition 15.751 — influence rigidity closes the fourth residual shell
+
+In generic branch B at (t=3), every opposite direction supplies a nonzero
+nonnegative integer-valued quadratic (B) on (J(p,(p+1)/2)) with
+
+\[
+                         4p\mathbb EB=p+7.          \tag{15.751.1}
+\]
+
+First, any nonnegative integral quadratic (g) on a Boolean cube with
+(mathbb Eg=1/2) has (max g\le3). A nonzero quadratic has support density
+at least (1/4), restriction means lie in ((1/4)\mathbb Z), and a minimal
+counterexample forces every facet away from its maximum to be Boolean. Zero
+third differences then force a putative maximum four to have singleton,
+pair, and triple values (1,0,1); its value on a four-set is again four,
+a contradiction. The bound is sharp for (3-2s+{s\choose2}), whose layer
+values are (3,1,0,0,1).
+
+Let (H=\max B). Paired cubes through a maximizer have average mean
+
+\[
+ TB(X)={4H+p+7\over4(p+1)}.                         \tag{15.751.2}
+\]
+
+If (H\ge2), each cube has mean at least (1/2), so (H\ge(p-5)/4).
+The exact stabilizer bound gives
+
+\[
+ H\le{(p+7)(p+3)\over4(p-1)},\qquad
+ TB(X)\le{p+7\over2(p-1)}<{3\over4}.               \tag{15.751.3}
+\]
+
+Some cube therefore has mean (1/2) and (H\le3), contradicting the lower
+bound for (p\ge29).
+
+For (H=1), complement the slice and write
+(f:J(p,(p-1)/2)\to\{0,1\}), with (mu=(p+7)/(4p)). Put
+
+\[
+ I_{ij}={1\over4}\Pr[f(X)\ne f(X^{(ij)})].          \tag{15.751.4}
+\]
+
+A relevant derivative is a nonzero ({-1,0,1})-valued affine function on
+(J(p-2,(p-3)/2)). Sorting its coefficients shows their total integral
+deviation from the median is at most two, so its support density is at least
+((p-3)/(2(p-2))), and
+
+\[
+ I_{ij}\ge{(p+1)(p-3)\over16p(p-2)}.               \tag{15.751.5}
+\]
+
+Zero-influence transpositions form equivalence classes. If the complement
+of the largest class has size (L), there are at least (pL/2) relevant
+pairs. The correctly normalized Johnson Laplacian identity is
+
+\[
+ \sum_{i<j}I_{ij}
+ ={1\over2}\sum_{e=1}^2e(p+1-e)\|f_{=e}\|_2^2
+ \le(p-1)\mu(1-\mu).                               \tag{15.751.6}
+\]
+
+Hence
+
+\[
+ L\le {2(p-1)(p-2)(p+7)(3p-7)\over p^2(p+1)(p-3)}<7. \tag{15.751.7}
+\]
+
+After (p=x+29), the cleared gap is
+(x^4+92x^3+3107x^2+45296x+237300>0); thus (L\le6).
+Symmetrizing over the largest class extends (f) to a Boolean quadratic on
+the full (L)-cube. Cube derivative support and Parseval reduce it to four
+actual coordinates.
+
+The exact four-bit Möbius catalog contains 222 quadratic Boolean tables and
+fourteen profiles. Their possible complementary-slice densities are
+
+\[
+ 0,1,{p-3\over4p},{p+1\over4p},{p-1\over2p},{p+1\over2p},
+ {3p-1\over4p},{3(p+1)\over4p},                    \tag{15.751.8}
+\]
+
+none equal to ((p+7)/(4p)). CUDA on a V100 and Orin, OpenCL on AMD gfx1201
+and Intel Arc A380, and exact CPU replay agree on all 222 tables, fourteen
+profiles, and SHA-256
+`63c9daf2b117b540a5199b1b007cb4e6997ba01704fbc6017efaaa9735859396`.
+This is a fixed four-bit certificate, not a prime census.
+
+Thus generic branch B is empty for every live (p\ge29). With the existing
+(p=13,17) certificates and branch-A/C arithmetic,
+
+\[
+ \boxed{k=4p+6\text{ is impossible for every prime }p\ge13.} \tag{15.751.9}
+\]
+
+Later layers and residual (ii) globally remain open. Evidence:
+`src/e1_gmin_m4_prop15751.py`, `tests/test_prop15751.py`,
+`scripts/boolean_cube_degree2_gpu_audit.py`, and
+`evidence/NOTE_2026-09-01_GENERIC_T3_INFLUENCE_CLOSE.md`.
 
 ## Proposition 15.723 — paired-cube obstruction to middle floor-plus-two lifts
 

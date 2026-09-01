@@ -29,16 +29,18 @@ be resumed by default.
 **Chronology rule:** lower proposition sections are preserved as as-of
 handoffs. Their older statements that Type I or another later-closed subcase
 remains open are not the live status; use this header and the highest-numbered
-applicable proposition. Proposition 15.750 supersedes every earlier Type-I
-status line.
+applicable proposition. Proposition 15.751 supersedes every earlier line
+listing generic branch-B `t=3` as open; Proposition 15.750 supersedes every
+earlier Type-I status line.
 
-**Date:** 2026-09-01 (through Propositions 6.3--6.9 and 15.750; required bi-tight levels 2 and 3 and multi-level Type I are
+**Date:** 2026-09-01 (through Propositions 6.3--6.9 and 15.751; required bi-tight levels 2 and 3 and multi-level Type I are
 closed, residual (ii) is closed for every boundary at
-`k in {4p,4p+2,4p+4}` for every prime `p>=11`, and the exceptional
+`k in {4p,4p+2,4p+4}` for every prime `p>=11`, the entire fourth shell
+`k=4p+6` for every prime `p>=13`, and the exceptional
 and generic branches at `p=13,k=58`, the generic `p=17,k=74` row, and the
 `u=3,0` branches at `p=13,k=60` are closed; critical `p=5,7`,
 `p=11,k>=50`, `p=13,k=60,u=6` and later p13 layers, every `p>=17,t>=4`
-row, and branch-B `t=3` for `p=1 mod 4,p>=29` remain open)
+row, and the positive `p=7,z=7` branch remain open)
 **The quadratic-minmax limit is still OPEN.**
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
@@ -46,7 +48,7 @@ row, and branch-B `t=3` for `p=1 mod 4,p>=29` remain open)
 **Mandatory preflight:** read
 `evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md` before launching another
 solver, projection, shell, channel, orbit, or timeout. It accounts for every
-assigned proposition through 15.750 and maps the former scratch scripts to
+assigned proposition through 15.751 and maps the former scratch scripts to
 closed, dead, necessary-only, or live routes.  The 2026-08-31 worktree
 cleanup and remote archive are recorded in
 `evidence/NOTE_2026-08-31_DIRTY_WORKTREE_TRIAGE.md`.
@@ -56,9 +58,11 @@ The old spectral-floor/15.167 arrow is retracted, and QVAR/R1 are no longer
 acceptance units. Proposition 15.750 closes multi-level Type I; non-Walsh
 residual (ii) is the sole false E1 unit, so L is OPEN. Propositions 15.734--15.735 and
 15.737 close `k in {4p,4p+2,4p+4}` for every `p>=11`, without a
-boundary-size hypothesis. They do not close critical `p=5,7`, `p=11` at
-`k>=50`, `p=13,k=60,u=6` or later p13 layers, any `p>=17,t>=4` row, or branch-B `t=3`
-for `p=1 mod 4,p>=29`. Propositions
+boundary-size hypothesis. Proposition 15.751 now closes `k=4p+6` for every
+prime `p>=13`: a half-mean height theorem excludes height at least two, and
+a corrected influence-junta theorem plus a fixed four-bit catalog excludes
+height one. They do not close critical `p=5,7`, `p=11` at `k>=50`,
+`p=13,k=60,u=6` or later p13 layers, or any `p>=17,t>=4` row. Propositions
 15.738--15.739 additionally close the exceptional `p=13,t=3,u=3` row;
 15.740--15.741 reduce its generic complement to the common-graph energy
 gate; and 15.742 closes that gate by the exact `667<707` contradiction.
@@ -78,7 +82,7 @@ exact coordinate bounds for the five `Q=4` cells. Their 492 possible moment
 triples meet the survivor evaluation alphabet only where the fourth moment
 is zero, giving seven roots of a nonzero binary quartic and closing `u=4`.
 The `p=13,k=60` row itself remains open exactly at `u=6`,
-as do the later layers and branch-B range just listed. Aut-Schur / Gsum /
+as do the later layers just listed. Aut-Schur / Gsum /
 pairing remain False. The corrected `e1_closed_general()` is the global predicate and is
 False; only `e1_bounded_residual_split_closed()` retains the historical
 bounded `True`. The full
@@ -438,7 +442,7 @@ The quartic value code, root-quartet orbit split, 84-variable inverse solve,
 and 14,196-variable binary midpoint lift are unnecessary.  This is an
 exhaustive finite certificate, not a global residual-(ii) close.  Critical
 `p=5,7`, `p=11,k>=50`, `p=13,k=60,u=6` and later p13 layers,
-every `p>=17,t>=4` row, and branch-B `t=3` for `p=1 mod 4,p>=29` remain
+every `p>=17,t>=4` row remains; branch-B `t=3` is later closed by 15.751
 open; 15.743 closes `p=17,k=74`, 15.744--15.745 close `u=3,0` at
 `p=13,k=60`, and 15.746 gives the support-330/mean-12 open reduction for
 `u=4`.
@@ -3491,7 +3495,7 @@ estimates remain; none is proved. See
 | Leftover | Predicate | Remaining estimate |
 |---|---|---|
 | 1 | `phi_F_ge_6_proved_general` | QVAR on k≥7 (all p≥13) **and** principal `\|\|δ\|\|^2 ≤ n(n+10)^2/[6(n-14)(n-6)]`. Crude `E[s^4]≤2n^3` is too weak. |
-| 2 | `residual_ii_k_eq_4p_empty` / `multilevel_ND_k_ge_4p_proved` | Historical 2026-08-21 target. Propositions 15.734--15.735 and 15.737 later close `k in {4p,4p+2,4p+4}` for every `p>=11`; 15.738--15.742 additionally close all of `p=13,k=58`, 15.743 closes `p=17,k=74`, 15.744--15.745 close `u=3,0` at `p=13,k=60`, and 15.746--15.749 close `u=4`. Critical `p=5,7`, `p=11` at `k>=50`, `p=13,k=60,u=6` and later p13 layers, every `p>=17,t>=4` row, and branch-B `t=3` for `p=1 mod 4,p>=29` remain, so the all-prime predicate remains False. |
+| 2 | `residual_ii_k_eq_4p_empty` / `multilevel_ND_k_ge_4p_proved` | Historical 2026-08-21 target. Propositions 15.734--15.735 and 15.737 close the first three shells, and 15.751 closes `k=4p+6` for every `p>=13`. Critical `p=5,7`, `p=11,k>=50`, `p=13,k=60,u=6` and later p13 layers, and every `p>=17,t>=4` row remain, so the all-prime predicate remains False. |
 | 3 | `type_I_multilevel_bad_case_ND_closed=True` | **Closed by 15.750.** The older `|μ|`, `3A+B`, and Aut_e estimates remain incomplete as mechanisms but are no longer global gates. |
 
 Historical dump: all three then-live leftovers were False; Gsum False;
@@ -3560,7 +3564,7 @@ overridden twice.
 | Item | Flag | Status |
 |---|---|---|
 | \(\lambda_{\min}(\Phi)\ge6\) on \(Z\) | `phi_F_ge_6_proved_general=False` | Open. Exceptional QVAR is closed through `k=6` and remains on `k>=7` from `p=13`; principal blocks retain the delta-variance target. |
-| Residual (ii), even \(k\ge4p\) | `residual_ii_k_eq_4p_empty=False` | Open globally. Propositions 15.734--15.735 and 15.737 close `k in {4p,4p+2,4p+4}` for every `p>=11`; 15.738--15.742 additionally close all of `p=13,k=58`, 15.743 closes `p=17,k=74`, 15.744--15.745 close `u=3,0` at `p=13,k=60`, and 15.746--15.749 close `u=4`. Critical `p=5,7`, `p=11` at `k>=50`, `p=13,k=60,u=6` and later p13 layers, every `p>=17,t>=4` row, and branch-B `t=3` for `p=1 mod 4,p>=29` remain. The all-prime legacy predicate therefore stays False. |
+| Residual (ii), even \(k\ge4p\) | `residual_ii_k_eq_4p_empty=False` | Open globally. Propositions 15.734--15.737 close the first three shells and 15.751 closes `k=4p+6` for every `p>=13`. Critical `p=5,7`, `p=11,k>=50`, `p=13,k=60,u=6` and later p13 layers, and every `p>=17,t>=4` row remain. The all-prime legacy predicate therefore stays False. |
 | Type I, Max− not two-level \(\{-1,-3\}\) | `type_I_multilevel_bad_case_ND_closed=True` | Closed by Proposition 15.750 using isolated-chart parity halving and exact `p=5,7` Farkas certificates. |
 | Lemma D | True | Closed. Do not unflip. |
 
@@ -3637,7 +3641,8 @@ Official class is leftover Max− together with \(s_+\ge2\). leftover-only (\(s_
 - Combined, 15.734--15.735 and 15.737 close the first three residual shells
   for every `p>=11` and every boundary size. Critical `p=5,7`, `p=11` at
   `k>=50`, `p=13,k=60,u=6` and later p13 layers, every
-  `p>=17,t>=4` row, and branch-B `t=3` for `p=1 mod 4,p>=29` remain.
+  `p>=17,t>=4` row remains. Proposition 15.751 closes the former generic
+  branch-B `t=3` range.
   Propositions 15.738--15.742 close both `p=13,k=58` branches, 15.743 closes
   `p=17,k=74`, 15.744--15.745 close `u=3,0` at `p=13,k=60`, and
   15.746--15.749 classify and close `u=4`.

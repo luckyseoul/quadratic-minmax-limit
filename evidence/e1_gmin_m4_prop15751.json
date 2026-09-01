@@ -1,0 +1,423 @@
+{
+  "E1_closed": false,
+  "changed_premise": "the generic t=3 cell is split by height; the new ingredients are a dimension-free half-mean cube height theorem and a corrected transposition-influence junta bound",
+  "cube_half_mean_height": {
+    "all_vertices_except_the_maximum_are_boolean": true,
+    "domain": "all dimensions d>=0",
+    "four_coordinate_value_contradicts_boolean_off_maximum": true,
+    "four_coordinate_value_for_that_candidate": 4,
+    "hypotheses": "g is a nonnegative integer-valued multilinear polynomial of degree at most two on {0,1}^d, with E[g]=1/2",
+    "maximum_upper_bound": 3,
+    "minimal_counterexample_maximum_face_means": [
+      "3/4"
+    ],
+    "proved": true,
+    "quarter_mean_lattice": true,
+    "sharp_example": {
+      "cube_size": 16,
+      "formula": "3-2s+binom(s,2), s=x1+x2+x3+x4",
+      "layer_values": [
+        3,
+        1,
+        0,
+        0,
+        1
+      ],
+      "mass": 8,
+      "maximum": 3,
+      "mean": "1/2"
+    },
+    "support_floor": "a nonzero degree-at-most-two cube polynomial is nonzero on at least one quarter of the cube",
+    "third_difference_forces_candidate_maximum": 4
+  },
+  "finite_prime_census_used": false,
+  "fixed_four_bit_certificate_used": true,
+  "four_cube_catalog": {
+    "packed_layer_signature_histogram": {
+      "0": 1,
+      "104544": 4,
+      "1081377": 4,
+      "1089": 6,
+      "1115136": 6,
+      "1116225": 42,
+      "1149984": 28,
+      "1151073": 24,
+      "1184832": 6,
+      "1185921": 1,
+      "34848": 24,
+      "35937": 28,
+      "69696": 42,
+      "70785": 6
+    },
+    "profiles": [
+      {
+        "layer_counts": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "multiplicity": 1,
+        "signature": 0
+      },
+      {
+        "layer_counts": [
+          1,
+          2,
+          1,
+          0,
+          0
+        ],
+        "multiplicity": 6,
+        "signature": 1089
+      },
+      {
+        "layer_counts": [
+          0,
+          1,
+          2,
+          1,
+          0
+        ],
+        "multiplicity": 24,
+        "signature": 34848
+      },
+      {
+        "layer_counts": [
+          1,
+          3,
+          3,
+          1,
+          0
+        ],
+        "multiplicity": 28,
+        "signature": 35937
+      },
+      {
+        "layer_counts": [
+          0,
+          2,
+          4,
+          2,
+          0
+        ],
+        "multiplicity": 42,
+        "signature": 69696
+      },
+      {
+        "layer_counts": [
+          1,
+          4,
+          5,
+          2,
+          0
+        ],
+        "multiplicity": 6,
+        "signature": 70785
+      },
+      {
+        "layer_counts": [
+          0,
+          3,
+          6,
+          3,
+          0
+        ],
+        "multiplicity": 4,
+        "signature": 104544
+      },
+      {
+        "layer_counts": [
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "multiplicity": 4,
+        "signature": 1081377
+      },
+      {
+        "layer_counts": [
+          0,
+          0,
+          1,
+          2,
+          1
+        ],
+        "multiplicity": 6,
+        "signature": 1115136
+      },
+      {
+        "layer_counts": [
+          1,
+          2,
+          2,
+          2,
+          1
+        ],
+        "multiplicity": 42,
+        "signature": 1116225
+      },
+      {
+        "layer_counts": [
+          0,
+          1,
+          3,
+          3,
+          1
+        ],
+        "multiplicity": 28,
+        "signature": 1149984
+      },
+      {
+        "layer_counts": [
+          1,
+          3,
+          4,
+          3,
+          1
+        ],
+        "multiplicity": 24,
+        "signature": 1151073
+      },
+      {
+        "layer_counts": [
+          0,
+          2,
+          5,
+          4,
+          1
+        ],
+        "multiplicity": 6,
+        "signature": 1184832
+      },
+      {
+        "layer_counts": [
+          1,
+          4,
+          6,
+          4,
+          1
+        ],
+        "multiplicity": 1,
+        "signature": 1185921
+      }
+    ],
+    "proved": true,
+    "tables_checked": 65536,
+    "valid_table_signature_sha256": "63c9daf2b117b540a5199b1b007cb4e6997ba01704fbc6017efaaa9735859396",
+    "valid_tables": 222
+  },
+  "generic_branch_B_t3_p_ge_29_closed": true,
+  "p13_k58_closed_by_prior_propositions_15739_15742": true,
+  "p17_k74_closed_by_prior_proposition_15743": true,
+  "prop": "15.751",
+  "proved": true,
+  "quadratic_minmax_limit_closed": false,
+  "remaining_scope": "critical p=5,7; p=11 at k>=50; p=13,k=60,u=6 and later p13 layers; every p>=17,t>=4 layer; and positive p=7,z=7",
+  "residual_ii_k_ge_4p_closed": false,
+  "sample_exact_replays": {
+    "29": {
+      "density_exclusion": {
+        "complementary_slice": "J(29,14)",
+        "nearest_strict_bracket": [
+          "15/58",
+          "14/29"
+        ],
+        "p": 29,
+        "possible_density_values": [
+          "0",
+          "13/58",
+          "15/58",
+          "14/29",
+          "15/29",
+          "43/58",
+          "45/58",
+          "1"
+        ],
+        "proved": true,
+        "target_absent": true,
+        "target_density": "9/29"
+      },
+      "height_at_least_two": {
+        "assumed_maximum_at_least": 2,
+        "contradiction": true,
+        "every_paired_cube_mean_at_least": "1/2",
+        "half_mean_cube_lemma_height_upper_bound": 3,
+        "height_lower_bound": "6",
+        "p": 29,
+        "paired_cube_average_upper_bound": "9/14",
+        "paired_cube_mean_lattice": "(1/4)Z",
+        "proved": true,
+        "scaled_mean_4p_E_B": 36,
+        "slice": "J(29,15)",
+        "some_paired_cube_has_mean_exactly": "1/2",
+        "stabilizer_height_upper_bound": "72/7"
+      },
+      "height_one_junta": {
+        "all_junta_patterns_extend_to_the_slice": true,
+        "cube_coordinates_actually_needed_at_most": 4,
+        "cube_relevant_coordinate_influence_floor": "1/2",
+        "cube_total_influence_bound": 2,
+        "dictator_normalization_check": "sum I_ij=(p/2)*Var(x_i)",
+        "influence_definition": "I_ij=(1/4)*Pr[f differs after transposition ij]",
+        "johnson_laplacian_identity": "sum I_ij=(1/2)*sum_{e=1}^2 e*(p+1-e)*||f_=e||_2^2",
+        "junta_coordinate_bound_exact": "72576/10933",
+        "junta_coordinates_at_most": 6,
+        "mean": "9/29",
+        "p": 29,
+        "proved": true,
+        "relevance_zero_classes_are_equivalence_classes": true,
+        "relevant_edge_lower_bound": "p*L/2",
+        "relevant_pair_influence_floor": "65/1044",
+        "seven_gap_at_p_equals_x_plus_29": [
+          1,
+          92,
+          3107,
+          45296,
+          237300
+        ],
+        "seven_gap_numerator": 237300,
+        "symmetrized_representative_extends_to_cube_degree_at_most_two": true,
+        "total_influence_upper_bound": "5040/841",
+        "variance": "180/841"
+      }
+    },
+    "37": {
+      "density_exclusion": {
+        "complementary_slice": "J(37,18)",
+        "nearest_strict_bracket": [
+          "19/74",
+          "18/37"
+        ],
+        "p": 37,
+        "possible_density_values": [
+          "0",
+          "17/74",
+          "19/74",
+          "18/37",
+          "19/37",
+          "55/74",
+          "57/74",
+          "1"
+        ],
+        "proved": true,
+        "target_absent": true,
+        "target_density": "11/37"
+      },
+      "height_at_least_two": {
+        "assumed_maximum_at_least": 2,
+        "contradiction": true,
+        "every_paired_cube_mean_at_least": "1/2",
+        "half_mean_cube_lemma_height_upper_bound": 3,
+        "height_lower_bound": "8",
+        "p": 37,
+        "paired_cube_average_upper_bound": "11/18",
+        "paired_cube_mean_lattice": "(1/4)Z",
+        "proved": true,
+        "scaled_mean_4p_E_B": 44,
+        "slice": "J(37,19)",
+        "some_paired_cube_has_mean_exactly": "1/2",
+        "stabilizer_height_upper_bound": "110/9"
+      },
+      "height_one_junta": {
+        "all_junta_patterns_extend_to_the_slice": true,
+        "cube_coordinates_actually_needed_at_most": 4,
+        "cube_relevant_coordinate_influence_floor": "1/2",
+        "cube_total_influence_bound": 2,
+        "dictator_normalization_check": "sum I_ij=(p/2)*Var(x_i)",
+        "influence_definition": "I_ij=(1/4)*Pr[f differs after transposition ij]",
+        "johnson_laplacian_identity": "sum I_ij=(1/2)*sum_{e=1}^2 e*(p+1-e)*||f_=e||_2^2",
+        "junta_coordinate_bound_exact": "2882880/442187",
+        "junta_coordinates_at_most": 6,
+        "mean": "11/37",
+        "p": 37,
+        "proved": true,
+        "relevance_zero_classes_are_equivalence_classes": true,
+        "relevant_edge_lower_bound": "p*L/2",
+        "relevant_pair_influence_floor": "323/5180",
+        "seven_gap_at_p_equals_x_plus_29": [
+          1,
+          92,
+          3107,
+          45296,
+          237300
+        ],
+        "seven_gap_numerator": 849716,
+        "symmetrized_representative_extends_to_cube_degree_at_most_two": true,
+        "total_influence_upper_bound": "10296/1369",
+        "variance": "286/1369"
+      }
+    },
+    "41": {
+      "density_exclusion": {
+        "complementary_slice": "J(41,20)",
+        "nearest_strict_bracket": [
+          "21/82",
+          "20/41"
+        ],
+        "p": 41,
+        "possible_density_values": [
+          "0",
+          "19/82",
+          "21/82",
+          "20/41",
+          "21/41",
+          "61/82",
+          "63/82",
+          "1"
+        ],
+        "proved": true,
+        "target_absent": true,
+        "target_density": "12/41"
+      },
+      "height_at_least_two": {
+        "assumed_maximum_at_least": 2,
+        "contradiction": true,
+        "every_paired_cube_mean_at_least": "1/2",
+        "half_mean_cube_lemma_height_upper_bound": 3,
+        "height_lower_bound": "9",
+        "p": 41,
+        "paired_cube_average_upper_bound": "3/5",
+        "paired_cube_mean_lattice": "(1/4)Z",
+        "proved": true,
+        "scaled_mean_4p_E_B": 48,
+        "slice": "J(41,21)",
+        "some_paired_cube_has_mean_exactly": "1/2",
+        "stabilizer_height_upper_bound": "66/5"
+      },
+      "height_one_junta": {
+        "all_junta_patterns_extend_to_the_slice": true,
+        "cube_coordinates_actually_needed_at_most": 4,
+        "cube_relevant_coordinate_influence_floor": "1/2",
+        "cube_total_influence_bound": 2,
+        "dictator_normalization_check": "sum I_ij=(p/2)*Var(x_i)",
+        "influence_definition": "I_ij=(1/4)*Pr[f differs after transposition ij]",
+        "johnson_laplacian_identity": "sum I_ij=(1/2)*sum_{e=1}^2 e*(p+1-e)*||f_=e||_2^2",
+        "junta_coordinate_bound_exact": "1447680/223573",
+        "junta_coordinates_at_most": 6,
+        "mean": "12/41",
+        "p": 41,
+        "proved": true,
+        "relevance_zero_classes_are_equivalence_classes": true,
+        "relevant_edge_lower_bound": "p*L/2",
+        "relevant_pair_influence_floor": "133/2132",
+        "seven_gap_at_p_equals_x_plus_29": [
+          1,
+          92,
+          3107,
+          45296,
+          237300
+        ],
+        "seven_gap_numerator": 1407972,
+        "symmetrized_representative_extends_to_cube_degree_at_most_two": true,
+        "total_influence_upper_bound": "13920/1681",
+        "variance": "348/1681"
+      }
+    }
+  },
+  "scope": "generic branch B at k=4p+6 for primes p congruent to 1 modulo 4, p>=29",
+  "status": "PROVED THEOREM with a fixed exhaustive four-cube certificate"
+}

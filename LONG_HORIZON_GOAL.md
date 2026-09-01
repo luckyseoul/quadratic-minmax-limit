@@ -54,7 +54,8 @@ Anything else — including “honest OPEN,” “structure shipped,” “censu
   `p=31,R=10` case, and Proposition 15.734 supersedes that endpoint route by
   closing the whole `k=4p` shell for every boundary and every `p>=13`.
   Propositions 15.735--15.737 extend the first-three-shell close to every
-  `p>=11`.
+  `p>=11`; Proposition 15.751 closes the fourth shell `k=4p+6` for every
+  `p>=13` by a dimension-free height theorem and an influence-junta argument.
 - Exact Paley optimality is **false** (\(m_{10}=13<15\)). E(1) is asymptotic.
 
 There are now two honest routes.  The direct route to the original question
@@ -62,7 +63,7 @@ is the two-ray amplification theorem of Proposition 6.3 (or any other proof
 of convergence/non-existence).  The value-specific route to \(L=1/2\) is
 **E(1)** on \(n=p^2+1\).  On that optional Paley route, the live gate is the
 corrected dictionary returned by
-`src/e1_main_chain_status.py`; as of 2026-09-01 through Proposition 15.750 it
+`src/e1_main_chain_status.py`; as of 2026-09-01 through Proposition 15.751 it
 reads:
 
 1. **Required bi-tight levels 2 and 3:** TRUE by 15.720. The spectral floor,
@@ -75,8 +76,9 @@ reads:
    Propositions 15.746--15.749 close `u=4`, leaving exactly `u=6`. The live
    remainder includes critical `p=5,7`, `p=11,k>=50`, that sole
    `p=13,k=60` residue and later p13 layers,
-   every `p>=17,t>=4` layer (beginning with `p=17,k>=76`), generic branch B
-   at `p>=29,t=3`, and the positive `p=7,z=7` subbranch. Historical
+   every `p>=17,t>=4` layer (beginning with `p=17,k>=76`), and the positive
+   `p=7,z=7` subbranch. Proposition 15.751 closes generic branch B at
+   `p>=29,t=3`, hence the entire fourth shell for `p>=13`. Historical
    endpoint/profile artifacts are not live gates; only the lemmas and
    certificates explicitly retained by the dedup audit remain valid evidence.
    Read `evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md` before reopening one.

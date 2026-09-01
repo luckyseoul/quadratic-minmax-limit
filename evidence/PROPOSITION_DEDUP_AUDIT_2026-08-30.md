@@ -3,7 +3,7 @@
 **Date:** 2026-09-01
 
 **Scope:** Propositions 6.3--6.9, every assigned proposition through
-Proposition 15.750, the live predicate wiring, and the attack scripts present
+Proposition 15.751, the live predicate wiring, and the attack scripts present
 during the audit
 
 **Purpose:** prevent a reformulation, solver/backend change, longer timeout,
@@ -12,6 +12,21 @@ or finite-prime rerun from being mistaken for a new mathematical attack
 ## Verdict
 
 The duplication concern was correct.
+
+### Proposition 15.751: generic `t=3` is closed; do not census it again
+
+The branch-B cell `4p E[B]=p+7` is empty for every `p=1 mod 4,p>=29`.
+A dimension-free half-mean cube theorem excludes height at least two after
+paired-cube averaging. Correctly normalized transposition influences force
+the height-one Boolean case to be a six-coordinate junta; direct slice
+symmetrization and cube influence reduce it to four coordinates. The fixed
+four-bit catalog has 222 tables and fourteen profiles, none of the target
+density. Four accelerators and an exact scalar replay agree on hash
+`63c9daf2b117b540a5199b1b007cb4e6997ba01704fbc6017efaaa9735859396`.
+Together with prior `p=13,17` certificates and branch-A/C arithmetic,
+`k=4p+6` is closed for every prime `p>=13`. Do not launch another generic
+`t=3` cell, graph, orbit, slice, or prime census. The live large-prime layers
+start at `t=4`; the global residual predicate remains False.
 
 ### Original-question correction and two-ray gate (Propositions 6.3--6.9)
 
@@ -462,8 +477,9 @@ are already impossible.  For `1^8 4`, the nonstar upper bound is `119+9*72=767`,
 contradicting its exact common-Radon energy `1211+34C>=1211`; the other two
 nonstar baselines are 1251 and 1287.
 This closes exactly `p=17,k=74`, not any `p>=17,t>=4` layer (beginning
-with `p=17,k>=76`) or branch-B `t=3` for `p=1 mod 4,p>=29`; residual (ii),
-Type I, and the limit remain open.
+with `p=17,k>=76`). The branch-B `t=3` range formerly left here is closed
+later by 15.751. Residual (ii) and the limit remain open; Type I is closed by
+15.750.
 
 A twenty-seventh semantic check gives Proposition 15.744.  The complete
 `p=13,t=4` residue sieve leaves `u in {0,3,4,6}`.  In `u=3`, the hard
@@ -628,10 +644,10 @@ The public theorem is gated consistently by the corrected global
 currently `False`. The historical bounded `True` is available only through
 `e1_bounded_residual_split_closed()` and is not a global theorem predicate.
 
-| unit | exact live content | status after audit of 15.750 |
+| unit | exact live content | status after audit of 15.751 |
 |---|---|---|
 | required bi-tight levels 2 and 3 | 15.720 degree congruence using 15.272/15.207 | **TRUE** |
-| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — 15.734--15.737 close `k in {4p,4p+2,4p+4}`, for every boundary size, at all primes `p>=11`; 15.738--15.742 close `p=13,k=58`, 15.743 closes `p=17,k=74`, 15.744--15.745 close `u=3,0` at `p=13,k=60`, and 15.746--15.749 close `u=4`. The exact remainder includes critical `p=5,7`, `p=11,k>=50`, `p=13,k=60,u=6` and later p13 layers, every `p>=17,t>=4` layer (beginning with `p=17,k>=76`), and branch-B `t=3` for `p=1 mod 4,p>=29`; the separate positive `p=7,z=7` branch persists. The global predicate stays false. |
+| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — 15.734--15.737 close the first three shells; 15.751 closes `k=4p+6` for every `p>=13`; 15.744--15.749 close `u=0,3,4` at `p=13,k=60`. The exact remainder includes critical `p=5,7`, `p=11,k>=50`, `p=13,k=60,u=6` and later p13 layers, every `p>=17,t>=4` layer (beginning with `p=17,k>=76`), and positive `p=7,z=7`. The global predicate stays false. |
 | Type I | the multi-level `3A+B>0` bad case | **TRUE** (15.750) — isolated-chart rigidity and parity halving close every prime `p>=11`; exact integer Farkas identities close `p=5,7` |
 | Lemma D | every good-line triple and its Fejer two-plane amplitudes | **TRUE** (15.276) |
 
@@ -677,7 +693,7 @@ top-level front.
 | **15.736** | exact `J(11,6)` quadratic evaluation space and sharp support-84 Boolean catalog | **EXHAUSTIVE FINITE CERTIFICATE.** Rank 55 plus 407 independent third-difference identities make the 220 omitted-pair/all-equal-triple supports exhaustive. The hard-`b=2` p11 branch closes; simultaneous all-equal triples remain for 15.737. |
 | **15.737** | signed star/triangle coefficient patterns and the binary quadratic moment over `F_11` | **PROVED p11 three-layer theorem.** Closes `k=44,46,48` for every boundary size. Together with 15.735, the first three shells are closed for every prime `p>=11`. |
 | **15.738** | exact `J(13,7)` mass-14 height-four models and support-462 Boolean catalog | **EXHAUSTIVE FINITE CERTIFICATE.** Height four is infeasible at `Q=0,6`; the 1,092 Boolean supports are exhausted, and offsets leave only a selected pair. This is a local-cell theorem, not residual closure by itself. |
-| **15.739** | corrected exceptional p13 ledger, sign-safe quartic, and generic even-moment/cut reduction | **PROVED BRANCH THEOREM AND OPEN REDUCTION.** The exceptional `p=13,t=3,u=3` row is empty. Proposition 15.742 later closes its generic p13 complement. At p17 every cut lies in `[-26,-12]`, giving the `{0,...,7}`-valued input completed by 15.743; the generic `p>=29,t=3` range remains open. |
+| **15.739** | corrected exceptional p13 ledger, sign-safe quartic, and generic even-moment/cut reduction | **PROVED BRANCH THEOREM AND HISTORICAL OPEN REDUCTION.** The exceptional `p=13,t=3,u=3` row is empty. Proposition 15.742 closes its generic p13 complement, 15.743 completes p17, and 15.751 closes the former generic `p>=29,t=3` remainder. |
 | **15.740** | cyclic distance aggregation and translation-summed cuts in the generic p13 row | **PROVED BRANCH SPLIT WITH EXHAUSTIVE FINITE CERTIFICATE.** Nine inequalities eliminate all 32,313 aggregates when at least five hard stars are exact. Only `1^4 2^3` remains, subsequently closed by the common-graph energy certificate in 15.742. |
 | **15.741** | common-graph cubic/quartic endpoint tensors and the 84-class difference-Radon transform | **PROVED OPEN REDUCTION AND METHOD BARRIER.** The four exact stars force `M_2=T_3=0`, `U_4=lambda M_4`, and `M_4!=0`; the transform gives an exact nonnegative-integer inverse and energy `707+26C` with `C<=11`. Its `M_2` and exact energy identities are the inputs completed by 15.742. |
 | **15.742** | joint `M_2` congruence, six interval-dilate cuts, and common-graph energy | **EXHAUSTIVE FINITE CERTIFICATE.** The sharp elevated/opposite row energies are 31 and 82, so the ten nonexact rows have energy at most 667, contradicting `707+26C>=707`. The generic four-exact p13 branch and, with 15.739, all of `p=13,k=58` are closed. |
@@ -688,6 +704,8 @@ top-level front.
 | **15.747** | general mass-12 Boolean cut second moment and exact height-four models at `Q=3,5` | **PROVED BRANCH EXCLUSION WITH EXHAUSTIVE FINITE CERTIFICATES.** The Boolean branch is impossible modulo seven and both height-four relaxations are infeasible. The `u=4` omitted-pair `P=3` branch is closed; minimum `P=5,Q=3` cells are forced literals. |
 | **15.748** | common literal-root interpolation against the 69-element hard moment alphabet | **EXHAUSTIVE FINITE INTERPOLATION CERTIFICATE AND PROVED OPEN REDUCTION.** Cases with at least three literals are empty for both hard signs. Exactly 336 moment-level two-root survivors per sign remain, forcing opposite excess partition `(1^5)` without constructing a common graph. |
 | **15.749** | all 74 translated-cut inequalities, exact coordinate duals, and the `Q=4` moment intersection | **EXHAUSTIVE FINITE AGGREGATE CERTIFICATE AND PROVED BRANCH THEOREM.** The exact box contains 522 rows and 492 moment triples. Its 12-point intersection with each survivor evaluation alphabet has zero fourth moment, so five `Q=4` roots plus two literal roots force the nonzero hard quartic to vanish. This closes exactly `p=13,t=4,u=4`. |
+| **15.750** | isolated-chart rigidity, parity halving, and exact small-prime Farkas bases | **PROVED ALL-PRIME THEOREM.** Closes multi-level Type I for every prime `p>=5`. |
+| **15.751** | half-mean cube height theorem, corrected transposition influences, slice-to-cube symmetrization, and fixed four-bit catalog | **PROVED INFINITE-FAMILY THEOREM WITH FIXED EXHAUSTIVE CERTIFICATE.** Closes generic branch B for `p>=29` and hence `k=4p+6` for every prime `p>=13`. The global residual predicate stays false. |
 
 ## Exact duplicated run
 
@@ -846,7 +864,8 @@ Before spending mesh/GPU time:
 3. in any sparse layer, first audit the isolated-vertex count and transport an
    isolated vertex to infinity; Propositions 15.734--15.737 already close
    every boundary in the first three shells for `p>=11`;
-4. do not reopen `k in {4p,4p+2,4p+4}` for `p>=11`, `p=13,k=58`,
+4. do not reopen `k in {4p,4p+2,4p+4}` for `p>=11`, `k=4p+6` for
+   `p>=13`, `p=13,k=58`,
    `p=17,k=74`, or the `p=13,k=60` residues `u=0,3,4`: Proposition 15.742 closes the p13 t3 row by the exact
    six-dilate/common-energy contradiction, and Proposition 15.743 closes the
    p17 row by the 698-vector/common-Radon certificate. Propositions
@@ -855,11 +874,9 @@ Before spending mesh/GPU time:
    transverse signs, and 15.749 closes `u=4` by its exact translated-cut
    moment intersection. The live residual ranges are critical `p=5,7`,
    `p=11,k>=50`, `p=13,k=60,u=6` and later p13 layers, every
-   `p>=17,t>=4` layer (beginning with `p=17,k>=76`), and branch-B `t=3`
-   for `p=1 mod 4,p>=29`. In that branch-B range, the surplus
-   resonance and explicit local mean witness rule
-   out another one-direction floor or halving proof; state the genuinely new
-   cross-direction/global invariant before computing. Retain both 15.723
+   `p>=17,t>=4` layer (beginning with `p=17,k>=76`). Proposition 15.751
+   closes the former generic branch-B `t=3` range; no further cell, graph,
+   slice, or prime census there is authorized. Retain both 15.723
    floor-plus-two exceptions in any independent profile DP. Do not reopen the
    exceptional `p=13,t=3,u=3` row: 15.738--15.739 close it by an exact
    mass-14 catalog and quartic contradiction. Do not reopen the generic p13

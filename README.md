@@ -120,9 +120,10 @@ not represented as computational predicates.
   zeros, forcing the moment form to vanish, while an all-equal triangle has
   nonzero moment because `-3=8` is nonsquare modulo 11. Therefore
   `k in {4p,4p+2,4p+4}` is impossible for every prime `p>=11` and every
-  boundary size. Residual (ii) remains open at critical `p=5,7`, at
-  `p=11,k>=50`, at `p=13,k=60,u=6` and later p13 layers, in every `p>=17` layer `t>=4`
-  (including `p=17,k>=76`), and in generic branch B at `t=3` from `p>=29`.
+  boundary size. Proposition 15.751 additionally closes `k=4p+6` for every
+  `p>=13`. Residual (ii) remains open at critical `p=5,7`, at
+  `p=11,k>=50`, at `p=13,k=60,u=6` and later p13 layers, and in every
+  `p>=17` layer `t>=4` (including `p=17,k>=76`).
 - **Exceptional fourth-shell branch close.** Proposition 15.738 gives an
   exhaustive `J(13,7)` certificate for the forced phase-zero mass-14 cells:
   height four is exactly infeasible at `Q=0,6`, and the 1,092 Boolean
@@ -178,9 +179,9 @@ not represented as computational predicates.
   The last partition without an excess-one row has nonstar energy at most
   `119+9*72=767`, below its exact Radon value `1211+34C`; the other Radon
   baselines are 1251 and 1287.
-  This closes only `p=17,k=74`.  The honest residual scope still includes
-  every `p>=17,t>=4` layer (starting with `p=17,k=76`) and generic branch B
-  at `p>=29,t=3`.  At generic `p=13`, the
+  This closes only `p=17,k=74`; Proposition 15.751 later closes generic
+  branch B at `p>=29,t=3`. The honest residual scope still includes every
+  `p>=17,t>=4` layer (starting with `p=17,k=76`). At generic `p=13`, the
   explicit elevated local cell with `S_2=0,S_4=5` remains a method
   counterexample, while Proposition 15.742 closes its common graph globally.
 - **Next p13 layer, two branches closed.** Proposition 15.744 replays the
@@ -319,7 +320,7 @@ Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 | GOAL unit | live predicate | status |
 |---|---|---|
 | required bi-tight levels 2 and 3 | `bitight_levels_2_3` | **TRUE** — 15.720 degree congruence; bi-tight level 4 is a corollary, while generic one-sided covers exist and only joint residual compatibility remains open |
-| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Propositions 15.734--15.737 close `k in {4p,4p+2,4p+4}` for every prime `p>=11` and every boundary size. Propositions 15.738--15.742 close `p=13,k=58`, Proposition 15.743 closes `p=17,k=74`, 15.744--15.745 close `u=3,0` at `p=13,k=60`, and 15.746--15.749 close `u=4`. Critical `p=5,7`, `p=11,k>=50`, `p=13,k=60,u=6` and later p13 layers, every `p>=17,t>=4` layer (starting with `p=17,k=76`), and generic branch B at `p>=29,t=3` remain; the positive `p=7,z=7` subbranch also persists. Hence the global predicate stays false. |
+| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Propositions 15.734--15.737 close the first three shells and 15.751 closes `k=4p+6` for every `p>=13`. At `p=13,k=60`, 15.744--15.749 close `u=0,3,4`. Critical `p=5,7`, `p=11,k>=50`, `p=13,k=60,u=6` and later p13 layers, every `p>=17,t>=4` layer (starting with `p=17,k=76`), and positive `p=7,z=7` remain. Hence the global predicate stays false. |
 | Type I, multi-level Max− | `type_I_multilevel` | **TRUE** — Proposition 15.750: isolated-chart square rigidity, parity halving, the sharp lift floor, and exact `p=5,7` Farkas certificates |
 | Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |
 
@@ -807,7 +808,8 @@ graph TD
     P11MOM --> P17RADON["full translated-cut + common-Radon energy<br/>p=17,k=74 <b>CLOSED</b> (15.743)"]
     P17RADON --> P13T4["p=13,k=60 residues u=0,3<br/><b>CLOSED</b> (15.744--15.745)"]
     P13T4 --> P13U4["u=4 translated-cut moments + seven-root quartic<br/><b>CLOSED</b> (15.746--15.749)"]
-    P13U4 --> STRICTP["p=5,7 critical; p=11 k>=50; p=13 k=60 u=6 + later;<br/>all p>=17,t>=4; generic p>=29,t=3 <b>OPEN</b>"]
+    P13U4 --> T3CLOSE["height theorem + influence junta + 4-bit certificate<br/>k=4p+6 <b>CLOSED for p>=13</b> (15.751)"]
+    T3CLOSE --> STRICTP["p=5,7 critical; p=11 k>=50; p=13 k=60 u=6 + later;<br/>all p>=17,t>=4 <b>OPEN</b>"]
     style L fill:#ffe6e6
     style D fill:#e6ffe6
     style FLOOR fill:#fff4e6
@@ -1055,7 +1057,7 @@ Proposition 15.721 supersedes the active all-finite shell statuses in
 | 15.736 | on `J(11,6)`, verify quadratic-space rank 55 and a rank-407 third-difference annihilator, then exclude every support-84 Boolean vector outside 55 omitted-pair and 165 all-equal-triple supports | **exhaustive finite certificate:** the 220 sharp Boolean quadratics are complete; this kills the p11 hard-`b=2` catalog branch but leaves the simultaneous all-equal-triple branch for 15.737 |
 | 15.737 | convert hard `4-z_j` baselines to signed stars whose binary quadratic moment vanishes; at least three projective zeros force the moment form to be zero, while an opposite all-equal triangle has nonzero moment since `-3` is nonsquare in `F_11` | **proved theorem:** residual (ii) is empty at `p=11,k=44,46,48`; together with 15.735, the first three shells are closed for every prime `p>=11` |
 | 15.738 | on `J(13,7)`, exclude height-four mass-14 residual cells at `Q=0,6`, certify rank 78 and a rank-1638 third-difference annihilator, and exhaust all 1,092 support-462 Boolean quadratics | **exhaustive finite certificate:** offsets leave only `x_i*x_j`, with exact moments `(i-j)^2,(i-j)^4`; this is the local input to 15.739, not a residual theorem by itself |
-| 15.739 | correct the exceptional complement-triple offset to two, force a selected-pair opposite cell, and use seven roots of `G=2hM_4-M_2^2` against its nonzero value `-3(i-j)^4`; also force higher even moments, a five-value coefficient alphabet, and at p17 the cut range `[-26,-12]` | **proved branch theorem and open reduction:** the exceptional `p=13,t=3,u=3` row is empty; 15.742 later closes its generic p13 complement, while the p17 `{0,...,7}`-valued reduction is completed by 15.743; the generic `p>=29,t=3` range remains open |
+| 15.739 | correct the exceptional complement-triple offset to two, force a selected-pair opposite cell, and use seven roots of `G=2hM_4-M_2^2` against its nonzero value `-3(i-j)^4`; also force higher even moments, a five-value coefficient alphabet, and at p17 the cut range `[-26,-12]` | **proved branch theorem and historical open reduction:** the exceptional `p=13,t=3,u=3` row is empty; 15.742 closes its generic p13 complement, 15.743 completes p17, and 15.751 closes the former generic `p>=29,t=3` remainder |
 | 15.740 | for the generic p13 row, force `M_2=M_4=0` from five exact stars, aggregate opposite coefficients over six cyclic distance classes, and apply nine translation-summed cut inequalities | **proved branch split with exhaustive finite certificate:** the five- and six-exact partitions are impossible; only `1^4 2^3` remains, subsequently closed by the common-graph energy theorem in 15.742 |
 | 15.741 | couple the four exact stars through cubic/quartic endpoint tensors and the 84-class difference-Radon transform of one common graph | **proved open reduction and method barrier:** `M_2=T_3=0`, `U_4=lambda M_4`, `M_4!=0`, and nonstar energy is `707+26C` with `C<=11`; its `M_2` and exact energy identities are the inputs used by 15.742 |
 | 15.742 | combine `M_2=0` with the six multiplicative interval cuts, exhaust the resulting integral six-bin rows, and compare their sharp energies with the common-graph Parseval identity | **exhaustive finite certificate:** elevated energy is at most 31 and opposite energy at most 82, so `3*31+7*82=667<707<=707+26C`; the generic four-exact p13 branch and, with 15.739, all of `p=13,k=58` are closed |
@@ -1067,6 +1069,7 @@ Proposition 15.721 supersedes the active all-finite shell statuses in
 | 15.748 | interpolate the common `M2,M4,M6` roots supplied by those literals against the 69-element hard moment alphabet | **exhaustive finite interpolation certificate and proved open reduction:** `z>=3` is impossible, while `z=2` leaves 336 moment-level survivors per sign; only the opposite excess partition `(1,1,1,1,1)` remains |
 | 15.749 | impose all 74 translated cuts on each surviving `Q=4` row, recover its exact moment list, and compare it with every 15.748 nonroot evaluation | **exhaustive finite aggregate certificate and proved branch theorem:** exact cut duals give `-5<=q_a<=1`; 522 rows yield 492 triples, whose 12-point survivor intersection has `N4=0`. Five such roots plus the two literal roots force `M4=0`, contradicting the hard alphabet and closing `p=13,t=4,u=4` |
 | 15.750 | transport an isolated vertex, rigidify every square direction, halve a low-mass nonsquare lift by exact parity, and verify exact `p=5,7` Farkas bases | **proved all-prime theorem:** closes the multi-level Type-I bad case for every prime `p>=5` and every distinguished edge; residual (ii), E1, and the limit remain open |
+| 15.751 | split the generic `t=3` cell by height; use a dimension-free half-mean cube theorem above height one, and corrected transposition influences plus a fixed four-bit catalog at height one | **proved infinite-family theorem with fixed exhaustive certificate:** closes generic branch B for every `p>=29` and, with prior arithmetic/certificates, closes `k=4p+6` for every prime `p>=13`; later layers remain open |
 
 The size-eight scope is deliberately split. Proposition 15.662 closes all
 6,174 minimum-eight-odd-secant boundaries (the affine conics) for both
@@ -1386,20 +1389,15 @@ unidentified glue-class phase, unknown broad mass, or classified low shell.
    15.744--15.745 close `u=3,0` at `p=13,k=60`, and Propositions
    15.746--15.749 classify and close `u=4`. The exact remainder is critical
    `p=5,7`, `p=11,k>=50`, `p=13,k=60,u=6`
-   and later p13 layers, every
-   `p>=17,t>=4` layer (starting with `p=17,k=76`), and generic branch B at
-   `p>=29,t=3`. The separate `p=7`
+   and later p13 layers, and every
+   `p>=17,t>=4` layer (starting with `p=17,k=76`). Proposition 15.751 closes
+   the former generic branch B at `p>=29,t=3`. The separate `p=7`
    remainder includes the 56 positive
    `z=7` line boundaries. The immediate finite p13 target is `u=6`; the 336
    former `u=4` survivors are closed inputs, not a common-graph target.
    A broad mass-12/support-396 census is not the gate; the `P=3` branch and
-   support-330 classification are complete. At
-   generic `p>=29,t=3`, the isolated-chart ledger has a
-   resonant branch with every opposite direction at mean `p+7`; exact hard
-   stars force higher even moments and conditioned cuts force a five-value
-   coefficient alphabet. The next
-   attack must therefore impose simultaneous cross-direction compatibility or
-   a new global invariant, not repeat the one-direction floor/halving argument.
+   support-330 classification are complete. Generic `p>=29,t=3` is also a
+   closed input by 15.751 and must not be reopened.
 Type I is no longer on the work list. Proposition 15.750 bypasses the old
 `3A+B` / Aut_e sign routes; those mechanism-local leftovers are not current
 global gates.
