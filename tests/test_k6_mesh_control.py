@@ -165,10 +165,12 @@ def test_dashboard_html_is_mobile():
     assert "<script>x</script>" not in page.split("<script>")[0]
     mesh = (TOOL / "k6_mesh.sh").read_text()
     cpu = mesh.split("start_cpu44()")[1].split("start_dash()")[0]
-    assert "run_kgauged.py 6 44" in cpu
-    assert "GPU_WORKERS=44" in cpu
-    assert "OMP_NUM_THREADS=1" in cpu
-    assert "NUMBA_NUM_THREADS=1" in cpu
+    assert "run_kgauged.py 6 11" in cpu
+    assert "GPU_WORKERS=11" in cpu
+    assert "NUMBA_NUM_THREADS=4" in cpu
+    assert "OMP_NUM_THREADS=4" in cpu
+    assert "run_kgauged.py 6 44" not in cpu
+    assert "NUMBA_NUM_THREADS=1" not in cpu
     assert "NUMBA_NUM_THREADS=44" not in cpu
     # Start/stop POST must spawn the mesh script next to the dashboard,
     # never the main-tree path that no longer has k6_mesh.sh.

@@ -46,7 +46,8 @@ Jetson Orin Ampere sm_87, 1 CUDA process, GEN_CAP=8e6. Log: enum_p13_k6_orin.log
 jellyfin Intel Arc A380 SYCL emit + host test. Log: enum_p13_k6_a380.log
 .TP
 .B cpu44
-soulkiller 44 orbit processes (OMP=1 each), CUDA hidden. Log: enum_p13_k6_cpu44.log
+Legacy role label, not a node: soulkiller runs 11 in-flight orbits × 4 inner
+Numba/OMP threads (44 cores), CUDA hidden. Log: enum_p13_k6_cpu44.log
 .TP
 .B dash
 HTTP dashboard on :8765.
@@ -132,7 +133,7 @@ Default $K6_ROOT/mesh_stop
 .SH NOTES
 lucky (192.168.1.82) is DNS only and is never used.
 cpu44 and v100 share soulkiller: cpu44 sets CUDA_VISIBLE_DEVICES empty and
-uses 44 of 88 threads so the V100 host process still has cores.
+uses 11 orbits × 4 threads (44 of 88) so the V100 host process still has cores.
 Remote workers sshfs the platter at
 .I /home/nick/mnt/maxplus_p13
 and need

@@ -221,6 +221,7 @@ EOF
 }
 
 start_cpu44() {
+  # cpu44 is a legacy role name, never a mesh hostname; the host is soulkiller.
   alive cpu44 && { echo "cpu44 already running pid $(cat "$(pidfile cpu44)")"; return 0; }
   prepare_start cpu44
   mkdir -p "$PIDS" "$GAUGE"
@@ -229,20 +230,21 @@ start_cpu44() {
     cd "$CODE"
     export PALEY_P=13 GAUGE_OUT="$GAUGE" LOAD_TASKS="$PICKLE"
     export RESUME_JSON="$ROOT/k6_resume.json" K6_ROOT="$ROOT" K6_STOP_DIR="$STOP"
-    # 44 independent orbit processes. Inner OpenMP/numba stays 1: NumpyTester
-    # is serial numpy, so one process × 44 OMP threads pegs ~1 core.
-    export GPU_WORKERS=44 GEN_CAP=8000000
+    # 11 in-flight orbits × 4 inner threads. Emit is numba prange (needs
+    # NUMBA>1); NumpyTester is still serial, so 11 concurrent testers keep
+    # cores busy. 11×4=44, same budget as the old 44×OMP=1 layout.
+    export GPU_WORKERS=11 GEN_CAP=8000000
     export ENUM_SHARD_MOD=1 PYTHONUNBUFFERED=1
     export K6_HOST=cpu44 K6_BACKEND=cpu PYTHONPATH="$CODE${PYTHONPATH:+:$PYTHONPATH}"
-    export NUMBA_NUM_THREADS=1 OMP_NUM_THREADS=1
+    export NUMBA_NUM_THREADS=4 OMP_NUM_THREADS=4
     export NUMBA_THREADING_LAYER=workqueue
     export OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
     export CUDA_VISIBLE_DEVICES=
     echo "===== mesh cpu44 $(date -Is) =====" >> "$ROOT/enum_p13_k6_cpu44.log"
-    nohup python3 -u run_kgauged.py 6 44 >> "$ROOT/enum_p13_k6_cpu44.log" 2>&1 &
+    nohup python3 -u run_kgauged.py 6 11 >> "$ROOT/enum_p13_k6_cpu44.log" 2>&1 &
     echo $! > "$(pidfile cpu44)"
   )
-  echo "cpu44 started pid $(cat "$(pidfile cpu44)") (44 orbit processes, OMP=1, no CUDA)"
+  echo "cpu44 started pid $(cat "$(pidfile cpu44)") (11 orbits × 4 threads, no CUDA)"
 }
 
 start_dash() {
@@ -382,11 +384,11 @@ hard_kill() {
       ;;
     cpu44)
       # Kill the Pool parent and descendants by PID tree (never pkill -f:
-      # that matches this wrapper). Also reap leftover 6 1 / 6 44 workers.
+      # that matches this wrapper). Reap leftover 6 1 / 6 11 / 6 44 workers.
       kill_tree_by_pid "$pid" TERM
       sleep 2
       kill_tree_by_pid "$pid" KILL
-      for wp in $(pgrep -f '[r]un_kgauged.py 6 (1|44)' || true); do
+      for wp in $(pgrep -f '[r]un_kgauged.py 6 (1|11|44)' || true); do
         # v100 is '6 2'; only reap cpu44 argv shapes.
         kill -KILL "$wp" 2>/dev/null || true
       done
