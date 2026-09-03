@@ -1,0 +1,81 @@
+{
+  "schema": "p31_equianharmonic_zero68_mitm_manifest_v1",
+  "scope": "p=31, b=7, k=11 constant equianharmonic tangent-conic fiber only",
+  "status": "UNSAT",
+  "global_claims": {
+    "residual_ii_closed": false,
+    "L_closed": false
+  },
+  "input": {
+    "p": 31,
+    "r": 7,
+    "b": 7,
+    "k": 11,
+    "target_support": 29,
+    "ae_atom_count": 6,
+    "compact_atom_count": 7,
+    "zero_degrees": [6, 8],
+    "zero_moment_coordinate_count": 7
+  },
+  "alignment_reduction": {
+    "maximum_ae_score": 3,
+    "maximum_compact_score": 2,
+    "maximum_total_score": 32,
+    "required_target_score": 29,
+    "total_deficit": 3,
+    "ae_score_counts_minus3_through_3": [9, 1, 702, 3071, 702, 1, 9],
+    "compact_score_counts_minus2_through_2": [111, 2133, 8997, 2133, 111],
+    "maximal_ae_cycle_count": 9,
+    "maximal_compact_count": 111,
+    "maximal_compact_antipodal_off_edge_count": 5,
+    "maximal_compact_supported_off_orbit_count": 51,
+    "deficit_partitions": [[3], [2, 1], [1, 1, 1]]
+  },
+  "exact_partition_results": {
+    "one_deficit_3_atom": {
+      "exceptional_candidates": 5204,
+      "maximal_completions_tested": 13528344,
+      "edge_hits": 60,
+      "zero_6_8_hits": 0
+    },
+    "one_deficit_2_plus_one_deficit_1": {
+      "exceptional_pairs": 20697666,
+      "off_compatible_pairs": 79918,
+      "maximal_completions_tested": 87840508,
+      "edge_hits": 2160,
+      "zero_6_8_hits": 0,
+      "largest_deficit_2_index_ranges": [[0, 3000], [3000, 5600], [5600, 8200], [8200, 9699]]
+    },
+    "three_deficit_1_with_at_least_one_ae": {
+      "exceptional_multisets": 2278045,
+      "off_compatible_multisets": 24828,
+      "maximal_completions_tested": 20465801,
+      "edge_hits": 392,
+      "zero_6_8_hits": 0,
+      "largest_compact_deficit_1_index_ranges": [[0, 750], [750, 1450], [1450, 2133]]
+    },
+    "three_compact_deficit_1": {
+      "all_unordered_multisets": 1619689995,
+      "unsupported_off_projection_pair_keys": 1031232,
+      "unsupported_off_projection_3sum_hits": 2027542,
+      "supported_off_completable_multisets": 1089526,
+      "maximal_completions_tested": 108480057,
+      "edge_hits": 14464,
+      "zero_6_8_hits": 0,
+      "largest_deficit_1_index_ranges": [[0, 800], [800, 1500], [1500, 2133]]
+    }
+  },
+  "totals": {
+    "maximal_completions_tested": 230314710,
+    "edge_hits": 17076,
+    "zero_6_8_hits": 0
+  },
+  "reproduction": {
+    "compiler": "g++ (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+    "flags": "-O3 -std=c++20 -Wall -Wextra -pedantic -pthread",
+    "source": "evidence/p31_equianharmonic_zero68_mitm.cpp",
+    "source_sha256": "14e23138797b8bde9edbbd447c69ee735ec0a85600145b2ecf0988e490c59520",
+    "local_reproduction_binary_sha256": "a74e57224ece6d4a4b8d609df40d052f8929ca091e238dc75b3d88bdef26a550",
+    "shard_semantics": "all ranges are half-open; d2d1 ranges index the unique deficit-two atom, d1ae ranges index the smaller compact deficit-one atom in its one-AE/two-compact subtype (the all-AE and two-AE subtypes occur only when lo=0), and d1k ranges index the largest compact deficit-one atom"
+  }
+}

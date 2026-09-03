@@ -1,0 +1,28 @@
+compact_orbits=450 range=123:149 invariant=15 fixed_sums=1,15,120,535,925,961, pair_units=2255 pair_pairs=2543460 pasch=3725
+UNSAT_INDEX=123 compact=1,5,9 cumulative_nodes=9266062
+UNSAT_INDEX=124 compact=1,5,10 cumulative_nodes=18549409
+UNSAT_INDEX=125 compact=1,5,11 cumulative_nodes=27851204
+UNSAT_INDEX=126 compact=1,5,12 cumulative_nodes=37172436
+UNSAT_INDEX=127 compact=1,5,13 cumulative_nodes=46513920
+UNSAT_INDEX=128 compact=1,5,14 cumulative_nodes=55876297
+UNSAT_INDEX=129 compact=1,5,15 cumulative_nodes=65260034
+UNSAT_INDEX=130 compact=1,5,16 cumulative_nodes=74687252
+UNSAT_INDEX=131 compact=1,5,17 cumulative_nodes=84134692
+UNSAT_INDEX=132 compact=1,5,18 cumulative_nodes=93602295
+UNSAT_INDEX=133 compact=1,5,19 cumulative_nodes=103089828
+UNSAT_INDEX=134 compact=1,5,20 cumulative_nodes=112596884
+UNSAT_INDEX=135 compact=1,5,21 cumulative_nodes=122122882
+UNSAT_INDEX=136 compact=1,5,22 cumulative_nodes=131667067
+UNSAT_INDEX=137 compact=1,5,23 cumulative_nodes=141228510
+UNSAT_INDEX=138 compact=1,5,24 cumulative_nodes=150806108
+UNSAT_INDEX=139 compact=1,5,25 cumulative_nodes=160398584
+UNSAT_INDEX=140 compact=1,5,26 cumulative_nodes=185869565
+UNSAT_INDEX=141 compact=1,5,27 cumulative_nodes=195371642
+UNSAT_INDEX=142 compact=1,5,28 cumulative_nodes=204867602
+UNSAT_INDEX=143 compact=1,5,29 cumulative_nodes=214354138
+UNSAT_INDEX=144 compact=1,5,30 cumulative_nodes=240363765
+UNSAT_INDEX=145 compact=1,6,0 cumulative_nodes=245100786
+UNSAT_INDEX=146 compact=1,6,2 cumulative_nodes=254383226
+UNSAT_INDEX=147 compact=1,6,3 cumulative_nodes=263663059
+UNSAT_INDEX=148 compact=1,6,4 cumulative_nodes=272940248
+SUMMARY range=123:149 compact_done=26 nodes=272940248 found=0

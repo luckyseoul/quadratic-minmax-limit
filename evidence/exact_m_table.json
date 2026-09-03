@@ -61,11 +61,51 @@
     "Phi_Paley_10": 15,
     "note": "m_10=13 < Phi_Paley=15: conference not exact-optimal"
   },
+  "11": {
+    "m": 17,
+    "alpha": 0.4659720779838165,
+    "source": "CurtisAccelerate/antipodal-cut-code-k11 exact certificate",
+    "source_commit": "977927bd16188eda7334b040601e9db6a321aaf4",
+    "verification": "witness plus full 50,778,686-node lower-bound replay on 2026-09-02",
+    "note": "covering radius 19; external finite theorem independently replayed locally"
+  },
+  "12": {
+    "m": 18,
+    "alpha": 0.4330127018922193,
+    "source": "Robby955/mo-413935-research exact certificate",
+    "source_commit": "61ac2268b6f9234c3ea268e7a7072ac72141f36b",
+    "verification": "order-12 witness independently evaluated; m_11=17 plus monotonicity and even energy parity give the lower bound",
+    "note": "full projective witness and the exact deduction were replayed locally on 2026-09-02"
+  },
+  "13": {
+    "m": 20,
+    "alpha": 0.4266924586347916,
+    "source": "Robby955/mo-413935-research threshold certificate",
+    "source_commit": "61ac2268b6f9234c3ea268e7a7072ac72141f36b",
+    "verification": "both published order-12 threshold survivors, their extension minima, and the order-13 witness were replayed; the billion-record nauty receipt was audited but not regenerated",
+    "note": "lower-bound trust boundary is the published eight-shard nauty completeness receipt"
+  },
+  "14": {
+    "m": 21,
+    "alpha": 0.4008918628686366,
+    "source": "Robby955/mo-413935-research threshold certificate",
+    "source_commit": "61ac2268b6f9234c3ea268e7a7072ac72141f36b",
+    "verification": "Paley C14 and all fourteen order-13 principal maxima were independently evaluated; m_13=20 plus monotonicity and odd energy parity give the lower bound",
+    "note": "conditional only on the externally certified m_13 lower-bound stream"
+  },
+  "15": {
+    "m": 27,
+    "alpha": 0.46475800154489005,
+    "source": "Robby955/mo-413935-research threshold-tower certificate",
+    "source_commit": "61ac2268b6f9234c3ea268e7a7072ac72141f36b",
+    "verification": "quick certifier passed witness, threshold-23 extensions, receipt hashes, and 1,313,164-record catalogue hash/count; full top-level replay and lower tower were not rerun",
+    "note": "lower-bound trust boundary is the published digest-pinned nauty and labelg tower"
+  },
   "_meta": {
     "workers": 7,
     "total_time_s": 12.894673109054565,
     "host_ncpu": 88,
     "live_exact": "2..8",
-    "recorded": "9,10"
+    "recorded": "9,10; independently replayed external certificates: 11,12; externally certified with local lightweight audits: 13,14,15"
   }
 }

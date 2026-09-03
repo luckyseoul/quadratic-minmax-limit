@@ -1,10 +1,10 @@
 # Proposition and route de-duplication audit
 
-**Date:** 2026-09-01
+**Date:** 2026-09-03
 
-**Scope:** Propositions 6.3--6.9, every assigned proposition through
-Proposition 15.753, the live predicate wiring, and the attack scripts present
-during the audit
+**Scope:** Propositions 6.3--6.10a, every assigned proposition through
+Proposition 15.761, the audited post-15.761 support/conic/Boolean reductions,
+the live predicate wiring, and the attack scripts present during the audit
 
 **Purpose:** prevent a reformulation, solver/backend change, longer timeout,
 or finite-prime rerun from being mistaken for a new mathematical attack
@@ -12,6 +12,224 @@ or finite-prime rerun from being mistaken for a new mathematical attack
 ## Verdict
 
 The duplication concern was correct.
+
+### Propositions 15.757--15.761 and the post-15.761 reductions: the edge--Radon gate is narrower and still open
+
+Proposition 15.757 computes the complete binary image of the common
+edge--Radon map. Its rank is
+`p^2-1+(p+1)binom(p-1,2)`, boundary and total parity are the only binary
+compatibilities, and the recorded `p=1 mod 4` compact aggregate family
+passes them. Do
+not search for another binary cross-direction equation or promote a binary
+lift to an integral simple graph.
+
+Proposition 15.758 proves sharp fixed-offset cancellation: for `a` units of
+mass `p-3` and `b` units of mass `p+1`, the minimum coefficient `l1` is
+`|3a-b|`, except that it is `3` when `|3a-b|=1`. It also constructs two
+infinite families of locally compatible directional targets and proves that
+scalar common-Parseval energy has no upper/lower gap on their balanced lower
+endpoints for every `r>=7`. Do not revive an atom-count coefficient lower
+bound, call the local rows one graph, or rerun scalar-energy estimates.
+
+Proposition 15.759 lists every additional characteristic-`p` moment row and
+proves that they are independent and exhaustive, with codimension
+`S(p)=(m-1)(4m^2+7m+6)/6`. Proposition 15.760 proves the stronger integral
+statement `A/R(E)=(Z/pZ)^S(p)`: ordinary totals and those moments are
+necessary and sufficient for an unrestricted signed integral lift. There is
+no hidden `p^2`, other-prime, or further linear integer obstruction. This
+does not imply a nonnegative `0/1` lift.
+
+Proposition 15.761 computes the complete real spectrum of `RR^t` and its
+exact Moore--Penrose least norm. That full-midpoint condition is stronger
+than the prior scalar difference Parseval condition, but both compact rays
+pass it with strict room for all `r>=7`, uniformly in atom labels. Do not
+retry a real least-norm or Euclidean separation on these rays.
+
+The higher-moment follow-up proves that every odd row is blind on the
+antipodal rays. More generally, for every prime `p=4r+3`, `r>=7`, zero odd
+global forms force the aggregate signed edge chain of any row with `b`
+arbitrary compact atoms and `r-1` all-equal atoms to be central whenever
+`3b<=r+2`. For the balanced allocation, with
+`delta=t-(2r^2-4r-2)`, every opposite row is covered throughout
+`0<=delta<=(2r+2)floor((r+2)/3)`. This is structural only; it does not cover
+nonzero odd forms, unbalanced allocations, or even moments.
+
+The full balanced `p=4r+3`, `r>=7`, support audit now excludes every one-
+or two-maximal-line configuration for `0<=b<=r`. Couvreur peeling makes
+this exhaustive among words of support at most `3h-6` that contain
+`h=2r+1` collinear points. At the boundary `b=r`, the reducible, integral
+singular, and smooth cases also exclude every cubic/degree-`h-2` complete
+intersection for `p=4r+3>=31`. These results do not remove a
+high-intersection irreducible conic, so they are support exclusions rather
+than a larger centrality or residual theorem.
+
+The high-intersection conic itself peels completely onto a triangle-tangent
+normal form with constant orbit difference. The star case is
+parity-impossible; every nonstar survivor forces `q^3=1`, `q!=1`,
+equivalently `k^2=-3`, and hence `p=7 mod 12`. The explicit
+`p=31,b=7,k=11` six-all-equal/seven-compact witness realizes the 29 conic
+edges and kills all 105 odd channels, but its syndromes
+`F6=(11,19,10)` and `F8=(12,11,23,6)` are nonzero. Do not rerun the odd
+witness as though it were a simultaneous zero-six/eight witness.
+
+An independent exact MITM partitions the only possible alignment deficit
+three into `(3)`, `(2,1)`, and `(1,1,1)` and exhausts the entire
+`p=31,b=7,k=11` constant-conic fiber with degree-six and degree-eight
+syndromes zero. Its 230,314,710 maximal completions contain 17,076 exact
+edge hits and zero moment hits, so that finite fiber is `UNSAT`. Do not
+repeat it using CP-SAT, another decomposition, or a different shard layout;
+do not extrapolate this finite theorem to another prime or parameter.
+
+At `p=31` the original theorem covered `68<=t<=116`; the frozen component-
+packing upgrade below supersedes it by the guaranteed balanced opposite-row
+band `68<=t<=164`. The exact classified degree-six/eight search itself covers the
+one-compact/six-all-equal row through all 450 compact scaling orbits: 449
+noncentered fibers are `UNSAT`, the unique centered orbit is delegated to the
+earlier exact centered certificate, and no `SAT` fiber exists. The v1/v2
+overlap agrees on all 435 shared indices. Every balanced profile with
+`69<=t<=99` contains at least one such row, so zero odd, degree-six, and
+degree-eight global forms are impossible on that band. The stored `t=69` is
+provenance only. Do not rerun the fiber, substitute another backend, or
+promote the conclusion to unbalanced allocations or nonzero forms.
+
+Exact seven-channel Jacobian minors for four compact atoms and four all-equal
+atoms are respectively `2^28*3^9*5^3*7^3` and
+`2^26*3^7*5^4*7^4`. Both degree-six/eight atom maps are therefore dominant
+over the algebraic closure in characteristic at least 11. This rules out a
+universal polynomial identity or purely algebraic projective root-count close;
+it does not provide `F_p` labels or form coefficients. The common forms and
+labels supplied by dominance live only over an algebraic closure or finite
+extension and prove neither odd/higher-moment compatibility nor a Boolean
+lift.
+
+The signed Boolean step is now an exact nonlinear closest-vector reduction.
+For `Rz=y`, the integer defect
+`beta(z)=(||z||_2^2-H_y)/2` is nonnegative, and the affine fiber contains a
+signed Boolean point exactly when `beta_R(y)=0`. An integral lift is a
+global defect minimizer exactly when
+`|2 z.g|<=||g||_2^2` for every move `g` in the complete Graver basis. This
+criterion is exact but no complete basis or compact-target defect value has
+been supplied.
+
+The explicit Type-P and same-square Type-K circuits give a complementary
+exact reduction:
+`p ker_Z R subset K_ridge subset ker_Z R` and, with
+`m=(p-1)/2`, `d=p+1`,
+`ker_Z R/K_ridge=(Z/pZ)^nu_p` for
+`nu_p=d p m^2+m(m-1)(4m+1)/6`. Thus one mod-`p` dependency basis yields
+the exact saturating moves and fiber parametrization. The quotient is
+proper, so the displayed ridges are not the complete Graver basis; their
+descent inequalities do not establish a Boolean lift or closure.
+
+The equianharmonic component-packing theorem is an all-characteristic
+symbolic result, not a prime census.  It classifies every positive-excess
+pairing component, proves their weighted disjoint-packing maximum is three,
+and obtains the necessary constant-conic threshold
+`b>=(2r+7)/3`, for both signs.  Consequently the dependency-gated opposite-
+row theorem under zero odd global forms is now `3b<=2r+4` for
+`p=7 mod 12`, and all `b<=r` for `p=11 mod 12`.  Do not retry local score
+tables, R1 placements, cap/HH/O2 support packing, or extrapolate the sharp
+`p=43,b=9` odd witness to a zero-even-syndrome witness.
+
+The balanced hard-row compact residual is also proved central under zero odd
+forms for its full range `e<=2r-2`; the fixed unit star remains.  Central
+inversion identifies the antisymmetric cokernel exactly with the odd-moment
+rows, and explicit direction-localized Mobius trades give pairwise-disjoint
+ternary lifts for arbitrary hard centers.  Hence the antisymmetric Boolean
+half is closed.  Do not rerun the older hard-star support floor,
+equality-pencil, total/fixed/parallel-count, or Euclidean-norm diagnostics:
+the constructive lift supersedes them.  The still-open Boolean gate is the
+coupled symmetric half (`s_e=1` on used trade orbits, `s_e in {0,2}` on
+unused nonfixed orbits, binary fixed edges), not the already-solved
+antisymmetric box.
+
+At the first equianharmonic threshold, exact `U,V` four-compact/two-cycle
+trades preserve the odd orbit chain. Their mixed seven-channel
+degree-six/eight map has Jacobian
+`2^32*3^26*5^2*7*2161` at a rational point.  This disproves a universal
+component-only affine even-syndrome obstruction; it neither supplies an
+`F_p` zero-syndrome matching nor closes the global problem.  Do not retry an
+all-`U` affine invariant after mixed `V` trades have been admitted.
+
+Frozen proof anchors are
+`evidence/NOTE_2026-09-03_EQUIANHARMONIC_COMPONENT_PACKING.md`,
+`evidence/NOTE_2026-09-03_HARD_ROW_COMPACT_ODD_RADON_CENTRALITY.md`,
+`evidence/NOTE_2026-09-03_INVERSION_ANTISYMMETRIC_RADON.md`,
+`evidence/NOTE_2026-09-03_HARD_STAR_ANTISYMMETRIC_SUPPORT.md`, and
+`evidence/NOTE_2026-09-03_EQUIANHARMONIC_THRESHOLD_EVEN_BARRIER.md`.
+
+The inversion-symmetric map has now also been exhausted at the unrestricted
+lattice level. It is mod-two surjective and has elementary-`p` cokernel
+`(Z/pZ)^[(h-1)(2h^2+5h+6)/6]`, exactly the even moments. Do not rerun a
+central parity, Smith, `p^2`, or other-prime obstruction; the remaining issue
+is coefficientwise membership in the restricted central Boolean box.
+
+The Mobius half has an exact symmetric ledger:
+`P_L=P_M=1`, `P_(L-M)=0`, `P_(L+mM)=1+eta(1+m)`, with Paley sign
+`tau_t=eta(Q(e1-t^2(e1+e2)))`. The forced pair-total chain doubles this
+parallel vector. Crucially, two arbitrary nonzero hard-star trades admit an
+opposite-sign origin overlap, reducing their nonzero orbit count from
+`2(p-1)` to `2(p-1)-2`. Do not resurrect the false upper-endpoint argument
+from `m(p-1)=|H|_max+1`; that count belongs only to the deliberately disjoint
+lift.
+
+When every hard center is nonzero, the equality-pencil case `c=p-2` is
+excluded by completing to a `p`-point set, applying the prime-order
+Redei--Megyesi direction bound, and violating one opposite-row parallel
+quota. Thus `c>=p-1` in the all-active balanced zero-odd case. Do not remove
+the all-active hypothesis or promote this support lemma to a central Boolean
+lift. The frozen notes are
+`evidence/NOTE_2026-09-03_INVERSION_SYMMETRIC_LATTICE.md`,
+`evidence/NOTE_2026-09-03_MOBIUS_HALF_SYMMETRIC.md`, and
+`evidence/NOTE_2026-09-03_ALL_ACTIVE_PENCIL_SUPPORT.md`.
+
+The exact ordered gate still includes unbalanced zero-form allocations and
+simultaneous nonzero even global forms over `F_p`, coordinated across
+directions. In the balanced zero-odd branch, only the coupled symmetric
+pair-total box remains after the Mobius lift. No common simple graph has been
+constructed. Residual (ii), E1, and the limit remain open.
+
+Focused replay of the post-15.761 records:
+`PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -q tests/test_compact_ray_moment_gate.py tests/test_conic_odd_radon.py tests/test_p31_equi_zero68_mitm.py tests/test_signed_boolean_defect.py tests/test_ridge_kernel.py tests/test_equianharmonic_component_packing.py tests/test_hard_compact_odd_radon.py tests/test_hard_star_antisymmetric_support.py tests/test_inversion_antisymmetric_radon.py tests/test_equianharmonic_threshold_even_barrier.py tests/test_main_chain_docs.py`.
+Residual (ii), E1, `L=1/2`, and the original MO limit remain OPEN.
+
+### Propositions 15.755--15.756: full-cube spikes and D-only Weil are settled reductions
+
+For a dangerous one-edge descent, a shared signed maximizer has conference
+defect `delta=2p` or, at `p>=11`, `delta>=6p-12`.  This is the exact dual
+lattice minimum plus the first odd-shell gap.  Both endpoints genuinely
+occur on the Boolean cube for every prime: the first has affine
+parallel-fibre aliases represented by an integral eigenvector with one
+coordinate `3`, and the second is obtained by flipping a positive triangle
+of a switched regular conference graph.  Do not identify the minimum shell
+with one-bit neighbours, raise the second gap, or treat the shared `A/B`
+hereditary cut intervals as independent.  Those are false shortcuts.
+
+For a finite boundary `D`, the universal identity is
+`delta_tau=2P_tau-4R_tau`.  The Paley spectral estimate gives
+`|P_+-P_-|<=s(p^2-s)/(2p)`, but its resulting typed cap exceeds the trivial
+`m*s` cap by `s((p-1)s-2p)/(2p)>=0` for every even `s>=4`.  Two parallel
+affine lines attain the spectral estimate.  Therefore arbitrary-boundary
+Weil cancellation, ordinary fibre Parseval, and a D-only pair deficit are not
+live large-boundary attacks.  Neither proposition closes residual (ii): the
+new target is a common integral difference-Radon/simple-edge obstruction for
+one `0/1` graph `H`.
+
+### Proposition 15.754: the p13 fifth-shell endpoint is closed
+
+At `p=13,t=4,k=60,u=6`, common row-sum glue forces
+`P_L=4+e_L`, `sum e_L=5`, and `Q_L=4` in every opposite direction. The
+seven excess partitions are exhausted by three exact mechanisms: common
+`U=hM2` and `G=hM4-M2^2` separable-energy bounds for the two- and three-root
+cases; a sign-safe `U/G/J6` form join for the four-root cases; and
+`G` identically zero plus translated-cut/collision energy bounds for the
+five- and six-root cases. In opposite normalization the join must use
+`(-N2,-N4-N2^2,-N6+N2^3)`, and the sixth-moment regression is
+`W6=(1,12,1,1,12,12)`. This is an exhaustive finite aggregate/common-form
+certificate and proved endpoint theorem, not a graph, orbit, cell, support,
+or common-realization census. Together with 15.752--15.753 it closes the
+fifth shell for every prime `p>=13`. It does not close residual (ii), E(1),
+or the limit. Do not reopen `p=13,k=60,u=6`.
 
 ### Proposition 15.753: the p17/p19 fifth-shell endpoints are closed
 
@@ -52,7 +270,7 @@ Together with prior `p=13,17` certificates and branch-A/C arithmetic,
 removes a contiguous subset of the `t>=4` layers; the global residual
 predicate remains False.
 
-### Original-question correction and two-ray gate (Propositions 6.3--6.9)
+### Original-question correction and two-ray gate (Propositions 6.3--6.10a)
 
 The binding plan had silently strengthened MathOverflow 413935 from existence
 of the limit to existence plus identification of its value.  That made the
@@ -63,6 +281,193 @@ that Dini-summable amplification at only multipliers 2 and 3 for
 gaps.  Errors `O(n/(log n)^(1+epsilon))` in `H` already suffice; an all-pairs
 composition theorem and polynomial saving are unnecessary.  Another finite
 Paley residue census does not advance this direct gate.
+
+The 2026-09-02 geometric calculator is one authorized finite probe with a
+changed invariant, not a new census program.  It proves the exact two-half
+envelope `B(A,R)-2m_n=max(W-D)`, the equivalent restricted fourth-phase norm
+of `A+iR`, and the sharp-influence identity
+`m_n=n mu_(n-1)/K_n`.  Its complete `n=5,...,8` orientation certificates
+only illustrate the envelope.  Do not extend them order by order.  Exact
+Clifford anticommutation is parity-impossible and the independent random-skew
+first moment fails even with the ideal zero-internal-energy assignment:
+`sqrt(log(2)/2)=0.588705...` exceeds the optimal upper scale
+`1/2+o(1)`.  Exact one-step bounds
+for `K_n` have nonsummable loss; random padding costs order `n` where a
+Dini-improved order `sqrt(n)` increment is needed; ordinary graph blow-up
+scales as `r^2`; and generic balanced tensor relaxation loses the fixed CHSH
+factor `sqrt(2)`.  Weighted compactness also cannot be transferred back:
+normalized flat forms escape to zero while their influence stays positive,
+and every sign filler has leading-order switching norm.  Do not reopen any of
+these routes without a new hypothesis that removes the stated obstruction.
+The only live uses of this formulation are an `A`-dependent integral cut
+construction, a genuinely sharper comparison theorem internal to the flat
+class, or the separately recorded joint Bernoulli lower-tail LDP.  See
+`NOTE_2026-09-02_ORIGINAL_MO_TWO_HALF_GEOMETRY.md` and
+`NOTE_2026-09-02_SHARP_INFLUENCE_TENSORIZATION_AUDIT.md`.
+
+Proposition 6.5a now identifies the same skew minimax exactly as
+`min_S max_U Phi(A^(F_S(U)))`, with `S` a tournament and `F_S(U)`
+the outward half of the cut.  This is a genuine all-orders reformulation.
+It does not turn global minimality into the needed upper bound: minimality
+only says every such neighbor has norm at least `Phi(A)`.  For a transitive
+tournament the cross term is half the total variation of the prefix-switch
+energy path; the fact that all prefix-switched matrices have the same norm
+controls only its range and is tautological.  Do not rerun ordering or
+orientation censuses, or cite one-edge minimality, without a new theorem
+controlling this simultaneous upper-neighbor quantity.  See
+`NOTE_2026-09-02_ORIENTATION_STRUCTURE_AUDIT.md` and
+`NOTE_2026-09-02_ORDERED_SKEW_PREFIX_HALF_CUT.md`.
+Single-arc local minimization can be vacuous when tied active cuts have no
+common crossing edge, while the fractional relaxation has exact optimum
+`Phi(A)` at `R=0`.  These are recorded in
+`NOTE_2026-09-02_HALF_CUT_LOCAL_MINIMAX_OBSTRUCTION.md`; a proof needs a
+genuinely global integral rounding or active-family theorem.
+
+The relative multiplier itself is now sharp.  Proposition 6.5b proves that
+`min_(A optimal,S) max_U Phi(A^(F_S(U)))/m_n` has dyadic limsup at least
+`sqrt(2)` on every fixed dyadic ray; any fixed smaller multiplier with
+`o(n^(3/2))` error would contract the normalized MO sequence to zero.  Do not
+seek a uniformly easier `c<sqrt(2)` replacement.
+
+The literal phase-compatible self-gluing of the same two halves is also
+closed as a method. For `K=[[1,i],[-i,1]]`, every zero-diagonal Hermitian
+matrix satisfies the exact identity `nu_4(K tensor H)=4nu_4(H)`. The natural
+paired-edge completion perturbs this by at most `2n`, whereas the next
+multiplier-two step permits only `2sqrt(2)` times the old norm. This leaves a
+positive `Theta(n^(3/2))` defect. Do not retry the same rank-one tensor with
+different diagonal paired-edge signs. A genuinely changed bisection premise
+must couple the cross-rectangle flips to the diagonal energy payments. See
+`NOTE_2026-09-03_TWO_HALF_SELF_GLUING_OBSTRUCTION.md`.
+
+The exact cross-rectangle Fourier follow-up proves analytic stability and
+Gram rigidity, and an infinite Gram-perfect family attains the spectral
+maximum. This retires norm-only and Gram-only closure attempts, not the
+multiplier-two gate itself. The exact statewise diagonal-payment inequality
+remains open; see `NOTE_2026-09-03_CROSS_RECTANGLE_FOURIER_STABILITY.md`.
+
+Proposition 6.5c is a separate exact calculator consequence, not a renaming
+of Proposition 6.5a.  The opposite-diagonal block `[[A,C],[C^T,-A]]` has
+norm `max_(x,y)(|Q_A(x)-Q_A(y)|+|x^T C y|)`.  Symmetric cross blocks give
+hybrid slices between two endpoint signings within additive `n`.
+Holomorphic complexification forces the coherent choice `C_0=A`; this is a
+QPSK clique-flip norm, and a global order-four optimizer has
+`L_cl=6>4sqrt(2)`. Proposition 6.5n now supplies the asymptotic obstruction
+that the one finite example did not: an infinite complete-signing family has
+`Phi(A)=Theta(n^(3/2))` and a coherent gap bounded below by
+`1.1657...n^(3/2)`. Do not retry a scale-only holomorphic/QPSK lemma. The
+counterfamily is deliberately far above the best leading constant, so the
+still-live coherent statement is restricted to global minimizers
+`Phi(A)=m_n` (or genuinely near-minimal leading constant). The separate
+noncoherent statement requires an `A`-dependent cross signing and statewise
+internal/bilinear cancellation.  See
+`NOTE_2026-09-02_COMPLEXIFICATION_OPPOSITE_DIAGONAL_AUDIT.md` and
+`NOTE_2026-09-02_COHERENT_CLIQUE_OPTIMAL_SCALE_COUNTERFAMILY.md`.
+
+The general cross signing has now been exhausted algebraically into four
+edge labels.  Its all-directed specialization is exactly the problem of one
+tournament simultaneously `1/sqrt(2)`-paving every signed cut submatrix;
+for `R=A circ S`, its objective satisfies
+`4D_to=max_(x,y)(|Q_A(x)-Q_A(y)|+|x^T R y|)`.  This is not the same
+quantity as the half-cut-flip neighbor norm.  Proposition 6.5d further gives
+an exact nonlinear cover LP on the Boolean bivectors `(x wedge y)/2`.
+Ordinary LP has value zero, covariance is subcritical from `n=16`, and every
+normalized single-row even-moment certificate is blind in the proved linear
+degree range.  Do not reopen those exact relaxations or a scalar face plot;
+Proposition 6.5j also rules out the full degree-four preordering of the exact
+squared-row inequalities from `n=45`, including affine SOS localizers, every
+pairwise row product, and identities among the instantiated Pluecker rows.
+Proposition 6.5l now rules out the full raw degree-`2D` preordering whenever
+`(2D+1)^D[(1+14.3810675004.../(n-1))^D-1]<1`; in particular,
+every fixed raw degree is eventually blind, as are half-degrees through
+`(1-o(1))log(n)/log(log(n))`.  Do not retry this exact encoding merely by
+moving to another fixed raw degree.  The result does not cover quotient
+degree, a different lift, substantially growing raw degree, an
+`A`-dependent nonuniform functional, or direct nonlinear rounding.  See
+`NOTE_2026-09-02_BIVECTOR_ENERGY_LAYER_MINIMAX.md`,
+`NOTE_2026-09-02_BIVECTOR_DEGREE4_PREORDERING_NO_GO.md`, and
+`NOTE_2026-09-02_BIVECTOR_GROWING_DEGREE_PREORDERING_NO_GO.md`.
+
+Proposition 6.5e then proves a nonduplicate lower theorem for the same
+outgoing-half quantity.  Applying signed-regular Gaussian arcsine rounding
+to `[[A,R],[-R,-A]]` gives leading constant `1/(sqrt(2)pi)` plus an exact
+positive correction from `A^2-R^2` and `AR-RA`; dyadic recurrence also
+forces limsup ratio at least `1/sqrt(2)`.  This makes the proposed constant
+sharp.  It does not supply the missing upper orientation.  Its
+approximate-commuting conclusion is informative only near the universal
+`1/pi` floor, not throughout the known range.  See
+`NOTE_2026-09-02_SIGNED_REGULAR_ARCSINE_RIGIDITY.md`.
+
+Proposition 6.5f also retires finite-anchor shielding as a standalone plan.
+A signature-cell tournament simultaneously gives `||Rx||_1<=Ln` on any
+prescribed family, and the critical margin absorbs every
+`L<=0.2636965...sqrt(n)`.  Its global skew norm can remain quadratic, so the
+only live continuation is control of the diffuse non-anchor layer or the
+recorded high-difference vertex-cover condition.  Do not enumerate more
+small extremizer lists.  See
+`NOTE_2026-09-02_FINITE_ANCHOR_SIGNATURE_TOURNAMENT.md`.
+
+Proposition 6.5k strictly advances the arbitrary-anchor capacity without a
+finite census.  Weighted Banaszczyk balancing produces one integral skew
+signing satisfying `||R x^(a)||_1<=B_a` under the exact capacity
+`50 sum rho_a^2/B_a^2<=1`; uniform budgets shield every pair incident with
+an arbitrary positive linear fraction
+`k<((3-2sqrt(2))/(25pi))n` of anchors asymptotically.  This does not retire
+the same-orientation cover gate.  The dangerous graph is defined from the
+resulting `R`, and the theorem does not bound `Gamma(R)`, so selecting a
+cover after the rounding and rerunning is circular.  Do not describe linear
+anchor capacity alone as multiplier-two closure.  See
+`NOTE_2026-09-02_BANASZCZYK_WEIGHTED_ANCHOR_ROUNDING.md`.
+
+Proposition 6.5g makes the near-floor approximate-mate condition
+constructive by exact random-orientation second moments.  It simultaneously
+proves that the strongest generic Frobenius/trace-to-spectral bridge loses a
+factor `pi/2`, even at zero square defect.  Therefore neither more sampling
+of `Sigma`, `tr(K_0^4)`, nor approximate conference spectra can close the
+cube norm without a new statewise input.  See
+`NOTE_2026-09-02_RANDOM_SKEW_MATE_SECOND_MOMENT.md`.
+
+Proposition 6.5m closes the exact commuting-conference specialization.  For
+every symmetric complete signing `A` and skew complete signing `R` of even
+order,
+`(AR-RA)_ii=-2 sum_(j!=i)A_ij R_ij=2 (mod 4)` for every `i`, and therefore
+`AR!=RA` with `||AR-RA||_F^2>=4n`.  No symmetric conference matrix can
+commute with any skew signing, whether or not the latter is conference.
+Orthogonal-design searches must use the word anti-amicable for this ordinary
+commuting relation; amicable symmetric/skew pairs anticommute.  Do not search
+for another exact symmetric-conference/skew-conference commuting family, a
+near-conference EW substitute, or a complex-phase realification.  This does
+not retire the approximate-mate gate: `4n=o(n^4)`, so Proposition 6.5e's
+`Sigma=o(n^4)` condition remains possible.  See
+`NOTE_2026-09-02_CONFERENCE_COMMUTING_MATE_NO_GO.md`.
+
+Proposition 6.5h separately proves that the *exact* independent-random
+first-moment event sum diverges exponentially in the optimal regime.  It
+retires only that union-bound certificate; it does not prove random
+orientations fail.  Its outgoing-half criterion and fourfold quotient are
+recorded in `NOTE_2026-09-02_DIRECTED_HALFCUT_RANDOM_ORIENTATION.md`.
+Proposition 6.5i extracts the equality case of the
+arcsine geometry instead.  Near `alpha=1/pi`, its exact saturation-gap and
+Hamming-variance identities force positive/negative near-extremizers at
+distance `n/2+o(n)`.  A sharp outgoing orientation then forces the balanced
+two-half saddle for `K_0`.  Therefore another argument that tries to delete
+the Hamming-central opposite-energy layer is duplicate in premise and false
+near the lower floor.  The theorem is necessary structure, not an upper
+orientation; see
+`NOTE_2026-09-02_GAUSSIAN_SATURATION_CENTRAL_SADDLE.md`.
+
+Two further all-orders continuations have exact stopping points.  Under a
+uniform vertex order the fixed-event cross variance is
+`(h+D_A(U,y))/3`, and `Phi(A)` controls the hereditary switched cross-degree
+energy only by `D_A<=nPhi(A)`, one half-power too large for the required
+union tail.  Its state average is identical to independent orientations.
+The missing hypothesis must come from global minimizers.  Separately,
+`det(xI-A-iR)` is a one-sided interlacing family, but its expected polynomial
+retains the signed cycles of `A`; the pure-orientation matching polynomial is
+lost, and `A=J-I` on `K_3` disproves the two-sided spectral-radius upgrade.
+See `NOTE_2026-09-02_RANDOM_ORDER_HALF_CUT_VARIANCE_GATE.md` and
+`NOTE_2026-09-02_FIXED_REAL_HERMITIAN_INTERLACING_AUDIT.md`.  Do not repeat
+random-order averaging or Hermitian interlacing without a new theorem that
+removes those specific obstructions.
 
 The same review retracts Section 10's claimed universal `0.282` additive
 doubling floor: it improperly used a lower bound inside a triangle upper
@@ -112,6 +517,37 @@ temperature lower bound fails by a linear margin for every fixed `c>0`.
 The only unexcluded version has `c=c_n->infinity` and would require uniform
 control of its error. Fixed-`c` SOS, character, and shell variants are now
 duplicates of a disproved target.
+
+Proposition 6.10 supplies the correctly optimized critical-pressure route
+without asserting a value.  If
+`s_n(c)=n^(-1)min_A log E cosh(cQ_A/sqrt(n))`, then exactly
+`s_n(c)/c<=alpha_n<=s_n(c)/c+log(2)/c`; convergence on an unbounded set of
+temperatures, or pressure oscillation `o(c)`, would prove the MO limit.
+This is a sufficient gate, not a convergence theorem.  Two standard
+continuations are now closed as methods.  Common-raw-temperature block
+interpolation changes `c` to `c/sqrt(2)` under equal splitting and leaves a
+per-spin defect tending to `c^2/8`.  Ordinary signed cut/graphon convergence
+cannot determine the critical pressure: conference and deterministic
+quasirandom signings both cut-converge to zero, but for every `0<c<1` their
+rates are at most `(1/2)log cosh(c)` and exactly `c^2/4`.  The usual quenched
+Guerra--Toninelli theorem also does not reverse through the outer minimum.
+Do not retry Fekete, ordinary graphon/right convergence, or averaged-disorder
+interpolation without a genuinely new speed-`n^2` optimized lower tail or a
+stronger second-order limit object.  See
+`NOTE_2026-09-02_THERMODYNAMIC_INTERPOLATION_GATE.md`.
+
+Proposition 6.10a rules out a separate proposed lower shortcut.  The optimal
+order-five cycle/diagonal signing has exact energy histogram `{5,6,5}` on
+`{-4,0,4}` and partition function `(5u^2-1)/4`, strictly below the proposed
+conference-product curve `u^(5/2)` for every
+`u=cosh(2c/sqrt(5))>1`.  Do not retry determinant domination, entropy,
+hypercontractivity, or Lee--Yang arguments whose conclusion is that same
+finite-order lower curve.  The valid Gibbs-bias entropy curve recorded in
+the proposition has large-temperature slope only `1/pi`; it is the known
+lower floor in variational form, not progress toward slope `1/2`.  This
+does not retire the optimized minimum-pressure gate of Proposition 6.10 or
+an order-dependent exponential-loss estimate.  See
+`NOTE_2026-09-02_PRESSURE_LOWER_CURVE_NO_GO.md`.
 
 ### Post-audit correction (15.720)
 
@@ -504,9 +940,9 @@ contradicting its exact common-Radon energy `1211+34C>=1211`; the other two
 nonstar baselines are 1251 and 1287.
 This closes exactly `p=17,k=74`. The branch-B `t=3` range formerly left here
 is closed later by 15.751, 15.752 later closes its displayed `p>=23`
-higher band, and 15.753 closes the p17/p19 fifth-shell endpoints. Layers
-beyond that band remain; residual (ii) and the limit stay open, while Type I
-is closed by 15.750.
+higher band, 15.753 closes the p17/p19 fifth-shell endpoints, and 15.754
+closes the remaining p13 endpoint. Layers beyond that band remain; residual
+(ii) and the limit stay open, while Type I is closed by 15.750.
 
 A twenty-seventh semantic check gives Proposition 15.744.  The complete
 `p=13,t=4` residue sieve leaves `u in {0,3,4,6}`.  In `u=3`, the hard
@@ -602,7 +1038,8 @@ seven roots of the binary quartic `M4`, forcing `M4=0`; this contradicts the
 nonzero hard fourth-moment alphabet.  Hence `p=13,t=4,u=4` is closed and the
 exact `p=13,k=60` remainder is `u=6`.  This is an exhaustive finite
 aggregate certificate and proved branch theorem, not a global residual-(ii)
-close.
+close. Proposition 15.754 later closes that last fifth-shell residue by
+common-form certificates.
 
 The Bartoli--Storme ``unique-trisecant ceiling'' previously recorded after
 15.729 is **RETRACTED**. Under the corollary's other hypotheses, including
@@ -656,11 +1093,11 @@ name until this file is checked first.
 
 - Propositions 15.1--15.82 are written directly in `solution.md` and related
   early modules.
-- There are 668 source-backed proposition modules from 15.83 through 15.753.
+- There are 676 source-backed proposition modules from 15.83 through 15.761.
 - The labels 15.537, 15.583, and 15.584 have no proposition module.  They are
   unassigned labels, not unreviewed propositions; later source headers mention
   those numbers only as historical range/state markers.
-- Therefore every assigned proposition through 15.753 was included in this
+- Therefore every assigned proposition through 15.761 was included in this
   audit.  The grouped ledger below is by shared mathematical route rather than
   a 736-row restatement of the assigned propositions.
 
@@ -671,10 +1108,10 @@ The public theorem is gated consistently by the corrected global
 currently `False`. The historical bounded `True` is available only through
 `e1_bounded_residual_split_closed()` and is not a global theorem predicate.
 
-| unit | exact live content | status after audit of 15.753 |
+| unit | exact live content | status after audit of 15.761 |
 |---|---|---|
 | required bi-tight levels 2 and 3 | 15.720 degree congruence using 15.272/15.207 | **TRUE** |
-| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — 15.734--15.737 close the first three shells; 15.751 closes `k=4p+6` for every `p>=13`; 15.752 closes `k=4p+8` for every `p>=23` and its explicit contiguous band; 15.753 closes the p17/p19 fifth-shell endpoints; 15.744--15.749 close `u=0,3,4` at `p=13,k=60`. The exact remainder includes critical `p=5,7`, `p=11,k>=50`, `p=13,k=60,u=6` and later p13 layers, layers beyond 15.752's band, and positive `p=7,z=7`. The global predicate stays false. |
+| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — 15.734--15.737 close the first three shells; 15.751 closes `k=4p+6` for every `p>=13`; 15.752 closes `k=4p+8` for every `p>=23` and its explicit contiguous band; 15.753 closes the p17/p19 fifth-shell endpoints; 15.744--15.749 close `u=0,3,4` at `p=13,k=60`; and 15.754 closes the remaining `u=6` endpoint. Thus the fifth shell is closed for every `p>=13`. The exact remainder includes critical `p=5,7`, `p=11,k>=50`, later p13 layers, layers beyond 15.752's band, and positive `p=7,z=7`. The global predicate stays false. |
 | Type I | the multi-level `3A+B>0` bad case | **TRUE** (15.750) — isolated-chart rigidity and parity halving close every prime `p>=11`; exact integer Farkas identities close `p=5,7` |
 | Lemma D | every good-line triple and its Fejer two-plane amplitudes | **TRUE** (15.276) |
 
@@ -733,8 +1170,24 @@ top-level front.
 | **15.749** | all 74 translated-cut inequalities, exact coordinate duals, and the `Q=4` moment intersection | **EXHAUSTIVE FINITE AGGREGATE CERTIFICATE AND PROVED BRANCH THEOREM.** The exact box contains 522 rows and 492 moment triples. Its 12-point intersection with each survivor evaluation alphabet has zero fourth moment, so five `Q=4` roots plus two literal roots force the nonzero hard quartic to vanish. This closes exactly `p=13,t=4,u=4`. |
 | **15.750** | isolated-chart rigidity, parity halving, and exact small-prime Farkas bases | **PROVED ALL-PRIME THEOREM.** Closes multi-level Type I for every prime `p>=5`. |
 | **15.751** | half-mean cube height theorem, corrected transposition influences, slice-to-cube symmetrization, and fixed four-bit catalog | **PROVED INFINITE-FAMILY THEOREM WITH FIXED EXHAUSTIVE CERTIFICATE.** Closes generic branch B for `p>=29` and hence `k=4p+6` for every prime `p>=13`. The global residual predicate stays false. |
-| **15.752** | scaled-mass `p+9` exclusion, paired-cube height, fixed four-bit influence catalog, and isolated-chart surplus | **PROVED INFINITE-FAMILY THEOREM WITH FIXED EXHAUSTIVE CERTIFICATE.** Closes `k=4p+8` for every prime `p>=23` and the stated contiguous higher-shell band. Proposition 15.753 later closes the `p=17,19` endpoints; `p=13` and layers beyond the band remain open. The global predicate stays false. |
-| **15.753** | endpoint hard-residue exhaustiveness, common row normalization, all translated cuts, and sign-correct quartic/Parseval gaps | **EXHAUSTIVE FINITE AGGREGATE CERTIFICATE AND PROVED ENDPOINT THEOREM.** Closes `p=17,k=76` and `p=19,k=84`; together with 15.752 the fifth shell is closed for every `p>=17`. The global residual predicate stays false. |
+| **15.752** | scaled-mass `p+9` exclusion, paired-cube height, fixed four-bit influence catalog, and isolated-chart surplus | **PROVED INFINITE-FAMILY THEOREM WITH FIXED EXHAUSTIVE CERTIFICATE.** Closes `k=4p+8` for every prime `p>=23` and the stated contiguous higher-shell band. Proposition 15.753 later closes the `p=17,19` endpoints and 15.754 closes the `p=13` endpoint; layers beyond the band remain open. The global predicate stays false. |
+| **15.753** | endpoint hard-residue exhaustiveness, common row normalization, all translated cuts, and sign-correct quartic/Parseval gaps | **EXHAUSTIVE FINITE AGGREGATE CERTIFICATE AND PROVED ENDPOINT THEOREM.** Closes `p=17,k=76` and `p=19,k=84`; together with 15.752 the fifth shell is closed for every `p>=17`, and 15.754 later adds the `p=13` endpoint. The global residual predicate stays false. |
+| **15.754** | p13 u6 common normalization, seven excess partitions, exact `U/G` and sign-safe `U/G/J6` joins, and collision-aware quartic row energy | **EXHAUSTIVE FINITE AGGREGATE/COMMON-FORM CERTIFICATE AND PROVED ENDPOINT THEOREM.** Closes `p=13,k=60,u=6`; together with 15.752--15.753 the fifth shell is closed for every prime `p>=13`. This is not a graph, orbit, cell, support, or common-realization census. Later p13 layers and the global residual predicate remain open. |
+| **15.755** | conference projection of dangerous shared maximizers and sharp Boolean endpoint families | **PROVED REDUCTION AND METHOD BARRIER.** Defect is `2p` or at least `6p-12` for `p>=11`; both endpoints occur, so neither shell can be discarded. No residual close. |
+| **15.756** | exact typed boundary identity and arbitrary-boundary Paley character cap | **PROVED METHOD BARRIER.** The cap is nonimproving for every even boundary size at least four and is sharp on two parallel lines. A common-graph theorem remains necessary. |
+| **15.757** | boundary/cycle decomposition and projective Fourier separation for the binary edge--Radon map | **PROVED IMAGE THEOREM AND METHOD BARRIER.** Boundary and total parity are complete; the recorded `p=1 mod 4` compact aggregate targets have binary lifts but no proved integral simple lift. |
+| **15.758** | sharp fixed-offset coefficient cancellation and balanced local targets in both prime classes | **PROVED STRUCTURAL THEOREM AND OPEN REDUCTION.** The exact coefficient minimum depends on `|3a-b|`, and both infinite rays survive scalar Parseval from `r>=7`; no common graph is constructed. |
+| **15.759** | full projective homogeneous moment contractions and exact bidegree block ranks | **PROVED COMPLETE CHARACTERISTIC-p HIERARCHY.** The extra codimension is `S(p)` and the rows exhaust the mod-p linear obstruction. Higher compact-atom moments remain unchecked. |
+| **15.760** | primitive ordinary lattice, pure-difference/midpoint Smith forms, and snake-lemma extension | **PROVED INTEGRAL IMAGE THEOREM AND OPEN 0/1 REDUCTION.** `A/R(E)=(Z/pZ)^S(p)`; the moment rows are integer-image sufficient, but the signed Boolean-box intersection is open. |
+| **15.761** | complete real edge--Radon Gram spectrum and Moore--Penrose norm | **PROVED FULL-SPECTRUM THEOREM AND STRONGER METHOD BARRIER.** Both compact rays pass the full-midpoint norm test with strict room for all `r>=7`; no simple graph follows. |
+| **all-prime odd--Radon gate** | support/line isolation for `b` compact plus `r-1` all-equal branch-C rows under zero odd global forms | **PROVED STRUCTURAL REDUCTION.** For every prime `p=4r+3`, `r>=7`, the chain is central when `3b<=r+2`; balanced branch C is covered through `delta=(2r+2)floor((r+2)/3)`. Nonzero forms, unbalanced allocations, and even moments remain open. |
+| **p31 local gate** | arbitrary compact plus six all-equal atoms, all odd rows and joint degree six/eight with zero global forms | **EXHAUSTIVE LOCAL CERTIFICATE AND BALANCED COROLLARY.** All 450 scaling orbits are covered (449 noncentered `UNSAT`, one independently excluded centered orbit, zero `SAT`), excluding every balanced `69<=t<=99` zero-form profile because each contains that row. Unbalanced/nonzero-form cases and the Boolean box remain open. |
+| **seven-channel dominance** | exact degree-six/eight Jacobian minors for four compact and four all-equal atoms | **PROVED ALGEBRAIC METHOD BARRIER.** Both maps are dominant over the algebraic closure in characteristic at least 11, so no universal seven-channel identity can close the gate. Extension-valued points are not `F_p` or Boolean lifts. |
+| **full-balanced line/cubic geometry** | exact maximal-line mass/parity/capacity, Couvreur peeling, boundary residue, and smooth-cubic double-cover bounds | **PROVED SUPPORT EXCLUSIONS.** No support of size at most `3h-6` contains `h` collinear points for the full balanced `p=4r+3`, `r>=7`, range; every boundary cubic is excluded for `p=4r+3>=31`. The conic alternative remains. |
+| **tangent-conic dichotomy** | high-intersection conic peeling, triangle-tangent classification, constant dual weight, and alignment scoring | **PROVED REDUCTION AND EXACT COUNTEREXAMPLE.** Every nonstar survivor forces `q^3=1`, `k^2=-3`, `p=7 mod 12`; the p31 witness kills every odd channel but has the displayed nonzero degree-six/eight syndromes. |
+| **p31 equianharmonic zero-six/eight fiber** | deficit-three MITM/exact cover over six all-equal and seven compact atoms | **EXHAUSTIVE FINITE CERTIFICATE.** 230,314,710 maximal completions and 17,076 edge hits produce zero moment hits, proving exactly the `p=31,b=7,k=11` constant-conic fiber `UNSAT`. No larger implication is claimed. |
+| **signed Boolean defect** | exact integral quadratic defect and complete-Graver Voronoi criterion | **PROVED EXACT NONLINEAR REDUCTION.** A signed Boolean lift exists iff `beta_R(y)=0`; a complete Graver basis decides the alternative, but neither has been evaluated for the compact target. |
+| **ridge-kernel quotient** | Type-P/Type-K circuits, one-step p-saturation, and quotient dependency space | **PROVED EXACT KERNEL REDUCTION.** `ker_Z R/K_ridge=(Z/pZ)^nu_p` and the dependency basis parametrizes the full fiber. The ridge lattice is proper and neither a complete Graver basis nor a Boolean lift. |
 
 ## Exact duplicated run
 
@@ -896,17 +1349,19 @@ Before spending mesh/GPU time:
 4. do not reopen `k in {4p,4p+2,4p+4}` for `p>=11`, `k=4p+6` for
    `p>=13`, the Proposition 15.752 band (including `k=4p+8` for `p>=23`),
    `p=13,k=58`,
-   `p=17,k=74`, or the `p=13,k=60` residues `u=0,3,4`: Proposition 15.742 closes the p13 t3 row by the exact
+   `p=17,k=74`, or any `p=13,k=60` residue: Proposition 15.742 closes the p13 t3 row by the exact
    six-dilate/common-energy contradiction, and Proposition 15.743 closes the
    p17 row by the 698-vector/common-Radon certificate. Propositions
    15.744--15.745 close the two p13 t4 residues after, respectively,
    rebuilding the H61 mass-14 premise and auditing the collision-one
    transverse signs, and 15.749 closes `u=4` by its exact translated-cut
-   moment intersection, and 15.753 closes `p=17,k=76` and `p=19,k=84`.
+   moment intersection, 15.753 closes `p=17,k=76` and `p=19,k=84`, and
+   15.754 closes the remaining p13 residue `u=6` by its exact common-form
+   certificate.
    The live residual ranges are critical `p=5,7`, `p=11,k>=50`,
-   `p=13,k=60,u=6` and later p13 layers, and layers beyond 15.752's band.
-   Propositions 15.751--15.753 close the former generic `t=3` range, the
-   displayed higher band, and both small fifth-shell endpoints; no further
+   later p13 layers, and layers beyond 15.752's band.
+   Propositions 15.751--15.754 close the former generic `t=3` range, the
+   displayed higher band, and all fifth-shell endpoints for `p>=13`; no further
    cell, graph, slice, or prime census
    there is authorized. Retain both 15.723
    floor-plus-two exceptions in any independent profile DP. Do not reopen the
@@ -916,8 +1371,34 @@ Before spending mesh/GPU time:
    common-graph energy identity, and 15.742 proves the resulting integral
    row system empty. Propositions 15.746--15.749 complete the sharp mass-10
    classification and close both `u=4` branches. Do not rerun them or couple
-   the 336 moment survivors to graphs. The next finite p13 residue is `u=6`,
-   not a broad census or a rerun of `u=0,3,4`;
+   the 336 moment survivors to graphs. Do not reopen `u=6` with a graph,
+   orbit, cell, support, or common-realization census: 15.754 exhausts its
+   seven excess partitions using the common `U/G` and sign-safe `U/G/J6`
+   forms plus the high-root translated-cut/collision ledger. Preserve the
+   opposite key `(-N2,-N4-N2^2,-N6+N2^3)` and the regression
+   `W6=(1,12,1,1,12,12)`. On the generic compact edge--Radon front, do not
+   retry binary compatibility, atom-count `l1`, scalar/full-target Parseval,
+   another linear/Smith congruence, or Euclidean least norm: 15.757--15.761
+   settle those exact methods. The all-prime odd--Radon theorem already forces
+   central signed edge chains for `b` compact atoms when `3b<=r+2` and odd
+   forms vanish; its balanced band is exact and does not cover arbitrary
+   allocations. At `p=31`, do not rerun the now-complete arbitrary-compact
+   plus six-AE local zero-form fiber: all 450 scaling orbits are certified, and
+   its balanced consequence is exactly `69<=t<=99`.
+   Do not reopen one/two maximal-line configurations or boundary cubics in the
+   full balanced `p=4r+3` range: the former are excluded for `r>=7`, and every
+   boundary cubic is excluded for `p>=31`. The remaining conic survivor is
+   already reduced to `q^3=1`, `k^2=-3`, `p=7 mod 12`; at
+   `p=31,b=7,k=11` its odd-zero edge witness is known and its simultaneous
+   zero-six/eight fiber is exact `UNSAT`. Do not confuse those two statements
+   or rerun the MITM certificate. The signed defect and ridge quotient are
+   exact reductions only: no complete Graver basis, defect-zero theorem, or
+   Boolean lift has been proved.
+   Do not seek a universal degree-six/eight polynomial identity: the exact
+   seven-channel atom maps are dominant over the algebraic closure, while
+   their extension-valued points are not `F_p` lifts. The live sequence is
+   actual coordinated nonzero even forms over `F_p`, then the signed
+   Boolean-box intersection;
 5. search tracked files, untracked scripts, `/tmp` artifact names and hashes,
    git history, GitHub, MathOverflow, literature notes, and OEIS when number
    patterns are involved;

@@ -1,0 +1,279 @@
+{
+  "W6_regression": [
+    1,
+    12,
+    1,
+    1,
+    12,
+    12
+  ],
+  "algorithm": {
+    "G_quotient_scalars": 13,
+    "J6_quotient_coefficient_vectors": 2197,
+    "U_coefficient_vectors": 2197,
+    "coverage": {
+      "UGJ6_coefficient_triples_before_row_pruning": 218320284,
+      "UGJ6_pairs_after_all_seven_opposite_rows": 336,
+      "U_coefficients_passing_exact_root_QR": 7644,
+      "hard_excess_assignment_checks": 1008,
+      "hard_sign_root_sets_checked": 70
+    },
+    "fixed_hard_sign_root_sets_if_exhaustive": 70,
+    "name": "explicit finite-field coefficient evaluation join plus exact energy bitsets"
+  },
+  "all_targets_excluded": true,
+  "closed_collision_strata": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "collision_minimum": 1,
+  "collision_rows": [
+    {
+      "all_form_coefficients_exhausted": true,
+      "collision": 1,
+      "hard_locally_compatible_form_assignments": 0,
+      "joint_UGJ6_compatible": false,
+      "maximum_separable_nonexact_energy": -1,
+      "reachable_energy_maximum": null,
+      "reachable_energy_minimum": null,
+      "reachable_energy_value_count": 0,
+      "reachable_energy_values_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "target_nonexact_energy": 315,
+      "witness": null
+    },
+    {
+      "all_form_coefficients_exhausted": true,
+      "collision": 2,
+      "hard_locally_compatible_form_assignments": 0,
+      "joint_UGJ6_compatible": false,
+      "maximum_separable_nonexact_energy": -1,
+      "reachable_energy_maximum": null,
+      "reachable_energy_minimum": null,
+      "reachable_energy_value_count": 0,
+      "reachable_energy_values_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "target_nonexact_energy": 341,
+      "witness": null
+    },
+    {
+      "all_form_coefficients_exhausted": true,
+      "collision": 3,
+      "hard_locally_compatible_form_assignments": 0,
+      "joint_UGJ6_compatible": false,
+      "maximum_separable_nonexact_energy": -1,
+      "reachable_energy_maximum": null,
+      "reachable_energy_minimum": null,
+      "reachable_energy_value_count": 0,
+      "reachable_energy_values_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "target_nonexact_energy": 367,
+      "witness": null
+    },
+    {
+      "all_form_coefficients_exhausted": true,
+      "collision": 4,
+      "hard_locally_compatible_form_assignments": 0,
+      "joint_UGJ6_compatible": false,
+      "maximum_separable_nonexact_energy": -1,
+      "reachable_energy_maximum": null,
+      "reachable_energy_minimum": null,
+      "reachable_energy_value_count": 0,
+      "reachable_energy_values_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "target_nonexact_energy": 393,
+      "witness": null
+    }
+  ],
+  "common_forms": {
+    "G": "h*M4-M2^2=R4*c, binary quartic",
+    "J6": "h*M6-(h*M2)^3=R4*Q2, binary sextic",
+    "U": "h*M2, binary quadratic",
+    "hard_key": "(U,G,J6)=(N2,N4-N2^2,N6-N2^3)",
+    "opposite_key": "(U,G,J6)=(-N2,-N4-N2^2,-N6+N2^3)"
+  },
+  "direction_signs": [
+    -1,
+    1,
+    -1,
+    -1,
+    1,
+    1,
+    -1,
+    -1,
+    1,
+    1,
+    -1,
+    -1,
+    1,
+    1
+  ],
+  "exact_XNOR_root_count": 4,
+  "field": "F_13",
+  "hard_sign_classes_checked": [
+    -1,
+    1
+  ],
+  "imported_helper_sha256": {
+    "scripts/p13_p5_literal_interpolation.py": "31ba186632780d62b3352c214b1112a6beafa48b8a2571882da29e94faf618e5",
+    "src/e1_gmin_m4_prop15740.py": "7a2cfbd12a7057971a0cbaaf523d16f65cff989a47d594a79f641062d02439c3"
+  },
+  "moment_weights": {
+    "W2": [
+      1,
+      4,
+      9,
+      3,
+      12,
+      10
+    ],
+    "W4": [
+      1,
+      3,
+      3,
+      9,
+      1,
+      9
+    ],
+    "W6": [
+      1,
+      12,
+      1,
+      1,
+      12,
+      12
+    ]
+  },
+  "output_path": "evidence/e1_gmin_m4_prop15754_four_root_311.json",
+  "partition": [
+    3,
+    1,
+    1
+  ],
+  "projective_points": [
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      1,
+      7
+    ],
+    [
+      1,
+      8
+    ],
+    [
+      1,
+      9
+    ],
+    [
+      1,
+      10
+    ],
+    [
+      1,
+      11
+    ],
+    [
+      1,
+      12
+    ],
+    [
+      0,
+      1
+    ]
+  ],
+  "proved": true,
+  "remaining_collision_strata": [],
+  "repository_HEAD": "cf32d2137d9b40ce631f21bcdf8b2cb6e72d0c81",
+  "result_status": "exact finite necessary-moment certificate",
+  "row_catalogs": {
+    "H1": {
+      "maximum_energy": 28,
+      "minimum_energy": 0,
+      "row_count": 372,
+      "row_sha256": "93ff5fb9059e2cb83242b5716b06d5664e62577baf3d88a5ff4de678d0022a89",
+      "table_sha256": "7f758aa8fc9f341e97c1c653cfe5822a9a00f7e073d6716e8c213b67f7e25128",
+      "table_tuple_count": 366
+    },
+    "H2": {
+      "maximum_energy": 63,
+      "minimum_energy": 1,
+      "row_count": 3078,
+      "row_sha256": "a5ddf5eceff6cbeea822a9fb4a1f3a63aa3519a75615f8a50c4fb5fca7270c4d",
+      "table_sha256": "01b06567a085dd53fd05e5953e1621e29f7baab89308dc598c6f7282fcd9033c",
+      "table_tuple_count": 2974
+    },
+    "H3_D0": {
+      "maximum_energy": 140,
+      "minimum_energy": 2,
+      "row_count": 13773,
+      "row_sha256": "9f919262fc6ee4d9861e1f9b689b84870b26b77be410d9f5cd7d4fae6776b3be",
+      "table_sha256": "0858ca982e65a5d9ce5e1920c284b80529176c6ff7b93a715bb72c609451b555",
+      "table_tuple_count": 12195
+    },
+    "H3_D1": {
+      "maximum_energy": 144,
+      "minimum_energy": 2,
+      "row_count": 13809,
+      "row_sha256": "5a4cb3fb3ee3adfa27856a198e62a61325ad91ce6f121caa998f8ae842b0011b",
+      "table_sha256": "01477cf479321b03abb063cde40bda2b6c0a9b3a7105eac1f782723a59da18e9",
+      "table_tuple_count": 12231
+    },
+    "H3_D2": {
+      "maximum_energy": 144,
+      "minimum_energy": 2,
+      "row_count": 13809,
+      "row_sha256": "5a4cb3fb3ee3adfa27856a198e62a61325ad91ce6f121caa998f8ae842b0011b",
+      "table_sha256": "01477cf479321b03abb063cde40bda2b6c0a9b3a7105eac1f782723a59da18e9",
+      "table_tuple_count": 12231
+    },
+    "H3_D3": {
+      "maximum_energy": 144,
+      "minimum_energy": 2,
+      "row_count": 13809,
+      "row_sha256": "5a4cb3fb3ee3adfa27856a198e62a61325ad91ce6f121caa998f8ae842b0011b",
+      "table_sha256": "01477cf479321b03abb063cde40bda2b6c0a9b3a7105eac1f782723a59da18e9",
+      "table_tuple_count": 12231
+    },
+    "O": {
+      "maximum_energy": 31,
+      "minimum_energy": 15,
+      "row_count": 242,
+      "row_sha256": "7beae84e08778e0231541ba8e815bfb5590086d3b6d5083f07993b1cf60f48ad",
+      "table_sha256": "35b0d2d5ddf3b7426c65e79882f81041953a4a035991736db41ec03ecf1dbae0",
+      "table_tuple_count": 242
+    }
+  },
+  "scope": "Necessary common U/G/J6 form and exact row-energy compatibility only. A survivor is not a graph realization; exhaustive INFEASIBLE fixed models exclude the stated stratum.",
+  "script_path": "scripts/p13_u6_four_root_ugj.py",
+  "script_sha256": "71754b7e9e0f5df38819620f5f90903614152ca4a1516e544fa6fd86f4c0aef1",
+  "title": "p13 t4 u6 four-root joint U/G/J6 exact necessary-moment checker",
+  "translated_cut_catalog": {
+    "count": 74,
+    "sha256": "3ce7d5040bcb713ddaf4edb7dfa1290582fc4015cec11e34e54d2a251d8bef15"
+  }
+}
