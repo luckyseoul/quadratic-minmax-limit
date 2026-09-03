@@ -29,23 +29,71 @@ m_n
 \frac12.
 \end{equation}
 Moreover \(\limsup_n\alpha_n=\lim_n a_n\) where \(a_n=\sup_{k\ge1}\alpha_{kn}\).
-(The lower bound is the dual-Gaussian arcsine argument of Prop.~5.2, valid for **every** Seidel matrix; the classical Bohnenblust–Hille floor \(2^{-5/2}\) is retained as Prop.~5.1.)
+(The lower bound is the dual-Gaussian arcsine argument of Prop.~5.2, valid
+for **every** Seidel matrix; Proposition 6.5e later refines its finite-order
+right side to
+\(n(n-1)\arcsin(1/\sqrt{n-1})/\pi\) plus a nonnegative square correction.
+The classical Bohnenblust–Hille floor \(2^{-5/2}\) is retained as Prop.~5.1.)
 
 **Direct convergence reduction — not yet a solution.**  The original problem
 asks whether \(\alpha_n\) converges; it does not require identifying the
-limit.  Proposition 6.3 proves that convergence follows from just two
+limit.  E(1) and both direct amplification rays are not complete.
+Proposition 6.3 proves that convergence follows from just two
 Dini-summable amplification estimates, at multipliers \(2\) and \(3\), for
 \(H(n)=m_n^{2/3}\); polynomial saving is unnecessary.  Propositions
 6.4--6.5 reduce Hadamard doubling to the equal-endpoint mixed-state diamond,
-and Proposition 6.6 proves that diamond off one explicit Hamming-central/
+and Proposition 6.5a identifies it exactly with a simultaneous directed
+half-cut neighbor problem for an oriented optimal signing. Proposition 6.5c
+gives a distinct exact opposite-diagonal diamond with an arbitrary cross
+signing; its four-label form isolates a simultaneous outgoing-half-cut
+paving problem. Proposition 6.5d gives the exact nonlinear bivector cover
+and proves the affine relaxation trivial, the displayed elliptope
+subcritical, and a precisely normalized family of single-row even-moment
+certificates blind through degree (o(n)).
+Proposition 6.5e proves the outgoing-half constant is sharp by a
+signed-regular arcsine bound with a positive square correction,
+and Proposition 6.5f shields every fixed or low-signature anchor family,
+while Proposition 6.5g constructs the resulting approximate mate near the
+lower floor and proves its generic spectral bridge too weak. Proposition
+6.5h gives the exact independent-random-orientation criterion for the
+outgoing-half lift and proves that its exact bad-event first moment diverges
+exponentially at the optimal-signing scale; this does not rule out random
+orientations analyzed through event dependence. Proposition 6.5i shows that
+arcsine saturation forces Hamming-central opposite near-extremizers and the
+calculator's balanced saddle, while Proposition 6.5j rules out the full
+degree-four preordering only in the exact squared-row encoding. Proposition
+6.5k gives an exact Banaszczyk rounding that shields an arbitrary linear-size
+anchor family, but its same-orientation vertex-cover condition remains open.
+Proposition 6.5l extends the squared-row obstruction to every fixed raw
+polynomial degree, and through half-degree
+\((1-o(1))\log n/\log\log n\); it is a proof-system barrier, not an
+orientation. Proposition 6.5m proves that a symmetric conference signing
+cannot commute with any real skew signing: every diagonal entry of the
+commutator is (2\pmod4).  This kills the exact commuting-conference mate,
+but its (4n) Frobenius lower bound does not obstruct the approximate mate
+required by Proposition 6.5e. Proposition 6.5n gives an infinite family of
+complete signings with \(\Phi(A)=\Theta(n^{3/2})\) for which the coherent
+clique-flip bound fails by a fixed multiple of \(n^{3/2}\).  Thus the bare
+optimal-order scale cannot prove coherent control; the still-open
+global-minimizer statement would have to use \(\Phi(A)=m_n\) essentially.
+Proposition 6.6
+proves that diamond off one explicit Hamming-central/
 joint-energy residue. Proposition 6.7 gives an equal-endpoint tetrahedral
 tripling frame and two exact spectral shields, but leaves their complement
 open. Proposition 6.8 instead composes independently optimal orders \(n\)
 and \(2n\): a bi-balanced Hadamard cross block proves the exact \(1:2\)
 diamond outside a pair-central/high-joint-energy residue. Proposition 6.9
 proves that the formerly proposed fixed-\(c\) free-energy route is false for
-every fixed \(c>0\), including \(c=3\). Neither required amplification ray
-is complete.
+every fixed \(c>0\), including \(c=3\). Proposition 6.10 gives the corrected
+critical-pressure gate: convergence of its optimized pressure on any
+unbounded temperature set would imply convergence of \(\alpha_n\), but
+common-temperature block interpolation has a nonvanishing critical-scale
+defect and ordinary graphon convergence does not determine that pressure.
+Proposition 6.10a disproves the proposed conference-product lower curve at
+every positive temperature already at order five.  Its unconditional
+entropy replacement has zero-temperature slope only \(1/\pi\), so it
+repackages the known lower floor rather than closing the problem.
+Neither required amplification ray is complete.
 
 **Stronger value-specific target — not a theorem.** Sandwich + Paley
 denseness (\(\rho=1\) on \(n=p^2+1\)) + E(1) on that family would give
@@ -60,15 +108,54 @@ even \(k\ge4p\). Proposition 15.720 closes the required bi-tight levels 2
 and 3, and Proposition 15.750 closes multi-level Type I for every prime.
 Thus the spectral floor, global QVAR, principal R1, and the historical
 `3A+B` Type-I mechanism are no longer acceptance gates. Propositions
-15.734--15.749 close the first three all-prime shells and several later
+15.734--15.754 close the first three all-prime shells and several later
 rows; Proposition 15.751 closes the fourth shell `k=4p+6` for every
 `p>=13`. Proposition 15.752 then closes `k=4p+8` for every prime `p>=23`
 and, without a prime or configuration census, a contiguous band through
 `t=(p-9)/2` for `p=1 mod 4` and `t=(p-7)/2` for `p=3 mod 4`, where
 `k=4p+2t`. Proposition 15.753 closes the two exceptional fifth-shell
 endpoints `p=17,k=76` and `p=19,k=84` by exact aggregate-row certificates.
-Thus the fifth shell is closed for every prime `p>=17`. The exact live
-residual is recorded in `STATUS.md`.
+Proposition 15.754 closes the remaining endpoint `p=13,k=60,u=6` by an
+exact aggregate/common-form certificate. Thus the fifth shell is closed for
+every prime `p>=13`. The exact live residual is recorded in `STATUS.md`.
+Proposition 15.755 further reduces any hypothetical dangerous descent on the
+full Boolean cube to a sharp defect dichotomy `delta=2p` or
+`delta>=6p-12` for `p>=11`.  Neither branch is empty: affine line aliases and
+positive-triangle flips attain the two endpoints for every prime. Proposition
+15.756 proves that arbitrary-boundary Weil cancellation cannot repair this:
+its character cap is weaker than the trivial cap for every even boundary of
+size at least four, and two parallel lines attain equality.  These are
+global reductions and duplicate-work barriers, not a proof of residual (ii).
+The live structural target is an integral common-edge/difference-Radon
+theorem for one `0/1` graph `H`.
+Proposition 15.757 computes the exact binary edge--Radon image and proves
+that the recorded `p=1 mod 4` compact aggregate family passes it. Proposition
+15.758 gives sharp
+coefficient cancellation and two infinite local survivor rays. Proposition
+15.759 finds the complete characteristic-\(p\) moment hierarchy, and
+Proposition 15.760 proves that those moments cut out the unrestricted
+integral image exactly, with elementary cokernel
+\((\mathbf Z/p\mathbf Z)^{S(p)}\). Proposition 15.761 computes the full
+real spectrum and proves that even the resulting Moore--Penrose test leaves
+both compact rays alive with strict room. The ordered live structural target
+is now narrower. For every prime \(p=4r+3\), \(r\ge7\), zero odd global forms
+force a row with \(b\) arbitrary compact atoms and \(r-1\) all-equal atoms to
+have a central signed edge chain whenever \(3b\le r+2\). This covers the
+deterministic balanced branch-C allocation through
+\(\delta=(2r+2)\lfloor(r+2)/3\rfloor\), but not unbalanced allocations. At
+\(p=31\), an audited exact certificate for the one-compact/six-all-equal row
+then excludes zero odd/degree-six/degree-eight global forms throughout the
+balanced band \(69\le t\le99\). Separate exact
+seven-channel Jacobian minors make the unrestricted degree-six/eight compact
+and all-equal atom maps dominant over the algebraic closure, so no universal
+polynomial identity or purely algebraic projective root-count contradiction
+can finish the gate. The associated common forms and labels are
+extension-valued, not admissible \(\mathbf F_p\) labels or coefficients. One
+must still decide unbalanced zero-form allocations and nonzero even global
+forms over \(\mathbf F_p\), coordinated across directions, and then whether
+the resulting integral affine fibre meets
+\(\prod_e\{0,\tau_e\}\). None of these follow-ups constructs a common simple
+graph or closes residual (ii).
 Lemma D existence / 2-plane is complete in `A3_PROOF.md`
 and 15.276. Aut-Schur is **false**. Gsum unused.
 
@@ -81,7 +168,8 @@ matrix of order \(n=p^2+1\) (over \(\mathbb F_{p^2}\)) admits a halfspace boolea
 **If** \(m_n\ge\Phi(C)-2\) (E(1)) this would force \(L=\tfrac12\). E(1) is open.
 
 **What is complete.** Dual-Gaussian lower bound; denseness; the two-ray
-conditional convergence theorem; \(\rho=1\) on \(n=p^2+1\);
+conditional convergence theorem; the exact directed-half-cut reformulation
+of the multiplier-two diamond; \(\rho=1\) on \(n=p^2+1\);
 15.720 degree-congruence exclusion of required bi-tight levels 2 and 3;
 15.750 all-prime multi-level Type-I exclusion;
 15.751 fourth-shell exclusion for every prime \(p\ge13\);
@@ -89,6 +177,19 @@ conditional convergence theorem; \(\rho=1\) on \(n=p^2+1\);
 contiguous higher-shell band;
 15.753 exact endpoint exclusion at \((p,k)=(17,76),(19,84)\), hence
 fifth-shell exclusion for every prime \(p\ge17\);
+15.754 exact endpoint exclusion at \((p,k,u)=(13,60,6)\), hence
+fifth-shell exclusion for every prime \(p\ge13\);
+15.755 full-cube dangerous-spike dichotomy and its sharp affine/triangle
+counterfamilies; 15.756 arbitrary-boundary character-cap no-go;
+15.757 exact binary edge--Radon image; 15.758 sharp coefficient cancellation
+and two infinite local survivor rays; 15.759 complete characteristic-\(p\)
+moment hierarchy; 15.760 exact integral image and open signed-Boolean-box
+reduction; 15.761 full real edge--Radon spectrum and least-norm barrier; the
+all-prime branch-C bounded-compact zero-odd-form centrality theorem and its
+balanced initial band; the audited \(p=31\) one-row certificate and resulting
+balanced \(69\le t\le99\) zero-form no-go; and the
+seven-channel algebraic-dominance barrier, which supplies no \(\mathbf F_p\)
+or Boolean lift;
 residual (ii) affine + even \(k\le 4p-2\) (15.179/236/237), **not**
 even \(k\ge4p\); residual (i) two-level Type I via 15.272
 \(k=1\cup k=3\Rightarrow G_+\succ0\Rightarrow\ker=\mathrm{sc}\) (15.207)
@@ -101,7 +202,14 @@ remaining `z=7` pointed systems and identify their projected high-catalog
 semigroups through grade six, but exclude no source boundary.  All 56 actual
 `z=7` line boundaries in two orbits remain open.
 
-The intended Type I two-level close is 15.272 (\(k=1\cup k=3\) span \(\Rightarrow G_+\succ0\)), not Gsum and not Aut-Schur. **Status (2026-09-01; through Propositions 6.3--6.9 and 15.753).** The direct multiplier-2 and multiplier-3 estimates are open: Proposition 6.6 narrows multiplier two to (6.20); Proposition 6.7 narrows direct tripling to an unshielded tetrahedral diamond; and Proposition 6.8 gives a different \(1:2\) reduction with residual (6.42)--(6.43). None closes its ray. Proposition 6.9 kills every fixed-temperature version of the signed-Eulerian free-energy target, so \(c=3\) is no longer a live fallback. The optional Paley \(L=1/2\) route also remains open at residual (ii), although Proposition 15.752 now closes an infinite contiguous band of its higher shells and Proposition 15.753 closes the two exceptional fifth-shell endpoints. Details: `evidence/share/denseness_path_package.md` § Caveats.
+The intended Type I two-level close is 15.272 (\(k=1\cup k=3\) span \(\Rightarrow G_+\succ0\)), not Gsum and not Aut-Schur. **Status (2026-09-03; through Propositions 6.3--6.10a, audited record 15.761, and the post-15.761 support, conic, and Boolean reductions; the full 15.755--15.756 proof sections are not reproduced here).** The direct multiplier-2 and multiplier-3 estimates are open: Proposition 6.6 narrows multiplier two to (6.20); Proposition 6.7 narrows direct tripling to an unshielded tetrahedral diamond; and Proposition 6.8 gives a different \(1:2\) reduction with residual (6.42)--(6.43). None closes its ray. Proposition 6.9 kills every fixed-temperature version of the signed-Eulerian free-energy target, so \(c=3\) is no longer a live fallback. Proposition 6.10 gives an exact optimized critical-pressure sufficient gate but proves that common-raw-temperature interpolation and ordinary graphon convergence do not establish it. Proposition 6.10a additionally disproves the proposed conference-product lower curve at every positive temperature; its universal entropy fallback has only the known \(1/\pi\) limiting slope. The natural rank-one phase self-gluing of the same two halves is also excluded by the exact amplification \(\nu_4(K\otimes H)=4\nu_4(H)\), versus the required \(2\sqrt2\). The optional Paley \(L=1/2\) route remains open at residual (ii), although Proposition 15.752 closes an infinite contiguous band of its higher shells, Proposition 15.753 closes the \(p=17,19\) fifth-shell endpoints, Proposition 15.754 closes the remaining \(p=13\) endpoint, and Propositions 15.755--15.761 plus the audited post-15.761 reductions leave unbalanced zero-form allocations, coordinated nonzero even forms, and the coupled symmetric pair-total box. The antisymmetric Boolean half of the balanced zero-odd branch is explicitly solved by localized Mobius trades; no common graph follows. Details: `evidence/share/denseness_path_package.md` § Caveats.
+
+The separate cross-rectangle Fourier calculation proves exact analytic
+stability and Gram rigidity and exhibits an infinite Gram-perfect family at
+the spectral maximum. It is a norm-only and Gram-only no-go, not a proof of
+the multiplier-two estimate: the exact statewise diagonal-payment inequality
+remains open. See
+`evidence/NOTE_2026-09-03_CROSS_RECTANGLE_FOURIER_STABILITY.md`.
 
 > **Reader note.** Soft-close of \(L=\tfrac12\) via scheme-min Gsum was
 > **retracted** 2026-08-06. Aut-Schur remains false. Historical “\(L\) OPEN”
@@ -111,7 +219,8 @@ The intended Type I two-level close is 15.272 (\(k=1\cup k=3\) span \(\Rightarro
 > listing generic branch-B \(t=3\) as open are superseded by Proposition
 > 15.751, and statements listing every \(p\ge17,t\ge4\) layer as open are
 > superseded on Proposition 15.752's explicit band and, at the two remaining
-> fifth-shell endpoints, by Proposition 15.753.
+> fifth-shell endpoints, by Proposition 15.753. Statements that retain
+> \(p=13,k=60,u=6\) are as-of records superseded by Proposition 15.754.
 
 ---
 
@@ -290,6 +399,47 @@ where \(\rho(D_n)\) is the Hamming covering radius of \(D_n\) in \(\{\pm1\}^m\).
 \(m_n/2\) is the covering-radius deficit of the antipodal cut code of \(K_n\). This is the coding
 formulation used by Esmaeili–Zaghian (2009); it does not by itself settle existence of
 \(\lim\alpha_n\).
+
+**Proposition 5.3 (sharp equimodular \(L^1\)-influence form).**  Let
+\(\mu_k=\mathbb E|\varepsilon_1+\cdots+\varepsilon_k|\), and define
+\[
+K_n=\max_{A\in\mathcal S_n}
+ \operatorname{Inf}^{(1)}\!\left({Q_A\over\Phi(A)}\right),
+\qquad
+\operatorname{Inf}^{(1)}(f)=
+ \sum_{i=1}^n\mathbb E_x
+ \left|{f(x)-f(x^{\oplus i})\over2}\right|.
+\]
+Then
+\begin{equation}
+\label{eq:sharp-influence}
+m_n={n\mu_{n-1}\over K_n}.
+\end{equation}
+Consequently, \(m_n/n^{3/2}\) converges if and only if \(K_n\) converges,
+and the two limits, when they exist, obey
+\[
+ \lim_{n\to\infty}{m_n\over n^{3/2}}
+ ={\sqrt{2/\pi}\over\lim_{n\to\infty}K_n}.
+\]
+
+*Proof.*  The discrete derivative of an equimodular quadratic form is
+\[
+ {Q_A(x)-Q_A(x^{\oplus i})\over2}
+ =x_i\sum_{j\ne i}a_{ij}x_j.
+\]
+Under uniform \(x\), its absolute value has mean \(\mu_{n-1}\), independently
+of both \(i\) and \(A\).  Hence
+\(\operatorname{Inf}^{(1)}(Q_A)=n\mu_{n-1}\), and maximizing the normalized
+influence is exactly the same as minimizing \(\Phi(A)\).  This proves
+\eqref{eq:sharp-influence}.  Finally
+\(\mu_{n-1}/\sqrt n\to\sqrt{2/\pi}\), while the already-proved positive lower
+and upper bounds on \(m_n/n^{3/2}\) keep \(K_n\) bounded above and away from
+zero.  The equivalence of convergence follows. \(\square\)
+
+**Remark.** General bounded-degree \(L^1\)-influence theorems give
+dimension-free bounds for \(K_n\), but no known result compares \(K_n\) at
+different dimensions.  Proposition 5.3 is an exact replacement target for
+the original question, not a proof of the limit.
 
 ---
 
@@ -535,6 +685,398 @@ is automatic.  Finally (6.13), (6.12), and (6.7) give
 \]
 which is the required Dini-summable doubling estimate. \(\square\)
 
+**Proposition 6.5a (exact directed-half-cut reformulation).**  In the setting
+of Proposition 6.5 put \(S=A\circ R\), so that \(S\) is a tournament sign
+matrix, with \(S_{uv}=1\) interpreted as the arc \(u\to v\).  For
+\(U\subseteq[n]\), let
+\[
+ F_S(U)=\{\{u,v\}:u\in U, v\notin U, S_{uv}=1\},
+\]
+and write \(A^F\) for the symmetric signing obtained by reversing precisely
+the edges in \(F\).  Then
+\[
+ \boxed{K(A,R)=\max_{U\subseteq[n]}\Phi\bigl(A^{F_S(U)}\bigr).} \tag{6.14a}
+\]
+Consequently
+\[
+ {1\over2}\min_R\max_{x,y}
+ \bigl(|Q_A(x)+Q_A(y)|+|x^TRy|\bigr)
+ =\min_{\substack{S\ {\rm tournament}}}\max_U
+   \Phi\bigl(A^{F_S(U)}\bigr). \tag{6.14b}
+\]
+
+*Proof.*  Fix \(x,y\), put \(U=\{i:x_i=-y_i\}\), and split the
+\(A_{ij}y_iy_j\)-energy into \(I,F,G\), respectively on non-cut edges,
+arcs from \(U\) to \(U^c\), and arcs from \(U^c\) to \(U\).  Directly,
+\[
+ Q_A(y)=I+F+G,\qquad Q_A(x)=I-F-G,\qquad x^TRy=2(G-F).
+\]
+Thus
+\[
+ {1\over2}\bigl(|Q_A(x)+Q_A(y)|+|x^TRy|\bigr)
+ =|I|+|G-F|
+ =\max\{|Q_{A^{F_S(U)}}(y)|,|Q_{A^{G_S(U)}}(y)|\}.
+\]
+Switching all vertices of \(U\) takes \(A^{F_S(U)}\) to
+\(A^{G_S(U)}\), so the two signings have the same \(\Phi\)-norm.
+Maximizing over \(y,U\) proves (6.14a), and skew signings \(R\) correspond
+bijectively to tournaments \(S=A\circ R\), proving (6.14b). \(\square\)
+
+The same calculation isolates exactly which plotted pairs are dangerous.
+Put
+\[
+ \epsilon(x,y)=M-\max\{|Q_A(x)|,|Q_A(y)|\}.
+\]
+Since \(|a+b|+|a-b|=2\max(|a|,|b|)\),
+\[
+ 2M-|Q_A(x)+Q_A(y)|
+ =|Q_A(x)-Q_A(y)|+2\epsilon(x,y).              \tag{6.14a1}
+\]
+For the directed cut energies \(F,G\) in the proof,
+\[
+ |x^TRy|-|Q_A(x)-Q_A(y)|
+ =\begin{cases}
+ 4\min(|F|,|G|),&FG<0,\\
+ -4\min(|F|,|G|),&FG\ge0.
+ \end{cases}                                    \tag{6.14a2}
+\]
+Thus same-sign directed halves are harmless.  Up to the required Dini
+error, the entire multiplier-two condition on the opposite-sign pairs is
+exactly
+\[
+ 2\min(|F|,|G|)\le(\sqrt2-1)M+\epsilon(x,y).     \tag{6.14a3}
+\]
+This is the sign-sensitive boundary seen by the two-half calculator; it
+retains both payments that are lost in an independent norm estimate for
+\(R\).
+
+There is a useful energy-layer version.  Write
+\(e(z)=M-|Q_A(z)|\).  The exact free payment in (6.14a1) is
+\[
+ |Q_A(x)-Q_A(y)|+2\min(e(x),e(y))
+ =\begin{cases}
+ e(x)+e(y),&Q_A(x)Q_A(y)\ge0,\\
+ 2M-|e(x)-e(y)|,&Q_A(x)Q_A(y)\le0.
+ \end{cases}                                      \tag{6.14a4}
+\]
+(The two expressions agree when one energy is zero.)  If
+\(t=(\sqrt2-1)M\), the zero-error target is therefore exactly
+\[
+ |x^TRy|\le2t+e(x)+e(y)                            \tag{6.14a5}
+\]
+on every same-sign energy pair, together with the second line of
+(6.14a4) on opposite-sign pairs.  Since every skew signing obeys
+\(\max_{x,y}|x^TRy|\ge n\mathbb E|S_{n-1}|\), any skew-extremizing pair
+whose two energies have the same sign must have
+\[
+ e(x)+e(y)\ge n\mathbb E|S_{n-1}|-2t.
+\]
+Using the known \(M\le(1/2+o(1))n^{3/2}\), the right side is at least
+\[
+ \bigl(\sqrt{2/\pi}-(\sqrt2-1)-o(1)\bigr)n^{3/2}
+ =\bigl(0.383671\ldots-o(1)\bigr)n^{3/2}.          \tag{6.14a6}
+\]
+Thus a successful orientation must push all of its largest bilinear
+witnesses away from simultaneous same-sign near-maximizer layers.  This is
+a joint energy-layer problem, not another global bound for \(R\).
+
+This turns the multiplier-two step into an exact simultaneous-neighbor
+problem: orient the edges so that reversing the outward-oriented half of
+every cut keeps the norm below
+\(\sqrt2\Phi(A)+o_{\rm Dini}(n^{3/2})\).  If \(A\) is globally optimal,
+minimality gives only the reverse inequality
+\(\Phi(A^{F_S(U)})\ge\Phi(A)\).  Hence (6.14a) exposes a sharper structural
+target but does not itself close the ray.
+
+**Proposition 6.5b (sharpness of the directed-half-cut multiplier).**  Put
+\[
+ T_n=\min_{\Phi(A)=m_n}\ \min_{S\ {\rm tournament}}\
+       \max_{U\subseteq[n]}\Phi\bigl(A^{F_S(U)}\bigr).
+\]
+Then, for every fixed \(n_0\ge2\),
+\[
+ \limsup_{j\to\infty}{T_{2^j n_0}\over m_{2^j n_0}}\ge\sqrt2. \tag{6.14c}
+\]
+In particular, no fixed \(c<\sqrt2\) and errors
+\(r_n=o(n^{3/2})\) can give \(T_n\le c m_n+r_n\) on every sufficiently
+large order (or even on one complete eventual dyadic tail).
+
+*Proof.*  If such a tail existed, Proposition 6.5's order-\(2n\) lift and
+Proposition 6.5a would give
+\[
+ m_{2n}\le2T_n+n,
+ \qquad
+ \alpha_{2n}\le{c\over\sqrt2}\alpha_n
+       +{r_n\over\sqrt2 n^{3/2}}+{1\over2^{3/2}\sqrt n}.
+\]
+The last two terms tend to zero and \(c/\sqrt2<1\), so iteration forces
+\(\alpha_{2^j n_0}\to0\).  This contradicts Proposition 5.2's bound
+\(\alpha_n\ge\sqrt{1-1/n}/\pi\). \(\square\)
+
+Thus the factor \(\sqrt2\) is load-bearing.  Proposition 6.5a is not made
+easier by seeking a uniformly smaller constant; the exact critical line,
+with a sufficiently controlled error, is the one that must be reached.
+
+**Proposition 6.5c (opposite-diagonal diamond and hybrid-slice complexification).**
+Let \(A\) be an
+order-\(n\) signing and let \(C\in\{\pm1\}^{n\times n}\) be arbitrary.  Then
+the order-\(2n\) signing
+\[
+ {\cal K}(A,C)=\begin{pmatrix}A&C\\ C^T&-A\end{pmatrix}
+\]
+satisfies the exact diamond identity
+\[
+ \boxed{\Phi({\cal K}(A,C))=
+ \max_{x,y\in\{\pm1\}^n}
+ \bigl(|Q_A(x)-Q_A(y)|+|x^TCy|\bigr).}            \tag{6.14d}
+\]
+Consequently the multiplier-two ray would follow if every optimal \(A\),
+with \(M=\Phi(A)\), admitted a cross signing \(C\) for which the right side
+of (6.14d) were at most
+\(2\sqrt2M+n^{3/2}\Omega(n)\), with a vanishing dyadic Dini tail.
+
+There is an exact four-label form for every cross block, not only symmetric
+ones.  For \(T\subseteq[n]\), put \(r_i=-1\) on \(T\) and \(r_i=1\)
+off \(T\), let \(D_T=\operatorname{diag}(r)\), and define the zero-diagonal
+symmetric weighted matrix \(G_T=G_T(A,C)\) by
+\[
+ (G_T)_{ij}=A_{ij}{1-r_ir_j\over2}
+             +{C_{ij}r_j+C_{ji}r_i\over2},\qquad i<j,
+ \quad
+ h_T={1\over2}\sum_i C_{ii}r_i.                 \tag{6.14d1}
+\]
+Then
+\[
+ \boxed{\Phi({\cal K}(A,C))
+ =2\max_{T,s}|Q_{G_T}(s)+h_T|.}                  \tag{6.14d2}
+\]
+If \(A_\delta(T)\) retains the \(A\)-edges crossing \((T,T^c)\) and is
+zero elsewhere, complementing \(T\) negates the displacement
+\(G_T-A_\delta(T)\) and \(h_T\), while fixing \(A_\delta(T)\).  Hence the
+equivalent midpoint--displacement identity is
+\[
+ {1\over2}\Phi({\cal K}(A,C))
+ =\max_{T,s}\left(
+ |Q_{A_\delta(T)}(s)|+{1\over2}|s^TCD_Ts|\right). \tag{6.14d3}
+\]
+
+Each unordered edge has exactly four possible cross labels.  If
+\(C_{ij}=C_{ji}=\varepsilon\), its weight in \(G_T\) is \(\varepsilon\)
+when both endpoints lie outside \(T\), \(-\varepsilon\) when both lie
+inside, and \(A_{ij}\) when it crosses.  If
+\(C_{ij}=-C_{ji}\), orient \(u\to v\) when \(C_{uv}=A_{uv}\): its weight
+is \(2A_{uv}\) exactly when that arc exits \(T\), and zero otherwise.
+Consequently \(G_T\) is an ordinary signing for some (equivalently every)
+\(T\) exactly when the off-diagonal part of \(C\) is symmetric.  Allowing
+the other two labels therefore creates genuine \(0,\pm2\) weighted slices,
+so global minimality of \(A\) cannot be applied to them as though they were
+signings.
+
+The all-directed specialization is nevertheless a clean surviving target.
+Let \(S\) be a tournament, put \(R=A\circ S\), choose any diagonal signing
+\(D\), and define
+\[
+ D_{\to}(A,S)=\max_{T,s}
+ \left|\sum_{\substack{u\in T,\ v\notin T\\u\to v}}
+ A_{uv}s_us_v\right|.
+\]
+The preceding edge table gives
+\[
+ \boxed{
+ 4D_{\to}(A,S)=\max_{x,y}
+ \bigl(|Q_A(x)-Q_A(y)|+|x^TRy|\bigr),
+ }                                                          \tag{6.14d4}
+\]
+where the corresponding opposite block has zero entries on its matching.
+Adding any diagonal signing \(D\) makes it a complete signing and gives
+\[
+ \left|\Phi({\cal K}(A,R+D))-4D_{\to}(A,S)\right|\le n.     \tag{6.14d5}
+\]
+Therefore an orientation satisfying
+\[
+ D_{\to}(A,S)\le {M\over\sqrt2}+o_{\rm Dini}(n^{3/2})       \tag{6.14d6}
+\]
+would close the multiplier-two step.  This asks for one signed outgoing
+half of every cut, rather than the full half-cut-neighbor norm in
+Proposition 6.5a.
+
+Equivalently, for each \(T\) let \(B_T(S)\) be the
+\(|T|\)-by-\(|T^c|\) matrix whose \((u,v)\) entry is \(A_{uv}\) when
+\(u\to v\), and zero otherwise.  Then
+\[
+ D_{\to}(A,S)=\max_T\|B_T(S)\|_{\infty\to1},
+ \qquad
+ \|A_{T,T^c}\|_{\infty\to1}\le M.              \tag{6.14d6a}
+\]
+The second inequality follows by completing arbitrary independent row and
+column signs to the two cube states that differ exactly on \(T\), then using
+the endpoint diamond.  Thus (6.14d6) is a simultaneous one-sided
+\(1/\sqrt2\)-paving theorem for every signed cut submatrix, with all pavings
+required to come from one tournament.  For a fixed cut and a fixed state,
+its two directed energies can always be balanced to
+\(\lceil|F+G|/2\rceil\le\lceil M/2\rceil\); global consistency over every
+cut and state is the entire obstruction.
+
+For a necessary best-response test, choose \(X_R(y)\) so that
+\(X_R(y)^TRy=\|Ry\|_1\).  The exact identity (6.14d4) would require
+\[
+ |Q_A(X_R(y))-Q_A(y)|+\|Ry\|_1
+ \le2\sqrt2M+o_{\rm Dini}(n^{3/2})              \tag{6.14d7}
+\]
+for every \(y\).  Since \(\mathbb E\|RY\|_1=n\mathbb E|S_{n-1}|\),
+averaging forces
+\[
+ \mathbb E|Q_A(X_R(Y))-Q_A(Y)|
+ \le2\sqrt2M-n\mathbb E|S_{n-1}|+o_{\rm Dini}(n^{3/2}).    \tag{6.14d8}
+\]
+This is a concrete joint energy--skew gate for any proposed orientation.
+
+No proof may budget the displacement in (6.14d3) independently: exactly
+\[
+ \max_{T,s}{1\over2}|s^TCD_Ts|
+ ={1\over2}\|C\|_{\infty\to1}
+ \ge {n\over2}\mathbb E|S_n|
+ =\left({1\over\sqrt{2\pi}}+o(1)\right)n^{3/2}.   \tag{6.14d9}
+\]
+At the known scale this already exceeds the free
+\((\sqrt2-1)M\) budget.  Statewise cancellation with the midpoint in
+(6.14d3), not two separate estimates, is again load-bearing.
+
+There is also an exact symmetric subclass.  Let \(C_0\) be a symmetric
+zero-diagonal signing, let \(D=\operatorname{diag}(d_1,\ldots,d_n)\) with
+\(d_i\in\{\pm1\}\), and, for \(T\subseteq[n]\), define \(B_T=B_T(A,C_0)\)
+by
+\[
+ (B_T)_{ij}=\begin{cases}
+ (C_0)_{ij},&i,j\notin T,\\
+ A_{ij},&|\{i,j\}\cap T|=1,\\
+ -(C_0)_{ij},&i,j\in T.
+ \end{cases}                                                \tag{6.14e}
+\]
+Then
+\[
+ \boxed{\left|\Phi({\cal K}(A,C_0+D))
+       -2\max_T\Phi(B_T(A,C_0))\right|\le n.}                \tag{6.14f}
+\]
+In the coherent case \(C_0=A\), put
+\(L_{\rm cl}(A)=\max_T\Phi(A^{K_T})\), where \(A^{K_T}\) reverses
+the clique on \(T\).  One has
+\[
+ 2L_{\rm cl}(A)-n\le\Phi({\cal K}(A,A+D))
+ \le2L_{\rm cl}(A)+n,                                      \tag{6.14g}
+\]
+and, for \(\widetilde Q_A(z)=\sum_{i<j}A_{ij}z_iz_j\),
+\[
+ L_{\rm cl}(A)=\max_{z\in\{\pm1,\pm i\}^n}
+ \bigl(|\operatorname{Re}\widetilde Q_A(z)|
+      +|\operatorname{Im}\widetilde Q_A(z)|\bigr).          \tag{6.14h}
+\]
+The tempting zero-loss coherent bound
+\(L_{\rm cl}(A)\le\sqrt2\Phi(A)\) is false even for a global optimizer:
+at order four, the signing having only the edge \(\{2,3\}\) negative has
+\(\Phi(A)=m_4=4\), whereas reversing that clique produces the all-positive
+signing and hence \(L_{\rm cl}(A)=6>4\sqrt2\).
+
+*Proof.*  The energy of \({\cal K}(A,C)\) at \((x,y)\) is
+\(Q_A(x)-Q_A(y)+x^TCy\).  Replacing \(x\) by \(-x\) fixes the internal
+terms and negates the cross term; maximizing over this pair and using
+\(\max(|a+b|,|a-b|)=|a|+|b|\) proves (6.14d).
+
+Write every pair uniquely as \(x=s\), \(y=D_Ts\).  Collecting the
+coefficient of \(s_is_j\) and the diagonal cross terms gives
+\[
+ Q_{{\cal K}(A,C)}(s,D_Ts)=2\bigl(Q_{G_T}(s)+h_T\bigr),
+\]
+which proves (6.14d2).  Replacing \(T\) by \(T^c\) fixes the first term
+of \(G_T\) and negates the second term and \(h_T\).  Pairing these two
+values proves (6.14d3).  The four-label table follows by substituting the
+four ordered sign pairs in (6.14d1).  For \(C=R+D\), it gives
+\(Q_{G_T}(s)=2\sum_{u\in T,v\notin T,u\to v}A_{uv}s_us_v\),
+while \(h_T=0\) for \(C=R\); (6.14d2) and the diamond identity prove
+(6.14d4).  Adding \(D\) changes every energy by at most \(n\), proving
+(6.14d5).  Finally, as \(T,s\) vary,
+\((s,D_Ts)\) ranges over all Boolean pairs, and averaging \(\|Cy\|_1\)
+over \(y\) proves (6.14d9).
+
+For (6.14f), write every two-vertex-cloud state uniquely as
+\((x_i,y_i)=s_i(1,(-1)^{t_i})\) and put \(T=\{i:t_i=1\}\).  Direct
+expansion gives
+\[
+ Q_{{\cal K}(A,C_0+D)}(x,y)
+ =2Q_{B_T(A,C_0)}(s)+\sum_i d_i(-1)^{t_i}.          \tag{6.14i}
+\]
+The last term has magnitude at most \(n\); maximizing proves (6.14f), and
+\(C_0=A\) gives (6.14g).  Finally write \(z_i=s_i\) off \(T\) and
+\(z_i=is_i\) on \(T\).  If \(O,J,X\) are the energies off \(T\), on
+\(T\), and across the cut, respectively, then
+\(\widetilde Q_A(z)=O-J+iX\), while
+\(Q_{A^{K_T}}(s)=O-J+X\).  Flipping all spins on \(T\) reverses \(X\)
+and proves (6.14h).  For the displayed order-four optimizer, Walsh
+orthogonality gives \({\bf E}Q_A^2=6\); since all values are even, a norm
+below four is impossible, while direct evaluation gives norm four.  The
+clique flip gives norm six. \(\square\)
+
+Thus ordinary holomorphic complexification is not the missing lemma.  The
+Cauchy--Riemann equations force its off-diagonal cross block to be \(C_0=A\)
+(the diagonal contributes only the \(O(n)\) term above), and that coherent
+choice has just failed.  The genuinely new surviving target in (6.14d) is a
+noncoherent, \(A\)-dependent cross signing whose large bilinear values are
+correlated with a deficit in \(|Q_A(x)-Q_A(y)|\).  This target is distinct
+from the skew/directed-half-cut target of Proposition 6.5a and remains open.
+
+The full two-variable calculus on a fixed coherent phase face is explicit.
+Fix \(T\), a sign state \(s\), and write \(O,J,X\) for its energies on
+\(T^c\), on \(T\), and across the cut.  Multilinearity shows that
+\[
+ p(r,t)=Or^2+Jt^2+Xrt
+\]
+has \(|p(r,t)|\le M\) throughout \([-1,1]^2\).  Conversely this square
+bound holds if and only if
+\[
+\begin{aligned}
+ |O+J|+|X|&\le M,\\
+ |O-X^2/(4J)|&\le M
+   &&\text{when }J\ne0\text{ and }|X|\le2|J|,\\
+ |J-X^2/(4O)|&\le M
+   &&\text{when }O\ne0\text{ and }|X|\le2|O|.
+\end{aligned}                                               \tag{6.14j0}
+\]
+Indeed homogeneity moves every nonzero point to the boundary of the square;
+on its four sides the only candidates are the endpoints and the displayed
+quadratic vertices.  In particular, if the two corner states have opposite
+extremal energies, so that
+\(p(1,1)=M\) and \(p(1,-1)=-M\), then
+\[
+ O+J=0,\qquad X=M,\qquad |O|=|J|\le M/2.          \tag{6.14j1}
+\]
+
+Restriction to the unit circle gives the convenient consequence
+\[
+ \boxed{|O+J|+\sqrt{(O-J)^2+X^2}\le2M.}            \tag{6.14j}
+\]
+If \(k=|T|\), completing either fixed partial state and pairing a completion
+with its negative gives the stronger marginal bounds
+\[
+ |O|\le M-\lfloor k/2\rfloor,
+ \qquad
+ |J|\le M-\lfloor(n-k)/2\rfloor.                  \tag{6.14k}
+\]
+Indeed every complete signing on \(r\) vertices has one-sided maximum at
+least \(\lfloor r/2\rfloor\): expose the vertices sequentially and choose
+each new spin to make its incident increment nonnegative; every odd-length
+partial row contributes at least one.  Applying this also to the negative
+signing and absorbing the cross-linear term by pairing opposite completions
+proves (6.14k).
+
+Neither statement supplies a leading-constant gain.  The scalar polynomial
+\(M(r^2-t^2)\) is bounded by \(M\) on the square and attains equality in
+(6.14j0)--(6.14j), while (6.14k) improves its two axial coefficients by only
+\(O(n)=o(n^{3/2})\).  Thus scalar face calculus alone cannot prove
+\(|O-J|+|X|\le\sqrt2M+o(n^{3/2})\); a successful argument must couple
+different faces or use additional global-minimizer structure.  In the
+directed split \(X=F+G\), even the complete criterion (6.14j0) contains no
+information about the cancellation coordinate \(F-G\).
+
 The skew term cannot be budgeted independently of the two quadratic
 energies.  For every skew signing,
 \[
@@ -567,6 +1109,1024 @@ whose negative coordinates are \(\{r,r+2\}\), form an invertible circulant
 matrix \(V\).
 Exact (6.16) would force \(VRV^T=0\), hence \(R=0\), impossible for a skew
 signing.  The exact diamond, not the disk, is the live target.
+
+**Proposition 6.5d (bivector cover gate and low-degree no-go).**  Identify
+the upper-triangular entries of a skew signing with
+\(r\in\{\pm1\}^N\), \(N=\binom n2\), and put
+\[
+ b_{xy,ij}={x_iy_j-x_jy_i\over2},\qquad
+ d_{xy}=M-{|Q_A(x)+Q_A(y)|\over2}.
+\]
+Then
+\[
+ \boxed{K(A,R)-M
+ =\max_{x,y}\bigl(|\langle b_{xy},r\rangle|-d_{xy}\bigr).} \tag{6.16a}
+\]
+For \(t\ge0\), let
+\[
+ H_{(x,y),r}=\mathbf1\{|\langle b_{xy},r\rangle|>d_{xy}+t\}.
+\]
+The exact nonlinear covering value is
+\[
+ \eta_t=\max_{\lambda\in\Delta(x,y)}\min_r\mathbb E_\lambda H
+       =\min_{p\in\Delta(r)}\max_{x,y}\mathbb E_pH.        \tag{6.16b}
+\]
+It vanishes if and only if an orientation with \(K(A,R)\le M+t\)
+exists.  If it is positive, \(\lambda\) is precisely a fractional cover of
+all tournaments by bad state pairs.
+
+The rows have the rigid Grassmann geometry
+\[
+ b_{xy}={x\wedge y\over2},\quad
+ \|b_{xy}\|_2^2=d_H(x,y)(n-d_H(x,y)),                       \tag{6.16c}
+\]
+and satisfy all Pluecker relations.  Nevertheless the following natural
+affine, covariance, and normalized single-row moment relaxations are
+subcritical.  Already
+\[
+ \min_{r\in[-1,1]^N}\max_{x,y}
+ \bigl(|\langle b_{xy},r\rangle|-d_{xy}\bigr)=0:            \tag{6.16c1}
+\]
+the upper bound is \(r=0\), and a diagonal pair \((z,z)\) at an
+\(A\)-maximizer forces the reverse bound.  At
+\(t=(\sqrt2-1)M\), put \(w_{xy}=t+d_{xy}\).  Then
+\[
+ \min_{\substack{X\succeq0\\\operatorname{diag}X=1}}
+ \max_{x,y}{b_{xy}^TXb_{xy}\over w_{xy}^2}
+ \le{\pi^2\over4(\sqrt2-1)^2(n-1)}<1qquad(n\ge16),         \tag{6.16d}
+\]
+and no witness distribution can have
+\[
+ \inf_r\mathbb E_\lambda
+ \left({|\langle b,r\rangle|\over w}\right)^{2p}>1         \tag{6.16e}
+\]
+whenever
+\[
+ p<{2(\sqrt2-1)^2\over\pi^2}(n-1)=0.0347679\ldots(n-1).    \tag{6.16f}
+\]
+Moreover
+\[
+ \eta_t\le2\exp\left(-{2(\sqrt2-1)^2\over\pi^2}(n-1)\right), \tag{6.16g}
+\]
+whereas failure implies only \(\eta_t\ge4^{-n}\).  Thus the affine
+relaxation, the displayed elliptope, and normalized certificates using one
+even moment of each row are rigorously subcritical.  This does not exclude a
+different fixed-degree SOS encoding or higher-degree cross-row products.
+Proposition 6.5j below rules out the full degree-four preordering in the
+natural squared-row encoding, even with pairwise row products and every
+identity among the instantiated Pluecker rows.  A successful continuation
+must strengthen those relaxations, use the \(A\)-dependent widths at higher
+degree, or round (6.16b) directly.
+
+*Proof.*  One has
+\(\langle b_{xy},r\rangle=x^TRy/2\), which proves (6.16a).
+Equation (6.16b) is finite minimax duality for the zero--one matrix \(H\);
+zero value forces every support atom on the right to be a successful
+orientation.  Expanding the exterior product proves (6.16c).  Proposition
+5.2 gives
+\(t\ge(\sqrt2-1)n\sqrt{n-1}/\pi\), while
+\(\|b_{xy}\|_2^2\le n^2/4\); the feasible covariance \(X=I\) proves
+(6.16d).  Khintchine's inequality bounds the left moment before averaging
+over \(\lambda\) by
+\[
+ (2p-1)!!\left({\pi^2\over4(\sqrt2-1)^2(n-1)}\right)^p.
+\]
+Using \((2p-1)!!\le(2p)^p\) proves (6.16e)--(6.16f).
+Hoeffding proves (6.16g) using the uniform random orientation.  If every
+orientation has a bad pair, the uniform distribution on the \(4^n\)
+ordered pairs gives \(\eta_t\ge4^{-n}\). \(\square\)
+
+**Proposition 6.5e (signed-regular arcsine rigidity at the outgoing-half
+threshold).**  Let \(H\) be a symmetric zero-diagonal
+\(\{0,\pm1\}\)-matrix of order \(N\), with \(d\)-regular nonzero support,
+\(d\ge2\).  Then
+\[
+ \Phi(H)\ge {Nd\over\pi}\arcsin{1\over\sqrt d}
+ +{1\over4\pi d^{5/2}(1-1/d)^{3/2}}
+   \sum_{\substack{i<j\\H_{ij}\ne0}}(H^2)_{ij}^2.          \tag{6.16h}
+\]
+In particular, let \(S\) be a tournament, \(R=A\circ S\), and put
+\[
+ K_0=\begin{pmatrix}A&R\\-R&-A\end{pmatrix},\qquad d=2n-2.
+\]
+Then \(K_0\) is supported on \(K_{2n}\) minus a perfect matching,
+\(\Phi(K_0)=4D_{\to}(A,S)\), and
+\[
+ \boxed{
+ D_{\to}(A,S)\ge
+ {n(n-1)\over\pi}\arcsin{1\over\sqrt{2n-2}}
+ +{\Sigma(A,R)\over16\pi d^{5/2}(1-1/d)^{3/2}},}           \tag{6.16i}
+\]
+where
+\[
+ \Sigma(A,R)=\sum_{i\ne j}
+ \left((A^2-R^2)_{ij}^2+(AR-RA)_{ij}^2\right).             \tag{6.16j}
+\]
+The leading term in (6.16i) is
+\((1/(\sqrt2\pi)+o(1))n^{3/2}\), exactly the target
+\(M/\sqrt2\) when \(M\sim n^{3/2}/\pi\).  More quantitatively, if
+\(M=\alpha_n n^{3/2}\) and an orientation has
+\(D_{\to}\le M/\sqrt2+\epsilon_n n^{3/2}\), then
+\[
+ {\Sigma(A,R)\over n^4}
+ \le64\pi(\alpha_n-1/\pi)
+   +16\pi2^{5/2}\epsilon_n+o(1).                           \tag{6.16k}
+\]
+Thus success along a subsequence with \(\alpha_n\to1/\pi\) and
+\(\epsilon_n\to0\) forces \(\Sigma(A,R)=o(n^4)\): the skew mate must
+approximately commute with \(A\) and have the same square off the diagonal.
+Finally, if
+\[
+ U_n=\min_{\Phi(A)=m_n}\min_{S\ {\rm tournament}}D_{\to}(A,S),
+\]
+then every fixed \(n_0\ge2\) satisfies
+\[
+ \limsup_{j\to\infty}{U_{2^jn_0}\over m_{2^jn_0}}
+ \ge{1\over\sqrt2}.                                       \tag{6.16k1}
+\]
+Thus the \(1/\sqrt2\) simultaneous-paving constant is forced both by the
+arcsine geometry at the lower floor and by the dyadic recurrence globally.
+
+*Proof.*  Let \(g\) be standard Gaussian and set
+\(z^\pm=(I\pm H/\sqrt d)g\), \(x_i^\pm=\operatorname{sgn}z_i^\pm\).
+For a support edge \(e=\{i,j\}\), the two correlations are
+\[
+ r_e^\pm={(H^2)_{ij}\over2d}\pm{H_{ij}\over\sqrt d}.
+\]
+With \(u_e=H_{ij}(H^2)_{ij}/(2d)\), \(v=d^{-1/2}\), the Gaussian sign
+law and oddness of arcsine give
+\[
+ \Phi(H)\ge{1\over\pi}\sum_e
+ \Delta(u_e,v),\qquad
+ \Delta(u,v)=\arcsin(u+v)-\arcsin(u-v).                    \tag{6.16l}
+\]
+Indeed the right side is half the difference of the two expected signed
+energies.  Now
+\(\Delta(u,v)=\int_{u-v}^{u+v}(1-t^2)^{-1/2}\,dt\).
+Its second derivative is the integral over the same interval of
+\((1+2t^2)(1-t^2)^{-5/2}\), an even function increasing in \(|t|\).
+The interval is minimized when centered at zero, so
+\[
+ \Delta(u,v)\ge2\arcsin v+{v\over(1-v^2)^{3/2}}u^2.
+\]
+Summing over the \(Nd/2\) edges proves (6.16h).
+
+For \(K_0\), the four-label identity proves
+\(\Phi(K_0)=4D_{\to}\), and block multiplication gives
+\[
+ K_0^2=
+ \begin{pmatrix}A^2-R^2&AR-RA\\AR-RA&A^2-R^2\end{pmatrix}.
+\]
+Summing only over its support edges gives exactly (6.16j), proving
+(6.16i).  Rearrangement and expansion of the arcsine yield (6.16k).
+Filling the missing perfect matching of \(K_0\) changes its norm by at most
+\(n\), so \(m_{2n}\le4U_n+n\).  If (6.16k1) failed on an eventual dyadic
+tail with a constant \(c<1/\sqrt2\), then
+\(\alpha_{2n}\le\sqrt2c\,\alpha_n+o(1)\), forcing that positive sequence
+to zero and contradicting Proposition 5.2.
+\(\square\)
+
+**Proposition 6.5f (finite-anchor signature-cell shielding).**  Let
+\(x^{(1)},\ldots,x^{(k)}\in\{\pm1\}^n\), deduplicated modulo global sign.
+Partition \([n]\) by the coordinate signatures
+\[
+ \bigl(x_i^{(1)}x_i^{(2)},\ldots,x_i^{(1)}x_i^{(k)}\bigr),
+\]
+and let \(L\le\min(n,2^{k-1})\) be the number of nonempty cells.  There is
+a skew signing \(R\) such that, simultaneously for every anchor,
+\[
+ \boxed{\|Rx^{(a)}\|_1\le Ln,\qquad
+ |(x^{(a)})^TRy|\le Ln\quad\hbox{for every }y.}             \tag{6.16m}
+\]
+
+Let \(M=\Phi(A)\), \(S=A\circ R\),
+\(\Delta_A(x,y)=|Q_A(x)-Q_A(y)|\), and
+\(\Gamma(R)=\max_{x,y}|x^TRy|\).  If the anchor set is a vertex cover of
+\[
+ \bigl\{\{x,y\}:\Delta_A(x,y)>2\sqrt2M-\Gamma(R)\bigr\}    \tag{6.16n}
+\]
+and \(Ln\le2(\sqrt2-1)M\), then
+\[
+ D_{\to}(A,S)\le M/\sqrt2.                                 \tag{6.16o}
+\]
+The size condition is automatic for every \(A\) when
+\[
+ L\le {2(\sqrt2-1)(n-1)\over\pi}
+        \arcsin{1\over\sqrt{n-1}}
+ =\left({2(\sqrt2-1)\over\pi}+o(1)\right)\sqrt n.          \tag{6.16p}
+\]
+Thus even an arbitrary anchor family with roughly
+\(k\le\tfrac12\log_2n-O(1)\) can be removed at the critical margin.  A
+finite extremizer list is not the obstruction; the unresolved issue is the
+uncontrolled complement and its growing signature complexity.
+
+*Proof.*  Gauge \(x^{(1)}\) to \({\bf1}\).  Inside each odd signature cell
+use a regular tournament, and inside each even cell delete one vertex from a
+regular tournament of the next odd order; the internal row sums are then
+zero or \(\pm1\).  Between two locally indexed cells put the alternating
+block \(T_{i_rj_s}=(-1)^{r+s}\), and use its negative transpose in the
+reverse block.  Every row sum into each cell has magnitude at most one.
+Every gauged anchor is constant on each of the \(L\) cells, so every
+coordinate of its image under \(T\) has magnitude at most \(L\).  Undoing
+the gauge and summing proves (6.16m).
+
+Every anchor-incident pair has
+\(\Delta_A(x,y)+|x^TRy|\le2M+Ln\le2\sqrt2M\).  Every
+uncovered pair in (6.16n) has the same upper bound by the definition of
+\(\Gamma\).  Identity (6.14d4) proves (6.16o).  Finally (6.16h), applied
+to the complete signing \(A\) and with its nonnegative correction dropped,
+gives
+\(M\ge n(n-1)\arcsin(1/\sqrt{n-1})/\pi\), proving (6.16p).
+\(\square\)
+
+For one anchor the exact optimum in (6.16m) is zero for odd \(n\) and
+\(n\) for even \(n\).  Two projectively distinct Boolean anchors cannot
+both lie in the exact kernel of a skew signing: after gauging and splitting
+by their relative sign, the within-cell and cross-cell row sums would both
+have to vanish, and their parities are incompatible.  This parity fact does
+not give a uniform \(\Omega(n)\) two-anchor floor at odd order.
+
+**Proposition 6.5g (random approximate mate and generic spectral-bridge
+no-go).**  For a fixed order-\(n\) signing \(A\), \(n\ge3\), a uniform skew
+signing \(R\) satisfies
+the exact identity
+\[
+ \mathbb E_R\Sigma(A,R)
+ =\sum_{i\ne j}(A^2_{ij})^2+3n(n-1)(n-2).                  \tag{6.16q}
+\]
+Moreover, with
+\[
+ L_n={n(n-1)\over\pi}\arcsin{1\over\sqrt{n-1}},
+\]
+Proposition 6.5e gives
+\[
+ \sum_{i\ne j}(A^2_{ij})^2
+ \le8\pi(n-1)(n-2)^{3/2}\bigl(\Phi(A)-L_n\bigr).          \tag{6.16r}
+\]
+Consequently, if \(A\) is optimal and
+\(M=m_n=\alpha_n n^{3/2}\), there is a deterministic skew signing with
+\[
+ {\Sigma(A,R)\over n^4}
+ \le8\pi(\alpha_n-1/\pi)+O(1/n).                           \tag{6.16s}
+\]
+In particular, the approximate-mate condition forced by Proposition 6.5e
+near \(\alpha_n=1/\pi\) is automatically satisfiable; it is not itself the
+missing upper construction.
+
+This cannot be repaired by the generic spectral conversion.  Put
+\(C=AR-RA\), \(T(R)=\sum_iC_{ii}^2\), and \(d=2n-2\).  Exactly
+\[
+ \|K_0^2-dI\|_F^2=2(\Sigma+T),\qquad
+ \operatorname{tr}(K_0^2-dI)=0,                            \tag{6.16t}
+\]
+so
+\[
+ D_{\to}(A,S)\le{n\over4}
+ \sqrt{d+\sqrt{2n-1\over2n}\sqrt{2(\Sigma+T)}}.            \tag{6.16u}
+\]
+Even the ideal value \(\Sigma+T=0\) yields only
+\((1/(2\sqrt2)+o(1))n^{3/2}\), a factor \(\pi/2\) above the
+lower-floor target.  More generally, along any subsequence on which
+\(\alpha_n\to\alpha\) and \((\Sigma+T)/n^2\to s\), (6.16u) can close the
+desired bound only when
+\[
+ 2+\sqrt{2s}\le8\alpha^2.                                  \tag{6.16v}
+\]
+The asymptotic upper bound gives \(\alpha\le1/2\), so this forces
+\(\alpha=1/2\) and \(s=0\).  Thus the displayed generic
+trace/Frobenius-to-operator conversion cannot prove the original
+amplification in the unknown interior range.  This does not exclude an
+upper bound that exploits additional special structure of the same square
+and commutator matrices.
+
+*Proof.*  For \(i\ne j\), the \(n-2\) summands of \((R^2)_{ij}\) are
+independent centered signs, whereas
+\[
+ (AR-RA)_{ij}=\sum_{k\ne i,j}A_{ik}A_{kj}(S_{kj}-S_{ik})
+\]
+has variance \(2(n-2)\).  Hence
+\(\mathbb E(A^2-R^2)_{ij}^2=(A^2_{ij})^2+n-2\), proving
+(6.16q).  Equation (6.16r) is (6.16h) applied to \(A\), after doubling the
+sum over unordered edges.  Conditional expectation derandomizes (6.16q),
+and expansion gives (6.16s).
+
+Block multiplication proves (6.16t).  A traceless symmetric matrix of order
+\(2n\) has largest eigenvalue at most
+\(\sqrt{(2n-1)/(2n)}\) times its Frobenius norm.  Apply this to
+\(K_0^2-dI\), then use
+\(\Phi(K_0)\le n\|K_0\|_{\rm op}\) and
+\(\Phi(K_0)=4D_{\to}\), to obtain (6.16u).  Its normalized limit is
+(6.16v). \(\square\)
+
+**Proposition 6.5h (exact outgoing-half random criterion and first-moment
+obstruction).**  In the all-directed setting of Proposition 6.5c, put
+\[
+ C_{T,s}=\sum_{u\in T,\ v\notin T}A_{uv}s_us_v,\qquad
+ K_{T,s}=\sum_{u\in T,\ v\notin T}R_{uv}s_us_v.
+\]
+Then
+\[
+ \boxed{
+ D_\to(A,S)=\max_{T,s}{|C_{T,s}|+|K_{T,s}|\over2},
+ \qquad S=A\circ R.
+ }                                                           \tag{6.16w}
+\]
+In particular \(|C_{T,s}|\le M=\Phi(A)\), and the zero-error target
+\(D_\to(A,S)\le M/\sqrt2\) is exactly
+\[
+ |K_{T,s}|\le\sqrt2M-|C_{T,s}|
+ \quad\hbox{for every }(T,s).                                 \tag{6.16x}
+\]
+
+Choose the upper-triangular entries of \(R\) independently and uniformly.
+For \(m\ge1\), let
+\[
+ {\rm Tail}_m(t)
+ =2^{-m}\sum_{\substack{0\le j\le m\\|2j-m|>t}}{m\choose j}.
+\]
+Modulo global spin reversal and \(T\leftrightarrow T^c\), the exact
+first-moment sufficient criterion for (6.16x) is
+\[
+ {\cal F}(A):=
+ \sum_{[(T,s)]}{\rm Tail}_{|T|(n-|T|)}
+ \bigl(\sqrt2M-|C_{T,s}|\bigr)<1.                             \tag{6.16y}
+\]
+Equivalently, if \(d=d_H(x,y)\),
+\[
+ {\cal F}(A)={1\over4}
+ \sum_{\substack{x,y\\0<d<n}}
+ {\rm Tail}_{d(n-d)}
+ \left(\sqrt2M-\tfrac12|Q_A(x)-Q_A(y)|\right).                 \tag{6.16z}
+\]
+Hoeffding gives the simpler sufficient upper certificate
+\[
+ \sum_{[(T,s)]}2\exp\left(
+ -{(\sqrt2M-|C_{T,s}|)^2\over2|T|(n-|T|)}\right)<1.
+\]
+
+The exact quantity in (6.16y), not merely this Hoeffding upper bound, is
+already exponentially large for optimal \(A\).  Writing
+\(M=\alpha_n n^{3/2}\), one has
+\[
+ {\cal F}(A)\ge
+ \exp\bigl((\log4-4\alpha_n^2-o(1))n\bigr).                    \tag{6.16aa}
+\]
+Thus \(\limsup\alpha_n\le1/2\) gives
+\[
+ {\cal F}(A)\ge
+ \exp\bigl((\log4-1-o(1))n\bigr),
+ \qquad \log4-1=0.386294\ldots>0.                             \tag{6.16ab}
+\]
+The literal independent-random-orientation first-moment/union-bound proof
+therefore cannot establish the outgoing-half target.  This does **not**
+prove that random orientations fail: the bad events are highly dependent,
+and a correlated process estimate remains open.
+
+*Proof.*  The outgoing and incoming signed halves are
+\[
+ {C_{T,s}+K_{T,s}\over2},\qquad {C_{T,s}-K_{T,s}\over2}.
+\]
+Complementing \(T\) interchanges them, and
+\(\max(|a+b|,|a-b|)=|a|+|b|\), proving (6.16w).
+If \(D_T\) changes signs on \(T\), then, for \(x=s,\ y=D_Ts\),
+\[
+ Q_A(x)-Q_A(y)=2C_{T,s},\qquad x^TRy=2K_{T,s}.
+\]
+This also proves \(|C_{T,s}|\le M\), (6.16x), and the pair
+parametrization in (6.16z).  The quotient factor is four because
+independently negating \(x\) and \(y\) leaves each constraint unchanged.
+Swapping \(x,y\) is a further twofold redundancy that is deliberately not
+quotiented here; removing it halves \({\cal F}(A)\) and changes none of the
+exponential conclusions below.
+
+For fixed \((T,s)\), \(K_{T,s}\) is exactly a sum of
+\(|T|(n-|T|)\) independent signs.  Hence (6.16y) is the expected number of
+violated constraint orbits; expectation below one supplies a realization
+with none.  Hoeffding gives the displayed relaxation.
+
+For the obstruction, take \(d=\lfloor n/2\rfloor\) and
+\(h=d(n-d)=\lfloor n^2/4\rfloor\).  There are
+\(2^n{n\choose d}\) ordered pairs at this distance, and every threshold in
+(6.16z) is at most \(\sqrt2M\).  Therefore
+\[
+ {\cal F}(A)\ge {2^n\over4}{n\choose d}
+ {\rm Tail}_h(\sqrt2M).                                      \tag{6.16ac}
+\]
+Uniformly for \(m\ge cn^2\) and \(0\le t\le Cn^{3/2}\),
+\[
+ {\mathbb P}(|S_m|>t)\ge
+ \exp\left(-{t^2\over2m}-O_{c,C}(\log n)\right).              \tag{6.16ad}
+\]
+Indeed, choose the least \(k>t\) having the parity of \(m\).  A single
+binomial atom, uniform Stirling bounds, and
+\[
+ I(a)={(1+a)\log(1+a)+(1-a)\log(1-a)\over2}
+ ={a^2\over2}+O(a^4)
+\]
+give
+\[
+ {\mathbb P}(S_m=k)\ge c_0m^{-1/2}e^{-mI(k/m)}
+ =\exp\left(-{t^2\over2m}-O(\log n)\right),
+\]
+because \(k/m=O(n^{-1/2})\) and \(k^4/m^3=O(1)\).
+Apply this to (6.16ac), and use the central-binomial Stirling estimate, to
+obtain (6.16aa); (6.16ab) follows from the known optimal-signing upper
+scale. \(\square\)
+
+Even the fictitious favorable assignment \(C_{T,s}=0\) on every central
+constraint would require
+\(\alpha_n>\sqrt{\log2/2}=0.588705\ldots\) for this first moment to decay,
+already above \(1/2\).  At \(\alpha_n\to1/\pi\), its exponent is
+\(\log4-4/\pi^2=0.981009\ldots\).  These constants close only the literal
+first-moment route, not the underlying random-orientation distribution.
+
+**Proposition 6.5i (Gaussian saturation and central two-half saddle).**
+Let \(H\) be a symmetric zero-diagonal \(\{0,\pm1\}\)-matrix of order \(N\)
+with \(d\)-regular support, \(d\ge2\), and put \(P=\Phi(H)\).  For standard
+Gaussian \(g\), set
+
+\[
+ X^\pm=\operatorname{sgn}\bigl((I\pm H/\sqrt d)g\bigr).
+\]
+
+For a support edge \(e=\{i,j\}\), put
+
+\[
+ u_e={H_{ij}(H^2)_{ij}\over2d},\quad v=d^{-1/2},\quad
+ \Delta(u,v)=\arcsin(u+v)-\arcsin(u-v),\quad
+ \mathcal L_G(H)={1\over\pi}\sum_e\Delta(u_e,v).
+\]
+
+Then the arcsine argument has the exact saturation-gap form
+
+\[
+ \boxed{
+ \mathbb E\big[(P-Q_H(X^+))+(P+Q_H(X^-))\big]
+ =2\big(P-\mathcal L_G(H)\big).}                         \tag{6.16ae}
+\]
+
+Moreover, if \(\mathcal O=\sum_iX_i^+X_i^-\), then
+
+\[
+ \mathbb E{\cal O}=0,\qquad
+ \boxed{\operatorname{Var}{\cal O}
+ \le3N+{2\over d^2}\sum_{i<j}(H^2_{ij})^2.}              \tag{6.16af}
+\]
+
+In particular, let \(A\) be an optimal complete signing, \(M=\Phi(A)\),
+and \(L_n=n(n-1)\arcsin(1/\sqrt{n-1})/\pi\).  Its two coupled Gaussian
+outputs satisfy
+
+\[
+\begin{aligned}
+ \mathbb E[(M-Q_A(X^+))+(M+Q_A(X^-))]&\le2(M-L_n),\\
+ \operatorname{Var}{\cal O}
+ &\le3n+{8\pi(n-2)^{3/2}\over n-1}(M-L_n).
+\end{aligned}                                             \tag{6.16ag}
+\]
+
+Consequently, along every subsequence on which
+\(M/n^{3/2}\to1/\pi\),
+
+\[
+ \boxed{
+ Q_A(X^+)=M-o_{\Pr}(n^{3/2}),\quad
+ Q_A(X^-)=-M+o_{\Pr}(n^{3/2}),\quad
+ d_H(X^+,X^-)=n/2+o_{\Pr}(n).}                            \tag{6.16ah}
+\]
+
+Thus the Hamming-central opposite-energy layer in the outgoing-half
+problem is forced, rather than excluded, when the universal lower floor is
+approached.
+
+There is a corresponding necessary shape for any sharp outgoing-half
+orientation.  Let \(R=A\circ S\), form
+
+\[
+ K_0=\begin{pmatrix}A&R\\-R&-A\end{pmatrix},
+\]
+
+and suppose, on the same subsequence,
+\(D_{\to}(A,S)\le M/\sqrt2+o(n^{3/2})\).  Apply the preceding coupling to
+\(K_0\), and call its outputs \(Y^+,Y^-\).  Then
+
+\[
+ Q_{K_0}(Y^+)=\Phi(K_0)-o_{\Pr}(n^{3/2}),\quad
+ Q_{K_0}(Y^-)=-\Phi(K_0)+o_{\Pr}(n^{3/2}),\quad
+ d_H(Y^+,Y^-)=n+o_{\Pr}(n).                               \tag{6.16ai}
+\]
+
+Writing \(u=(Y^++Y^-)/2\), \(v=(Y^+-Y^-)/2\),
+\(O=Q_{K_0}(u)\), \(J=Q_{K_0}(v)\), and \(X=u^TK_0v\), one obtains the
+calculator's balanced saddle
+
+\[
+ \boxed{
+ O+J=o_{\Pr}(n^{3/2}),\quad
+ X=\Phi(K_0)-o_{\Pr}(n^{3/2}),\quad
+ |O|,|J|\le\Phi(K_0)/2+o_{\Pr}(n^{3/2}).}                 \tag{6.16aj}
+\]
+
+This is a necessary-structure theorem, not an orientation construction,
+and it does not close the multiplier-two ray.
+
+*Proof.*  The covariance computation in Proposition 6.5e gives exactly
+
+\[
+ {1\over2}\big(\mathbb E Q_H(X^+)-\mathbb E Q_H(X^-)\big)
+ =\mathcal L_G(H).
+\]
+
+Both deficits in (6.16ae) are nonnegative, which proves that identity and,
+by Markov's inequality, their simultaneous concentration whenever
+\(P-\mathcal L_G(H)=o(P)\).
+
+For (6.16af), normalize the two-dimensional Gaussian vector
+\(\bigl(((I+H/\sqrt d)g)_i,((I-H/\sqrt d)g)_i\bigr)\) by \(\sqrt2\).
+Its coordinates are independent standard Gaussians because
+\((H^2)_{ii}=d\).  For \(i\ne j\), the cross-correlation matrix of the
+normalized pairs at \(i,j\)
+is
+
+\[
+ \begin{pmatrix}\widetilde u+\widetilde v&-\widetilde u\\
+ -\widetilde u&\widetilde u-\widetilde v\end{pmatrix},qquad
+ \widetilde u={(H^2)_{ij}\over2d},\quad
+ \widetilde v={H_{ij}\over\sqrt d}.
+\]
+
+The function \((s,t)\mapsto\operatorname{sgn}s\operatorname{sgn}t\) has
+Gaussian Hermite rank two.  Singular-value decomposition of the displayed
+cross-correlation matrix and the Hermite expansion therefore bound the
+covariance of \(X_i^+X_i^-\) and \(X_j^+X_j^-\) by the squared operator
+norm, hence by
+
+\[
+ {2H_{ij}^2\over d}+{(H^2)_{ij}^2\over d^2}.
+\]
+
+Summing this bound and using
+\(\sum_{i<j}H_{ij}^2=Nd/2\) proves (6.16af).
+
+For \(H=A\), Proposition 6.5e gives
+\(\mathcal L_G(A)\ge L_n\), and (6.16r), substituted in (6.16af), proves
+(6.16ag).  Markov and Chebyshev prove (6.16ah).
+
+For \(H=K_0\), Proposition 6.5e and the assumed upper bound squeeze
+\(\Phi(K_0)-\mathcal L_G(K_0)=o(n^{3/2})\) and force
+\(\Sigma(A,R)=o(n^4)\).  Direct block multiplication gives
+
+\[
+ \sum_{i<j}(K_0^2)_{ij}^2=\Sigma(A,R)+T(R),\qquad
+ T(R)=\sum_i(AR-RA)_{ii}^2\le4n(n-1)^2.
+\]
+
+Thus (6.16af) has variance \(o(n^2)\), proving (6.16ai).  The two corner
+energies give \(O+J=o_{\Pr}(n^{3/2})\) and
+\(X=\Phi(K_0)-o_{\Pr}(n^{3/2})\).  Finally
+\(p(r,t)=Or^2+Jt^2+Xrt\) is bounded by \(\Phi(K_0)\) on the full square.
+After normalization, compactness and the exact opposite-corner calculus
+(6.14j1) give the last two bounds in (6.16aj). \(\square\)
+
+One tempting converse is false.  If \(A^2=(n-1)I\), then the two Gaussian
+vectors above are independent as vectors and their sign covariance
+matrices are \(I\pm cA\), where
+\(c=(2/\pi)\arcsin(1/\sqrt{n-1})\).  For every skew signing \(R\),
+
+\[
+ \mathbb E(X^{+T}RX^-)^2
+ =\operatorname{tr}\big((I+cA)R(I-cA)R^T\big)
+ \le(1+c\sqrt{n-1})^2n(n-1)=O(n^2).                    \tag{6.16ak}
+\]
+
+So the canonical central opposite-energy coupling itself has subcritical
+skew interaction for every orientation.  Uniform control of the whole
+diffuse layer, not one Gaussian pair, remains the missing implication.
+
+**Proposition 6.5j (degree-four squared-row preordering no-go).**  In the
+bivector formulation of Proposition 6.5d, set
+\[
+ t=(\sqrt2-1)M,\qquad w_s=t+d_s,\qquad
+ g_s(r)=w_s^2-\langle b_s,r\rangle^2,
+ \quad s=(x,y).                                             \tag{6.16al}
+\]
+The exact critical orientation system is
+\(r_e^2=1\) and \(g_s(r)\ge0\) for every row \(s\).  Consider its full
+degree-four preordering in this squared-row encoding.  A refutation would
+have the form
+\[
+ -1=\sigma_0+\sum_s\sigma_sg_s
+       +\sum_{s\le u}\lambda_{su}g_sg_u
+       +\sum_e h_e(r)(r_e^2-1),                             \tag{6.16am}
+\]
+where \(\sigma_0\) is an SOS polynomial of degree at most four, every
+\(\sigma_s\) is a sum of squares of affine polynomials,
+\(\lambda_{su}\ge0\), and every displayed term has degree at most four.
+For every \(n\ge45\), no identity (6.16am) exists, whether or not the exact
+orientation system is feasible.
+
+More precisely, uniform expectation \(\mathbb E_0\) on
+\(r\in\{\pm1\}^{\binom n2}\) is a feasible degree-four pseudomodel.  If
+\(b\in\{0,\pm1\}^{\binom n2}\),
+\(m=\|b\|_2^2\), \(\delta=w^2-m\), and
+\(g=w^2-\langle b,r\rangle^2\), then the localizing form
+\(\mathbb E_0[gq^2]\), for affine \(q\), has zero constant--linear block,
+constant eigenvalue \(\delta\), inactive-coordinate block \(\delta I\),
+and active-coordinate block
+\[
+ (\delta+2)I-2bb^T.
+\]
+Consequently
+\[
+ \mathbb E_0[gq^2]\ge0\quad\hbox{for every affine }q
+ \quad\Longleftrightarrow\quad w^2\ge3m-2.                 \tag{6.16an}
+\]
+For two rows \(b,c\), write
+\(\delta_b=w_b^2-\|b\|_2^2\),
+\(\delta_c=w_c^2-\|c\|_2^2\), and
+\(h=|\operatorname{supp}b\cap\operatorname{supp}c|\).  Their exact
+cross-row fourth moment is
+\[
+ \boxed{\mathbb E_0[g_bg_c]
+ =\delta_b\delta_c+2\langle b,c\rangle^2-2h.}              \tag{6.16ao}
+\]
+Thus this pseudomodel retains, rather than discards, the determinant pairing
+of decomposable bivectors and their exact cut-support intersection.
+
+*Proof.*  Expanding the uniform moments gives
+\(\mathbb E_0g=\delta\), \(\mathbb E_0[gr_e]=0\), and, for
+distinct coordinates, \(\mathbb E_0[gr_er_f]=-2b_eb_f\) when both are
+active and zero otherwise.  This gives the displayed blocks.  The active
+eigenvalues are \(\delta+2\) perpendicular to \(b\) and
+\(w^2-3m+2\) along \(b\), proving (6.16an).
+
+The Rademacher fourth-moment identity gives
+\[
+ \mathbb E_0[\langle b,r\rangle^2\langle c,r\rangle^2]
+ =\|b\|_2^2\|c\|_2^2+2\langle b,c\rangle^2-2h,
+\]
+which is (6.16ao).  For the actual rows
+\(b_{xy}=x\wedge y/2\),
+\[
+ \|b_{xy}\|_2^2=d_H(x,y)(n-d_H(x,y))
+ \le m_*:=\lfloor n^2/4\rfloor.                            \tag{6.16ap}
+\]
+Proposition 5.2 implies
+\[
+ t^2\ge {3-2\sqrt2\over\pi^2}n^2(n-1)>3m_*
+ \qquad(n\ge45).                                           \tag{6.16aq}
+\]
+For the endpoint inequality, it is enough to use
+\(\sqrt2<5657/4000\) and \(\pi^2<10\), which give
+\(44(3-2\sqrt2)/\pi^2>44(343/20000)>3/4\).
+Since \(w_s\ge t\), (6.16an) makes every one-row affine localizer
+positive semidefinite.  Also \(\delta_s>2m_*\), so (6.16ao) gives
+\(\mathbb E_0[g_sg_u]>4m_*^2-2m_*>0\).
+
+Finally, \(\mathbb E_0\) is an actual Boolean-cube expectation: it is
+nonnegative on \(\sigma_0\) and annihilates the Boolean ideal.  It is
+nonnegative on every remaining term of (6.16am) by (6.16an)--(6.16ao),
+contradicting \(\mathbb E_0[-1]=-1\).  All Pluecker identities are respected
+because the \(b_s\) are the instantiated decomposable rows; using such an
+identity only rewrites the same polynomial before applying
+\(\mathbb E_0\). \(\square\)
+
+This is a method barrier, not an orientation construction.  It rules out
+exactly (6.16am), including its first cross-row products.  Proposition 6.5l
+below extends the same uniform-expectation obstruction to every fixed raw
+degree at sufficiently large order.  Neither result rules out a different
+lifted encoding or direct nonlinear rounding.
+
+**Proposition 6.5k (weighted multi-anchor integral rounding).**  Let
+\(x^{(1)},\ldots,x^{(k)}\in\{\pm1\}^n\), choose \(q_a>0\) with
+\(\sum_aq_a\le1/2\), and put
+\[
+ \rho_a=n\sqrt{2/\pi}+\sqrt{2n\log(1/q_a)}.                \tag{6.16ar}
+\]
+For arbitrary budgets \(B_a>0\), the capacity condition
+\[
+ 50\sum_{a=1}^k{\rho_a^2\over B_a^2}\le1                 \tag{6.16as}
+\]
+implies that there is a skew signing \(R\) such that
+\[
+ \|Rx^{(a)}\|_1\le B_a\qquad(1\le a\le k).                \tag{6.16at}
+\]
+This is an integral signing of every edge, with no fractional remainder.
+
+Now let \(A\) be optimal and \(M=\Phi(A)\).  Define
+\[
+ B_A(x)=(2\sqrt2-1)M-|Q_A(x)|.                             \tag{6.16au}
+\]
+If (6.16as) holds with \(B_a=B_A(x^{(a)})\), then the one \(R\)
+furnished above satisfies, for every anchor and every Boolean \(y\),
+\[
+ |Q_A(x^{(a)})-Q_A(y)|+|(x^{(a)})^TRy|\le2\sqrt2M.        \tag{6.16av}
+\]
+In particular, taking \(q_a=1/(2k)\) gives the uniform bound
+\[
+ \|Rx^{(a)}\|_1\le
+ 10n\sqrt{k/\pi}+10\sqrt{kn\log(2k)}.                     \tag{6.16aw}
+\]
+Consequently, for every fixed \(0<\delta<c_*\) and all sufficiently large
+\(n\), an arbitrary family of
+\[
+ k\le(c_*-\delta)n,
+ \qquad c_*={3-2\sqrt2\over25\pi}
+       =0.0021845336957706\ldots                            \tag{6.16ax}
+\]
+can be shielded on every anchor-incident pair.  This improves the
+worst-case arbitrary-anchor capacity of Proposition 6.5f from logarithmic
+to a positive linear fraction.
+
+*Proof.*  For an edge \(i<j\), form a vector with \(k\) blocks in
+\(\mathbb R^{nk}\), whose \(a\)-th block is
+\[
+ v_{ij}^{(a)}=\lambda_a
+       (x_j^{(a)}e_i-x_i^{(a)}e_j),
+ \qquad \|v_{ij}\|_2^2=2\sum_a\lambda_a^2=:L^2.           \tag{6.16ay}
+\]
+For standard Gaussian \(g\in\mathbb R^n\), the function
+\(g\mapsto\|g\|_1\) is \(\sqrt n\)-Lipschitz and has mean
+\(n\sqrt{2/\pi}\).  Hence Gaussian concentration and (6.16ar) show that
+the symmetric convex body
+\[
+ {\cal C}=\{(z^{(1)},\ldots,z^{(k)}):
+                 \|z^{(a)}\|_1\le\rho_a\ \hbox{for every }a\}
+\]
+has Gaussian measure at least \(1-\sum_aq_a\ge1/2\).
+Banaszczyk's vector-balancing theorem, in its unit-vector \(5{\cal C}\)
+normalization, supplies signs \(r_{ij}\in\{\pm1\}\) such that
+\[
+ \sum_{i<j}r_{ij}{v_{ij}\over L}\in5{\cal C}.             \tag{6.16az}
+\]
+Define \(R_{ij}=r_{ij}\), \(R_{ji}=-r_{ij}\).  The \(a\)-th block in the
+unnormalized sum is exactly \(\lambda_aRx^{(a)}\), and therefore
+\[
+ \|Rx^{(a)}\|_1\le{5L\rho_a\over\lambda_a}.
+\]
+Taking \(\lambda_a=\rho_a/B_a\), condition (6.16as) says \(5L\le1\),
+which proves (6.16at).  This standard \(5{\cal C}\) theorem is the only
+deep external input.
+
+Since \(B_A(x)>0\) and
+\(B_A(x)\ge2(\sqrt2-1)M\), (6.16at) gives
+\[
+\begin{aligned}
+ |Q_A(x^{(a)})-Q_A(y)|+|(x^{(a)})^TRy|
+ &\le |Q_A(x^{(a)})|+M+\|Rx^{(a)}\|_1\\
+ &\le2\sqrt2M,
+\end{aligned}
+\]
+proving (6.16av).  Substitution of \(q_a=1/(2k)\) in (6.16ar)--(6.16at)
+gives (6.16aw).  Finally Proposition 5.2 gives
+\[
+ M\ge {n(n-1)\over\pi}\arcsin{1\over\sqrt{n-1}},
+\]
+and comparison of the leading \(n^{3/2}\) terms in (6.16aw) with
+\(2(\sqrt2-1)M\) gives exactly (6.16ax). \(\square\)
+
+The proposition does **not** control every pair.  For its resulting \(R\),
+put \(S=A\circ R\),
+\[
+ \Gamma(R)=\max_{x,y}|x^TRy|,
+ \qquad E_R=\{\{x,y\}:|Q_A(x)-Q_A(y)|
+                    >2\sqrt2M-\Gamma(R)\}.                \tag{6.16ba}
+\]
+If the chosen anchors are a vertex cover of this same \(E_R\), then
+(6.16av) handles its incident pairs and the definition of \(E_R\) handles
+all others, so Proposition 6.5c gives \(D_{\to}(A,S)\le M/\sqrt2\).
+This is a conditional statement about the same resulting \(R\): the theorem
+does not bound \(\Gamma(R)\), and choosing a cover after seeing \(R\) and
+then rerunning the rounding would be circular.  The simultaneous
+capacity-cover assertion, and hence multiplier two, remains open.
+
+**Proposition 6.5l (growing-degree squared-row preordering no-go).**  For
+either the half-cut-neighbor slabs of Proposition 6.5d or the outgoing-half
+slabs of Propositions 6.5c and 6.5h, write
+\[
+\begin{aligned}
+ b_{xy}&={x\wedge y\over2},\\
+ w^+_{xy}&=(\sqrt2-1)M+M-{|Q_A(x)+Q_A(y)|\over2},\\
+ w^-_{xy}&=\sqrt2M-{|Q_A(x)-Q_A(y)|\over2},\\
+ g_s(r)&=w_s^2-\langle b_s,r\rangle^2.
+\end{aligned}                                              \tag{6.16bb}
+\]
+Choose either sign consistently.  Let \(D\ge1\) and set
+\[
+ \kappa={\pi^2\over4(\sqrt2-1)^2}=14.3810675004\ldots .
+\]
+If
+\[
+ (2D+1)^D\left[\left(1+{\kappa\over n-1}\right)^D-1\right]<1, \tag{6.16bc}
+\]
+then uniform Boolean expectation is nonnegative on the full degree-\(2D\)
+preordering generated by the \(g_s\)'s and annihilates the Boolean ideal.
+Consequently there is no identity
+\[
+ -1=\sum_J\sigma_J\prod_{j\in J}g_j
+       +\sum_eh_e(r)(r_e^2-1),                              \tag{6.16bd}
+\]
+where \(J\) is square-free, each \(\sigma_J\) is SOS, and every displayed
+term has raw polynomial degree at most \(2D\).  Here and only here,
+"degree" means that raw degree before reduction modulo \(r_e^2=1\); this
+proposition does not claim a lower bound for a differently encoded or
+quotient-degree hierarchy.
+
+Thus every fixed raw degree is blind for all sufficiently large \(n\).
+More quantitatively, for each fixed \(\epsilon>0\), (6.16bc) holds, once
+\(n\) is sufficiently large depending on \(\epsilon\), throughout
+\[
+ D\le(1-\epsilon){\log n\over\log\log n}.                  \tag{6.16be}
+\]
+
+*Proof.*  Put \(t=(\sqrt2-1)M\), \(m_s=\|b_s\|_2^2\).  Both widths in
+(6.16bb) are at least \(t\), while Proposition 5.2 and the bivector support
+formula give
+\[
+ t^2\ge{3-2\sqrt2\over\pi^2}n^2(n-1),
+ \qquad m_s\le {n^2\over4},
+ \qquad {m_s\over w_s^2}\le{\kappa\over n-1}=:\rho_n.     \tag{6.16bf}
+\]
+Let \(q\) be a multilinear polynomial of degree at most \(d\), put
+\(Z_j=\langle b_j,r\rangle\), and let \(\mathbb E_0\) be uniform cube
+expectation.  Hölder, followed by Bonami--Beckner for \(q\) and Khintchine
+for the linear forms, gives
+\[
+ \mathbb E_0\!\left[q^2\prod_{j=1}^{\ell}Z_j^2\right]
+ \le(2\ell+1)^{d+\ell}
+       \left(\prod_{j=1}^{\ell}m_j\right)\mathbb E_0q^2.  \tag{6.16bg}
+\]
+No independence among the rows is used.  If \(|J|=k\) and
+\(\deg q\le D-k\), expand \(\prod_{j\in J}g_j\), bound every nonconstant
+term by (6.16bg), and use (6.16bf).  This yields
+\[
+\begin{aligned}
+ \mathbb E_0\!\left[q^2\prod_{j\in J}g_j\right]
+ &\ge\left(\prod_{j\in J}w_j^2\right)\mathbb E_0q^2\\
+ &\quad\cdot\left\{1-(2D+1)^D[(1+\rho_n)^D-1]\right\}\ge0. \tag{6.16bh}
+\end{aligned}
+\]
+After multilinearizing square summands without increasing degree, every
+SOS localizer allowed in (6.16bd) is a sum of terms of this form.  Repeated
+inequality factors, if permitted, have even powers absorbed into the square
+multiplier and reduce to the same square-free case.  Uniform expectation is
+also nonnegative on the free SOS term and vanishes on every multiple of
+\(r_e^2-1\).  Applying it to (6.16bd) would give \(-1\ge0\), proving the
+first assertion.
+
+For fixed \(D\), the left side of (6.16bc) is \(O_D(1/n)\).  Under
+(6.16be),
+\(D\log(2D+1)\le(1-\epsilon/2)\log n\) for large \(n\), whereas
+\((1+\kappa/(n-1))^D-1=(1+o(1))\kappa D/n\); their product tends to zero.
+This proves the stated growing-degree range. \(\square\)
+
+This is a proof-system obstruction, not an orientation construction.  It
+strengthens Proposition 6.5j asymptotically, but it does not exclude a
+different lifted encoding, raw degree growing faster than (6.16be), an
+\(A\)-dependent nonuniform functional, or direct dependent rounding.
+
+**Proposition 6.5m (conference commuting-mate parity obstruction).**  Let
+\(A\) be symmetric and \(R\) skew-symmetric, both zero on the diagonal and
+in \(\{\pm1\}\) off it.  If \(n\) is even, then for every \(i\)
+
+\[
+ (AR-RA)_{ii}
+ =-2\sum_{j\ne i}A_{ij}R_{ij}\equiv2\pmod4.              \tag{6.16bi}
+\]
+
+Consequently
+
+\[
+ AR\ne RA,
+ \qquad \|AR-RA\|_F^2\ge4n.                              \tag{6.16bj}
+\]
+
+In particular, no real symmetric conference signing commutes with any real
+skew signing, whether or not the latter is itself conference.  Thus the
+tempting exact specialization \(A^2=-R^2=(n-1)I\), \(AR=RA\), which would
+make the block square in Proposition 6.5e scalar, is impossible at every
+symmetric-conference order.
+
+*Proof.*  Symmetry and skew-symmetry give the equality in (6.16bi).  Its sum
+contains the odd number \(n-1\) of signs, proving the congruence and hence
+(6.16bj).  There is also an independent parity proof.  Modulo two every
+even-order skew signing reduces to \(J-I=J+I\), and
+
+\[
+ (J+I)^2=I\quad\hbox{over }\mathbb F_2,                   \tag{6.16bk}
+\]
+
+so \(R\) is invertible.  A symmetric conference matrix has order
+\(n\equiv2\pmod4\), and its two eigenspaces have the odd dimension \(n/2\).
+If \(A\) and \(R\) commuted, \(R\) would restrict to a real skew operator on
+each of these odd-dimensional spaces and would therefore be singular, a
+contradiction. \(\square\)
+
+This is an exact-construction no-go, not a lower bound at the scale of the
+open orientation problem.  The contribution \(4n=o(n^4)\) is compatible
+with the approximate condition \(\Sigma(A,R)=o(n^4)\) in Proposition 6.5e.
+In orthogonal-design terminology the desired commuting pair is called
+*anti-amicable*; “amicable” symmetric/skew pairs anticommute instead.  The
+scope and literature audit are recorded in
+`evidence/NOTE_2026-09-02_CONFERENCE_COMMUTING_MATE_NO_GO.md`.
+
+**Proposition 6.5n (optimal-scale coherent clique-flip counterfamily).**
+For a complete signing \(A\), retain
+\(L_{\rm cl}(A)=\max_{T\subseteq[n]}\Phi(A^{K_T})\) from Proposition
+6.5c.  If a Hadamard matrix of order \(r\ge4\) exists and \(b\ge2\), put
+
+\[
+ n=4rb,\qquad N_\times=8r^2b(b-1).                       \tag{6.16bl}
+\]
+
+There is a complete signing \(A=A_{b,r}\) such that
+
+\[
+ \Phi(A)\le b(2r^2+2)
+ +\sqrt{16r^2b(b-1)(4rb\log2+1)},
+ \qquad
+ L_{\rm cl}(A)\ge b(4r^2-2r).                            \tag{6.16bm}
+\]
+
+Consequently, along \(b=2^j\), \(r=256b\),
+\(\Phi(A)=\Theta(n^{3/2})\), but
+
+\[
+ \liminf_{j\to\infty}
+ {L_{\rm cl}(A)-\sqrt2\Phi(A)\over n^{3/2}}
+ \ge {16(2-\sqrt2)\over4}-\sqrt{2\log2}
+ =1.1657\ldots>0.                                        \tag{6.16bn}
+\]
+
+Thus the coherent estimate cannot follow from the bare scale hypothesis
+\(\Phi(A)=O(n^{3/2})\), even with an \(o(n^{3/2})\) error.  This does not
+disprove the still-open implication for global minimizers
+\(\Phi(A)=m_n\).
+
+*Proof.*  For an order-\(r\) Hadamard matrix \(C\), let
+\(P=J_{2r}-I_{2r}\),
+\(H=C\otimes\left(\begin{smallmatrix}1&-1\\-1&1\end{smallmatrix}\right)\),
+and
+
+\[
+ G_r=\begin{pmatrix}P&H\\H^T&-P\end{pmatrix}.            \tag{6.16bo}
+\]
+
+Pair the coordinates in each \(2r\)-block.  If \(d,e\) are the within-pair
+differences, \(a=\|d\|_2^2\), \(b=\|e\|_2^2\), and \(S,T\) are the two
+coordinate sums, direct expansion gives
+\[
+ Q_{G_r}={S^2-T^2\over2}+4d^TCe,qquad
+ |S|\le2(r-a),\quad |T|\le2(r-b),\quad
+ |d^TCe|\le\sqrt{rab}.
+\]
+Consequently
+\(Q_{G_r}\le2(r-a)^2+4r\sqrt a\le2r^2+2\); applying the same argument to
+\(-Q_{G_r}\), with the blocks interchanged, gives the matching lower bound.
+The equality states described by one active difference pair give
+\(\Phi(G_r)=2r^2+2\).  If \(T_r\) is the second half of its coordinates,
+then the all-one state gives
+\(Q_{G_r^{K_{T_r}}}({\bf1})=4r^2-2r\); the rows and columns of the
+order-two kernel in \(H\) sum to zero.
+
+Take \(b\) disjoint copies of \(G_r\) and fill the \(N_\times\)
+inter-block edges independently with signs, obtaining \(W\).  For a fixed
+Boolean state, Hoeffding gives
+
+\[
+ \Pr\{|Q_W(x)|\ge t\}\le2e^{-t^2/(2N_\times)},\qquad
+ t=\sqrt{2N_\times(n\log2+1)}.                            \tag{6.16bp}
+\]
+
+There are only \(2^{n-1}\) energies up to antipodes, so the union bound is
+at most \(e^{-1}\).  Some deterministic filler therefore has
+\(\Phi(W)<t\), and the triangle inequality proves the first bound in
+(6.16bm).  Let \(T\) be the union of the \(T_r\)'s.  Replacing every
+inter-block sign by its negative preserves the norm bound and reverses its
+value at the single state \({\bf1}\) after the clique flip.  Choosing the
+favorable sign leaves the internal contribution at least
+\(b(4r^2-2r)\), proving the second bound.
+
+For \(r=\kappa b\), division by
+\(n^{3/2}=8\kappa^{3/2}b^3\) gives
+
+\[
+ \liminf {L_{\rm cl}(A)\over n^{3/2}}\ge{\sqrt\kappa\over2},
+ \qquad
+ \limsup {\Phi(A)\over n^{3/2}}
+ \le{\sqrt\kappa\over4}+\sqrt{\log2}.                   \tag{6.16bq}
+\]
+
+Sylvester matrices supply all the required orders when \(\kappa=256\), and
+(6.16bn) follows.  Proposition 5.2 supplies the matching positive-order
+lower bound on \(\Phi(A)\), hence \(\Theta(n^{3/2})\). \(\square\)
+
+This is an infinite complete-signing obstruction, not another finite-order
+census.  It leaves coherent control logically available only through
+genuine global minimality, or through a quantitatively near-minimal leading
+constant; the noncoherent \(A\)-dependent target of Proposition 6.5c also
+remains open.  See
+`evidence/NOTE_2026-09-02_COHERENT_CLIQUE_OPTIMAL_SCALE_COUNTERFAMILY.md`.
 
 **Proposition 6.6 (balanced Paley-skew shielding).**  Put
 \[
@@ -1059,6 +2619,255 @@ growing temperature \(c=c_n\to\infty\). With
 Thus a growing-temperature criterion with a correspondingly uniform error
 remains logically possible.
 
+**Proposition 6.10 (critical-pressure gate and graphon no-go).**  For
+\(c>0\), define the optimized critical symmetric pressure
+
+\[
+ s_n(c)={1\over n}\min_A\log\mathbb E_x
+ \cosh\!\left({c\over\sqrt n}Q_A(x)\right).                 \tag{6.52}
+\]
+
+Then, exactly for every \(n\) and \(c>0\),
+
+\[
+ {s_n(c)\over c}\le\alpha_n
+ \le {s_n(c)\over c}+{\log2\over c}.                        \tag{6.53}
+\]
+
+In particular,
+
+\[
+ \limsup_n\alpha_n-\liminf_n\alpha_n
+ \le {\log2\over c}
+ +{\limsup_n s_n(c)-\liminf_n s_n(c)\over c}.               \tag{6.54}
+\]
+
+Thus convergence of \(s_n(c)\) for every \(c\) in any unbounded set would
+prove convergence of \(\alpha_n\); more generally, pressure oscillation
+\(o(c)\) along some \(c\to\infty\) is sufficient.
+
+The elementary block interpolation for this pressure has the wrong
+critical scaling.  At a common raw inverse temperature put
+
+\[
+ p_n(\beta)=\min_A\log\mathbb E_xe^{\beta Q_A(x)}.
+\]
+
+For all \(n,m\ge1\) and \(\beta\ge0\),
+
+\[
+ p_n(\beta)+p_m(\beta)\le p_{n+m}(\beta)
+ \le p_n(\beta)+p_m(\beta)+nm\log\cosh\beta.                \tag{6.55}
+\]
+
+The symmetric version has the corresponding upper inequality.  Namely, if
+\(q_n^{\rm sym}(\beta)=\min_A\log\mathbb E\cosh(\beta Q_A)\),
+then
+\[
+ q_{n+m}^{\rm sym}(\beta)\le q_n^{\rm sym}(\beta)
+ +q_m^{\rm sym}(\beta)+nm\log\cosh\beta.                   \tag{6.56}
+\]
+Consequently, with
+\(f_n^+(c)=n^{-1}p_n(c/\sqrt n)\), equal splitting gives
+
+\[
+ f_n^+(c/\sqrt2)\le f_{2n}^+(c)
+ \le f_n^+(c/\sqrt2)
+ +{n\over2}\log\cosh\!\left({c\over\sqrt{2n}}\right),       \tag{6.57}
+\]
+
+whose last term tends to \(c^2/8\).  The child parameter is also
+\(c/\sqrt2\), not \(c\).  Thus the common-\(\beta\) Fekete argument leaves a
+nonvanishing per-spin defect on the critical diagonal.
+
+Nor is the critical pressure continuous in the ordinary signed cut metric.
+For every fixed \(0<c<1\), there are deterministic signings \(C_n,J_n\), on
+an infinite common sequence of orders, such that
+
+\[
+ \|C_n\|_\square,\ \|J_n\|_\square\longrightarrow0,
+ \qquad
+ \|A\|_\square={1\over n^2}\max_{S,T}
+ \left|\sum_{i\in S,j\in T}A_{ij}\right|,                  \tag{6.58}
+\]
+
+but
+
+\[
+ \limsup_n{1\over n}\log\mathbb E_x
+ \cosh\!\left({cQ_{C_n}(x)\over\sqrt n}\right)
+ \le {1\over2}\log\cosh c
+ <{c^2\over4}
+ =\lim_n{1\over n}\log\mathbb E_x
+ \cosh\!\left({cQ_{J_n}(x)\over\sqrt n}\right).             \tag{6.59}
+\]
+
+Hence ordinary dense graphon, left-, or right-convergence cannot by itself
+prove convergence of (6.52).
+
+*Proof.*  For each \(A\),
+\(\mathbb E\cosh(cQ_A/\sqrt n)\le e^{c\Phi(A)/\sqrt n}\).
+A maximizing state and its antipode contribute at least
+\(e^{c\Phi(A)/\sqrt n}/2^n\) to the normalized expectation.  Taking logs,
+then minimizing over \(A\), proves (6.53), and (6.54) follows.
+
+For (6.55), split an arbitrary signing into diagonal blocks \(B,D\) and a
+cross block \(E\).  Pairing \(y\) with \(-y\) gives
+
+\[
+ \mathbb E_{x,y}e^{\beta(Q_B(x)+Q_D(y)+x^TEy)}
+ =\mathbb E_{x,y}e^{\beta(Q_B(x)+Q_D(y))}
+   \cosh(\beta x^TEy)
+ \ge Z_B(\beta)Z_D(\beta).
+\]
+
+Conversely, begin with minimizing \(B,D\) and choose the \(nm\) entries of
+\(E\) independently.  The completion average contributes exactly
+\(\cosh(\beta)^{nm}\), so one integral completion attains the upper bound.
+For (6.56), write
+\(a_A=\mathbb E\cosh(\beta Q_A)\) and
+\(b_A=\mathbb E\sinh(\beta Q_A)\).  Replace one diagonal block by its
+negative so that \(b_Bb_D\le0\); averaging the random cross completion gives
+at most \(a_Ba_D\cosh(\beta)^{nm}\).  Equation (6.57) is (6.55) divided by
+\(2n\) at \(\beta=c/\sqrt{2n}\).
+
+Take \(C_n\) to be Paley symmetric conference signings.  Their operator norm
+is \(\sqrt{n-1}\), so (6.58) holds, and Proposition 6.9 gives the first rate
+in (6.59).  For the other sequence, let \(J\) have independent signs above
+the diagonal and set
+
+\[
+ X_J=\mathbb E_xe^{cQ_J(x)/\sqrt n},\qquad
+ M_n=\mathbb E_JX_J
+ =\cosh(c/\sqrt n)^{\binom n2}.                            \tag{6.60}
+\]
+
+For two spin states put \(z_i=x_iy_i\), \(R=\sum_i z_i\), and
+\(u=\tanh^2(c/\sqrt n)\).  Direct edge averaging gives
+
+\[
+ {\mathbb E_JX_J^2\over M_n^2}
+ =\mathbb E_z(1+u)^{(n^2+R^2-2n)/4}
+              (1-u)^{(n^2-R^2)/4}
+ \le\mathbb E_ze^{c^2R^2/(2n)}
+ \le{1\over\sqrt{1-c^2}}.                                 \tag{6.61}
+\]
+
+The last inequality follows by Gaussian linearization and
+\(\cosh t\le e^{t^2/2}\).  Paley--Zygmund therefore gives a fixed positive
+probability that \(X_J\ge M_n/2\).  Markov's inequality gives, for a fixed
+large \(K\),
+\(\mathbb E_x\cosh(cQ_J(x)/\sqrt n)\le KM_n\) with probability sufficiently
+close to one.  A Hoeffding union bound over the at most \(4^n\) cut pairs
+also gives \(\|J\|_\square=O(n^{-1/2})\) with probability tending to one.
+These events intersect, and choosing one such \(J_n\) yields a symmetric
+partition function between \(M_n/4\) and \(KM_n\).  Since
+\(n^{-1}\log M_n\to c^2/4\), this proves the second rate in (6.59).
+Finally \(c^2/4-\tfrac12\log\cosh c>0\), because its derivative is
+\((c-\tanh c)/2>0\). \(\square\)
+
+This proposition is a proved sufficient reformulation and two method
+barriers, not convergence of \(s_n(c)\) or \(\alpha_n\).  The optimized
+Bernoulli lower tail at disorder-space speed \(n^2\), or a stronger
+second-order limit object distinguishing conference from independent
+quasirandom signings, remains open.  See
+`evidence/NOTE_2026-09-02_THERMODYNAMIC_INTERPOLATION_GATE.md`.
+
+**Proposition 6.10a (product-pressure lower-curve no-go and entropy
+fallback).**  The proposed universal lower curve
+
+\[
+ \mathbb E_x\cosh\!\left({cQ_A(x)\over\sqrt n}\right)
+ \ge
+ \cosh\!\left(c\sqrt{1-{1\over n}}\right)^{n/2}           \tag{6.62}
+\]
+
+is false for every \(c>0\), already for one optimal signing of order five.
+Specifically, let \(A_5\) be negative on a five-cycle and positive on its
+five diagonals.  Its energy histogram on the sixteen antipodal cuts is
+
+\[
+ \#\{Q_{A_5}=-4,0,4\}=\{5,6,5\},\qquad \Phi(A_5)=m_5=4.  \tag{6.63}
+\]
+
+With \(t=2c/\sqrt5\), \(u=\cosh t\), and \(v=\sqrt u>1\), the two sides
+of (6.62) are respectively
+
+\[
+ {5u^2-1\over4}
+ \quad\hbox{and}\quad u^{5/2},
+ \qquad
+ u^{5/2}-{5u^2-1\over4}
+ ={(v-1)^2(4v^3+3v^2+2v+1)\over4}>0.                    \tag{6.64}
+\]
+
+There is nevertheless a universal all-temperature entropy curve.  Put
+
+\[
+ I(r)={1+r\over2}\log(1+r)+{1-r\over2}\log(1-r),
+ \qquad 0\le r\le1.                                      \tag{6.65}
+\]
+
+Then every complete signing satisfies
+
+\[
+ {1\over n}\log\mathbb E_x\cosh\!\left({cQ_A(x)\over\sqrt n}\right)
+ \ge \max\!\left(0,\sup_{0\le r\le1}
+ \left\{cr^2{\Phi(A)\over n^{3/2}}-I(r)-{\log2\over n}\right\}\right)
+                                                               \tag{6.66}
+\]
+
+and hence, by Proposition 5.2,
+
+\[
+ s_n(c)\ge \max\!\left(0,\sup_{0\le r\le1}
+ \left\{{c\sqrt{1-1/n}\over\pi}r^2-I(r)-{\log2\over n}\right\}\right).
+                                                               \tag{6.67}
+\]
+
+The large-\(c\) slope of (6.67) is only
+\(\sqrt{1-1/n}/\pi\).  Thus this unconditional fallback repackages the
+known \(1/\pi\) floor; it does not approach the construction scale
+\(1/2\) or prove convergence.
+
+*Proof.*  Equation (6.63) follows by representing a cut by a subset of size
+at most two: the empty cut and five singletons have energy zero, the five
+cycle-edge pairs have energy \(-4\), and the five diagonal pairs have energy
+\(+4\).  Averaging their hyperbolic cosines gives the first expression in
+(6.64); the factorization proves the strict reversal for all \(c>0\).
+
+The first local failure is also exact.  If
+\(C_4(A)=\sum_\gamma\prod_{e\in\gamma}a_e\), summed over the three
+unoriented four-cycles on every four-set, then
+
+\[
+ \mathbb E Q_A^4=3N^2-2N+24C_4(A),\qquad N={n\choose2}.    \tag{6.68}
+\]
+
+For \(A_5\), \(C_4(A_5)=-5\), so the fourth-derivative difference between
+the two sides of (6.62) is \(-12/5\), equivalently their difference is
+\(-c^4/10+O(c^6)\).
+
+For (6.66), choose \(x_*\) and \(\sigma_*\) with
+\(\sigma_*Q_A(x_*)=\Phi(A)\).  In the augmented representation
+\(Z_A(c)=\mathbb E_{\sigma,x}e^{\sigma cQ_A(x)/\sqrt n}\), fix
+\(\sigma=\sigma_*\) and independently bias every coordinate toward
+\(x_*\) with mean \(r\).  Its mean signed energy is \(r^2\Phi(A)\), while
+its relative entropy from the uniform augmented measure is
+\(nI(r)+\log2\).  The Gibbs variational principle gives (6.66), and
+\(Z_A(c)\ge1\) supplies the outer maximum with zero.  Proposition 5.2 and
+minimization over \(A\) give (6.67).  Finally the stationary equation is
+\(\operatorname {atanh}r=2c\sqrt{1-1/n}\,r/\pi\), and direct division by
+\(c\) proves the asserted limiting slope. \(\square\)
+
+This retires only the literal product lower curve (6.62), including methods
+whose conclusion is that same finite-order inequality.  It does not
+invalidate Proposition 6.10's optimized pressure gate or exclude a lower
+bound with an order-dependent exponential loss.  Any asymptotic universal
+curve with large-\(c\) slope \(1/2\) would, through (6.53), already prove
+the missing \(1/2\) lower bound.  See
+`evidence/NOTE_2026-09-02_PRESSURE_LOWER_CURVE_NO_GO.md`.
+
 ---
 
 ## §7. Multipartite bounds
@@ -1082,7 +2891,14 @@ m_{2n}\le 2m_n+n^{3/2},
 \end{equation}
 *Proof.* Optimal diagonal blocks; Hadamard cross \(H\); \(\|Hu\|_1\le\sqrt n\,\|Hu\|_2=n^{3/2}\) for \(u\in\{\pm1\}^n\) is not always true, but Cauchy–Schwarz gives \(|x_1^\top H x_2|\le\|x_1\|_2\|Hx_2\|_2=n^{3/2}\). \(\square\)
 
-Sylvester matrices of order \(2^\ell\), together with padding (Corollary 3.4), extend \eqref{eq:had} to all large \(n\) with an additional \(o(1)\) term in \(\alpha\).
+Sylvester orders alone do **not** have ratio-one gaps and therefore do not
+justify an \(o(1)\) extension to every \(n\).  Instead choose a prime
+\(q\equiv3\pmod4\) with \(n\le q+1=n+o(n)\), use the Paley Hadamard matrix
+of order \(q+1\), and compress it to any \(n\)-by-\(n\) submatrix \(C\).
+Then \(\|C\|_{\rm op}\le\sqrt{q+1}=(1+o(1))\sqrt n\); using \(C\) between
+two optimal order-\(n\) diagonal blocks proves the asymptotic version of
+\eqref{eq:had}.  The prime-number theorem in this fixed progression
+(quantified in (6.21)) supplies the ratio-one Hadamard orders.
 
 **Remark.** Filling cross blocks with the constant signing \(+1\) yields error \(\binom{k}{2}n^2\) in \(m_{kn}\), hence error \(\Theta(\sqrt{kn})\) in \(\alpha_{kn}\), which tends to infinity as \(n\to\infty\) and cannot be used for limit arguments at fixed \(k\).
 
@@ -1905,7 +3721,7 @@ Hence **\(k_\star=O(n^{3/2})\) already forces \(\alpha_n\to\tfrac12\)** along th
 
 **Proposition 15.30 (matching spike criterion; 2026-07-27).** Let \(C\) be Paley of order \(n=p^2+1\), \(\Phi=\tfrac12 np\), and \(M\) a perfect matching of \(K_n\). Write \(A=C\oplus M\) and \(S_M(x)=\sum_{\{i,j\}\in M}C_{ij}x_ix_j\).
 
-1. **Criterion (proved).** If there exists \(x\in\{\pm1\}^n\) with \(S_M(x)=-p\) and \(Q_C(x)\ge\Phi-2p\) (or \(S_M(x)=p\) and \(Q_C(x)\le-(\Phi-2p)\)), then \(\Phi(A)\ge\Phi(C)\).  
+1. **Criterion (proved).** If there exists \(x\in\{\pm1\}^n\) with \(S_M(x)=-p\) and \(Q_C(x)\ge\Phi-2p\) (or \(S_M(x)=p\) and \(Q_C(x)\le-(\Phi-2p)\)), then \(\Phi(A)\ge\Phi(C)\).
    *Proof.* \(Q_A=Q_C-2S_M\), so the first alternative yields \(Q_A(x)\ge\Phi-2p+2p=\Phi\). \(\square\)
 
 2. **Single-bit drop.** For \(y\in\mathrm{Max}_{+}\) and any coordinate \(i\), \(Q_C(y^{\oplus i})=\Phi-2p\). Hence non-max boolean vectors attain at least the level \(\Phi-2p\). At \(p=3\) this is exact as the global second max of \(|Q_C|\) on non-max vectors (full half-cube). At \(p=5\) sampling finds second max \(55=\Phi-2p\).
@@ -2671,7 +4487,7 @@ Q(B):=\sum_{y\in\mathrm{Max}_{+}}(y^\top By)^2.
 
 **Proposition 15.62 (typeA+wedge identity; \(Q=6N\|B\|_F^2+Q_4\); 2026-07-30).** Continue Prop 15.61. Let \(B\) be real symmetric \(n\times n\) with \(B=P_+BP_+\) and zero ambient diagonal (hence \(\mathrm{Tr}\,B=0\) automatically). Write \(Q(B)=\sum_{y\in\mathrm{Max}_{+}}(y^\top By)^2\). Index unordered edges \(e=\{i,j\}\) by \(Be_e:=2B_{ij}\) and \(f_e(y):=y_iy_j\), so \(y^\top By=\sum_e Be_e f_e(y)\). Let \(\mathrm{Gu}=F^\top F\) with \(F\) the \(N\times E\) matrix of features \(f_e\) on Max+, and split pairs of distinct edges into **wedge** (share a vertex) and **disjoint**.
 
-1. **Type A (same-edge; proved).** 
+1. **Type A (same-edge; proved).**
    \[
    \sum_e Be_e^2\sum_y f_e(y)^2=N\|Be\|_2^2=2N\|B\|_F^2,
    \]
@@ -2693,7 +4509,7 @@ Q(B):=\sum_{y\in\mathrm{Max}_{+}}(y^\top By)^2.
    \]
    \(\square\)
 
-3. **Identity (proved).** 
+3. **Identity (proved).**
    \[
    Q(B)=6N\|B\|_F^2+Q_4(B),\qquad Q_4(B):=Be^\top(\mathrm{Gu}\odot\mathbf1_{\mathrm{disj}})Be.
    \]
@@ -2770,7 +4586,7 @@ H(p)\,:=\,\frac{(p+2)^2}{d},\qquad d=\frac{p^2+1}{2}.
 
 **Proposition 15.65 (κ spectrum on \(\mathcal Z\); clean form \(\lambda_2(P\odot P)\le4/N\); boolean essential; 2026-07-30).** Continue Prop 15.64. Write \(P=YY^\top/(2N)\) (equal-diagonal orthoprojector of rank \(d\), diagonal \(\alpha=d/N\), and \(P\mathbf1=0\)).
 
-1. **Clean equivalences (proved).** 
+1. **Clean equivalences (proved).**
    \[
    P\odot P=\alpha^2 W,\qquad W_{ab}=(u_a\cdot u_b)^2,\quad u_a=y_a/\sqrt n.
    \]
@@ -2814,7 +4630,7 @@ H(p)\,:=\,\frac{(p+2)^2}{d},\qquad d=\frac{p^2+1}{2}.
    \]
    hence \(g_{\min}\ge L(p)>T(p)\), and Prop 15.47 closes bi-tight. \(\square\)
 
-3. **Certified m4 tables on \(|\kappa|=1\).**  
+3. **Certified m4 tables on \(|\kappa|=1\).**
    | \(p\) | \(g_{\min}\) | \(L(p)\) | \(\max|m_4|\) | \(\max|m_4-\kappa/p^2|\) | resid crit. |
    |------|------------|---------|--------------|--------------------------|-------------|
    | 3 | \(-1/3\) | \(-1/18\) | \(1/3\) | \(2/9\) | n/a (\(p<5\)) |
@@ -3599,7 +5415,7 @@ Evidence: `src/e1_gmin_m4_prop1585.py`, `evidence/e1_gmin_m4_prop1585.json` (Fra
 
 **Proposition 15.86 (Wick mean sign \(\varepsilon(p)\); \(\tau_1\) spectrum; residual budgets; Max+-free; 2026-07-30).** Continue Prop 15.79–15.80. Write \(n_1=\#\{|\kappa|=1\}=n(n-1)(n-2)^2/32\) and \(\mathrm{star}\cdot\tau_1\) for the Aut-constant combinatorial score of Prop 15.79 on each \(|\kappa|=1\) 4-set.
 
-1. **Sum formula (certified multi-W pure \(C\), \(p\in\{3,5,7,11\}\); form for all odd primes).** 
+1. **Sum formula (certified multi-W pure \(C\), \(p\in\{3,5,7,11\}\); form for all odd primes).**
    \[
    \sum_{|\kappa|=1}\mathrm{star}\cdot\tau_1
    \;=\;
@@ -3831,9 +5647,9 @@ Evidence: `src/e1_gmin_m4_prop1591.py`, `evidence/e1_gmin_m4_prop1591.json` (Fra
    \]
    Frame form: if \(U=S/\sqrt{2N}\) (\(U^\top U=I_d\)), then \(\lambda_2(P\odot P)=\max_{\|x\|=1,\,x\perp\mathbf1}\|U^\top\mathrm{diag}(x)\,U\|_F^2\). \(\square\)
 
-4. **\(W\) spectrum (certified \(p=3,5\)).**  
-   - \(p=3\): \(\{N/d\,(\times1),\,48/25\,(\times d)\}\); top \(=N(6+2H)/(4d^2)\) (H-equality).  
-   - \(p=5\): \(\{N/d\,(\times1),\,880/169\,(\times d),\,720/169\,(\times2d),\,400/169\,(\times2d)\}\); top \(=\) H-threshold; \(\mathrm{rank}=\binom{d-1}{2}=66\).  
+4. **\(W\) spectrum (certified \(p=3,5\)).**
+   - \(p=3\): \(\{N/d\,(\times1),\,48/25\,(\times d)\}\); top \(=N(6+2H)/(4d^2)\) (H-equality).
+   - \(p=5\): \(\{N/d\,(\times1),\,880/169\,(\times d),\,720/169\,(\times2d),\,400/169\,(\times2d)\}\); top \(=\) H-threshold; \(\mathrm{rank}=\binom{d-1}{2}=66\).
    \(\square\)
 
 5. **What remains OPEN.** Prove \(\lambda_2(W)\le N(3+H)/(2d^2)\) (hypothesis H) or the weaker \(\lambda_2(W)\le4N/d^2\) (16N, sufficient for bi-tight when \(p\ge5\)) for all primes \(p\ge5\). Preferred language: \(\lambda_2(P\odot P)\le4/N\) on the Max+ design projector. Deep non-tight still required for \(L=\lim\alpha_n\). **Existence of \(\lim\alpha_n\) remains OPEN. \(H_{\mathrm{proved}}=\mathrm{false}\).**
@@ -4390,16 +6206,20 @@ Paley \(\Phi\) and maximizer counts (half-cube, \(x_1=+1\)):
 | 14 | 21 | 156 | 0.401 |
 | 18 | 33 | 204 | 0.432 |
 
-Local-search upper bounds on \(m_n\) (86-worker SA with **exact** \(\phi\) for \(n\le12\); reconfirmed under SCRATCH `attack_paley_product`):
+Exact values where stated, together with older local-search upper bounds
+(86-worker SA with **exact** \(\phi\) for \(n\le12\); reconfirmed under
+SCRATCH `attack_paley_product`):
 
 | \(n\) | best \(\Phi\) found | notes |
 |------:|--------------------:|:------|
 | 6 | 5 | hits Paley / exact \(m_6\) |
 | 8 | 10 | matches exact \(m_8\) |
 | 10 | **13** | matches exact \(m_{10}\) |
-| 11 | **17** | matches independent witness UB; exact \(m_{11}\) claimed \(=17\) (cut-code package) |
-| 12 | **20** | SA exact-\(\phi\) UB |
-| 14 | \(\ge21\) | Paley \(\Phi(C)=21\); SA product-\(r\) never undercuts Paley \(r\) |
+| 11 | **17** | exact external cut-code certificate independently replayed in full |
+| 12 | **18** | checked witness; exact from \(m_{11}=17\), monotonicity, and even parity |
+| 13 | **20** | exact published threshold certificate; local survivor/witness checks passed, billion-record completeness externally trusted |
+| 14 | **21** | checked Paley witness; exact from \(m_{13}=20\), monotonicity, and odd parity |
+| 15 | **27** | exact published threshold-tower certificate; local top checks passed, tower completeness externally trusted |
 | 16 | 34 | prior local \(\phi\) only |
 
 Product ratio \(r\) at Paley orders (86-worker SA): at \(n=6,14\) no sample undercuts \(\rho(C)\); consistent with E(1) at these orders but not a proof.
@@ -4416,8 +6236,11 @@ pytest tests/test_minmax.py -v
 # Prop 5.2 dual-Gaussian; Prop 15.1–15.23; m_6 exact opt; m_9=12,m_10=13 recorded)
 ```
 
-Exact \(m_n\) harvest under SCRATCH (86-worker Gray `exact_m_parallel.py`):
-\(m_6=5,\;m_7=9,\;m_8=10,\;m_9=12,\;m_{10}=13\).
+The local Gray harvest gives
+\(m_6=5,\;m_7=9,\;m_8=10,\;m_9=12,\;m_{10}=13\).  External certificate
+audits extend the exact table to
+\(m_{11},\ldots,m_{15}=17,18,20,21,27\), with the large-stream trust
+boundaries recorded separately rather than presented as local reruns.
 
 ---
 
@@ -4428,7 +6251,7 @@ Exact \(m_n\) harvest under SCRATCH (86-worker Gray `exact_m_parallel.py`):
 | 1. Exact limit quantity | Yes (Statement) |
 | 2. Existence (\(\liminf=\limsup\)) | **Open** — sandwich now \(1/\pi\le\liminf\le\limsup\le1/2\) (Prop 5.2); direct closure can use the two Dini-summable rays of Prop 6.3; the stronger Paley route still needs global E(1)+E(2); certified non-existence is the third alternative |
 | 3. Equivalence | §1 complete |
-| 4. Numerics | §18 + shipped tests + multi-core Gray exact \(m_{\le10}\), dual-Gauss checks, m11 witness, Paley/product SA under SCRATCH |
+| 4. Numerics | §18 + shipped tests + exact \(m_{\le15}\) with explicit local/external trust boundaries, dual-Gauss checks, and Paley/product SA under SCRATCH |
 | 5. Honest obstruction analysis | §9–§17 |
 
 ---
@@ -4515,7 +6338,7 @@ as a Fraction inequality for all primes \(p\ge 3\). Hence 16N and (Prop 15.61) b
    \]
    (Fickus residual-Gram method transfer, arXiv:2605.28738.)
 
-4. **Parseval \(\delta\)-target (single scalar residual).**  
+4. **Parseval \(\delta\)-target (single scalar residual).**
    \[
    \mathrm{orth}\le\mathrm{room}_{\mathrm{hyp}}
    \;\Leftrightarrow\;
@@ -4605,7 +6428,7 @@ Evidence: `src/e1_gmin_m4_prop15110.py`, `evidence/e1_gmin_m4_prop15110.json`, `
    -\tfrac12\sum_i(CB)_{ii}^2-\tfrac12\sum_i(BC)_{ii}^2.
    \]
 
-2. **α_κ on Z.** On \(Z\) (\(CB=pB=BC\), ambient diag\(B=0\)): 
+2. **α_κ on Z.** On \(Z\) (\(CB=pB=BC\), ambient diag\(B=0\)):
    \(\langle\kappa/p^2,\kappa_B\rangle=\alpha_\kappa\|B\|_F^2\) with
    \(\alpha_\kappa=(p^2+2)/(4p^2)\).
 
@@ -13087,8 +14910,9 @@ then the layer values are \(3,1,0,0,1\) and
 \(4p\mathbb EB=2p-10=p+9\). This local object is not asserted to be a
 residual graph. The endpoint \(p=13\), the prior \(p\le11\) gate, and the
 layers beyond (15.752.15) remain open. Proposition 15.753 below closes the
-two other fifth-shell endpoints \(p=17,19\). Residual (ii), E(1),
-\(L=1/2\), and the original convergence problem are not closed.
+two other fifth-shell endpoints \(p=17,19\), and Proposition 15.754 closes
+the \(p=13\) endpoint. Residual (ii), E(1), \(L=1/2\), and the original
+convergence problem are not closed.
 
 Evidence: `src/e1_gmin_m4_prop15752.py`,
 `tests/test_prop15752.py`,
@@ -13263,11 +15087,1361 @@ excluded, proving (15.753.1). Together with Proposition 15.752,
 \]
 
 Among \(p\ge13\), this leaves \(p=13,k=60,u=6\) as the sole fifth-shell
-hole; the prior \(p\le11\) gate also remains. It does not close later shells,
-residual (ii) globally, E(1), or the original convergence problem. Evidence:
+hole; Proposition 15.754 below closes that endpoint. The prior \(p\le11\)
+gate still remains. Proposition 15.753 does not close later shells, residual
+(ii) globally, E(1), or the original convergence problem. Evidence:
 `src/e1_gmin_m4_prop15753.py`,
 `tests/test_prop15753.py`, `evidence/e1_gmin_m4_prop15753.json`, and
 `evidence/NOTE_2026-09-01_P17_P19_FIFTH_SHELL_CLOSE.md`.
+
+## Proposition 15.754 — the p13 fifth-shell endpoint closes
+
+There is no residual-(ii) boundary in the last fifth-shell branch
+
+\[
+                    (p,t,k,u)=(13,4,60,6).          \tag{15.754.1}
+\]
+
+This is an exhaustive finite aggregate/common-form certificate and a proved
+endpoint theorem. It is not a graph, orbit, cell, support, or common-
+realization census.
+
+There are seven hard projective directions. Write their local means as
+
+\[
+ a_L=12+14e_L,\qquad e_L\ge0,\qquad \sum_Le_L=5.   \tag{15.754.2}
+\]
+
+Thus at least two directions have \(e_L=0\), and the exact floor
+classification makes each such row a \(b=2\) XNOR row. Solving the full
+coefficient-offset congruence and gluing the unspecialized row sums to the
+common signed edge total, before normalizing any individual row, gives
+
+\[
+ (|E_h|,|E_{-h}|)=(33,28),\quad hT=5,\quad
+ P_L=4+e_L.                                        \tag{15.754.3}
+\]
+
+The phase-zero and integral-lift floors exclude opposite parallel count
+three, so all seven opposite directions have \(Q_L=4\). If
+\(q_L=(q_L(1),\ldots,q_L(6))\) is the nonzero distance row, every hard row
+of excess \(e\) and every opposite row respectively satisfy
+
+\[
+\begin{array}{c|c|c|c}
+ &\sum_aq_L(a)&\sum_a|q_L(a)|&c_X\mathbin\cdot q_L\quad(74\text{ cuts})\\ \hline
+ \text{hard }e&1-e&\le57-e&\le13\\
+ \text{opposite}&-9&\le57&\le-52.
+\end{array}                                        \tag{15.754.4}
+\]
+
+An exact XNOR row has energy one. The common difference-Radon Parseval
+identity therefore makes the required energy of the nonexact rows
+
+\[
+                         B_\lambda+26C,             \tag{15.754.5}
+\]
+
+where \(C=\sum_\delta {m_\delta\choose2}\) is the displacement-collision
+count. The seven positive partitions of the total excess five, their exact
+XNOR root counts, collision minima, and bases are
+
+\[
+\begin{array}{c|rrrrrrr}
+\lambda&(1^5)&(2,1^3)&(2,2,1)&(3,1,1)&(3,2)&(4,1)&(5)\\ \hline
+\#\text{ roots}&2&3&4&4&5&5&6\\
+C_{\min}&0&0&0&1&1&2&3\\
+B_\lambda&303&298&293&289&284&276&259.
+\end{array}                                        \tag{15.754.6}
+\]
+
+We exclude these seven partitions in three exact regimes.
+
+For \((1^5)\) and \((2,1^3)\), use the common binary forms
+
+\[
+                 U=hM_2,\qquad G=hM_4-M_2^2.       \tag{15.754.7}
+\]
+
+The exact XNOR directions are roots of \(G\), so after factoring their root
+product only the remaining coefficients are free. For both hard signs,
+every exact-root set and every excess assignment, exhaustive finite-field
+coefficient enumeration against the exact row-energy tables gives maximum
+separable nonexact energies \(293\) and \(290\), respectively. The raw
+energy/collision ledger leaves only \(C=0,1,2\); throughout those strata
+
+\[
+ 293<303+26C,\qquad 290<298+26C.                    \tag{15.754.8}
+\]
+
+For the two four-root partitions \((2,2,1)\) and \((3,1,1)\), the common
+forms refine to
+
+\[
+ U=hM_2,\qquad G=R_4c,\qquad
+ J_6=h(M_6-M_2^3)=R_4Q_2.                          \tag{15.754.9}
+\]
+
+The opposite normalization is sign-sensitive. With
+\(N_{2r}=(-h)M_{2r}\), the hard and opposite table keys are
+
+\[
+\begin{array}{c|c}
+\text{hard}&(U,G,J_6)=(N_2,N_4-N_2^2,N_6-N_2^3),\\
+\text{opposite}&(U,G,J_6)=(-N_2,-N_4-N_2^2,-N_6+N_2^3).
+\end{array}                                        \tag{15.754.10}
+\]
+
+In particular the exact sixth-moment weight vector is
+
+\[
+                         W_6=(1,12,1,1,12,12),      \tag{15.754.11}
+\]
+
+computed in ordinary integers before reduction modulo thirteen. The
+explicit coefficient join checks both hard signs, all 70 hard-sign/root-set
+choices, all excess assignments, and the complete exact row-energy bitsets.
+For each partition it starts with \(218{,}320{,}284\) form triples, leaves
+336 after all seven opposite rows, and performs 1,008 hard-assignment checks.
+No target energy survives: \((2,2,1)\) is excluded for \(C=0,1,2,3\), and
+\((3,1,1)\) for \(C=1,2,3,4\). Those are exactly their collision ranges.
+
+Finally, each of \((3,2),(4,1),(5)\) has at least five exact XNOR roots.
+The binary quartic \(G\) is therefore identically zero, so every remaining
+hard row has \(N_4=N_2^2\), whereas every opposite row has
+\(N_4=-N_2^2\). Exact one-worker six-bin models impose this relation, all
+74 translated cuts, and the signed six-positive/seven-negative collision
+floor. The resulting ledgers are
+
+\[
+\begin{array}{c|c}
+(3,2)&310>288,\\
+(4,1)&\text{gaps }28,50\quad(C=2,3),\\
+(5)&\text{gaps }38,42,56,58,82\quad(C=3,4,5,6,7).
+\end{array}                                        \tag{15.754.12}
+\]
+
+The raw bounds exclude larger collision counts, so (15.754.6) is exhausted
+and (15.754.1) follows. Together with Propositions 15.752--15.753,
+
+\[
+ \boxed{k=4p+8\text{ is impossible for every prime }p\ge13.} \tag{15.754.13}
+\]
+
+This closes the fifth shell, not residual (ii) globally. The exact live
+remainder still includes critical \(p=5,7\), \(p=11,k\ge50\), later p13
+layers, layers beyond Proposition 15.752's band, and the positive
+\(p=7,z=7\) boundary systems where separately tracked. Thus residual (ii),
+E(1), \(L=1/2\), and the original convergence problem remain open.
+
+Evidence: `src/e1_gmin_m4_prop15754.py`,
+`src/p13_u6_cut_equalities.py`, `src/p13_u6_high_root_energy.py`,
+`scripts/p13_u6_joint_ug_tables.py`,
+`scripts/p13_u6_low_root_ug_bound.py`,
+`scripts/p13_u6_four_root_ugj.py`, `tests/test_prop15754.py`,
+`evidence/e1_gmin_m4_prop15754.json`,
+`evidence/e1_gmin_m4_prop15754_low_root_ug.json`,
+`evidence/e1_gmin_m4_prop15754_four_root_221.json`,
+`evidence/e1_gmin_m4_prop15754_four_root_311.json`, and
+`evidence/NOTE_2026-09-02_P13_U6_COMMON_FORM_CLOSE.md`.
+
+The next five propositions use the separately audited reductions recorded as
+Propositions 15.755--15.756.  Those reductions leave a common simple graph
+\(H\), and rule out a boundary-only Weil estimate as the missing input.  The
+full edge--Radon map of that one graph is therefore the object below.  The
+numbering follows the audited source records even though the full proof
+sections for 15.755--15.756 are not reproduced here.
+
+## Proposition 15.757 — exact binary edge--Radon image
+
+Let \(V=\mathbf F_p^2\), where \(p\) is odd.  In every one of the \(p+1\)
+projective directions \(L\), record modulo two the off-diagonal fibre-pair
+counts \(K_L(s,t)\), \(s<t\), and the total parallel count \(P_L\).  Denote
+the resulting map on simple edge variables by \(R_2\).  Then
+
+\[
+ \operatorname {rank}_{\mathbf F_2}R_2
+  =p^2-1+(p+1){p-1\choose2}.                         \tag{15.757.1}
+\]
+
+Its image is exactly the data with a common even boundary word and the
+ordinary total-parity compatibilities: the row boundaries of the fibre
+graphs are the affine Radon transforms of one even word on (V),
+
+\[
+ P_L+\sum_{s<t}K_L(s,t)=h\quad\hbox{for every }L,
+ \qquad \sum_LP_L=h                                  \tag{15.757.2}
+\]
+
+in \(\mathbf F_2\).  There are no further binary cross-direction
+conditions.
+
+Indeed, split the off-diagonal \(K_p\)-edge space in direction \(L\) into
+its row-boundary quotient and Eulerian cycle space.  Proposition 15.692
+identifies the direct sum of all row-boundary quotients with the even point
+space, of dimension \(p^2-1\).  Over an algebraic closure of
+\(\mathbf F_2\), the cycle space in direction \(L\) has basis
+
+\[
+ \zeta^{as+bt}+\zeta^{bs+at},
+ \qquad \{a,b\}\subset\mathbf F_p^*,\ a\ne b.       \tag{15.757.3}
+\]
+
+It therefore has dimension \({p-1\choose2}\).  Distinct projective
+directions have disjoint nonzero Fourier support in \((V^*)^2\), so their
+cycle spaces are independent.  The \(p+1\) independent equations in
+(15.757.2) give the remaining codimension, proving (15.757.1) and
+completeness.
+
+This binary theorem does not eliminate the sharp local survivor.  For
+distinct \(a,b,c\),
+
+\[
+ B=x_ax_b+x_c-x_ax_c-x_bx_c\in\{0,1\},\qquad
+ 4B=1+z_az_b-z_az_c-z_bz_c,                          \tag{15.757.4}
+\]
+
+and on \(J(p,(p+1)/2)\),
+
+\[
+                         4p\,\mathbf EB=p+1.          \tag{15.757.5}
+\]
+
+Its coefficient graph is an Eulerian signed triangle modulo two.  The
+omitted-pair and all-equal-triple atoms of scaled mass \(p-3\) are Eulerian
+as well.  For the compact aggregate rows, the hard boundary words are one
+on every fibre except their literal fibre and the opposite boundary words
+vanish.  Prescribing the corresponding Fourier coefficients independently
+on the \(p+1\) dual lines gives one even point word; (15.757.2) follows from
+the common odd edge total and \(\sum_LP_L=|H|\).  Hence every such compact
+aggregate target in the recorded `p=1 mod 4` family has a binary edge lift.
+
+This is a proved image theorem and a proved method barrier, not a graph
+construction.  It controls neither integral signed multiplicities nor the
+nonnegative simple-edge box.  Residual (ii), E(1), and the limit remain
+open.
+
+Evidence: `src/e1_gmin_m4_prop15757.py`,
+`tests/test_prop15757.py`, and `evidence/e1_gmin_m4_prop15757.json`.
+
+## Proposition 15.758 — sharp coefficient cancellation and two local rays
+
+Put \(m=(p+1)/2\) and \(z_i=2x_i-1\) on \(J(p,m)\), so
+\(\sum_i z_i=1\).  Once the offset \(P\) is fixed, the representation
+
+\[
+             4B=P+\sum_{i<j}K_{ij}z_iz_j             \tag{15.758.1}
+\]
+
+is unique, and
+
+\[
+             4p\,\mathbf EB=pP-\sum_{i<j}K_{ij}.     \tag{15.758.2}
+\]
+
+If \(a,b\ge0\), \(P=a+b\), and the prescribed scaled mass is
+\(a(p-3)+b(p+1)\), then every representation has
+\(\sum K_{ij}=3a-b\), and the exact minimum coefficient norm, even among
+nonnegative integer-valued quadratics, is
+
+\[
+ \min\sum_{i<j}|K_{ij}|=
+ \begin{cases}
+ |3a-b|,&|3a-b|\ne1,\\
+ 3,&|3a-b|=1.
+ \end{cases}                                        \tag{15.758.3}
+\]
+
+The lower bound is \(\sum|K_{ij}|\ge|\sum K_{ij}|\).  If the latter is one,
+norm one would make two cube values differ by two modulo four, while norm
+two has the wrong parity.  The bounds are attained on three coordinates.
+Writing \(T=z_1z_2+z_1z_3+z_2z_3\), the four forms
+
+\[
+ 1+T,\quad3-T,\quad1+z_1z_2-z_1z_3-z_2z_3,
+ \quad2-2z_1z_2                                      \tag{15.758.4}
+\]
+
+are four times nonnegative integral quadratics and carry, respectively,
+one \(p-3\) unit, three \(p+1\) units, one \(p+1\) unit, and two \(p+1\)
+units.  In particular three opposite sharp atoms cancel one same-sign atom
+to a constant; no coefficient-capacity lower bound growing with \(a+b\)
+can be valid.
+
+There are also two infinite local directional survivor rays.  For a prime
+\(p=4r+1\ge17\), branch B with \(u=0\), they exist throughout
+
+\[
+       2r^2-5r\le t\le4r^2-6r-3.                    \tag{15.758.5}
+\]
+
+There are \(m=2r+1\) hard and \(m\) opposite directions.  The hard rows
+have \(e_L\ge0\), \(\sum e_L=t\), cell \(x_j+2B\), and
+
+\[
+ 4p\,\mathbf EB=e_L(p+1),\qquad P_L=5+e_L.          \tag{15.758.6}
+\]
+
+The opposite rows have \(Q_L\ge r\), \(\sum Q_L=6r+t\), and half-lift mass
+
+\[
+ (r-1)(p-3)+(Q_L-r)(p+1)=(p+1)Q_L-2p+4.             \tag{15.758.7}
+\]
+
+For a prime \(p=4r+3\ge19\), branch C with \(u=m-1\), the interval is
+
+\[
+       2r^2-4r-2\le t\le4r^2-2r-5.                  \tag{15.758.8}
+\]
+
+Now \(m=2r+2\), \(\sum e_L=t+1\), the hard cell is
+\(1-x_j+2B\), and
+
+\[
+ 4p\,\mathbf E(\text{hard row})=p-1+e_L(p+1),
+ \qquad P_L=3+e_L.                                  \tag{15.758.9}
+\]
+
+The opposite rows have \(Q_L\ge r+2\),
+\(\sum Q_L=10r+6+t\), and half-lift mass
+
+\[
+ (r-1)(p-3)+(Q_L-r-2)(p+1)=(p+1)Q_L-4p+4.           \tag{15.758.10}
+\]
+
+Balanced allocations satisfy every isolated-chart residue, offset, parity,
+directional mean, parallel-edge, and local nonnegative-integral cell
+condition, with all \(p+1\) affine directions present and \(I=0\) at the
+transported infinity point.  At the lower endpoint of either interval and
+for every \(r\ge7\), the exact compact-template row-energy upper value
+strictly exceeds the common difference--Radon Parseval lower value.  Thus
+scalar Parseval supplies no contradiction on either ray.
+
+These are local directional targets, not the images of a constructed
+common graph.  The exact remaining issue is simultaneous integral
+midpoint/difference--Radon consistency for one simple \(0/1\) graph.
+Residual (ii), E(1), and the limit remain open.
+
+Evidence: `src/e1_gmin_m4_prop15758.py`,
+`tests/test_prop15758.py`, and `evidence/e1_gmin_m4_prop15758.json`.
+
+## Proposition 15.759 — complete characteristic-\(p\) moment hierarchy
+
+For the integral edge--Radon rows of one graph on \(V=\mathbf F_p^2\), set
+
+\[
+ Q_{d,k}(s,t)=(s-t)^2(st)^k(s+t)^{d-2-2k},\qquad
+ C_{d,k}(L)=\sum_{s<t}K_L(s,t)Q_{d,k}(s,t).          \tag{15.759.1}
+\]
+
+For \(2\le d\le p-2\), \(0\le k<\lfloor d/2\rfloor\), and
+\(0\le j\le p-d-2\), one has
+
+\[
+             \sum_{\lambda\in\mathbf F_p}
+             \lambda^jC_{d,k}(L_\lambda)=0\pmod p,  \tag{15.759.2}
+\]
+
+and the projective endpoint relation is
+
+\[
+ \sum_{\lambda\in\mathbf F_p}\lambda^{p-d-1}
+ C_{d,k}(L_\lambda)+C_{d,k}(L_\infty)=0\pmod p.     \tag{15.759.3}
+\]
+
+Equation (15.759.3) also applies at \(d=p-1\).  If \(p=2m+1\), retain
+\(m-1\) of its \(m\) rows: their missing line is the ordinary total row
+\((s-t)^{p-1}\), since, with \(D=(s-t)^2\),
+
+\[
+ D^m=\sum_{k=0}^{m-1}{m-1\choose k}(-4)^kQ_{p-1,k}, \tag{15.759.4}
+\]
+
+and every coefficient is nonzero modulo \(p\).
+
+These moment rows are independent and exhaust the characteristic-\(p\)
+left kernel beyond the \(p+1\) ordinary compatibility equations.  Their
+number is
+
+\[
+ \begin{split}
+ S(p)&=\sum_{d=2}^{p-2}\Big\lfloor{d\over2}\Big\rfloor(p-d)+(m-1)\\
+     &={(m-1)(4m^2+7m+6)\over6}.                   \tag{15.759.5}
+ \end{split}
+\]
+
+For the proof, use midpoint and half-difference coordinates
+\(a=(s+t)/2\), \(\delta=(s-t)/2\).  Symmetric pair functions with one common
+diagonal value have the unique basis
+
+\[
+ 1;\qquad a^i\delta^{2b},\quad0\le i\le p-1,
+ \quad1\le b\le m.                                  \tag{15.759.6}
+\]
+
+Pullback along the \(p+1\) projective functionals separates these bidegree
+blocks.  For fixed \(i,b\), the directional rank is
+
+\[
+                    \min(p+1,i+2b+1).               \tag{15.759.7}
+\]
+
+When \(i+2b<p\), this is ordinary Vandermonde rank.  In the remaining range
+the only finite-field aliases are exponents differing by \(p-1\), and the
+infinity vector separates the final aliased pair.  The constant and the
+the \((i,b)=(0,m)\) block are disjoint: a degree-\(p-1\) homogeneous form
+constant on every nonzero difference has \(p\) finite-chart roots after
+subtracting that constant, and evaluation at infinity forces it to vanish.
+Summing (15.759.7) gives the target rank minus \(p+1+S(p)\), proving
+exhaustion.  Alternatively, (15.759.2)--(15.759.3) follow edgewise from
+the vanishing of every field power sum of degree at most \(p-2\).
+
+In residual normalization, multiply every finite outer coefficient and the
+infinity term by its direction sign; the source-edge and direction-block
+sign changes are unimodular and do not change the rank.  This is a genuine
+common-edge obstruction beyond Proposition 15.757.  It has not yet been
+shown that the compact atoms satisfy every row above degree four, so no
+compact ray, simple graph, or residual case is excluded here.
+
+Evidence: `src/e1_gmin_m4_prop15759.py`,
+`tests/test_prop15759.py`, and `evidence/e1_gmin_m4_prop15759.json`.
+
+## Proposition 15.760 — the integral image is cut out by the moments
+
+Let \(R:\mathbf Z^{\binom V2}\to T\) be the unsigned full edge--Radon map,
+and let \({\cal A}\subset T\) be the ordinary compatibility lattice
+
+\[
+ {\cal A}=\left\{(P_L,K_L):
+ T_L=P_L+\sum_{s<t}K_L(s,t)=h\ (\text{all }L),\quad
+ \sum_LP_L=h\right\}.                               \tag{15.760.1}
+\]
+
+For every odd prime \(p=2m+1\),
+
+\[
+             {\cal A}/R\mathbf Z^{\binom V2}
+             \cong(\mathbf Z/p\mathbf Z)^{S(p)},
+ \qquad S(p)={(m-1)(4m^2+7m+6)\over6}.              \tag{15.760.2}
+\]
+
+Consequently an integral target lies in the image if and only if it
+satisfies (15.760.1) and every congruence of Proposition 15.759.  There is
+no hidden \(p^2\)-torsion and no obstruction at another prime.
+
+Here is the integral argument.  Taking directional-total differences and
+\(\sum_LP_L-T_{L_0}\) defines a split-surjective constraint map, so
+\({\cal A}\) is primitive.  Sum the \(K_L(a,\beta)\) coordinates over the
+midpoint \(a\), retaining \(P_L\).  This gives an exact sequence
+
+\[
+             0\longrightarrow M\longrightarrow{\cal A}
+              \longrightarrow{\cal A}_D\longrightarrow0,     \tag{15.760.3}
+\]
+
+where \(M\) is generated by
+\(K_L(a,\beta)-K_L(a_0,\beta)\).  Forgetting the edge midpoint gives
+
+\[
+ 0\longrightarrow E_0\longrightarrow E
+   \longrightarrow\mathbf Z^\Delta\longrightarrow0,
+ \qquad \Delta=(V\setminus\{0\})/\{\pm1\}.          \tag{15.760.4}
+\]
+
+The induced pure-difference map \(S\) has one column
+
+\[
+ S e_{[\delta]}=P_{L_\delta}+
+        \sum_{L\ne L_\delta}e_{(L,L(\delta)^2)}.      \tag{15.760.5}
+\]
+
+Exact row intersections give \(p{\cal A}_D\subseteq\operatorname{im}S\),
+while reduction modulo \(p\) has rank \((m+1)^2\).  Hence
+
+\[
+               \operatorname {coker}S
+                \cong(\mathbf Z/p\mathbf Z)^{m^2-1}. \tag{15.760.6}
+\]
+
+For the midpoint kernel, if \(L(\delta)^2=\beta\), put
+
+\[
+ X_a=\sum_{u:L(u)=a}\{u-\delta,u+\delta\}.
+\]
+
+Then all other directions cancel exactly and
+
+\[
+ R_0(X_a-X_{a'})=p\bigl(K_L(a,\beta)-K_L(a',\beta)\bigr).      \tag{15.760.7}
+\]
+
+Together with the bidegree ranks of Proposition 15.759 this yields
+
+\[
+ \operatorname {coker}R_0\cong
+ (\mathbf Z/p\mathbf Z)^{m(m-1)(4m+1)/6}.            \tag{15.760.8}
+\]
+
+The snake lemma applied to (15.760.3)--(15.760.5) gives
+
+\[
+ 0\longrightarrow\operatorname {coker}R_0
+  \longrightarrow\operatorname {coker}R
+  \longrightarrow\operatorname {coker}S\longrightarrow0.     \tag{15.760.9}
+\]
+
+Thus the middle group has order \(p^{S(p)}\).  Proposition 15.759 shows
+that it needs \(S(p)\) generators modulo \(p\); its invariant factors must
+therefore all equal \(p\), proving (15.760.2).  Diagonal source and target
+signs transport the result verbatim to the residual normalization.
+
+This exhausts linear divisibility and Smith-form obstructions, but it gives
+only an unrestricted signed integral preimage.  If \(\tau_e\) is the source
+edge sign and \(z_0\) is one integral lift, a simple graph exists exactly
+when
+
+\[
+ (z_0+\ker_{\mathbf Z}R)\cap
+                  \prod_e\{0,\tau_e\}\ne\varnothing.          \tag{15.760.10}
+\]
+
+The ordered remaining gates are: first check every higher moment of the
+compact atoms from Proposition 15.758; conditional on their passing, decide
+(15.760.10).  Neither step is proved.  In particular an integral lift is
+not a nonnegative simple graph, and residual (ii), E(1), and the limit
+remain open.
+
+Evidence: `src/e1_gmin_m4_prop15760.py`,
+`tests/test_prop15760.py`, and `evidence/e1_gmin_m4_prop15760.json`.
+
+## Proposition 15.761 — full real spectrum and least-norm barrier
+
+Let \(C={p\choose2}=pm\) and \(d=p+1\).  The complete spectrum of
+\(RR^t\) on the real ordinary image follows from the exact row
+intersections
+
+\[
+ |P_L\cap P_M|=0,\qquad |P_L\cap K_M(s,t)|=p,
+ \qquad |K_L(a,b)\cap K_M(s,t)|=2                  \tag{15.761.1}
+\]
+
+for \(L\ne M\), together with row norms \(p^2m\) and \(p^2\).  If the
+common directional total is \(T\), write
+
+\[
+ K_L=k_L\mathbf1+w_L,\quad\sum w_L=0,\quad
+ k_L={T-P_L\over C},\qquad P_L={T\over d}+q_L,\quad\sum q_L=0. \tag{15.761.2}
+\]
+
+The three orthogonal blocks, their eigenvalues, and multiplicities are
+
+\[
+\begin{array}{c|c|c}
+\text{block}&\text{eigenvalue}&\text{multiplicity}\\ \hline
+w_L&p^2&d(C-1)\\
+(P_L,K_L)=(q_L,-q_L/C)&p(C+1)&p\\
+(P_L,K_L)=(a,a/m)&p^2(m+p)&1.
+\end{array}                                                   \tag{15.761.3}
+\]
+
+Consequently the exact least squared norm of a real preimage is
+
+\[
+ \|R^+y\|^2={1\over p^2}\sum_L\|w_L\|^2
+       +{1\over pC}\sum_Lq_L^2
+       +{2T^2\over p^2(p^2-1)}.                    \tag{15.761.4}
+\]
+
+In residual normalization let \(\eta_L\) be the direction sign,
+\(P_L\ge0\) the actual parallel count, and \(W_L\) the normalized
+off-diagonal row.  Undoing the orthogonal row signs turns (15.761.4) into
+
+\[
+\begin{split}
+ {\cal Q}(W,P,T)={}&{1\over p^2}\sum_L
+ \left(\|W_L\|^2-{(\eta_LT-P_L)^2\over C}\right)\\
+ &+{1\over pC}\sum_L\left(\eta_LP_L-{T\over p+1}\right)^2
+ +{2T^2\over p^2(p^2-1)}.                           \tag{15.761.5}
+\end{split}
+\]
+
+For a simple graph \(H\), the signed source vector is
+\(z_e=\tau_e1_{e\in H}\), so \(\|z\|^2=|H|\).  Orthogonal projection onto
+\((\ker R)^\perp\) gives the necessary full-midpoint inequality
+
+\[
+                         {\cal Q}(W,P,T)\le|H|.      \tag{15.761.6}
+\]
+
+This is strictly finer than scalar difference--Radon Parseval, but it still
+does not separate either compact ray.  For the balanced allocations of
+Proposition 15.758, uniformly in all atom labels,
+
+\[
+\begin{array}{c|c|c|c}
+ &\max e_L&\max Q_L& (\|W_{\rm hard}\|_1,\|W_{\rm opp}\|_1)\\ \hline
+p=4r+1&2r-3&2r-1&(10r-9,14r-10)\\
+p=4r+3&2r-2&2r+2&(10r-4,6r-3).
+\end{array}                                                   \tag{15.761.7}
+\]
+
+Dropping the negative terms in (15.761.5), using
+\(\|W\|_2\le\|W\|_1\), and bounding each remaining aggregate term by one
+gives
+
+\[
+ {\cal Q}<{(2r+1)((10r-9)^2+(14r-10)^2)\over(4r+1)^2}+2,      \tag{15.761.8}
+\]
+
+\[
+ {\cal Q}<{(2r+2)((10r-4)^2+(6r-3)^2)\over(4r+3)^2}+2.        \tag{15.761.9}
+\]
+
+The minimum graph sizes on the two rays are \(4r^2+6r+5\) and
+\(4r^2+8r+9\).  After clearing the positive denominators in their gaps and
+putting \(u=r-7\), the two numerators are
+
+\[
+ 64u^4+1328u^3+9796u^2+29864u+30706,
+\quad
+ 64u^4+1744u^3+18108u^2+85374u+154867.              \tag{15.761.10}
+\]
+
+Every coefficient is positive.  Hence (15.761.6) holds with strict room
+for both compact rays for all \(r\ge7\), uniformly for every choice of atom
+labels and hence for any label choice that might satisfy the moment equations.
+
+This is a proved full-spectrum theorem and a strictly stronger proved
+method barrier, not a common graph construction.  The least-norm real
+preimage need not be integral, sign-compatible, nonnegative, or \(0/1\).
+The live gates remain the higher compact-atom moments and then the affine
+Boolean-box intersection (15.760.10).  Residual (ii), E(1), and the limit
+remain open.
+
+Evidence: `src/e1_gmin_m4_prop15761.py`,
+`tests/test_prop15761.py`, and `evidence/e1_gmin_m4_prop15761.json`.
+
+**All-prime branch-C odd--Radon centrality (2026-09-03).**
+Let \(p=4r+3\) be prime with \(r\ge7\). Suppose one opposite row on the
+branch-C compact ray contains \(b\) arbitrarily labelled compact atoms and
+\(r-1\) positive all-equal triangle atoms. If \(3b\le r+2\), its aggregate
+signed edge chain \(C\) has coefficient \(\ell _1\) mass and edge occurrence
+count at most
+
+\[
+ N=3(r+b-1)\le4r-1.
+\]
+
+Pair each nonantipodal edge with its negative and use invariant coordinates
+\(U=(s+t)^2\) and \(D=(s-t)^2\). If all odd global forms through degree
+\(p-2\) vanish, then
+
+\[
+ W(U,D)=n_E D(s+t)
+\]
+
+is orthogonal on the \((2r+1)\)-by-\((2r+1)\) square grid to every bivariate
+polynomial of total degree at most \(2r-1\). The support-isolation theorem says
+that a nonzero \(W\) must lie on a maximal line \(U=u_0\), \(D=d_0\), or
+\(D=aU\). The edge-orbit differences satisfy
+
+\[
+ \lvert n_E\rvert\le (r-1)+2b<2r+1.
+\]
+
+The horizontal and diagonal lines require all \(2r+1\) projective nonzero
+coefficient classes, so they are impossible. A vertical line instead gives a
+constant nonzero integer \(k\) on its \(2r+1\) fixed-sum matching orbits. Since
+\(N<2(2r+1)\), the occurrence bound forces \(\lvert k\rvert=1\). After fixing
+the sign, each positive all-equal triangle supplies at most one aligned
+fixed-sum edge and each compact triangle at most two: two all-equal pair sums
+with the same sign, or all three compact signed pair sums, would repeat a
+label. The total aligned capacity is therefore
+
+\[
+ (r-1)+2b<2r+1,
+\]
+
+contradicting the required matching. Hence \(W=0\) and \(C\) is centrally
+symmetric.
+
+For the deterministic balanced branch-C allocation, put
+
+\[
+ t_0=2r^2-4r-2,\qquad \delta=t-t_0=\sum_L b_L,
+ \qquad m=2r+2.
+\]
+
+Every \(b_L\) is \(\lfloor\delta/m\rfloor\) or
+\(\lceil\delta/m\rceil\). Consequently every opposite row is central whenever
+
+\[
+ 0\le\delta\le(2r+2)\left\lfloor{r+2\over3}\right\rfloor.
+\]
+
+This is an all-prime structural theorem under the zero-odd-form and balanced
+allocation hypotheses, not an even-moment exclusion. It does not treat
+nonzero odd global forms, unbalanced allocations, coordinate the
+degree-six/eight forms, or produce an integral or Boolean common-edge lift.
+
+**Audited \(p=31,t=69\) arbitrary-compact local gate (2026-09-03).**
+Consider one arbitrarily labelled compact atom
+
+\[
+ K(a,b;c)=\{a,b\}-\{a,c\}-\{b,c\}
+\]
+
+and six all-equal triangle atoms, allowing repeated blocks but requiring
+three distinct labels within each block. If every odd row
+\(d=3,5,\ldots,29\) vanishes, the total signed edge chain is centrally
+symmetric: the all-prime theorem applies with \(r=7\), \(b=1\), since
+\(3b=3\le9=r+2\). The earlier specialized calculation gives the same
+conclusion by putting the resulting dual word on the 15-by-15 square grid;
+the general aligned-incidence proof above supersedes its separate vertical
+matching bookkeeping.
+
+Centrality does not force \((a,b;c)\) to be centered, so the remaining joint
+degree-six/eight problem was classified exactly. The 13,485 labelled compact
+atoms form 450 scaling orbits: 449 free noncentered orbits and the unique
+centered orbit represented by \((1,30;0)\) at index 435. A sparse exact DFS
+tracks all 225 edge-orbit imbalances and all seven degree-six/eight channels.
+Its necessary \(\ell_1\), maximum-coordinate, and final one/two-block moment
+prunes are exact; the complete central remainder classification through
+volume five consists of invariant/negation-pair cores and the Pasch
+four-trade. The full run visits 317,916,856 states. Every noncentered orbit is
+`UNSAT`, the centered orbit is covered by the preceding independent exact
+certificate, and no `SAT` orbit exists. An independent v1/v2 comparison
+agrees on all 435 overlapping fibers.
+
+Therefore, at this one row, no arbitrary compact atom plus six all-equal
+atoms can make the odd, degree-six, and degree-eight global forms all zero.
+The stored parameter \(t=69\) records where that atom profile was first
+encountered; the certificate itself depends only on the row.
+
+For \(p=31\), one has \(r=7\), \(t_0=68\), and 16 balanced opposite
+directions. The original all-prime theorem above makes every such row central
+through \(t=116\); the component-packing theorem below supersedes this by the
+guaranteed endpoint \(t=164\). Moreover, exactly when
+\(1\le t-68\le31\), at least one balanced
+row has compact count one. It therefore has precisely the certified
+one-compact/six-all-equal profile. Hence no balanced profile with
+
+\[
+ 69\le t\le99
+\]
+
+can make all odd, degree-six, and degree-eight global forms zero. This is a
+balanced zero-global-form band exclusion obtained from a local row
+certificate. It does not cover unbalanced allocations, exclude nonzero forms
+coordinated across directions, decide the signed Boolean box (15.760.10),
+close residual (ii), or prove the original limit.
+
+Evidence and replay are in
+`src/e1_gmin_m4_compact_ray_moment_gate.py`,
+`tests/test_compact_ray_moment_gate.py`,
+`evidence/NOTE_2026-09-02_COMPACT_RAY_HIGHER_MOMENT_GATE.md`,
+`evidence/p31_arbitrary_compact_fiber.cpp`,
+`evidence/p31_arbitrary_compact_fiber_v2_000_450.log`, and
+`evidence/p31_arbitrary_compact_fiber_v2_merge.json`. The pinned SHA-256
+values for source, raw log, normalized verdicts, and corrected merge record
+are respectively
+`1dcfce7b5765630655d049413c4d9138c544a6d05fe19e3308a9a20a2880d1f2`,
+`f3f77607181287095aa69644649d14d7b9b5e3a8f24044477b667549ef0512e3`,
+`ad3bf3c97b378c9cdebb0b77d486cced544199750ad689060bd2a24f6a2210cb`,
+and `c7f5dea5811a8d2aa25d7bd3224b1fceae3fce73bb49fd4c8fe3f335e2e71c2f`.
+
+**Seven-channel algebraic-dominance barrier (2026-09-03).**
+For each of the compact and all-equal atom types, sum four atoms with triples
+\((a_i,b_i,0)\) and map them to the seven channels
+\((6,0),(6,1),(6,2),(8,0),(8,1),(8,2),(8,3)\). At
+
+\[
+ ((a_1,b_1),\ldots,(a_4,b_4))=((2,1),(3,2),(4,3),(5,4)),
+\]
+
+the Jacobian minor in \((b_1,a_2,b_2,a_3,b_3,a_4,b_4)\) is respectively
+
+\[
+\begin{split}
+ 226534996574208000&=2^{28}3^9 5^3 7^3 &&\text{(compact)},\\
+ 220242357780480000&=2^{26}3^7 5^4 7^4 &&\text{(all-equal)}.
+\end{split}
+\]
+
+Both maps are therefore dominant on the distinct-label locus over the
+algebraic closure in every characteristic at least 11. Every balanced
+branch-C hard row for \(r\ge7\) has at least four compact atoms and every
+opposite row has at least six all-equal atoms, so freezing extra atoms
+preserves dominance. Dense-open intersection and rescaling by a linear form
+with no zero on \(\mathbf P^1(\mathbf F_p)\) then produce common nonzero
+degree-six/eight forms over an algebraic closure, and already over some finite
+extension.
+
+Consequently there is no universal polynomial identity among the seven
+channels and no purely algebraic projective root-count contradiction. This
+does **not** provide labels or form coefficients in \(\mathbf F_p\), and hence
+does not construct an admissible finite-field row family. It also proves no
+compatibility with nonzero odd or higher moments and no signed Boolean lift.
+The finite-field rational, unbalanced zero-form, and globally coordinated
+gates remain open.
+
+**Full-balanced maximal-line and boundary-cubic exclusions (2026-09-03).**
+Let
+
+\[
+ p=4r+3,\qquad r\ge7,\qquad h=2r+1,\qquad m=h-2,
+\]
+
+and let an opposite balanced row contain $r-1$ positive all-equal atoms
+and $0\le b\le r$ compact atoms.  Its signed occurrence and coefficient
+budget is
+
+\[
+                         N=3(r+b-1)\le3h-6.              \tag{G.1}
+\]
+
+Suppose its odd-Radon word is supported on one maximal line of the square
+grid $H\times H$.  On a horizontal line or diagonal line, the unique dual
+relation runs through every nonzero projective residue class, and therefore
+
+\[
+                   \sum_E|n_E|\ge {h(h+1)\over2}>3h-6. \tag{G.2}
+\]
+
+On a vertical line all $h$ orbit differences are congruent to one
+nonzero residue.  The budget in (G.1) forces the actual integer lifts
+to be one constant $k$ with $|k|\in\{1,2\}$.  If $|k|=1$, reducing
+modulo two and identifying $x\sim-x$ leaves exactly two odd vertices in
+the fixed-sum graph, whereas every atom projects to a triangle boundary.  If
+$|k|=2$, the required $2h$ aligned occurrences exceed the capacity
+
+\[
+                         (r-1)+2b\le3r-1<2h.             \tag{G.3}
+\]
+
+Thus no one-maximal-line support occurs anywhere in the full balanced range.
+
+Couvreur peeling makes the corresponding two-line statement exhaustive.
+If a degree-$m$ dual word of support at most $3m$ contains $h=m+2$
+points on one line, the remainder is either empty or consists of between
+$h-1$ and $h$ points on a second maximal line.  For lines in different
+families, the dual space on their union is spanned by the two line relations,
+and one component already costs
+
+\[
+                         {h(h-1)\over2}>3h-6.             \tag{G.4}
+\]
+
+For two vertical lines, either one coefficient fiber is injective and costs
+$(r+1)^2>3h-6$, or both coefficients are constant units and quotient
+parity again leaves two odd vertices.  For two horizontal lines or two
+diagonals, each projective coefficient class occurs at most three times; the
+least possible mass
+
+\[
+ L_3(h)=3{q(q+1)\over2}+s(q+1)>3h-6,
+ \qquad h=3q+s,\quad 0\le s<3,                            \tag{G.5}
+\]
+
+is too large.  Hence no realizable word with support at most $3h-6$
+contains $h$ collinear points.
+
+At the exact boundary $b=r$, the remaining minimally linked cubic case is
+a reduced complete intersection of a cubic $F$ and a degree-$m$ curve,
+with $3m=3h-6$ support points.  Equality in the support and
+$\ell _1$ budgets makes every orbit difference a unit.  A reducible cubic
+is excluded by restricting the Euler--Jacobi residue relation to its line
+and conic components; the only apparent vertical-line/tangent-conic case
+would force a nonconstant omitted parameter to equal the tangent parameter.
+A geometrically integral singular cubic has at most $p+2<3h-6$ rational
+points.  For a smooth cubic, adjoining $y^2=U$ gives a connected double
+cover of genus at most four.  The support would give at least $3p-15$
+rational points on the cover, while Weil gives at most $p+1+8\sqrt p$, and
+
+\[
+                         3p-15>p+1+8\sqrt p               \tag{G.6}
+\]
+
+for every $p\ge31$.  Therefore every boundary cubic support is excluded
+for $p=4r+3\ge31$.  These are support exclusions, not an extension of the
+earlier $3b\le r+2$ centrality theorem: the high-intersection irreducible
+conic alternative still has to be treated separately.
+
+**Irreducible-conic peeling, classification, and equianharmonic survivor
+(2026-09-03).**  Suppose the support contains at least
+$2m+2=p-3$ points on an irreducible conic $Q$.  Multiplying the odd-Radon
+relation by $Q$ shows that any nonempty remainder would be a degree-$(m-2)$
+dual word of support at least $m$, whereas the budget leaves at most
+$m-2$ points.  The whole word is therefore supported on $Q$.
+
+The square-coordinate character bounds then force every such
+high-intersection conic into the triangle-tangent normal form
+
+\[
+ U=uz^2,\qquad D=d(z-1)^2,\qquad u,d\in H,
+ \qquad z\in\mathbf F_p\setminus\{0,1\}.                  \tag{C.1}
+\]
+
+The restricted dual Reed--Solomon relation is
+
+\[
+ W(z)=c z(z-1)(Az+B),\qquad
+ n(z)=\alpha+{\beta\over z-1}.                            \tag{C.2}
+\]
+
+If $\beta\ne0$, its least-absolute-residue mass exceeds $3m$; hence
+$\beta=0$, and the actual orbit differences are one constant unit.  After
+scaling $u=1$, write $d=k^2$ and
+
+\[
+                         q={1-k\over1+k}.                  \tag{C.3}
+\]
+
+For $k=\pm1$, quotient parity leaves two odd vertices, so the star is
+impossible.  In the nonstar case, exact alignment scoring shows that an
+all-equal atom has score three only on a three-cycle.  If $q^3\ne1$, only
+two compact score-three types can occur, and the total aligned/reverse/off
+count cannot reach the $p-2$ target coordinates within $b\le r$.
+Consequently every nonstar survivor satisfies
+
+\[
+ q^3=1,\quad q\ne1
+ \quad\Longleftrightarrow\quad k^2=-3,
+ \qquad p\equiv7\pmod {12}.                               \tag{C.4}
+\]
+
+This survivor is real.  At $p=31,r=b=7,k=11$, take the six positive
+all-equal triples
+
+\[
+ (1,3,13),(2,7,8),(4,18,26),(5,20,23),(6,14,28),(24,25,30)
+\]
+
+and the seven compact atoms, written as $(\{a,b,c\};c_*)$,
+
+\[
+\begin{split}
+ &(\{0,2,12\};2),(\{0,12,19\};12),(\{4,19,22\};4),\\
+ &(\{9,12,16\};16),(\{10,14,17\};14),\\
+ &(\{11,19,22\};19),(\{12,16,20\};20).
+\end{split}                                               \tag{C.5}
+\]
+
+Direct integer replay gives coefficient $+1$ on exactly the 29
+constant-conic edges and zero elsewhere.  All 105 odd channels of degrees
+$3,5,\ldots,29$ vanish, but
+
+\[
+ F_6=(11,19,10),\qquad F_8=(12,11,23,6).                  \tag{C.6}
+\]
+
+Thus (C.5) is an exact odd-zero noncentral edge witness, not a
+simultaneous zero-six/eight witness and not a common-graph construction.
+
+**Exact $p=31,b=7,k=11$ zero-six/eight finite-fiber exclusion
+(2026-09-03).**  In the constant equianharmonic conic fiber above, every
+all-equal atom has alignment score at most three and every compact atom has
+score at most two.  The target has squared norm 29, while the six/seven-atom
+maximum is $6\cdot3+7\cdot2=32$.  Any realization therefore has total
+deficit exactly three, in exactly one of the disjoint partitions
+
+\[
+                         (3),\qquad(2,1),\qquad(1,1,1).    \tag{M.1}
+\]
+
+An independent integer meet-in-the-middle/exact-cover generator exhausts
+these cases, including repeated atoms.  The nine maximal all-equal atoms are
+the disjoint $q$-cycle triangles and their multiplicities are recovered
+uniquely from exact edge equality.  The 111 maximal compact atoms are
+completed by their exact 51-off-orbit parameterization.  The exhaustive
+ledger is
+
+\[
+\begin{array}{c|r|r|r}
+\text{deficit case}&\text{maximal completions}&\text{edge hits}&F_6=F_8=0\\ \hline
+(3)&13{,}528{,}344&60&0\\
+(2,1)&87{,}840{,}508&2{,}160&0\\
+(1,1,1),\ \text{at least one AE}&20{,}465{,}801&392&0\\
+(1,1,1),\ \text{all compact}&108{,}480{,}057&14{,}464&0\\ \hline
+\text{total}&230{,}314{,}710&17{,}076&0.
+\end{array}                                               \tag{M.2}
+\]
+
+Hence no choice of six positive all-equal atoms and seven compact atoms in
+the $p=31,b=7,k=11$ constant-conic fiber realizes the target while all
+degree-six and degree-eight channels vanish.  This is an exhaustive finite
+fiber theorem and nothing larger; in particular it does not exclude other
+equianharmonic primes or parameters and does not close residual (ii).
+
+**Exact signed-Boolean defect, complete-Graver criterion, and ridge quotient
+(2026-09-03).**  Retain the signed source convention
+$z_e\in\{0,\tau_e\}$.  The edge-sign row is an integral combination of the
+parallel Radon rows, so on every integral fiber $Rz=y$,
+
+\[
+ H_y=\sum_L\epsilon_LP_L(y)=\tau\mathbin\cdot z           \tag{B.1}
+\]
+
+is fixed.  Define
+
+\[
+ \beta(z)={1\over2}\sum_ez_e(z_e-\tau_e)
+          ={\|z\|_2^2-H_y\over2},\qquad
+ \beta_R(y)=\min_{Rz=y}\beta(z).                          \tag{B.2}
+\]
+
+Each summand is a nonnegative integer, with equality exactly at
+$z_e\in\{0,\tau_e\}$.  Therefore
+
+\[
+ (z_0+\ker_{\mathbf Z}R)\cap\prod_e\{0,\tau_e\}\ne\varnothing
+ \quad\Longleftrightarrow\quad\beta_R(y)=0.               \tag{B.3}
+\]
+
+For a kernel move $g$,
+
+\[
+ \beta(z+g)-\beta(z)=z\mathbin\cdot g+{\|g\|_2^2\over2}.
+                                                                    \tag{B.4}
+\]
+
+Conformal decomposition into the complete Graver basis
+$\mathcal G(R)$ makes global optimality equivalent to the exact Voronoi
+criterion
+
+\[
+ z\text{ minimizes }\beta
+ \quad\Longleftrightarrow\quad
+ |2z\cdot g|\le\|g\|_2^2\quad(g\in\mathcal G(R)).         \tag{B.5}
+\]
+
+This is a finite mathematical alternative: descent terminates either at
+$\beta=0$, producing a common graph, or at positive defect certified by
+the complete inequalities.  It is not an assertion that the complete
+Graver basis has been constructed.
+
+There are explicit linearly supported kernel circuits.  Type P moves compare
+two midpoint fibers in one parallel difference class; Type K moves compare
+two difference classes with the same nonzero projected square.  If
+$K_{\rm ridge}$ is their integer span, then for every odd prime
+$p$,
+
+\[
+ p\ker_{\mathbf Z}R\subseteq{\cal K}_{\rm ridge}
+ \subseteq\ker_{\mathbf Z}R.                              \tag{B.6}
+\]
+
+Writing $m=(p-1)/2$ and $d=p+1$, the exact quotient is
+
+\[
+ \boxed{
+ \ker_{\mathbf Z}R/{\cal K}_{\rm ridge}
+ \cong(\mathbf Z/p\mathbf Z)^{\nu_p},\qquad
+ \nu_p=dpm^2+{m(m-1)(4m+1)\over6}.}                       \tag{B.7}
+\]
+
+A basis of the mod-$p$ dependencies of the ridge synthesis matrix gives
+the missing saturating moves and, together with the ridge basis, an exact
+parametrization of the full integral fiber.  At a defect minimizer the
+elementary ridges give the necessary inequalities
+
+\[
+ |S_\delta(\alpha)-S_\delta(\alpha')|\le p,               \tag{B.8}
+\]
+
+and, for same-square transverse classes,
+
+\[
+ |S_{\delta_1}(\alpha)-S_{\delta_1}(\alpha')
+  -S_{\delta_2}(\alpha)+S_{\delta_2}(\alpha')|\le2p.      \tag{B.9}
+\]
+
+The quotient in (B.7) is proper and forces at least $2\nu_p$
+non-ridge elements in any symmetric complete Graver basis.  Thus the ridge
+system is an exact one-step saturation and descent reduction, not the
+complete Graver system and not a signed Boolean lift.
+
+**Equianharmonic component-packing upgrade (2026-09-03).**  Continue with
+\(p=4r+3\ge31\) and a zero-odd opposite row having \(r-1\) all-equal
+atoms and \(b\le r\) compact atoms. In the only unresolved tangent-conic
+branch, put
+
+\[
+ q^2+q+1=0,\qquad \Phi(x)=qx+1-q.
+\]
+
+Pair reverse target occurrences with aligned occurrences, pair non-target
+occurrences antipodally, and treat self-antipodal occurrences as caps. For
+one connected pairing component let \(K,E,\mu,Z\) denote its compact
+vertices, all-equal vertices, cycle rank, and caps. Its exact deficit and
+excess are
+
+\[
+ \delta=K+2E-2+2\mu+Z,\qquad
+ K-2\delta=4-K-4E-4\mu-2Z.                    \tag{E.1}
+\]
+
+The complete symbolic classification excludes a distinct-label compact atom
+of score three and leaves only a capped singleton (excess one), an HH pair
+(excess two), and an O2/R1 three-atom tree (excess one). Their exact unpaired
+target supports have weighted pairwise-disjoint packing number three. If
+\(C=(p-1)/3\) is the number of nonfixed \(\Phi\)-cycles and
+\(L=C-(r-1)=(r+5)/3\) are uncovered, the global deficit identity forces
+
+\[
+ \boxed{b\ge2L-1={2r+7\over3}.}               \tag{E.2}
+\]
+
+The map \(x\mapsto-x\) negates the chain in a fixed orbit basis, so (E.2)
+covers both constant signs. Combining (E.2) with the proved line,
+boundary-cubic, and conic dichotomies gives
+
+\[
+ \begin{array}{ll}
+ p\equiv7\pmod {12}:&3b\le2r+4\Longrightarrow\text{central},\\
+ p\equiv11\pmod {12}:&0\le b\le r\Longrightarrow\text{central}.
+ \end{array}                                               \tag{E.3}
+\]
+
+For \(p=31\), (E.3) guarantees that every balanced opposite row is central
+for \(68\le t\le164\). Rows with \(b=7\) can first occur for
+\(165\le t\le177\), so the word "guarantees" is essential. At \(p=43\),
+an exact nine-all-equal/nine-compact witness attains (E.2), realizes all 41
+target coordinates, and kills all 210 odd channels; its nonzero syndromes
+\(F_6=(37,19,8)\), \(F_8=(18,17,10,32)\) show only that the threshold is
+sharp for the odd fiber.
+
+**Hard compact residual and the closed antisymmetric Boolean half
+(2026-09-03).** A balanced hard row is one fixed unit star plus
+\(0\le e\le2r-2\) compact atoms. The star is invisible to every moment
+through degree \(p-2\). Couvreur peeling, the maximal-line exclusions, and
+the strict occurrence bound \(3e<3(h-2)\) eliminate every possible nonzero
+odd-Radon support. Hence, under zero odd global forms, the compact residual
+is centrally symmetric over the integers. The whole hard row is not
+central: the fixed unit-star difference remains.
+
+Let central inversion act by \(J(e)=-e\) on source edges and by \(I\) on
+directional cells. With \(p=2h+1\) and \(d=p+1\), the antisymmetric block has
+
+\[
+ \operatorname {rank}E^-=d^2h^2,\quad
+ \operatorname {rank}{\cal A}^-=dh^2,\quad
+ \operatorname {rank}\ker R^-=dph^2,                    \tag{E.4}
+\]
+
+and its exact integral cokernel is
+
+\[
+ {\cal A}^-/R(E^-)\cong
+ (\mathbf Z/p\mathbf Z)^{h(h-1)(h+1)/3},                 \tag{E.5}
+\]
+
+precisely the odd-moment rows. There is also a constructive ternary lift.
+For a hard functional \(L\), an independent \(M\), and center \(j\ne0\), set
+
+\[
+ f(t)={t\over t+1},\quad
+ (L,M)(u_t)=j(1,f(t)),\quad (L,M)(v_t)=j(t,t),
+ \quad t\in\mathbf F_p\setminus\{-1\}.                  \tag{E.6}
+\]
+
+If \(E_{L,M,j}=\{\{u_t,v_t\}:t\ne-1\}\) and
+\(z={\bf1}_{-E}-{\bf1}_E\), direct projective involutions give
+
+\[
+ R_Lz=S_{-j}-S_j,\qquad R_Nz=0\quad(N\ne L).             \tag{E.7}
+\]
+
+Each trade uses exactly \(p-1\) nonfixed inversion orbits. One prior trade
+forbids at most \(2p-1\) auxiliary functionals; before the last of at most
+\((p+1)/2\) hard trades, the exact union bound still leaves
+\((p-1)/2>0\) choices. Thus arbitrary hard centers have pairwise-disjoint
+ternary lifts. Restoring the Paley column signs preserves this construction.
+The antisymmetric Boolean half is therefore **closed** for the balanced
+zero-odd target.
+
+This does not construct a graph. On each used nonfixed orbit the binary pair
+total is forced to \(s_e=1\); on an unused nonfixed orbit it is
+\(s_e\in\{0,2\}\); and each fixed antipodal edge is an independent binary
+variable. Matching those coupled symmetric totals to the full target is the
+remaining Boolean gate.
+
+The preceding hard-star support theorem remains useful only as a checked
+barrier. It proves the one-active-row ternary floor \(2(p-2)\) and classifies
+floor equality by a projective pencil when at least nine hard centers are
+active, but its total-edge, fixed-capacity, parallel-count, and Euclidean-norm
+ledgers are all feasible. Equation (E.7) supersedes attempts to extract an
+antisymmetric contradiction from those scalar diagnostics.
+
+**Equianharmonic threshold even-syndrome barrier (2026-09-03).** At equality
+in (E.2), \(b=2L-1\) and the global component excess is exactly one. The only
+positive/negative excess totals are \((1,0),(2,1),(3,2)\). Two exact
+four-compact blocks \(U(x)\) and \(V(x)\) replace the two all-equal cycles
+
+\[
+ A=(\Phi(x),\Phi^2(x),x),\qquad
+ B=(\Phi(-x),\Phi^2(-x),-x)                              \tag{E.8}
+\]
+
+in every odd edge-orbit channel. For the seven degree-six/eight deviations,
+four \(U\)-parameters \(-1,-2,1,0\) and three \(V\)-parameters \(-3,-2,-1\)
+give the exact Jacobian
+
+\[
+ \det J=4128623683475967290061619200
+       =2^{32}3^{26}5^2\,7\,2161.                       \tag{E.9}
+\]
+
+Hence the mixed syndrome map is dominant in characteristic zero and this
+specialization stays nondegenerate away from the displayed prime factors.
+This is a rigorous barrier: component excess alone supplies no universal
+affine degree-six/eight obstruction once both trade families occur. It does
+not construct a rational finite-field zero, prove simultaneous
+\(F_6=F_8=0\), or provide a common or Boolean lift.
+
+**The inversion-symmetric lattice and corrected Mobius capacity
+(2026-09-03).** Let
+
+\[
+ E^+=\ker_{\mathbf Z}(1-J),\qquad
+ {\cal A}^+={\cal A}\cap\ker_{\mathbf Z}(1-I).
+\]
+
+The exact symmetric ranks are
+
+\[
+ \operatorname {rank}E^+={dh(p^2+1)\over2},\qquad
+ \operatorname {rank}{\cal A}^+=dh(h+1),\qquad
+ \operatorname {rank}\ker R^+=dph^2.                    \tag{E.10}
+\]
+
+Modulo two, the fixed antipodal source edges inject onto the \(dh\)-
+dimensional compatible fixed-coordinate space, while the nonfixed source
+pairs surject onto the \(dh^2\) paired coordinates. Their target supports
+are disjoint, so the full symmetric map is mod-two surjective. The natural
+symmetric-cokernel map into the full cokernel is injective: its kernel is
+killed by two, while mod-two surjectivity removes two-torsion. Its image is
+the even-moment eigenspace. Consequently
+
+\[
+ {\cal A}^+/R(E^+)\cong
+ (\mathbf Z/p\mathbf Z)^{S_+(p)},\qquad
+ S_+(p)={(h-1)(2h^2+5h+6)\over6}.                       \tag{E.11}
+\]
+
+Thus zero even moments characterize an unrestricted integral central lift,
+and compatible central targets always have a mod-two lift. Neither fact
+places the same lift in the restricted Boolean box.
+
+For the Mobius half \(E=\{e_t:t\ne-1\}\) of (E.6), direct projection gives
+
+\[
+ P_N(E)=
+ \begin{cases}
+ 1,&N=L,\\
+ 1,&N=M,\\
+ 0,&N=L-M,\\
+ 1+\eta(1+m),&N=L+mM,\quad m\ne0,-1.
+ \end{cases}                                             \tag{E.12}
+\]
+
+Every transverse row other than \(L\) is central. In a primal basis dual to
+\(L,M\), its exact Paley column signs are
+
+\[
+ \tau_t=\eta\!\left(Q(e_1-t^2(e_1+e_2))\right),\qquad
+ \sum_{t\ne-1}\tau_t=
+ \sum_{t\in\mathbf F_p}\eta\!\left(Q(e_1-t^2(e_1+e_2))\right)-\epsilon_L.
+                                                               \tag{E.13}
+\]
+
+The forced symmetric pair-total chain has parallel vector \(2P_N(E)\).
+After an actual antisymmetric selection \(q_U\), its exact remaining central
+target is
+
+\[
+ T_U=Y-Rq_U={Y+IY-RC_U\over2}.                            \tag{E.14}
+\]
+
+Used nonfixed orbits are frozen at zero after subtraction; unused nonfixed
+orbits allow \(0\) or \(\tau_O(e+Je)\), and fixed antipodal edges allow
+\(0\) or \(\tau_f f\). This restricted affine-box intersection remains
+open despite (E.11).
+
+There is an essential overlap correction. For any two distinct hard
+directions and arbitrary nonzero centers, one can choose their auxiliaries so
+the two localized trades share exactly one origin orbit with opposite signs.
+Their sum stays ternary and has
+
+\[
+                         2(p-1)-2                         \tag{E.15}
+\]
+
+nonzero inversion orbits. Hence the disjoint construction's upper-endpoint
+count \(m(p-1)=|H|_{\max}+1\) is not a universal lower bound and supplies no
+one-edge capacity contradiction.
+
+**All-active support sharpening (2026-09-03).** Assume additionally that
+all \(m=(p+1)/2\) hard-star centers are nonzero, and let \(c\) count source
+inversion orbits occupied on exactly one side. The general floor is
+\(c\ge p-2\). At equality, the proved pencil theorem gives a common
+projective endpoint \([P]\) and \(j_L^2=L(P)^2\) in every hard row. If
+\(Q\) is the set of the \(p-2\) other endpoints, hard-row bijectivity gives
+
+\[
+ L(Q)=\mathbf F_p\setminus\{L(P),-L(P)\}.                \tag{E.16}
+\]
+
+Adjoining \(P,-P\) makes a \(p\)-point set determining at most
+\((p+1)/2\) affine directions. The prime-order Redei--Megyesi theorem says a
+noncollinear \(p\)-set determines at least \((p+3)/2\), so this set is the
+line through \(P,-P\). All \(p-2\) pencil edges are then parallel in its
+annihilating opposite row, whose balanced full-ray quota is at most
+\(2r+2<p-2\). This contradiction proves
+
+\[
+ \boxed{c\ge p-1\quad\text{when every hard center is nonzero}.} \tag{E.17}
+\]
+
+The all-active hypothesis is indispensable to the proof. Equation (E.17)
+is a support bound, not a restricted central Boolean lift or a residual-(ii)
+closure.
+
+Evidence and focused replay for these post-15.761 statements are in
+`evidence/NOTE_2026-09-02_COMPACT_RAY_HIGHER_MOMENT_GATE.md`,
+`evidence/NOTE_2026-09-03_CONIC_ODD_RADON_DICHOTOMY.md`,
+`evidence/NOTE_2026-09-03_P31_EQUIANHARMONIC_ZERO68_MITM.md`,
+`evidence/NOTE_2026-09-03_EDGE_RADON_SIGNED_BOOLEAN_DEFECT.md`,
+`evidence/NOTE_2026-09-03_EDGE_RADON_RIDGE_KERNEL.md`,
+`evidence/NOTE_2026-09-03_EQUIANHARMONIC_COMPONENT_PACKING.md`,
+`evidence/NOTE_2026-09-03_HARD_ROW_COMPACT_ODD_RADON_CENTRALITY.md`,
+`evidence/NOTE_2026-09-03_INVERSION_ANTISYMMETRIC_RADON.md`,
+`evidence/NOTE_2026-09-03_HARD_STAR_ANTISYMMETRIC_SUPPORT.md`, and
+`evidence/NOTE_2026-09-03_EQUIANHARMONIC_THRESHOLD_EVEN_BARRIER.md`, together
+with `evidence/NOTE_2026-09-03_INVERSION_SYMMETRIC_LATTICE.md`,
+`evidence/NOTE_2026-09-03_MOBIUS_HALF_SYMMETRIC.md`, and
+`evidence/NOTE_2026-09-03_ALL_ACTIVE_PENCIL_SUPPORT.md`. Replay with
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. \
+  /home/nick/.venvs/mo-exact/bin/python -m pytest -q \
+  tests/test_compact_ray_moment_gate.py tests/test_conic_odd_radon.py \
+  tests/test_p31_equi_zero68_mitm.py tests/test_signed_boolean_defect.py \
+  tests/test_ridge_kernel.py tests/test_equianharmonic_component_packing.py \
+  tests/test_hard_compact_odd_radon.py \
+  tests/test_hard_star_antisymmetric_support.py \
+  tests/test_inversion_antisymmetric_radon.py \
+  tests/test_equianharmonic_threshold_even_barrier.py \
+  tests/test_inversion_symmetric_lattice.py \
+  tests/test_mobius_half_symmetric.py tests/test_all_active_pencil_support.py \
+  tests/test_main_chain_docs.py
+```
+
+Residual (ii), E(1), $L=1/2$, and the original MathOverflow problem all
+remain **OPEN**.  The finite conic-fiber `UNSAT` result and the exact
+Boolean/kernel reductions must not be promoted to any of those closures.
+Equivalently: Residual (ii), E1, `L=1/2`, and the original MO limit remain
+OPEN.
 
 ## Proposition 15.723 — paired-cube obstruction to middle floor-plus-two lifts
 

@@ -1,0 +1,147 @@
+{
+  "L_status": "OPEN",
+  "compact_ray_bounds": {
+    "each_remaining_aggregate_and_uniform_term_is_less_than_one": true,
+    "negative_terms_in_exact_formula_discarded": true,
+    "p_1_mod_4": {
+      "balanced_count_bounds": {
+        "Q_L": "<=2r-1",
+        "e_L": "<=2r-3"
+      },
+      "hard_l1": "<=p-1+3e_L<=10r-9",
+      "least_norm_upper": "(2r+1)[(10r-9)^2+(14r-10)^2]/(4r+1)^2+2",
+      "minimum_H_edge_count": "4r^2+6r+5",
+      "opposite_l1": "<=2p-3+3(Q_L-2)<=14r-10",
+      "parameter": "p=4r+1, r>=7"
+    },
+    "p_3_mod_4": {
+      "balanced_count_bounds": {
+        "Q_L": "<=2r+2",
+        "e_L": "<=2r-2"
+      },
+      "hard_l1": "<=p-1+3e_L<=10r-4",
+      "least_norm_upper": "(2r+2)[(10r-4)^2+(6r-3)^2]/(4r+3)^2+2",
+      "minimum_H_edge_count": "4r^2+8r+9",
+      "opposite_l1": "<=3(Q_L-3)<=6r-3",
+      "parameter": "p=4r+3, r>=7"
+    },
+    "proved": true,
+    "uniform_in_atom_labels": true
+  },
+  "duplicate_work_guards": [
+    "Do not retry a Moore--Penrose or full-target Euclidean norm bound on the compact rays.",
+    "Do not identify the least-norm real preimage with an integral or 0/1 graph.",
+    "Do not replace the still-live higher moment and affine-box constraints by scalar energy."
+  ],
+  "full_spectrum": {
+    "complete_full_midpoint_spectrum": true,
+    "distinct_direction_row_intersections": {
+      "pair_pair": 2,
+      "parallel_pair": "p",
+      "parallel_parallel": 0
+    },
+    "least_norm_formula": "p^-2 sum_L||w_L||^2+(pC)^-1 sum_L q_L^2+2T^2/[p^2(p^2-1)]",
+    "multiplicity_sum": "(p+1)(C-1)+p+1=(p+1)C=rank(A_R)",
+    "one_direction_row_norms_squared": {
+      "off_diagonal_pair": "p^2",
+      "parallel": "p^2*m"
+    },
+    "orthogonal_blocks": {
+      "directional_aggregate_zero_sum": {
+        "coordinates": "(P_L,K_L)=(q_L,-q_L/C), sum q_L=0",
+        "eigenvalue": "p(C+1)",
+        "multiplicity": "p"
+      },
+      "uniform": {
+        "coordinates": "(P_L,K_L)=(a,a/m)",
+        "eigenvalue": "p^2(m+p)",
+        "multiplicity": 1
+      },
+      "within_direction_pair_zero_sum": {
+        "eigenvalue": "p^2",
+        "multiplicity": "(p+1)(C-1)"
+      }
+    },
+    "proved": true,
+    "symbolic_eigenvalue_checks": {
+      "directional_pair_coordinate_eigenvalue_after_clearing_C": true,
+      "directional_parallel_coordinate_eigenvalue": true,
+      "multiplicities_sum_to_ordinary_rank": true,
+      "uniform_pair_coordinate_eigenvalue_after_clearing_m": true,
+      "uniform_parallel_coordinate_eigenvalue": true
+    }
+  },
+  "prop": "15.761",
+  "proved": {
+    "L": false,
+    "both_prop15758_rays_pass_with_strict_room_for_r_ge_7": true,
+    "complete_real_spectrum_on_ordinary_image": true,
+    "e1_closed_general": false,
+    "full_midpoint_least_norm_necessary_inequality": true,
+    "one_common_simple_graph_constructed": false,
+    "residual_ii_closed": false,
+    "strictly_stronger_than_prior_difference_parseval": true
+  },
+  "remaining_obstruction": "The signed Boolean box, equivalently squarefree nonnegative source coordinates inside the integral affine fibre of Proposition 15.760.",
+  "signed_least_norm": {
+    "C": "binom(p,2)=p(p-1)/2",
+    "necessary_inequality": "Q<=|H|",
+    "proved": true,
+    "reason": "orthogonal projection onto (ker R)^perp",
+    "signed_formula": "Q=p^-2 sum_L[||W_L||^2-(eta_L*T-P_L)^2/C]+(pC)^-1 sum_L(eta_L*P_L-T/(p+1))^2+2T^2/[p^2(p^2-1)]",
+    "simple_source_squared_norm": "||z||^2=|H|",
+    "source_signing": "z_e=tau_e*1_(e in H)",
+    "strictly_finer_than_difference_aggregate_parseval": true
+  },
+  "status": "PROVED STRICTLY STRONGER FULL-MIDPOINT METHOD BARRIER",
+  "symbolic_gap": {
+    "coefficient_order": "constant_to_highest_degree_in_u",
+    "every_coefficient_strictly_positive": true,
+    "no_prime_or_parameter_scan": true,
+    "proved": true,
+    "shifted_numerators": {
+      "p_1_aggregate_term_denominator_gap": [
+        4108,
+        2948,
+        560,
+        32
+      ],
+      "p_1_main_gap": [
+        30706,
+        29864,
+        9796,
+        1328,
+        64
+      ],
+      "p_1_uniform_term_denominator_gap": [
+        704262,
+        389464,
+        80688,
+        7424,
+        256
+      ],
+      "p_3_aggregate_term_denominator_gap": [
+        10334,
+        4620,
+        672,
+        32
+      ],
+      "p_3_main_gap": [
+        154867,
+        85374,
+        18108,
+        1744,
+        64
+      ],
+      "p_3_uniform_term_denominator_gap": [
+        921102,
+        475976,
+        92208,
+        7936,
+        256
+      ]
+    },
+    "substitution": "u=r-7>=0"
+  },
+  "title": "Exact full edge-Radon spectrum and least-norm method barrier"
+}

@@ -1,0 +1,526 @@
+{
+  "prop": "15.755",
+  "title": "Full-cube spike reduction and sharp affine/triangle aliases",
+  "proved": {
+    "off_eigenshell_boolean_defect_at_least_2p": true,
+    "dangerous_defect_dichotomy_p_ge_11": true,
+    "delta_2p_bad_sign_family_all_odd_primes": true,
+    "delta_6p_minus_12_triangle_family_all_odd_primes": true,
+    "shared_AB_maximizer_cut_constraints_redundant": true,
+    "affine_alias_summed_cut_lower_bound": true,
+    "residual_ii_closed": false,
+    "e1_closed_general": false,
+    "L": false
+  },
+  "equality_sign_cases": [
+    {
+      "x_i": -1,
+      "minimum_shell_sign_a": -1,
+      "eigenvector_exceptional_coordinate": 1,
+      "one_bit_boolean_eigenvector_case": true,
+      "one_coordinate_three_case": false,
+      "proved": true
+    },
+    {
+      "x_i": -1,
+      "minimum_shell_sign_a": 1,
+      "eigenvector_exceptional_coordinate": -3,
+      "one_bit_boolean_eigenvector_case": false,
+      "one_coordinate_three_case": true,
+      "proved": true
+    },
+    {
+      "x_i": 1,
+      "minimum_shell_sign_a": -1,
+      "eigenvector_exceptional_coordinate": 3,
+      "one_bit_boolean_eigenvector_case": false,
+      "one_coordinate_three_case": true,
+      "proved": true
+    },
+    {
+      "x_i": 1,
+      "minimum_shell_sign_a": 1,
+      "eigenvector_exceptional_coordinate": -1,
+      "one_bit_boolean_eigenvector_case": true,
+      "one_coordinate_three_case": false,
+      "proved": true
+    }
+  ],
+  "affine_bad_sign_checks": {
+    "3": {
+      "p": 3,
+      "dimension": 10,
+      "positive_fibres": 3,
+      "fibre_sign_sum": 3,
+      "integral_eigenvector_coordinate_multiset": {
+        "plus_or_minus_one": 9,
+        "plus_three": 1
+      },
+      "C_v_equals_p_v": true,
+      "x_is_boolean": true,
+      "q_C_x": 9,
+      "delta_plus_x": 6,
+      "bad_sign_equality_case": true,
+      "proved": true
+    },
+    "5": {
+      "p": 5,
+      "dimension": 26,
+      "positive_fibres": 4,
+      "fibre_sign_sum": 3,
+      "integral_eigenvector_coordinate_multiset": {
+        "plus_or_minus_one": 25,
+        "plus_three": 1
+      },
+      "C_v_equals_p_v": true,
+      "x_is_boolean": true,
+      "q_C_x": 55,
+      "delta_plus_x": 10,
+      "bad_sign_equality_case": true,
+      "proved": true
+    },
+    "7": {
+      "p": 7,
+      "dimension": 50,
+      "positive_fibres": 5,
+      "fibre_sign_sum": 3,
+      "integral_eigenvector_coordinate_multiset": {
+        "plus_or_minus_one": 49,
+        "plus_three": 1
+      },
+      "C_v_equals_p_v": true,
+      "x_is_boolean": true,
+      "q_C_x": 161,
+      "delta_plus_x": 14,
+      "bad_sign_equality_case": true,
+      "proved": true
+    },
+    "11": {
+      "p": 11,
+      "dimension": 122,
+      "positive_fibres": 7,
+      "fibre_sign_sum": 3,
+      "integral_eigenvector_coordinate_multiset": {
+        "plus_or_minus_one": 121,
+        "plus_three": 1
+      },
+      "C_v_equals_p_v": true,
+      "x_is_boolean": true,
+      "q_C_x": 649,
+      "delta_plus_x": 22,
+      "bad_sign_equality_case": true,
+      "proved": true
+    },
+    "13": {
+      "p": 13,
+      "dimension": 170,
+      "positive_fibres": 8,
+      "fibre_sign_sum": 3,
+      "integral_eigenvector_coordinate_multiset": {
+        "plus_or_minus_one": 169,
+        "plus_three": 1
+      },
+      "C_v_equals_p_v": true,
+      "x_is_boolean": true,
+      "q_C_x": 1079,
+      "delta_plus_x": 26,
+      "bad_sign_equality_case": true,
+      "proved": true
+    },
+    "17": {
+      "p": 17,
+      "dimension": 290,
+      "positive_fibres": 10,
+      "fibre_sign_sum": 3,
+      "integral_eigenvector_coordinate_multiset": {
+        "plus_or_minus_one": 289,
+        "plus_three": 1
+      },
+      "C_v_equals_p_v": true,
+      "x_is_boolean": true,
+      "q_C_x": 2431,
+      "delta_plus_x": 34,
+      "bad_sign_equality_case": true,
+      "proved": true
+    },
+    "19": {
+      "p": 19,
+      "dimension": 362,
+      "positive_fibres": 11,
+      "fibre_sign_sum": 3,
+      "integral_eigenvector_coordinate_multiset": {
+        "plus_or_minus_one": 361,
+        "plus_three": 1
+      },
+      "C_v_equals_p_v": true,
+      "x_is_boolean": true,
+      "q_C_x": 3401,
+      "delta_plus_x": 38,
+      "bad_sign_equality_case": true,
+      "proved": true
+    }
+  },
+  "positive_triangle_endpoint_checks": {
+    "3": {
+      "p": 3,
+      "switched_positive_graph_degree": 6,
+      "restricted_eigenvalues": [
+        1,
+        -2
+      ],
+      "common_neighbors_of_positive_edge": 3,
+      "positive_triangle_exists": true,
+      "signed_cut_of_triangle": 3,
+      "boolean_defect_after_triangle_flip": 6,
+      "scaled_odd_dual_norm": 3,
+      "proved": true
+    },
+    "5": {
+      "p": 5,
+      "switched_positive_graph_degree": 15,
+      "restricted_eigenvalues": [
+        2,
+        -3
+      ],
+      "common_neighbors_of_positive_edge": 8,
+      "positive_triangle_exists": true,
+      "signed_cut_of_triangle": 9,
+      "boolean_defect_after_triangle_flip": 18,
+      "scaled_odd_dual_norm": 9,
+      "proved": true
+    },
+    "7": {
+      "p": 7,
+      "switched_positive_graph_degree": 28,
+      "restricted_eigenvalues": [
+        3,
+        -4
+      ],
+      "common_neighbors_of_positive_edge": 15,
+      "positive_triangle_exists": true,
+      "signed_cut_of_triangle": 15,
+      "boolean_defect_after_triangle_flip": 30,
+      "scaled_odd_dual_norm": 15,
+      "proved": true
+    },
+    "11": {
+      "p": 11,
+      "switched_positive_graph_degree": 66,
+      "restricted_eigenvalues": [
+        5,
+        -6
+      ],
+      "common_neighbors_of_positive_edge": 35,
+      "positive_triangle_exists": true,
+      "signed_cut_of_triangle": 27,
+      "boolean_defect_after_triangle_flip": 54,
+      "scaled_odd_dual_norm": 27,
+      "proved": true
+    },
+    "13": {
+      "p": 13,
+      "switched_positive_graph_degree": 91,
+      "restricted_eigenvalues": [
+        6,
+        -7
+      ],
+      "common_neighbors_of_positive_edge": 48,
+      "positive_triangle_exists": true,
+      "signed_cut_of_triangle": 33,
+      "boolean_defect_after_triangle_flip": 66,
+      "scaled_odd_dual_norm": 33,
+      "proved": true
+    },
+    "17": {
+      "p": 17,
+      "switched_positive_graph_degree": 153,
+      "restricted_eigenvalues": [
+        8,
+        -9
+      ],
+      "common_neighbors_of_positive_edge": 80,
+      "positive_triangle_exists": true,
+      "signed_cut_of_triangle": 45,
+      "boolean_defect_after_triangle_flip": 90,
+      "scaled_odd_dual_norm": 45,
+      "proved": true
+    },
+    "19": {
+      "p": 19,
+      "switched_positive_graph_degree": 190,
+      "restricted_eigenvalues": [
+        9,
+        -10
+      ],
+      "common_neighbors_of_positive_edge": 99,
+      "positive_triangle_exists": true,
+      "signed_cut_of_triangle": 51,
+      "boolean_defect_after_triangle_flip": 102,
+      "scaled_odd_dual_norm": 51,
+      "proved": true
+    }
+  },
+  "dangerous_spike_dichotomy_checks": {
+    "11": {
+      "p": 11,
+      "dangerous_maximizer_is_off_eigenshell": true,
+      "delta_over_two_is_odd": true,
+      "defect_dichotomy": [
+        "delta=22",
+        "delta>=54"
+      ],
+      "corresponding_signed_H_score": [
+        "eps*S_H=-9",
+        "eps*S_H<=-25"
+      ],
+      "first_branch_sharp_by_affine_line_alias": true,
+      "second_branch_sharp_by_positive_triangle_flip": true,
+      "proved": true
+    },
+    "13": {
+      "p": 13,
+      "dangerous_maximizer_is_off_eigenshell": true,
+      "delta_over_two_is_odd": true,
+      "defect_dichotomy": [
+        "delta=26",
+        "delta>=66"
+      ],
+      "corresponding_signed_H_score": [
+        "eps*S_H=-11",
+        "eps*S_H<=-31"
+      ],
+      "first_branch_sharp_by_affine_line_alias": true,
+      "second_branch_sharp_by_positive_triangle_flip": true,
+      "proved": true
+    },
+    "17": {
+      "p": 17,
+      "dangerous_maximizer_is_off_eigenshell": true,
+      "delta_over_two_is_odd": true,
+      "defect_dichotomy": [
+        "delta=34",
+        "delta>=90"
+      ],
+      "corresponding_signed_H_score": [
+        "eps*S_H=-15",
+        "eps*S_H<=-43"
+      ],
+      "first_branch_sharp_by_affine_line_alias": true,
+      "second_branch_sharp_by_positive_triangle_flip": true,
+      "proved": true
+    },
+    "19": {
+      "p": 19,
+      "dangerous_maximizer_is_off_eigenshell": true,
+      "delta_over_two_is_odd": true,
+      "defect_dichotomy": [
+        "delta=38",
+        "delta>=102"
+      ],
+      "corresponding_signed_H_score": [
+        "eps*S_H=-17",
+        "eps*S_H<=-49"
+      ],
+      "first_branch_sharp_by_affine_line_alias": true,
+      "second_branch_sharp_by_positive_triangle_flip": true,
+      "proved": true
+    }
+  },
+  "hereditary_cut_redundancy_checks": [
+    {
+      "edge_crosses_cut": false,
+      "W_B": 0,
+      "M_B": 20,
+      "W_A": 0,
+      "M_A": 22,
+      "B_interval": [
+        0,
+        20
+      ],
+      "A_interval": [
+        0,
+        22
+      ],
+      "A_cut_automatic": true,
+      "proved": true
+    },
+    {
+      "edge_crosses_cut": false,
+      "W_B": 7,
+      "M_B": 20,
+      "W_A": 7,
+      "M_A": 22,
+      "B_interval": [
+        0,
+        20
+      ],
+      "A_interval": [
+        0,
+        22
+      ],
+      "A_cut_automatic": true,
+      "proved": true
+    },
+    {
+      "edge_crosses_cut": false,
+      "W_B": 20,
+      "M_B": 20,
+      "W_A": 20,
+      "M_A": 22,
+      "B_interval": [
+        0,
+        20
+      ],
+      "A_interval": [
+        0,
+        22
+      ],
+      "A_cut_automatic": true,
+      "proved": true
+    },
+    {
+      "edge_crosses_cut": true,
+      "W_B": 0,
+      "M_B": 20,
+      "W_A": 2,
+      "M_A": 22,
+      "B_interval": [
+        0,
+        20
+      ],
+      "A_interval": [
+        0,
+        22
+      ],
+      "A_cut_automatic": true,
+      "proved": true
+    },
+    {
+      "edge_crosses_cut": true,
+      "W_B": 7,
+      "M_B": 20,
+      "W_A": 9,
+      "M_A": 22,
+      "B_interval": [
+        0,
+        20
+      ],
+      "A_interval": [
+        0,
+        22
+      ],
+      "A_cut_automatic": true,
+      "proved": true
+    },
+    {
+      "edge_crosses_cut": true,
+      "W_B": 20,
+      "M_B": 20,
+      "W_A": 22,
+      "M_A": 22,
+      "B_interval": [
+        0,
+        20
+      ],
+      "A_interval": [
+        0,
+        22
+      ],
+      "A_cut_automatic": true,
+      "proved": true
+    }
+  ],
+  "affine_alias_summed_cut_checks": {
+    "3": {
+      "p": 3,
+      "odd_parameter_r": 1,
+      "positive_fibres_m": 3,
+      "boolean_defect": 6,
+      "eigenshell_representations": 3,
+      "maximum_edge_cut_multiplicity": 2,
+      "signed_cut_floor_per_representation": "2",
+      "H_edge_lower_bound": "3",
+      "r_equals_one_closed_form": "3",
+      "proved": true
+    },
+    "5": {
+      "p": 5,
+      "odd_parameter_r": 1,
+      "positive_fibres_m": 4,
+      "boolean_defect": 10,
+      "eigenshell_representations": 4,
+      "maximum_edge_cut_multiplicity": 2,
+      "signed_cut_floor_per_representation": "3",
+      "H_edge_lower_bound": "6",
+      "r_equals_one_closed_form": "6",
+      "proved": true
+    },
+    "7": {
+      "p": 7,
+      "odd_parameter_r": 1,
+      "positive_fibres_m": 5,
+      "boolean_defect": 14,
+      "eigenshell_representations": 5,
+      "maximum_edge_cut_multiplicity": 2,
+      "signed_cut_floor_per_representation": "4",
+      "H_edge_lower_bound": "10",
+      "r_equals_one_closed_form": "10",
+      "proved": true
+    },
+    "11": {
+      "p": 11,
+      "odd_parameter_r": 1,
+      "positive_fibres_m": 7,
+      "boolean_defect": 22,
+      "eigenshell_representations": 7,
+      "maximum_edge_cut_multiplicity": 2,
+      "signed_cut_floor_per_representation": "6",
+      "H_edge_lower_bound": "21",
+      "r_equals_one_closed_form": "21",
+      "proved": true
+    },
+    "13": {
+      "p": 13,
+      "odd_parameter_r": 1,
+      "positive_fibres_m": 8,
+      "boolean_defect": 26,
+      "eigenshell_representations": 8,
+      "maximum_edge_cut_multiplicity": 2,
+      "signed_cut_floor_per_representation": "7",
+      "H_edge_lower_bound": "28",
+      "r_equals_one_closed_form": "28",
+      "proved": true
+    },
+    "17": {
+      "p": 17,
+      "odd_parameter_r": 1,
+      "positive_fibres_m": 10,
+      "boolean_defect": 34,
+      "eigenshell_representations": 10,
+      "maximum_edge_cut_multiplicity": 2,
+      "signed_cut_floor_per_representation": "9",
+      "H_edge_lower_bound": "45",
+      "r_equals_one_closed_form": "45",
+      "proved": true
+    },
+    "19": {
+      "p": 19,
+      "odd_parameter_r": 1,
+      "positive_fibres_m": 11,
+      "boolean_defect": 38,
+      "eigenshell_representations": 11,
+      "maximum_edge_cut_multiplicity": 2,
+      "signed_cut_floor_per_representation": "10",
+      "H_edge_lower_bound": "55",
+      "r_equals_one_closed_form": "55",
+      "proved": true
+    }
+  },
+  "remaining_obstruction": "Exclude both sharp Boolean spike families using a genuinely common H-graph invariant; lattice quantization and shared-maximizer cuts alone do not.",
+  "duplicate_work_guards": [
+    "Do not identify every delta=2p state with a one-bit eigenshell neighbor.",
+    "Do not claim delta>2p implies delta>6p-12 on the Boolean cube.",
+    "Do not treat the A and B hereditary cut intervals as independent."
+  ],
+  "L_status": "OPEN"
+}

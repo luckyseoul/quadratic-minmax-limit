@@ -34,7 +34,38 @@ Anything else — including “honest OPEN,” “structure shipped,” “censu
   errors `O(n/(log n)^(1+epsilon))` in `H`, or power-saving errors, force
   convergence. Propositions 6.4--6.5 identify the exact four-state
   equal-endpoint diamond for the all-Hadamard multiplier-2 construction;
-  the hereditary endpoint conditions are automatic. Proposition 6.6 proves
+  the hereditary endpoint conditions are automatic. Proposition 6.5a
+  identifies that diamond exactly with the maximum norm of the directed
+  half-cut flips of `A` under a chosen tournament orientation. This is a
+  simultaneous upper-neighbor problem; global optimality alone gives only
+  the reverse lower bound. Proposition 6.5b shows that the `sqrt(2)`
+  multiplier is forced on every dyadic ray: a fixed smaller multiplier with
+  vanishing normalized error would contract the sequence to zero. Random
+  vertex orders currently stop at an exact variance gate requiring new
+  global-minimizer control, and fixed-real Hermitian interlacing stops at one
+  spectral edge. Proposition 6.5c gives a distinct opposite-diagonal diamond
+  with arbitrary cross block. Its symmetric specialization is an exact
+  hybrid-slice/QPSK problem; the coherent holomorphic choice already violates
+  the zero-loss bound at a global order-four optimizer. Its general
+  four-label form isolates the all-directed target: one tournament must
+  `1/sqrt(2)`-pave every signed cut submatrix simultaneously. Proposition
+  6.5d expresses the same skew gate as a nonlinear cover by decomposable
+  Boolean bivectors and proves that its affine relaxation, displayed
+  elliptope, and normalized single-row even-moment certificates are
+  subcritical in their stated ranges. Richer SOS/Pluecker couplings remain
+  open. Proposition 6.5e proves a signed-regular
+  arcsine lower bound meeting the outgoing-half target at exactly the
+  `1/sqrt(2)` constant, plus conditional approximate-commuting rigidity near
+  the universal `1/pi` floor. Proposition 6.5f shields anchor-incident
+  constraints for every fixed or low-signature family, conditional on an
+  open vertex-cover condition. Proposition 6.5g constructs the required approximate
+  square/commutator mate near that floor but proves its generic spectral
+  conversion loses `pi/2`. Proposition 6.5h rules out the exact independent
+  first-moment certificate, while Proposition 6.5i proves Gaussian
+  saturation forces the Hamming-central two-half saddle near `alpha=1/pi`.
+  The latter is necessary structure, not an orientation. Only a noncoherent, `A`-dependent cross
+  construction or a direct high-degree cover theorem remains live there.
+  Proposition 6.6 proves
   the diamond outside the explicit Hamming-central/joint-energy residue
   (6.20), but does not close the ray. Central Paley conference maximizers
   prove that those coarse residue data alone cannot close it. Proposition 6.7 gives an exact
@@ -60,8 +91,12 @@ Anything else — including “honest OPEN,” “structure shipped,” “censu
   `p>=11`; Proposition 15.751 closes the fourth shell `k=4p+6` for every
   `p>=13`; Proposition 15.752 closes the fifth shell for every `p>=23`
   plus its stated contiguous higher band; and Proposition 15.753 closes its
-  exceptional p17/p19 endpoints by exact common-energy certificates. Thus
-  the fifth shell is closed for every prime `p>=17`.
+  exceptional p17/p19 endpoints by exact common-energy certificates.
+  Proposition 15.754 closes the last `p=13,k=60,u=6` residue by an exact
+  finite aggregate/common-form certificate. Thus the fifth shell is closed
+  for every prime `p>=13`. Propositions 15.755--15.756 then prove a sharp
+  full-cube defect dichotomy and rule out arbitrary-boundary Weil/Parseval as
+  a global close; both are reductions/method barriers, not residual closure.
 - Exact Paley optimality is **false** (\(m_{10}=13<15\)). E(1) is asymptotic.
 
 There are now two honest routes.  The direct route to the original question
@@ -69,7 +104,7 @@ is the two-ray amplification theorem of Proposition 6.3 (or any other proof
 of convergence/non-existence).  The value-specific route to \(L=1/2\) is
 **E(1)** on \(n=p^2+1\).  On that optional Paley route, the live gate is the
 corrected dictionary returned by
-`src/e1_main_chain_status.py`; as of 2026-09-01 through Proposition 15.753 it
+`src/e1_main_chain_status.py`; as of 2026-09-02 through Proposition 15.756 it
 reads:
 
 1. **Required bi-tight levels 2 and 3:** TRUE by 15.720. The spectral floor,
@@ -79,14 +114,15 @@ reads:
    Propositions 15.738--15.742 close `p=13,k=58`, and Proposition 15.743
    closes `p=17,k=74`. At `p=13,k=60`, the complete residue sieve leaves
    `u in {0,3,4,6}`; Propositions 15.744--15.745 close `u=3,0`, and
-   Propositions 15.746--15.749 close `u=4`, leaving exactly `u=6`. The live
-   remainder includes critical `p=5,7`, `p=11,k>=50`, that sole
-   `p=13,k=60` residue and later p13 layers, layers beyond Proposition
-   15.752's band, and the positive `p=7,z=7` subbranch. Proposition 15.751 closes generic
-   branch B at `p>=29,t=3`, hence the entire fourth shell for `p>=13`;
-   Proposition 15.752 closes the displayed higher band, and together with
-   Proposition 15.753's p17/p19 endpoints closes the fifth shell for every
-   `p>=17`.
+   Propositions 15.746--15.749 close `u=4`. Proposition 15.754 closes the
+   remaining `u=6` by exact joint common-form and collision-energy
+   certificates, completing `p=13,k=60`. The live remainder includes
+   critical `p=5,7`, `p=11,k>=50`, later p13 layers, layers beyond
+   Proposition 15.752's band, and the positive `p=7,z=7` subbranch.
+   Proposition 15.751 closes generic branch B at `p>=29,t=3`, hence the
+   entire fourth shell for `p>=13`; Proposition 15.752 closes the displayed
+   higher band, and together with Propositions 15.753--15.754 closes the
+   fifth shell for every `p>=13`.
    Historical
    endpoint/profile artifacts are not live gates; only the lemmas and
    certificates explicitly retained by the dedup audit remain valid evidence.

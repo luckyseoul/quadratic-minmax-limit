@@ -1,0 +1,259 @@
+{
+  "L_status": "OPEN",
+  "all_prime_proof_audit": {
+    "constant_top_scaling_alias": "disjoint by the p finite-chart roots and the infinity point",
+    "equal_total_equation_count": "p among p+1 directional totals",
+    "parallel_sum_equation_count": 1,
+    "proved": true,
+    "signed_projective_completion": "epsilon_L multiplies every finite term and epsilon_infinity multiplies the infinity term",
+    "symbolic_top_degree_replay": {
+      "basis": "Q_(p-1,k), 0<=k<=m-1",
+      "constant_top_alias_resolution": "a degree-(p-1) homogeneous form constant on all nonzero delta is zero: use p finite-chart roots, then the infinity point",
+      "expansion": "D^m=sum_k binom(m-1,k)(-4)^k Q_(p-1,k)",
+      "expansion_coefficients_mod_p": [1, 6, 4, 10, 6, 3],
+      "m": 6,
+      "omitted_basis_index": 5,
+      "omitted_coefficient_nonzero": true,
+      "ordinary_vector": "D^m=(s-t)^(p-1)",
+      "p": 13,
+      "proved": true,
+      "retained_new_relation_indices": [0, 1, 2, 3, 4]
+    },
+    "top_degree_ordinary_complement": "omit k=m-1 after expanding D^m with all coefficients nonzero"
+  },
+  "codimension_formula": "(m-1)(4m^2+7m+6)/6, p=2m+1",
+  "codimension_ledgers": {
+    "11": {
+      "block_rank_formula": "1+sum_(b=1)^m sum_(i=0)^(p-1) min(p+1,i+2b+1)",
+      "extra_p_primary_codimension_closed_form": 94,
+      "extra_p_primary_codimension_direct_sum": 94,
+      "equal_total_equation_count": 11,
+      "independent_bidegree_block_rank": 566,
+      "m": 5,
+      "ordinary_boundary_total_codimension": 12,
+      "parallel_sum_equation_count": 1,
+      "p": 11,
+      "projective_direction_count": 12,
+      "proved": true,
+      "rank_in_characteristic_p": 566,
+      "relation_count_by_degree": {
+        "10": 4,
+        "2": 9,
+        "3": 8,
+        "4": 14,
+        "5": 12,
+        "6": 15,
+        "7": 12,
+        "8": 12,
+        "9": 8
+      },
+      "target_dimension": 672
+    },
+    "13": {
+      "block_rank_formula": "1+sum_(b=1)^m sum_(i=0)^(p-1) min(p+1,i+2b+1)",
+      "extra_p_primary_codimension_closed_form": 160,
+      "extra_p_primary_codimension_direct_sum": 160,
+      "equal_total_equation_count": 13,
+      "independent_bidegree_block_rank": 932,
+      "m": 6,
+      "ordinary_boundary_total_codimension": 14,
+      "parallel_sum_equation_count": 1,
+      "p": 13,
+      "projective_direction_count": 14,
+      "proved": true,
+      "rank_in_characteristic_p": 932,
+      "relation_count_by_degree": {
+        "10": 15,
+        "11": 10,
+        "12": 5,
+        "2": 11,
+        "3": 10,
+        "4": 18,
+        "5": 16,
+        "6": 21,
+        "7": 18,
+        "8": 20,
+        "9": 16
+      },
+      "target_dimension": 1106
+    },
+    "3": {
+      "block_rank_formula": "1+sum_(b=1)^m sum_(i=0)^(p-1) min(p+1,i+2b+1)",
+      "extra_p_primary_codimension_closed_form": 0,
+      "extra_p_primary_codimension_direct_sum": 0,
+      "equal_total_equation_count": 3,
+      "independent_bidegree_block_rank": 12,
+      "m": 1,
+      "ordinary_boundary_total_codimension": 4,
+      "parallel_sum_equation_count": 1,
+      "p": 3,
+      "projective_direction_count": 4,
+      "proved": true,
+      "rank_in_characteristic_p": 12,
+      "relation_count_by_degree": {},
+      "target_dimension": 16
+    },
+    "5": {
+      "block_rank_formula": "1+sum_(b=1)^m sum_(i=0)^(p-1) min(p+1,i+2b+1)",
+      "extra_p_primary_codimension_closed_form": 6,
+      "extra_p_primary_codimension_direct_sum": 6,
+      "equal_total_equation_count": 5,
+      "independent_bidegree_block_rank": 54,
+      "m": 2,
+      "ordinary_boundary_total_codimension": 6,
+      "parallel_sum_equation_count": 1,
+      "p": 5,
+      "projective_direction_count": 6,
+      "proved": true,
+      "rank_in_characteristic_p": 54,
+      "relation_count_by_degree": {
+        "2": 3,
+        "3": 2,
+        "4": 1
+      },
+      "target_dimension": 66
+    },
+    "7": {
+      "block_rank_formula": "1+sum_(b=1)^m sum_(i=0)^(p-1) min(p+1,i+2b+1)",
+      "extra_p_primary_codimension_closed_form": 21,
+      "extra_p_primary_codimension_direct_sum": 21,
+      "equal_total_equation_count": 7,
+      "independent_bidegree_block_rank": 147,
+      "m": 3,
+      "ordinary_boundary_total_codimension": 8,
+      "parallel_sum_equation_count": 1,
+      "p": 7,
+      "projective_direction_count": 8,
+      "proved": true,
+      "rank_in_characteristic_p": 147,
+      "relation_count_by_degree": {
+        "2": 5,
+        "3": 4,
+        "4": 6,
+        "5": 4,
+        "6": 2
+      },
+      "target_dimension": 176
+    }
+  },
+  "duplicate_work_guards": [
+    "Do not stop at M2 or M4 when the full endpoint hierarchy is available.",
+    "Do not mistake F2 image completeness for saturation of the integer lattice.",
+    "Do not claim the p-torsion hierarchy excludes the compact aggregate family without an atom-level proof."
+  ],
+  "exact_rank_replays": {
+    "p3_mod2": {
+      "exact_rank": 12,
+      "formula_rank": 12,
+      "matrix_columns": 36,
+      "matrix_rows": 16,
+      "modulus": 2,
+      "p": 3,
+      "proved": true
+    },
+    "p3_mod3": {
+      "exact_rank": 12,
+      "formula_rank": 12,
+      "matrix_columns": 36,
+      "matrix_rows": 16,
+      "modulus": 3,
+      "p": 3,
+      "proved": true
+    },
+    "p5_mod2": {
+      "exact_rank": 60,
+      "formula_rank": 60,
+      "matrix_columns": 300,
+      "matrix_rows": 66,
+      "modulus": 2,
+      "p": 5,
+      "proved": true
+    },
+    "p5_mod5": {
+      "exact_rank": 54,
+      "formula_rank": 54,
+      "matrix_columns": 300,
+      "matrix_rows": 66,
+      "modulus": 5,
+      "p": 5,
+      "proved": true
+    },
+    "p7_mod2": {
+      "exact_rank": 168,
+      "formula_rank": 168,
+      "matrix_columns": 1176,
+      "matrix_rows": 176,
+      "modulus": 2,
+      "p": 7,
+      "proved": true
+    },
+    "p7_mod7": {
+      "exact_rank": 147,
+      "formula_rank": 147,
+      "matrix_columns": 1176,
+      "matrix_rows": 176,
+      "modulus": 7,
+      "p": 7,
+      "proved": true
+    }
+  },
+  "hierarchy": "for 2<=d<=p-2: floor(d/2) contractions Q divisible by (s-t)^2, each with p-d full-projective evaluation checks; degree p-1 adds m-1 checks",
+  "prop": "15.759",
+  "proved": {
+    "L": false,
+    "all_endpoint_moment_relations": true,
+    "closed_codimension_formula": true,
+    "compact_aggregate_survivor_excluded": false,
+    "e1_closed_general": false,
+    "relations_independent_and_exhaust_p_primary_linear_cokernel": true,
+    "residual_ii_closed": false,
+    "signed_residual_normalization_transport": true
+  },
+  "remaining_obstruction": "Test the compact p+1/p-3 atom decompositions against the whole endpoint-moment hierarchy, then impose nonnegative simple-edge lifting.",
+  "sample_relation_checks": {
+    "11": {
+      "all_residues_zero_mod_p": true,
+      "p": 11,
+      "proved": true,
+      "relations_checked": 94,
+      "selected_edge_count": 3246
+    },
+    "3": {
+      "all_residues_zero_mod_p": true,
+      "p": 3,
+      "proved": true,
+      "relations_checked": 0,
+      "selected_edge_count": 10
+    },
+    "5": {
+      "all_residues_zero_mod_p": true,
+      "p": 5,
+      "proved": true,
+      "relations_checked": 6,
+      "selected_edge_count": 128
+    },
+    "7": {
+      "all_residues_zero_mod_p": true,
+      "p": 7,
+      "proved": true,
+      "relations_checked": 21,
+      "selected_edge_count": 516
+    }
+  },
+  "signed_transport": {
+    "column_sign": "tau_e, the Paley sign of edge e",
+    "direction_row_sign": "epsilon_L, the Paley sign of the parallel class",
+    "finite_moment_outer_coefficient": "epsilon_L*lambda^j",
+    "moment_relation_repair": "multiply every finite outer coefficient and the infinity term by epsilon_L",
+    "normalized_parallel_entry": "epsilon_L*tau_e*n_e=n_e",
+    "normalized_transverse_entry": "epsilon_L*tau_e*n_e",
+    "p_primary_codimension_unchanged": true,
+    "projective_infinity_coefficient": "epsilon_infinity",
+    "projective_infinity_term_is_signed": true,
+    "proved": true,
+    "raw_edge_variable": "n_e in Z",
+    "row_and_column_sign_changes_are_unimodular": true
+  },
+  "status": "PROVED THEOREM AND PROVED OPEN REDUCTION",
+  "title": "Complete low-degree p-torsion edge-Radon hierarchy"
+}

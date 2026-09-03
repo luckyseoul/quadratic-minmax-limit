@@ -1,0 +1,834 @@
+{
+  "prop": "15.758",
+  "title": "Sharp fixed-offset l1 cancellation and two infinite local survivor rays",
+  "proved": {
+    "fixed_offset_canonical_coefficient_sum_identity": true,
+    "sharp_atom_l1_minimum": true,
+    "p_1_mod_4_local_survivor_interval": true,
+    "p_3_mod_4_local_survivor_interval": true,
+    "scalar_Parseval_alone_excludes_survivors": false,
+    "one_common_simple_graph_constructed": false,
+    "residual_ii_closed": false,
+    "e1_closed_general": false,
+    "L": false
+  },
+  "sharp_l1_samples": [
+    {
+      "p": 29,
+      "p_minus_3_atom_count_a": 1,
+      "p_plus_1_atom_count_b": 0,
+      "fixed_offset_P": 1,
+      "scaled_mass": 26,
+      "forced_coefficient_sum": 3,
+      "attaining_three_edge_coefficients": [
+        1,
+        1,
+        1
+      ],
+      "attaining_values_of_4B": [
+        0,
+        4
+      ],
+      "exact_minimum_l1": 3,
+      "absolute_sum_lower_bound": 3,
+      "exceptional_abs_sum_one": false,
+      "l1_one_ruled_out_by_mod_four_values": false,
+      "l1_two_ruled_out_by_norm_sum_parity": false,
+      "fixed_offset_representation_unique": true,
+      "proved": true
+    },
+    {
+      "p": 29,
+      "p_minus_3_atom_count_a": 0,
+      "p_plus_1_atom_count_b": 1,
+      "fixed_offset_P": 1,
+      "scaled_mass": 30,
+      "forced_coefficient_sum": -1,
+      "attaining_three_edge_coefficients": [
+        1,
+        -1,
+        -1
+      ],
+      "attaining_values_of_4B": [
+        0,
+        4
+      ],
+      "exact_minimum_l1": 3,
+      "absolute_sum_lower_bound": 1,
+      "exceptional_abs_sum_one": true,
+      "l1_one_ruled_out_by_mod_four_values": true,
+      "l1_two_ruled_out_by_norm_sum_parity": true,
+      "fixed_offset_representation_unique": true,
+      "proved": true
+    },
+    {
+      "p": 29,
+      "p_minus_3_atom_count_a": 0,
+      "p_plus_1_atom_count_b": 2,
+      "fixed_offset_P": 2,
+      "scaled_mass": 60,
+      "forced_coefficient_sum": -2,
+      "attaining_three_edge_coefficients": [
+        -2,
+        0,
+        0
+      ],
+      "attaining_values_of_4B": [
+        0,
+        4
+      ],
+      "exact_minimum_l1": 2,
+      "absolute_sum_lower_bound": 2,
+      "exceptional_abs_sum_one": false,
+      "l1_one_ruled_out_by_mod_four_values": false,
+      "l1_two_ruled_out_by_norm_sum_parity": false,
+      "fixed_offset_representation_unique": true,
+      "proved": true
+    },
+    {
+      "p": 29,
+      "p_minus_3_atom_count_a": 0,
+      "p_plus_1_atom_count_b": 3,
+      "fixed_offset_P": 3,
+      "scaled_mass": 90,
+      "forced_coefficient_sum": -3,
+      "attaining_three_edge_coefficients": [
+        -1,
+        -1,
+        -1
+      ],
+      "attaining_values_of_4B": [
+        0,
+        4
+      ],
+      "exact_minimum_l1": 3,
+      "absolute_sum_lower_bound": 3,
+      "exceptional_abs_sum_one": false,
+      "l1_one_ruled_out_by_mod_four_values": false,
+      "l1_two_ruled_out_by_norm_sum_parity": false,
+      "fixed_offset_representation_unique": true,
+      "proved": true
+    },
+    {
+      "p": 29,
+      "p_minus_3_atom_count_a": 1,
+      "p_plus_1_atom_count_b": 2,
+      "fixed_offset_P": 3,
+      "scaled_mass": 86,
+      "forced_coefficient_sum": 1,
+      "attaining_three_edge_coefficients": [
+        -1,
+        1,
+        1
+      ],
+      "attaining_values_of_4B": [
+        0,
+        4
+      ],
+      "exact_minimum_l1": 3,
+      "absolute_sum_lower_bound": 1,
+      "exceptional_abs_sum_one": true,
+      "l1_one_ruled_out_by_mod_four_values": true,
+      "l1_two_ruled_out_by_norm_sum_parity": true,
+      "fixed_offset_representation_unique": true,
+      "proved": true
+    },
+    {
+      "p": 29,
+      "p_minus_3_atom_count_a": 1,
+      "p_plus_1_atom_count_b": 3,
+      "fixed_offset_P": 4,
+      "scaled_mass": 116,
+      "forced_coefficient_sum": 0,
+      "attaining_three_edge_coefficients": [
+        0,
+        0,
+        0
+      ],
+      "attaining_values_of_4B": [
+        4
+      ],
+      "exact_minimum_l1": 0,
+      "absolute_sum_lower_bound": 0,
+      "exceptional_abs_sum_one": false,
+      "l1_one_ruled_out_by_mod_four_values": false,
+      "l1_two_ruled_out_by_norm_sum_parity": false,
+      "fixed_offset_representation_unique": true,
+      "proved": true
+    }
+  ],
+  "local_survivor_samples": {
+    "p_1_mod_4": {
+      "p": 29,
+      "p_mod_4": 1,
+      "r": 7,
+      "q": 14,
+      "m": 15,
+      "t": 63,
+      "valid_t_interval": [
+        63,
+        151
+      ],
+      "k": 242,
+      "H_edge_count": 243,
+      "isolated_vertex_gap": 356,
+      "transported_infinity_degree_I": 0,
+      "direction_count_per_type": 15,
+      "missing_projective_direction": false,
+      "phase_residue_u": 0,
+      "hard_rows": [
+        {
+          "e": 5,
+          "scaled_mean_a": 180,
+          "parallel_P": 10,
+          "cell": "x_j+2B, 4pE[B]=e(p+1)",
+          "compact_coefficient_l1_upper": 43
+        },
+        {
+          "e": 5,
+          "scaled_mean_a": 180,
+          "parallel_P": 10,
+          "cell": "x_j+2B, 4pE[B]=e(p+1)",
+          "compact_coefficient_l1_upper": 43
+        },
+        {
+          "e": 5,
+          "scaled_mean_a": 180,
+          "parallel_P": 10,
+          "cell": "x_j+2B, 4pE[B]=e(p+1)",
+          "compact_coefficient_l1_upper": 43
+        },
+        {
+          "e": 4,
+          "scaled_mean_a": 150,
+          "parallel_P": 9,
+          "cell": "x_j+2B, 4pE[B]=e(p+1)",
+          "compact_coefficient_l1_upper": 40
+        },
+        {
+          "e": 4,
+          "scaled_mean_a": 150,
+          "parallel_P": 9,
+          "cell": "x_j+2B, 4pE[B]=e(p+1)",
+          "compact_coefficient_l1_upper": 40
+        },
+        {
+          "e": 4,
+          "scaled_mean_a": 150,
+          "parallel_P": 9,
+          "cell": "x_j+2B, 4pE[B]=e(p+1)",
+          "compact_coefficient_l1_upper": 40
+        },
+        {
+          "e": 4,
+          "scaled_mean_a": 150,
+          "parallel_P": 9,
+          "cell": "x_j+2B, 4pE[B]=e(p+1)",
+          "compact_coefficient_l1_upper": 40
+        },
+        {
+          "e": 4,
+          "scaled_mean_a": 150,
+          "parallel_P": 9,
+          "cell": "x_j+2B, 4pE[B]=e(p+1)",
+          "compact_coefficient_l1_upper": 40
+        },
+        {
+          "e": 4,
+          "scaled_mean_a": 150,
+          "parallel_P": 9,
+          "cell": "x_j+2B, 4pE[B]=e(p+1)",
+          "compact_coefficient_l1_upper": 40
+        },
+        {
+          "e": 4,
+          "scaled_mean_a": 150,
+          "parallel_P": 9,
+          "cell": "x_j+2B, 4pE[B]=e(p+1)",
+          "compact_coefficient_l1_upper": 40
+        },
+        {
+          "e": 4,
+          "scaled_mean_a": 150,
+          "parallel_P": 9,
+          "cell": "x_j+2B, 4pE[B]=e(p+1)",
+          "compact_coefficient_l1_upper": 40
+        },
+        {
+          "e": 4,
+          "scaled_mean_a": 150,
+          "parallel_P": 9,
+          "cell": "x_j+2B, 4pE[B]=e(p+1)",
+          "compact_coefficient_l1_upper": 40
+        },
+        {
+          "e": 4,
+          "scaled_mean_a": 150,
+          "parallel_P": 9,
+          "cell": "x_j+2B, 4pE[B]=e(p+1)",
+          "compact_coefficient_l1_upper": 40
+        },
+        {
+          "e": 4,
+          "scaled_mean_a": 150,
+          "parallel_P": 9,
+          "cell": "x_j+2B, 4pE[B]=e(p+1)",
+          "compact_coefficient_l1_upper": 40
+        },
+        {
+          "e": 4,
+          "scaled_mean_a": 150,
+          "parallel_P": 9,
+          "cell": "x_j+2B, 4pE[B]=e(p+1)",
+          "compact_coefficient_l1_upper": 40
+        }
+      ],
+      "opposite_rows": [
+        {
+          "Q": 7,
+          "p_minus_3_units": 6,
+          "p_plus_1_units": 0,
+          "scaled_mean_a": 156,
+          "closed_mass_formula": 156,
+          "cell": "A=2C",
+          "atom_offset": 4,
+          "universal_offset": 3,
+          "one_omitted_pair_required_for_offset": true
+        },
+        {
+          "Q": 7,
+          "p_minus_3_units": 6,
+          "p_plus_1_units": 0,
+          "scaled_mean_a": 156,
+          "closed_mass_formula": 156,
+          "cell": "A=2C",
+          "atom_offset": 4,
+          "universal_offset": 3,
+          "one_omitted_pair_required_for_offset": true
+        },
+        {
+          "Q": 7,
+          "p_minus_3_units": 6,
+          "p_plus_1_units": 0,
+          "scaled_mean_a": 156,
+          "closed_mass_formula": 156,
+          "cell": "A=2C",
+          "atom_offset": 4,
+          "universal_offset": 3,
+          "one_omitted_pair_required_for_offset": true
+        },
+        {
+          "Q": 7,
+          "p_minus_3_units": 6,
+          "p_plus_1_units": 0,
+          "scaled_mean_a": 156,
+          "closed_mass_formula": 156,
+          "cell": "A=2C",
+          "atom_offset": 4,
+          "universal_offset": 3,
+          "one_omitted_pair_required_for_offset": true
+        },
+        {
+          "Q": 7,
+          "p_minus_3_units": 6,
+          "p_plus_1_units": 0,
+          "scaled_mean_a": 156,
+          "closed_mass_formula": 156,
+          "cell": "A=2C",
+          "atom_offset": 4,
+          "universal_offset": 3,
+          "one_omitted_pair_required_for_offset": true
+        },
+        {
+          "Q": 7,
+          "p_minus_3_units": 6,
+          "p_plus_1_units": 0,
+          "scaled_mean_a": 156,
+          "closed_mass_formula": 156,
+          "cell": "A=2C",
+          "atom_offset": 4,
+          "universal_offset": 3,
+          "one_omitted_pair_required_for_offset": true
+        },
+        {
+          "Q": 7,
+          "p_minus_3_units": 6,
+          "p_plus_1_units": 0,
+          "scaled_mean_a": 156,
+          "closed_mass_formula": 156,
+          "cell": "A=2C",
+          "atom_offset": 4,
+          "universal_offset": 3,
+          "one_omitted_pair_required_for_offset": true
+        },
+        {
+          "Q": 7,
+          "p_minus_3_units": 6,
+          "p_plus_1_units": 0,
+          "scaled_mean_a": 156,
+          "closed_mass_formula": 156,
+          "cell": "A=2C",
+          "atom_offset": 4,
+          "universal_offset": 3,
+          "one_omitted_pair_required_for_offset": true
+        },
+        {
+          "Q": 7,
+          "p_minus_3_units": 6,
+          "p_plus_1_units": 0,
+          "scaled_mean_a": 156,
+          "closed_mass_formula": 156,
+          "cell": "A=2C",
+          "atom_offset": 4,
+          "universal_offset": 3,
+          "one_omitted_pair_required_for_offset": true
+        },
+        {
+          "Q": 7,
+          "p_minus_3_units": 6,
+          "p_plus_1_units": 0,
+          "scaled_mean_a": 156,
+          "closed_mass_formula": 156,
+          "cell": "A=2C",
+          "atom_offset": 4,
+          "universal_offset": 3,
+          "one_omitted_pair_required_for_offset": true
+        },
+        {
+          "Q": 7,
+          "p_minus_3_units": 6,
+          "p_plus_1_units": 0,
+          "scaled_mean_a": 156,
+          "closed_mass_formula": 156,
+          "cell": "A=2C",
+          "atom_offset": 4,
+          "universal_offset": 3,
+          "one_omitted_pair_required_for_offset": true
+        },
+        {
+          "Q": 7,
+          "p_minus_3_units": 6,
+          "p_plus_1_units": 0,
+          "scaled_mean_a": 156,
+          "closed_mass_formula": 156,
+          "cell": "A=2C",
+          "atom_offset": 4,
+          "universal_offset": 3,
+          "one_omitted_pair_required_for_offset": true
+        },
+        {
+          "Q": 7,
+          "p_minus_3_units": 6,
+          "p_plus_1_units": 0,
+          "scaled_mean_a": 156,
+          "closed_mass_formula": 156,
+          "cell": "A=2C",
+          "atom_offset": 4,
+          "universal_offset": 3,
+          "one_omitted_pair_required_for_offset": true
+        },
+        {
+          "Q": 7,
+          "p_minus_3_units": 6,
+          "p_plus_1_units": 0,
+          "scaled_mean_a": 156,
+          "closed_mass_formula": 156,
+          "cell": "A=2C",
+          "atom_offset": 4,
+          "universal_offset": 3,
+          "one_omitted_pair_required_for_offset": true
+        },
+        {
+          "Q": 7,
+          "p_minus_3_units": 6,
+          "p_plus_1_units": 0,
+          "scaled_mean_a": 156,
+          "closed_mass_formula": 156,
+          "cell": "A=2C",
+          "atom_offset": 4,
+          "universal_offset": 3,
+          "one_omitted_pair_required_for_offset": true
+        }
+      ],
+      "type_budget": 2340,
+      "hard_parallel_edge_total": 138,
+      "opposite_parallel_edge_total": 105,
+      "common_signed_total_T": 33,
+      "one_common_simple_graph_constructed": false,
+      "proved_local_aggregate": true
+    },
+    "p_3_mod_4": {
+      "p": 31,
+      "p_mod_4": 3,
+      "r": 7,
+      "q": 15,
+      "m": 16,
+      "t": 68,
+      "valid_t_interval": [
+        68,
+        177
+      ],
+      "k": 260,
+      "H_edge_count": 261,
+      "isolated_vertex_gap": 440,
+      "transported_infinity_degree_I": 0,
+      "direction_count_per_type": 16,
+      "missing_projective_direction": false,
+      "phase_residue_u": 15,
+      "hard_rows": [
+        {
+          "e": 5,
+          "scaled_mean_a": 190,
+          "parallel_P": 8,
+          "cell": "1-x_j+2B, 4pE[B]=e(p+1)",
+          "compact_coefficient_l1_upper": 45
+        },
+        {
+          "e": 5,
+          "scaled_mean_a": 190,
+          "parallel_P": 8,
+          "cell": "1-x_j+2B, 4pE[B]=e(p+1)",
+          "compact_coefficient_l1_upper": 45
+        },
+        {
+          "e": 5,
+          "scaled_mean_a": 190,
+          "parallel_P": 8,
+          "cell": "1-x_j+2B, 4pE[B]=e(p+1)",
+          "compact_coefficient_l1_upper": 45
+        },
+        {
+          "e": 5,
+          "scaled_mean_a": 190,
+          "parallel_P": 8,
+          "cell": "1-x_j+2B, 4pE[B]=e(p+1)",
+          "compact_coefficient_l1_upper": 45
+        },
+        {
+          "e": 5,
+          "scaled_mean_a": 190,
+          "parallel_P": 8,
+          "cell": "1-x_j+2B, 4pE[B]=e(p+1)",
+          "compact_coefficient_l1_upper": 45
+        },
+        {
+          "e": 4,
+          "scaled_mean_a": 158,
+          "parallel_P": 7,
+          "cell": "1-x_j+2B, 4pE[B]=e(p+1)",
+          "compact_coefficient_l1_upper": 42
+        },
+        {
+          "e": 4,
+          "scaled_mean_a": 158,
+          "parallel_P": 7,
+          "cell": "1-x_j+2B, 4pE[B]=e(p+1)",
+          "compact_coefficient_l1_upper": 42
+        },
+        {
+          "e": 4,
+          "scaled_mean_a": 158,
+          "parallel_P": 7,
+          "cell": "1-x_j+2B, 4pE[B]=e(p+1)",
+          "compact_coefficient_l1_upper": 42
+        },
+        {
+          "e": 4,
+          "scaled_mean_a": 158,
+          "parallel_P": 7,
+          "cell": "1-x_j+2B, 4pE[B]=e(p+1)",
+          "compact_coefficient_l1_upper": 42
+        },
+        {
+          "e": 4,
+          "scaled_mean_a": 158,
+          "parallel_P": 7,
+          "cell": "1-x_j+2B, 4pE[B]=e(p+1)",
+          "compact_coefficient_l1_upper": 42
+        },
+        {
+          "e": 4,
+          "scaled_mean_a": 158,
+          "parallel_P": 7,
+          "cell": "1-x_j+2B, 4pE[B]=e(p+1)",
+          "compact_coefficient_l1_upper": 42
+        },
+        {
+          "e": 4,
+          "scaled_mean_a": 158,
+          "parallel_P": 7,
+          "cell": "1-x_j+2B, 4pE[B]=e(p+1)",
+          "compact_coefficient_l1_upper": 42
+        },
+        {
+          "e": 4,
+          "scaled_mean_a": 158,
+          "parallel_P": 7,
+          "cell": "1-x_j+2B, 4pE[B]=e(p+1)",
+          "compact_coefficient_l1_upper": 42
+        },
+        {
+          "e": 4,
+          "scaled_mean_a": 158,
+          "parallel_P": 7,
+          "cell": "1-x_j+2B, 4pE[B]=e(p+1)",
+          "compact_coefficient_l1_upper": 42
+        },
+        {
+          "e": 4,
+          "scaled_mean_a": 158,
+          "parallel_P": 7,
+          "cell": "1-x_j+2B, 4pE[B]=e(p+1)",
+          "compact_coefficient_l1_upper": 42
+        },
+        {
+          "e": 4,
+          "scaled_mean_a": 158,
+          "parallel_P": 7,
+          "cell": "1-x_j+2B, 4pE[B]=e(p+1)",
+          "compact_coefficient_l1_upper": 42
+        }
+      ],
+      "opposite_rows": [
+        {
+          "Q": 9,
+          "p_minus_3_units": 6,
+          "p_plus_1_units": 0,
+          "scaled_mean_a": 168,
+          "closed_mass_formula": 168,
+          "cell": "A=2C",
+          "atom_offset": 6,
+          "universal_offset": 3,
+          "all_atoms_may_be_compact_triangles": true
+        },
+        {
+          "Q": 9,
+          "p_minus_3_units": 6,
+          "p_plus_1_units": 0,
+          "scaled_mean_a": 168,
+          "closed_mass_formula": 168,
+          "cell": "A=2C",
+          "atom_offset": 6,
+          "universal_offset": 3,
+          "all_atoms_may_be_compact_triangles": true
+        },
+        {
+          "Q": 9,
+          "p_minus_3_units": 6,
+          "p_plus_1_units": 0,
+          "scaled_mean_a": 168,
+          "closed_mass_formula": 168,
+          "cell": "A=2C",
+          "atom_offset": 6,
+          "universal_offset": 3,
+          "all_atoms_may_be_compact_triangles": true
+        },
+        {
+          "Q": 9,
+          "p_minus_3_units": 6,
+          "p_plus_1_units": 0,
+          "scaled_mean_a": 168,
+          "closed_mass_formula": 168,
+          "cell": "A=2C",
+          "atom_offset": 6,
+          "universal_offset": 3,
+          "all_atoms_may_be_compact_triangles": true
+        },
+        {
+          "Q": 9,
+          "p_minus_3_units": 6,
+          "p_plus_1_units": 0,
+          "scaled_mean_a": 168,
+          "closed_mass_formula": 168,
+          "cell": "A=2C",
+          "atom_offset": 6,
+          "universal_offset": 3,
+          "all_atoms_may_be_compact_triangles": true
+        },
+        {
+          "Q": 9,
+          "p_minus_3_units": 6,
+          "p_plus_1_units": 0,
+          "scaled_mean_a": 168,
+          "closed_mass_formula": 168,
+          "cell": "A=2C",
+          "atom_offset": 6,
+          "universal_offset": 3,
+          "all_atoms_may_be_compact_triangles": true
+        },
+        {
+          "Q": 9,
+          "p_minus_3_units": 6,
+          "p_plus_1_units": 0,
+          "scaled_mean_a": 168,
+          "closed_mass_formula": 168,
+          "cell": "A=2C",
+          "atom_offset": 6,
+          "universal_offset": 3,
+          "all_atoms_may_be_compact_triangles": true
+        },
+        {
+          "Q": 9,
+          "p_minus_3_units": 6,
+          "p_plus_1_units": 0,
+          "scaled_mean_a": 168,
+          "closed_mass_formula": 168,
+          "cell": "A=2C",
+          "atom_offset": 6,
+          "universal_offset": 3,
+          "all_atoms_may_be_compact_triangles": true
+        },
+        {
+          "Q": 9,
+          "p_minus_3_units": 6,
+          "p_plus_1_units": 0,
+          "scaled_mean_a": 168,
+          "closed_mass_formula": 168,
+          "cell": "A=2C",
+          "atom_offset": 6,
+          "universal_offset": 3,
+          "all_atoms_may_be_compact_triangles": true
+        },
+        {
+          "Q": 9,
+          "p_minus_3_units": 6,
+          "p_plus_1_units": 0,
+          "scaled_mean_a": 168,
+          "closed_mass_formula": 168,
+          "cell": "A=2C",
+          "atom_offset": 6,
+          "universal_offset": 3,
+          "all_atoms_may_be_compact_triangles": true
+        },
+        {
+          "Q": 9,
+          "p_minus_3_units": 6,
+          "p_plus_1_units": 0,
+          "scaled_mean_a": 168,
+          "closed_mass_formula": 168,
+          "cell": "A=2C",
+          "atom_offset": 6,
+          "universal_offset": 3,
+          "all_atoms_may_be_compact_triangles": true
+        },
+        {
+          "Q": 9,
+          "p_minus_3_units": 6,
+          "p_plus_1_units": 0,
+          "scaled_mean_a": 168,
+          "closed_mass_formula": 168,
+          "cell": "A=2C",
+          "atom_offset": 6,
+          "universal_offset": 3,
+          "all_atoms_may_be_compact_triangles": true
+        },
+        {
+          "Q": 9,
+          "p_minus_3_units": 6,
+          "p_plus_1_units": 0,
+          "scaled_mean_a": 168,
+          "closed_mass_formula": 168,
+          "cell": "A=2C",
+          "atom_offset": 6,
+          "universal_offset": 3,
+          "all_atoms_may_be_compact_triangles": true
+        },
+        {
+          "Q": 9,
+          "p_minus_3_units": 6,
+          "p_plus_1_units": 0,
+          "scaled_mean_a": 168,
+          "closed_mass_formula": 168,
+          "cell": "A=2C",
+          "atom_offset": 6,
+          "universal_offset": 3,
+          "all_atoms_may_be_compact_triangles": true
+        },
+        {
+          "Q": 9,
+          "p_minus_3_units": 6,
+          "p_plus_1_units": 0,
+          "scaled_mean_a": 168,
+          "closed_mass_formula": 168,
+          "cell": "A=2C",
+          "atom_offset": 6,
+          "universal_offset": 3,
+          "all_atoms_may_be_compact_triangles": true
+        },
+        {
+          "Q": 9,
+          "p_minus_3_units": 6,
+          "p_plus_1_units": 0,
+          "scaled_mean_a": 168,
+          "closed_mass_formula": 168,
+          "cell": "A=2C",
+          "atom_offset": 6,
+          "universal_offset": 3,
+          "all_atoms_may_be_compact_triangles": true
+        }
+      ],
+      "type_budget": 2688,
+      "hard_parallel_edge_total": 117,
+      "opposite_parallel_edge_total": 144,
+      "common_signed_total_T": -27,
+      "one_common_simple_graph_constructed": false,
+      "proved_local_aggregate": true
+    }
+  },
+  "lower_endpoint_Parseval": {
+    "p_1_mod_4": {
+      "p_expression": "4r+1",
+      "r": 7,
+      "t_lower_endpoint": 63,
+      "H_edge_count": 243,
+      "parallel_square_sum": 2007,
+      "hard_excess_multiset": {
+        "4": 12,
+        "5": 3
+      },
+      "opposite_parallel_count_multiset": {
+        "7": 15
+      },
+      "common_signed_total_T": 33,
+      "global_Radon_energy": "5211+2*(29)*C",
+      "global_energy_at_C_0": 5211,
+      "hard_compact_triangle_energy_maximum": 1923,
+      "one_opposite_compact_triangle_energy_maximum": 242,
+      "all_opposite_compact_triangle_energy_maximum": 3630,
+      "total_compact_triangle_energy_maximum": 5553,
+      "compact_max_minus_global_C0": 342,
+      "scalar_Parseval_upper_lower_gap_closes": false,
+      "proved": true
+    },
+    "p_3_mod_4": {
+      "p_expression": "4r+3",
+      "r": 7,
+      "t_lower_endpoint": 68,
+      "H_edge_count": 261,
+      "parallel_square_sum": 2155,
+      "hard_excess_multiset": {
+        "4": 11,
+        "5": 5
+      },
+      "opposite_parallel_count_multiset": {
+        "9": 16
+      },
+      "common_signed_total_T": -27,
+      "global_Radon_energy": "5239+2*(31)*C",
+      "global_energy_at_C_0": 5239,
+      "hard_compact_triangle_energy_maximum": 2741,
+      "all_opposite_compact_triangle_energy_maximum": 2880,
+      "total_compact_triangle_energy_maximum": 5621,
+      "compact_max_minus_global_C0": 382,
+      "scalar_Parseval_upper_lower_gap_closes": false,
+      "proved": true
+    }
+  },
+  "remaining_obstruction": "Integral midpoint/difference-Radon consistency for all directional coefficient matrices of one simple 0/1 graph H",
+  "duplicate_work_guards": [
+    "Do not revive an l1 lower bound proportional to the number of sharp atoms.",
+    "Do not infer a common graph from the displayed local row aggregate.",
+    "Do not claim scalar Parseval supplies an upper-lower contradiction on these rays."
+  ],
+  "L_status": "OPEN"
+}

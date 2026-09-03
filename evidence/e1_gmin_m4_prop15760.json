@@ -1,0 +1,177 @@
+{
+  "L_status": "OPEN",
+  "cokernel": "(Z/pZ)^[(m-1)(4m^2+7m+6)/6]",
+  "difference_quotient": {
+    "S_is_injective": true,
+    "cokernel": "(Z/pZ)^(m^2-1)",
+    "exact_sequence": "0 -> M -> A -> A_D -> 0",
+    "gram_identity": "SS^t(e_L,beta-e_L,beta0)=p(e_L,beta-e_L,beta0)",
+    "kernel_basis": "K_L(alpha,beta)-K_L(alpha0,beta)",
+    "p_times_quotient_lattice_in_image": true,
+    "proved": true,
+    "quotient_basis": [
+      "e_(L,beta)-e_(L,beta0)",
+      "g_M^D=P_M+sum_(L!=M)e_(L,beta0)"
+    ],
+    "quotient_map": "sum midpoint alpha at fixed (L,beta), retain P_L",
+    "rank_mod_p": "(m+1)^2",
+    "row_support_intersections": {
+      "distinct_direction_parallel_parallel": 0,
+      "distinct_direction_value_parallel": 1,
+      "distinct_direction_value_value": 2,
+      "parallel_size": "m",
+      "same_direction_distinct_categories": 0,
+      "value_size": "p"
+    },
+    "source_and_target_rank": "(p+1)m"
+  },
+  "duplicate_work_guards": [
+    "Do not search for another linear integer congruence after the complete moment list.",
+    "Do not infer a 0/1 graph from an unrestricted signed integral lift.",
+    "Do not claim the 15.758 rays pass the degree-five and higher moment gates."
+  ],
+  "integral_image": {
+    "all_linear_congruence_obstructions_exhausted": true,
+    "binary_prop15757_consistency": "the cokernel is p-primary with p odd, so it has no mod-2 residue",
+    "compact_prop15758_rays_pass_all_moments_proved": false,
+    "moment_map_on_cokernel": "isomorphism to F_p^S(p)",
+    "proved": true,
+    "signed_transport": "unimodular edge-column and direction-row sign matrices",
+    "simple_graph_normalized_domain": "z_e in {0,tau_e}",
+    "simple_lift_iff": "(z_0+ker_Z R) intersects product_e {0,tau_e}",
+    "simple_nonnegative_lift_proved": false,
+    "unsigned_integral_image_iff": [
+      "all directional totals are one h",
+      "sum of parallel coordinates is h",
+      "every Proposition 15.759 moment congruence vanishes modulo p"
+    ]
+  },
+  "midpoint_kernel": {
+    "cokernel": "(Z/pZ)^[m(m-1)(4m+1)/6]",
+    "directional_block_rank": "min(p+1,i+2b+1)",
+    "dual_blocks": "alpha^i beta^b, 1<=i<=p-1, 1<=b<=m",
+    "matching_chain": "X_alpha=sum_(a:L(a)=alpha){a-delta,a+delta}",
+    "matching_image": "R_0(X_alpha-X_alpha')=p(K_L(alpha,beta)-K_L(alpha',beta))",
+    "mod_p_defect_closed": "m(m-1)(4m+1)/6",
+    "mod_p_defect_double_sum": "sum_(b=1)^(m-1)sum_(i=1)^(p-2b-1)(p-i-2b)",
+    "other_directions_cancel_exactly": true,
+    "p_times_midpoint_lattice_in_image": true,
+    "proved": true,
+    "source_exact_sequence": "0 -> E_0 -> E -> Z^Delta -> 0",
+    "target_kernel_basis": "K_L(alpha,beta)-K_L(alpha0,beta)"
+  },
+  "ordinary_lattice": {
+    "basis_count": "(p+1)(p*m-1)+(p+1)=(p+1)p*m",
+    "constraint_map": "F_L=T_L-T_L0 (L!=L0); F_*=sum_L P_L-T_L0",
+    "integral_basis": [
+      "K_L(c)-K_L(c0), for c!=c0",
+      "g_M=P_M+sum_(L!=M)K_L(c0), for every M"
+    ],
+    "kernel": "A, the ordinary equal-total/parallel-sum lattice",
+    "ordinary_lattice_is_primitive": true,
+    "proved": true,
+    "split_surjective_constraint_map": true,
+    "surjection_witnesses": {
+      "direction_coordinate_L": "K_L(c0)",
+      "last_coordinate": "P_L-K_L(c0), for any L!=L0"
+    }
+  },
+  "prop": "15.760",
+  "proved": {
+    "L": false,
+    "compact_aggregate_survivor_has_simple_lift": false,
+    "difference_and_midpoint_cokernels_elementary_p": true,
+    "e1_closed_general": false,
+    "full_cokernel_elementary_p": true,
+    "integer_quotient_sequences_exact": true,
+    "ordinary_lattice_primitive": true,
+    "prop15759_moments_are_integer_image_sufficient": true,
+    "residual_ii_closed": false,
+    "signed_residual_transport": true
+  },
+  "remaining_obstruction": "First decide every Prop. 15.759 moment row for the 15.758 atom families; conditional on passing, decide the sign-compatible 0/1 intersection (z_0+ker_Z R) cap product_e {0,tau_e}.",
+  "snake_and_smith": {
+    "cokernel_order": "p^[(m-1)(4m^2+7m+6)/6]",
+    "commutative_identity": "pi R=S sigma",
+    "exponent_argument": "if invariant factors are p^a_j, their count and sum a_j both equal S(p), so every a_j=1",
+    "full_cokernel": "(Z/pZ)^[(m-1)(4m^2+7m+6)/6]",
+    "minimum_generator_count_from_prop15759": "(m-1)(4m^2+7m+6)/6",
+    "no_other_prime_torsion": true,
+    "no_p_squared_torsion": true,
+    "proved": true,
+    "snake_injection_reason": "S is injective over Z",
+    "snake_tail": "0 -> coker R_0 -> coker R -> coker S -> 0"
+  },
+  "status": "PROVED INTEGRAL IMAGE THEOREM AND OPEN 0/1 REDUCTION",
+  "symbolic_rank_identities": {
+    "checks": {
+      "difference_quotient_defect_is_m_squared_minus_one": true,
+      "edge_midpoint_fibres_count_all_edges": true,
+      "kernel_plus_quotient_rank_is_ordinary_rank": true,
+      "ordinary_basis_has_full_lattice_rank": true,
+      "ordinary_codimension_is_p_plus_one": true,
+      "snake_defects_equal_prop15759": true
+    },
+    "coefficient_order": "constant_to_highest_degree_in_m",
+    "difference_class_count": [
+      0,
+      2,
+      2
+    ],
+    "difference_quotient_defect": [
+      -1,
+      0,
+      1
+    ],
+    "difference_quotient_mod_p_rank": [
+      1,
+      2,
+      1
+    ],
+    "difference_quotient_rank": [
+      0,
+      2,
+      2
+    ],
+    "directions_p_plus_one": [
+      2,
+      2
+    ],
+    "midpoint_kernel_defect": [
+      0,
+      "-1/6",
+      "-1/2",
+      "2/3"
+    ],
+    "midpoint_kernel_rank": [
+      0,
+      0,
+      4,
+      4
+    ],
+    "ordinary_lattice_rank": [
+      0,
+      2,
+      6,
+      4
+    ],
+    "p": [
+      1,
+      2
+    ],
+    "prop15759_defect": [
+      -1,
+      "-1/6",
+      "1/2",
+      "2/3"
+    ],
+    "proved": true,
+    "total_defect": [
+      -1,
+      "-1/6",
+      "1/2",
+      "2/3"
+    ]
+  },
+  "title": "Integral edge-Radon image cut out exactly by moments"
+}

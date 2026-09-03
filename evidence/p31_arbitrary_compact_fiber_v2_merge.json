@@ -1,0 +1,48 @@
+{
+  "all_noncentered_fibers_UNSAT": true,
+  "centered_compact": [
+    1,
+    30,
+    0
+  ],
+  "centered_fiber_delegated_to_existing_exact_certificate": true,
+  "centered_index": 435,
+  "compact_orbit_count": 450,
+  "complete_coverage": true,
+  "declared_ranges": [
+    [
+      0,
+      450
+    ]
+  ],
+  "duplicate_index_count": 0,
+  "executed_nodes_including_overlap": 317916856,
+  "experiment": "p31_arbitrary_compact_fiber_exact_overlap_aware_merge",
+  "missing_indices": [],
+  "normalized_merged_status_sha256": "ad3bf3c97b378c9cdebb0b77d486cced544199750ad689060bd2a24f6a2210cb",
+  "per_shard": [
+    {
+      "complete_summary": true,
+      "completed_index_count": 450,
+      "last_completed_index": 449,
+      "log_sha256": "f3f77607181287095aa69644649d14d7b9b5e3a8f24044477b667549ef0512e3",
+      "nodes": 317916856,
+      "path": "/tmp/p31_arbitrary_compact_fiber_v2_000_450.log",
+      "range": [
+        0,
+        450
+      ]
+    }
+  ],
+  "proved": true,
+  "scope": "fixed local p=31 zero-global-form compact plus six-AE central-chain and d6/d8 gate",
+  "sha256_without_hash_field": "efcab50a9f0c67bb00aa6e11a53959205f4213f266072837f1f50fe87ef86459",
+  "solver_source_sha256": "1dcfce7b5765630655d049413c4d9138c544a6d05fe19e3308a9a20a2880d1f2",
+  "status_counts": {
+    "CENTERED": 1,
+    "SAT": 0,
+    "UNSAT": 449
+  },
+  "unique_completed_index_count": 450,
+  "x86_64_binary_sha256": "4622dbcb2afbfdc4c0da3588e42cba86542a98763fb89429bed7ea2185915955"
+}

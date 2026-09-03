@@ -1,6 +1,6 @@
 # P0 Engineering Graph (persistent — update every turn)
 
-> **AUTHORITATIVE LIVE OVERLAY (2026-09-01).** Sections 1--8 below are an
+> **AUTHORITATIVE LIVE OVERLAY (2026-09-02).** Sections 1--8 below are an
 > archived Path-C graph from 2026-08-13 and are not a routing authority. The
 > live graph is:
 >
@@ -15,8 +15,8 @@
 >  `-- Paley E(1), stronger value route
 >       `-- residual_ii_k_ge_4p_ND_closed [OPEN]
 >            +-- first four shells in stated prime ranges [CLOSED]
->            +-- fifth shell p>=17 (15.752--15.753) [CLOSED]
->            `-- p13 u=6 / later and beyond-band layers [OPEN]
+>            +-- fifth shell p>=13 (15.752--15.754) [CLOSED]
+>            `-- p=5,7; p11 k>=50; later p13 / beyond-band [OPEN]
 > ```
 >
 > Direct routing rules: doubling must use global-minimizer information or a

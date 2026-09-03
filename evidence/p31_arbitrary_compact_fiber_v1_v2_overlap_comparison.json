@@ -1,0 +1,167 @@
+{
+  "all_v1_v2_overlap_verdicts_and_compacts_equal": true,
+  "disagreement_count": 0,
+  "experiment": "p31_arbitrary_compact_fiber_v1_v2_overlap_comparison",
+  "normalized_overlap_status_sha256": "8b6b6277cb63561f744865ecc6aa7012dacc20be7d062c6b53d8670cfd7d75fd",
+  "overlap_index_count": 435,
+  "overlap_indices": [
+    0,
+    434
+  ],
+  "proved": true,
+  "sha256_without_hash_field": "b0fbbba6f26ef2f2579b6e72f8656c963091a46b99e21e5c5e30f55276f01890",
+  "v1_logs": [
+    {
+      "completed_index_count": 55,
+      "path": "/tmp/p31_arbitrary_compact_fiber_000_113.log",
+      "range": [
+        0,
+        113
+      ],
+      "sha256": "6dc3f637043f2ccbf4c843e57195ec52a2fed7b742202cd4a351a2d64e944237"
+    },
+    {
+      "completed_index_count": 16,
+      "path": "/tmp/p31_arbitrary_compact_fiber_055_071.log",
+      "range": [
+        55,
+        71
+      ],
+      "sha256": "1105c2007f69bacc9546d1e831a6536c0f9f44b1cf803104bc380e2dcc8d0297"
+    },
+    {
+      "completed_index_count": 26,
+      "path": "/tmp/p31_arbitrary_compact_fiber_071_097.log",
+      "range": [
+        71,
+        97
+      ],
+      "sha256": "16fb7d2eb1b5b7041f729c063a8de937e02ca8b22e518a646b0d02e60c484c76"
+    },
+    {
+      "completed_index_count": 26,
+      "path": "/tmp/p31_arbitrary_compact_fiber_097_123.log",
+      "range": [
+        97,
+        123
+      ],
+      "sha256": "dfaea48b0b838cbd62c73b22ce6a2e15dcde07c8b587f590aeb71a8498d706e0"
+    },
+    {
+      "completed_index_count": 26,
+      "path": "/tmp/p31_arbitrary_compact_fiber_123_149.log",
+      "range": [
+        123,
+        149
+      ],
+      "sha256": "79402890e99d71de50ab39eeab5695a08c90bfee1fed61294ba88522a25e99a3"
+    },
+    {
+      "completed_index_count": 26,
+      "path": "/tmp/p31_arbitrary_compact_fiber_149_175.log",
+      "range": [
+        149,
+        175
+      ],
+      "sha256": "97bd29d709b304f5b6f13e7f89b27f7129ab3b048746548c695fafa4bf520c8c"
+    },
+    {
+      "completed_index_count": 26,
+      "path": "/tmp/p31_arbitrary_compact_fiber_175_201.log",
+      "range": [
+        175,
+        201
+      ],
+      "sha256": "fcee963476cd0536a6736318c4cc75ce1a8539c341727753cc825b2895b467ea"
+    },
+    {
+      "completed_index_count": 26,
+      "path": "/tmp/p31_arbitrary_compact_fiber_201_227.log",
+      "range": [
+        201,
+        227
+      ],
+      "sha256": "bbaaa8e0d9b6dc670bf35feaee9438e637a93da2a1abe83ba7642ad52d73ca9f"
+    },
+    {
+      "completed_index_count": 26,
+      "path": "/tmp/p31_arbitrary_compact_fiber_227_253.log",
+      "range": [
+        227,
+        253
+      ],
+      "sha256": "9f76a9c6d8d468c4621c4fc31c38008464024f6a892c14b468e9b415e24b2a48"
+    },
+    {
+      "completed_index_count": 26,
+      "path": "/tmp/p31_arbitrary_compact_fiber_253_279.log",
+      "range": [
+        253,
+        279
+      ],
+      "sha256": "03a4544a1eaf7ea37c4f979bbcf5beb6a52403207a619b62027e9372ae6d7c8f"
+    },
+    {
+      "completed_index_count": 26,
+      "path": "/tmp/p31_arbitrary_compact_fiber_279_305.log",
+      "range": [
+        279,
+        305
+      ],
+      "sha256": "96145a29be81786e872a5068a2c1e3111005e875654d5cd2a87562a7198f0813"
+    },
+    {
+      "completed_index_count": 26,
+      "path": "/tmp/p31_arbitrary_compact_fiber_305_331.log",
+      "range": [
+        305,
+        331
+      ],
+      "sha256": "f558ec1851c3a215fce8b3ba7a7b0e336a90106d0f30b65675ee346fa3e909df"
+    },
+    {
+      "completed_index_count": 26,
+      "path": "/tmp/p31_arbitrary_compact_fiber_331_357.log",
+      "range": [
+        331,
+        357
+      ],
+      "sha256": "a2d6db3f8b0468759d238c821db1be875ad3f473c12c15fda5818f456af45841"
+    },
+    {
+      "completed_index_count": 26,
+      "path": "/tmp/p31_arbitrary_compact_fiber_357_383.log",
+      "range": [
+        357,
+        383
+      ],
+      "sha256": "e0e24108a7b9751c4c78d195a9c8a11631ee85184a434957569d0b929a4fd095"
+    },
+    {
+      "completed_index_count": 26,
+      "path": "/tmp/p31_arbitrary_compact_fiber_383_409.log",
+      "range": [
+        383,
+        409
+      ],
+      "sha256": "5526f6bfd8cb201bdea0943b4d8372c47878df35c69f6b711db2c83c8d8275de"
+    },
+    {
+      "completed_index_count": 26,
+      "path": "/tmp/p31_arbitrary_compact_fiber_409_435.log",
+      "range": [
+        409,
+        435
+      ],
+      "sha256": "eaad318b2be73c8bb662c56d3532102dd57548df8fe4391797571b2eea3fb44d"
+    }
+  ],
+  "v1_source_sha256": "cae7870ce64f146bf0df718b3c7ae90195b2442b44a2977513007252ae178d0b",
+  "v2_full_status_counts": {
+    "CENTERED": 1,
+    "SAT": 0,
+    "UNSAT": 449
+  },
+  "v2_log_sha256": "f3f77607181287095aa69644649d14d7b9b5e3a8f24044477b667549ef0512e3",
+  "v2_source_sha256": "1dcfce7b5765630655d049413c4d9138c544a6d05fe19e3308a9a20a2880d1f2"
+}
