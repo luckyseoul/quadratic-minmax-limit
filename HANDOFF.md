@@ -390,6 +390,83 @@
   `evidence/NOTE_2026-09-03_INVERSION_SYMMETRIC_LATTICE.md`,
   `evidence/NOTE_2026-09-03_MOBIUS_HALF_SYMMETRIC.md`, and
   `evidence/NOTE_2026-09-03_ALL_ACTIVE_PENCIL_SUPPORT.md`.
+- Fixed antipodal variables in that box are now eliminated exactly. The
+  block map is `R+=[[A,2B],[0,C]]`; `A mod 2` is an isomorphism with explicit
+  inverse `a_[v]=g_(L_v)(0)+sum_L g_L(L(v)^2)`. After subtracting the unique
+  forced word and dividing its fixed block, the live variables are precisely
+  the unused nonfixed orbit bits. They obey
+  `2 sum b=|H|-|U|-|a|` and one exact integer weight slice per direction.
+- For a used orbit `(a,[delta])`, the forced-word change `Phi` is zero when
+  `a||delta` and otherwise is the `p`-point antipodal affine block
+  `{[delta+c a]}`. These blocks satisfy `M M^T=M^T M=I` over `F_2` and have
+  `p`-column lifts through `ker C`. Hence the full halved map `D=(C,Phi)` is
+  onto, of rank `d h(h+1)`. The punctured map is onto exactly when `U`
+  contains no support of a nonzero word in `Row(D)`; particular-target
+  membership is the corresponding left-kernel pairing test.
+- Arbitrary `|Delta|`-puncture robustness is false: the rectangle
+  `X_(L,beta)={L(a)=0,L(delta)^2=beta}` has weight `p h=|Delta|-h` and its
+  deletion drops rank. The actual union of `(p+1)/2` Mobius halves meets this
+  rectangle in at most `p+1`, but other low-weight dual words are not
+  classified. Block-parity projection now reduces every hypothetical
+  contained word outside the all-rectangle case to an affine midpoint block
+  over one common difference block covered by all `h+1` halves, at least
+  `h` of them twice. That nearly saturated all-halves cover remains open.
+  The one-difference-slice integer kernel is exactly
+  `A_(h-1)`, with whole-`p`-slab exchanges; this is local connectivity only.
+- The corrected all-active capacity demand is
+  `kappa>=t_max-t+1` when `|U|=m(p-1)-2 kappa`. For `p=31` it ranges from
+  110 at `t=68` to one at `t=177`, so the disjoint lift is never extendable
+  on the ray. Two halves cancel on at most two shared orbits, sharply, but
+  the sharp locus is rigid (`q=r=1/2,A=B=3/2`) and gives no greedy parameter.
+  The exact first test is
+  `|U|+|a_Y+sum_(O in U) Phi(O)|<=|H|`; the divided Boolean fibre still
+  follows it. Frozen notes are
+  `evidence/NOTE_2026-09-03_SYMMETRIC_FIXED_EDGE_ELIMINATION.md`,
+  `evidence/NOTE_2026-09-03_SYMMETRIC_HALVED_MOD2.md`,
+  `evidence/NOTE_2026-09-03_SYMMETRIC_HALVED_MOBIUS_COVER.md`,
+  `evidence/NOTE_2026-09-03_SYMMETRIC_UNUSED_SLICE_EXCHANGE.md`, and
+  `evidence/NOTE_2026-09-03_MOBIUS_HALF_INTERSECTIONS.md`.
+- At `p=31`, cancellation parity is now fully audited. The 16 halves start
+  with 16 zero-`Phi` and 464 nonzero-`Phi` occurrences; ternarity preserves
+  the even parity of each count through arbitrary overlaps. Hence
+  `|a(T_U)|` is odd while the Hamming numerator is automatically even. At
+  `kappa=178-t`, any completion is forced to one fixed antipodal edge and
+  zero unused double orbits. This is a conditional consequence, not a
+  completion or contradiction. Zero-`Phi` parallel means midpoint parallel
+  to difference, not the directionwise parallel-edge statistic.
+- The sharp rigid pair has source-`Phi` weight
+  `4p-26-2 eta(3)-4 eta(6)-4 eta(-2)` (108 at `p=31`), but do not reuse the
+  retracted target identity `a_Y=a_literal`. The correct identity is
+  `a_Y=a_literal+a_compact`; a central compact residual can have odd fixed
+  cells, so the rigid source word supplies no Hamming close.
+- The exact row-code normal form is
+  `Row(D)=(<1> tensor F_2^Delta) direct_sum direct_sum_A(B_A tensor B_A)`,
+  or `1 q^T+T` with `T` direction-block-diagonal after the `M` basis change.
+  The proved one-dimensional branch number is `p+1`. It does **not** prove
+  the open claim `d_row(D)=p h`; minimum-word and through-`|Delta|`
+  classifications remain open, and weight-`|Delta|` vertical/scalar words
+  already disprove the rectangles-only version.
+  A sharper implication is conditional: the group-support inequality
+  `wt(f)+#{A:(M^T f)|_(B_A)!=0}>=p+1` for every nonzero point word would
+  imply `d_row(D)>=p h` by active-direction symmetric-difference counting.
+  The implication is proved; its group-support premise remains OPEN.
+  At `p=31`, the odd-support premise is now proved symbolically and the even
+  sizes `s=2,4,6,8,10` are closed exactly. The frozen MITM/cycle-hash
+  certificates attain at most `z=s` silent directions at `s=6,8,10`; the
+  four generic cross-ratio representatives `3,4,5,12` are exhaustive for
+  `s=8,10`. The first unclosed even support is `s=12`. This finite ladder
+  does not prove the full premise, the row-code distance, or residual (ii).
+- The prescribed-center common-block problem has an exact equal-square Hall
+  formulation. Deficiency two in an anchor subfamily excludes the fully
+  doubled and one-single profiles; the checked `p=31` list does this for one
+  fixed `K` only. Conversely, for branch primes `p>=31` with all hard centers
+  nonzero, a prescribed anchor line whose link graph is a pseudoforest gives
+  a saturated equal-square incidence cover. Existence of
+  such a line, mutual ternarity, full dual-support containment, and the
+  Boolean completion are all still open. The additional frozen notes are
+  `evidence/NOTE_2026-09-03_SYMMETRIC_HALVED_ROW_CODE.md`,
+  `evidence/NOTE_2026-09-03_PRESCRIBED_CENTER_COMMON_BLOCK.md`, and
+  `evidence/NOTE_2026-09-03_RIGID_PAIR_FIXED_WORD.md`.
 - The ordered live gate is exact and narrower. The p31 result closes only the
   balanced `69<=t<=99` zero-global-form odd/degree-six/degree-eight band.
   Every balanced opposite row is zero-odd central through `t=164`, and the
@@ -398,7 +475,7 @@
   coordinated across directions, and the coupled symmetric pair-total box.
   Residual (ii), E1, and `L` remain OPEN.
 - Focused replay:
-  `PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -q tests/test_prop15757.py tests/test_prop15758.py tests/test_prop15759.py tests/test_prop15760.py tests/test_prop15761.py tests/test_compact_ray_moment_gate.py tests/test_conic_odd_radon.py tests/test_p31_equi_zero68_mitm.py tests/test_signed_boolean_defect.py tests/test_ridge_kernel.py tests/test_equianharmonic_component_packing.py tests/test_hard_compact_odd_radon.py tests/test_hard_star_antisymmetric_support.py tests/test_inversion_antisymmetric_radon.py tests/test_equianharmonic_threshold_even_barrier.py tests/test_main_chain_docs.py`.
+  `PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -q tests/test_prop15757.py tests/test_prop15758.py tests/test_prop15759.py tests/test_prop15760.py tests/test_prop15761.py tests/test_compact_ray_moment_gate.py tests/test_conic_odd_radon.py tests/test_p31_equi_zero68_mitm.py tests/test_signed_boolean_defect.py tests/test_ridge_kernel.py tests/test_equianharmonic_component_packing.py tests/test_hard_compact_odd_radon.py tests/test_hard_star_antisymmetric_support.py tests/test_inversion_antisymmetric_radon.py tests/test_equianharmonic_threshold_even_barrier.py tests/test_inversion_symmetric_lattice.py tests/test_mobius_half_symmetric.py tests/test_all_active_pencil_support.py tests/test_symmetric_fixed_edge_elimination.py tests/test_symmetric_halved_mod2.py tests/test_symmetric_halved_mobius_cover.py tests/test_symmetric_slice_exchange.py tests/test_mobius_half_intersections.py tests/test_symmetric_halved_row_code.py tests/test_prescribed_center_common_block.py tests/test_rigid_pair_fixed_word.py tests/test_main_chain_docs.py`.
   Residual (ii), E1, `L=1/2`, and the original MO limit remain OPEN.
   The compact-ray file independently passes 22 focused tests. Its exact
   theorem implementation and evidence are

@@ -1,0 +1,37 @@
+{
+  "p": 31,
+  "status": "WEIGHTS_TWO_AND_FOUR_CLOSED",
+  "decision_problem": "wt(f)+active_direction_count>=32",
+  "weight_two": {
+    "status": "ANALYTIC",
+    "silent_direction_bound": 2,
+    "proof": "For two distinct antipodal classes [v] and [w], a direction L is silent exactly when L(v)^2=L(w)^2. Factoring gives L(v-w)=0 or L(v+w)=0. Since v-w and v+w are nonzero, this gives at most their two annihilator directions; they may coincide when v and w are linearly dependent. Thus z<=2 and 2+(32-z)>=32.",
+    "bound_is_sharp": "For noncollinear v,w, the annihilators of v-w and v+w are distinct, so z=2."
+  },
+  "weight_four": {
+    "status": "EXHAUSTIVE_NO_COUNTEREXAMPLE",
+    "counterexample_threshold": "silent_direction_count>=5",
+    "symmetry_break": "Any counterexample has at least three silent directions; PGL(2,31) triple transitivity fixes them to 0,1,31.",
+    "pairs_generated": 114960,
+    "expected_pairs_formula": "binom(480,2)",
+    "collision_groups": 10395,
+    "max_collision_group_size": 3,
+    "equal_signature_pair_pairs": 11025,
+    "overlapping_pair_pairs_skipped": 0,
+    "disjoint_pair_pairs_checked": 11025,
+    "four_sets_counted_with_partition_multiplicity_removed": 3675,
+    "partitions_per_four_set": 3,
+    "best_silent_direction_count": 4,
+    "best_support_indices": [26, 34, 243, 244],
+    "best_support_points": [[1, 11], [1, 19], [8, 11], [8, 12]],
+    "best_silent_direction_indices": [0, 1, 2, 31],
+    "best_active_direction_count": 28,
+    "best_group_branch_weight": 32,
+    "coverage_argument": "Every four-set silent in directions 0,1,31 has zero total 48-bit fibre signature. Each of its three unordered 2+2 partitions is therefore a disjoint pair of enumerated pairs with equal signatures. Every collision was independently replayed in all 32 directions.",
+    "independent_replay": "scripts.p31_group_branch_cms.verify reconstructed the displayed support with weight four, silent directions [0,1,2,31], active count 28, branch weight 32, and counterexample=false.",
+    "wall_seconds": 0.0161438
+  },
+  "compiler_command": "g++ -O3 -march=native -std=c++20 -Wall -Wextra -Wpedantic scripts/p31_group_s4_pair_mitm.cpp -o /tmp/p31_group_s4_pair_mitm",
+  "replay_command": "/tmp/p31_group_s4_pair_mitm",
+  "scope": "Exact p=31 grouped-uncertainty closure only at point weights two and four; not the full grouped inequality, row-code distance, residual (ii), E1, or the original MO limit."
+}

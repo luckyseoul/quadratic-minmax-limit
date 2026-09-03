@@ -238,13 +238,45 @@ disjoint construction in the preceding note uses
 Equation (16), however, changes this to
 
 \[
- m(p-1)-2=|H|_{\max}-1                                  \tag{21}
+m(p-1)-2=|H|_{\max}-1                                  \tag{21}
 \]
 
 for one paired cancellation, before the other trades are chosen disjointly
 by the existing greedy avoidance argument.  Therefore (20) is a property
 of one convenient lift, not a universal lower bound.  It cannot exclude
 the all-nonzero-center case.
+
+There is nevertheless a necessary construction budget across the whole
+ray which must not be hidden by the upper-end calculation.  Put
+
+\[
+ N=m(p-1),\qquad |U|=N-2\kappa,
+\]
+
+where \(\kappa\) is the total opposite-sign cancellation count in a ternary
+sum of the \(m\) halves.  Since
+
+\[
+ N-|H|=2(t_{\max}-t)+1,
+\]
+
+even the first size condition \(|U|\le |H|\) requires
+
+\[
+ \boxed{\kappa\ge t_{\max}-t+1.}                         \tag{21a}
+\]
+
+At equality the unused edge capacity is exactly one, so the fixed-edge
+elimination theorem forces one antipodal fixed edge and no unused double
+orbit.  More generally that remaining capacity is
+\(2(\kappa-(t_{\max}-t))-1\), and the forced fixed-edge weight is odd.
+For \(p=31\), the required cancellation count falls from \(110\) at
+\(t=68\) to \(1\) at \(t=177\).  Thus the disjoint lift is not itself
+extendable anywhere on this all-active ray.  Equation (16) constructs only
+the final one-cancellation endpoint budget; no compatible multi-overlap
+family attaining (21a) has been constructed.  This is a corrected
+construction gate, not a capacity contradiction for arbitrary
+antisymmetric lifts.
 
 ## 6. Exact remaining obstruction
 

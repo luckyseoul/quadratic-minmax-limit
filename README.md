@@ -515,12 +515,46 @@ not represented as computational predicates.
   single-orbit bound to `c>=p-1`; this still does not construct a graph.
   See `NOTE_2026-09-03_INVERSION_SYMMETRIC_LATTICE.md`,
   `NOTE_2026-09-03_MOBIUS_HALF_SYMMETRIC.md`, and
-  `NOTE_2026-09-03_ALL_ACTIVE_PENCIL_SUPPORT.md` in `evidence/`. The central
+  `NOTE_2026-09-03_ALL_ACTIVE_PENCIL_SUPPORT.md` in `evidence/`.
+
+  The fixed antipodal variables in the central box are now eliminated
+  exactly. The block map is `R+=[[A,2B],[0,C]]`, with `A mod 2` invertible,
+  by `a_[v]=g_(L_v)(0)+sum_L g_L(L(v)^2)`, so its unique binary word is
+  subtracted before the fixed block is divided.
+  A used orbit `(a,[delta])` changes that word by `Phi=0` for
+  `a||delta`, otherwise by the `p`-point antipodal affine block
+  `{[delta+c a]}`. These blocks satisfy `M M^T=M^T M=I` over `F_2` and have
+  `p`-column `C`-kernel lifts. Hence the full unpunctured halved map
+  `D=(C,Phi)` is onto with rank `d h(h+1)`.
+
+  The actual puncture is still decisive. Deleting the rectangle
+  `X_(L,beta)={L(a)=0,L(delta)^2=beta}`, of size `p h=|Delta|-h`, drops
+  rank, so arbitrary `|Delta|`-puncture robustness is false. A Mobius union
+  cannot contain that particular rectangle for `p>=7`. Block-parity
+  projections reduce every other hypothetical contained dual word to a full
+  affine midpoint block over one common difference block covered by all
+  `h+1` halves, at least `h` of them twice. Whether that nearly saturated
+  all-halves cover exists is open. The one-difference-slice kernel is the
+  local `A_(h-1)` whole-slab exchange lattice, not a global normality or
+  existence theorem.
+
+  The corrected all-active support budget is
+  `kappa>=t_max-t+1` for `|U|=m(p-1)-2 kappa`; the deliberately disjoint
+  lift is therefore extendable nowhere on the ray. Two halves cancel at most
+  two common orbits, sharply, but the sharp locus is rigid
+  (`q=r=1/2,A=B=3/2`) and gives no greedy multi-pair parameter. The exact
+  first gate is `|U|+|a_Y+sum_(O in U) Phi(O)|<=|H|`, followed by the
+  punctured divided Boolean fibre and exact direction-weight slices. See
+  `NOTE_2026-09-03_SYMMETRIC_FIXED_EDGE_ELIMINATION.md`,
+  `NOTE_2026-09-03_SYMMETRIC_HALVED_MOD2.md`,
+  `NOTE_2026-09-03_SYMMETRIC_HALVED_MOBIUS_COVER.md`,
+  `NOTE_2026-09-03_SYMMETRIC_UNUSED_SLICE_EXCHANGE.md`, and
+  `NOTE_2026-09-03_MOBIUS_HALF_INTERSECTIONS.md` in `evidence/`. The central
   Boolean box, residual (ii), E1, `L=1/2`, and the original MO limit remain
   OPEN.
 
   Focused replay:
-  `PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -q tests/test_compact_ray_moment_gate.py tests/test_conic_odd_radon.py tests/test_p31_equi_zero68_mitm.py tests/test_signed_boolean_defect.py tests/test_ridge_kernel.py tests/test_equianharmonic_component_packing.py tests/test_hard_compact_odd_radon.py tests/test_hard_star_antisymmetric_support.py tests/test_inversion_antisymmetric_radon.py tests/test_equianharmonic_threshold_even_barrier.py tests/test_main_chain_docs.py`.
+  `PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -q tests/test_compact_ray_moment_gate.py tests/test_conic_odd_radon.py tests/test_p31_equi_zero68_mitm.py tests/test_signed_boolean_defect.py tests/test_ridge_kernel.py tests/test_equianharmonic_component_packing.py tests/test_hard_compact_odd_radon.py tests/test_hard_star_antisymmetric_support.py tests/test_inversion_antisymmetric_radon.py tests/test_equianharmonic_threshold_even_barrier.py tests/test_inversion_symmetric_lattice.py tests/test_mobius_half_symmetric.py tests/test_all_active_pencil_support.py tests/test_symmetric_fixed_edge_elimination.py tests/test_symmetric_halved_mod2.py tests/test_symmetric_halved_mobius_cover.py tests/test_symmetric_slice_exchange.py tests/test_mobius_half_intersections.py tests/test_main_chain_docs.py`.
   Residual (ii), E1, `L=1/2`, and the original MO limit remain OPEN.
 - **Floor-plus-two correction.** Proposition 15.723 replaces the blanket
   `excess != 2` shortcut in the infinity-plus-`p` middle profile. A

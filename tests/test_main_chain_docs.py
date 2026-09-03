@@ -375,7 +375,7 @@ def test_frozen_symmetric_lattice_mobius_overlap_and_all_active_bound():
         assert "NOTE_2026-09-03_INVERSION_SYMMETRIC_LATTICE.md" in text, name
         assert "NOTE_2026-09-03_MOBIUS_HALF_SYMMETRIC.md" in text, name
         assert "NOTE_2026-09-03_ALL_ACTIVE_PENCIL_SUPPORT.md" in text, name
-        assert "remain OPEN" in flat, name
+        assert "remain OPEN" in flat or "remain **OPEN**" in flat, name
 
     solution = (root / "solution.md").read_text(
         encoding="utf-8", errors="replace"
@@ -398,6 +398,83 @@ def test_frozen_symmetric_lattice_mobius_overlap_and_all_active_bound():
         "NOTE_2026-09-03_ALL_ACTIVE_PENCIL_SUPPORT.md",
     ):
         assert note in solution
+
+
+def test_fixed_elimination_halved_code_and_rigid_overlap_are_canonical():
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parents[1]
+    names = (
+        "solution.md",
+        "AGENTS.md",
+        "STATUS.md",
+        "HANDOFF.md",
+        "README.md",
+        "evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md",
+    )
+    texts = {
+        name: (root / name).read_text(encoding="utf-8", errors="replace")
+        for name in names
+    }
+    notes = (
+        "NOTE_2026-09-03_SYMMETRIC_FIXED_EDGE_ELIMINATION.md",
+        "NOTE_2026-09-03_SYMMETRIC_HALVED_MOD2.md",
+        "NOTE_2026-09-03_SYMMETRIC_HALVED_MOBIUS_COVER.md",
+        "NOTE_2026-09-03_SYMMETRIC_UNUSED_SLICE_EXCHANGE.md",
+        "NOTE_2026-09-03_MOBIUS_HALF_INTERSECTIONS.md",
+    )
+    for name, text in texts.items():
+        flat = " ".join(text.split())
+        assert "R+=[[A,2B],[0,C]]" in text or "R^+=" in text, name
+        assert "a_[v]" in text or "a_{[v]}" in text, name
+        assert "D=(C,Phi)" in text or "D=(C,\\Phi)" in text, name
+        assert "d h(h+1)" in text or "dh(h+1)" in text, name
+        assert "p h=|Delta|-h" in text or "ph=|\\Delta|-h" in text, name
+        assert "A_(h-1)" in text or "A_{h-1}" in text, name
+        assert "q=r=1/2" in text, name
+        assert "t_max-t+1" in text or "t_{\\max}-t+1" in text, name
+        assert "punctur" in text.lower(), name
+        assert "all-halves" in text, name
+        assert "remain OPEN" in flat, name
+        for note in notes:
+            assert note in text, (name, note)
+
+    solution = texts["solution.md"]
+    solution_flat = " ".join(solution.split())
+    assert "Fixed-edge elimination and the halved symmetric code" in solution
+    assert "MM^{\\mathsf T}=M^{\\mathsf T}M=I" in solution
+    assert "\\operatorname {rank}D=dh(h+1)" in solution
+    assert "X_{L,\\beta}" in solution
+    assert "other low-weight dual words are not yet classified" in solution_flat
+    assert "nearly saturated cover condition" in solution_flat
+    assert "no free parameter for a greedy multi-pair construction" in solution_flat
+    assert "Pairwise overlap counts alone control neither test" in solution_flat
+
+    integrated = (
+        "solution.md",
+        "STATUS.md",
+        "HANDOFF.md",
+        "evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md",
+    )
+    new_notes = (
+        "NOTE_2026-09-03_SYMMETRIC_HALVED_ROW_CODE.md",
+        "NOTE_2026-09-03_PRESCRIBED_CENTER_COMMON_BLOCK.md",
+        "NOTE_2026-09-03_RIGID_PAIR_FIXED_WORD.md",
+    )
+    for name in integrated:
+        text = texts[name]
+        flat = " ".join(text.split())
+        assert "group-support" in text, name
+        assert "pseudoforest" in text, name
+        assert "178-t" in text or "178-t" in flat, name
+        assert "a_compact" in text or "a_{\\rm compact}" in text, name
+        assert "residual (ii)" in text and "OPEN" in text, name
+        for note in new_notes:
+            assert note in text, (name, note)
+
+    assert "The implication is proved; its group-support hypothesis is not" in solution_flat
+    assert "conditional rigidity, not existence" in solution_flat
+    assert "a saturated equal-square common-block incidence cover" in solution_flat
 
 
 def test_new_direct_no_gos_preserve_the_exact_open_scopes():
@@ -482,3 +559,22 @@ def test_denseness_package_does_not_soft_close_the_theorem():
     assert "type_I_multilevel_bad_case_ND_closed` stays False" not in package
     assert "Hence E(1) on the whole Paley family" not in package
     assert "Historical remarks “\\(L\\) OPEN”" not in package
+
+
+def test_docs_track_exact_p31_group_support_ladder_without_overclaim():
+    """The finite ladder must stay visible without becoming a global close."""
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parents[1]
+    status = (root / "STATUS.md").read_text(encoding="utf-8")
+    handoff = (root / "HANDOFF.md").read_text(encoding="utf-8")
+    solution = (root / "solution.md").read_text(encoding="utf-8")
+    dedup = (root / "evidence" / "PROPOSITION_DEDUP_AUDIT_2026-08-30.md").read_text(
+        encoding="utf-8"
+    )
+    for text in (status, handoff, dedup):
+        assert "s=2,4,6,8,10" in text
+    assert "first unclosed even support is `s=12`" in handoff
+    assert "first unclosed even size is" in solution
+    assert "s=12" in solution
+    assert "residual (ii)" in solution

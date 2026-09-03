@@ -514,7 +514,15 @@ def two_trade_origin_cancellation_certificate(
 
 
 def branch_c_capacity_ledger(p: int) -> dict[str, object]:
-    """Record the upper-end one-edge gap and why it is not an obstruction."""
+    """Record the exact all-active support gap across the branch-C ray.
+
+    The deliberately disjoint family has ``N=m(p-1)`` used inversion
+    orbits.  If opposite-sign overlaps reduce its actual ternary support to
+    ``|U|=N-2*kappa``, extension to an ``H``-edge graph first requires
+    ``|U|<=|H|``.  This pins the minimum cancellation count at every ``t``;
+    it does not assert that a family with that many compatible overlaps
+    exists.
+    """
     _check_paley_prime(p, minimum=31)
     r = (p - 3) // 4
     hard_count = (p + 1) // 2
@@ -524,11 +532,19 @@ def branch_c_capacity_ledger(p: int) -> dict[str, object]:
     upper_edges = 4 * p + 2 * upper_t + 1
     disjoint_used = hard_count * (p - 1)
     one_pair_used = disjoint_used - 2
+    lower_gap = disjoint_used - lower_edges
+    upper_gap = disjoint_used - upper_edges
+    lower_required_cancellations = (lower_gap + 1) // 2
+    upper_required_cancellations = (upper_gap + 1) // 2
     proved = bool(
         lower_edges == 4 * r * r + 8 * r + 9
         and upper_edges == 8 * r * r + 12 * r + 3
         and disjoint_used == upper_edges + 1
         and one_pair_used == upper_edges - 1
+        and lower_gap == 2 * (upper_t - lower_t) + 1
+        and upper_gap == 1
+        and lower_required_cancellations == upper_t - lower_t + 1
+        and upper_required_cancellations == 1
     )
     if not proved:
         raise ArithmeticError("the branch-C capacity identity changed")
@@ -539,10 +555,29 @@ def branch_c_capacity_ledger(p: int) -> dict[str, object]:
         "t_interval": [lower_t, upper_t],
         "H_edge_count_interval": [lower_edges, upper_edges],
         "all_centers_nonzero_disjoint_trade_edges": disjoint_used,
+        "disjoint_support_excess_over_H_interval": [lower_gap, upper_gap],
+        "minimum_opposite_sign_cancellations_interval": [
+            lower_required_cancellations,
+            upper_required_cancellations,
+        ],
+        "minimum_cancellations_at_t": "t_max-t+1",
+        "support_after_kappa_cancellations": "m(p-1)-2*kappa",
+        "remaining_edge_capacity_after_kappa": (
+            "2*(kappa-(t_max-t))-1"
+        ),
+        "disjoint_lift_extendable_anywhere_on_ray": False,
+        "reason_disjoint_lift_is_not_extendable": (
+            "m(p-1)-|H|=2(t_max-t)+1>0"
+        ),
+        "minimum_cancellation_forces": (
+            "one fixed antipodal edge and zero unused double orbits"
+        ),
+        "forced_fixed_edge_weight_parity_after_any_cancellations": "odd",
         "disjoint_minus_H_upper": 1,
         "one_cancelled_pair_trade_edges": one_pair_used,
         "one_pair_minus_H_upper": -1,
         "universal_support_lower_bound_proved": False,
+        "required_multi_overlap_family_constructed": False,
         "capacity_contradiction_proved": False,
         "reason_not_an_obstruction": (
             "two arbitrary nonzero target stars can cancel one origin orbit"

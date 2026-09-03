@@ -1,0 +1,75 @@
+{
+  "p": 31,
+  "point_weight": 10,
+  "status": "EXHAUSTIVE_NO_COUNTEREXAMPLE",
+  "decision_problem": "wt(f)+active_direction_count<=31",
+  "equivalent_for_weight_ten": "silent_direction_count>=11",
+  "normalized_silent_triple": [0, 1, 31],
+  "generic_representatives_checked": [3, 4, 5, 12],
+  "generic_orbit_completeness": "A counterexample has at least eleven silent directions. After normalizing three, at least eight silent directions remain. The exceptional harmonic and equianharmonic anharmonic orbits contain only 3+2=5 directions, so one remaining direction lies in a generic orbit represented by 3,4,5, or 12.",
+  "cycle_hash_reduction": "Direction-0 silence gives even fibre degrees. Choose two selected points from one fibre and remove them. The row-even eight-point complement has one of the even degree types from the weight-eight replay and therefore splits into two row-even four-point halves. Fixed-four silence is exactly sig(A) xor sig(B)=sig(C), where C is the removed same-fibre pair and the signature records the sixteen fibres in directions 1,31,lambda.",
+  "scalar_normalization": "The order-15 scalar group F_31^*/{+-1} fixes every projective direction and acts freely on unordered distinct same-fibre pairs: an odd-order stabilizer cannot swap the two points, and pointwise stabilization is the identity. Its action partitions all 7,080 same-fibre pairs into exactly 472 orbits. One actual coordinate pair representative from every orbit was checked.",
+  "row_even_halves_per_case": 23909340,
+  "same_fibre_pairs": 7080,
+  "scalar_pair_orbits": 472,
+  "hash_capacity": 67108864,
+  "all_four_direction_pair_signatures_injective": true,
+  "duplicate_handling": "The hash maps each distinct four-half signature to its full sorted-record group; every matching signature relation expands the complete Cartesian product of duplicate groups before point-disjointness checks.",
+  "cases": {
+    "3": {
+      "unique_half_signatures": 23170605,
+      "half_signature_relations": 111812080,
+      "disjoint_ten_point_candidates_checked": 12852346,
+      "best_silent_direction_count": 10,
+      "best_support_indices": [33, 40, 131, 133, 146, 161, 396, 410, 456, 467],
+      "best_support_points": [[1, 18], [1, 25], [4, 23], [4, 25], [5, 7], [5, 22], [13, 9], [13, 23], [15, 7], [15, 18]],
+      "best_silent_direction_indices": [0, 1, 3, 5, 6, 15, 18, 19, 22, 31],
+      "wall_seconds": 21.9735,
+      "threads": 64
+    },
+    "4": {
+      "unique_half_signatures": 23274495,
+      "half_signature_relations": 110645053,
+      "disjoint_ten_point_candidates_checked": 12375054,
+      "best_silent_direction_count": 10,
+      "best_support_indices": [18, 23, 124, 136, 244, 246, 277, 286, 337, 341],
+      "best_support_points": [[1, 3], [1, 8], [4, 16], [4, 28], [8, 12], [8, 14], [9, 14], [9, 23], [11, 12], [11, 16]],
+      "best_silent_direction_indices": [0, 1, 4, 13, 14, 16, 18, 19, 28, 31],
+      "wall_seconds": 43.4672,
+      "threads": 24
+    },
+    "5": {
+      "unique_half_signatures": 23289245,
+      "half_signature_relations": 110432699,
+      "disjoint_ten_point_candidates_checked": 12288663,
+      "best_silent_direction_count": 10,
+      "best_support_indices": [25, 34, 51, 68, 148, 151, 253, 257, 299, 300],
+      "best_support_points": [[1, 10], [1, 19], [2, 5], [2, 22], [5, 9], [5, 12], [8, 21], [8, 25], [10, 5], [10, 6]],
+      "best_silent_direction_indices": [0, 1, 4, 5, 6, 9, 10, 16, 25, 31],
+      "wall_seconds": 45.7103,
+      "threads": 24
+    },
+    "12": {
+      "unique_half_signatures": 23291025,
+      "half_signature_relations": 110560229,
+      "disjoint_ten_point_candidates_checked": 12467190,
+      "best_silent_direction_count": 10,
+      "best_support_indices": [16, 18, 63, 68, 197, 198, 342, 352, 409, 417],
+      "best_support_points": [[1, 1], [1, 3], [2, 17], [2, 22], [6, 27], [6, 28], [11, 17], [11, 27], [13, 22], [13, 30]],
+      "best_silent_direction_indices": [0, 1, 6, 11, 12, 15, 20, 23, 28, 31],
+      "wall_seconds": 43.108,
+      "threads": 24
+    }
+  },
+  "aggregate_half_signature_relations": 443450061,
+  "aggregate_disjoint_ten_point_candidates_checked": 49983253,
+  "independent_replay": "scripts.p31_group_branch_cms.verify reconstructed every displayed support with weight ten, the displayed ten silent directions, active_direction_count=22, group_branch_weight=32, and counterexample=false",
+  "compiler_command": "g++ -O3 -march=native -std=c++20 -fopenmp -Wall -Wextra -Wpedantic scripts/p31_group_s10_cycle_hash.cpp -o /tmp/p31_group_s10_cycle_hash",
+  "replay_commands": [
+    "OMP_NUM_THREADS=64 /tmp/p31_group_s10_cycle_hash 3",
+    "OMP_NUM_THREADS=24 /tmp/p31_group_s10_cycle_hash 4",
+    "OMP_NUM_THREADS=24 /tmp/p31_group_s10_cycle_hash 5",
+    "OMP_NUM_THREADS=24 /tmp/p31_group_s10_cycle_hash 12"
+  ],
+  "scope": "Exact closure only of the p=31 grouped-uncertainty decision problem at point weight ten; not the full grouped inequality, row-code distance, residual (ii), E1, or the original MO limit."
+}

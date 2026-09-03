@@ -183,6 +183,99 @@ lift. The frozen notes are
 `evidence/NOTE_2026-09-03_MOBIUS_HALF_SYMMETRIC.md`, and
 `evidence/NOTE_2026-09-03_ALL_ACTIVE_PENCIL_SUPPORT.md`.
 
+The fixed-edge part of the restricted box is no longer a live search space.
+The exact block form `R+=[[A,2B],[0,C]]` and the explicit inverse
+`a_[v]=g_(L_v)(0)+sum_L g_L(L(v)^2)` force every fixed binary variable.
+After subtraction and fixed-block division, retain only the unused nonfixed
+bits, `2 sum b=|H|-|U|-|a|`, and all exact direction slices. Do not repeat
+the first fixed parity computation or treat parity of the direction weights
+as their integer values.
+
+The forced support word is also exact: `Phi(a,[delta])=0` for
+`a||delta`, and otherwise it is the `p`-point antipodal affine block
+`{[delta+c a]}`. The block matrix obeys `M M^T=M^T M=I`, and its
+`p`-column `C`-kernel lifts prove the full unpunctured halved code
+`D=(C,Phi)` surjective, of rank `d h(h+1)`. This retires unrestricted
+halved-parity and hidden-Smith searches. It does **not** settle the code
+punctured by the actual support `U`.
+
+Do not assume arbitrary puncture robustness: deleting
+`X_(L,beta)={L(a)=0,L(delta)^2=beta}`, with
+`|X|=p h=|Delta|-h`, drops rank. The midpoint profile of a Mobius union
+excludes this displayed rectangle for `p>=7`. Block-parity projections now
+reduce every remaining hypothetical contained dual word to a full affine
+midpoint block over one common difference block covered by all `h+1` halves,
+at least `h` of them twice; the all-origin alternative is exactly a disjoint
+sum of the excluded rectangles. The nonduplicative next linear task is to
+prove that nearly saturated all-halves cover impossible or construct it. The exact
+one-difference-slice `A_(h-1)` slab
+kernel is only a local exchange theorem; do not infer global normality or
+Boolean existence.
+
+Finally, if `|U|=m(p-1)-2 kappa`, support feasibility requires
+`kappa>=t_max-t+1` throughout the all-active ray, so the disjoint lift itself
+is never extendable. The sharp two-half cancellation bound is two, attained
+only at the rigid normalized locus `q=r=1/2,A=B=3/2`; it supplies no free
+greedy-pair parameter. Do not substitute the weak pairwise bound for the
+exact objective
+`|U|+|a_Y+sum_(O in U) Phi(O)|<=|H|`, and do not promote passing that
+objective to the divided Boolean fibre. Frozen notes are
+`evidence/NOTE_2026-09-03_SYMMETRIC_FIXED_EDGE_ELIMINATION.md`,
+`evidence/NOTE_2026-09-03_SYMMETRIC_HALVED_MOD2.md`,
+`evidence/NOTE_2026-09-03_SYMMETRIC_HALVED_MOBIUS_COVER.md`,
+`evidence/NOTE_2026-09-03_SYMMETRIC_UNUSED_SLICE_EXCHANGE.md`, and
+`evidence/NOTE_2026-09-03_MOBIUS_HALF_INTERSECTIONS.md`.
+
+Do not retry a parity obstruction on the sixteen-half `p=31` support. Each
+half has one zero-`Phi` and 29 nonzero-`Phi` occurrences. Ternary
+cancellation changes each type count by an even number, so the Hamming
+numerator parity is automatic and the full forced fixed word is odd. At the
+minimum `kappa=178-t`, a hypothetical completion has exactly one fixed edge
+and no double orbit; this is a conditional rigidity statement, not an
+exclusion. In this paragraph zero-`Phi` parallel means midpoint parallel to
+difference, not an edge's unique directionwise parallel row.
+
+Do not identify the full target word with its hard literal. The source-side
+rigid pair has the exact weight
+`4p-26-2 eta(3)-4 eta(6)-4 eta(-2)` (108 at `p=31`), but
+`a_Y=a_literal+a_compact`, and centrality does not force `a_compact=0` or
+even fixed-cell coefficients. The literal-only Hamming argument is retracted.
+Different rigid pairings can also have different source-`Phi` weights.
+
+The halved row-code normal form and the branch number are settled:
+`Row(D)=(<1> tensor F_2^Delta) direct_sum direct_sum_A(B_A tensor B_A)` and
+`wt(x)+wt(M^T x)>=p+1`. Do not promote the latter one-dimensional inequality
+to `d_row(D)=p h`; that distance and its equality classification remain
+OPEN. Vertical fibres and scalar graphs are exact nonrectangle words of
+weight `|Delta|`, so the claim that every word through that threshold is a
+fixed-transverse rectangle is false.
+The conditional group-support route is now isolated: if every nonzero `f`
+obeys `wt(f)+#{A:(M^T f)|_(B_A)!=0}>=p+1`, active-direction
+symmetric-difference counting proves every row-code word in the normal form
+has weight at least `p h`. The implication is proved, but the group-support
+inequality is OPEN. Do not cite the ordinary branch number, the conditional implication,
+or heuristic equality witnesses as a proof of `d_row(D)=p h`.
+At `p=31`, reuse the exact low-support progress rather than rerunning it:
+odd support is proved by radial parity, and even support
+`s=2,4,6,8,10` is closed. The replay artifacts are
+`p31_group_branch_mitm_s6_exact.json`,
+`p31_group_branch_cycle_mitm_s8_exact.json`, and
+`p31_group_branch_cycle_hash_s10_exact.json`. This does not cover even
+`s>=12` and must not be promoted to the full grouped inequality.
+
+For an equal-square common block, reuse the exact anchor/free-slot Hall
+formulation. Anchor deficiency two excludes both saturated incidence
+profiles. The displayed `p=31` prescribed-center witness proves this for one
+fixed `K`, not for every `K`. Conversely, at branch primes `p>=31` with all
+hard centers nonzero, a pseudoforest link graph on one prescribed anchor line
+is sufficient for a saturated incidence cover, but it
+is not known that one of the prescribed lines is always a pseudoforest. Do
+not promote incidence coverage to mutual ternarity, a contained dual word,
+or a Boolean completion. The new frozen notes are
+`evidence/NOTE_2026-09-03_SYMMETRIC_HALVED_ROW_CODE.md`,
+`evidence/NOTE_2026-09-03_PRESCRIBED_CENTER_COMMON_BLOCK.md`, and
+`evidence/NOTE_2026-09-03_RIGID_PAIR_FIXED_WORD.md`.
+
 The exact ordered gate still includes unbalanced zero-form allocations and
 simultaneous nonzero even global forms over `F_p`, coordinated across
 directions. In the balanced zero-odd branch, only the coupled symmetric
@@ -190,7 +283,7 @@ pair-total box remains after the Mobius lift. No common simple graph has been
 constructed. Residual (ii), E1, and the limit remain open.
 
 Focused replay of the post-15.761 records:
-`PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -q tests/test_compact_ray_moment_gate.py tests/test_conic_odd_radon.py tests/test_p31_equi_zero68_mitm.py tests/test_signed_boolean_defect.py tests/test_ridge_kernel.py tests/test_equianharmonic_component_packing.py tests/test_hard_compact_odd_radon.py tests/test_hard_star_antisymmetric_support.py tests/test_inversion_antisymmetric_radon.py tests/test_equianharmonic_threshold_even_barrier.py tests/test_main_chain_docs.py`.
+`PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -q tests/test_compact_ray_moment_gate.py tests/test_conic_odd_radon.py tests/test_p31_equi_zero68_mitm.py tests/test_signed_boolean_defect.py tests/test_ridge_kernel.py tests/test_equianharmonic_component_packing.py tests/test_hard_compact_odd_radon.py tests/test_hard_star_antisymmetric_support.py tests/test_inversion_antisymmetric_radon.py tests/test_equianharmonic_threshold_even_barrier.py tests/test_inversion_symmetric_lattice.py tests/test_mobius_half_symmetric.py tests/test_all_active_pencil_support.py tests/test_symmetric_fixed_edge_elimination.py tests/test_symmetric_halved_mod2.py tests/test_symmetric_halved_mobius_cover.py tests/test_symmetric_slice_exchange.py tests/test_mobius_half_intersections.py tests/test_symmetric_halved_row_code.py tests/test_prescribed_center_common_block.py tests/test_rigid_pair_fixed_word.py tests/test_main_chain_docs.py`.
 Residual (ii), E1, `L=1/2`, and the original MO limit remain OPEN.
 
 ### Propositions 15.755--15.756: full-cube spikes and D-only Weil are settled reductions

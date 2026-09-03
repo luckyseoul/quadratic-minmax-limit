@@ -62,10 +62,15 @@ def test_two_arbitrary_nonzero_stars_can_cancel_exactly_one_origin_orbit():
         assert out["proved"] is True
 
 
-def test_upper_endpoint_one_edge_gap_is_defeated_not_promoted_to_a_theorem():
+def test_full_ray_disjoint_gap_pins_but_does_not_construct_cancellations():
     out = branch_c_capacity_ledger(31)
     assert out["all_centers_nonzero_disjoint_trade_edges"] == 480
     assert out["H_edge_count_interval"] == [261, 479]
+    assert out["disjoint_support_excess_over_H_interval"] == [219, 1]
+    assert out["minimum_opposite_sign_cancellations_interval"] == [110, 1]
+    assert out["minimum_cancellations_at_t"] == "t_max-t+1"
+    assert out["disjoint_lift_extendable_anywhere_on_ray"] is False
+    assert out["required_multi_overlap_family_constructed"] is False
     assert out["one_cancelled_pair_trade_edges"] == 478
     assert out["universal_support_lower_bound_proved"] is False
     assert out["capacity_contradiction_proved"] is False

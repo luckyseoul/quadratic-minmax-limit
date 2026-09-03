@@ -512,6 +512,53 @@ it a Boolean lift. Frozen anchors are
 `NOTE_2026-09-03_MOBIUS_HALF_SYMMETRIC.md`, and
 `NOTE_2026-09-03_ALL_ACTIVE_PENCIL_SUPPORT.md` under `evidence/`.
 
+The restricted symmetric box has now been reduced further, without being
+solved. In fixed/nonfixed coordinates
+`R+=[[A,2B],[0,C]]`, and `A mod 2` is an isomorphism with explicit inverse
+`a_[v]=g_(L_v)(0)+sum_L g_L(L(v)^2)`. The fixed binary word is therefore
+forced exactly. Subtract it, divide only the fixed block, and retain the
+Boolean variables on unused nonfixed orbits, the Hamming equation
+`2 sum b=|H|-|U|-|a|`, and every exact direction-weight slice. Do not rerun
+the already solved first fixed parity or replace these integer slices by
+their parity.
+
+For a used orbit `(a,[delta])`, the forced-word change is `Phi=0` for
+`a||delta`, otherwise the `p`-point antipodal affine block
+`{[delta+c a]}`. These blocks satisfy `M M^T=M^T M=I` over `F_2` and have
+`p`-column lifts in `ker C`; hence the full unpunctured halved map
+`D=(C,Phi)` is onto with rank `d h(h+1)`. Do not retry unrestricted halved
+parity. The live linear problem is the map punctured by the **actual**
+ternary support `U`: it is onto iff `U` contains no support of a nonzero
+word in `Row(D)`, while a particular target needs only the exact left-kernel
+pairings.
+
+Universal robustness for `|U|<=|Delta|` is false. Deleting
+`X_(L,beta)={L(a)=0,L(delta)^2=beta}`, of size `p h=|Delta|-h`, drops rank.
+The Mobius midpoint theorem excludes containment of this one rectangle for
+`p>=7`. The block-parity projection theorem now shows that every other
+hypothetical contained word forces a full affine midpoint block over one
+common difference block to be covered by all `h+1` halves, at least `h` of
+them twice; the all-origin-cell case is exactly a disjoint sum of the
+excluded rectangles. Proving this nearly saturated all-halves cover
+impossible, or constructing it, is the next exact linear target. The
+one-difference-slice kernel is only the
+local `A_(h-1)` whole-slab exchange lattice; do not promote local
+connectivity to normality or existence.
+
+The construction budget also applies across the whole all-active ray. If
+`|U|=m(p-1)-2 kappa`, then `kappa>=t_max-t+1` is necessary. The disjoint
+lift is therefore never extendable there. Two halves cancel at most two
+orbits, sharply, but the two-cancellation locus is rigid
+`q=r=1/2,A=B=3/2`, so there is no free greedy-pair parameter. The exact
+first objective is
+`|U|+|a_Y+sum_(O in U) Phi(O)|<=|H|`; passing it still leaves the divided
+Boolean fibre. Frozen anchors are
+`NOTE_2026-09-03_SYMMETRIC_FIXED_EDGE_ELIMINATION.md`,
+`NOTE_2026-09-03_SYMMETRIC_HALVED_MOD2.md`,
+`NOTE_2026-09-03_SYMMETRIC_HALVED_MOBIUS_COVER.md`,
+`NOTE_2026-09-03_SYMMETRIC_UNUSED_SLICE_EXCHANGE.md`, and
+`NOTE_2026-09-03_MOBIUS_HALF_INTERSECTIONS.md` under `evidence/`.
+
 The live zero-odd balanced lift gate is now the coupled symmetric pair-total
 problem just stated, not the full unsplit signed box.  For unbalanced or
 nonzero-form branches the complete box remains open. An unrestricted integral
@@ -519,7 +566,7 @@ or least-norm real lift is not a nonnegative simple graph. No common `0/1`
 graph has been constructed, and residual (ii) remains open.
 
 Focused replay for these post-15.761 records:
-`PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -q tests/test_compact_ray_moment_gate.py tests/test_conic_odd_radon.py tests/test_p31_equi_zero68_mitm.py tests/test_signed_boolean_defect.py tests/test_ridge_kernel.py tests/test_equianharmonic_component_packing.py tests/test_hard_compact_odd_radon.py tests/test_hard_star_antisymmetric_support.py tests/test_inversion_antisymmetric_radon.py tests/test_equianharmonic_threshold_even_barrier.py tests/test_main_chain_docs.py`.
+`PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -q tests/test_compact_ray_moment_gate.py tests/test_conic_odd_radon.py tests/test_p31_equi_zero68_mitm.py tests/test_signed_boolean_defect.py tests/test_ridge_kernel.py tests/test_equianharmonic_component_packing.py tests/test_hard_compact_odd_radon.py tests/test_hard_star_antisymmetric_support.py tests/test_inversion_antisymmetric_radon.py tests/test_equianharmonic_threshold_even_barrier.py tests/test_inversion_symmetric_lattice.py tests/test_mobius_half_symmetric.py tests/test_all_active_pencil_support.py tests/test_symmetric_fixed_edge_elimination.py tests/test_symmetric_halved_mod2.py tests/test_symmetric_halved_mobius_cover.py tests/test_symmetric_slice_exchange.py tests/test_mobius_half_intersections.py tests/test_main_chain_docs.py`.
 Residual (ii), E1, `L=1/2`, and the original MO limit remain OPEN.
 
 Consequently the fifth shell `k=4p+8` is closed for every prime `p>=13`.

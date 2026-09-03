@@ -16407,6 +16407,295 @@ The all-active hypothesis is indispensable to the proof. Equation (E.17)
 is a support bound, not a restricted central Boolean lift or a residual-(ii)
 closure.
 
+**Fixed-edge elimination and the halved symmetric code (2026-09-03).**
+Let (U) now denote the actual support of a chosen ternary antisymmetric
+lift, after all cancellations.  In bases consisting of fixed antipodal
+edges and nonfixed orbit sums on the source, and fixed cells and nonfixed
+cell pairs on the target, the restricted symmetric map has block form
+
+\[
+                 R^+=\begin{pmatrix}A&2B\\0&C\end{pmatrix}.       \tag{E.18}
+\]
+
+Modulo two, (A) is an isomorphism onto the compatible fixed-cell residue
+space.  If (g_L(0)) and (g_L(\beta)) are the fixed-cell bits and (L_v)
+annihilates (v), its inverse is
+
+\[
+ a_{[v]}=g_{L_v}(0)+\sum_L g_L\bigl(L(v)^2\bigr)\pmod2.           \tag{E.19}
+\]
+
+Consequently the fixed binary vector (a(T_U)) is uniquely forced, not
+relaxed.  Subtracting it and dividing only the fixed block gives the exact
+equivalence
+
+\[
+ \sum_{O\notin U}b_O\widehat B_O=\widehat T_U,qquad
+ b_O\in\{0,1\},qquad
+ 2\sum_{O\notin U}b_O=|H|-|U|-|a(T_U)|.                          \tag{E.20}
+\]
+
+For (p\equiv3\pmod4), the parallel coordinate in each direction (L)
+also pins the integer slice
+
+\[
+ n_L={P_L-u_L-f_L\over2},qquad 0\le n_L\le dh^2-u_L.            \tag{E.21}
+\]
+
+The forced word has a geometric formula.  Write a nonfixed orbit as
+({a-\delta,a+\delta}), modulo central inversion.  Then
+
+\[
+ \Phi(a,[\delta])=
+ \begin{cases}
+ 0,&a\parallel\delta,\\
+ \mathbf1_{\{[\delta+ca]:c\in\mathbf F_p\}},&a\not\parallel\delta,
+ \end{cases}qquad
+ a(T_U)=a_Y+\sum_{O\in U}\Phi(O).                               \tag{E.22}
+\]
+
+The nonzero words in (E.22) are the (dh=|\Delta|) antipodal pairs of
+non-origin affine lines.  Their square incidence matrix satisfies
+(MM^{\mathsf T}=M^{\mathsf T}M=I) over (mathbf F_2).  Moreover every
+block has (h) disjoint (p)-column lifts in (ker C).  It follows that
+the full, unpunctured halved map
+
+\[
+ D=(C,\Phi):\mathbf F_2^{\Delta^2}longrightarrow
+ \mathbf F_2^{dh^2}\oplus\mathbf F_2^\Delta
+ \quad\hbox{is onto},\qquad \operatorname {rank}D=dh(h+1).       \tag{E.23}
+\]
+
+This does not survive arbitrary puncturing.  For a projective (L) and a
+nonzero square (\beta), the row word
+
+\[
+ X_{L,\beta}=\{([a],[\delta]):L(a)=0, L(\delta)^2=\beta\}        \tag{E.24}
+\]
+
+has weight (ph=|\Delta|-h\); deleting it drops rank.  Thus robustness under
+all deletions of size at most (|\Delta|) is false.  The exact criterion for
+the actual puncture is that no nonzero word of ({\rm Row}(D)) have support
+contained in (U), or, for one target, that every resulting left-kernel
+functional annihilate (widehat T_U).  One Möbius half has at most two
+midpoints in any spatial direction, so (m=(p+1)/2) halves meet (E.24) in
+at most (p+1<ph) columns for (p\ge7).  This excludes only the displayed
+rectangle.  There is, however, a sharper projection reduction.  For every
+non-origin difference block (C=B_{K,\beta}), put
+
+\[
+ r_C([a])=\sum_{[\delta]\in C}w([a],[\delta])\pmod2.
+\]
+
+The identity (M^{\mathsf T}M=I) shows that (r_C) is a union of cells in
+the partition (A_K=\{K(a)=0\}), (B_{K,\alpha}=\{K(a)^2=\alpha\}), and
+that all the (r_C) determine (w).  If every (r_C) uses only (A_K),
+then (w) is a disjoint sum of the already excluded rectangles (E.24).
+Otherwise, containment ({\rm supp}(w)\subseteq U) forces some full affine
+midpoint block (B_{K,\alpha}) over one common (C) to be met by all
+(h+1) Möbius halves, with at least (h) halves supplying two midpoint
+classes.  This is a nearly saturated cover condition, not yet a
+contradiction; other low-weight dual words are not yet classified, and the
+remaining low-weight dual problem has been reduced to that all-halves cover.
+
+There is also an exact local integer kernel.  On a fixed difference slice
+([\delta]), every kernel vector has
+
+\[
+ v([a],[\delta])=\gamma_{L_\delta(a)^2},qquad
+ \gamma_0=0,qquad \sum_{s\ne0}\gamma_s=0.                       \tag{E.25}
+\]
+
+It is the root lattice (A_{h-1}); its primitive moves exchange two whole
+(p)-element slabs and preserve every direction weight.  These moves
+connect two binary solutions that already agree off that slice, but do not
+prove global connectivity, normality, or existence.
+
+Finally, if (N=m(p-1)) is the disjoint Möbius support count and
+(|U|=N-2\kappa), then throughout the all-active branch-C ray
+
+\[
+ |H|=N-\{2(t_{\max}-t)+1\},qquad
+ \kappa\ge t_{\max}-t+1                                      \tag{E.26}
+\]
+
+is necessary even before (E.20).  At (p=31) the demand ranges from 110
+cancellations at (t=68) to one at (t=177), so the deliberately disjoint
+lift is extendable nowhere on that ray.  Two halves share at most two
+oppositely oriented orbits, and this bound is sharp, but the sharp
+two-cancellation locus is rigid:
+(q=r=1/2, A=B=3/2).  It supplies no free parameter for a greedy
+multi-pair construction.  The exact first support test is therefore
+
+\[
+ \boxed{|U|+\left|a_Y+\sum_{O\in U}\Phi(O)\right|\le |H|},       \tag{E.27}
+\]
+
+followed by the punctured divided Boolean fibre (E.20).  Pairwise overlap
+counts alone control neither test.
+
+There are four further exact qualifications to this gate.  First, let
+\(B_A\) be the span of the \(h\) paired non-origin affine blocks in
+direction \(A\).  The orthogonal block incidence matrix decomposes
+\(\mathbf F_2^\Delta=\bigoplus_A B_A\), and direct conversion of the raw
+halved rows gives
+
+\[
+ {\rm Row}(D)=
+ (\langle{\bf1}\rangle\otimes\mathbf F_2^\Delta)
+ \mathbin{\dot+}\bigoplus_A(B_A\otimes B_A).                    \tag{E.28}
+\]
+
+Thus, after the \(M\)-basis change, the exact minimum-support problem is a
+matrix \({\bf1}q^{\mathsf T}+T\), with \(T\) block diagonal by direction.
+For every nonzero point word \(x\), incidence counting proves the sharp
+one-dimensional branch inequality
+
+\[
+              {\rm wt}(x)+{\rm wt}(M^{\mathsf T}x)\ge p+1.     \tag{E.29}
+\]
+
+Points and affine blocks attain equality.  Equation (E.29) does not sum in
+the form needed for the matrix in (E.28), so it does not prove the conjecture
+\(d_{\rm row}(D)=ph\).  That equality and its minimum-word classification
+remain open.  Moreover, \({\bf1}\otimes e_\delta\) and the scalar graphs
+\(\{([a],[\delta]):[a]=[c\delta]\}\) are nonrectangle row words of weight
+\(|\Delta|\).  Hence a rectangles-only classification through
+\(|\Delta|\) is false.
+
+There is a precise conditional reduction for the missing lower bound.  Write
+a row-code word in the grouped form
+\[
+ W=\sum_{A,j}c_{A,j}\otimes b_{A,j},\qquad
+ c_{A,j}\in\langle{\bf1}\rangle+B_A,\qquad
+ S_A=\{a:(c_{A,j}(a))_j\ne0\},
+\]
+where the common \({\bf1}\)-coefficients come from the unique block
+expansion of \(q\), and let \(k\) be the number of nonempty \(S_A\).
+Each \(S_A\) is a union of cells in the partition consisting of the radial
+line of size \(h\) and the \(h\) affine blocks of size \(p\) in direction
+\(A\). Suppose the following
+group-support inequality, which is presently open, holds for every nonzero
+point word \(f\):
+
+\[
+ {\rm wt}(f)+
+ \#\{A:(M^{\mathsf T}f)|_{B_A}\ne0\}\ge p+1.                    \tag{E.29a}
+\]
+
+Then \({\rm wt}(W)\ge ph\).  Indeed, unless one \(S_A=\Delta\), distinct
+nonempty \(S_A,S_B\) have
+\(|S_A\mathbin\triangle S_B|\ge2h\), whence
+\[
+ D:=\sum_{A<B}|S_A\mathbin\triangle S_B|\ge hk(d-1).
+\]
+If \(b_a\) directions are active in row \(a\), (E.29a) gives row weight at
+least \(\max(1,d-b_a)\), while
+\(b_a(d-b_a)\le k\max(1,d-b_a)\).  Summing gives
+\(D\le k\,{\rm wt}(W)\) and hence
+\({\rm wt}(W)\ge h(d-1)=ph\).  If some \(S_A=\Delta\), every row is nonzero
+and the stronger bound \({\rm wt}(W)\ge|\Delta|>ph\) follows.  The
+implication is proved; its group-support hypothesis is not, so no
+minimum-distance theorem is claimed.
+
+For \(p=31\), the hypothesis in (E.29a) is now established on a strict but
+nontrivial initial range. Radial-fibre parity proves it for every odd
+support size. Exact normalized signature certificates prove it for even
+\(s=2,4,6,8,10\). At \(s=6\), all equal 45-bit triple-signature pairs are
+checked. At \(s=8\) and \(s=10\), triply transitive normalization followed
+by the anharmonic action leaves four exhaustive generic fourth-direction
+orbits, represented by \(3,4,5,12\); cycle-space meet-in-the-middle and
+scalar-orbit hashing find at most \(s\) silent directions in every case.
+These are finite \(p=31\) certificates. The first unclosed even size is
+\(s=12\), so (E.29a), \(d_{\rm row}(D)=ph\), residual (ii), and the original
+limit remain open.
+
+Second, fixed-word parity survives every ternary cancellation at \(p=31\).
+Each of the sixteen halves has one zero-\(\Phi\) occurrence and 29
+nonzero-\(\Phi\) occurrences.  If \(\kappa_0,\kappa_1\) count cancellation
+units of the two types, then
+
+\[
+ u_0=16-2\kappa_0,\qquad
+ u_{\rm np}=464-2\kappa_1,\qquad
+ |U|=480-2(\kappa_0+\kappa_1).                              \tag{E.30}
+\]
+
+Here zero-\(\Phi\) parallel means midpoint parallel to difference; it is
+not the directionwise parallel-edge count in (E.21).  Summing (E.19) over
+\([v]\) cancels every \(P_L\) term and counts each nonzero fixed cell \(p\)
+times.  For the full central graph target, the opposite nonfixed cells cancel
+in pairs, every row total is \(|H|\), and the parallel totals sum to
+\(|H|\).  Consequently
+
+\[
+ |a(T_U)|\equiv |H|+u_{\rm np}\equiv1,\qquad
+ |H|-|U|-|a(T_U)|\equiv u_0\equiv0\pmod2.                  \tag{E.31}
+\]
+
+Thus the Hamming numerator is automatically even for the sixteen-half
+construction; parity does not exclude it.  At the minimum
+\(\kappa=178-t\), one has \(|H|-|U|=1\), so any completion must have
+\(|a(T_U)|=1\) and no selected unused double orbit.  This is conditional
+rigidity, not existence.
+
+Third, the source word of the sharp rigid two-cancellation pair is explicit:
+
+\[
+ |\Phi_{\rm pair}|=
+ 4p-26-2\eta(3)-4\eta(6)-4\eta(-2),                         \tag{E.32}
+\]
+
+which is 108 at \(p=31\).  This does not determine the full target coset.
+The previously used identity \(a_Y=a_{\rm literal}\) is false and is
+retracted.  A centrally symmetric compact residual can have odd fixed-cell
+coefficients, and the correct decomposition is
+
+\[
+ a_Y=a_{\rm literal}+a_{\rm compact},\qquad
+ a(T_U)=a_{\rm literal}+a_{\rm compact}+\Phi(U).             \tag{E.33}
+\]
+
+Equation (E.31) uses this full target and fixes only its total parity; it
+does not control the unknown compact support or turn (E.32) into a Hamming
+obstruction.
+
+Fourth, on an equal-square proposed common block \(X=C=B_{K,r^2}\), the
+prescribed-center incidence problem has an exact Hall formulation.  For
+half \(i\), its doubled pair is precisely
+
+\[
+ x_i\in A_i=\{a:L_i(a)=\pm j_i/2\},\qquad
+ y_i\in X\setminus T_i,\quad
+ T_i=A_i\cup\{a:L_i(a)=0\}.                                \tag{E.34}
+\]
+
+A subfamily \(P\) with
+\(\left|\bigcup_{i\in P}A_i\right|\le |P|-2\) excludes both the fully
+doubled and one-single saturated profiles.  The recorded \(p=31\)
+prescribed-center list has such a six-edge/four-anchor deficiency for one
+fixed common direction \(K\), and no other \(K\) is excluded by that
+witness.
+
+There is also a constructive sufficient condition for branch primes
+(pge31), under the explicit hypothesis that every hard center is nonzero.
+Choose one prescribed hard pair as the common direction and form, on its affine anchor line
+\(\ell\), the simple graph whose \(h\) edges are the other anchor pairs
+\(A_i\).  If every component of this link graph is a tree or unicyclic,
+then it is a pseudoforest, its edges have an incident-vertex SDR, the
+remaining free slots satisfy Hall, and the dependent half supplies the last
+point.  Therefore
+
+\[
+ G_\ell\ {\rm pseudoforest}
+ \quad\Longrightarrow\quad
+ \hbox{a saturated equal-square common-block incidence cover}. \tag{E.35}
+\]
+
+This is a proved one-way implication.  It is not known that one prescribed
+anchor line always satisfies it, and (E.35) proves neither mutual ternarity,
+containment of a full row-code support, nor the divided Boolean completion.
+
 Evidence and focused replay for these post-15.761 statements are in
 `evidence/NOTE_2026-09-02_COMPACT_RAY_HIGHER_MOMENT_GATE.md`,
 `evidence/NOTE_2026-09-03_CONIC_ODD_RADON_DICHOTOMY.md`,
@@ -16420,7 +16709,15 @@ Evidence and focused replay for these post-15.761 statements are in
 `evidence/NOTE_2026-09-03_EQUIANHARMONIC_THRESHOLD_EVEN_BARRIER.md`, together
 with `evidence/NOTE_2026-09-03_INVERSION_SYMMETRIC_LATTICE.md`,
 `evidence/NOTE_2026-09-03_MOBIUS_HALF_SYMMETRIC.md`, and
-`evidence/NOTE_2026-09-03_ALL_ACTIVE_PENCIL_SUPPORT.md`. Replay with
+`evidence/NOTE_2026-09-03_ALL_ACTIVE_PENCIL_SUPPORT.md`, together with
+`evidence/NOTE_2026-09-03_SYMMETRIC_FIXED_EDGE_ELIMINATION.md`,
+`evidence/NOTE_2026-09-03_SYMMETRIC_HALVED_MOD2.md`,
+`evidence/NOTE_2026-09-03_SYMMETRIC_HALVED_MOBIUS_COVER.md`,
+`evidence/NOTE_2026-09-03_SYMMETRIC_UNUSED_SLICE_EXCHANGE.md`, and
+`evidence/NOTE_2026-09-03_MOBIUS_HALF_INTERSECTIONS.md`, together with
+`evidence/NOTE_2026-09-03_SYMMETRIC_HALVED_ROW_CODE.md`,
+`evidence/NOTE_2026-09-03_PRESCRIBED_CENTER_COMMON_BLOCK.md`, and
+`evidence/NOTE_2026-09-03_RIGID_PAIR_FIXED_WORD.md`. Replay with
 
 ```bash
 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. \
@@ -16434,6 +16731,14 @@ PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. \
   tests/test_equianharmonic_threshold_even_barrier.py \
   tests/test_inversion_symmetric_lattice.py \
   tests/test_mobius_half_symmetric.py tests/test_all_active_pencil_support.py \
+  tests/test_symmetric_fixed_edge_elimination.py \
+  tests/test_symmetric_halved_mod2.py \
+  tests/test_symmetric_halved_mobius_cover.py \
+  tests/test_symmetric_slice_exchange.py \
+  tests/test_mobius_half_intersections.py \
+  tests/test_symmetric_halved_row_code.py \
+  tests/test_prescribed_center_common_block.py \
+  tests/test_rigid_pair_fixed_word.py \
   tests/test_main_chain_docs.py
 ```
 

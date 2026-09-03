@@ -1,0 +1,16 @@
+{
+  "p": 31,
+  "device": "gfx1201",
+  "chains": 65536,
+  "iterations": 60000,
+  "seed": 907033,
+  "scope": "even support only",
+  "best_margin": 0,
+  "weight": 4,
+  "silent_group_count": 4,
+  "counterexample": false,
+  "verified": true,
+  "support_indices": [35, 38, 282, 401],
+  "silent_direction_indices": [2, 8, 16, 22],
+  "status": "heuristic search only; absence of a counterexample is not a proof"
+}

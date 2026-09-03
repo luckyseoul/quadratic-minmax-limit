@@ -1,0 +1,880 @@
+{
+  "best_chain": 0,
+  "best_weight_histogram": {
+    "465": 2048
+  },
+  "compute_capability": "70",
+  "conclusion": "this deterministic heuristic run found no word below 465; this is not a minimum-distance certificate",
+  "configuration": {
+    "chains": 2048,
+    "kick_moves": 8,
+    "kick_schedule": "chain c uses 1+c mod kick_moves forced moves when kick_moves is positive",
+    "launch_blocks": 8,
+    "move2_percent": 25,
+    "proposals_executed": 163840000,
+    "quench_calls": 0,
+    "quench_steps": 0,
+    "restarts_completed": 16,
+    "restarts_requested": 16,
+    "rounds_completed": 16,
+    "rounds_requested_per_restart": 1,
+    "steps_per_round": 5000,
+    "temp_end": 0.0,
+    "temp_start": 128.0,
+    "threads": 256
+  },
+  "cpu_baseline": {
+    "below_ph_465": false,
+    "coefficient_bits_sha256": "95b23de8df89b8efcd19ea11e9f0a363916e170be72a45a88ce8bd5ec5d6dfb1",
+    "coefficient_support_direction_left_right": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        3,
+        0
+      ],
+      [
+        0,
+        4,
+        0
+      ],
+      [
+        0,
+        5,
+        0
+      ],
+      [
+        0,
+        6,
+        0
+      ],
+      [
+        0,
+        7,
+        0
+      ],
+      [
+        0,
+        8,
+        0
+      ],
+      [
+        0,
+        9,
+        0
+      ],
+      [
+        0,
+        10,
+        0
+      ],
+      [
+        0,
+        11,
+        0
+      ],
+      [
+        0,
+        12,
+        0
+      ],
+      [
+        0,
+        13,
+        0
+      ],
+      [
+        0,
+        14,
+        0
+      ]
+    ],
+    "coefficient_weight": 15,
+    "cpu_verified": true,
+    "normal_form_membership_reason": "coefficients use only B_A tensor B_A and q is a boundary word",
+    "optimized_boundary_q_support_classes": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        1,
+        9
+      ],
+      [
+        1,
+        10
+      ],
+      [
+        1,
+        11
+      ],
+      [
+        1,
+        12
+      ],
+      [
+        1,
+        13
+      ],
+      [
+        1,
+        14
+      ],
+      [
+        1,
+        15
+      ],
+      [
+        1,
+        16
+      ],
+      [
+        1,
+        17
+      ],
+      [
+        1,
+        18
+      ],
+      [
+        1,
+        19
+      ],
+      [
+        1,
+        20
+      ],
+      [
+        1,
+        21
+      ],
+      [
+        1,
+        22
+      ],
+      [
+        1,
+        23
+      ],
+      [
+        1,
+        24
+      ],
+      [
+        1,
+        25
+      ],
+      [
+        1,
+        26
+      ],
+      [
+        1,
+        27
+      ],
+      [
+        1,
+        28
+      ],
+      [
+        1,
+        29
+      ],
+      [
+        1,
+        30
+      ]
+    ],
+    "optimized_boundary_q_support_indices": [
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "physical_word_bits_sha256": "59bd4189d58e72bb92f0a44fb7a839f23c42db524943374c2bed6ba2405f6e12",
+    "weight": 465
+  },
+  "cpu_certificate": {
+    "below_ph_465": false,
+    "coefficient_bits_sha256": "cfd03c1588b4a1f4430e64b76431de290110324f1cb1d3a48479497deac4cc1a",
+    "coefficient_support_direction_left_right": [
+      [
+        12,
+        0,
+        2
+      ],
+      [
+        12,
+        1,
+        2
+      ],
+      [
+        12,
+        2,
+        2
+      ],
+      [
+        12,
+        3,
+        2
+      ],
+      [
+        12,
+        4,
+        2
+      ],
+      [
+        12,
+        5,
+        2
+      ],
+      [
+        12,
+        6,
+        2
+      ],
+      [
+        12,
+        7,
+        2
+      ],
+      [
+        12,
+        8,
+        2
+      ],
+      [
+        12,
+        9,
+        2
+      ],
+      [
+        12,
+        10,
+        2
+      ],
+      [
+        12,
+        11,
+        2
+      ],
+      [
+        12,
+        12,
+        2
+      ],
+      [
+        12,
+        13,
+        2
+      ],
+      [
+        12,
+        14,
+        2
+      ]
+    ],
+    "coefficient_weight": 15,
+    "cpu_verified": true,
+    "normal_form_membership_reason": "coefficients use only B_A tensor B_A and q is a boundary word",
+    "optimized_boundary_q_support_classes": [
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        13
+      ],
+      [
+        1,
+        23
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        3,
+        18
+      ],
+      [
+        3,
+        28
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        15
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        5,
+        23
+      ],
+      [
+        6,
+        10
+      ],
+      [
+        6,
+        20
+      ],
+      [
+        7,
+        7
+      ],
+      [
+        7,
+        28
+      ],
+      [
+        8,
+        15
+      ],
+      [
+        8,
+        25
+      ],
+      [
+        9,
+        2
+      ],
+      [
+        9,
+        12
+      ],
+      [
+        10,
+        20
+      ],
+      [
+        10,
+        30
+      ],
+      [
+        11,
+        7
+      ],
+      [
+        11,
+        17
+      ],
+      [
+        12,
+        4
+      ],
+      [
+        12,
+        25
+      ],
+      [
+        13,
+        12
+      ],
+      [
+        13,
+        22
+      ],
+      [
+        14,
+        9
+      ],
+      [
+        14,
+        30
+      ],
+      [
+        15,
+        17
+      ],
+      [
+        15,
+        27
+      ]
+    ],
+    "optimized_boundary_q_support_indices": [
+      4,
+      28,
+      38,
+      46,
+      56,
+      95,
+      105,
+      113,
+      123,
+      141,
+      162,
+      180,
+      190,
+      208,
+      229,
+      247,
+      257,
+      265,
+      275,
+      314,
+      324,
+      332,
+      342,
+      360,
+      381,
+      399,
+      409,
+      427,
+      448,
+      466,
+      476
+    ],
+    "physical_word_bits_sha256": "cee5094317ed0cfc8daca11f7ded5baa14b6f6ee68124f1f0e2f9afa7bb22fe5",
+    "weight": 465
+  },
+  "cpu_terminal_state_audit": {
+    "below_ph_465": false,
+    "chain": 1287,
+    "coefficient_bits_sha256": "2b51d1d3237c748a2cb6f48b59784da1038685937873b57bf0d9da95c75a843c",
+    "coefficient_support_direction_left_right": [
+      [
+        2,
+        7,
+        4
+      ],
+      [
+        2,
+        8,
+        4
+      ],
+      [
+        7,
+        4,
+        2
+      ],
+      [
+        7,
+        4,
+        7
+      ],
+      [
+        7,
+        9,
+        2
+      ],
+      [
+        7,
+        9,
+        7
+      ],
+      [
+        13,
+        1,
+        5
+      ],
+      [
+        13,
+        2,
+        14
+      ],
+      [
+        20,
+        6,
+        11
+      ],
+      [
+        24,
+        4,
+        10
+      ],
+      [
+        25,
+        0,
+        14
+      ],
+      [
+        25,
+        1,
+        14
+      ],
+      [
+        25,
+        2,
+        14
+      ],
+      [
+        25,
+        3,
+        14
+      ],
+      [
+        25,
+        4,
+        14
+      ],
+      [
+        25,
+        5,
+        14
+      ],
+      [
+        25,
+        6,
+        14
+      ],
+      [
+        25,
+        7,
+        14
+      ],
+      [
+        25,
+        8,
+        14
+      ],
+      [
+        25,
+        9,
+        14
+      ],
+      [
+        25,
+        10,
+        14
+      ],
+      [
+        25,
+        11,
+        14
+      ],
+      [
+        25,
+        12,
+        14
+      ],
+      [
+        25,
+        13,
+        14
+      ],
+      [
+        25,
+        14,
+        14
+      ],
+      [
+        27,
+        9,
+        6
+      ],
+      [
+        27,
+        9,
+        12
+      ],
+      [
+        27,
+        12,
+        6
+      ],
+      [
+        27,
+        12,
+        12
+      ],
+      [
+        28,
+        3,
+        4
+      ],
+      [
+        28,
+        3,
+        11
+      ],
+      [
+        28,
+        6,
+        11
+      ]
+    ],
+    "coefficient_weight": 32,
+    "cpu_verified": true,
+    "normal_form_membership_reason": "coefficients use only B_A tensor B_A and q is a boundary word",
+    "optimized_boundary_q_support_classes": [
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        19
+      ],
+      [
+        2,
+        14
+      ],
+      [
+        2,
+        28
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        3,
+        23
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        4,
+        18
+      ],
+      [
+        5,
+        13
+      ],
+      [
+        5,
+        30
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        6,
+        25
+      ],
+      [
+        7,
+        3
+      ],
+      [
+        7,
+        20
+      ],
+      [
+        8,
+        15
+      ],
+      [
+        8,
+        29
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        9,
+        24
+      ],
+      [
+        10,
+        5
+      ],
+      [
+        10,
+        19
+      ],
+      [
+        11,
+        0
+      ],
+      [
+        11,
+        14
+      ],
+      [
+        12,
+        9
+      ],
+      [
+        12,
+        26
+      ],
+      [
+        13,
+        4
+      ],
+      [
+        13,
+        21
+      ],
+      [
+        14,
+        16
+      ],
+      [
+        14,
+        30
+      ],
+      [
+        15,
+        11
+      ],
+      [
+        15,
+        25
+      ]
+    ],
+    "optimized_boundary_q_support_indices": [
+      6,
+      17,
+      34,
+      60,
+      74,
+      86,
+      100,
+      112,
+      126,
+      152,
+      169,
+      178,
+      195,
+      204,
+      221,
+      247,
+      261,
+      273,
+      287,
+      299,
+      313,
+      325,
+      339,
+      365,
+      382,
+      391,
+      408,
+      434,
+      448,
+      460,
+      474
+    ],
+    "physical_word_bits_sha256": "aa43ceb59fed5652c46ce924166726d28d2dd0db01ab391c39e7189ce369733a",
+    "weight": 15830
+  },
+  "cupy": "14.2.0",
+  "d": 32,
+  "delta_size": 480,
+  "device": "Tesla V100-SXM2-16GB",
+  "experiment": "p31_halved_row_code_low_weight_gpu",
+  "final_current_coefficient_weight_summary": {
+    "maximum": 32,
+    "median": 19.0,
+    "minimum": 14
+  },
+  "final_current_objective_summary": {
+    "maximum": 15830,
+    "median": 4269.0,
+    "minimum": 465
+  },
+  "gpu_best_weight": 465,
+  "h": 15,
+  "host": "soulkiller",
+  "kernel_compile_seconds": 0.1769951080204919,
+  "moves": [
+    "one direction-block coefficient",
+    "one 2-by-2 rank-one cycle inside a direction block"
+  ],
+  "normal_form": "W=1*q^T+B*X*B^T with X direction-block-diagonal",
+  "p": 31,
+  "ph_threshold": 465,
+  "q_optimization": "exact per physical column by majority complement",
+  "scope": "single-prime p=31 heuristic, not theorem evidence",
+  "script_sha256": "8fd4dcb96cd17ebcc962d8df8dcbc547b730ff245cce7f9096da7f5970e98653",
+  "search_seconds": 12.825408418022562,
+  "seed": 835802977,
+  "status": "no_subthreshold_word_found_heuristic_not_proof",
+  "zero_word_rejected": true
+}
