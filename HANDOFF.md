@@ -4,9 +4,11 @@
 
 ## Direct original-MO calculator checkpoint (2026-09-03)
 
-- Working checkout: branch `residual/p13-u6-common-moments` at base
-  `cf32d2137d9b40ce631f21bcdf8b2cb6e72d0c81`, with pre-existing dirty work
-  preserved.  Nothing in this checkpoint is committed or pushed.
+- Working checkout: branch `residual/p13-u6-common-moments`; this checkpoint
+  began at `0d69eb49a6cab02318b11d6714d19e50b189ca97`. Proposition 15.762,
+  the Mobius-incidence barrier, and the order-122 switching stop are committed
+  together in the immediately following history and pushed to both this
+  branch and `main`.
 - The exact two-half variables `u=(x+y)/2`, `v=(x-y)/2` reduce doubling to
   the optimized slope-one envelope `max(W-D)`, where
   `W=|x^T R y|` and `D=2m_n-|Q_A(x)+Q_A(y)|`.  Complete optimization over
@@ -263,7 +265,7 @@
   has isolated an exact all-orders invariant and ruled out two seductive
   false shortcuts.
 
-## Current working checkpoint (2026-09-03; audited Proposition 15.761 and post-15.761 exact reductions)
+## Current working checkpoint (2026-09-03; audited Proposition 15.762 and post-15.761 exact reductions)
 
 - Propositions 15.757--15.761 continue the separately audited
   15.755--15.756 reductions at the full edge--Radon map of one common graph.
@@ -288,6 +290,17 @@
   the exact Moore--Penrose norm. Its full-midpoint necessary inequality is
   strictly stronger than scalar difference Parseval, yet both compact rays
   satisfy it with strict room for every `r>=7`, uniformly in atom labels.
+- Proposition 15.762 proves the universal conference cube gap: at square
+  order `p^2+1`, `p>=5`, every non-eigen Boolean point is at least eight
+  below the spherical ceiling. Absence of both Boolean `+p` and `-p`
+  eigenshells would therefore be a complete countercertificate. The audited
+  order-122 Paley, Peisert, PN, and OA-derived families retain an eigenshell;
+  no nonregularizable class, residual counterexample, or closure is known.
+- The completed global Mobius-incidence calculation is a route barrier:
+  fixed-word intersection surplus can meet the entire endpoint demand while
+  the physical half-supports remain pairwise disjoint. Any continuation must
+  couple collisions to required cancellations or to the even-moment target;
+  incidence/Bezout plus ternarity alone is exhausted.
 - The higher-moment follow-up proves that every odd row is blind on the
   antipodal rays. More generally, for every prime `p=4r+3`, `r>=7`, a row
   with `b` arbitrary compact atoms and `r-1` all-equal atoms is central when

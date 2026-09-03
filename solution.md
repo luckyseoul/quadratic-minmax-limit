@@ -15721,6 +15721,31 @@ remain open.
 Evidence: `src/e1_gmin_m4_prop15761.py`,
 `tests/test_prop15761.py`, and `evidence/e1_gmin_m4_prop15761.json`.
 
+## Proposition 15.762 — integral conference cube gap
+
+Let `C` be a symmetric conference matrix of order `n=p^2+1`, with odd
+`p>=5`, and put `Q_C(x)=x^tCx/2` on the Boolean cube. If
+`delta=pn/2-Q_C(x)` and `z=(C-pI)x/2`, then `z` is integral,
+`Cz=-pz`, and `||z||^2=p delta`. After switching by `x`, the conference
+equations force every coordinate of `w=diag(x)z` to have one parity.
+
+If `w=2v`, then `Dv=-pv` and a maximum coordinate gives
+`||v||_1 >= (p+1)||v||_infinity`; if `w` is odd, then
+`||w||^2>=p^2+1`. Together with the parity of `delta`, these facts exclude
+gaps two, four, and six. Hence either `Cx=px` or
+
+\[
+ Q_C(x)\le {p(p^2+1)\over2}-8.
+\]
+
+Applying this to `-C` shows that a class with no Boolean `+p` or `-p`
+eigenvector is already a complete eight-gap certificate. At gap eight the
+necessary form is `w=2v`, where `v` has `p-2` entries `+1`, `p+2` entries
+`-1`, and all other entries zero. This conference cube gap does not produce
+such a class and does not close residual (ii), E1, or the original limit;
+all remain OPEN. The full proof and normalization audit are in
+`evidence/NOTE_2026-09-03_CONFERENCE_CUBE_GAP.md`.
+
 **All-prime branch-C odd--Radon centrality (2026-09-03).**
 Let \(p=4r+3\) be prime with \(r\ge7\). Suppose one opposite row on the
 branch-C compact ray contains \(b\) arbitrarily labelled compact atoms and

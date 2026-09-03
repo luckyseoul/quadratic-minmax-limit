@@ -236,7 +236,7 @@ distinguished edge. Do not reopen the `3A+B`, Aut_e, finite-LP, or small-prime
 census routes as Type-I work. They remain incomplete historical mechanisms,
 not live global gates. Residual (ii), E1, and the limit remain open.
 
-## Current residual-(ii) gate after audited Proposition 15.761 and the post-15.761 exact reductions
+## Current residual-(ii) gate after audited Proposition 15.762 and the post-15.761 exact reductions
 
 Do not reopen `p=13,k=58` or `p=17,k=74`.  Proposition 15.742 combines the
 `M_2=0` congruence with six multiplicative interval cuts and closes the
@@ -364,6 +364,22 @@ with cokernel `(Z/pZ)^S(p)` and no hidden linear congruence; and 15.761 proves
 the exact full-target Moore--Penrose inequality also has strict room on both
 rays. Do not retry parity, another linear/Smith obstruction, coefficient
 `l1`, scalar or full-target Parseval, or Euclidean least norm on this family.
+
+Proposition 15.762 proves a separate universal conference cube gap. For a
+symmetric conference matrix of order `p^2+1`, `p>=5`, every Boolean vector
+is a `+p` eigenvector or lies at least eight below the spherical ceiling;
+the same holds for `-C`. Therefore a conference class with no Boolean `+p`
+or `-p` eigenvector is already a complete `Phi_sph-8` certificate. Do not
+rerun optimizers for the gaps two, four, or six. No such conference class is
+presently constructed, so residual (ii), E1, and `L=1/2` remain OPEN.
+
+The global Mobius-incidence audit also proves that distinct target
+directions, all signed fixed-word intersections, and physical ternarity
+alone cannot close the remaining coupled box: for every branch prime it
+constructs, probabilistically but exactly, pairwise-disjoint physical halves
+with collision surplus at least the full endpoint demand. Do not retry a
+standalone Bezout/incidence bound; it must be coupled to required physical
+cancellations or the prescribed even-moment cells.
 
 The live Paley target is ordered. Degree five and all odd rows are blind on
 the antipodal compact rays. The all-prime odd--Radon follow-up now covers an

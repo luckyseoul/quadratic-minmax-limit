@@ -1,4 +1,4 @@
-# Status (2026-09-03; through audited Proposition 15.761 and the post-15.761 geometry, conic, and Boolean reductions)
+# Status (2026-09-03; through audited Proposition 15.762 and the post-15.761 geometry, conic, and Boolean reductions)
 
 **The original question has been separated from the stronger Paley value
 program.**  MathOverflow 413935 asks for existence, not an identified value.
@@ -391,6 +391,17 @@ both compact rays satisfy its necessary inequality with strict room for every
 `r>=7`, uniformly in their atom labels. Thus binary parity, another linear
 integer congruence, scalar/full-target Parseval, and Euclidean least norm are
 now retired on this family.
+
+**15.762 proves a universal conference cube gap, but supplies no
+nonregularizable conference class.** If `C` is symmetric conference of order
+`p^2+1`, `p>=5`, then every Boolean value below the spherical ceiling has
+gap at least eight unless the Boolean vector is a `+p` eigenvector. Applying
+the result to `-C` shows that absence of both Boolean eigenshells would
+certify `Phi(C)<=p(p^2+1)/2-8`. The switched degree-parity identity also
+fixes the necessary sparse signed support at gap eight. The audited Paley,
+Peisert, PN, and OA-derived order-122 families all retain a Boolean
+eigenshell; no counterexample or common residual graph follows. Residual
+(ii), E1, `L=1/2`, and the original MO limit remain OPEN.
 
 The subsequent higher-moment audit first gives an all-prime structural
 theorem. For every prime `p=4r+3` with `r>=7`, an opposite row made from `b`

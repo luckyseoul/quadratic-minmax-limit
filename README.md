@@ -26,7 +26,7 @@ not represented as computational predicates.
 
 **Main claim:** L = lim_n α_n is **OPEN** (2026-09-03).
 
-### Current audit (2026-09-03; through audited Proposition 15.761, the post-15.761 exact reductions, and Propositions 6.3--6.10a)
+### Current audit (2026-09-03; through audited Proposition 15.762, the post-15.761 exact reductions, and Propositions 6.3--6.10a)
 
 - **Original-question correction and new direct gate.** MathOverflow 413935
   asks whether the limit exists; identifying its value is optional.  With
@@ -443,6 +443,14 @@ not represented as computational predicates.
   directions, followed (if the moment gates pass) by
   `(z_0+ker_Z R) intersect product_e {0,tau_e} != empty`. No common `0/1`
   graph is constructed; residual (ii), E1, and the limit remain open.
+- **Conference cube gap.** Proposition 15.762 proves that for every symmetric
+  conference matrix of order `p^2+1`, `p>=5`, a Boolean vector is a `+p`
+  eigenvector or its value is at least eight below the spherical ceiling;
+  apply the same statement to `-C` for the opposite endpoint. Thus a class
+  with neither Boolean eigenshell would immediately certify
+  `Phi(C)<=p(p^2+1)/2-8`, and the gaps two, four, and six need no solver.
+  No nonregularizable square-order class is constructed, so residual (ii),
+  E1, `L=1/2`, and the original MO limit remain OPEN.
 - **Post-15.761 support, conic, and Boolean reductions.** For the full
   balanced `p=4r+3`, `r>=7`, range `0<=b<=r`, exact maximal-line estimates
   and Couvreur peeling exclude both one- and two-maximal-line supports within
@@ -2039,6 +2047,9 @@ Lemma D is complete and is no longer on the work list.
 | `evidence/NOTE_2026-09-01_RESIDUAL_BAND_INFLUENCE_CLOSE.md` | Scaled-mass `p+9` exclusion and isolated-chart proof closing the fifth shell and a contiguous higher-shell band (15.752) |
 | `evidence/NOTE_2026-09-01_P17_P19_FIFTH_SHELL_CLOSE.md` | Exact aggregate-row proof closing the p17/p19 fifth-shell endpoints with the corrected opposite quartic sign (15.753) |
 | `evidence/NOTE_2026-09-02_P13_U6_COMMON_FORM_CLOSE.md`, `evidence/e1_gmin_m4_prop15754.json`, `evidence/e1_gmin_m4_prop15754_low_root_ug.json`, `evidence/e1_gmin_m4_prop15754_four_root_221.json`, `evidence/e1_gmin_m4_prop15754_four_root_311.json` | Proof note, exact manifest, and common-form aggregate certificates closing `p=13,k=60,u=6` (15.754) |
+| `evidence/NOTE_2026-09-03_CONFERENCE_CUBE_GAP.md`, `evidence/e1_gmin_m4_prop15762.json` | Universal square-order conference cube gap, normalization guard, and first possible sparse shell (15.762); no nonregularizable class or residual close |
+| `evidence/NOTE_2026-09-03_MOBIUS_GLOBAL_INCIDENCE_BARRIER.md` | All-prime proof that fixed-word incidence plus physical ternarity alone cannot contradict the endpoint collision demand |
+| `evidence/NOTE_2026-09-03_ORDER122_SWITCHING_STOP.md`, `evidence/order122_switching/` | Exact WQH search stops, bounded OA/GM candidate scan, source hashes, and explicit unfinished WQH(4,4) branch; no global conference classification |
 | `evidence/e1_gmin_m4_prop15755.json`, `evidence/e1_gmin_m4_prop15756.json` | Audited full-cube spike and arbitrary-boundary character-cap reduction records; neither closes residual (ii) |
 | `evidence/e1_gmin_m4_prop15757.json`, `evidence/e1_gmin_m4_prop15758.json` | Exact binary edge--Radon image, sharp coefficient cancellation, local survivor rays, and scalar-energy barriers |
 | `evidence/e1_gmin_m4_prop15759.json`, `evidence/e1_gmin_m4_prop15760.json`, `evidence/e1_gmin_m4_prop15761.json` | Complete characteristic-p moments, exact integral cokernel, full real spectrum, and the remaining signed-Boolean-box gate |

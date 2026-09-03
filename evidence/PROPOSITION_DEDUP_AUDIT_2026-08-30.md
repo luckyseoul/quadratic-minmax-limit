@@ -3,7 +3,7 @@
 **Date:** 2026-09-03
 
 **Scope:** Propositions 6.3--6.10a, every assigned proposition through
-Proposition 15.761, the audited post-15.761 support/conic/Boolean reductions,
+Proposition 15.762, the audited post-15.761 support/conic/Boolean reductions,
 the live predicate wiring, and the attack scripts present during the audit
 
 **Purpose:** prevent a reformulation, solver/backend change, longer timeout,
@@ -1306,6 +1306,7 @@ top-level front.
 | **15.759** | full projective homogeneous moment contractions and exact bidegree block ranks | **PROVED COMPLETE CHARACTERISTIC-p HIERARCHY.** The extra codimension is `S(p)` and the rows exhaust the mod-p linear obstruction. Higher compact-atom moments remain unchecked. |
 | **15.760** | primitive ordinary lattice, pure-difference/midpoint Smith forms, and snake-lemma extension | **PROVED INTEGRAL IMAGE THEOREM AND OPEN 0/1 REDUCTION.** `A/R(E)=(Z/pZ)^S(p)`; the moment rows are integer-image sufficient, but the signed Boolean-box intersection is open. |
 | **15.761** | complete real edge--Radon Gram spectrum and Moore--Penrose norm | **PROVED FULL-SPECTRUM THEOREM AND STRONGER METHOD BARRIER.** Both compact rays pass the full-midpoint norm test with strict room for all `r>=7`; no simple graph follows. |
+| **15.762** | switched degree parity and integral Boolean eigenshell norm | **PROVED UNIVERSAL CONFERENCE CUBE GAP.** At square order `p^2+1`, `p>=5`, every non-eigen Boolean point is at least eight below the spherical ceiling. No nonregularizable conference class, residual counterexample, or closure is supplied. |
 | **all-prime odd--Radon gate** | support/line isolation for `b` compact plus `r-1` all-equal branch-C rows under zero odd global forms | **PROVED STRUCTURAL REDUCTION.** For every prime `p=4r+3`, `r>=7`, the chain is central when `3b<=r+2`; balanced branch C is covered through `delta=(2r+2)floor((r+2)/3)`. Nonzero forms, unbalanced allocations, and even moments remain open. |
 | **p31 local gate** | arbitrary compact plus six all-equal atoms, all odd rows and joint degree six/eight with zero global forms | **EXHAUSTIVE LOCAL CERTIFICATE AND BALANCED COROLLARY.** All 450 scaling orbits are covered (449 noncentered `UNSAT`, one independently excluded centered orbit, zero `SAT`), excluding every balanced `69<=t<=99` zero-form profile because each contains that row. Unbalanced/nonzero-form cases and the Boolean box remain open. |
 | **seven-channel dominance** | exact degree-six/eight Jacobian minors for four compact and four all-equal atoms | **PROVED ALGEBRAIC METHOD BARRIER.** Both maps are dominant over the algebraic closure in characteristic at least 11, so no universal seven-channel identity can close the gate. Extension-valued points are not `F_p` or Boolean lifts. |
@@ -1525,6 +1526,10 @@ Before spending mesh/GPU time:
    their extension-valued points are not `F_p` lifts. The live sequence is
    actual coordinated nonzero even forms over `F_p`, then the signed
    Boolean-box intersection;
+   On the separate conference-class route, Proposition 15.762 already
+   excludes cube gaps two, four, and six. Do not rerun near-ceiling
+   optimization; the live requirement is an explicit square-order symmetric
+   conference class with no Boolean `+p` or `-p` eigenvector.
 5. search tracked files, untracked scripts, `/tmp` artifact names and hashes,
    git history, GitHub, MathOverflow, literature notes, and OEIS when number
    patterns are involved;

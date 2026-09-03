@@ -1,0 +1,47 @@
+{
+  "prop": "15.762",
+  "title": "Integral cube gap for square-order symmetric conferences",
+  "status": "PROVED UNIVERSAL GAP AND FIRST-POSSIBLE-SHELL NECESSARY FORM",
+  "normalization": {
+    "Q": "(1/2)x^T Cx",
+    "spherical_ceiling": "p(p^2+1)/2",
+    "z": "(C-pI)x/2",
+    "z_norm_squared": "p(Phi_sph-Q)",
+    "norm_2p_means_gap": 2,
+    "gap_4_means_z_norm_squared": "4p"
+  },
+  "proved": {
+    "switched_graph_degrees_have_one_parity": true,
+    "cube_gaps_2_and_4_absent_for_every_odd_p_at_least_3": true,
+    "cube_gap_6_absent_for_every_odd_p_at_least_5": true,
+    "non_eigen_boolean_gap_at_least_8_for_p_at_least_5": true,
+    "first_possible_gap_8_sparse_form_is_necessary": true,
+    "first_possible_gap_8_is_attained": false,
+    "nonregularizable_conference_constructed": false,
+    "residual_ii_closed": false,
+    "e1_closed_general": false,
+    "L": false
+  },
+  "counterexample_criterion": "If a symmetric conference matrix of order p^2+1 has neither a Boolean +p nor -p eigenvector, then Phi(C)<=p(p^2+1)/2-8.",
+  "first_possible_shell": {
+    "gap": 8,
+    "projection_z_norm_squared": 40,
+    "switched_projection": "w=2v",
+    "v_eigen_equation": "Dv=-pv",
+    "v_norm_squared": 10,
+    "v_coordinate_alphabet": [-1, 0, 1],
+    "v_support": 10,
+    "v_sum": -4,
+    "v_positive_count": 3,
+    "v_negative_count": 7,
+    "existence_claimed": false,
+    "proved_necessary_form": true
+  },
+  "not_claimed": [
+    "existence of a nonregularizable symmetric conference matrix of square order",
+    "attainment of the gap-eight shell",
+    "a residual-(ii) exclusion or counterexample",
+    "E1 or the MathOverflow limit"
+  ],
+  "L_status": "OPEN"
+}
