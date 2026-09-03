@@ -649,6 +649,20 @@ transverse fibre. See
 `evidence/NOTE_2026-09-03_MOBIUS_PARALLEL_PARITY_ENDPOINT.md`; replay with
 `PYTHONPATH=src:. python -m pytest -q -n 0 tests/test_mobius_parallel_parity_endpoint.py`.
 
+The surviving equality case is not closed by complementary profiles or by
+grouped uncertainty. Complementary functional scales would require
+`M_i(x)^2=4j_i^2` on one singleton line, but every proved aggregate, binary
+compatibility, and moment condition allows the nonzero hard centres to vary
+independently after the scaled auxiliaries are fixed. An adaptive
+center-dependent complementary family remains open. The exact local overlap
+locus is consistent (`q=r=2` gives one clean opposite overlap), and the
+centered compact atom `K(v,-v;0)`
+realizes a singleton fixed word with only one silent direction while
+satisfying every common moment. These are necessary compatibility and method
+warnings, not endpoint closure. See
+`evidence/NOTE_2026-09-03_MOBIUS_ENDPOINT_BARRIER.md`; replay
+with `PYTHONPATH=src:. python -m pytest -q -n 0 tests/test_mobius_endpoint_barrier.py`.
+
 For a proposed equal-square common block, prescribed centers now reduce
 exactly to a Hall problem with two slots per independent half. A subfamily
 whose two-point anchor sets have union at most `|P|-2` excludes both the

@@ -465,6 +465,7 @@ def test_fixed_elimination_halved_code_and_rigid_overlap_are_canonical():
         "NOTE_2026-09-03_SYMMETRIC_HALVED_ROW_CODE_GAP.md",
         "NOTE_2026-09-03_SYMMETRIC_QUOTA_CARDINALITY_BARRIER.md",
         "NOTE_2026-09-03_MOBIUS_PARALLEL_PARITY_ENDPOINT.md",
+        "NOTE_2026-09-03_MOBIUS_ENDPOINT_BARRIER.md",
     )
     for name in integrated:
         text = texts[name]
@@ -480,6 +481,7 @@ def test_fixed_elimination_halved_code_and_rigid_overlap_are_canonical():
     assert "canonical remainder vanishes to order at least two" in solution_flat
     assert "actual transverse target" in solution_flat
     assert "parallel-parity" in solution_flat
+    assert "centre coherence" in solution_flat or "centre-coherence" in solution_flat
     assert "conditional rigidity, not existence" in solution_flat
     assert "a saturated equal-square common-block incidence cover" in solution_flat
 

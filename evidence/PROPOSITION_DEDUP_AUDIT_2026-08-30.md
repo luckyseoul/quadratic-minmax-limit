@@ -268,6 +268,15 @@ parallel-parity floor: for `s=(t+1) mod (p+1)` and
 not a transverse lift or residual close. Frozen proof:
 `evidence/NOTE_2026-09-03_MOBIUS_PARALLEL_PARITY_ENDPOINT.md`.
 
+Do not retry automatic centre coherence as a consequence of the moment
+ledger, or a two-silent-group consequence of grouped uncertainty. Fixed
+complementary scales do require `M_i(x)^2=4j_i^2`, but hard-star centres are
+invisible to all recorded aggregate and moment constraints. This leaves an
+adaptive center-dependent complementary choice open. The local four-candidate
+system has clean one-overlap solutions, and `K(v,-v;0)` is an actual compact
+common-moment source whose singleton fixed word has exactly one silent group.
+Frozen barrier: `evidence/NOTE_2026-09-03_MOBIUS_ENDPOINT_BARRIER.md`.
+
 For an equal-square common block, reuse the exact anchor/free-slot Hall
 formulation. Anchor deficiency two excludes both saturated incidence
 profiles. The displayed `p=31` prescribed-center witness proves this for one

@@ -16685,6 +16685,32 @@ survives triple and higher overlaps, but only excludes these endpoint
 slices; it does not solve the remaining target equations. See
 `evidence/NOTE_2026-09-03_MOBIUS_PARALLEL_PARITY_ENDPOINT.md`.
 
+Neither equality shortcut suggested by this proof is valid. In the
+complementary-profile construction the relative auxiliary scales are fixed,
+so a singleton fixed edge on \(\ker F\) would require
+
+\[
+                         M_i(x)^2=4j_i^2\qquad\text{for every }i. \tag{E.29d}
+\]
+
+But the hard-star contribution is independent of \(j_i\) in every moment
+degree retained by Proposition 15.759 (the sole top-degree value is also
+independent of nonzero \(j_i\)), and the mass, parallel, centrality, integral,
+and binary compatibility data likewise permit the centres to vary
+independently after a scaled auxiliary family is fixed. Hence the
+centre-coherence condition (E.29d) is not automatic for a preassigned family;
+choosing that family adaptively from the centers remains open. Nor
+does the local geometry contradict it: the exact four-candidate equations
+have a clean one-overlap point \(q=r=2\), \(A=B=3/4\), with the other three
+candidates absent. Finally the actual compact source
+\(K(v,-v;0)\) has fixed word \(e_{[v]}\), exactly one silent affine-block
+group, and automatically satisfies the full common-moment system. Thus
+grouped uncertainty is sharp and cannot supply a second silent group. These
+are method barriers, not a Boolean completion or exclusion; the remaining
+argument must couple the branch atom counts, signs, and quotas to the actual
+Möbius support. See
+`evidence/NOTE_2026-09-03_MOBIUS_ENDPOINT_BARRIER.md`.
+
 Second, fixed-word parity survives every ternary cancellation at \(p=31\).
 Each of the sixteen halves has one zero-\(\Phi\) occurrence and 29
 nonzero-\(\Phi\) occurrences.  If \(\kappa_0,\kappa_1\) count cancellation
@@ -16822,6 +16848,7 @@ PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. \
   tests/test_symmetric_halved_row_code_gap.py \
   tests/test_symmetric_quota_cardinality_barrier.py \
   tests/test_mobius_parallel_parity_endpoint.py \
+  tests/test_mobius_endpoint_barrier.py \
   tests/test_main_chain_docs.py
 ```
 

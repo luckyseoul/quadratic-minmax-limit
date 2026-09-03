@@ -436,6 +436,19 @@
   a necessary endpoint obstruction. See
   `evidence/NOTE_2026-09-03_MOBIUS_PARALLEL_PARITY_ENDPOINT.md`; replay with
   `PYTHONPATH=src:. python -m pytest -q -n 0 tests/test_mobius_parallel_parity_endpoint.py`.
+- Two apparent automatic equality closes are now ruled out exactly.
+  Complementary parallel profiles, once fixed, require
+  `M_i(x)^2=4j_i^2` on the singleton line, whereas all recorded quotas and
+  the full moment hierarchy are invariant under independent rescaling of a
+  nonzero hard centre. This does not exclude choosing the complementary
+  family adaptively from the centers; that global problem remains open. The
+  local overlap equations themselves are
+  consistent: `q=r=2`, `A=B=3/4` gives one clean opposite overlap and no
+  other candidate. Separately, `K(v,-v;0)` has singleton fixed word and only
+  one silent group while satisfying every common moment. Thus neither centre
+  coherence nor a two-silent-group lemma follows from the current target
+  layer. See `evidence/NOTE_2026-09-03_MOBIUS_ENDPOINT_BARRIER.md`; replay
+  with `PYTHONPATH=src:. python -m pytest -q -n 0 tests/test_mobius_endpoint_barrier.py`.
 - At `p=31`, cancellation parity is now fully audited. The 16 halves start
   with 16 zero-`Phi` and 464 nonzero-`Phi` occurrences; ternarity preserves
   the even parity of each count through arbitrary overlaps. Hence

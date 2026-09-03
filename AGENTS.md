@@ -561,6 +561,21 @@ excluded. This is a quota/fixed-edge obstruction, not the remaining
 transverse Boolean close. See
 `NOTE_2026-09-03_MOBIUS_PARALLEL_PARITY_ENDPOINT.md`.
 
+Do not promote the complementary-profile endpoint sketch to a construction.
+Once its auxiliary scales are fixed it requires `M_i(x)^2=4j_i^2` on one
+fixed-edge line, but every proved quota and moment condition permits the
+nonzero centres `j_i` to vary independently. This shows nonautomatic
+coherence only for a preassigned family; an adaptive center-dependent choice
+remains open. The complete two-half calculation also
+has clean one-overlap points (for example `q=r=2`), so the local four-candidate
+intersection test gives no contradiction. Finally, the centered compact atom
+`K(v,-v;0)` realizes a singleton fixed word and exactly one silent group
+while satisfying the full common-moment system. The next argument must either
+construct that adaptive global family or couple the branch-specific atom
+counts, signs, and quotas to the actual Mobius support and divided Boolean
+fibre. See
+`NOTE_2026-09-03_MOBIUS_ENDPOINT_BARRIER.md`.
+
 The construction budget also applies across the whole all-active ray. If
 `|U|=m(p-1)-2 kappa`, then `kappa>=t_max-t+1` is necessary. The disjoint
 lift is therefore never extendable there. Two halves cancel at most two
