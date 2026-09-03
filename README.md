@@ -563,6 +563,22 @@ not represented as computational predicates.
   to the actual support and divided Boolean fibre. See
   `NOTE_2026-09-03_MOBIUS_ENDPOINT_BARRIER.md`.
 
+  The adaptive part of centre coherence is now proved for every branch prime
+  and every nonzero hard-centre list: a fixed-edge magnitude, signs, and a
+  perfect matching make every paired complement parameter nonsquare. The
+  pair outputs are forced, however, and are not proved to be `m` distinct
+  prescribed auxiliary directions of the required Paley types. The exact
+  paired-SDR equation and its common square-ratio invariant are recorded in
+  `NOTE_2026-09-03_ADAPTIVE_MOBIUS_PAIRING.md`.
+
+  The actual branch-C atom quotas also yield the exact fixed-word coupling
+  `a_Y+Phi(U)=e_x` iff `z=c_U+ell+s_x`, forcing the collision lower bounds
+  `Lambda>=kappa_0+m+q` and `sigma>=kappa_z+m+q`. Two distinct halves share
+  at most eight nonzero block types, but a direct pair can share three, so
+  the stronger bound-one shortcut is false and the scalar bounds leave room.
+  This does not settle the even moments, nonfixed cells, or residual (ii); see
+  `NOTE_2026-09-03_MOBIUS_FIXED_WORD_ATOM_COUPLING.md`.
+
   The corrected all-active support budget is
   `kappa>=t_max-t+1` for `|U|=m(p-1)-2 kappa`; the deliberately disjoint
   lift is therefore extendable nowhere on the ray. Two halves cancel at most
@@ -2036,6 +2052,8 @@ Lemma D is complete and is no longer on the work list.
 | `src/e1_gmin_m4_symmetric_quota_cardinality_barrier.py`, `tests/test_symmetric_quota_cardinality_barrier.py`, `evidence/NOTE_2026-09-03_SYMMETRIC_QUOTA_CARDINALITY_BARRIER.md` | Exact no-go for deriving prescribed Boolean-slice existence from punctured surjectivity plus scalar direction quotas alone |
 | `src/e1_gmin_m4_mobius_parallel_parity_endpoint.py`, `tests/test_mobius_parallel_parity_endpoint.py`, `evidence/NOTE_2026-09-03_MOBIUS_PARALLEL_PARITY_ENDPOINT.md` | All-prime balanced branch-C parallel-parity strengthening of the Mobius cancellation floor and exact `j=0,1` endpoint exclusions |
 | `src/e1_gmin_m4_mobius_endpoint_barrier.py`, `tests/test_mobius_endpoint_barrier.py`, `evidence/NOTE_2026-09-03_MOBIUS_ENDPOINT_BARRIER.md` | Exact clean two-half overlap locus, unforced centre-coherence barrier, and singleton compact counterexample to the two-silent-group shortcut |
+| `src/e1_gmin_m4_adaptive_mobius_pairing.py`, `tests/test_adaptive_mobius_pairing.py`, `evidence/NOTE_2026-09-03_ADAPTIVE_MOBIUS_PAIRING.md` | All-centre complementary target matching, forced auxiliary map, and exact open paired-SDR/common-ratio gate |
+| `src/e1_gmin_m4_mobius_fixed_word_atom_coupling.py`, `tests/test_mobius_fixed_word_atom_coupling.py`, `evidence/NOTE_2026-09-03_MOBIUS_FIXED_WORD_ATOM_COUPLING.md` | Exact target-sensitive fixed-word atom syndrome, collision lower bounds, conic pair-intersection bound, and bound-one counterexample |
 | `evidence/NOTE_2026-09-03_CROSS_RECTANGLE_FOURIER_STABILITY.md` | Exact cross-rectangle Fourier stability, analytic/Gram rigidity, Gram-perfect obstruction family, and the still-open statewise diagonal-payment gate; not multiplier-two closure |
 | `evidence/e1_gmin_m4_prop15749.json` | Hash-pinned output for the 522 admissible rows, 492 moment triples, and 12-point intersection |
 | `evidence/e1_gmin_m4_prop15751.json`, `evidence/e1_gmin_m4_prop15752.json` | Deterministic theorem records for the fourth-shell and higher-band influence closures |

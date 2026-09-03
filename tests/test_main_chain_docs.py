@@ -466,6 +466,8 @@ def test_fixed_elimination_halved_code_and_rigid_overlap_are_canonical():
         "NOTE_2026-09-03_SYMMETRIC_QUOTA_CARDINALITY_BARRIER.md",
         "NOTE_2026-09-03_MOBIUS_PARALLEL_PARITY_ENDPOINT.md",
         "NOTE_2026-09-03_MOBIUS_ENDPOINT_BARRIER.md",
+        "NOTE_2026-09-03_ADAPTIVE_MOBIUS_PAIRING.md",
+        "NOTE_2026-09-03_MOBIUS_FIXED_WORD_ATOM_COUPLING.md",
     )
     for name in integrated:
         text = texts[name]

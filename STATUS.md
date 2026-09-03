@@ -663,6 +663,25 @@ warnings, not endpoint closure. See
 `evidence/NOTE_2026-09-03_MOBIUS_ENDPOINT_BARRIER.md`; replay
 with `PYTHONPATH=src:. python -m pytest -q -n 0 tests/test_mobius_endpoint_barrier.py`.
 
+The fixed-family centre warning has now been sharpened positively without
+closing the endpoint. For every branch prime `p=4r+3>=31`, every opposite
+fixed direction, and arbitrary nonzero hard centres, one can choose the
+fixed-edge magnitude, singleton signs, and a perfect matching of hard targets
+so that every complementary parameter is nonsquare. The forced auxiliary
+directions still have to form the prescribed `m`-set (`m-2` hard and two
+opposite). The exact paired-SDR equation has the necessary invariant
+`g_U^2=g_V^2` and common `(U-V)^2/g_U^2=c^2/4`; its existence is **OPEN**.
+See `evidence/NOTE_2026-09-03_ADAPTIVE_MOBIUS_PAIRING.md`.
+
+At the same `j=0` endpoint, the actual target triangles now give the exact
+fixed-word identity `a_Y+Phi(U)=e_x` iff `z=c_U+ell+s_x`. Their per-row
+capacities force `Lambda>=kappa_0+m+q` and the higher-overlap-safe bound
+`sigma>=kappa_z+m+q`. A pair of distinct Mobius halves shares at most eight
+nonzero block types, and an explicit p31 disjoint ternary pair shares three,
+so the proposed bound one is false. The scalar bounds retain positive room;
+even moments, nonfixed cells, `j=0`, and residual (ii) remain **OPEN**. See
+`evidence/NOTE_2026-09-03_MOBIUS_FIXED_WORD_ATOM_COUPLING.md`.
+
 For a proposed equal-square common block, prescribed centers now reduce
 exactly to a Hall problem with two slots per independent half. A subfamily
 whose two-point anchor sets have union at most `|P|-2` excludes both the

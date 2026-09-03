@@ -16711,6 +16711,80 @@ argument must couple the branch atom counts, signs, and quotas to the actual
 Möbius support. See
 `evidence/NOTE_2026-09-03_MOBIUS_ENDPOINT_BARRIER.md`.
 
+The adaptive part of the centre problem can in fact be solved uniformly.
+Normalize a prospective singleton line by \(0\ne x_0\in\ker F\), put
+
+\[
+ X_i=L_i/j_i,\qquad \alpha_i=X_i(x_0),\qquad x=cx_0.
+\]
+
+For singleton signs \(\epsilon_i,\epsilon_k\), the exact complementary-pair
+equations give
+
+\[
+ \rho={2\epsilon_i\over c\alpha_k-2\epsilon_k},\qquad
+ \nu={4\epsilon_i\epsilon_k\over
+ (c\alpha_i-2\epsilon_i)(c\alpha_k-2\epsilon_k)}.       \tag{E.29e}
+\]
+
+Colour a valid signed endpoint by
+\(\eta(\epsilon(c\alpha-2\epsilon))\). Exactly \(m\) of the \(p-1\)
+nonzero evaluations are monochrome. Averaging over \(c\) therefore gives a
+scale with at most \(m/2\) monochrome targets; the graph obtained by deleting
+the two monochrome cliques has an explicit perfect matching. Choosing
+opposite colours on its edges makes every \(\nu\) in (E.29e) nonsquare. Thus
+arbitrary nonzero hard centres admit a centre-coherent **target matching**.
+
+This is not the endpoint construction. In the affine chart of directions
+other than \(F\), a target pair \((i,k)\) forces the auxiliary coordinates
+
+\[
+ U={w_kz_i+(w_i-c)z_k\over w_i+w_k-c},\qquad
+ V={(w_k-c)z_i+w_iz_k\over w_i+w_k-c},\qquad
+ w_i={2\epsilon_i\over\alpha_i}.                         \tag{E.29f}
+\]
+
+All outputs must be distinct and equal the prescribed set containing
+\(m-2\) hard and two opposite directions. Equivalently, for a bijection
+\(\sigma:H\to A\), an involution \(\tau\), and the cross-assignment
+\(\phi(\sigma(\tau i))=i\), put
+\(g_V=\alpha_{\phi(V)}(V-z_{\phi(V)})\). Every auxiliary pair must obey
+
+\[
+ g_U^2=g_V^2,\qquad {(U-V)^2\over g_U^2}={c^2\over4}.     \tag{E.29g}
+\]
+
+No prescribed-set paired SDR satisfying (E.29g) is proved. See
+`evidence/NOTE_2026-09-03_ADAPTIVE_MOBIUS_PAIRING.md`.
+
+There is also now an exact target-sensitive fixed-word criterion. Let
+\(c_U(D,\beta)\) be the parity of surviving nonzero-\(\Phi\) orbits over the
+affine block \((D,\beta)\), let \(\ell\) be the hard literal word, let
+\(s_x\) be the singleton word, and let \(z\) record which target triangles
+contain an antipodal label pair. Orthogonality of the affine-block incidence
+matrix gives
+
+\[
+ M^{\mathsf T}a_Y=\ell+z,\qquad
+ a_Y+\Phi(U)=e_{[x]}\Longleftrightarrow z=c_U+\ell+s_x.  \tag{E.29h}
+\]
+
+For the central fixed-word/odd-moment layer, existentially over atom labels
+with the prescribed compact/all-equal counts, the row condition is exactly
+\[
+ |c_U(D,\cdot)+\ell_D+s_{x,D}|\le n_D,qquad
+ |c_U(D,\cdot)+\ell_D+s_{x,D}|\equiv n_D\pmod2.          \tag{E.29i}
+\]
+It forces \(\Lambda\ge\kappa_0+m+q\); separating zero-\(\Phi\)
+cancellations gives the higher-overlap-safe
+\(\sigma\ge\kappa_z+m+q\). One half has distinct nonzero block types, and
+two distinct halves share at most eight; an explicit disjoint ternary pair
+over \(\mathbf F_{31}\) shares three, disproving the proposed bound one.
+The valid scalar bounds retain positive room. Equations (E.29h)--(E.29i)
+do not solve even moments, nonfixed target cells, the endpoint, or residual
+(ii). See
+`evidence/NOTE_2026-09-03_MOBIUS_FIXED_WORD_ATOM_COUPLING.md`.
+
 Second, fixed-word parity survives every ternary cancellation at \(p=31\).
 Each of the sixteen halves has one zero-\(\Phi\) occurrence and 29
 nonzero-\(\Phi\) occurrences.  If \(\kappa_0,\kappa_1\) count cancellation

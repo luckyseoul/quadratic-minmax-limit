@@ -277,6 +277,25 @@ system has clean one-overlap solutions, and `K(v,-v;0)` is an actual compact
 common-moment source whose singleton fixed word has exactly one silent group.
 Frozen barrier: `evidence/NOTE_2026-09-03_MOBIUS_ENDPOINT_BARRIER.md`.
 
+Do not reopen centre coherence as a pairwise matching question. The adaptive
+theorem now handles arbitrary nonzero centres by choosing the singleton
+magnitude and signs, then perfectly matching all hard targets with nonsquare
+complement parameters. What remains is the strictly stronger prescribed-set
+factorization: the forced two-point outputs must be distinct and equal the
+quota set. Its exact equation and necessary paired-square/common-ratio
+invariant are frozen in
+`evidence/NOTE_2026-09-03_ADAPTIVE_MOBIUS_PAIRING.md`. Do not retry a product,
+discriminant, or square-polynomial shortcut: even `g^2` fibre multiplicities
+do not impose the one common chord ratio.
+
+Do not retry an uncoupled fixed-word Hamming count or a one-block-per-half-pair
+claim. The exact atom equation is `z=c_U+ell+s_x`; it forces the collision
+surplus recorded in
+`evidence/NOTE_2026-09-03_MOBIUS_FIXED_WORD_ATOM_COUPLING.md`. The valid
+universal pair-intersection bound is eight, and an explicit pair shares three.
+The resulting scalar inequalities have positive room, so the live target is
+the global Mobius block intersection coupled to even/nonfixed coordinates.
+
 For an equal-square common block, reuse the exact anchor/free-slot Hall
 formulation. Anchor deficiency two excludes both saturated incidence
 profiles. The displayed `p=31` prescribed-center witness proves this for one

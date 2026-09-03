@@ -449,6 +449,26 @@
   coherence nor a two-silent-group lemma follows from the current target
   layer. See `evidence/NOTE_2026-09-03_MOBIUS_ENDPOINT_BARRIER.md`; replay
   with `PYTHONPATH=src:. python -m pytest -q -n 0 tests/test_mobius_endpoint_barrier.py`.
+- Adaptive centre coherence is now proved at the target-pair level for every
+  `p=4r+3>=31`: arbitrary nonzero hard centres admit a fixed-edge magnitude,
+  singleton signs, and a perfect matching with every complement parameter
+  nonsquare. This is not the required paired SDR. The two auxiliaries of each
+  pair are forced, and no theorem makes all `m` outputs distinct with exactly
+  `m-2` hard and two opposite types. The exact prescribed-set equation and
+  its necessary common-ratio invariant `g_U^2=g_V^2`,
+  `(U-V)^2/g_U^2=c^2/4` are frozen in
+  `evidence/NOTE_2026-09-03_ADAPTIVE_MOBIUS_PAIRING.md`; replay with
+  `PYTHONPATH=src:. python -m pytest -q -n 0 tests/test_adaptive_mobius_pairing.py`.
+- The branch-C atoms are now coupled to the actual Mobius support at the
+  fixed-word layer: `a_Y+Phi(U)=e_x` iff `z=c_U+ell+s_x`. Per-direction atom
+  capacities force `Lambda>=kappa_0+m+q` and
+  `sigma>=kappa_z+m+q`, including arbitrary higher overlaps. Distinct halves
+  share at most eight nonzero block types, while a direct p31 disjoint
+  ternary pair shares three; therefore a bound-one shortcut is false and the
+  surviving scalar bounds do not close `j=0`. Even moments, nonfixed target
+  cells, and the global Mobius intersection remain open. See
+  `evidence/NOTE_2026-09-03_MOBIUS_FIXED_WORD_ATOM_COUPLING.md`; replay with
+  `PYTHONPATH=src:. python -m pytest -q -n 0 tests/test_mobius_fixed_word_atom_coupling.py`.
 - At `p=31`, cancellation parity is now fully audited. The 16 halves start
   with 16 zero-`Phi` and 464 nonzero-`Phi` occurrences; ternarity preserves
   the even parity of each count through arbitrary overlaps. Hence

@@ -576,6 +576,33 @@ counts, signs, and quotas to the actual Mobius support and divided Boolean
 fibre. See
 `NOTE_2026-09-03_MOBIUS_ENDPOINT_BARRIER.md`.
 
+The adaptive centre question is now partly solved, but do not promote it to
+an endpoint construction. For every branch prime `p=4r+3>=31`, every chosen
+opposite fixed direction, and every list of nonzero hard centres, a common
+fixed-edge magnitude and singleton signs give a perfect matching of the hard
+targets with nonsquare complementary parameters. Each matched target pair
+nevertheless forces its two auxiliary directions. The unresolved condition
+is that all `m` forced directions be distinct and equal the prescribed set
+of `m-2` hard and two opposite directions. In affine coordinates this is the
+exact bijection equation recorded in
+`NOTE_2026-09-03_ADAPTIVE_MOBIUS_PAIRING.md`; its necessary paired invariant
+is `g_U^2=g_V^2` and `(U-V)^2/g_U^2=c^2/4` with one common ratio. Do not
+confuse the proved target matching with this paired SDR. Even multiplicities
+of the `g^2` values, equivalently a square fibre polynomial, are not enough:
+the abstract set `{0,1,2,4}` with constant `g^2` has no common chord ratio.
+
+The actual target atoms now give a second exact gate. At `j=0`,
+`a_Y+Phi(U)=e_x` is equivalent to `z=c_U+ell+s_x`, and a direction with
+`n_D` target triangles is feasible at the central fixed-word/odd-moment layer
+exactly when the required row has weight at most `n_D` with the same parity.
+Consequently `Lambda>=kappa_0+m+q` and, after separating zero-`Phi`
+cancellations, `sigma>=kappa_z+m+q`. Two distinct halves share at most eight
+nonzero `Phi` block types; an explicit disjoint ternary pair shares three, so
+the tempting bound one is false. The scalar bounds leave positive room.
+The live task is the global intersection of all Mobius block curves together
+with the even moments and nonfixed target cells; see
+`NOTE_2026-09-03_MOBIUS_FIXED_WORD_ATOM_COUPLING.md`.
+
 The construction budget also applies across the whole all-active ray. If
 `|U|=m(p-1)-2 kappa`, then `kappa>=t_max-t+1` is necessary. The disjoint
 lift is therefore never extendable there. Two halves cancel at most two
