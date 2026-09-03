@@ -16494,9 +16494,9 @@ then (w) is a disjoint sum of the already excluded rectangles (E.24).
 Otherwise, containment ({\rm supp}(w)\subseteq U) forces some full affine
 midpoint block (B_{K,\alpha}) over one common (C) to be met by all
 (h+1) Möbius halves, with at least (h) halves supplying two midpoint
-classes.  This is a nearly saturated cover condition, not yet a
-contradiction; other low-weight dual words are not yet classified, and the
-remaining low-weight dual problem has been reduced to that all-halves cover.
+classes.  This is the nearly saturated cover condition isolated before the
+row-code gap theorem below.  That theorem now excludes it for every actual
+Hamming-extendable branch-C puncture; it is no longer an open linear gate.
 
 There is also an exact local integer kernel.  On a fixed difference slice
 ([\delta]), every kernel vector has
@@ -16555,15 +16555,14 @@ one-dimensional branch inequality
               {\rm wt}(x)+{\rm wt}(M^{\mathsf T}x)\ge p+1.     \tag{E.29}
 \]
 
-Points and affine blocks attain equality.  Equation (E.29) does not sum in
-the form needed for the matrix in (E.28), so it does not prove the conjecture
-\(d_{\rm row}(D)=ph\).  That equality and its minimum-word classification
-remain open.  Moreover, \({\bf1}\otimes e_\delta\) and the scalar graphs
+Points and affine blocks attain equality.  Equation (E.29) alone does not
+sum in the form needed for the matrix in (E.28).  Moreover,
+\({\bf1}\otimes e_\delta\) and the scalar graphs
 \(\{([a],[\delta]):[a]=[c\delta]\}\) are nonrectangle row words of weight
 \(|\Delta|\).  Hence a rectangles-only classification through
 \(|\Delta|\) is false.
 
-There is a precise conditional reduction for the missing lower bound.  Write
+The sharper group-support inequality is now proved for every odd prime.  Write
 a row-code word in the grouped form
 \[
  W=\sum_{A,j}c_{A,j}\otimes b_{A,j},\qquad
@@ -16574,16 +16573,27 @@ where the common \({\bf1}\)-coefficients come from the unique block
 expansion of \(q\), and let \(k\) be the number of nonempty \(S_A\).
 Each \(S_A\) is a union of cells in the partition consisting of the radial
 line of size \(h\) and the \(h\) affine blocks of size \(p\) in direction
-\(A\). Suppose the following
-group-support inequality, which is presently open, holds for every nonzero
-point word \(f\):
+\(A\).  Every nonzero point word \(f\) satisfies
 
 \[
  {\rm wt}(f)+
  \#\{A:(M^{\mathsf T}f)|_{B_A}\ne0\}\ge p+1.                    \tag{E.29a}
 \]
 
-Then \({\rm wt}(W)\ge ph\).  Indeed, unless one \(S_A=\Delta\), distinct
+For odd support this follows from radial-fibre parity.  For even support
+\(s=2n\), choose distinct antipodal representatives \(v_i\) and form
+\[
+ P_u(X)=\prod_{i=1}^{2n}(X-u(v_i)^2).
+\]
+The unique monic degree-\(n\) top-half square root leaves homogeneous
+remainders of degree at most \(2s\), at least one nonzero because the factors
+of \(P_u\) are distinct in \(\mathbf F_p[U,V,X]\).  At every silent
+projective direction the roots pair, so every remainder has a double zero.
+Equivalently, the canonical remainder vanishes to order at least two there.
+Projective root counting gives \(2z\le2s\) for the number \(z\) of silent
+directions, proving (E.29a).
+
+It follows that \({\rm wt}(W)\ge ph\).  Indeed, unless one \(S_A=\Delta\), distinct
 nonempty \(S_A,S_B\) have
 \(|S_A\mathbin\triangle S_B|\ge2h\), whence
 \[
@@ -16595,20 +16605,61 @@ least \(\max(1,d-b_a)\), while
 \(D\le k\,{\rm wt}(W)\) and hence
 \({\rm wt}(W)\ge h(d-1)=ph\).  If some \(S_A=\Delta\), every row is nonzero
 and the stronger bound \({\rm wt}(W)\ge|\Delta|>ph\) follows.  The
-implication is proved; its group-support hypothesis is not, so no
-minimum-distance theorem is claimed.
+fixed-transverse rectangles attain \(ph\), hence
+\[
+                         \boxed{d_{\rm row}(D)=ph}.          \tag{E.29b}
+\]
 
-For \(p=31\), the hypothesis in (E.29a) is now established on a strict but
-nontrivial initial range. Radial-fibre parity proves it for every odd
-support size. Exact normalized signature certificates prove it for even
-\(s=2,4,6,8,10\). At \(s=6\), all equal 45-bit triple-signature pairs are
-checked. At \(s=8\) and \(s=10\), triply transitive normalization followed
-by the anharmonic action leaves four exhaustive generic fourth-direction
-orbits, represented by \(3,4,5,12\); cycle-space meet-in-the-middle and
-scalar-orbit hashing find at most \(s\) silent directions in every case.
-These are finite \(p=31\) certificates. The first unclosed even size is
-\(s=12\), so (E.29a), \(d_{\rm row}(D)=ph\), residual (ii), and the original
-limit remain open.
+The same counting gives a sharp gap.  If \(k\ge2\) supports are active and
+none is full, put \(R=\bigcup_AS_A\),
+\(b_a=|\{A:a\in S_A\}|\), and
+\(G=\sum_{a\in R}(k-b_a)\).  Pairwise symmetric differences give
+\[
+ \sum_{A<B}|S_A\mathbin\triangle S_B|
+ =\sum_{a\in R}b_a(k-b_a)\ge hk(k-1),\qquad G\ge hk.
+\]
+For \(k<d\), (E.29a) yields
+\[
+ {\rm wt}(W)\ge\sum_{a\in R}(d-b_a)
+ =(d-k)|R|+G\ge dh=|\Delta|.
+\]
+For \(k=d\), let \(r=|\{a:b_a=d\}|\).  Then (E.29a) gives
+\[
+ {\rm wt}(W)\ge\sum_{b_a<d}(d-b_a)+r,
+\]
+whereas the pair count is at most
+\((d-1)\sum_{b_a<d}(d-b_a)\); hence again
+\({\rm wt}(W)\ge dh+r\).  A full support makes every row nonzero and gives
+the same bound directly.  If \(k=1\), a word below \(|\Delta|\) forces
+\(S_A\) to be the radial \(h\)-cell and its nonzero \(B_A\)-coefficient to
+be one affine \(p\)-block.  Thus the minimum words are exactly the
+fixed-transverse rectangles and there is no weight strictly between \(ph\)
+and \(|\Delta|\).
+
+Consequently every puncture below \(ph\) is harmless.  If only
+\(q\le h\) hard centres are nonzero, only those \(q\) localized halves are
+needed and \(|U|\le q(p-1)<ph\).  In the all-active case, a support capable
+of passing (E.27) has \(|U|\le|H|<|\Delta|\), while the Möbius midpoint
+bound forbids containment of a minimum rectangle.  Therefore the actual
+structured \(D_U\) is onto throughout the balanced zero-odd branch-C
+regime, for zero-centre and all-active cases alike.  This
+closes the divided **mod-two** gate, not (E.20): its prescribed Hamming
+weight, every exact direction slice (E.21), and the integral zero-one
+equations remain open.  See
+`evidence/NOTE_2026-09-03_GROUPED_UNCERTAINTY_SQUARE.md` and
+`evidence/NOTE_2026-09-03_SYMMETRIC_HALVED_ROW_CODE_GAP.md`.
+
+There is also a sharp warning against treating onto plus the scalar quota
+bounds as a rounding theorem.  With
+\(N=|\Delta|=2h(h+1)\) and
+\(\operatorname {rank}D=R=2h(h+1)^2\), any branch-C quota slice of total
+weight \(s\le(N-1)/2\) has fewer than \(2^{h(N-1)}<2^{R-d}\) points.
+An onto map has exactly \(2^{R-d}\) syndromes over one fixed parallel-parity
+vector, so some compatible syndromes with the same feasible quotas have no
+binary preimage.  This does not obstruct the actual
+\(\widehat T_U\); it proves that the actual transverse target, beyond
+surjectivity and (E.21), is indispensable.  See
+`evidence/NOTE_2026-09-03_SYMMETRIC_QUOTA_CARDINALITY_BARRIER.md`.
 
 Second, fixed-word parity survives every ternary cancellation at \(p=31\).
 Each of the sixteen halves has one zero-\(\Phi\) occurrence and 29
@@ -16716,8 +16767,11 @@ with `evidence/NOTE_2026-09-03_INVERSION_SYMMETRIC_LATTICE.md`,
 `evidence/NOTE_2026-09-03_SYMMETRIC_UNUSED_SLICE_EXCHANGE.md`, and
 `evidence/NOTE_2026-09-03_MOBIUS_HALF_INTERSECTIONS.md`, together with
 `evidence/NOTE_2026-09-03_SYMMETRIC_HALVED_ROW_CODE.md`,
-`evidence/NOTE_2026-09-03_PRESCRIBED_CENTER_COMMON_BLOCK.md`, and
-`evidence/NOTE_2026-09-03_RIGID_PAIR_FIXED_WORD.md`. Replay with
+`evidence/NOTE_2026-09-03_PRESCRIBED_CENTER_COMMON_BLOCK.md`,
+`evidence/NOTE_2026-09-03_RIGID_PAIR_FIXED_WORD.md`,
+`evidence/NOTE_2026-09-03_GROUPED_UNCERTAINTY_SQUARE.md`,
+`evidence/NOTE_2026-09-03_SYMMETRIC_HALVED_ROW_CODE_GAP.md`, and
+`evidence/NOTE_2026-09-03_SYMMETRIC_QUOTA_CARDINALITY_BARRIER.md`. Replay with
 
 ```bash
 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. \
@@ -16739,6 +16793,9 @@ PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. \
   tests/test_symmetric_halved_row_code.py \
   tests/test_prescribed_center_common_block.py \
   tests/test_rigid_pair_fixed_word.py \
+  tests/test_grouped_uncertainty_square.py \
+  tests/test_symmetric_halved_row_code_gap.py \
+  tests/test_symmetric_quota_cardinality_barrier.py \
   tests/test_main_chain_docs.py
 ```
 

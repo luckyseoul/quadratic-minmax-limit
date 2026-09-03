@@ -406,11 +406,12 @@
 - Arbitrary `|Delta|`-puncture robustness is false: the rectangle
   `X_(L,beta)={L(a)=0,L(delta)^2=beta}` has weight `p h=|Delta|-h` and its
   deletion drops rank. The actual union of `(p+1)/2` Mobius halves meets this
-  rectangle in at most `p+1`, but other low-weight dual words are not
-  classified. Block-parity projection now reduces every hypothetical
-  contained word outside the all-rectangle case to an affine midpoint block
-  over one common difference block covered by all `h+1` halves, at least
-  `h` of them twice. That nearly saturated all-halves cover remains open.
+  rectangle in at most `p+1`. Grouped uncertainty now proves that these are
+  exactly the minimum words and that no row-code weight lies in
+  `(p h,|Delta|)`. Any Hamming-extendable actual branch-C support has
+  `|U|<=|H|<|Delta|`, so the structured punctured map is onto throughout the
+  balanced zero-odd branch-C regime. This is only mod-two surjectivity; the
+  exact Hamming and direction-sliced integral Boolean fibre remains open.
   The one-difference-slice integer kernel is exactly
   `A_(h-1)`, with whole-`p`-slab exchanges; this is local connectivity only.
 - The corrected all-active capacity demand is
@@ -442,20 +443,19 @@
 - The exact row-code normal form is
   `Row(D)=(<1> tensor F_2^Delta) direct_sum direct_sum_A(B_A tensor B_A)`,
   or `1 q^T+T` with `T` direction-block-diagonal after the `M` basis change.
-  The proved one-dimensional branch number is `p+1`. It does **not** prove
-  the open claim `d_row(D)=p h`; minimum-word and through-`|Delta|`
-  classifications remain open, and weight-`|Delta|` vertical/scalar words
-  already disprove the rectangles-only version.
-  A sharper implication is conditional: the group-support inequality
-  `wt(f)+#{A:(M^T f)|_(B_A)!=0}>=p+1` for every nonzero point word would
-  imply `d_row(D)>=p h` by active-direction symmetric-difference counting.
-  The implication is proved; its group-support premise remains OPEN.
-  At `p=31`, the odd-support premise is now proved symbolically and the even
-  sizes `s=2,4,6,8,10` are closed exactly. The frozen MITM/cycle-hash
-  certificates attain at most `z=s` silent directions at `s=6,8,10`; the
-  four generic cross-ratio representatives `3,4,5,12` are exhaustive for
-  `s=8,10`. The first unclosed even support is `s=12`. This finite ladder
-  does not prove the full premise, the row-code distance, or residual (ii).
+  A canonical square-root remainder proves the group-support inequality
+  `wt(f)+#{A:(M^T f)|_(B_A)!=0}>=p+1` for every nonzero point word and every
+  odd prime. Hence `d_row(D)=p h`; the minimum words are exactly the
+  fixed-transverse rectangles, and no row-code weight lies in
+  `(p h,|Delta|)`. Weight-`|Delta|` vertical/scalar words still disprove the
+  rectangles-only claim at the endpoint. The former finite `p=31`
+  `s=2,4,6,8,10` ladder is superseded, not a remaining target. Frozen notes:
+  `evidence/NOTE_2026-09-03_GROUPED_UNCERTAINTY_SQUARE.md` and
+  `evidence/NOTE_2026-09-03_SYMMETRIC_HALVED_ROW_CODE_GAP.md`.
+  A cardinality theorem rules out any generic implication from onto plus
+  feasible direction quotas to Boolean existence; use the actual transverse
+  target. See
+  `evidence/NOTE_2026-09-03_SYMMETRIC_QUOTA_CARDINALITY_BARRIER.md`.
 - The prescribed-center common-block problem has an exact equal-square Hall
   formulation. Deficiency two in an anchor subfamily excludes the fully
   doubled and one-single profiles; the checked `p=31` list does this for one
@@ -475,7 +475,7 @@
   coordinated across directions, and the coupled symmetric pair-total box.
   Residual (ii), E1, and `L` remain OPEN.
 - Focused replay:
-  `PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -q tests/test_prop15757.py tests/test_prop15758.py tests/test_prop15759.py tests/test_prop15760.py tests/test_prop15761.py tests/test_compact_ray_moment_gate.py tests/test_conic_odd_radon.py tests/test_p31_equi_zero68_mitm.py tests/test_signed_boolean_defect.py tests/test_ridge_kernel.py tests/test_equianharmonic_component_packing.py tests/test_hard_compact_odd_radon.py tests/test_hard_star_antisymmetric_support.py tests/test_inversion_antisymmetric_radon.py tests/test_equianharmonic_threshold_even_barrier.py tests/test_inversion_symmetric_lattice.py tests/test_mobius_half_symmetric.py tests/test_all_active_pencil_support.py tests/test_symmetric_fixed_edge_elimination.py tests/test_symmetric_halved_mod2.py tests/test_symmetric_halved_mobius_cover.py tests/test_symmetric_slice_exchange.py tests/test_mobius_half_intersections.py tests/test_symmetric_halved_row_code.py tests/test_prescribed_center_common_block.py tests/test_rigid_pair_fixed_word.py tests/test_main_chain_docs.py`.
+  `PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -q tests/test_prop15757.py tests/test_prop15758.py tests/test_prop15759.py tests/test_prop15760.py tests/test_prop15761.py tests/test_compact_ray_moment_gate.py tests/test_conic_odd_radon.py tests/test_p31_equi_zero68_mitm.py tests/test_signed_boolean_defect.py tests/test_ridge_kernel.py tests/test_equianharmonic_component_packing.py tests/test_hard_compact_odd_radon.py tests/test_hard_star_antisymmetric_support.py tests/test_inversion_antisymmetric_radon.py tests/test_equianharmonic_threshold_even_barrier.py tests/test_inversion_symmetric_lattice.py tests/test_mobius_half_symmetric.py tests/test_all_active_pencil_support.py tests/test_symmetric_fixed_edge_elimination.py tests/test_symmetric_halved_mod2.py tests/test_symmetric_halved_mobius_cover.py tests/test_symmetric_slice_exchange.py tests/test_mobius_half_intersections.py tests/test_symmetric_halved_row_code.py tests/test_prescribed_center_common_block.py tests/test_rigid_pair_fixed_word.py tests/test_grouped_uncertainty_square.py tests/test_symmetric_halved_row_code_gap.py tests/test_symmetric_quota_cardinality_barrier.py tests/test_main_chain_docs.py`.
   Residual (ii), E1, `L=1/2`, and the original MO limit remain OPEN.
   The compact-ray file independently passes 22 focused tests. Its exact
   theorem implementation and evidence are

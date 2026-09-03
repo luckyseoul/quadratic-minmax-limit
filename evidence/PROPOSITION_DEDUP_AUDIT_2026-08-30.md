@@ -195,19 +195,19 @@ The forced support word is also exact: `Phi(a,[delta])=0` for
 `a||delta`, and otherwise it is the `p`-point antipodal affine block
 `{[delta+c a]}`. The block matrix obeys `M M^T=M^T M=I`, and its
 `p`-column `C`-kernel lifts prove the full unpunctured halved code
-`D=(C,Phi)` surjective, of rank `d h(h+1)`. This retires unrestricted
-halved-parity and hidden-Smith searches. It does **not** settle the code
-punctured by the actual support `U`.
+`D=(C,Phi)` surjective, of rank `d h(h+1)`. The all-prime grouped theorem
+and row-code gap also settle the actual structured mod-two puncture in the
+balanced zero-odd branch-C regime. Do not rerun hidden-Smith, finite grouped,
+or structured-puncture rank searches.
 
 Do not assume arbitrary puncture robustness: deleting
 `X_(L,beta)={L(a)=0,L(delta)^2=beta}`, with
 `|X|=p h=|Delta|-h`, drops rank. The midpoint profile of a Mobius union
 excludes this displayed rectangle for `p>=7`. Block-parity projections now
-reduce every remaining hypothetical contained dual word to a full affine
-midpoint block over one common difference block covered by all `h+1` halves,
-at least `h` of them twice; the all-origin alternative is exactly a disjoint
-sum of the excluded rectangles. The nonduplicative next linear task is to
-prove that nearly saturated all-halves cover impossible or construct it. The exact
+give way to the all-prime gap theorem: `d_row(D)=p h`, every minimum word
+is such a rectangle, and no weight occurs in `(p h,|Delta|)`. Every
+Hamming-extendable actual `U` satisfies `|U|<|Delta|`, so the structured
+puncture is onto. The exact
 one-difference-slice `A_(h-1)` slab
 kernel is only a local exchange theorem; do not infer global normality or
 Boolean existence.
@@ -242,26 +242,25 @@ rigid pair has the exact weight
 even fixed-cell coefficients. The literal-only Hamming argument is retracted.
 Different rigid pairings can also have different source-`Phi` weights.
 
-The halved row-code normal form and the branch number are settled:
+The halved row-code normal form and the all-prime gap are settled:
 `Row(D)=(<1> tensor F_2^Delta) direct_sum direct_sum_A(B_A tensor B_A)` and
-`wt(x)+wt(M^T x)>=p+1`. Do not promote the latter one-dimensional inequality
-to `d_row(D)=p h`; that distance and its equality classification remain
-OPEN. Vertical fibres and scalar graphs are exact nonrectangle words of
-weight `|Delta|`, so the claim that every word through that threshold is a
-fixed-transverse rectangle is false.
-The conditional group-support route is now isolated: if every nonzero `f`
-obeys `wt(f)+#{A:(M^T f)|_(B_A)!=0}>=p+1`, active-direction
-symmetric-difference counting proves every row-code word in the normal form
-has weight at least `p h`. The implication is proved, but the group-support
-inequality is OPEN. Do not cite the ordinary branch number, the conditional implication,
-or heuristic equality witnesses as a proof of `d_row(D)=p h`.
-At `p=31`, reuse the exact low-support progress rather than rerunning it:
-odd support is proved by radial parity, and even support
-`s=2,4,6,8,10` is closed. The replay artifacts are
-`p31_group_branch_mitm_s6_exact.json`,
-`p31_group_branch_cycle_mitm_s8_exact.json`, and
-`p31_group_branch_cycle_hash_s10_exact.json`. This does not cover even
-`s>=12` and must not be promoted to the full grouped inequality.
+`wt(x)+wt(M^T x)>=p+1`. The canonical square-root remainder separately
+proves the group-support inequality
+`wt(f)+#{A:(M^T f)|_(B_A)!=0}>=p+1` for every nonzero `f`.
+Together with active-direction symmetric-difference counting this gives
+`d_row(D)=p h`, exactly the fixed-transverse minimum words, and no weights in
+`(p h,|Delta|)`. Vertical fibres and scalar graphs are exact nonrectangle
+words at `|Delta|`, so the endpoint is not rectangles-only. The former
+`p=31,s=2,4,6,8,10` certificates are historical checks superseded by the
+all-prime theorem; do not rerun them.
+Frozen proofs are
+`evidence/NOTE_2026-09-03_GROUPED_UNCERTAINTY_SQUARE.md`,
+`evidence/NOTE_2026-09-03_SYMMETRIC_HALVED_ROW_CODE_GAP.md`, and
+`evidence/NOTE_2026-09-03_SYMMETRIC_QUOTA_CARDINALITY_BARRIER.md`.
+Onto plus scalar direction quotas is also permanently insufficient as a
+generic existence argument: the exact quota-slice cardinality is smaller
+than the number of fixed-parity syndromes. Any continuation must use the
+actual transverse target, not only rank, Hamming weight, and capacities.
 
 For an equal-square common block, reuse the exact anchor/free-slot Hall
 formulation. Anchor deficiency two excludes both saturated incidence
@@ -283,7 +282,7 @@ pair-total box remains after the Mobius lift. No common simple graph has been
 constructed. Residual (ii), E1, and the limit remain open.
 
 Focused replay of the post-15.761 records:
-`PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -q tests/test_compact_ray_moment_gate.py tests/test_conic_odd_radon.py tests/test_p31_equi_zero68_mitm.py tests/test_signed_boolean_defect.py tests/test_ridge_kernel.py tests/test_equianharmonic_component_packing.py tests/test_hard_compact_odd_radon.py tests/test_hard_star_antisymmetric_support.py tests/test_inversion_antisymmetric_radon.py tests/test_equianharmonic_threshold_even_barrier.py tests/test_inversion_symmetric_lattice.py tests/test_mobius_half_symmetric.py tests/test_all_active_pencil_support.py tests/test_symmetric_fixed_edge_elimination.py tests/test_symmetric_halved_mod2.py tests/test_symmetric_halved_mobius_cover.py tests/test_symmetric_slice_exchange.py tests/test_mobius_half_intersections.py tests/test_symmetric_halved_row_code.py tests/test_prescribed_center_common_block.py tests/test_rigid_pair_fixed_word.py tests/test_main_chain_docs.py`.
+`PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -q tests/test_compact_ray_moment_gate.py tests/test_conic_odd_radon.py tests/test_p31_equi_zero68_mitm.py tests/test_signed_boolean_defect.py tests/test_ridge_kernel.py tests/test_equianharmonic_component_packing.py tests/test_hard_compact_odd_radon.py tests/test_hard_star_antisymmetric_support.py tests/test_inversion_antisymmetric_radon.py tests/test_equianharmonic_threshold_even_barrier.py tests/test_inversion_symmetric_lattice.py tests/test_mobius_half_symmetric.py tests/test_all_active_pencil_support.py tests/test_symmetric_fixed_edge_elimination.py tests/test_symmetric_halved_mod2.py tests/test_symmetric_halved_mobius_cover.py tests/test_symmetric_slice_exchange.py tests/test_mobius_half_intersections.py tests/test_symmetric_halved_row_code.py tests/test_prescribed_center_common_block.py tests/test_rigid_pair_fixed_word.py tests/test_grouped_uncertainty_square.py tests/test_symmetric_halved_row_code_gap.py tests/test_symmetric_quota_cardinality_barrier.py tests/test_main_chain_docs.py`.
 Residual (ii), E1, `L=1/2`, and the original MO limit remain OPEN.
 
 ### Propositions 15.755--15.756: full-cube spikes and D-only Weil are settled reductions

@@ -434,7 +434,7 @@ def test_fixed_elimination_halved_code_and_rigid_overlap_are_canonical():
         assert "q=r=1/2" in text, name
         assert "t_max-t+1" in text or "t_{\\max}-t+1" in text, name
         assert "punctur" in text.lower(), name
-        assert "all-halves" in text, name
+        assert "row-code gap" in text or "minimum words" in text, name
         assert "remain OPEN" in flat, name
         for note in notes:
             assert note in text, (name, note)
@@ -445,8 +445,9 @@ def test_fixed_elimination_halved_code_and_rigid_overlap_are_canonical():
     assert "MM^{\\mathsf T}=M^{\\mathsf T}M=I" in solution
     assert "\\operatorname {rank}D=dh(h+1)" in solution
     assert "X_{L,\\beta}" in solution
-    assert "other low-weight dual words are not yet classified" in solution_flat
-    assert "nearly saturated cover condition" in solution_flat
+    assert "\\boxed{d_{\\rm row}(D)=ph}" in solution
+    assert "there is no weight strictly between" in solution_flat
+    assert "structured \\(D_U\\) is onto" in solution
     assert "no free parameter for a greedy multi-pair construction" in solution_flat
     assert "Pairwise overlap counts alone control neither test" in solution_flat
 
@@ -460,6 +461,9 @@ def test_fixed_elimination_halved_code_and_rigid_overlap_are_canonical():
         "NOTE_2026-09-03_SYMMETRIC_HALVED_ROW_CODE.md",
         "NOTE_2026-09-03_PRESCRIBED_CENTER_COMMON_BLOCK.md",
         "NOTE_2026-09-03_RIGID_PAIR_FIXED_WORD.md",
+        "NOTE_2026-09-03_GROUPED_UNCERTAINTY_SQUARE.md",
+        "NOTE_2026-09-03_SYMMETRIC_HALVED_ROW_CODE_GAP.md",
+        "NOTE_2026-09-03_SYMMETRIC_QUOTA_CARDINALITY_BARRIER.md",
     )
     for name in integrated:
         text = texts[name]
@@ -472,7 +476,8 @@ def test_fixed_elimination_halved_code_and_rigid_overlap_are_canonical():
         for note in new_notes:
             assert note in text, (name, note)
 
-    assert "The implication is proved; its group-support hypothesis is not" in solution_flat
+    assert "canonical remainder vanishes to order at least two" in solution_flat
+    assert "actual transverse target" in solution_flat
     assert "conditional rigidity, not existence" in solution_flat
     assert "a saturated equal-square common-block incidence cover" in solution_flat
 
@@ -561,8 +566,8 @@ def test_denseness_package_does_not_soft_close_the_theorem():
     assert "Historical remarks “\\(L\\) OPEN”" not in package
 
 
-def test_docs_track_exact_p31_group_support_ladder_without_overclaim():
-    """The finite ladder must stay visible without becoming a global close."""
+def test_docs_track_all_prime_group_support_without_closing_residual():
+    """The all-prime theorem must supersede the finite ladder but not residual."""
     from pathlib import Path
 
     root = Path(__file__).resolve().parents[1]
@@ -573,8 +578,15 @@ def test_docs_track_exact_p31_group_support_ladder_without_overclaim():
         encoding="utf-8"
     )
     for text in (status, handoff, dedup):
-        assert "s=2,4,6,8,10" in text
-    assert "first unclosed even support is `s=12`" in handoff
-    assert "first unclosed even size is" in solution
-    assert "s=12" in solution
+        flat = " ".join(text.split())
+        assert "group-support" in text
+        assert "d_row(D)=p h" in text
+        assert "minimum words" in text
+        assert "superseded" in text
+        assert "prescribed" in flat and "Boolean" in text
+    assert "canonical remainder vanishes to order at least two" in " ".join(
+        solution.split()
+    )
+    assert "\\boxed{d_{\\rm row}(D)=ph}" in solution
+    assert "SYMMETRIC_HALVED_ROW_CODE_GAP" in solution
     assert "residual (ii)" in solution

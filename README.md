@@ -527,16 +527,23 @@ not represented as computational predicates.
   `p`-column `C`-kernel lifts. Hence the full unpunctured halved map
   `D=(C,Phi)` is onto with rank `d h(h+1)`.
 
-  The actual puncture is still decisive. Deleting the rectangle
+  Arbitrary punctures are still delicate. Deleting the rectangle
   `X_(L,beta)={L(a)=0,L(delta)^2=beta}`, of size `p h=|Delta|-h`, drops
-  rank, so arbitrary `|Delta|`-puncture robustness is false. A Mobius union
-  cannot contain that particular rectangle for `p>=7`. Block-parity
-  projections reduce every other hypothetical contained dual word to a full
-  affine midpoint block over one common difference block covered by all
-  `h+1` halves, at least `h` of them twice. Whether that nearly saturated
-  all-halves cover exists is open. The one-difference-slice kernel is the
-  local `A_(h-1)` whole-slab exchange lattice, not a global normality or
-  existence theorem.
+  rank. A canonical square-root remainder now proves grouped uncertainty for
+  every odd prime. Consequently `d_row(D)=p h`, the minimum words are exactly
+  these fixed-transverse rectangles, and there is no weight in
+  `(p h,|Delta|)`. A Hamming-extendable actual branch-C puncture has
+  `|U|<|Delta|` and cannot contain a rectangle, so its halved map is onto.
+  This closes the structured mod-two gate, not the prescribed-weight,
+  direction-sliced integral Boolean fibre. See
+  `NOTE_2026-09-03_GROUPED_UNCERTAINTY_SQUARE.md` and
+  `NOTE_2026-09-03_SYMMETRIC_HALVED_ROW_CODE_GAP.md` in `evidence/`.
+  The one-difference-slice kernel remains the local `A_(h-1)` slab
+  exchange lattice; it does not solve that integral fibre.
+  A separate exact cardinality barrier shows that surjectivity plus feasible
+  scalar direction quotas cannot guarantee a Boolean lift; the actual
+  transverse target is essential. See
+  `NOTE_2026-09-03_SYMMETRIC_QUOTA_CARDINALITY_BARRIER.md`.
 
   The corrected all-active support budget is
   `kappa>=t_max-t+1` for `|U|=m(p-1)-2 kappa`; the deliberately disjoint
@@ -2006,6 +2013,9 @@ Lemma D is complete and is no longer on the work list.
 | `evidence/p31_equianharmonic_zero68_mitm.cpp`, `evidence/p31_equianharmonic_zero68_mitm_manifest.json`, `src/e1_gmin_m4_p31_equi_zero68_mitm.py`, `tests/test_p31_equi_zero68_mitm.py`, `evidence/NOTE_2026-09-03_P31_EQUIANHARMONIC_ZERO68_MITM.md` | Independent exact MITM certificate proving the finite `p=31,b=7,k=11` constant-conic zero-six/eight fiber `UNSAT` |
 | `src/e1_gmin_m4_signed_boolean_defect.py`, `tests/test_signed_boolean_defect.py`, `evidence/NOTE_2026-09-03_EDGE_RADON_SIGNED_BOOLEAN_DEFECT.md` | Exact integral quadratic defect, complete-Graver optimality criterion, and fractional-box separation; a reduction, not a Boolean lift |
 | `src/e1_gmin_m4_ridge_kernel.py`, `tests/test_ridge_kernel.py`, `evidence/NOTE_2026-09-03_EDGE_RADON_RIDGE_KERNEL.md` | Type-P/Type-K kernel circuits, exact one-step p-saturation quotient, full-fiber parametrization, and necessary ridge descent inequalities |
+| `src/e1_gmin_m4_grouped_uncertainty_square.py`, `tests/test_grouped_uncertainty_square.py`, `evidence/NOTE_2026-09-03_GROUPED_UNCERTAINTY_SQUARE.md` | Canonical square-root-remainder proof of grouped uncertainty for every support and every odd prime |
+| `src/e1_gmin_m4_symmetric_halved_row_code_gap.py`, `tests/test_symmetric_halved_row_code_gap.py`, `evidence/NOTE_2026-09-03_SYMMETRIC_HALVED_ROW_CODE_GAP.md` | Exact `d_row(D)=p h`, fixed-transverse minimum-word classification, empty interval to `|Delta|`, and full structured branch-C mod-two puncture close |
+| `src/e1_gmin_m4_symmetric_quota_cardinality_barrier.py`, `tests/test_symmetric_quota_cardinality_barrier.py`, `evidence/NOTE_2026-09-03_SYMMETRIC_QUOTA_CARDINALITY_BARRIER.md` | Exact no-go for deriving prescribed Boolean-slice existence from punctured surjectivity plus scalar direction quotas alone |
 | `evidence/NOTE_2026-09-03_CROSS_RECTANGLE_FOURIER_STABILITY.md` | Exact cross-rectangle Fourier stability, analytic/Gram rigidity, Gram-perfect obstruction family, and the still-open statewise diagonal-payment gate; not multiplier-two closure |
 | `evidence/e1_gmin_m4_prop15749.json` | Hash-pinned output for the 522 admissible rows, 492 moment triples, and 12-point intersection |
 | `evidence/e1_gmin_m4_prop15751.json`, `evidence/e1_gmin_m4_prop15752.json` | Deterministic theorem records for the fourth-shell and higher-band influence closures |

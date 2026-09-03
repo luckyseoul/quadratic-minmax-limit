@@ -527,23 +527,29 @@ For a used orbit `(a,[delta])`, the forced-word change is `Phi=0` for
 `{[delta+c a]}`. These blocks satisfy `M M^T=M^T M=I` over `F_2` and have
 `p`-column lifts in `ker C`; hence the full unpunctured halved map
 `D=(C,Phi)` is onto with rank `d h(h+1)`. Do not retry unrestricted halved
-parity. The live linear problem is the map punctured by the **actual**
-ternary support `U`: it is onto iff `U` contains no support of a nonzero
-word in `Row(D)`, while a particular target needs only the exact left-kernel
-pairings.
+parity or the actual structured puncture: the grouped-uncertainty square
+theorem and row-code gap now prove the latter onto throughout the balanced
+zero-odd branch-C regime. Frozen proofs:
+`NOTE_2026-09-03_GROUPED_UNCERTAINTY_SQUARE.md` and
+`NOTE_2026-09-03_SYMMETRIC_HALVED_ROW_CODE_GAP.md` under `evidence/`.
 
 Universal robustness for `|U|<=|Delta|` is false. Deleting
 `X_(L,beta)={L(a)=0,L(delta)^2=beta}`, of size `p h=|Delta|-h`, drops rank.
-The Mobius midpoint theorem excludes containment of this one rectangle for
-`p>=7`. The block-parity projection theorem now shows that every other
-hypothetical contained word forces a full affine midpoint block over one
-common difference block to be covered by all `h+1` halves, at least `h` of
-them twice; the all-origin-cell case is exactly a disjoint sum of the
-excluded rectangles. Proving this nearly saturated all-halves cover
-impossible, or constructing it, is the next exact linear target. The
-one-difference-slice kernel is only the
+The all-prime group-support theorem proves `d_row(D)=p h`, classifies these
+rectangles as all minimum words, and gives an empty weight interval
+`p h<wt<|Delta|`. Since every Hamming-extendable actual branch-C `U` has
+`|U|<|Delta|` and the Mobius midpoint theorem excludes rectangle containment,
+the structured puncture is onto. The live target is now the **integral**
+zero-one equation with its prescribed Hamming and direction weights, not
+another mod-two rank or all-halves-cover calculation. The one-difference-slice kernel is only the
 local `A_(h-1)` whole-slab exchange lattice; do not promote local
 connectivity to normality or existence.
+
+Do not infer the Boolean lift from onto plus the scalar quota bounds. The
+exact cardinality comparison in
+`NOTE_2026-09-03_SYMMETRIC_QUOTA_CARDINALITY_BARRIER.md` proves that
+some compatible syndromes with identical feasible quotas have no preimage;
+the next argument must use the actual transverse target.
 
 The construction budget also applies across the whole all-active ray. If
 `|U|=m(p-1)-2 kappa`, then `kappa>=t_max-t+1` is necessary. The disjoint

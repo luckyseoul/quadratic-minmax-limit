@@ -567,19 +567,19 @@ After puncturing by `U`, however, surjectivity is equivalent to no nonzero
 word of `Row(D)` being supported inside `U`; target membership requires the
 corresponding left-kernel pairings to vanish.
 
-Arbitrary small-puncture robustness is false. The fixed-transverse rectangle
+Arbitrary puncture robustness through `|Delta|` is false. The fixed-transverse rectangle
 `X_(L,beta)={([a],[delta]):L(a)=0,L(delta)^2=beta}` has weight
 `p h=|Delta|-h`, and deleting it drops rank. A union of `(p+1)/2` localized
 Mobius halves meets this particular rectangle in at most `p+1`, so cannot
-contain it for `p>=7`; other low-weight dual words remain unclassified.
-Projecting any hypothetical contained dual word over a non-origin difference
-block `C=B_(K,beta)` gives a union of the midpoint cells `A_K` and
-`B_(K,alpha)`, and these projections determine the word. The all-`A_K` case
-is exactly a disjoint sum of the excluded rectangles. Every remaining case
-forces some affine `B_(K,alpha)` over one common `C` to be covered by all
-`h+1` Mobius halves, at least `h` of them twice. This nearly saturated
-all-halves cover is the exact remaining linear obstruction; its impossibility
-is not proved.
+contain it for `p>=7`. The all-prime grouped-uncertainty theorem now proves
+`d_row(D)=p h`, classifies every minimum word as one of these rectangles,
+and proves that no row-code weight lies strictly between `p h` and
+`|Delta|`. Hence every puncture below `p h` is onto. More strongly, every
+branch-C support which can pass the necessary Hamming bound has
+`|U|<=|H|<|Delta|`; since it cannot contain a minimum rectangle, its
+punctured halved map is onto. This closes the actual structured **mod-two**
+puncture gate throughout the balanced zero-odd branch-C regime, not the
+prescribed-weight, direction-sliced integral Boolean fibre.
 Within one fixed difference slice the exact integer kernel is `A_(h-1)` on
 the nonzero square slabs. Its primitive moves exchange two complete
 `p`-column slabs and preserve every direction weight. This gives local
@@ -621,30 +621,22 @@ The full halved row code has the exact normal form
 `Row(D)=(<1> tensor F_2^Delta) direct_sum direct_sum_A(B_A tensor B_A)`;
 after the `M` basis change its words are `1 q^T+T` with `T`
 direction-block-diagonal. The affine-block transform has exact branch number
-`p+1`, namely `wt(x)+wt(M^T x)>=p+1`. This is a proved reduction, not the
-needed two-dimensional distance theorem: `d_row(D)=p h`, classification of
-its minimum words, and the classification through weight `|Delta|` remain
-OPEN. Vertical fibres and scalar graphs give nonrectangle words of weight
+`p+1`, namely `wt(x)+wt(M^T x)>=p+1`. A new canonical square-root remainder
+proves the stronger group-support inequality
+`wt(f)+#{A:(M^T f)|_(B_A)!=0}>=p+1` for every nonzero `f` and every odd
+prime. Active-direction symmetric-difference counting then proves
+`d_row(D)=p h`; its equality case shows that the minimum words are exactly
+the fixed-transverse rectangles, with no weights in `(p h,|Delta|)`.
+Vertical fibres and scalar graphs remain exact nonrectangle words of weight
 `|Delta|`, so a rectangles-only classification at that threshold is false.
-There is a proved conditional reduction: if every nonzero point word `f`
-satisfies the still-OPEN group-support inequality
-`wt(f)+#{A:(M^T f)|_(B_A)!=0}>=p+1`, then every row-code word in the
-boundary-plus-block-diagonal normal form has weight at least `p h`. The
-implication follows from symmetric-difference counting among its active
-direction supports; the displayed hypothesis has
-not been proved and must not be reported as a distance theorem.
-
-There is now a genuine finite advance on that premise at `p=31`. The
-odd-support branch satisfies the group-support inequality symbolically, by
-radial-fibre parity (equivalently the homogeneous detecting-form gcd). The
-even support sizes `s=2,4,6,8,10` are also closed exactly. The `s=6`
-triple-signature MITM checks all normalized six-sets; the `s=8` and `s=10`
-cycle-space/hash certificates use the complete generic cross-ratio orbit
-set `lambda in {3,4,5,12}`. Their respective maximum silent-direction
-counts are `6`, `8`, and `10`, whereas counterexamples require `7`, `9`,
-and `11`. This is an exact low-support `p=31` ladder, not the full grouped
-inequality: even `s>=12`, the row-code distance, residual (ii), E1, and the
-original limit remain OPEN.
+The former `p=31,s=2,4,6,8,10` ladder is superseded as a live gate and must
+not be rerun. Frozen proofs are
+`evidence/NOTE_2026-09-03_GROUPED_UNCERTAINTY_SQUARE.md` and
+`evidence/NOTE_2026-09-03_SYMMETRIC_HALVED_ROW_CODE_GAP.md`.
+An exact cardinality barrier also proves that onto plus feasible scalar
+direction quotas cannot guarantee the prescribed Boolean lift: the actual
+transverse target must be used. See
+`evidence/NOTE_2026-09-03_SYMMETRIC_QUOTA_CARDINALITY_BARRIER.md`.
 
 For a proposed equal-square common block, prescribed centers now reduce
 exactly to a Hall problem with two slots per independent half. A subfamily
@@ -684,7 +676,7 @@ global forms. Residual (ii), E1,
 `L=1/2`, and the original MO limit remain **OPEN**.
 
 Focused replay:
-`PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -q tests/test_compact_ray_moment_gate.py tests/test_conic_odd_radon.py tests/test_p31_equi_zero68_mitm.py tests/test_signed_boolean_defect.py tests/test_ridge_kernel.py tests/test_equianharmonic_component_packing.py tests/test_hard_compact_odd_radon.py tests/test_hard_star_antisymmetric_support.py tests/test_inversion_antisymmetric_radon.py tests/test_equianharmonic_threshold_even_barrier.py tests/test_inversion_symmetric_lattice.py tests/test_mobius_half_symmetric.py tests/test_all_active_pencil_support.py tests/test_symmetric_fixed_edge_elimination.py tests/test_symmetric_halved_mod2.py tests/test_symmetric_halved_mobius_cover.py tests/test_symmetric_slice_exchange.py tests/test_mobius_half_intersections.py tests/test_symmetric_halved_row_code.py tests/test_prescribed_center_common_block.py tests/test_rigid_pair_fixed_word.py tests/test_main_chain_docs.py`.
+`PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -q tests/test_compact_ray_moment_gate.py tests/test_conic_odd_radon.py tests/test_p31_equi_zero68_mitm.py tests/test_signed_boolean_defect.py tests/test_ridge_kernel.py tests/test_equianharmonic_component_packing.py tests/test_hard_compact_odd_radon.py tests/test_hard_star_antisymmetric_support.py tests/test_inversion_antisymmetric_radon.py tests/test_equianharmonic_threshold_even_barrier.py tests/test_inversion_symmetric_lattice.py tests/test_mobius_half_symmetric.py tests/test_all_active_pencil_support.py tests/test_symmetric_fixed_edge_elimination.py tests/test_symmetric_halved_mod2.py tests/test_symmetric_halved_mobius_cover.py tests/test_symmetric_slice_exchange.py tests/test_mobius_half_intersections.py tests/test_symmetric_halved_row_code.py tests/test_prescribed_center_common_block.py tests/test_rigid_pair_fixed_word.py tests/test_grouped_uncertainty_square.py tests/test_symmetric_halved_row_code_gap.py tests/test_symmetric_quota_cardinality_barrier.py tests/test_main_chain_docs.py`.
 Residual (ii), E1, `L=1/2`, and the original MO limit remain OPEN.
 
 **15.754 CLOSES the last `p=13,k=60` residue `u=6`.**  Exact row-sum and
