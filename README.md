@@ -586,25 +586,37 @@ The earlier route audit and supporting certificates are recorded in
 The proposition-by-proposition route inventory and permanent de-duplication
 blacklist are in `evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md`.
 
-## Expected solution architecture
+## Current research architecture and open gates
 
-![Parametric CAD model of the expected proof architecture](evidence/share/expected-solution-structure.png)
+![Conceptual render of the current two-route proof architecture](evidence/share/expected-solution-architecture.png)
 
-This is a deterministic CAD map of the proof architecture, not a claim that
-the limiting object is literally spherical:
+This is a conceptual research map, not a theorem certificate and not a claim
+that the limiting object is literally spherical:
 
-- the **blue hemisphere** is the historical spectral/QVAR--R1 front, now
-  bypassed by Proposition 15.720;
-- the **gold hemisphere** is the finite-incidence, conic, and secant structure
-  of the non-Walsh front;
-- the **white great-circle seam** is the implication chain joining the fronts;
-- the **top notch** is the still-open residual-(ii) unit preventing closure;
-  Type I is closed by Proposition 15.750.
+- the two **incomplete exterior arcs** are the multiplier-two and
+  multiplier-three direct Dini-amplification gates; both remain open;
+- the split sphere is the stronger Paley `E(1)` route: the ghosted **blue
+  hemisphere** is the historical spectral/QVAR--R1 front bypassed by
+  Proposition 15.720, the active **gold hemisphere** is the finite-incidence
+  and edge--Radon front, and the **white seam** joins them;
+- the paired arcs locked across the middle and lower seam represent the exact
+  direction-localized Möbius construction closing the antisymmetric Boolean
+  half;
+- the lattice collar around the top aperture records the all-active pencil
+  theorem: for balanced branch C, zero odd forms, `p=4r+3>=31`, and every hard
+  center nonzero, the equality case `c=p-2` is impossible, hence `c>=p-1`;
+- the **black aperture remains open** for zero-hard-center cases and the
+  restricted symmetric Boolean fibre. No common simple graph is constructed;
+  residual (ii), `E(1)`, and `L=1/2` remain open.
 
-The editable model is available as
+The earlier deterministic CAD reference remains available as
+[`expected-solution-structure.png`](evidence/share/expected-solution-structure.png)
+and
 [`expected-solution-structure.step`](evidence/share/expected-solution-structure.step),
-and its parametric source is
+with parametric source
 [`render_expected_solution_cad.py`](scripts/render_expected_solution_cad.py).
+The conceptual render's exact generation brief is recorded in
+[`expected-solution-architecture.prompt.md`](evidence/share/expected-solution-architecture.prompt.md).
 
 Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 `four_e1_units_closed()` ledger is:
