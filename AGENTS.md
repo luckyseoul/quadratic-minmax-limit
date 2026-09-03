@@ -551,6 +551,16 @@ exact cardinality comparison in
 some compatible syndromes with identical feasible quotas have no preimage;
 the next argument must use the actual transverse target.
 
+For the balanced all-active branch-C Mobius ansatz, direction parity now
+strengthens the cancellation floor without a prime scan. Put
+`m=(p+1)/2`, `s=(t+1) mod (p+1)`, and
+`kappa=t_max-t+1+j`. Then `j>=2` for `5<=s<=m`, `j>=1` for
+`s in {4,m+1}`, and `j>=0` otherwise. Thus do not retry the bare `j=0`
+endpoint on `4<=s<=m+1`, or `j=1` on `5<=s<=m`; the latter is wholly
+excluded. This is a quota/fixed-edge obstruction, not the remaining
+transverse Boolean close. See
+`NOTE_2026-09-03_MOBIUS_PARALLEL_PARITY_ENDPOINT.md`.
+
 The construction budget also applies across the whole all-active ray. If
 `|U|=m(p-1)-2 kappa`, then `kappa>=t_max-t+1` is necessary. The disjoint
 lift is therefore never extendable there. Two halves cancel at most two

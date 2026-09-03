@@ -545,6 +545,13 @@ not represented as computational predicates.
   transverse target is essential. See
   `NOTE_2026-09-03_SYMMETRIC_QUOTA_CARDINALITY_BARRIER.md`.
 
+  Direction parity nevertheless strengthens the balanced all-active support
+  floor. If `kappa=t_max-t+1+j` and `s=(t+1) mod (p+1)`, then `j>=2` on
+  `5<=s<=m` and `j>=1` on `s in {4,m+1}`. This excludes the minimum and
+  next-minimum cancellation endpoints on the stated residue bands, while
+  leaving the actual transverse target open. See
+  `NOTE_2026-09-03_MOBIUS_PARALLEL_PARITY_ENDPOINT.md`.
+
   The corrected all-active support budget is
   `kappa>=t_max-t+1` for `|U|=m(p-1)-2 kappa`; the deliberately disjoint
   lift is therefore extendable nowhere on the ray. Two halves cancel at most
@@ -2016,6 +2023,7 @@ Lemma D is complete and is no longer on the work list.
 | `src/e1_gmin_m4_grouped_uncertainty_square.py`, `tests/test_grouped_uncertainty_square.py`, `evidence/NOTE_2026-09-03_GROUPED_UNCERTAINTY_SQUARE.md` | Canonical square-root-remainder proof of grouped uncertainty for every support and every odd prime |
 | `src/e1_gmin_m4_symmetric_halved_row_code_gap.py`, `tests/test_symmetric_halved_row_code_gap.py`, `evidence/NOTE_2026-09-03_SYMMETRIC_HALVED_ROW_CODE_GAP.md` | Exact `d_row(D)=p h`, fixed-transverse minimum-word classification, empty interval to `|Delta|`, and full structured branch-C mod-two puncture close |
 | `src/e1_gmin_m4_symmetric_quota_cardinality_barrier.py`, `tests/test_symmetric_quota_cardinality_barrier.py`, `evidence/NOTE_2026-09-03_SYMMETRIC_QUOTA_CARDINALITY_BARRIER.md` | Exact no-go for deriving prescribed Boolean-slice existence from punctured surjectivity plus scalar direction quotas alone |
+| `src/e1_gmin_m4_mobius_parallel_parity_endpoint.py`, `tests/test_mobius_parallel_parity_endpoint.py`, `evidence/NOTE_2026-09-03_MOBIUS_PARALLEL_PARITY_ENDPOINT.md` | All-prime balanced branch-C parallel-parity strengthening of the Mobius cancellation floor and exact `j=0,1` endpoint exclusions |
 | `evidence/NOTE_2026-09-03_CROSS_RECTANGLE_FOURIER_STABILITY.md` | Exact cross-rectangle Fourier stability, analytic/Gram rigidity, Gram-perfect obstruction family, and the still-open statewise diagonal-payment gate; not multiplier-two closure |
 | `evidence/e1_gmin_m4_prop15749.json` | Hash-pinned output for the 522 admissible rows, 492 moment triples, and 12-point intersection |
 | `evidence/e1_gmin_m4_prop15751.json`, `evidence/e1_gmin_m4_prop15752.json` | Deterministic theorem records for the fourth-shell and higher-band influence closures |

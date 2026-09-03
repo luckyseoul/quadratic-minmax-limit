@@ -16661,6 +16661,30 @@ binary preimage.  This does not obstruct the actual
 surjectivity and (E.21), is indispensable.  See
 `evidence/NOTE_2026-09-03_SYMMETRIC_QUOTA_CARDINALITY_BARRIER.md`.
 
+The actual balanced branch-C direction parities do sharpen the support
+floor. Put \(m=(p+1)/2\), \(s=(t+1)\bmod(p+1)\), and
+\(\kappa=t_{\max}-t+1+j\). A localized Mobius half in hard direction
+\(L_i\), with auxiliary \(M_i\), has parallel word
+\(e_{L_i}+e_{M_i}\pmod2\); arbitrary ternary cancellations change every
+direction count by an even integer. Comparing this word with the balanced
+hard and opposite quotas in (E.21) forces
+
+\[
+ j\ge
+ \begin{cases}
+  2,&5\le s\le m,\\
+  1,&s\in\{4,m+1\},\\
+  0,&\text{otherwise}.
+ \end{cases}                                               \tag{E.29c}
+\]
+
+Thus \(j=0\) is impossible for \(4\le s\le m+1\), and \(j=1\) is wholly
+impossible for \(5\le s\le m\). At \(s\in\{4,m+1\}\), \(j=1\) forces
+three fixed edges and no divided column. This parallel-parity theorem
+survives triple and higher overlaps, but only excludes these endpoint
+slices; it does not solve the remaining target equations. See
+`evidence/NOTE_2026-09-03_MOBIUS_PARALLEL_PARITY_ENDPOINT.md`.
+
 Second, fixed-word parity survives every ternary cancellation at \(p=31\).
 Each of the sixteen halves has one zero-\(\Phi\) occurrence and 29
 nonzero-\(\Phi\) occurrences.  If \(\kappa_0,\kappa_1\) count cancellation
@@ -16771,7 +16795,8 @@ with `evidence/NOTE_2026-09-03_INVERSION_SYMMETRIC_LATTICE.md`,
 `evidence/NOTE_2026-09-03_RIGID_PAIR_FIXED_WORD.md`,
 `evidence/NOTE_2026-09-03_GROUPED_UNCERTAINTY_SQUARE.md`,
 `evidence/NOTE_2026-09-03_SYMMETRIC_HALVED_ROW_CODE_GAP.md`, and
-`evidence/NOTE_2026-09-03_SYMMETRIC_QUOTA_CARDINALITY_BARRIER.md`. Replay with
+`evidence/NOTE_2026-09-03_SYMMETRIC_QUOTA_CARDINALITY_BARRIER.md`, together
+with `evidence/NOTE_2026-09-03_MOBIUS_PARALLEL_PARITY_ENDPOINT.md`. Replay with
 
 ```bash
 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. \
@@ -16796,6 +16821,7 @@ PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. \
   tests/test_grouped_uncertainty_square.py \
   tests/test_symmetric_halved_row_code_gap.py \
   tests/test_symmetric_quota_cardinality_barrier.py \
+  tests/test_mobius_parallel_parity_endpoint.py \
   tests/test_main_chain_docs.py
 ```
 

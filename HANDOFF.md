@@ -427,6 +427,15 @@
   `evidence/NOTE_2026-09-03_SYMMETRIC_HALVED_MOBIUS_COVER.md`,
   `evidence/NOTE_2026-09-03_SYMMETRIC_UNUSED_SLICE_EXCHANGE.md`, and
   `evidence/NOTE_2026-09-03_MOBIUS_HALF_INTERSECTIONS.md`.
+- On the balanced all-active ansatz this floor is now sharpened uniformly.
+  With `s=(t+1) mod (p+1)` and `kappa=t_max-t+1+j`, parallel parity forces
+  `j>=2` for `5<=s<=m`, `j>=1` for `s in {4,m+1}`, and `j>=0` otherwise.
+  Hence `j=0` is excluded on `4<=s<=m+1`, while `j=1` is fully excluded on
+  `5<=s<=m`; at `s in {4,m+1}`, `j=1` forces three fixed edges and no
+  divided column. This survives arbitrary higher overlaps but remains only
+  a necessary endpoint obstruction. See
+  `evidence/NOTE_2026-09-03_MOBIUS_PARALLEL_PARITY_ENDPOINT.md`; replay with
+  `PYTHONPATH=src:. python -m pytest -q -n 0 tests/test_mobius_parallel_parity_endpoint.py`.
 - At `p=31`, cancellation parity is now fully audited. The 16 halves start
   with 16 zero-`Phi` and 464 nonzero-`Phi` occurrences; ternarity preserves
   the even parity of each count through arbitrary overlaps. Hence

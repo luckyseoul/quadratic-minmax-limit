@@ -638,6 +638,17 @@ direction quotas cannot guarantee the prescribed Boolean lift: the actual
 transverse target must be used. See
 `evidence/NOTE_2026-09-03_SYMMETRIC_QUOTA_CARDINALITY_BARRIER.md`.
 
+The balanced all-active branch-C quotas nevertheless have a new exact
+parallel-parity consequence. With `m=(p+1)/2`,
+`s=(t+1) mod (p+1)`, and `kappa=t_max-t+1+j`, every localized-Mobius
+support satisfies `j>=2` for `5<=s<=m`, `j>=1` for
+`s in {4,m+1}`, and `j>=0` otherwise. Thus the bare `j=0` endpoint is
+excluded for `4<=s<=m+1`, and the `j=1` endpoint is wholly excluded for
+`5<=s<=m`. This is an all-prime endpoint obstruction, not a solution of the
+transverse fibre. See
+`evidence/NOTE_2026-09-03_MOBIUS_PARALLEL_PARITY_ENDPOINT.md`; replay with
+`PYTHONPATH=src:. python -m pytest -q -n 0 tests/test_mobius_parallel_parity_endpoint.py`.
+
 For a proposed equal-square common block, prescribed centers now reduce
 exactly to a Hall problem with two slots per independent half. A subfamily
 whose two-point anchor sets have union at most `|P|-2` excludes both the

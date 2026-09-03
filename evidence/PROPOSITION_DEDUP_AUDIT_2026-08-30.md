@@ -261,6 +261,12 @@ Onto plus scalar direction quotas is also permanently insufficient as a
 generic existence argument: the exact quota-slice cardinality is smaller
 than the number of fixed-parity syndromes. Any continuation must use the
 actual transverse target, not only rank, Hamming weight, and capacities.
+On the balanced all-active Mobius ansatz, however, do retain the exact
+parallel-parity floor: for `s=(t+1) mod (p+1)` and
+`kappa=t_max-t+1+j`, one has `j>=2` on `5<=s<=m` and `j>=1` on
+`s in {4,m+1}`. This excludes the corresponding `j=0,1` endpoints but is
+not a transverse lift or residual close. Frozen proof:
+`evidence/NOTE_2026-09-03_MOBIUS_PARALLEL_PARITY_ENDPOINT.md`.
 
 For an equal-square common block, reuse the exact anchor/free-slot Hall
 formulation. Anchor deficiency two excludes both saturated incidence
