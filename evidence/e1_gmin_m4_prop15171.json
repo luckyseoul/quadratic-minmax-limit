@@ -37,7 +37,7 @@
   },
   "open_residual": [
     "non-Walsh residual (ii), even k\u22654p",
-    "Type I multi-level Max\u2212 bad case"
+    "minimal four-gap path outside the historical E1 units"
   ],
   "F3": "E1/L only from type_I\u2227deep_k\u22653p_full\u2227bi-tight real predicates",
   "F13": "15.171+15.179 affine branch closed; 15.193 full residual (ii) open; residual/16N still open optional"

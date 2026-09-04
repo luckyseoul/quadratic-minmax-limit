@@ -1,4 +1,4 @@
-# Status (2026-09-03; through audited Proposition 15.762 and the post-15.761 geometry, conic, and Boolean reductions)
+# Status (2026-09-04; through audited Proposition 15.765 and the post-15.761 geometry, conic, and Boolean reductions)
 
 **The original question has been separated from the stronger Paley value
 program.**  MathOverflow 413935 asks for existence, not an identified value.
@@ -402,6 +402,44 @@ fixes the necessary sparse signed support at gap eight. The audited Paley,
 Peisert, PN, and OA-derived order-122 families all retain a Boolean
 eigenshell; no counterexample or common residual graph follows. Residual
 (ii), E1, `L=1/2`, and the original MO limit remain OPEN.
+
+**15.763 proves a signed affine-alias incidence refinement, not a residual
+close.** In Proposition 15.755's dangerous shared-maximizer setup, if the
+active defect-`2pr^2` point belongs to the odd-`r` affine alias family, keeping
+the exact signed H-score gives
+`|H|>=oddceil((pr^2+1)m(m-1)/(2r(m-r))-pr^2+2)`, where
+`m=(p+1)/2+r`. At `r=1` this is the odd integer `(p^2+11)/4`, strictly
+stronger than the parity-adjusted sign-discarded bound. Either an internal
+alias reaches deletion eigenshell level two, or the same formula holds with
+`pr^2+3`. This theorem does not classify nonaffine minimum-shell points or
+align coordinates across deletions. Residual (ii), E1, `L=1/2`, and the
+original MO limit remain OPEN.
+
+**15.764 proves the exact parity shell bridge in the first sharp size range,
+and exposes an earlier exhaustiveness gap.** For an all-deletions minimal
+four-gap set H, odd `|H|` has a deletion with `s_+=2` or `s_-=-2` iff H has a
+signed eigenshell row of score three. The frame mean and a level-five
+degree/anticommutator argument force such a deletion when odd `|H|<=5p`.
+The H-floor freezes the active edge on all critical rows, `-C` normalizes to
+the plus Paley phase by switching/permutation, and the deletion has
+`k>=3p+1`; hence every official residual-(ii) entry hypothesis is present.
+Even H has odd-cardinality deletions, so level two is parity-impossible; the
+remaining failure ranges begin at even `|H|>=4p+2` and odd `|H|>=5p+2`.
+A non-Paley affine-score model proves that the scalar identities alone do not
+close this bridge. No global predicate changes: residual (ii), E1, `L=1/2`,
+and the original MO limit remain OPEN.
+
+**15.765 refutes the proposed affine classification of the full first defect
+shell.** At `p=11`, an exact adaptation of the published Kiss--Somlai
+four-special-direction set gives a positive Paley intriguing set `D` of size
+77. The resulting integral conference eigenvector satisfies `Cy=11y` and has
+one coordinate equal to three; replacing it by one gives a Boolean point of
+defect `22=2p`. Four nonconstant parallel-class profiles prove that neither
+`D` nor its complement is a union of parallel affine lines. This is one
+nonaffine first-shell point, not a common all-deletions H. It therefore blocks
+the attempted universalization of Proposition 15.763 but supplies neither a
+residual counterexample nor a closure. Residual (ii), E1, `L=1/2`, and the
+original MO limit remain OPEN.
 
 The subsequent higher-moment audit first gives an all-prime structural
 theorem. For every prime `p=4r+3` with `r>=7`, an opposite row made from `b`
@@ -1325,8 +1363,10 @@ empty for every prime `p>=5`.** The proof uses
 `d_i+d_j = 2ps mod (p^2-1)/2`; the handshake identity finishes. This
 replaces the invalid 15.55/15.167 spectral implication. Global QVAR,
 principal R1, and the spectral floor are no longer acceptance gates. The sole
-remaining theorem gate in the four-unit E1 ledger is non-Walsh residual (ii),
-so `L` remains OPEN. The same congruence excludes bi-tight level 4, but not
+remaining theorem gate in the historical four-unit E1 ledger is non-Walsh
+residual (ii), but Proposition 15.764 exposes a separate minimal-four-gap
+implication bridge outside that ledger. Both remain false, so `L` remains
+OPEN. The same congruence excludes bi-tight level 4, but not
 one-sided tightness. Such covers actually exist (15.402); the known
 four-parallel-line family is harmless because 15.272/15.588 supplies a
 Max+ score at most zero. The level-4 issue left by 15.720 is specifically a

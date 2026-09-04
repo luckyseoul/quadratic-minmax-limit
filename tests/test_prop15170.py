@@ -123,7 +123,7 @@ def test_e1_stays_open_after_bounded_residual_i_split():
     assert e1_closed_general() is False
     opens = e1_open_residuals()
     assert any("k≥4p" in item for item in opens)
-    assert any("multi-level" in item for item in opens)
+    assert any("minimal four-gap" in item for item in opens)
     L = main_L_from_e1(True, True)
     assert L["L_closed"] is True
     bt = required_bitight_levels_empty_all_primes()

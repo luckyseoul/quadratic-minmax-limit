@@ -123,7 +123,7 @@ def test_residual_ii_affine_and_bounded_closed_full_open():
 
 
 def test_e1_and_L_wire_honest_open():
-    """E1/L open: residual (i) open (full residual (ii) closed by 15.237)."""
+    """E1/L stay open on large residual-(ii) and the 15.764 bridge."""
     assert type_I_k_3p_minus_2_closed_general() is True
     assert deep_s2_freeness_fail_even_k_le_4p_minus_2_ND_closed() is True
     assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is False
@@ -133,7 +133,7 @@ def test_e1_and_L_wire_honest_open():
     assert e1_closed_general() is False
     opens = e1_open_residuals()
     assert any("k≥4p" in item for item in opens)
-    assert any("multi-level" in item for item in opens)
+    assert any("minimal four-gap" in item for item in opens)
     w = main_L_from_e1(e1=False, bitight=True)
     assert w["L_closed"] is False
     assert w["L_status"] == "OPEN"

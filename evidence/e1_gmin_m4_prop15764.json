@@ -1,0 +1,413 @@
+{
+  "prop": "15.764",
+  "title": "Exact parity shell bridge for minimal four-gap sets",
+  "status": "PROVED PARTIAL BRIDGE AND METHOD BARRIER",
+  "exact_equivalence": {
+    "odd_H": {
+      "H_size": 5,
+      "H_parity": "odd",
+      "deletion_parity": "even",
+      "H_shell_floor": 3,
+      "deletion_shell_floor": 2,
+      "equivalence": "exists e,eps with m_eps(H\\{e})=2 iff exists eps,y with T_H^eps(y)=3",
+      "residual_ii_level_two_possible": true,
+      "proved": true
+    },
+    "even_H": {
+      "H_size": 4,
+      "H_parity": "even",
+      "deletion_parity": "odd",
+      "H_shell_floor": 2,
+      "deletion_shell_floor": 1,
+      "equivalence": "exists e,eps with m_eps(H\\{e})<=2 iff exists eps,y with T_H^eps(y)=2; the deletion level is 1",
+      "residual_ii_level_two_possible": false,
+      "proved": true
+    }
+  },
+  "phase_normalization": {
+    "field": "F_(p^2)",
+    "multiplier": "a nonsquare a",
+    "finite_entry_effect": "chi(a*(x-y))=-chi(x-y)",
+    "infinity_switch": "D_infinity=-1 and D_x=+1 for finite x",
+    "identity": "-C=D*P^T*C*P*D",
+    "preserves": [
+      "switching norm",
+      "edge-set cardinality",
+      "deletion incidence"
+    ],
+    "minus_shell_becomes_plus_shell": true,
+    "proved": true
+  },
+  "official_unit_entry": {
+    "odd_H_residual_ii": {
+      "H_parity": "odd",
+      "G_parity": "even",
+      "critical_H_score": 3,
+      "critical_G_score": 2,
+      "active_edge_sign_on_every_G_level_two_row": 1,
+      "both_phase_G_shell_floor": 2,
+      "minus_to_plus_normalization": true,
+      "raw_frame_size_floor": 15,
+      "bi_tight_level_three_excluded": true,
+      "sharp_H_size_floor": 17,
+      "sharp_G_size_floor": 16,
+      "official_class": "residual (ii): even k, s_plus=2, freeness-fail",
+      "official_entry_proved": true
+    },
+    "even_H_type_I": {
+      "H_parity": "even",
+      "G_parity": "odd",
+      "critical_H_score": 2,
+      "critical_G_score": 1,
+      "active_edge_sign_on_every_G_level_one_row": 1,
+      "both_phase_G_shell_floor": 1,
+      "minus_to_plus_normalization": true,
+      "raw_frame_size_floor": 10,
+      "bi_tight_level_two_excluded": true,
+      "sharp_H_size_floor": 12,
+      "sharp_G_size_floor": 11,
+      "official_class": "Type I: odd k, s_plus=1, freeness-fail alignment",
+      "official_entry_proved": true
+    }
+  },
+  "proved_sufficient_range": "|H| odd and |H|<=5p",
+  "level_five_boundary": {
+    "p5": {
+      "p": 5,
+      "n": 26,
+      "H_size": 25,
+      "degree_sum": 50,
+      "modulus": 12,
+      "common_residues": [
+        1,
+        7
+      ],
+      "viable_common_residues": [
+        1
+      ],
+      "profiles_as_counts_degree_25_13_1": [
+        [
+          0,
+          2,
+          24
+        ],
+        [
+          1,
+          0,
+          25
+        ]
+      ],
+      "profiles": [
+        "full_star",
+        "balanced_double_star"
+      ],
+      "arithmetic_empty": false
+    },
+    "p7": {
+      "p": 7,
+      "n": 50,
+      "H_size": 35,
+      "degree_sum": 70,
+      "modulus": 24,
+      "common_residues": [
+        11,
+        23
+      ],
+      "minimum_degree": 11,
+      "minimum_possible_degree_sum": 550,
+      "arithmetic_empty": true
+    },
+    "tail_p11": {
+      "p": 11,
+      "n": 122,
+      "H_size": 55,
+      "degree_sum": 110,
+      "modulus": 60,
+      "modulus_exceeds_H_size": true,
+      "consequence": "all degrees equal",
+      "forced_regular_degree": "55/61",
+      "arithmetic_empty": true
+    },
+    "p5_anticommutator": {
+      "p": 5,
+      "degree_profile": "two degree-13 centres and twenty-four degree-1 leaves",
+      "centre_edge_forced": true,
+      "leaf_partition_sizes": [
+        12,
+        12
+      ],
+      "scheme_coordinates": {
+        "centres": "1/2",
+        "leaves": "0"
+      },
+      "leaf_leaf_equation": "(alpha_i*alpha_j-beta_i*beta_j)*(r_i+r_j)=0",
+      "row_orthogonality": "sum_i alpha_i*beta_i=0",
+      "forced_relation": "r_i=tau*alpha_i*beta_i",
+      "centre_leaf_equation_lhs": "-tau*c*alpha_j",
+      "centre_leaf_equation_rhs": "+tau*c*alpha_j",
+      "sign_audit": [
+        {
+          "tau": -1,
+          "c": -1,
+          "alpha_j": -1,
+          "lhs": 1,
+          "rhs": -1
+        },
+        {
+          "tau": -1,
+          "c": -1,
+          "alpha_j": 1,
+          "lhs": -1,
+          "rhs": 1
+        },
+        {
+          "tau": -1,
+          "c": 1,
+          "alpha_j": -1,
+          "lhs": -1,
+          "rhs": 1
+        },
+        {
+          "tau": -1,
+          "c": 1,
+          "alpha_j": 1,
+          "lhs": 1,
+          "rhs": -1
+        },
+        {
+          "tau": 1,
+          "c": -1,
+          "alpha_j": -1,
+          "lhs": -1,
+          "rhs": 1
+        },
+        {
+          "tau": 1,
+          "c": -1,
+          "alpha_j": 1,
+          "lhs": 1,
+          "rhs": -1
+        },
+        {
+          "tau": 1,
+          "c": 1,
+          "alpha_j": -1,
+          "lhs": 1,
+          "rhs": -1
+        },
+        {
+          "tau": 1,
+          "c": 1,
+          "alpha_j": 1,
+          "lhs": -1,
+          "rhs": 1
+        }
+      ],
+      "contradiction_for_all_signs": true,
+      "proved": true
+    },
+    "deeper_case_excluded_all_primes": true
+  },
+  "first_open_failure_sizes": {
+    "even_H": "|H|>=4p+2",
+    "odd_H": "|H|>=5p+2"
+  },
+  "abstract_method_barrier": {
+    "kind": "finite max-of-affine scalar/frame model",
+    "paley_realizable_claimed": false,
+    "p": 5,
+    "Phi": 65,
+    "H_size": 25,
+    "shell_rows": "all length-25 sign rows with exactly 15 plus and 10 minus",
+    "shell_coordinate_mean": "1/5",
+    "expected_frame_mean": "1/5",
+    "shell_H_score": 5,
+    "deletion_shell_scores": [
+      4,
+      6
+    ],
+    "deletion_shell_minimum": 4,
+    "spike_rows": [
+      {
+        "missing_size": 1,
+        "signed_H_sum": -23,
+        "defect": 50,
+        "base_score": 15,
+        "score_at_H": 61,
+        "score_at_H_minus_D": 63
+      },
+      {
+        "missing_size": 2,
+        "signed_H_sum": -21,
+        "defect": 46,
+        "base_score": 19,
+        "score_at_H": 61,
+        "score_at_H_minus_D": 65
+      },
+      {
+        "missing_size": 3,
+        "signed_H_sum": -19,
+        "defect": 42,
+        "base_score": 23,
+        "score_at_H": 61,
+        "score_at_H_minus_D": 67
+      }
+    ],
+    "H_model_norm": 61,
+    "one_deletion_model_norm": 63,
+    "proper_subset_witnesses": {
+      "1": {
+        "witness_kind": "own off-shell spike",
+        "witness_score": 63,
+        "strictly_above_Phi_minus_4": true
+      },
+      "2": {
+        "witness_kind": "own off-shell spike",
+        "witness_score": 65,
+        "strictly_above_Phi_minus_4": true
+      },
+      "3": {
+        "witness_kind": "own off-shell spike",
+        "witness_score": 67,
+        "strictly_above_Phi_minus_4": true
+      },
+      "4": {
+        "witness_kind": "fixed-sum shell row",
+        "witness_score": 63,
+        "strictly_above_Phi_minus_4": true
+      },
+      "5": {
+        "witness_kind": "fixed-sum shell row",
+        "witness_score": 65,
+        "strictly_above_Phi_minus_4": true
+      },
+      "6": {
+        "witness_kind": "fixed-sum shell row",
+        "witness_score": 67,
+        "strictly_above_Phi_minus_4": true
+      },
+      "7": {
+        "witness_kind": "fixed-sum shell row",
+        "witness_score": 69,
+        "strictly_above_Phi_minus_4": true
+      },
+      "8": {
+        "witness_kind": "fixed-sum shell row",
+        "witness_score": 71,
+        "strictly_above_Phi_minus_4": true
+      },
+      "9": {
+        "witness_kind": "fixed-sum shell row",
+        "witness_score": 73,
+        "strictly_above_Phi_minus_4": true
+      },
+      "10": {
+        "witness_kind": "fixed-sum shell row",
+        "witness_score": 75,
+        "strictly_above_Phi_minus_4": true
+      },
+      "11": {
+        "witness_kind": "fixed-sum shell row",
+        "witness_score": 77,
+        "strictly_above_Phi_minus_4": true
+      },
+      "12": {
+        "witness_kind": "fixed-sum shell row",
+        "witness_score": 79,
+        "strictly_above_Phi_minus_4": true
+      },
+      "13": {
+        "witness_kind": "fixed-sum shell row",
+        "witness_score": 81,
+        "strictly_above_Phi_minus_4": true
+      },
+      "14": {
+        "witness_kind": "fixed-sum shell row",
+        "witness_score": 83,
+        "strictly_above_Phi_minus_4": true
+      },
+      "15": {
+        "witness_kind": "fixed-sum shell row",
+        "witness_score": 85,
+        "strictly_above_Phi_minus_4": true
+      },
+      "16": {
+        "witness_kind": "fixed-sum shell row",
+        "witness_score": 83,
+        "strictly_above_Phi_minus_4": true
+      },
+      "17": {
+        "witness_kind": "fixed-sum shell row",
+        "witness_score": 81,
+        "strictly_above_Phi_minus_4": true
+      },
+      "18": {
+        "witness_kind": "fixed-sum shell row",
+        "witness_score": 79,
+        "strictly_above_Phi_minus_4": true
+      },
+      "19": {
+        "witness_kind": "fixed-sum shell row",
+        "witness_score": 77,
+        "strictly_above_Phi_minus_4": true
+      },
+      "20": {
+        "witness_kind": "fixed-sum shell row",
+        "witness_score": 75,
+        "strictly_above_Phi_minus_4": true
+      },
+      "21": {
+        "witness_kind": "fixed-sum shell row",
+        "witness_score": 73,
+        "strictly_above_Phi_minus_4": true
+      },
+      "22": {
+        "witness_kind": "fixed-sum shell row",
+        "witness_score": 71,
+        "strictly_above_Phi_minus_4": true
+      },
+      "23": {
+        "witness_kind": "fixed-sum shell row",
+        "witness_score": 69,
+        "strictly_above_Phi_minus_4": true
+      },
+      "24": {
+        "witness_kind": "fixed-sum shell row",
+        "witness_score": 67,
+        "strictly_above_Phi_minus_4": true
+      },
+      "25": {
+        "witness_kind": "fixed-sum shell row",
+        "witness_score": 65,
+        "strictly_above_Phi_minus_4": true
+      }
+    },
+    "H_inclusion_minimal_at_four_gap": true,
+    "all_deletions_two_gap": true,
+    "critical_shell_deletion_exists": false,
+    "method_barrier_proved": true
+  },
+  "proved": {
+    "parity_equivalence": true,
+    "odd_H_at_most_5p_bridge": true,
+    "even_H_bridge_to_residual_ii": false,
+    "large_odd_H_bridge": false,
+    "minimal_gap4_shell_bridge_closed_general": false,
+    "abstract_model_is_Paley_realizable": false,
+    "residual_ii_closed": false,
+    "e1_closed_general": false,
+    "L": false
+  },
+  "depends_on": [
+    "Proposition 15.42 signed frame identity",
+    "Propositions 15.272 and 15.207 kernel equals scheme+cross",
+    "Proposition 15.720 degree congruence"
+  ],
+  "not_claimed": [
+    "that every minimal four-gap H is odd",
+    "that every odd minimal four-gap H has size at most 5p",
+    "Paley realizability of the abstract score model",
+    "closure of residual (ii), E1, L=1/2, or the MathOverflow problem"
+  ],
+  "L_status": "OPEN"
+}

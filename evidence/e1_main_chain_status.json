@@ -8,13 +8,13 @@
   "E1_closed": false,
   "E1_open_residual": [
     "non-Walsh residual (ii), even k\u22654p",
-    "Type I multi-level Max\u2212 bad case"
+    "minimal four-gap path outside the historical E1 units"
   ],
   "E1_structure_15168": {
     "type_I_fail_k_2p_minus_1_ND": true,
     "type_I_historical_two_level_classes_closed": true,
-    "type_I_all_classes_closed": false,
-    "type_I_multilevel_bad_case_closed": false,
+    "type_I_all_classes_closed": true,
+    "type_I_multilevel_bad_case_closed": true,
     "deep_tight_empty": true,
     "deep_auto_freeness": true,
     "deep_all_ND_closed": false
@@ -34,13 +34,14 @@
     "four_e1_units": {
       "bitight_levels_2_3": true,
       "residual_ii_k_ge_4p": false,
-      "type_I_multilevel": false,
+      "type_I_multilevel": true,
       "lemma_D": true,
+      "minimal_gap4_shell_bridge": false,
       "closed": false
     },
     "gsum_disj_lb_proved_general": false,
     "scanned_props_15167_171": true,
     "scanned_denseness_package_full": true
   },
-  "rule": "Public writeup may assert L=1/2 only after the valid gates: bi-tight levels 2/3, residual_ii k\u22654p, multi-level Type I, Lemma D. QVAR/R1 and the spectral floor are no longer acceptance units. Live e1_closed_general agrees with these open gates. Soft-close banned (F3)."
+  "rule": "Public writeup may assert L=1/2 only after the valid gates: bi-tight levels 2/3, residual_ii k\u22654p, multi-level Type I, Lemma D, and the minimal-gap-four implication bridge. QVAR/R1 and the spectral floor are no longer acceptance units. Live e1_closed_general agrees with these open gates. Soft-close banned (F3)."
 }

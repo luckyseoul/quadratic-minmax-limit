@@ -1,0 +1,142 @@
+{
+  "prop": "15.763",
+  "title": "Signed affine-alias incidence bound",
+  "status": "PROVED CONDITIONAL AFFINE-ALIAS THEOREM",
+  "formula": "|H| >= oddceil((p*r^2+1)m(m-1)/(2r(m-r))-p*r^2+2), m=(p+1)/2+r",
+  "r_equals_one": {
+    "signed_bound": "(p^2+11)/4",
+    "already_an_odd_integer": true,
+    "prop15755_bound": "(p+1)(p+3)/8"
+  },
+  "proved": {
+    "signed_affine_alias_incidence_bound": true,
+    "all_admissible_odd_r": true,
+    "critical_internal_alias_or_stronger_size_bound": true,
+    "all_minimum_shell_representatives_are_affine": false,
+    "deletion_alias_coordinates_are_common": false,
+    "residual_ii_closed": false,
+    "e1_closed_general": false,
+    "L": false
+  },
+  "exact_audits": [
+    {
+      "p": 5,
+      "r": 1,
+      "m": 4,
+      "aliases": 4,
+      "max_edge_multiplicity": 2,
+      "positive_to_outside_multiplicity": 1,
+      "boolean_defect": 10,
+      "signed_H_score_at_active_x": -3,
+      "cut_floor_per_alias": "3",
+      "forced_negative_edge_count": "(|H|+p*r^2-2)/2",
+      "prop15755_unsigned_rational_bound": "6",
+      "prop15755_unsigned_odd_integer_bound": 7,
+      "signed_rational_bound": "9",
+      "signed_odd_integer_bound": 9,
+      "absolute_row_sum_bound": 3,
+      "effective_odd_integer_bound": 9,
+      "signed_strictly_improves_parity_adjusted_15755": true,
+      "signed_comparison_identity": "B_signed=2*B_15755-p*r^2+2",
+      "critical_alias_alternative": {
+        "avoidance_rational_bound": "13",
+        "avoidance_odd_integer_bound": 13,
+        "effective_avoidance_odd_integer_bound": 13,
+        "conclusion_below_bound": "some affine alias has eps*S_H=3 and does not cross e, hence eps*S_(H\\{e})=2"
+      },
+      "r_equals_one_closed_form": "9",
+      "proved": true
+    },
+    {
+      "p": 11,
+      "r": 1,
+      "m": 7,
+      "aliases": 7,
+      "max_edge_multiplicity": 2,
+      "positive_to_outside_multiplicity": 1,
+      "boolean_defect": 22,
+      "signed_H_score_at_active_x": -9,
+      "cut_floor_per_alias": "6",
+      "forced_negative_edge_count": "(|H|+p*r^2-2)/2",
+      "prop15755_unsigned_rational_bound": "21",
+      "prop15755_unsigned_odd_integer_bound": 21,
+      "signed_rational_bound": "33",
+      "signed_odd_integer_bound": 33,
+      "absolute_row_sum_bound": 9,
+      "effective_odd_integer_bound": 33,
+      "signed_strictly_improves_parity_adjusted_15755": true,
+      "signed_comparison_identity": "B_signed=2*B_15755-p*r^2+2",
+      "critical_alias_alternative": {
+        "avoidance_rational_bound": "40",
+        "avoidance_odd_integer_bound": 41,
+        "effective_avoidance_odd_integer_bound": 41,
+        "conclusion_below_bound": "some affine alias has eps*S_H=3 and does not cross e, hence eps*S_(H\\{e})=2"
+      },
+      "r_equals_one_closed_form": "33",
+      "proved": true
+    },
+    {
+      "p": 11,
+      "r": 3,
+      "m": 9,
+      "aliases": 84,
+      "max_edge_multiplicity": 42,
+      "positive_to_outside_multiplicity": 28,
+      "boolean_defect": 198,
+      "signed_H_score_at_active_x": -97,
+      "cut_floor_per_alias": "50",
+      "forced_negative_edge_count": "(|H|+p*r^2-2)/2",
+      "prop15755_unsigned_rational_bound": "100",
+      "prop15755_unsigned_odd_integer_bound": 101,
+      "signed_rational_bound": "103",
+      "signed_odd_integer_bound": 103,
+      "absolute_row_sum_bound": 97,
+      "effective_odd_integer_bound": 103,
+      "signed_strictly_improves_parity_adjusted_15755": true,
+      "signed_comparison_identity": "B_signed=2*B_15755-p*r^2+2",
+      "critical_alias_alternative": {
+        "avoidance_rational_bound": "107",
+        "avoidance_odd_integer_bound": 107,
+        "effective_avoidance_odd_integer_bound": 107,
+        "conclusion_below_bound": "some affine alias has eps*S_H=3 and does not cross e, hence eps*S_(H\\{e})=2"
+      },
+      "r_equals_one_closed_form": null,
+      "proved": true
+    },
+    {
+      "p": 11,
+      "r": 5,
+      "m": 11,
+      "aliases": 462,
+      "max_edge_multiplicity": 252,
+      "positive_to_outside_multiplicity": 210,
+      "boolean_defect": 550,
+      "signed_H_score_at_active_x": -273,
+      "cut_floor_per_alias": "138",
+      "forced_negative_edge_count": "(|H|+p*r^2-2)/2",
+      "prop15755_unsigned_rational_bound": "253",
+      "prop15755_unsigned_odd_integer_bound": 253,
+      "signed_rational_bound": "233",
+      "signed_odd_integer_bound": 233,
+      "absolute_row_sum_bound": 273,
+      "effective_odd_integer_bound": 273,
+      "signed_strictly_improves_parity_adjusted_15755": false,
+      "signed_comparison_identity": "B_signed=2*B_15755-p*r^2+2",
+      "critical_alias_alternative": {
+        "avoidance_rational_bound": "710/3",
+        "avoidance_odd_integer_bound": 237,
+        "effective_avoidance_odd_integer_bound": 273,
+        "conclusion_below_bound": "some affine alias has eps*S_H=3 and does not cross e, hence eps*S_(H\\{e})=2"
+      },
+      "r_equals_one_closed_form": null,
+      "proved": true
+    }
+  ],
+  "not_claimed": [
+    "classification of the full defect-2p shell",
+    "a common affine coordinate system across all deletions",
+    "exclusion of the nonaffine three-coordinate eigenvector branch",
+    "closure of residual (ii), E1, or the MathOverflow limit"
+  ],
+  "L_status": "OPEN"
+}

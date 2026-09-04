@@ -202,7 +202,7 @@ remaining `z=7` pointed systems and identify their projected high-catalog
 semigroups through grade six, but exclude no source boundary.  All 56 actual
 `z=7` line boundaries in two orbits remain open.
 
-The intended Type I two-level close is 15.272 (\(k=1\cup k=3\) span \(\Rightarrow G_+\succ0\)), not Gsum and not Aut-Schur. **Status (2026-09-03; through Propositions 6.3--6.10a, audited record 15.761, and the post-15.761 support, conic, and Boolean reductions; the full 15.755--15.756 proof sections are not reproduced here).** The direct multiplier-2 and multiplier-3 estimates are open: Proposition 6.6 narrows multiplier two to (6.20); Proposition 6.7 narrows direct tripling to an unshielded tetrahedral diamond; and Proposition 6.8 gives a different \(1:2\) reduction with residual (6.42)--(6.43). None closes its ray. Proposition 6.9 kills every fixed-temperature version of the signed-Eulerian free-energy target, so \(c=3\) is no longer a live fallback. Proposition 6.10 gives an exact optimized critical-pressure sufficient gate but proves that common-raw-temperature interpolation and ordinary graphon convergence do not establish it. Proposition 6.10a additionally disproves the proposed conference-product lower curve at every positive temperature; its universal entropy fallback has only the known \(1/\pi\) limiting slope. The natural rank-one phase self-gluing of the same two halves is also excluded by the exact amplification \(\nu_4(K\otimes H)=4\nu_4(H)\), versus the required \(2\sqrt2\). The optional Paley \(L=1/2\) route remains open at residual (ii), although Proposition 15.752 closes an infinite contiguous band of its higher shells, Proposition 15.753 closes the \(p=17,19\) fifth-shell endpoints, Proposition 15.754 closes the remaining \(p=13\) endpoint, and Propositions 15.755--15.761 plus the audited post-15.761 reductions leave unbalanced zero-form allocations, coordinated nonzero even forms, and the coupled symmetric pair-total box. The antisymmetric Boolean half of the balanced zero-odd branch is explicitly solved by localized Mobius trades; no common graph follows. Details: `evidence/share/denseness_path_package.md` § Caveats.
+The intended Type I two-level close is 15.272 (\(k=1\cup k=3\) span \(\Rightarrow G_+\succ0\)), not Gsum and not Aut-Schur. **Status (2026-09-04; through audited record 15.765 and the post-15.761 support, conic, and Boolean reductions).** The direct multiplier-2 and multiplier-3 estimates are open: Proposition 6.6 narrows multiplier two to (6.20); Proposition 6.7 narrows direct tripling to an unshielded tetrahedral diamond; and Proposition 6.8 gives a different \(1:2\) reduction with residual (6.42)--(6.43). None closes its ray. Proposition 6.9 kills every fixed-temperature version of the signed-Eulerian free-energy target, so \(c=3\) is no longer a live fallback. Proposition 6.10 gives an exact optimized critical-pressure sufficient gate but proves that common-raw-temperature interpolation and ordinary graphon convergence do not establish it. Proposition 6.10a additionally disproves the proposed conference-product lower curve at every positive temperature; its universal entropy fallback has only the known \(1/\pi\) limiting slope. The natural rank-one phase self-gluing of the same two halves is also excluded by the exact amplification \(\nu_4(K\otimes H)=4\nu_4(H)\), versus the required \(2\sqrt2\). The optional Paley \(L=1/2\) route remains open at both residual (ii) and the minimal-four-gap implication bridge exposed by Proposition 15.764. Proposition 15.752 closes an infinite contiguous band of higher shells, Proposition 15.753 closes the \(p=17,19\) fifth-shell endpoints, and Proposition 15.754 closes the remaining \(p=13\) endpoint. Propositions 15.755--15.765 then isolate the surviving common-graph regimes and refute the attempted universal affine classification without closing either gate. Details: `evidence/share/denseness_path_package.md` § Caveats.
 
 The separate cross-rectangle Fourier calculation proves exact analytic
 stability and Gram rigidity and exhibits an infinite Gram-perfect family at
@@ -7868,8 +7868,10 @@ global residual (ii): the non-Walsh multi-level range at even \(k\ge4p\)
 remains open, so `residual_ii_full_closed=False`. Proposition 15.272 later
 closes the historical two-level Type-I/residual-(i) slice but did not close
 multi-level Type I. Proposition 15.750 now closes multi-level Type I for every
-prime \(p\ge5\), leaving residual (ii) as the sole false E(1) unit. The Gsum
-route remains unused; Path-C / \(16N\) remain optional open.
+prime \(p\ge5\), leaving residual (ii) as the sole false entry in the
+then-defined four-unit ledger. Proposition 15.764 later proves that this
+ledger is not by itself exhaustive for arbitrary minimal four-gap paths. The
+Gsum route remains unused; Path-C / \(16N\) remain optional open.
 
 Evidence: `src/e1_gmin_m4_prop15171.py`, `evidence/e1_gmin_m4_prop15171.json`,
 `tests/test_prop15171.py`, `evidence/share/denseness_path_package.md`.
@@ -11420,7 +11422,8 @@ no-descent branches without the spectral floor, QVAR, or R1. At this stage the
 one-sided level-4 branch remained inside residual (ii), and the two live E(1)
 gates were the multi-level Type-I bad case and non-Walsh residual (ii).
 Proposition 15.750 later closes the former, leaving residual (ii) as the sole
-false E(1) unit. \(\square\)
+false entry in that historical four-unit ledger. Proposition 15.764 later
+exposes the separate minimal-four-gap implication bridge. \(\square\)
 
 Evidence: `src/e1_gmin_m4_prop15720.py`,
 `tests/test_prop15720.py`, and
@@ -15745,6 +15748,295 @@ necessary form is `w=2v`, where `v` has `p-2` entries `+1`, `p+2` entries
 such a class and does not close residual (ii), E1, or the original limit;
 all remain OPEN. The full proof and normalization audit are in
 `evidence/NOTE_2026-09-03_CONFERENCE_CUBE_GAP.md`.
+
+## Proposition 15.763 — signed affine-alias incidence bound
+
+Continue Proposition 15.755's dangerous shared-maximizer setup and suppose
+the active Boolean point is an odd-parameter affine alias. Thus
+
+\[
+ \delta_\epsilon(x)=2pr^2,\qquad
+ m={p+1\over2}+r\le p,\qquad r\ge1\text{ odd},
+\]
+
+and flipping any union \(T_J\) of \(r\) among the \(m\) positive parallel
+fibres gives an \(\epsilon p\)-Boolean eigenvector. Put
+\(a_h=\epsilon C_hx_ux_v\) for \(h=\{u,v\}\in H\). The active-state identity
+is
+
+\[
+ \sum_{h\in H}a_h=2-pr^2.                                 \tag{15.763.1}
+\]
+
+For every alias \(w_J=x^{T_J}\), the four-unit gap and the odd cardinality of
+\(H\) give \(\epsilon S_H(w_J)\ge3\). Hence
+
+\[
+ -\sum_{h\text{ crossing }T_J}a_h\ge {pr^2+1\over2}.       \tag{15.763.2}
+\]
+
+There are \(N={m\choose r}\) aliases and every edge crosses at most
+\(M=2{m-2\choose r-1}\) of them. Retain the signs when summing
+(15.763.2). By (15.763.1), the number of negative \(a_h\)'s is
+\((|H|+pr^2-2)/2\), whereas positive edges only decrease the signed sum.
+Therefore
+
+\[
+ {N(pr^2+1)\over2}
+ \le M{|H|+pr^2-2\over2},
+\]
+
+and
+
+\[
+ \boxed{|H|\ge
+ { (pr^2+1)m(m-1)\over2r(m-r)}-pr^2+2.}                   \tag{15.763.3}
+\]
+
+The exact integral statement rounds the right side up to the next odd
+integer. At \(r=1\), (15.763.3) is already the odd integer
+
+\[
+ \boxed{|H|\ge {p^2+11\over4}},                            \tag{15.763.4}
+\]
+
+strictly improving Proposition 15.755's parity-adjusted
+\((p+1)(p+3)/8\) bound.
+
+There is a further exact alternative for the distinguished active edge
+\(e\). If an alias has \(\epsilon S_H(w_J)=3\) and its cut does not cross
+\(e\), then \(\epsilon S_{H\setminus\{e\}}(w_J)=2\). If no such alias exists,
+every noncrossing alias has H-score at least five. The number of noncrossing
+aliases and the negative signed contribution of \(e\) cancel in the summed
+inequality, and (15.763.3) holds with \(pr^2+1\) replaced by \(pr^2+3\).
+
+This is a proved conditional theorem for the affine-alias subfamily, not a
+classification of the full defect-\(2p\) shell. The three-coordinate integral
+eigenvector branch can be nonaffine, and deletion-specific affine coordinate
+systems need not agree. Thus no all-deletions contradiction follows;
+residual (ii), E1, and the original limit remain OPEN. Full proof and exact
+arithmetic are in `evidence/NOTE_2026-09-04_SIGNED_AFFINE_ALIAS_BOUND.md` and
+`src/e1_gmin_m4_prop15763.py`.
+
+## Proposition 15.764 — exact parity shell bridge for a minimal four-gap set
+
+For \(\epsilon\in\{+1,-1\}\), put
+
+\[
+ E_\epsilon=\{y\in\{\pm1\}^n:Cy=\epsilon py\},\qquad
+ T_F^\epsilon(y)=\epsilon\sum_{\{u,v\}\in F}C_{uv}y_uy_v,
+\]
+
+and let \(m_\epsilon(F)=\min_{E_\epsilon}T_F^\epsilon\). Suppose that
+
+\[
+ \Phi(C\mathbin\triangle H)=\Phi-4,
+ \qquad
+ \Phi(C\mathbin\triangle(H\setminus\{e\}))=\Phi-2
+ \quad(e\in H).                                           \tag{15.764.1}
+\]
+
+Eigenshell evaluation gives, in both phases,
+
+\[
+ T_H^\epsilon\ge2,\qquad T_{H\setminus\{e\}}^\epsilon\ge1,\qquad
+ T_F^\epsilon\equiv|F|\pmod2.                             \tag{15.764.2}
+\]
+
+Write \(b_e=\epsilon C_{uv}y_uy_v\). Since
+\(T_{H\setminus\{e\}}=T_H-b_e\), if \(|H|\) is odd then
+
+\[
+ \boxed{
+ \exists e,\epsilon:\ m_\epsilon(H\setminus\{e\})=2
+ \iff
+ \exists\epsilon,y\in E_\epsilon:\ T_H^\epsilon(y)=3.}  \tag{15.764.3}
+\]
+
+Indeed a deletion score two makes the odd H-score one or three, and
+(15.764.2) rules out one. Conversely, a sum of signs equal to three has a
+positive edge, whose deletion has score two. Here \(m_+=s_+\) and
+\(m_-=-s_-\), so the left side is exactly the official even-cardinality
+residual-(ii) entry level.
+
+This is the full official entry, not merely its numerical level. On every
+deletion row with score two, (15.764.2) forces \(b_e=+1\), so the edge freezes
+positive on the entire critical level; both deletion phases have shell floor
+two. A minus-phase row can be normalized to plus: multiplication by a
+nonsquare in \(\mathbb F_{p^2}\) negates the finite Paley block, and switching
+at infinity negates the remaining entries, proving \(-C=DP^tCPD\). Finally
+the H-score floor three and (15.764.5) give \(|H|\ge3p\); equality would be
+bi-tight level three, excluded by Proposition 15.720. Hence
+\(|H|\ge3p+2\), so the even deletion has \(k\ge3p+1\), \(s_+=2\),
+deep two-sidedness, and freeness failure for the distinguished edge.
+
+If \(|H|\) is even, a deletion score is odd and can never equal two. The
+correct parity alternative is
+
+\[
+ \exists e,\epsilon:\ m_\epsilon(H\setminus\{e\})\le2
+ \iff
+ \exists\epsilon,y\in E_\epsilon:\ T_H^\epsilon(y)=2,    \tag{15.764.4}
+\]
+
+and the deletion score is one, on the Type-I side of the ledger.
+Every critical level-one row again has \(b_e=+1\), and the same phase
+normalization gives the plus Type-I convention. The analogous frame argument,
+using the excluded bi-tight level two at equality, gives
+\(|H|\ge2p+2\) and \(|H|-1\ge2p+1\).
+
+The signed frame mean is
+
+\[
+ \mathbb E_{E_\epsilon}T_H^\epsilon={|H|\over p}.         \tag{15.764.5}
+\]
+
+Thus failure of (15.764.3) for odd H forces \(|H|\ge5p\). At equality H is
+bi-tight of level five. Proposition 15.720's generic degree congruence gives
+
+\[
+ d_i+d_j\equiv10p\pmod{(p^2-1)/2}.                        \tag{15.764.6}
+\]
+
+For \(p\ge11\) this forces the impossible regular degree
+\(10p/(p^2+1)\). For \(p=7\), all degrees have residue 11 or 23 modulo 24,
+so their sum exceeds 70. At \(p=5\), the only degree profiles are a full star
+and a balanced double star. The star is a vertex switching, hence is not
+deeper. For the double star, with centres \(a,b\), twelve leaves on each
+side, \(c=C_{ab}\), \(\alpha_i=C_{ai}\), \(\beta_i=C_{bi}\), and
+\(r_i=+1\) or \(-1\) according to the side, the `scheme+cross` decomposition
+has
+
+\[
+ X_{ai}=\alpha_i r_i/2,\qquad X_{bi}=-\beta_i r_i/2,
+ \qquad CX+XC=0.
+\]
+
+Its leaf-leaf entries make \(\alpha_i\beta_i\) constant on each side;
+conference-row orthogonality makes the constants opposite, so
+\(r_i=\tau\alpha_i\beta_i\). The \((a,j)\) entry of the anticommutator then
+has left side \(-\tau c\alpha_j\) by \((C^2)_{bj}=0\), but right side
+\(+\tau c\alpha_j\), a contradiction. Therefore the level-five equality
+cannot be deeper, and
+
+\[
+ \boxed{|H|\text{ odd},\ |H|\le5p
+ \Longrightarrow
+ \exists e,\epsilon:\ m_\epsilon(H\setminus\{e\})=2.}    \tag{15.764.7}
+\]
+
+For even H, failure of (15.764.4) gives \(|H|\ge4p\); equality is the
+bi-tight level four already excluded by Proposition 15.720. Hence the exact
+unclosed failure ranges begin at
+
+\[
+ \boxed{|H|\ge4p+2\text{ even},\qquad |H|\ge5p+2\text{ odd}.}
+                                                                    \tag{15.764.8}
+\]
+
+A fully specified non-Paley max-of-affine model at \(p=5,|H|=25\) realizes
+all scalar frame, parity, minimal-four-gap, and all-deletions-two-gap
+identities while every deletion shell minimum is four. Thus scalar identities
+alone cannot bridge (15.764.8); common Paley graph structure is essential.
+The construction and the complete level-five calculation are in
+`evidence/NOTE_2026-09-04_MINIMAL_GAP4_SHELL_BRIDGE.md`.
+
+This proposition repairs the deletion-to-unit audit only in the range
+(15.764.7). It does not prove that an arbitrary minimal four-gap H is odd or
+small enough, so residual (ii), E1, and the original limit remain OPEN.
+Evidence: `src/e1_gmin_m4_prop15764.py`, `tests/test_prop15764.py`, and
+`evidence/e1_gmin_m4_prop15764.json`.
+
+## Proposition 15.765 — a nonaffine point on the first Paley defect shell
+
+Let \(p=11\), identify
+\(\mathbb F_{121}=\mathbb F_{11}[a]/(a^2-2)\), and write
+
+\[
+ \chi(x+ya)=\left({x^2-2y^2\over11}\right).
+\]
+
+Transcribe the right-hand \(11\times11\) Boolean matrix in Section 6,
+Figure 4 of Kiss--Somlai, *Special directions on the finite affine plane*,
+Designs, Codes and Cryptography 92 (2024), 2587--2597. It gives a
+33-point set \(E_0\subset\mathbb F_{11}^2\) whose row \(y=1\) is empty.
+Adjoin that full row and apply \(T(x,y)=(x,2y)\):
+
+\[
+ E=T\bigl(E_0\mathbin\cup\{(x,1):x\in\mathbb F_{11}\}\bigr),
+ \qquad D=\mathbb F_{11}^2\setminus E.
+\]
+
+Thus \(|E|=44\) and \(|D|=77\). Direct exact line intersection counts show
+that \(E\) is nonconstant in exactly the four directions
+\(\infty,0,2,-2\), and is constant of value four on every line in each of
+the other eight directions. The four direction representatives
+\((0,1),(1,0),(1,2),(1,-2)\) all have Paley character \(+1\). Equivalently,
+and checked pointwise over all 121 vertices, the finite Paley character
+matrix \(Q_{uv}=\chi(v-u)\) satisfies
+
+\[
+ Q\mathbf1_E=11\mathbf1_E-4\mathbf1,
+ \qquad
+ Q\mathbf1_D=11\mathbf1_D-7\mathbf1.                 \tag{15.765.1}
+\]
+
+In particular,
+
+\[
+ 3+2\sum_{v\in D}\chi(v-u)
+   =11\bigl(2\mathbf1_D(u)-1\bigr)
+ \quad(u\in\mathbb F_{11}^2).                         \tag{15.765.2}
+\]
+
+For the normalized order-122 Paley conference matrix
+
+\[
+ C=\begin{pmatrix}0&\mathbf1^t\\[2pt]\mathbf1&Q\end{pmatrix},
+\]
+
+define \(y_\infty=3\) and \(y_u=2\mathbf1_D(u)-1\). Since
+\(\sum_u y_u=2|D|-121=33\), (15.765.2) proves, coordinate by coordinate,
+
+\[
+ Cy=11y,
+ \qquad \|y\|_2^2=3^2+121=130,                         \tag{15.765.3}
+\]
+
+and infinity is the unique coordinate of magnitude three. Let
+\(x=y-2e_\infty\in\{\pm1\}^{122}\). Because \(C_{\infty\infty}=0\),
+
+\[
+ x^tCx
+ =y^tCy-4e_\infty^tCy
+ =11\cdot130-4\cdot33=1298.
+\]
+
+Consequently
+
+\[
+ q_C(x)=649,
+ \qquad
+ \Phi-q_C(x)={11\cdot122\over2}-649=22=2p.            \tag{15.765.4}
+\]
+
+This shell point is genuinely nonaffine. A nonempty proper union of
+parallel affine lines has exactly one nonconstant parallel-class profile:
+the selected direction has only values zero and eleven, while every
+transverse profile is constant. The exact set \(E\) instead has four
+nonconstant directions. Hence \(E\) is not a union of four parallel lines;
+by complementation, \(D\) is not a union of seven parallel lines.
+
+Therefore the proposed classification of every one-coordinate-three
+integral Paley eigenshell point by parallel affine lines is false, already at
+\(p=11\). This does **not** construct a common switching set \(H\), align
+different deletion representatives, or satisfy the all-deletions hypotheses
+of residual (ii). It blocks only the attempted universalization of
+Proposition 15.763; residual (ii), E1, and the original limit remain OPEN.
+The cited-coordinate transcription, pointwise convolution, eigenvector,
+quadratic value, line profiles, source hashes, and scope guards are in
+`src/e1_gmin_m4_prop15765.py`, `tests/test_prop15765.py`, and
+`evidence/e1_gmin_m4_prop15765.json`.
 
 **All-prime branch-C odd--Radon centrality (2026-09-03).**
 Let \(p=4r+3\) be prime with \(r\ge7\). Suppose one opposite row on the

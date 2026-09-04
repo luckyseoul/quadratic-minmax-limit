@@ -21,7 +21,36 @@ def test_main_chain_L_open_and_docs_ok():
     assert units["bitight_levels_2_3"] is True
     assert units["residual_ii_k_ge_4p"] is False
     assert units["type_I_multilevel"] is True
+    assert units["minimal_gap4_shell_bridge"] is False
     assert units["closed"] is False
+
+
+def test_live_and_expanded_gates_agree_under_each_counterfactual(monkeypatch):
+    """No individual acceptance unit may be bypassed by the live E1 gate."""
+    import e1_gmin_m4_prop15168 as live
+    import e1_gmin_m4_prop15274 as residual
+    import e1_gmin_m4_prop15275 as type_i
+    import e1_gmin_m4_prop15276 as lemma_d
+    import e1_gmin_m4_prop15720 as bitight
+    import e1_gmin_m4_prop15764 as bridge
+    import e1_main_chain_status as status
+
+    units = (
+        (residual, "residual_ii_k_ge_4p_ND_closed"),
+        (type_i, "type_I_multilevel_bad_case_ND_closed"),
+        (lemma_d, "lemma_D_existence_written"),
+        (lemma_d, "lemma_D_2plane_amplitudes_proved"),
+        (bridge, "minimal_gap4_shell_bridge_closed_general"),
+    )
+    monkeypatch.setattr(live, "required_bitight_levels_empty_all_primes", lambda: True)
+    monkeypatch.setattr(bitight, "required_bitight_levels_empty_all_primes", lambda: True)
+    for module, name in units:
+        with monkeypatch.context() as patch:
+            for baseline_module, baseline_name in units:
+                patch.setattr(baseline_module, baseline_name, lambda: True)
+            patch.setattr(module, name, lambda: False)
+            assert live.e1_closed_general() is False, name
+            assert status.four_e1_units_closed()["closed"] is False, name
 
 
 def test_solution_does_not_assert_limit_theorem():

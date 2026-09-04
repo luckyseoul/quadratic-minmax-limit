@@ -5,7 +5,8 @@ Public-doc honesty check for E(1) / L.
     Writeup may assert L=1/2 only after the corrected GOAL.md units are
     actually imported (not the retired Gsum hinge or the retracted 15.167
     spectral arrow). ``e1_closed_general`` now agrees with the live open
-    gates, while this four-unit check remains authoritative. Soft-close banned.
+    gates. The legacy-named four-unit record also includes the 15.764
+    implication bridge exposed after that ledger was designed. Soft-close banned.
 """
 from __future__ import annotations
 
@@ -28,7 +29,7 @@ from e1_gmin_m4_prop15170 import gsum_disj_lb_proved_general  # noqa: E402
 
 
 def four_e1_units_closed() -> dict:
-    """Corrected GOAL.md acceptance, not the old e1 AND."""
+    """Expanded GOAL.md acceptance under the legacy public function name."""
     try:
         from e1_gmin_m4_prop15720 import required_bitight_levels_empty_all_primes
         from e1_gmin_m4_prop15274 import residual_ii_k_ge_4p_ND_closed
@@ -37,18 +38,21 @@ def four_e1_units_closed() -> dict:
             lemma_D_existence_written,
             lemma_D_2plane_amplitudes_proved,
         )
+        from e1_gmin_m4_prop15764 import minimal_gap4_shell_bridge_closed_general
     except ImportError as exc:  # pragma: no cover
         return {"closed": False, "import_error": str(exc)}
     bitight = bool(required_bitight_levels_empty_all_primes())
     resii = bool(residual_ii_k_ge_4p_ND_closed())
     type_i = bool(type_I_multilevel_bad_case_ND_closed())
     lem_d = bool(lemma_D_existence_written() and lemma_D_2plane_amplitudes_proved())
+    shell_bridge = bool(minimal_gap4_shell_bridge_closed_general())
     return {
         "bitight_levels_2_3": bitight,
         "residual_ii_k_ge_4p": resii,
         "type_I_multilevel": type_i,
         "lemma_D": lem_d,
-        "closed": bool(bitight and resii and type_i and lem_d),
+        "minimal_gap4_shell_bridge": shell_bridge,
+        "closed": bool(bitight and resii and type_i and lem_d and shell_bridge),
     }
 
 
@@ -63,8 +67,8 @@ def _props_15167_171_slice(solution: str) -> str:
 def check_docs_L_status() -> dict:
     """
     Docs OK iff status asserts L OPEN (or true L closed with proved hinge)
-    and no soft-close 'L CLOSED' / residual closed claims while the four-unit
-    acceptance gate is open.
+    and no soft-close 'L CLOSED' / residual closed claims while the
+    legacy-named expanded acceptance gate is open.
     Scans HANDOFF head, STATUS, solution top, **and** Props 15.167–171 body.
     """
     handoff = (ROOT / "HANDOFF.md").read_text(encoding="utf-8", errors="replace")
@@ -218,7 +222,8 @@ def run_main_chain() -> dict:
         "docs": docs,
         "rule": (
             "Public writeup may assert L=1/2 only after the valid gates: "
-            "bi-tight levels 2/3, residual_ii k≥4p, multi-level Type I, Lemma D. "
+            "bi-tight levels 2/3, residual_ii k≥4p, multi-level Type I, Lemma D, "
+            "and the minimal-gap-four implication bridge. "
             "QVAR/R1 and the spectral floor are no longer acceptance units. "
             "Live e1_closed_general agrees with these open gates. Soft-close banned (F3)."
         ),

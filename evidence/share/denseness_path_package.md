@@ -2,19 +2,19 @@
 
 **Audience:** independent check of the denseness-path argument. Use **this file only**.  
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit  
-**Date:** 2026-09-01. The residual-(i) two-level hinge is 15.272, not Aut-Schur and not Gsum. \(L=\tfrac12\) is **not proved**.
+**Date:** 2026-09-04. The residual-(i) two-level hinge is 15.272, not Aut-Schur and not Gsum. \(L=\tfrac12\) is **not proved**.
 
 ## Verdict
 
 **15.272** writes a Max+-free spanning argument that \(k=1\cup k=3\) fills \(\mathcal W_{++}^0\) (Lemmas B–G), hence \(G_+\succ0\), hence dual-eq is empty on \(\mathrm{sc}\) (H–I). Aut-Schur is **false**. Gsum is unused.
 
-Independent review found one remaining load-bearing hole **outside** the
-15.272 span: residual (ii). The former Lemma D writeup holes were closed by
+Independent review found two remaining load-bearing predicates **outside**
+the 15.272 span: residual (ii) and the minimal-four-gap implication bridge
+exposed by Proposition 15.764. The former Lemma D writeup holes were closed by
 15.276 and `A3_PROOF.md`; the former spectral/bi-tight hole is closed directly
 by the 15.720 degree congruence, and the Type-I multi-level hole is closed by
-15.750. The live remainder is listed under **Caveats**. Legacy code may still report
-`e1_closed_general=True`; that is obsolete incomplete wiring, not a
-substitute for the current four-unit gate.
+15.750. The live remainder is listed under **Caveats**. The live and
+legacy-named expanded acceptance gates now test the same predicates.
 
 | Piece | Status |
 |-------|--------|
@@ -24,6 +24,7 @@ substitute for the current four-unit gate.
 | Required bi-tight levels 2 and 3, all \(p\ge5\) | **Proved** (15.720; degree congruence + 15.272/15.207 kernel) |
 | Residual (ii), affine + even \(k\le4p-2\) | **Proved** (15.179+236+237) |
 | Residual (ii), even \(k\ge4p\) | **Open** — 15.734--15.749 close the first three all-prime shells and several later rows; see Caveat 2 for the exact remainder |
+| Minimal-four-gap implication bridge | **Open** — 15.764 proves odd `|H|<=5p`; failure ranges start at even `|H|>=4p+2` and odd `|H|>=5p+2` |
 | Residual (i) Type I, two-level Max− | **Proved** (15.272 → 15.207 → 15.249 → 15.216) |
 | Residual (i) Type I, multi-level Max− | **Proved** (15.750) |
 | Aut-Schur / Jacquet | **False** (\(p=5\) \(k=3\) rank \(61/65\); unused) |
@@ -236,7 +237,8 @@ all-prime higher shells and several later rows, but the exact non-Walsh
 remainder in Caveat 2 remains open. The required bi-tight levels are
 closed by Lemma K, so the spectral floor, global mixed-\(k\) QVAR, and
 principal R1 are not needed by this implication chain. This package still
-does **not** prove E(1) or \(L=\tfrac12\) until residual (ii) closes.
+does **not** prove E(1) or \(L=\tfrac12\) until residual (ii) and the
+minimal-four-gap implication bridge both close.
 
 ---
 
@@ -286,13 +288,20 @@ A hostile review for public scrutiny found the following. **None of these is Aut
 
 2. **Residual (ii), exact current remainder.** Proposition 15.236/237 covers even \(k\in[3p+1,4p-2]\), and affine two-level is dead for all \(k\ge3p\) (15.179). At **\(k\ge4p\)**, Propositions 15.734--15.737 close the first three shells, Proposition 15.751 closes \(k=4p+6\) for every \(p\ge13\), Proposition 15.752 closes \(k=4p+8\) for every \(p\ge23\) plus its stated contiguous higher band, and Proposition 15.753 closes the p17/p19 fifth-shell endpoints. Propositions 15.744--15.749 close \(u=0,3,4\) at \(p=13,k=60\), and Proposition 15.754 closes the remaining \(u=6\) by an exact finite aggregate/common-form certificate. Thus the fifth shell is closed for every \(p\ge13\). The exact open remainder is: critical \(p=5,7\); \(p=11,k\ge50\); later \(p=13\) layers; layers beyond 15.752's band; and the separate positive \(p=7,z=7\) branch. The global residual predicate remains false.
 
+   **Separate implication bridge.** Proposition 15.764 proves that an
+   all-deletions minimal four-gap set enters the official residual-(ii) unit
+   when `|H|` is odd and at most `5p`. It also identifies the exact remaining
+   failure ranges: even `|H|>=4p+2` and odd `|H|>=5p+2`. This bridge is a
+   separate acceptance predicate; closing residual (ii) alone cannot close E(1).
+
 3. **Type I dual-eq is the two-level Max− law \(S\in\{-1,-3\}\).** The 15.169 bad case \(f_e\equiv-1\) on \(\{S=-1\}\) only gives \(\Phi(H)\ge\Phi-4\) if Max− is multi-level. 15.275 writes the mass \(2a+c(3+\mu_c)=2/p\), the pairing min \(E[Sf_e]\ge3/p-2\), \(E[R^2]=E[S^2]-5+4E[Sf]\), integrality \(n_{-1}=M+n_c+t\), the unique 2-orbit Aut\(_e\) collapse \(\mu_{\mathrm{far}}=-2(2p-3)/(p(p^2-1))<0\), and the 3-weight Max− identity \(F_-|_{f=+1}=-(p+1)/(p-1)+\mu_{\mathrm{far}}p(p+1)\). Paley Aut\(_e\) has **two** star orbits (\(\sigma_\square=(p-1)(1+f_e)\), \(\sigma_\boxtimes=(p+1)(1-f_e)\)) and several far orbits. The 3-weight slices \(\mu_\square=\mu_\boxtimes\) and \(\mu_\boxtimes=0\) are empty (negative weight). The slice \(\mu_{\mathrm{far}}=0\) stays a \([0,1]\) solution of \(F_+\bar x=3-2f_e\), but it (and the whole \(\mu_{\mathrm{far}}\ge0\) 3-weight family) **cannot realise the bad case**: \(F_-|_{f=+1}\ge-(p+1)/(p-1)>-2\), while a gap-2 undercutter with \(f_e\equiv-1\) on \(\{S=-1\}\) needs \(S\le-3\) on \(\{f=+1\}\). Star-supported 0-1 Type I graphs Aut\(_e\)-average to that point (\(n_\square=(p+1)/2\), \(n_\boxtimes=5(p-1)/2\)). Dual-eq empty kills only the two-level / pairing-min slice. **Historical leftover:** split far Aut\(_e\) classes (unequal 4-set interpolants) did not reduce to the collapsed-far bound. Proposition 15.750 supersedes that leftover and proves `type_I_multilevel_bad_case_ND_closed=True` for every prime \(p\ge5\).
 
 4. **Lemma D existence / 2-plane — closed.** Written in `evidence/share/A3_PROOF.md` and checked live in 15.276: occupancy sumset \(\to\) sawtooth \(N(x)=1+(\lambda x+s)\bmod p\), majority \(z\), three-line support, \(\hat z(0)=p\), \(Cy=py\), phase lock \(s_0+s_1+s_2\equiv-2\). Amplitudes are the Fejer products \(F_{\lambda,s}(c)=2p\,\omega^{-c\lambda^{-1}s}/(\omega^{c\lambda^{-1}}-1)\), nonzero off \(0\), and the 3-vector is not \(\mathbb C\)-parallel as \((c_1,c_2,c_3)\) varies. \(M_3\) matching enum and rank-\(2\) at \(p=5,7,11\) remain checks, not the proof. This item is no longer a blocker.
 
 5. **Lemma E Johnson** (same-line hyperplane) was expanded independently and has **no algebraic GAP** relative to 15.269 B + the \(WW^\top\) identity. See `evidence/share/lemma_E_johnson.md`.
 
-Until Caveat (2) is closed, \(L=\tfrac12\) is not established. Caveat (3)
+Until Caveat (2), including its separate implication bridge, is closed,
+\(L=\tfrac12\) is not established. Caveat (3)
 is discharged by 15.750, and Caveat (4) by `A3_PROOF.md` + 15.276; finite
 rank-2 remains an independent check of the latter proof.
 

@@ -94,4 +94,7 @@ def test_global_close_names_follow_live_gate_not_bounded_history():
 
     for module in (p168, p169, p170, p171):
         opens = module.e1_open_residuals()
-        assert opens == ["non-Walsh residual (ii), even k≥4p"]
+        assert opens == [
+            "non-Walsh residual (ii), even k≥4p",
+            "minimal four-gap path outside the historical E1 units",
+        ]

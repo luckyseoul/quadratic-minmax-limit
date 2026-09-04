@@ -20,8 +20,10 @@ CURRENT GATE (no soft-close):
       not a live global gate.
   (ii) Non-Walsh residual (ii) for even k≥4p remains open. The bounded even
        range through 4p−2 is closed; the multi-level remainder is not.
-  Full m_n≥Φ−2 / E(1) / L remain OPEN until residual (ii) closes
-  (the required bi-tight levels are closed by 15.720).
+  (iii) Proposition 15.764 exposes a separate minimal-four-gap implication
+        bridge outside the historical four-unit ledger.
+  Full m_n≥Φ−2 / E(1) / L remain OPEN until residual (ii) and this
+  bridge close (the required bi-tight levels and Lemma D are already closed).
 
 Does NOT set L closed. residual_closed_general=false (16N optional open).
 Writes evidence/e1_gmin_m4_prop15168.json
@@ -185,18 +187,27 @@ def deep_fail_k_3p_minus_1_impossible(p: int) -> dict:
 
 
 def e1_open_residuals() -> list[str]:
-    """Authoritative current remainders, not the obsolete 15.169 slice."""
+    """Current residual and implication remainders, not the obsolete slice."""
     open_: list[str] = []
     try:
         from e1_gmin_m4_prop15274 import residual_ii_k_ge_4p_ND_closed
         from e1_gmin_m4_prop15275 import type_I_multilevel_bad_case_ND_closed
+        from e1_gmin_m4_prop15276 import (
+            lemma_D_2plane_amplitudes_proved,
+            lemma_D_existence_written,
+        )
+        from e1_gmin_m4_prop15764 import minimal_gap4_shell_bridge_closed_general
 
         if not residual_ii_k_ge_4p_ND_closed():
             open_.append("non-Walsh residual (ii), even k≥4p")
         if not type_I_multilevel_bad_case_ND_closed():
             open_.append("Type I multi-level Max− bad case")
+        if not (lemma_D_existence_written() and lemma_D_2plane_amplitudes_proved()):
+            open_.append("Lemma D existence/two-plane implication")
+        if not minimal_gap4_shell_bridge_closed_general():
+            open_.append("minimal four-gap path outside the historical E1 units")
     except Exception:
-        return ["current residual-(ii)/Type-I predicates unavailable"]
+        return ["current E1 acceptance predicates unavailable"]
     return open_
 
 

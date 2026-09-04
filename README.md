@@ -14,7 +14,7 @@ m_n = min_{a_ij = ±1}  max_{x_j = ±1}  | Σ_{1≤i<j≤n} a_ij · x_i · x_j |
 Machine-assisted attack on a 2022 MathOverflow problem: whether the normalized
 min-max ±1 quadratic form converges. The limit **L is OPEN**. This repo is a
 proof ledger with source-backed computational proposition modules through
-15.761, audited post-15.761 support/conic/Boolean reductions, and reviewed
+15.765, audited post-15.761 support/conic/Boolean reductions, and reviewed
 analytic arguments in `solution.md`. Machine gates use
 explicit `True`/`False` predicates, and soft-closing is banned by test
 (`tests/test_main_chain_docs.py`); Propositions 6.3--6.10a are proved in prose,
@@ -24,9 +24,9 @@ not represented as computational predicates.
 
 **Goal:** settle the limit (see **`LONG_HORIZON_GOAL.md`**). Not done until L is proved or disproved.
 
-**Main claim:** L = lim_n α_n is **OPEN** (2026-09-03).
+**Main claim:** L = lim_n α_n is **OPEN** (2026-09-04).
 
-### Current audit (2026-09-03; through audited Proposition 15.762, the post-15.761 exact reductions, and Propositions 6.3--6.10a)
+### Current audit (2026-09-04; through audited Proposition 15.765, the post-15.761 exact reductions, and Propositions 6.3--6.10a)
 
 - **Original-question correction and new direct gate.** MathOverflow 413935
   asks whether the limit exists; identifying its value is optional.  With
@@ -215,11 +215,13 @@ not represented as computational predicates.
   parity halving contradicts the sharp `p-3` lift floor. Tracked integer
   Farkas identities close `p=5,7` without SciPy or eigenshell caches, and
   signed-PSL 2-transitivity handles every distinguished edge. This leaves
-  residual (ii) as the sole false E(1) unit; E1 and the limit remain open.
+  residual (ii) as the sole false entry in the historical four-unit ledger.
+  Proposition 15.764 later exposes an additional implication bridge outside
+  that ledger, so E1 and the limit remain open even if that entry alone closes.
 
 - **Paley value-specific target.** It is enough for \(L=1/2\) to prove the Paley-tail deficit
   \(\Phi(C_p)-m_{p^2+1}=o(p^3)\) on a ratio-dense tail. The current all-prime,
-  gap-2, four-unit gate is a strictly stronger sufficient route.
+  gap-2, expanded acceptance gate is a strictly stronger sufficient route.
 - **Hamming-stability route.** Local edge optimality, switching minimality,
   Max-Lipschitz control, and all product second moments can coexist at distance
   \(\Theta(n^2)\) from Paley. A successful proof must instead use closest
@@ -451,6 +453,34 @@ not represented as computational predicates.
   `Phi(C)<=p(p^2+1)/2-8`, and the gaps two, four, and six need no solver.
   No nonregularizable square-order class is constructed, so residual (ii),
   E1, `L=1/2`, and the original MO limit remain OPEN.
+  The sporadic Peisert `P**(529)` is also audited and regularizable: its
+  scalar orbit is a 12-direction linear-OA/PN set with explicit Boolean
+  `+23` and `-23` eigenvectors, so it is not a new conference target.
+- **Signed affine-alias bound.** Proposition 15.763 keeps the signs and the
+  exact active-state row sum in Proposition 15.755's affine-alias cut family.
+  For odd `r` it proves
+  `|H|>=oddceil((pr^2+1)m(m-1)/(2r(m-r))-pr^2+2)`, with
+  `m=(p+1)/2+r`; at `r=1` this is exactly `(p^2+11)/4`. Either an internal
+  alias reaches deletion eigenshell level two, or `pr^2+1` strengthens to
+  `pr^2+3`. The theorem is conditional on an affine active point and does not
+  classify the nonaffine minimum-shell branch, so residual (ii), E1, and the
+  limit remain OPEN.
+- **Minimal four-gap shell bridge.** Proposition 15.764 proves that for odd H,
+  a deletion reaches signed shell level two exactly when H reaches level three,
+  and forces this for `|H|<=5p`. The H-floor freezes the active edge on all
+  critical rows, and switching/permutation normalizes the minus phase; with
+  `k>=3p+1`, this gives the full official residual-(ii) entry. Even H has the
+  wrong deletion parity. The
+  first unclosed regimes are even `|H|>=4p+2` and odd `|H|>=5p+2`; the scalar
+  identities alone are insufficient, so residual (ii) remains open.
+- **Nonaffine first-defect shell.** Proposition 15.765 adapts the published
+  Kiss--Somlai four-special-direction set at `p=11` to an exact positive
+  Paley intriguing set `D` of size 77.  Its integral conference eigenvector
+  has one coordinate `3`, and replacing that coordinate by `1` gives Boolean
+  defect `22=2p`; four nonconstant line profiles prove that `D` is not a
+  union of parallel lines.  This refutes the proposed affine classification
+  of the full first shell, but constructs no common all-deletions `H`, so
+  residual (ii) remains open.
 - **Post-15.761 support, conic, and Boolean reductions.** For the full
   balanced `p=4r+3`, `r>=7`, range `0<=b<=r`, exact maximal-line estimates
   and Couvreur peeling exclude both one- and two-maximal-line supports within
@@ -702,7 +732,7 @@ The conceptual render's exact generation brief is recorded in
 [`expected-solution-architecture.prompt.md`](evidence/share/expected-solution-architecture.prompt.md).
 
 Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
-`four_e1_units_closed()` ledger is:
+legacy-named `four_e1_units_closed()` acceptance ledger is:
 
 | GOAL unit | live predicate | status |
 |---|---|---|
@@ -710,8 +740,10 @@ Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 | residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Propositions 15.734--15.737 close the first three shells, 15.751 closes `k=4p+6` for every `p>=13`, and 15.752--15.754 together close `k=4p+8` for every `p>=13`. Proposition 15.752 also closes its stated contiguous higher band. Critical `p=5,7`, `p=11,k>=50`, later p13 layers, layers beyond that band, and the separately tracked positive `p=7,z=7` remainder remain. Hence the global predicate stays false. |
 | Type I, multi-level Max− | `type_I_multilevel` | **TRUE** — Proposition 15.750: isolated-chart square rigidity, parity halving, the sharp lift floor, and exact `p=5,7` Farkas certificates |
 | Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |
+| minimal-four-gap implication bridge | `minimal_gap4_shell_bridge` | **OPEN** — 15.764 covers odd `|H|<=5p`; even `|H|>=4p+2` and odd `|H|>=5p+2` remain |
 
-Thus exactly one mathematical predicate remains false: residual (ii).
+Thus two mathematical predicates remain false: residual (ii) and the
+minimal-four-gap implication bridge.
 The spectral/QVAR–R1 front is optional and is removed
 from the acceptance chain. Soft-close is forbidden. The acceptance package is
 **`evidence/share/denseness_path_package.md`**.
@@ -1470,6 +1502,10 @@ Proposition 15.721 supersedes the active all-finite shell statuses in
 | 15.759 | contract every off-diagonal row against the homogeneous symmetric polynomials divisible by `(s-t)^2` and compute each projective bidegree rank | **proved complete characteristic-p hierarchy:** the independent extra moment codimension is `S(p)=(m-1)(4m^2+7m+6)/6`; compact atoms above degree four and simple lifting remain open |
 | 15.760 | split the ordinary lattice into pure-difference and midpoint-kernel sequences, compute both Smith quotients, and apply the snake lemma | **proved integral image theorem and open 0/1 reduction:** `A/R(E)=(Z/pZ)^S(p)`, so the moments are integer-image sufficient; the remaining condition is the affine lattice intersecting `product_e {0,tau_e}` |
 | 15.761 | diagonalize the full real edge--Radon Gram matrix and evaluate the Moore--Penrose lower norm on both compact rays | **proved full-spectrum theorem and stronger method barrier:** the full-midpoint norm test is stricter than scalar Parseval but both compact rays pass with strict room for all `r>=7`; no common simple graph follows |
+| 15.762 | combine switched degree parity with the integral conference eigenshell norm floor | **proved universal conference cube gap:** at order `p^2+1`, every non-eigen Boolean point is at least eight below the spherical ceiling; no nonregularizable conference class or residual counterexample is constructed |
+| 15.763 | retain signed affine-alias cut incidences and the exact active-state H-score | **proved conditional affine-family theorem:** the odd-`r` bound is `oddceil((pr^2+1)m(m-1)/(2r(m-r))-pr^2+2)` and becomes `(p^2+11)/4` at `r=1`; nonaffine first-shell points and common coordinates across deletions remain open |
+| 15.764 | audit the deletion-to-unit parity bridge for an all-deletions minimal four-gap H | **proved partial bridge:** odd `|H|<=5p` forces a deletion with `s_+=2` or `s_-=-2`; even `|H|>=4p+2` and odd `|H|>=5p+2` remain open, and the scalar countermodel is explicitly non-Paley |
+| 15.765 | adapt a published four-special-direction set to the one-coordinate-three Paley shell | **proved exact nonaffine first-shell point:** at `p=11`, `Cy=11y` with a unique coordinate `3`, its Boolean shadow has defect `22`, and four line-profile directions rule out every parallel-line representation; no common H or residual closure |
 | all-prime odd--Radon gate | pair odd moment rows on edge-negation orbits and apply support/line isolation to `b` compact plus `r-1` all-equal atoms | **proved structural reduction:** for every prime `p=4r+3`, `r>=7`, zero odd global forms force centrality whenever `3b<=r+2`; balanced branch C is covered through `delta=(2r+2)floor((r+2)/3)`, but unbalanced allocations and even moments remain open |
 | p31 local gate | force arbitrary-compact odd centrality and exhaust the zero-form degree-six/eight completion with six all-equal atoms | **exhaustive local certificate and balanced corollary:** 450 scaling orbits covered, 449 noncentered `UNSAT`, the centered orbit independently excluded, and zero `SAT`; every balanced `69<=t<=99` profile contains the excluded row, while unbalanced/nonzero-form cases and the Boolean box remain open |
 | seven-channel dominance | evaluate exact degree-six/eight Jacobian minors for four compact and four all-equal atoms | **proved algebraic method barrier:** both maps are dominant over the algebraic closure in characteristic at least 11, so no universal seven-channel polynomial identity exists; extension-valued points are not `F_p` lifts and do not settle odd/higher moments or the Boolean box |
@@ -2048,8 +2084,12 @@ Lemma D is complete and is no longer on the work list.
 | `evidence/NOTE_2026-09-01_P17_P19_FIFTH_SHELL_CLOSE.md` | Exact aggregate-row proof closing the p17/p19 fifth-shell endpoints with the corrected opposite quartic sign (15.753) |
 | `evidence/NOTE_2026-09-02_P13_U6_COMMON_FORM_CLOSE.md`, `evidence/e1_gmin_m4_prop15754.json`, `evidence/e1_gmin_m4_prop15754_low_root_ug.json`, `evidence/e1_gmin_m4_prop15754_four_root_221.json`, `evidence/e1_gmin_m4_prop15754_four_root_311.json` | Proof note, exact manifest, and common-form aggregate certificates closing `p=13,k=60,u=6` (15.754) |
 | `evidence/NOTE_2026-09-03_CONFERENCE_CUBE_GAP.md`, `evidence/e1_gmin_m4_prop15762.json` | Universal square-order conference cube gap, normalization guard, and first possible sparse shell (15.762); no nonregularizable class or residual close |
+| `src/e1_gmin_m4_prop15763.py`, `tests/test_prop15763.py`, `evidence/NOTE_2026-09-04_SIGNED_AFFINE_ALIAS_BOUND.md`, `evidence/e1_gmin_m4_prop15763.json` | Exact signed affine-alias incidence theorem and critical-internal-alias alternative (15.763); conditional branch reduction, not residual closure |
+| `src/e1_gmin_m4_prop15764.py`, `tests/test_prop15764.py`, `evidence/NOTE_2026-09-04_MINIMAL_GAP4_SHELL_BRIDGE.md`, `evidence/e1_gmin_m4_prop15764.json` | Exact parity equivalence, odd `|H|<=5p` shell bridge, level-five exclusion, and non-Paley scalar method barrier (15.764); larger/parity-opposite regimes remain open |
+| `src/e1_gmin_m4_prop15765.py`, `tests/test_prop15765.py`, `evidence/NOTE_2026-09-04_NONAFFINE_FIRST_DEFECT_SHELL.md`, `evidence/e1_gmin_m4_prop15765.json` | Exact Kiss--Somlai `p=11` nonaffine first-defect-shell construction, pointwise Paley convolution, line-profile certificate, and primary-source hashes (15.765); not a common-H or residual close |
 | `evidence/NOTE_2026-09-03_MOBIUS_GLOBAL_INCIDENCE_BARRIER.md` | All-prime proof that fixed-word incidence plus physical ternarity alone cannot contradict the endpoint collision demand |
-| `evidence/NOTE_2026-09-03_ORDER122_SWITCHING_STOP.md`, `evidence/order122_switching/` | Exact WQH search stops, bounded OA/GM candidate scan, source hashes, and explicit unfinished WQH(4,4) branch; no global conference classification |
+| `evidence/NOTE_2026-09-03_ORDER122_SWITCHING_STOP.md`, `evidence/order122_switching/` | Exact WQH(3,3), two-line, and line-supported WQH(4,4) exclusions, bounded OA/GM candidate scan, and source hashes; no global conference classification |
+| `src/sporadic_peisert529_exact.py`, `tests/test_sporadic_peisert529_exact.py`, `evidence/NOTE_2026-09-04_SPORADIC_PEISERT_529_DEDUP.md`, `evidence/sporadic_peisert529_exact.json` | Exact reconstruction of `P**(529)`, published-source hashes, and explicit `+23`/`-23` Boolean eigenshell witnesses; regularizable linear-OA/PN class, not residual closure |
 | `evidence/e1_gmin_m4_prop15755.json`, `evidence/e1_gmin_m4_prop15756.json` | Audited full-cube spike and arbitrary-boundary character-cap reduction records; neither closes residual (ii) |
 | `evidence/e1_gmin_m4_prop15757.json`, `evidence/e1_gmin_m4_prop15758.json` | Exact binary edge--Radon image, sharp coefficient cancellation, local survivor rays, and scalar-energy barriers |
 | `evidence/e1_gmin_m4_prop15759.json`, `evidence/e1_gmin_m4_prop15760.json`, `evidence/e1_gmin_m4_prop15761.json` | Complete characteristic-p moments, exact integral cokernel, full real spectrum, and the remaining signed-Boolean-box gate |

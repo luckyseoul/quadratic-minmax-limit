@@ -319,7 +319,8 @@
       "L_status": "OPEN",
       "residual_closed_general": false,
       "open_residuals": [
-        "non-Walsh residual (ii), even k\u22654p"
+        "non-Walsh residual (ii), even k\u22654p",
+        "minimal four-gap path outside the historical E1 units"
       ],
       "note": "15.720 closes required bi-tight levels. Historical two-level Type I and affine/bounded residual-(ii) slices are closed; Proposition 15.750 closes multi-level Type I. Even-k>=4p residual (ii) remains open. E1/L use that live predicate; the optional 16N route is also open."
     }
@@ -332,7 +333,8 @@
     "rule": "L closed iff bi-tight \u2227 E(1); denseness Prop 6.2"
   },
   "open_residual": [
-    "non-Walsh residual (ii), even k\u22654p"
+    "non-Walsh residual (ii), even k\u22654p",
+    "minimal four-gap path outside the historical E1 units"
   ],
   "F3": "E1/L only from real bi-tight \u2227 residual(i) \u2227 residual(ii)",
   "F13": "15.168\u2013171 E1 ND structure; residual/16N still open"

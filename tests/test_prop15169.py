@@ -116,7 +116,7 @@ def test_legacy_e1_and_is_only_the_old_narrow_scope():
     assert e1_closed_general() is False
     open_res = e1_open_residuals()
     assert any("k≥4p" in item for item in open_res)
-    assert any("multi-level" in item for item in open_res)
+    assert any("minimal four-gap" in item for item in open_res)
     from e1_main_chain_status import four_e1_units_closed
 
     assert four_e1_units_closed()["closed"] is False

@@ -265,7 +265,7 @@
   has isolated an exact all-orders invariant and ruled out two seductive
   false shortcuts.
 
-## Current working checkpoint (2026-09-03; audited Proposition 15.762 and post-15.761 exact reductions)
+## Current working checkpoint (2026-09-04; audited Proposition 15.765 and post-15.761 exact reductions)
 
 - Propositions 15.757--15.761 continue the separately audited
   15.755--15.756 reductions at the full edge--Radon map of one common graph.
@@ -296,6 +296,33 @@
   eigenshells would therefore be a complete countercertificate. The audited
   order-122 Paley, Peisert, PN, and OA-derived families retain an eigenshell;
   no nonregularizable class, residual counterexample, or closure is known.
+  The separately audited sporadic Peisert `P**(529)` is likewise a
+  12-direction linear-OA/PN graph with explicit Boolean `+23` and `-23`
+  eigenvectors; do not rerun its eigenshell solver.
+- Proposition 15.763 proves a signed affine-alias refinement of Proposition
+  15.755's cut sum. For an active odd-`r` affine point it proves
+  `|H|>=oddceil((pr^2+1)m(m-1)/(2r(m-r))-pr^2+2)`, with
+  `m=(p+1)/2+r`; at `r=1` this is exactly the odd integer `(p^2+11)/4`.
+  Either a noncrossing alias reaches deletion eigenshell level two, or the
+  numerator strengthens from `pr^2+1` to `pr^2+3`. This is conditional on
+  the active point being an affine alias: the nonaffine three-coordinate
+  minimum-shell branch and deletion-to-deletion coordinate alignment remain
+  open, so no global predicate changes.
+- Proposition 15.764 proves the exact missing parity bridge for a minimal
+  four-gap H: for odd H, a level-two deletion exists iff H hits signed shell
+  level three, and this is forced for `|H|<=5p`. The active edge then freezes
+  positive on the whole critical level; after the exact `-C` phase
+  normalization the even deletion has `k>=3p+1` and enters the full official
+  residual-(ii) class. Even H cannot yield a
+  residual-(ii) level-two deletion by parity. The unclosed regimes start at
+  even `|H|>=4p+2` and odd `|H|>=5p+2`; no global predicate changes.
+- Proposition 15.765 refutes the proposed affine classification of the full
+  first defect shell. A published Kiss--Somlai four-special-direction set
+  gives an exact `p=11` positive Paley intriguing set `D`, `|D|=77`, whose
+  integral conference eigenvector has a unique coordinate `3`; its Boolean
+  shadow has defect `22=2p`. Four nonconstant line profiles rule out a union
+  of parallel lines. This is one nonaffine shell point, not a common
+  all-deletions `H`, so it changes no global predicate.
 - The completed global Mobius-incidence calculation is a route barrier:
   fixed-word intersection surplus can meet the entire endpoint demand while
   the physical half-supports remain pairwise disjoint. Any continuation must
@@ -530,7 +557,7 @@
   coordinated across directions, and the coupled symmetric pair-total box.
   Residual (ii), E1, and `L` remain OPEN.
 - Focused replay:
-  `PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -q tests/test_prop15757.py tests/test_prop15758.py tests/test_prop15759.py tests/test_prop15760.py tests/test_prop15761.py tests/test_compact_ray_moment_gate.py tests/test_conic_odd_radon.py tests/test_p31_equi_zero68_mitm.py tests/test_signed_boolean_defect.py tests/test_ridge_kernel.py tests/test_equianharmonic_component_packing.py tests/test_hard_compact_odd_radon.py tests/test_hard_star_antisymmetric_support.py tests/test_inversion_antisymmetric_radon.py tests/test_equianharmonic_threshold_even_barrier.py tests/test_inversion_symmetric_lattice.py tests/test_mobius_half_symmetric.py tests/test_all_active_pencil_support.py tests/test_symmetric_fixed_edge_elimination.py tests/test_symmetric_halved_mod2.py tests/test_symmetric_halved_mobius_cover.py tests/test_symmetric_slice_exchange.py tests/test_mobius_half_intersections.py tests/test_symmetric_halved_row_code.py tests/test_prescribed_center_common_block.py tests/test_rigid_pair_fixed_word.py tests/test_grouped_uncertainty_square.py tests/test_symmetric_halved_row_code_gap.py tests/test_symmetric_quota_cardinality_barrier.py tests/test_main_chain_docs.py`.
+  `PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -q tests/test_prop15757.py tests/test_prop15758.py tests/test_prop15759.py tests/test_prop15760.py tests/test_prop15761.py tests/test_prop15763.py tests/test_compact_ray_moment_gate.py tests/test_conic_odd_radon.py tests/test_p31_equi_zero68_mitm.py tests/test_signed_boolean_defect.py tests/test_ridge_kernel.py tests/test_equianharmonic_component_packing.py tests/test_hard_compact_odd_radon.py tests/test_hard_star_antisymmetric_support.py tests/test_inversion_antisymmetric_radon.py tests/test_equianharmonic_threshold_even_barrier.py tests/test_inversion_symmetric_lattice.py tests/test_mobius_half_symmetric.py tests/test_all_active_pencil_support.py tests/test_symmetric_fixed_edge_elimination.py tests/test_symmetric_halved_mod2.py tests/test_symmetric_halved_mobius_cover.py tests/test_symmetric_slice_exchange.py tests/test_mobius_half_intersections.py tests/test_symmetric_halved_row_code.py tests/test_prescribed_center_common_block.py tests/test_rigid_pair_fixed_word.py tests/test_grouped_uncertainty_square.py tests/test_symmetric_halved_row_code_gap.py tests/test_symmetric_quota_cardinality_barrier.py tests/test_main_chain_docs.py`.
   Residual (ii), E1, `L=1/2`, and the original MO limit remain OPEN.
   The compact-ray file independently passes 22 focused tests. Its exact
   theorem implementation and evidence are
@@ -701,8 +728,10 @@ cleanup and remote archive are recorded in
 
 **Corrected gate:** the required bi-tight levels 2 and 3 are TRUE by 15.720.
 The old spectral-floor/15.167 arrow is retracted, and QVAR/R1 are no longer
-acceptance units. Proposition 15.750 closes multi-level Type I; non-Walsh
-residual (ii) is the sole false E1 unit, so L is OPEN. Propositions 15.734--15.735 and
+acceptance units. Proposition 15.750 closes multi-level Type I. Non-Walsh
+residual (ii) is the sole false entry in the historical four-unit ledger, but
+Proposition 15.764 exposes a separate minimal-four-gap implication bridge;
+both must close before E1 can close. Thus L is OPEN. Propositions 15.734--15.735 and
 15.737 close `k in {4p,4p+2,4p+4}` for every `p>=11`, without a
 boundary-size hypothesis. Proposition 15.751 now closes `k=4p+6` for every
 prime `p>=13`: a half-mean height theorem excludes height at least two, and
@@ -4498,6 +4527,10 @@ deleted so the reversal is traceable.
 | `src/e1_gmin_m4_prop15759.py`, `tests/test_prop15759.py`, `evidence/e1_gmin_m4_prop15759.json` | Complete characteristic-p edge--Radon moment hierarchy and signed transport |
 | `src/e1_gmin_m4_prop15760.py`, `tests/test_prop15760.py`, `evidence/e1_gmin_m4_prop15760.json` | Exact integral image/cokernel theorem and open signed-Boolean-box reduction |
 | `src/e1_gmin_m4_prop15761.py`, `tests/test_prop15761.py`, `evidence/e1_gmin_m4_prop15761.json` | Complete real edge--Radon spectrum and full-midpoint least-norm barrier |
+| `src/e1_gmin_m4_prop15763.py`, `tests/test_prop15763.py`, `evidence/NOTE_2026-09-04_SIGNED_AFFINE_ALIAS_BOUND.md`, `evidence/e1_gmin_m4_prop15763.json` | Exact signed affine-alias incidence bound and critical-internal-alias alternative; conditional branch theorem, not residual closure |
+| `src/e1_gmin_m4_prop15764.py`, `tests/test_prop15764.py`, `evidence/NOTE_2026-09-04_MINIMAL_GAP4_SHELL_BRIDGE.md`, `evidence/e1_gmin_m4_prop15764.json` | Exact parity shell bridge for minimal four-gap sets, odd `|H|<=5p` entry theorem, and precise larger failure ranges; bridge remains globally open |
+| `src/e1_gmin_m4_prop15765.py`, `tests/test_prop15765.py`, `evidence/NOTE_2026-09-04_NONAFFINE_FIRST_DEFECT_SHELL.md`, `evidence/e1_gmin_m4_prop15765.json` | Exact `p=11` nonaffine first-defect-shell point from Kiss--Somlai, pointwise convolution and line-profile certificate; no common-H or residual closure |
+| `src/sporadic_peisert529_exact.py`, `tests/test_sporadic_peisert529_exact.py`, `evidence/NOTE_2026-09-04_SPORADIC_PEISERT_529_DEDUP.md`, `evidence/sporadic_peisert529_exact.json` | Exact `P**(529)` construction and source provenance; both Boolean `23`-eigenshells witnessed, so this linear-OA/PN class is closed as a conference-search target |
 | `src/p13_u6_cut_equalities.py`, `src/p13_u6_high_root_energy.py` | Proposition 15.754 equality/character obstructions and sharp high-root row-energy ledgers |
 | `scripts/p13_u6_joint_ug_tables.py`, `scripts/p13_u6_low_root_ug_bound.py`, `scripts/p13_u6_four_root_ugj.py` | Exact common-`U/G/J6` tables and exhaustive low-/four-root joins for `p=13,k=60,u=6` |
 | `evidence/NOTE_2026-09-02_P13_U6_COMMON_FORM_CLOSE.md`, `evidence/e1_gmin_m4_prop15754.json`, `evidence/e1_gmin_m4_prop15754_low_root_ug.json`, `evidence/e1_gmin_m4_prop15754_four_root_221.json`, `evidence/e1_gmin_m4_prop15754_four_root_311.json` | Proposition 15.754 proof note, exact manifest, and common-form aggregate records; no graph, orbit, or common-realization census |

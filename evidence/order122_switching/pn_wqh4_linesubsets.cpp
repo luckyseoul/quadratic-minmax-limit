@@ -11,10 +11,12 @@ static int direction(int u,int v){int x=u/11,y=u%11,X=v/11,Y=v%11;int dx=(X-x+11
 static std::array<int,11> line(int d,int c){std::array<int,11>L{};if(d==11)for(int y=0;y<11;y++)L[y]=11*c+y;else for(int x=0;x<11;x++)L[x]=11*x+(d*x+c)%11;return L;}
 struct Set4{std::array<unsigned char,4>x;std::array<uint64_t,4>sig;bool has0;};
 static uint32_t block(const Set4&s,int b){int lo=121*b/10,hi=121*(b+1)/10;uint32_t z=0;for(int v=lo;v<hi;v++){int bit=2*v;int val=(s.sig[bit>>6]>>(bit&63))&3ULL;z|=val<<(2*(v-lo));}return z;}
-int main(){
+int main(int argc,char**argv){
+ int only=argc>1?std::stoi(argv[1]):-1;
  const int reps[4]={63,95,111,119};
  std::array<std::array<int,11>,132>L{};for(int d=0;d<12;d++)for(int c=0;c<11;c++)L[11*d+c]=line(d,c);
  for(int mask:reps){
+  if(only>=0&&mask!=only)continue;
   std::array<std::array<unsigned char,121>,121>A{};for(int u=0;u<121;u++)for(int v=u+1;v<121;v++)A[u][v]=A[v][u]=(mask>>direction(u,v))&1;
   std::vector<Set4>S;S.reserve(43560);
   for(int li=0;li<132;li++)for(int a=0;a<8;a++)for(int b=a+1;b<9;b++)for(int c=b+1;c<10;c++)for(int d=c+1;d<11;d++){
@@ -48,4 +50,3 @@ int main(){
  }
  std::cout<<"NONE\n";
 }
-

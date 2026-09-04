@@ -105,10 +105,13 @@ def test_phi_and_L_star_still_consistent_with_15167():
 
 
 def test_e1_open_on_large_k_residual():
-    """Type I is closed; only the large-k residual remains."""
+    """Type I and Lemma D are closed; two independent gates remain."""
     assert e1_closed_general() is False
     open_ = e1_open_residuals()
-    assert open_ == ["non-Walsh residual (ii), even k≥4p"]
+    assert open_ == [
+        "non-Walsh residual (ii), even k≥4p",
+        "minimal four-gap path outside the historical E1 units",
+    ]
     ro = e1_residual_open()
     assert ro["E1_closed"] is False
     assert ro["open"] == open_
@@ -150,6 +153,9 @@ def test_main_honest_e1_open():
     assert out["proved"]["E1_closed_general"] is False
     assert out["proved"]["L_closed"] is False
     assert out["L_status"] == "OPEN"
-    assert out["open_residual"] == ["non-Walsh residual (ii), even k≥4p"]
+    assert out["open_residual"] == [
+        "non-Walsh residual (ii), even k≥4p",
+        "minimal four-gap path outside the historical E1 units",
+    ]
     # 15.168 stores 16N/old residual as a separate unused False
     assert out["proved"]["residual_closed_general"] is False

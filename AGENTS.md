@@ -236,7 +236,7 @@ distinguished edge. Do not reopen the `3A+B`, Aut_e, finite-LP, or small-prime
 census routes as Type-I work. They remain incomplete historical mechanisms,
 not live global gates. Residual (ii), E1, and the limit remain open.
 
-## Current residual-(ii) gate after audited Proposition 15.762 and the post-15.761 exact reductions
+## Current residual-(ii) gate after audited Proposition 15.765 and the post-15.761 exact reductions
 
 Do not reopen `p=13,k=58` or `p=17,k=74`.  Proposition 15.742 combines the
 `M_2=0` congruence with six multiplicative interval cuts and closes the
@@ -372,6 +372,45 @@ the same holds for `-C`. Therefore a conference class with no Boolean `+p`
 or `-p` eigenvector is already a complete `Phi_sph-8` certificate. Do not
 rerun optimizers for the gaps two, four, or six. No such conference class is
 presently constructed, so residual (ii), E1, and `L=1/2` remain OPEN.
+The sporadic Peisert `G(23^2,2)=P**(529)` is already audited: its scalar
+orbit is a 12-direction linear-OA/PN connection set, and explicit Boolean
+`+23` and `-23` eigenvectors regularize it.  See
+`evidence/NOTE_2026-09-04_SPORADIC_PEISERT_529_DEDUP.md`; do not rerun a
+solver or rediscover this class.
+
+Proposition 15.763 proves a signed affine-alias refinement of Proposition
+15.755 by retaining cut signs and the exact active-state row sum. For
+admissible odd `r`, it gives
+`|H|>=oddceil((pr^2+1)m(m-1)/(2r(m-r))-pr^2+2)` with
+`m=(p+1)/2+r`; at `r=1` this is `(p^2+11)/4`. If no noncrossing alias reaches
+deletion eigenshell level two, replace `pr^2+1` by `pr^2+3`. Do not apply this
+to every defect-`2p` point: the three-coordinate integral-eigenvector branch
+is not classified as affine, and all-deletions minimality does not provide a
+common affine coordinate system. Residual (ii), E1, and `L=1/2` remain OPEN.
+
+Proposition 15.764 audits the previously implicit deletion-to-unit bridge.
+For an all-deletions minimal four-gap set H, an odd `|H|` has a deletion at
+signed eigenshell level two exactly when H has a signed level-three row. Frame
+averaging and a level-five degree/anticommutator exclusion prove this whenever
+odd `|H|<=5p`. The H-floor also freezes the distinguished edge on every
+critical row; Paley `-C` is switching/permutation equivalent to `C`, and the
+level-three bi-tight exclusion gives deletion size `k>=3p+1`. Thus this is the
+full official residual-(ii) entry in that range. Even H cannot enter
+residual-(ii) level two by parity; the
+unclosed failure ranges begin at even `|H|>=4p+2` and odd `|H|>=5p+2`. Do not
+claim that every minimal four-gap path is already covered by the four E1 units.
+The formal max-of-affine countermodel in the proposition is a method barrier,
+not a Paley construction. Residual (ii), E1, and `L=1/2` remain OPEN.
+
+Proposition 15.765 kills the proposed affine classification of the first
+defect shell.  At `p=11`, an exact Kiss--Somlai four-special-direction set
+gives a nonaffine `D subset F_11^2`, `|D|=77`, with
+`3+2 sum_(v in D) chi(v-u)=11(2*1_D(u)-1)` for every `u`; the corresponding
+integral `+11` eigenvector has a unique coordinate `3`, while its Boolean
+shadow has defect `22=2p`.  Four nonconstant line profiles prove that `D`
+is not a union of parallel lines.  Do not retry the claim that every
+first-shell point is affine.  This constructs no common all-deletions `H`,
+so residual (ii), E1, and `L=1/2` remain OPEN.
 
 The global Mobius-incidence audit also proves that distinct target
 directions, all signed fixed-word intersections, and physical ternarity

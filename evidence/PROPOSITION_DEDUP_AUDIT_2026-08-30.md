@@ -1243,8 +1243,15 @@ currently `False`. The historical bounded `True` is available only through
 
 The spectral floor remains an interesting optional problem, but it has no
 valid downstream role in the current E(1) proof. The shortest honest work map
-is now residual (ii), the sole false E(1) unit, followed by the final
-implication audit.
+now has two open predicates: residual (ii), the sole false entry in the
+historical four-unit ledger, and Proposition 15.764's minimal-four-gap
+implication bridge.
+
+Proposition 15.764 makes one part of that final implication audit explicit:
+an arbitrary all-deletions minimal four-gap path is not automatically an
+even-cardinality residual-(ii) instance. The bridge is proved for odd
+`|H|<=5p`; even `|H|>=4p+2` and odd `|H|>=5p+2` remain outside the current
+exhaustive unit reduction.
 
 The positive `p=7,z=7` catalog is one finite residual subbranch, not a fourth
 top-level front.
@@ -1307,6 +1314,9 @@ top-level front.
 | **15.760** | primitive ordinary lattice, pure-difference/midpoint Smith forms, and snake-lemma extension | **PROVED INTEGRAL IMAGE THEOREM AND OPEN 0/1 REDUCTION.** `A/R(E)=(Z/pZ)^S(p)`; the moment rows are integer-image sufficient, but the signed Boolean-box intersection is open. |
 | **15.761** | complete real edge--Radon Gram spectrum and Moore--Penrose norm | **PROVED FULL-SPECTRUM THEOREM AND STRONGER METHOD BARRIER.** Both compact rays pass the full-midpoint norm test with strict room for all `r>=7`; no simple graph follows. |
 | **15.762** | switched degree parity and integral Boolean eigenshell norm | **PROVED UNIVERSAL CONFERENCE CUBE GAP.** At square order `p^2+1`, `p>=5`, every non-eigen Boolean point is at least eight below the spherical ceiling. No nonregularizable conference class, residual counterexample, or closure is supplied. |
+| **15.763** | signed affine-alias cut incidence and exact active-state H-score | **PROVED CONDITIONAL AFFINE-FAMILY THEOREM.** For admissible odd `r`, `|H|>=oddceil((pr^2+1)m(m-1)/(2r(m-r))-pr^2+2)`; at `r=1` this is `(p^2+11)/4`. Either a noncrossing alias reaches deletion eigenshell level two or `pr^2+1` strengthens to `pr^2+3`. The nonaffine minimum shell and cross-deletion coordinate alignment remain open, so no global predicate changes. |
+| **15.764** | exact parity shell bridge for an all-deletions minimal four-gap H | **PROVED PARTIAL BRIDGE AND METHOD BARRIER.** Odd H has a level-two deletion iff it hits signed shell level three; frame averaging plus a level-five degree/anticommutator exclusion forces this for `|H|<=5p`. The H-floor freezes the active edge, `-C` normalizes the phase by switching/permutation, and `k>=3p+1`, so the full official residual-(ii) entry follows. Even H has the wrong deletion parity. Failure remains possible only from even `|H|>=4p+2` or odd `|H|>=5p+2`; a non-Paley affine-score model shows the scalar identities alone cannot close those ranges. No global predicate changes. |
+| **15.765** | published four-special-direction set adapted to the one-coordinate-three Paley shell | **PROVED EXACT COUNTEREXAMPLE TO AN AFFINE-SHELL CLASSIFICATION.** At `p=11`, the Kiss--Somlai construction gives `D` of size 77 with `Q1_D=11 1_D-7 1`; hence `(3,2 1_D-1)` is an integral `+11` conference eigenvector and its Boolean shadow has defect `22=2p`. Four nonconstant line profiles rule out a union of parallel affine lines. This is not a common all-deletions H, residual counterexample, or closure; do not rerun an affine-shell classification as though it covered the full shell. |
 | **all-prime odd--Radon gate** | support/line isolation for `b` compact plus `r-1` all-equal branch-C rows under zero odd global forms | **PROVED STRUCTURAL REDUCTION.** For every prime `p=4r+3`, `r>=7`, the chain is central when `3b<=r+2`; balanced branch C is covered through `delta=(2r+2)floor((r+2)/3)`. Nonzero forms, unbalanced allocations, and even moments remain open. |
 | **p31 local gate** | arbitrary compact plus six all-equal atoms, all odd rows and joint degree six/eight with zero global forms | **EXHAUSTIVE LOCAL CERTIFICATE AND BALANCED COROLLARY.** All 450 scaling orbits are covered (449 noncentered `UNSAT`, one independently excluded centered orbit, zero `SAT`), excluding every balanced `69<=t<=99` zero-form profile because each contains that row. Unbalanced/nonzero-form cases and the Boolean box remain open. |
 | **seven-channel dominance** | exact degree-six/eight Jacobian minors for four compact and four all-equal atoms | **PROVED ALGEBRAIC METHOD BARRIER.** Both maps are dominant over the algebraic closure in characteristic at least 11, so no universal seven-channel identity can close the gate. Extension-valued points are not `F_p` or Boolean lifts. |

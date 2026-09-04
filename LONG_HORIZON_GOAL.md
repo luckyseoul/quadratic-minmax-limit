@@ -177,8 +177,8 @@ A session may end only if one of these happened:
 - one of the two fixed amplification rays in Proposition 6.3 is actually
   proved with a Dini-summable error, and the other ray remains the named direct
   convergence gate, or
-- the sole remaining open E(1) unit **actually closed** (predicate True via a
-  real import), or
+- the remaining open E(1) predicates, residual (ii) and the minimal-four-gap
+  implication bridge, **actually closed** (True via real imports), or
 - a live route was **killed as a path** by a general counter-mechanism (not a
   small-\(p\) census), and the writeup names the replacement route, or
 - A terminal state in the table was reached, or

@@ -1,0 +1,52 @@
+{
+  "canonical_certificate_sha256": "64c08ce8c6cacedbf5201441a5230637b1961b19f43d784985b5a1d57332a3b0",
+  "common_neighbor_histogram": {
+    "131": 264,
+    "132": 264
+  },
+  "conference_identity": "C^2=529I",
+  "conference_order": 530,
+  "connection_size": 264,
+  "constructed_csv_sha256": "eeba88c7441385065a235fecc62240de25474f22ad15cab3dcc307b2cbf0c3bc",
+  "graph_parameters": [
+    529,
+    264,
+    131,
+    132
+  ],
+  "group_order": 264,
+  "p": 23,
+  "published_csv": {
+    "sha256": "fcdd847709adc1527374781fb81857bf3ce741c538e35f59126b1c6256e3cda6",
+    "url": "https://www.math.mun.ca/distanceregular/graphdata/sporadicpeisert529.am.csv"
+  },
+  "selected_projective_directions": [
+    [1, 0],
+    [1, 2],
+    [1, 4],
+    [1, 5],
+    [1, 7],
+    [1, 9],
+    [1, 11],
+    [1, 12],
+    [1, 13],
+    [1, 17],
+    [1, 21],
+    [0, 1]
+  ],
+  "status": "regularizable_linear_OA_PN_not_residual_ii_closure",
+  "witnesses": {
+    "+23": {
+      "int16_sha256": "19706232e3f181513356b8515cb3897f79b3827d36975be0549ea704a9c260b7",
+      "line_levels": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      "minus_count": 253,
+      "parallel_direction": [1, 1]
+    },
+    "-23": {
+      "int16_sha256": "1d9873cc4139bb507a16837e4bfeebac36906bd19c2270f90ca01f2076efc62e",
+      "line_levels": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+      "minus_count": 276,
+      "parallel_direction": [1, 0]
+    }
+  }
+}
