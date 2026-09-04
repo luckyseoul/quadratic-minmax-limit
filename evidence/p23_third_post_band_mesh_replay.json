@@ -1,0 +1,1562 @@
+{
+  "checkpoint_commit": "f8af445a0569cd03032f71ed8e18b30822a63721",
+  "changed_premise": "Explicit all-boundary bridges for p=23,t=11,k=114; no repeat of the finished five-set certificate.",
+  "classification": "Complementary independent exact-arithmetic bridge checks; analytic proof and prior theorem dependencies remain separately required.",
+  "script": "scripts/p23_third_post_band_mesh_check.py",
+  "script_sha256": "72915dde0bec34aaf60ced93bd682b67eff39577e70c03ff7e7f2638cc3b6de4",
+  "preflight_utc": "2026-09-04T19:16:00Z/2026-09-04T19:20:00Z",
+  "preflight_summary": [
+    {
+      "host": "soulkiller",
+      "ip": "192.168.1.113",
+      "architecture": "x86_64",
+      "threads": 88,
+      "load_1_5_15": [
+        26.82,
+        11.12,
+        5.27
+      ],
+      "available_memory_MiB": 58008,
+      "gpu": "Tesla V100-SXM2-16GB",
+      "gpu_utilization_percent": 0,
+      "gpu_memory_used_MiB": 140,
+      "runtime": "CuPy14.2.0 CUDA12090"
+    },
+    {
+      "host": "NUKA",
+      "ip": "192.168.1.192",
+      "architecture": "x86_64",
+      "threads": 16,
+      "load_1_5_15": [
+        0,
+        0,
+        0
+      ],
+      "available_memory_MiB": 13983,
+      "gpu": "gfx1201 (RX9070XT)",
+      "runtime": "PyOpenCL2026.1.4 OpenCL2.0"
+    },
+    {
+      "host": "jellyfin",
+      "ip": "192.168.1.191",
+      "architecture": "x86_64",
+      "threads": 16,
+      "load_1_5_15": [
+        0.19,
+        0.05,
+        0.01
+      ],
+      "available_memory_MiB": 12545,
+      "gpu": "Intel Arc A380",
+      "runtime": "PyOpenCL2025.1 OpenCL3.0"
+    },
+    {
+      "host": "orin",
+      "ip": "192.168.1.135",
+      "architecture": "aarch64",
+      "threads": 6,
+      "load_1_5_15": [
+        0.08,
+        0.02,
+        0.01
+      ],
+      "available_memory_MiB": 6127,
+      "gpu": "Orin",
+      "runtime": "CuPy14.1.1 CUDA13020"
+    }
+  ],
+  "routing": {
+    "soulkiller": "Exact rational contact quadratures and independently solved phase-one quadratic parity LPs.",
+    "NUKA": "Finite-field contact rank certificate with 250 selected rows and 27 explicit kernel witnesses for each small boundary; not exhaustive slice enumeration.",
+    "jellyfin": "Covering swap-cube capacity inequalities, complete layer cardinality identity, and exact parity-half Walsh Gram checks.",
+    "orin": "ARM64 Python3.12 standard-library Fraction and integer ledger portability, a capability distinct from the x86_64 V100 host; no routine duplicate CUDA work."
+  },
+  "gpu_research_jobs_launched": false,
+  "runs": [
+    {
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.113 'PYTHONDONTWRITEBYTECODE=1 /home/nick/.venvs/mo-exact/bin/python /tmp/p23-third-post-band.OYjDO2/p23_third_post_band_mesh_check.py contacts'",
+      "exit_code": 0,
+      "output": {
+        "architecture": "x86_64",
+        "classification": "independent bounded bridge cross-check",
+        "host": "soulkiller",
+        "mode": "contacts",
+        "passed": true,
+        "python": "3.14.4",
+        "result": {
+          "positive_degree_two_quadratures": 9,
+          "rows": [
+            {
+              "b": 4,
+              "independent_LP_floor": "46",
+              "moments": [
+                "1",
+                "48/23",
+                "120/23"
+              ],
+              "nodes": [
+                0,
+                2,
+                4
+              ],
+              "weights": [
+                "2/23",
+                "18/23",
+                "3/23"
+              ]
+            },
+            {
+              "b": 6,
+              "independent_LP_floor": "46",
+              "moments": [
+                "1",
+                "72/23",
+                "252/23"
+              ],
+              "nodes": [
+                0,
+                2,
+                4,
+                6
+              ],
+              "weights": [
+                "1/92",
+                "39/92",
+                "51/92",
+                "1/92"
+              ]
+            },
+            {
+              "b": 8,
+              "independent_LP_floor": "46",
+              "moments": [
+                "1",
+                "96/23",
+                "432/23"
+              ],
+              "nodes": [
+                0,
+                2,
+                4,
+                6,
+                8
+              ],
+              "weights": [
+                "3/115",
+                "3/115",
+                "93/115",
+                "13/115",
+                "3/115"
+              ]
+            },
+            {
+              "b": 10,
+              "independent_LP_floor": "46",
+              "moments": [
+                "1",
+                "120/23",
+                "660/23"
+              ],
+              "nodes": [
+                0,
+                2,
+                4,
+                6,
+                8,
+                10
+              ],
+              "weights": [
+                "3/368",
+                "3/368",
+                "3/8",
+                "109/184",
+                "3/368",
+                "3/368"
+              ]
+            },
+            {
+              "b": 12,
+              "independent_LP_floor": "46",
+              "moments": [
+                "1",
+                "144/23",
+                "936/23"
+              ],
+              "nodes": [
+                2,
+                4,
+                6,
+                8,
+                10,
+                12
+              ],
+              "weights": [
+                "3/184",
+                "3/184",
+                "77/92",
+                "9/92",
+                "3/184",
+                "3/184"
+              ]
+            },
+            {
+              "b": 14,
+              "independent_LP_floor": "46",
+              "moments": [
+                "1",
+                "168/23",
+                "1260/23"
+              ],
+              "nodes": [
+                4,
+                6,
+                8,
+                10,
+                12
+              ],
+              "weights": [
+                "3/230",
+                "83/230",
+                "3/5",
+                "3/230",
+                "3/230"
+              ]
+            },
+            {
+              "b": 16,
+              "independent_LP_floor": "46",
+              "moments": [
+                "1",
+                "192/23",
+                "1632/23"
+              ],
+              "nodes": [
+                6,
+                8,
+                10,
+                12
+              ],
+              "weights": [
+                "1/23",
+                "18/23",
+                "3/23",
+                "1/23"
+              ]
+            },
+            {
+              "b": 18,
+              "independent_LP_floor": "46",
+              "moments": [
+                "1",
+                "216/23",
+                "2052/23"
+              ],
+              "nodes": [
+                8,
+                10,
+                12
+              ],
+              "weights": [
+                "15/46",
+                "15/23",
+                "1/46"
+              ]
+            },
+            {
+              "b": 20,
+              "independent_LP_floor": "46",
+              "moments": [
+                "1",
+                "240/23",
+                "2520/23"
+              ],
+              "nodes": [
+                10,
+                12
+              ],
+              "weights": [
+                "18/23",
+                "5/23"
+              ]
+            }
+          ]
+        },
+        "script_sha256": "72915dde0bec34aaf60ced93bd682b67eff39577e70c03ff7e7f2638cc3b6de4"
+      }
+    },
+    {
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.192 'PYTHONDONTWRITEBYTECODE=1 /home/nick/.venvs/qml-mesh/bin/python /tmp/p23-third-post-band.6QRGaG/p23_third_post_band_mesh_check.py small-kernel'",
+      "exit_code": 0,
+      "output": {
+        "architecture": "x86_64",
+        "classification": "independent bounded bridge cross-check",
+        "host": "NUKA",
+        "mode": "small-kernel",
+        "passed": true,
+        "python": "3.14.4",
+        "result": {
+          "boundaries": {
+            "4": {
+              "active_side": 4,
+              "certificate_classification": "finite exact matrix-rank certificate; not a slice census",
+              "contact_rank": 250,
+              "explicit_independent_kernel_vectors": 27,
+              "extra_contact_kernel_dimension": 3,
+              "independent_contact_masks": [
+                5184604,
+                7892896,
+                8012175,
+                4843791,
+                4429667,
+                6925093,
+                5444815,
+                6948819,
+                4314842,
+                3317616,
+                5551856,
+                5416095,
+                7114927,
+                4987679,
+                4908650,
+                4470748,
+                2607788,
+                5318255,
+                7728000,
+                3566694,
+                1490502,
+                5447466,
+                4094304,
+                8050729,
+                7064272,
+                7450938,
+                1301456,
+                926175,
+                759722,
+                4829436,
+                4119872,
+                1936793,
+                5453744,
+                3584364,
+                5975238,
+                3390688,
+                1700336,
+                8170288,
+                2192271,
+                539567,
+                5335599,
+                3222127,
+                1504736,
+                6264464,
+                1029395,
+                5169557,
+                2810298,
+                5691088,
+                8060991,
+                871401,
+                6036464,
+                1764272,
+                4782048,
+                5587167,
+                6472495,
+                5715491,
+                4924703,
+                7180128,
+                3991706,
+                5258201,
+                6301599,
+                676095,
+                7197536,
+                3536272,
+                7671622,
+                317791,
+                6408678,
+                3253622,
+                1514543,
+                744630,
+                5332773,
+                3618921,
+                6104627,
+                5129846,
+                7759887,
+                2623471,
+                5501468,
+                8041004,
+                2730470,
+                5993648,
+                2560431,
+                4943536,
+                7109936,
+                2443766,
+                3103763,
+                355811,
+                1209119,
+                1309488,
+                4667663,
+                4395263,
+                1690671,
+                1293168,
+                7643919,
+                2058409,
+                4539823,
+                2518992,
+                1792185,
+                5689136,
+                3011296,
+                7673445,
+                4094064,
+                1875215,
+                7898844,
+                6123296,
+                7576880,
+                5551452,
+                2093952,
+                4101552,
+                6479696,
+                7514732,
+                2955551,
+                59119,
+                2966111,
+                1673583,
+                7023891,
+                3108448,
+                750809,
+                6767695,
+                1986326,
+                5837887,
+                505712,
+                3788400,
+                5261023,
+                7282186,
+                4676528,
+                3201401,
+                456560,
+                1556854,
+                4437178,
+                8024544,
+                6909360,
+                3456816,
+                3516384,
+                8097440,
+                5517439,
+                1491615,
+                6163599,
+                3996752,
+                3513162,
+                7723424,
+                7735212,
+                631727,
+                2560997,
+                3194800,
+                7810704,
+                5681603,
+                6414991,
+                2055504,
+                7820080,
+                4042249,
+                8097875,
+                908752,
+                1494896,
+                4661104,
+                3793564,
+                3504608,
+                3109232,
+                4513295,
+                2378479,
+                6734458,
+                2249455,
+                3471939,
+                4569359,
+                7564224,
+                8293968,
+                4462447,
+                6997488,
+                5860304,
+                5431951,
+                2520490,
+                4040048,
+                4766863,
+                6086304,
+                379231,
+                731001,
+                3507743,
+                4581498,
+                6871443,
+                1241631,
+                4889647,
+                6087068,
+                5603743,
+                1608511,
+                7886879,
+                6937808,
+                3488821,
+                5226240,
+                3892176,
+                5620970,
+                5658741,
+                2644879,
+                4659946,
+                2346581,
+                4071891,
+                7568464,
+                1922854,
+                1852095,
+                282335,
+                1966783,
+                6524175,
+                5100047,
+                7830784,
+                116687,
+                6660271,
+                2666291,
+                7799183,
+                6745392,
+                6037727,
+                3658278,
+                3892003,
+                4826511,
+                6321039,
+                2192559,
+                5612815,
+                3723327,
+                3375231,
+                6677424,
+                3088176,
+                892134,
+                3961427,
+                5092320,
+                4217583,
+                6387897,
+                6580963,
+                5327830,
+                2902777,
+                6863029,
+                4674191,
+                5728080,
+                2024739,
+                1389871,
+                162367,
+                1412563,
+                1664970,
+                2977248,
+                3379056,
+                3108624,
+                2228016,
+                1914736,
+                7444691,
+                5154598,
+                7074352,
+                6254208,
+                3820458,
+                7735146,
+                4273279,
+                122586,
+                2954543,
+                6444778,
+                5630508
+              ],
+              "prime": 1000003,
+              "raw_coefficients": 277,
+              "sampled_rows_examined": 250,
+              "slice_ideal_dimension": 24
+            },
+            "20": {
+              "active_side": 3,
+              "certificate_classification": "finite exact matrix-rank certificate; not a slice census",
+              "contact_rank": 250,
+              "explicit_independent_kernel_vectors": 27,
+              "extra_contact_kernel_dimension": 3,
+              "independent_contact_masks": [
+                5756016,
+                6481462,
+                3562856,
+                6090128,
+                6280480,
+                4926123,
+                5369672,
+                4797675,
+                2474813,
+                6078947,
+                4109712,
+                7253824,
+                1471909,
+                3921192,
+                6251696,
+                4695784,
+                6061160,
+                3756494,
+                5925808,
+                1951472,
+                4802029,
+                7666736,
+                3554928,
+                1738365,
+                1923824,
+                7485093,
+                7177688,
+                519624,
+                7532710,
+                5585528,
+                3591814,
+                2588064,
+                6851510,
+                7527173,
+                6912408,
+                1293032,
+                7574136,
+                7533208,
+                5654323,
+                2219640,
+                7987992,
+                8014760,
+                8250373,
+                3912488,
+                5172742,
+                8191488,
+                7427824,
+                5628536,
+                956733,
+                5775344,
+                5208232,
+                1864502,
+                2463147,
+                7960744,
+                4669032,
+                6060059,
+                2645734,
+                1034984,
+                1081190,
+                8323181,
+                6835704,
+                4226774,
+                6682885,
+                1599166,
+                1151934,
+                7551344,
+                4060704,
+                1449926,
+                7531624,
+                4712006,
+                5156152,
+                3769336,
+                6011712,
+                7931864,
+                8112424,
+                7280966,
+                7699648,
+                5424478,
+                7671374,
+                1338360,
+                1199598,
+                4570456,
+                7475184,
+                494451,
+                2710326,
+                1948464,
+                7295544,
+                6396717,
+                2275304,
+                1549944,
+                6462638,
+                5586070,
+                2963928,
+                7194822,
+                8086168,
+                7836384,
+                886702,
+                1688702,
+                2827982,
+                1808742,
+                1959752,
+                3586616,
+                3204814,
+                8021856,
+                5473718,
+                2475768,
+                6408134,
+                4306771,
+                391912,
+                4595672,
+                3573309,
+                4357901,
+                7371576,
+                8266608,
+                3388336,
+                6546709,
+                3733589,
+                2770861,
+                3032859,
+                4684016,
+                1101774,
+                3266808,
+                1537448,
+                956133,
+                4646376,
+                4024256,
+                6675360,
+                6074523,
+                4104000,
+                5729928,
+                4047054,
+                4247165,
+                6779840,
+                1431189,
+                8192931,
+                3394680,
+                6411760,
+                5661875,
+                3231672,
+                960355,
+                6736950,
+                8284696,
+                2021654,
+                7174472,
+                7277464,
+                5432203,
+                3986384,
+                2668213,
+                7050437,
+                5652005,
+                4024632,
+                5267320,
+                5885160,
+                7831992,
+                2599965,
+                2810267,
+                7979736,
+                4274123,
+                7259182,
+                2578990,
+                431035,
+                3092920,
+                7458152,
+                2864552,
+                8202672,
+                5088054,
+                3637661,
+                3911800,
+                6239245,
+                6267206,
+                3953309,
+                6843725,
+                3602768,
+                834520,
+                6915763,
+                5925784,
+                2532302,
+                3524422,
+                2062616,
+                8005240,
+                3613901,
+                1984157,
+                6244630,
+                5930040,
+                7825632,
+                488432,
+                427966,
+                3546744,
+                4837320,
+                5518328,
+                3569352,
+                6912216,
+                2868341,
+                1540798,
+                4516558,
+                7313616,
+                6235032,
+                7067944,
+                474072,
+                3992680,
+                4715608,
+                7783992,
+                6167845,
+                8335944,
+                6334299,
+                8136861,
+                5751325,
+                3374280,
+                6015936,
+                3182045,
+                2021840,
+                2994928,
+                2743536,
+                2608368,
+                3972528,
+                1008046,
+                6500037,
+                1983446,
+                5815240,
+                5351021,
+                5124765,
+                6932686,
+                6109552,
+                4977256,
+                5187942,
+                6610062,
+                7787208,
+                1363667,
+                7277654,
+                7170579,
+                6945048,
+                1113643,
+                6701939,
+                2113339,
+                4162392,
+                2095110,
+                3496664,
+                3836126,
+                3958008,
+                1645560,
+                3252702,
+                7333968,
+                5842872,
+                5190739,
+                2691965,
+                1667960,
+                7250392,
+                5960816,
+                6482755,
+                8135526
+              ],
+              "prime": 1000003,
+              "raw_coefficients": 277,
+              "sampled_rows_examined": 250,
+              "slice_ideal_dimension": 24
+            }
+          }
+        },
+        "script_sha256": "72915dde0bec34aaf60ced93bd682b67eff39577e70c03ff7e7f2638cc3b6de4"
+      }
+    },
+    {
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.191 'PYTHONDONTWRITEBYTECODE=1 /home/nick/.venvs/mo-intel/bin/python /tmp/p23-third-post-band.0YiybL/p23_third_post_band_mesh_check.py cubes'",
+      "exit_code": 0,
+      "output": {
+        "architecture": "x86_64",
+        "classification": "independent bounded bridge cross-check",
+        "host": "jellyfin",
+        "mode": "cubes",
+        "passed": true,
+        "python": "3.14.4",
+        "result": {
+          "construction": "pair each small-side coordinate with an opposite-membership outside coordinate; keep the other 12-d selected coordinates fixed",
+          "rows": [
+            {
+              "Walsh_Gram_diagonal": 32,
+              "Walsh_Gram_off_diagonal": 0,
+              "b": 6,
+              "capacity_rows_r_unselected_need_selected_need_filler": [
+                [
+                  0,
+                  5,
+                  0,
+                  12,
+                  6,
+                  6
+                ],
+                [
+                  1,
+                  6,
+                  1,
+                  11,
+                  5,
+                  6
+                ],
+                [
+                  2,
+                  7,
+                  2,
+                  10,
+                  4,
+                  6
+                ],
+                [
+                  3,
+                  8,
+                  3,
+                  9,
+                  3,
+                  6
+                ],
+                [
+                  4,
+                  9,
+                  4,
+                  8,
+                  2,
+                  6
+                ],
+                [
+                  5,
+                  10,
+                  5,
+                  7,
+                  1,
+                  6
+                ],
+                [
+                  6,
+                  11,
+                  6,
+                  6,
+                  0,
+                  6
+                ]
+              ],
+              "contact_layers": [
+                0,
+                2,
+                4,
+                6
+              ],
+              "covered_slice_configurations_via_Vandermonde": 1352078,
+              "dimension": 6,
+              "quadratic_characters": 22
+            },
+            {
+              "Walsh_Gram_diagonal": 128,
+              "Walsh_Gram_off_diagonal": 0,
+              "b": 8,
+              "capacity_rows_r_unselected_need_selected_need_filler": [
+                [
+                  0,
+                  3,
+                  0,
+                  12,
+                  8,
+                  4
+                ],
+                [
+                  1,
+                  4,
+                  1,
+                  11,
+                  7,
+                  4
+                ],
+                [
+                  2,
+                  5,
+                  2,
+                  10,
+                  6,
+                  4
+                ],
+                [
+                  3,
+                  6,
+                  3,
+                  9,
+                  5,
+                  4
+                ],
+                [
+                  4,
+                  7,
+                  4,
+                  8,
+                  4,
+                  4
+                ],
+                [
+                  5,
+                  8,
+                  5,
+                  7,
+                  3,
+                  4
+                ],
+                [
+                  6,
+                  9,
+                  6,
+                  6,
+                  2,
+                  4
+                ],
+                [
+                  7,
+                  10,
+                  7,
+                  5,
+                  1,
+                  4
+                ],
+                [
+                  8,
+                  11,
+                  8,
+                  4,
+                  0,
+                  4
+                ]
+              ],
+              "contact_layers": [
+                0,
+                2,
+                4,
+                6,
+                8
+              ],
+              "covered_slice_configurations_via_Vandermonde": 1352078,
+              "dimension": 8,
+              "quadratic_characters": 37
+            },
+            {
+              "Walsh_Gram_diagonal": 512,
+              "Walsh_Gram_off_diagonal": 0,
+              "b": 10,
+              "capacity_rows_r_unselected_need_selected_need_filler": [
+                [
+                  0,
+                  1,
+                  0,
+                  12,
+                  10,
+                  2
+                ],
+                [
+                  1,
+                  2,
+                  1,
+                  11,
+                  9,
+                  2
+                ],
+                [
+                  2,
+                  3,
+                  2,
+                  10,
+                  8,
+                  2
+                ],
+                [
+                  3,
+                  4,
+                  3,
+                  9,
+                  7,
+                  2
+                ],
+                [
+                  4,
+                  5,
+                  4,
+                  8,
+                  6,
+                  2
+                ],
+                [
+                  5,
+                  6,
+                  5,
+                  7,
+                  5,
+                  2
+                ],
+                [
+                  6,
+                  7,
+                  6,
+                  6,
+                  4,
+                  2
+                ],
+                [
+                  7,
+                  8,
+                  7,
+                  5,
+                  3,
+                  2
+                ],
+                [
+                  8,
+                  9,
+                  8,
+                  4,
+                  2,
+                  2
+                ],
+                [
+                  9,
+                  10,
+                  9,
+                  3,
+                  1,
+                  2
+                ],
+                [
+                  10,
+                  11,
+                  10,
+                  2,
+                  0,
+                  2
+                ]
+              ],
+              "contact_layers": [
+                0,
+                2,
+                4,
+                6,
+                8,
+                10
+              ],
+              "covered_slice_configurations_via_Vandermonde": 1352078,
+              "dimension": 10,
+              "quadratic_characters": 56
+            },
+            {
+              "Walsh_Gram_diagonal": 1024,
+              "Walsh_Gram_off_diagonal": 0,
+              "b": 12,
+              "capacity_rows_r_unselected_need_selected_need_filler": [
+                [
+                  0,
+                  0,
+                  0,
+                  12,
+                  11,
+                  1
+                ],
+                [
+                  1,
+                  1,
+                  1,
+                  11,
+                  10,
+                  1
+                ],
+                [
+                  2,
+                  2,
+                  2,
+                  10,
+                  9,
+                  1
+                ],
+                [
+                  3,
+                  3,
+                  3,
+                  9,
+                  8,
+                  1
+                ],
+                [
+                  4,
+                  4,
+                  4,
+                  8,
+                  7,
+                  1
+                ],
+                [
+                  5,
+                  5,
+                  5,
+                  7,
+                  6,
+                  1
+                ],
+                [
+                  6,
+                  6,
+                  6,
+                  6,
+                  5,
+                  1
+                ],
+                [
+                  7,
+                  7,
+                  7,
+                  5,
+                  4,
+                  1
+                ],
+                [
+                  8,
+                  8,
+                  8,
+                  4,
+                  3,
+                  1
+                ],
+                [
+                  9,
+                  9,
+                  9,
+                  3,
+                  2,
+                  1
+                ],
+                [
+                  10,
+                  10,
+                  10,
+                  2,
+                  1,
+                  1
+                ],
+                [
+                  11,
+                  11,
+                  11,
+                  1,
+                  0,
+                  1
+                ]
+              ],
+              "contact_layers": [
+                2,
+                4,
+                6,
+                8,
+                10,
+                12
+              ],
+              "covered_slice_configurations_via_Vandermonde": 1352078,
+              "dimension": 11,
+              "quadratic_characters": 67
+            },
+            {
+              "Walsh_Gram_diagonal": 256,
+              "Walsh_Gram_off_diagonal": 0,
+              "b": 14,
+              "capacity_rows_r_unselected_need_selected_need_filler": [
+                [
+                  0,
+                  2,
+                  0,
+                  12,
+                  9,
+                  3
+                ],
+                [
+                  1,
+                  3,
+                  1,
+                  11,
+                  8,
+                  3
+                ],
+                [
+                  2,
+                  4,
+                  2,
+                  10,
+                  7,
+                  3
+                ],
+                [
+                  3,
+                  5,
+                  3,
+                  9,
+                  6,
+                  3
+                ],
+                [
+                  4,
+                  6,
+                  4,
+                  8,
+                  5,
+                  3
+                ],
+                [
+                  5,
+                  7,
+                  5,
+                  7,
+                  4,
+                  3
+                ],
+                [
+                  6,
+                  8,
+                  6,
+                  6,
+                  3,
+                  3
+                ],
+                [
+                  7,
+                  9,
+                  7,
+                  5,
+                  2,
+                  3
+                ],
+                [
+                  8,
+                  10,
+                  8,
+                  4,
+                  1,
+                  3
+                ],
+                [
+                  9,
+                  11,
+                  9,
+                  3,
+                  0,
+                  3
+                ]
+              ],
+              "contact_layers": [
+                4,
+                6,
+                8,
+                10,
+                12
+              ],
+              "covered_slice_configurations_via_Vandermonde": 1352078,
+              "dimension": 9,
+              "quadratic_characters": 46
+            },
+            {
+              "Walsh_Gram_diagonal": 64,
+              "Walsh_Gram_off_diagonal": 0,
+              "b": 16,
+              "capacity_rows_r_unselected_need_selected_need_filler": [
+                [
+                  0,
+                  4,
+                  0,
+                  12,
+                  7,
+                  5
+                ],
+                [
+                  1,
+                  5,
+                  1,
+                  11,
+                  6,
+                  5
+                ],
+                [
+                  2,
+                  6,
+                  2,
+                  10,
+                  5,
+                  5
+                ],
+                [
+                  3,
+                  7,
+                  3,
+                  9,
+                  4,
+                  5
+                ],
+                [
+                  4,
+                  8,
+                  4,
+                  8,
+                  3,
+                  5
+                ],
+                [
+                  5,
+                  9,
+                  5,
+                  7,
+                  2,
+                  5
+                ],
+                [
+                  6,
+                  10,
+                  6,
+                  6,
+                  1,
+                  5
+                ],
+                [
+                  7,
+                  11,
+                  7,
+                  5,
+                  0,
+                  5
+                ]
+              ],
+              "contact_layers": [
+                6,
+                8,
+                10,
+                12
+              ],
+              "covered_slice_configurations_via_Vandermonde": 1352078,
+              "dimension": 7,
+              "quadratic_characters": 29
+            },
+            {
+              "Walsh_Gram_diagonal": 16,
+              "Walsh_Gram_off_diagonal": 0,
+              "b": 18,
+              "capacity_rows_r_unselected_need_selected_need_filler": [
+                [
+                  0,
+                  6,
+                  0,
+                  12,
+                  5,
+                  7
+                ],
+                [
+                  1,
+                  7,
+                  1,
+                  11,
+                  4,
+                  7
+                ],
+                [
+                  2,
+                  8,
+                  2,
+                  10,
+                  3,
+                  7
+                ],
+                [
+                  3,
+                  9,
+                  3,
+                  9,
+                  2,
+                  7
+                ],
+                [
+                  4,
+                  10,
+                  4,
+                  8,
+                  1,
+                  7
+                ],
+                [
+                  5,
+                  11,
+                  5,
+                  7,
+                  0,
+                  7
+                ]
+              ],
+              "contact_layers": [
+                8,
+                10,
+                12
+              ],
+              "covered_slice_configurations_via_Vandermonde": 1352078,
+              "dimension": 5,
+              "quadratic_characters": 16
+            }
+          ]
+        },
+        "script_sha256": "72915dde0bec34aaf60ced93bd682b67eff39577e70c03ff7e7f2638cc3b6de4"
+      }
+    },
+    {
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.135 'PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 /tmp/p23-third-post-band.tZW0QO/p23_third_post_band_mesh_check.py ledger'",
+      "exit_code": 0,
+      "output": {
+        "architecture": "aarch64",
+        "classification": "independent bounded bridge cross-check",
+        "host": "orin",
+        "mode": "ledger",
+        "passed": true,
+        "python": "3.12.3",
+        "result": {
+          "analytic_dependencies_not_reproved": [
+            "sharp lift floor",
+            "p+9 local exclusion",
+            "common-row normalization"
+          ],
+          "independent_phase_zero_LP_floors": {
+            "0": "0",
+            "2": "24",
+            "4": "40",
+            "6": "46",
+            "8": "46",
+            "10": "46",
+            "12": "46",
+            "14": "46",
+            "16": "46",
+            "18": "46",
+            "20": "40",
+            "22": "24"
+          },
+          "mass32_floor_surviving_boundaries": [
+            0,
+            2,
+            22
+          ],
+          "nonzero_boundary_lift_excess": 8,
+          "offset_ledgers": [
+            {
+              "forbidden_Q": 4,
+              "forbidden_mass": 8,
+              "forced_Q": 5,
+              "forced_mass": 32,
+              "forced_rows_at_least": 5,
+              "offset_P": 4,
+              "surplus": 7
+            },
+            {
+              "forbidden_Q": 3,
+              "forbidden_mass": 8,
+              "forced_Q": 4,
+              "forced_mass": 32,
+              "forced_rows_at_least": 5,
+              "offset_P": 5,
+              "surplus": 7
+            },
+            {
+              "forbidden_Q": 2,
+              "forbidden_mass": 8,
+              "forced_Q": 3,
+              "forced_mass": 32,
+              "forced_rows_at_least": 5,
+              "offset_P": 6,
+              "surplus": 7
+            },
+            {
+              "forbidden_Q": 1,
+              "forbidden_mass": 8,
+              "forced_Q": 2,
+              "forced_mass": 32,
+              "forced_rows_at_least": 5,
+              "offset_P": 7,
+              "surplus": 7
+            },
+            {
+              "forbidden_Q": 0,
+              "forbidden_mass": 8,
+              "forced_Q": 1,
+              "forced_mass": 32,
+              "forced_rows_at_least": 5,
+              "offset_P": 8,
+              "surplus": 7
+            }
+          ],
+          "p_plus_nine_height_lower": "4",
+          "p_plus_nine_junta_bound": "3696/529",
+          "p_plus_nine_paired_mean_upper": "2/3",
+          "p_plus_nine_target_density": "8/23",
+          "sharp_lift_floor_dependency": 20
+        },
+        "script_sha256": "72915dde0bec34aaf60ced93bd682b67eff39577e70c03ff7e7f2638cc3b6de4"
+      }
+    }
+  ]
+}

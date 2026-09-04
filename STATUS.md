@@ -1,11 +1,16 @@
-# Status (2026-09-04; through audited Proposition 15.770 and the post-15.761 geometry, conic, and Boolean reductions)
+# Status (2026-09-04; through audited Proposition 15.771 and the post-15.761 geometry, conic, and Boolean reductions)
 
-Proposition 15.771 is present as an **open reduction / REVIEW_PENDING
-candidate** for `p=23,t=11,k=114`. Its executable checks pass, but its
-general-slice equality, covering swap-cube, and phase-zero mass-32 bridges
-still require explicit proof and review. The endpoint closure flags are
-false and the reviewed frontier remains `p=23,t>=11`. See
-`evidence/NOTE_2026-09-04_P23_THIRD_POST_BAND_REVIEW.md`.
+Proposition 15.771 **closes `p=23,t=11,k=114` for every boundary size**.
+The general-slice equality, covering swap-cube, and phase-zero mass-32
+bridges are proved and independently reviewed. The mean-46 classification
+fixes the hard coefficient offsets; the common-row ledger forces at least
+five opposite mass-32 rows, excluded using pointwise parity minima and
+the local `p+9` theorem. All four mesh modes passed their independent exact
+checks. See the
+[endpoint proof](evidence/NOTE_2026-09-04_P23_THIRD_POST_BAND_CLOSE.md)
+and [mesh replay](evidence/p23_third_post_band_mesh_replay.json).
+The p23 frontier is now `t>=12,k>=116`; the generic 15.768--15.770 ranges
+are unchanged. Residual (ii), E1, `L=1/2`, and the original limit remain OPEN.
 
 **The original question has been separated from the stronger Paley value
 program.**  MathOverflow 413935 asks for existence, not an identified value.
@@ -449,7 +454,7 @@ residual counterexample nor a closure. Residual (ii), E1, `L=1/2`, and the
 original MO limit remain OPEN.
 
 **15.768--15.770 close the first two generic layers beyond Proposition
-15.752's band, and 15.769--15.770 close the first two exceptional `p=23`
+15.752's band, and 15.769--15.771 close the first three exceptional `p=23`
 endpoints.**
 Proposition 15.768 treats every prime `p=1 mod 4`, `p>=29`, at
 `t=(p-7)/2`, equivalently `k=5p-7`.  Its new complement-triple hard equality
@@ -481,10 +486,30 @@ sharp family has eleven low hard triangle-minus-star roots, which still force
 the common quartic and octic forms to vanish.  The opposite surplus is four,
 so at least eight mass-36 rows occur; offset compatibility again leaves only
 `P=4,Q=5,F_5`, contradicting the same exact 33,649-five-set certificate.
-Thus the two infinite one-layer extensions and both exceptional p23
-endpoints are closed, not residual (ii) globally.  With `q=(p-1)/2` and
-`k=4p+2t`, the exact open frontier is: critical `p=5,7`; `p=11,t>=3`
-(`k>=50`); `p=13,17,19,t>=5`; `p=23,t>=11`;
+Thus Proposition 15.770 supplies two infinite one-layer extensions and
+the second exceptional p23 endpoint.
+
+Proposition 15.771 closes the third exceptional endpoint `p=23,t=11,k=114`
+for every boundary. The carried `u=9` residue still has ten low roots and
+reuses the same quartic/octic certificate; `u=10` forces the already
+excluded mass-22 lift. In `u=11`, either an exact quotient-zero baseline
+occurs or all twelve hard quotients are one. In the latter case every hard
+row has scaled mean 46. Positive contacts and a quadratic slice-kernel
+argument globalize the `b=4,20` equality types; covering swap cubes exclude
+`b=6,8,...,18`; the constant and Boolean mass-24 lift cases complete the
+catalog with coefficient offsets `4,5,6,7,8`. Common-row normalization
+fixes the hard count to its offset. Both quotient branches leave opposite
+surplus seven and force at least five scaled-mass-32 rows. At boundary zero
+Proposition 15.752 excludes them; at `b=2,22`, subtraction of the pointwise
+parity minimum leaves mass eight below the sharp lift floor 20; every other
+boundary floor exceeds 32. The
+[complete proof](evidence/NOTE_2026-09-04_P23_THIRD_POST_BAND_CLOSE.md)
+and [four-node replay](evidence/p23_third_post_band_mesh_replay.json)
+record the explicit bridges and independent checks.
+
+With `q=(p-1)/2` and `k=4p+2t`, the exact open frontier is: critical
+`p=5,7`; `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`;
+`p=23,t>=12` (`k>=116`);
 `p=1 mod 4,p>=29,t>=q-1`; `p=3 mod 4,p>=31,t>=q`; and the separately
 tracked positive `p=7,z=7` branch.  Residual (ii), E1, `L=1/2`, and the
 original MO limit remain OPEN.
@@ -889,9 +914,10 @@ p13 endpoint theorem, not a graph, orbit, coefficient-cell, or common-
 realization census.  Together with Propositions 15.752--15.753, it closes the
   fifth shell `k=4p+8` for every prime `p>=13`.  Propositions 15.768--15.770
   subsequently close the first two generic post-band layers and both
-  `p=23,t=9,10` endpoints; they do not close residual (ii) globally.  The
+  `p=23,t=9,10` endpoints; Proposition 15.771 adds `p=23,t=11,k=114`.
+  Residual (ii) remains open globally. The
   exact open frontier is critical `p=5,7`; `p=11,t>=3` (`k>=50`);
-  `p=13,17,19,t>=5`; `p=23,t>=11`; `p=1 mod 4,p>=29,t>=q-1`; and
+  `p=13,17,19,t>=5`; `p=23,t>=12` (`k>=116`); `p=1 mod 4,p>=29,t>=q-1`; and
   `p=3 mod 4,p>=31,t>=q`, where `q=(p-1)/2`; the separate positive
   `p=7,z=7` branch also remains open.  Hence E1,
 `L=1/2`, and the original convergence problem remain OPEN.
@@ -915,8 +941,9 @@ the two primes; it is not a graph or common-realization census. Together
 with 15.752, the fifth shell is now closed for every prime `p>=17`.
 Proposition 15.754 later closes the sole `p=13,k=60` residue `u=6`, and
 15.768--15.770 later close the first two generic post-band layers plus
-`p=23,t=9,k=110` and `p=23,t=10,k=112`.  The exact later frontier is
-`p=11,t>=3`, `p=13,17,19,t>=5`, `p=23,t>=11`, and the two generic
+`p=23,t=9,k=110` and `p=23,t=10,k=112`. Proposition 15.771 subsequently
+closes `p=23,t=11,k=114`. The exact later frontier is
+`p=11,t>=3`, `p=13,17,19,t>=5`, `p=23,t>=12` (`k>=116`), and the two generic
 congruence-class ranges stated above; the critical `p=5,7` cases also remain.
 Residual II globally, E1, `L=1/2`, and the original convergence problem
 remain OPEN.
@@ -2406,7 +2433,7 @@ HEAD 15.585. Sandwich and Paley \(\rho=1\) are proved. \(L=\tfrac12\) is not. Th
 | Bi-tight majorization algebra (15.167) | CANDIDATE | `prop15167.py` |
 | Type I freeness-fail ND (two-level Max−) | **CLOSED** (that slice) | 15.272 \(k=1\cup k=3\) \(\Rightarrow G_+\succ0\Rightarrow\) 15.249 dual-eq empty |
 | Residual (ii), affine + even \(k\le4p-2\) | **CLOSED** (that range) | 15.179 + 15.236 + 15.237 |
-| Residual (ii), even \(k\ge4p\) | **OPEN globally; the fifth shell is CLOSED for every \(p\ge13\), the 15.752 band and two following generic layers are closed** | 15.734--15.735 and 15.737 close \(k\in\{4p,4p+2,4p+4\}\) for every boundary and every \(p\ge11\); 15.751 closes \(k=4p+6\) for every \(p\ge13\); 15.752--15.754 complete the fifth shell and 15.752's contiguous band. Propositions 15.768--15.770 close `k=5p-7,5p-5` for `p=1 mod 4, p>=29`, `k=5p-5,5p-3` for `p=3 mod 4, p>=31`, and the exceptional `p=23,t=9,10` endpoints `k=110,112`. With `q=(p-1)/2`, the exact remainder is: critical `p=5,7`; `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`; `p=23,t>=11`; `p=1 mod 4,p>=29,t>=q-1`; `p=3 mod 4,p>=31,t>=q`; and positive `p=7,z=7`. |
+| Residual (ii), even \(k\ge4p\) | **OPEN globally; the fifth shell is CLOSED for every \(p\ge13\), the 15.752 band and two following generic layers are closed** | 15.734--15.735 and 15.737 close \(k\in\{4p,4p+2,4p+4\}\) for every boundary and every \(p\ge11\); 15.751 closes \(k=4p+6\) for every \(p\ge13\); 15.752--15.754 complete the fifth shell and 15.752's contiguous band. Propositions 15.768--15.770 close `k=5p-7,5p-5` for `p=1 mod 4, p>=29`, `k=5p-5,5p-3` for `p=3 mod 4, p>=31`, and the exceptional `p=23,t=9,10` endpoints `k=110,112`. Proposition 15.771 closes `p=23,t=11,k=114`. With `q=(p-1)/2`, the exact remainder is: critical `p=5,7`; `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`; `p=23,t>=12` (`k>=116`); `p=1 mod 4,p>=29,t>=q-1`; `p=3 mod 4,p>=31,t>=q`; and positive `p=7,z=7`. |
 | Type I, multi-level Max− | **OPEN** | 15.543 \(\mu_{1d}\); 15.544 p=5 mix; 15.546 p=7 mix \(109/2863<|T|\); 15.551 Galois line-union; 15.559 Aut_e DEAD as \(A_{\mathrm{full}}\) name; `type_I_multilevel_bad_case_ND_closed=False` |
 | \(\lambda_{\min}(\Phi)\ge6\) | **OPEN** | 15.279; 15.550–15.582: \(S=\mathrm{Kl}\), \(\mu_{1d}\), \(\mu_{k=3}\) named; \(p=5\) \(Q_{++}=48/13\); \(A_{\mathrm{full}}\) / \(D\) / ensemble \(Q_\tau\) unnamed; `phi_F_ge_6=False` |
 | E(1) / \(L=\tfrac12\) | **OPEN** | needs the four leftovers above |
@@ -2415,7 +2442,7 @@ HEAD 15.585. Sandwich and Paley \(\rho=1\) are proved. \(L=\tfrac12\) is not. Th
 ### Fatal gaps (honest)
 
 1. Residual **(i)** two-level dual-eq: **CLOSED** by 15.272 (not Aut-Schur, not Gsum LB). Multi-level Type I is **OPEN**. `gsum_disj_lb` remains False and is unused.
-2. Residual **(ii)** for affine + even \(k\le4p-2\): **CLOSED** (15.179 + 15.236 + 15.237). For \(k\ge4p\), the first three layers are **CLOSED** for every \(p\ge11\) by 15.734--15.735 and 15.737; 15.751 closes the fourth shell; 15.752--15.754 complete the fifth shell and 15.752's higher band. Propositions 15.768--15.770 close the next two generic post-band layers and `p=23,t=9,10`. With `q=(p-1)/2`, the exact remaining frontier is critical `p=5,7`; `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`; `p=23,t>=11`; `p=1 mod 4,p>=29,t>=q-1`; `p=3 mod 4,p>=31,t>=q`; and positive `p=7,z=7`. Do not call residual (ii) globally closed.
+2. Residual **(ii)** for affine + even \(k\le4p-2\): **CLOSED** (15.179 + 15.236 + 15.237). For \(k\ge4p\), the first three layers are **CLOSED** for every \(p\ge11\) by 15.734--15.735 and 15.737; 15.751 closes the fourth shell; 15.752--15.754 complete the fifth shell and 15.752's higher band. Propositions 15.768--15.770 close the next two generic post-band layers and `p=23,t=9,10`; Proposition 15.771 adds `p=23,t=11,k=114`. With `q=(p-1)/2`, the exact remaining frontier is critical `p=5,7`; `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`; `p=23,t>=12` (`k>=116`); `p=1 mod 4,p>=29,t>=q-1`; `p=3 mod 4,p>=31,t>=q`; and positive `p=7,z=7`. Do not call residual (ii) globally closed.
 
 ### Remainder progress (15.172–194)
 
@@ -2499,11 +2526,12 @@ HEAD 15.585. Sandwich and Paley \(\rho=1\) are proved. \(L=\tfrac12\) is not. Th
 1. \(\lambda_{\min}(\Phi)\ge6\) without treating \(G_{u,\mathrm{disj}}\) as a Gram (it is not PSD).
 2. Residual (ii): with `q=(p-1)/2`, the exact frontier is critical
    `p=5,7`; `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`;
-   `p=23,t>=11`; `p=1 mod 4,p>=29,t>=q-1`;
+   `p=23,t>=12` (`k>=116`); `p=1 mod 4,p>=29,t>=q-1`;
    `p=3 mod 4,p>=31,t>=q`; and positive `p=7,z=7`.
    Propositions 15.753--15.754 close the p17/p19 and p13 fifth-shell
    endpoints; Propositions 15.768--15.770 close the first two generic
-   post-band layers and `p=23,t=9,10`.
+   post-band layers and `p=23,t=9,10`; Proposition 15.771 closes
+   `p=23,t=11,k=114`.
 3. Multi-level Type I is **closed by Proposition 15.750**; the older `3A+B`
    mechanism remains incomplete but is no longer a live gate.
 4. Lemma D is complete and is not a required open.

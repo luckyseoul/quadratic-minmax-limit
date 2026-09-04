@@ -236,7 +236,7 @@ distinguished edge. Do not reopen the `3A+B`, Aut_e, finite-LP, or small-prime
 census routes as Type-I work. They remain incomplete historical mechanisms,
 not live global gates. Residual (ii), E1, and the limit remain open.
 
-## Current residual-(ii) gate after audited Proposition 15.770 and the post-15.761 exact reductions
+## Current residual-(ii) gate after audited Proposition 15.771 and the post-15.761 exact reductions
 
 Do not reopen `p=13,k=58` or `p=17,k=74`.  Proposition 15.742 combines the
 `M_2=0` congruence with six multiplicative interval cuts and closes the
@@ -444,9 +444,29 @@ triangle-minus-star roots, still more than the octic degree, and at least
 eight opposite mass-36 rows; the same offset test forces `P=4,Q=5,F_5` and
 reuses the same disjoint quartic/octic certificate.  The accelerator vector
 `[33649,1518,2024,0]` is an independent implementation check; the exact CPU
-five-set/orbit certificate is authoritative.  The currently unclaimed p23
-frontier starts at `t=11,k=114`; later layers and residual (ii) globally
-remain open.
+five-set/orbit certificate is authoritative.
+
+Proposition 15.771 closes `p=23,t=11,k=114` for every boundary size.
+The `b=4,20` contact equalities globalize by the elementary quadratic
+fixed-weight kernel and mixed-coefficient pair sums. For `b=6,8,...,18`,
+every slice point lies in a cross-boundary swap cube of dimension at least
+five; even-half degree-two injectivity excludes the equality. The remaining
+mean46 families have integral offsets4,5,6,7,8. The common row identity
+must be applied before selecting an offset: it forces common `P`, then
+`12P<=115` and `P=offset mod11` give `P=offset`. Both this all-one branch
+and the exact quotient-zero branch force at least five opposite mass32
+rows. At phase zero, floors leave only `b=0,2,22`; the last two require
+pointwise subtraction of XOR or the omitted bit, leaving mass8 below the
+sharp floor20. The `b=0` cell invokes the local15.752 mass`p+9` theorem.
+The `u=9` two-unit carry retains ten roots and the same fixed five-set
+certificate; `u=10` invokes the already proved mass22 local exclusion.
+Do not reopen any p23 layer `t<=11` with another graph, slice, coefficient,
+or five-set census. The next unclaimed p23 layer is `t=12,k=116`.
+See `NOTE_2026-09-04_P23_THIRD_POST_BAND_CLOSE.md` and its small-boundary
+and middle-boundary proof notes. The four-node independent arithmetic
+replay is `evidence/p23_third_post_band_mesh_replay.json`; it supplements
+the analytic proof. Generic later layers and residual(ii) globally remain
+open.
 
 The global Mobius-incidence audit also proves that distinct target
 directions, all signed fixed-word intersections, and physical ternarity
@@ -770,7 +790,7 @@ Residual (ii), E1, `L=1/2`, and the original MO limit remain OPEN.
 Consequently the fifth shell `k=4p+8` is closed for every prime `p>=13`.
 With `q=(p-1)/2` and `k=4p+2t`, the exact residual-(ii) frontier is now:
 critical `p=5,7`; `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`;
-`p=23,t>=11`; `p=1 mod 4,p>=29,t>=q-1`; and
+`p=23,t>=12`; `p=1 mod 4,p>=29,t>=q-1`; and
 `p=3 mod 4,p>=31,t>=q`.  The separate positive `p=7,z=7` branch also
 remains open.  Propositions 15.743--15.749 and
 15.753--15.754 are finite certificates or branch theorems, not an all-prime

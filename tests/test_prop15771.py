@@ -1,9 +1,14 @@
+import json
+from pathlib import Path
+
 from e1_gmin_m4_prop15771 import (
     mean_46_contact_quadratures,
     mean_46_hard_family_catalog,
     mean_46_small_support_equality_catalog,
     middle_boundary_equality_exclusion,
+    middle_boundary_swap_cube,
     p23_mass_24_lift_catalog,
+    p23_phase_zero_mass_exclusions,
     p23_third_post_band_residue_ledger,
     p23_u11_all_one_common_row_exclusion,
     p23_u11_common_row_exclusion,
@@ -91,6 +96,29 @@ def test_middle_boundaries_die_by_full_even_half_rank():
         == item["degree_at_most_two_dimension"]
         for item in row["rows"]
     )
+    assert all(item["every_slice_point_has_cross_boundary_swap_cube"] for item in row["rows"])
+
+
+def test_constructed_swap_cubes_cover_each_intersection_class():
+    for boundary in range(6, 20, 2):
+        boundary_set = set(range(boundary))
+        small = boundary_set if boundary <= 11 else set(range(23)) - boundary_set
+        outside = set(range(23)) - small
+        dimension = len(small)
+        for weight in range(dimension + 1):
+            selected = tuple(sorted(sorted(small)[:weight] + sorted(outside)[:12 - weight]))
+            cube = middle_boundary_swap_cube(boundary, selected)
+            assert cube["dimension"] == dimension
+            pairs = cube["pairs"]
+            fixed = set(cube["fixed_selected"])
+            for mask in range(1 << dimension):
+                point = fixed | {pair[0] if mask & (1 << index) else pair[1]
+                                 for index, pair in enumerate(pairs)}
+                assert len(point) == 12
+                intersection = len(point & boundary_set)
+                assert intersection == (mask.bit_count() if boundary <= 11 else 12 - mask.bit_count())
+                if mask == cube["base_point_mask"]:
+                    assert point == set(selected)
 
 
 def test_mass_24_lift_is_boolean_and_has_exact_three_family_catalog():
@@ -161,17 +189,52 @@ def test_both_u11_quotient_profile_branches_force_five_mass_32_rows():
         assert item["directions_at_forced_Q_at_least"] == 5
 
 
-def test_proposition_15771_keeps_unreviewed_endpoint_open():
+def test_phase_zero_bridge_checks_all_boundaries_and_nonnegative_lifts():
+    row = p23_phase_zero_mass_exclusions()
+    assert row["proved"] and row["all_even_boundaries_excluded"]
+    assert row["baseline_subtraction_is_nonnegative_by_parity"]
+    assert row["pointwise_baselines"] == {
+        "b=0": "0", "b=2": "(x_i-x_j)^2", "b=22": "x_j",
+    }
+    assert row["sharp_positive_lift_mass_floor"] == 20
+    masses = {item["scaled_mean"]: item for item in row["rows"]}
+    assert masses[8]["floor_surviving_boundaries"] == [0]
+    assert masses[32]["floor_surviving_boundaries"] == [0, 2, 22]
+    for mass in (8, 32):
+        assert [item["b"] for item in masses[mass]["boundary_rows"]] == list(range(0, 23, 2))
+        assert all(item["excluded"] for item in masses[mass]["boundary_rows"])
+    assert [(item["b"], item["lift_mass"]) for item in masses[32]["boundary_rows"]
+            if item["lift_mass"] is not None] == [(0, 32), (2, 8), (22, 8)]
+    for package in (p23_u11_zero_quotient_exclusion(), p23_u11_all_one_common_row_exclusion()):
+        assert package["all_boundary_opposite_mass_bridge"] == row
+
+
+def test_proposition_15771_closes_only_the_reviewed_endpoint():
     row = proposition_15771()
     assert row["certificate_checks_passed"]
-    assert row["status"].startswith("REVIEW_PENDING")
-    assert not row["proof_review_complete"]
-    assert len(row["pending_proof_bridges"]) == 3
-    assert not row["proved"]
-    assert not row["p23_k114_closed"]
-    assert not row["all_boundary_sizes_excluded"]
+    assert row["status"].startswith("PROVED")
+    assert row["proof_review_complete"]
+    assert not row["pending_proof_bridges"]
+    assert len(row["completed_proof_bridges"]) == 3
+    assert row["proved"]
+    assert row["p23_k114_closed"]
+    assert row["all_boundary_sizes_excluded"]
     assert not row["new_graph_or_residual_configuration_census_used"]
     assert not row["later_p23_layers_closed"]
     assert not row["residual_ii_closed_globally"]
     assert not row["E1_closed"]
     assert not row["quadratic_minmax_limit_closed"]
+
+
+def test_reviewed_endpoint_evidence_and_proof_package_are_synchronized():
+    root = Path(__file__).resolve().parents[1]
+    row = proposition_15771()
+    saved = json.loads((root / "evidence/e1_gmin_m4_prop15771.json").read_text())
+    assert saved == json.loads(json.dumps(row))
+    for relative in row["proof_notes"]:
+        assert (root / relative).is_file()
+    for name in ("STATUS.md", "README.md", "LONG_HORIZON_GOAL.md", "AGENTS.md"):
+        text = (root / name).read_text()
+        assert "15.771" in text
+        assert "p=23,t>=12" in text
+        assert "p=23,t>=11" not in text

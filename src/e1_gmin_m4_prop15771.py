@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-r"""Prop. 15.771 -- candidate third exceptional ``p=23`` post-band close.
+r"""Prop. 15.771 -- third exceptional ``p=23`` post-band endpoint close.
 
-REVIEW_PENDING: the executable certificate checks pass, but the general-slice
-equality, covering swap-cube, and phase-zero mass-32 bridges must be made
-explicit and reviewed before the public endpoint closure flags can be true.
+The general-slice equality, covering swap-cube, and phase-zero mass-32
+bridges are explicit and independently reviewed. See the standalone proof
+NOTE_2026-09-04_P23_THIRD_POST_BAND_CLOSE.md and its two local proof notes.
+The four-node arithmetic checks supplement, and do not replace, that proof.
 
 At ``p=23,t=11,k=114`` the isolated-chart phase-one ledger has only three
 non-arithmetic residues.  The carried sharp ``u=9`` residue still has ten
@@ -449,7 +450,19 @@ def _expected_value_on_slice(values: tuple[int, ...], active: int) -> Fraction:
 
 @lru_cache(maxsize=1)
 def mean_46_small_support_equality_catalog() -> dict[str, object]:
-    """Classify the exact ``b=0,4,20`` floor-equality cells."""
+    r"""Classify general-slice ``b=0,4,20`` floor-equality cells.
+
+    For a small side S of size3 or4, put F=A-1. Contact r=0 makes the
+    pure outside polynomial q(y) vanish on J(23-|S|,12). The quadratic
+    fixed-weight kernel identity q=(sum y-12)(lambda+sum mu_j y_j)
+    eliminates that polynomial using sum y=12-sum x. At r=2, the mixed
+    coefficient pair sums D_ij+D_lj are constant in outside index j.
+    Since |S|>=3, every D_ij is itself constant in j, and outside weight
+    substitution leaves a quadratic in S alone. All bit patterns extend.
+    Thus the catalog is exhaustive for arbitrary slice quadratics, not an
+    assumed small junta. The elementary kernel proof is in the associated
+    SMALL_BOUNDARY_EQUALITY_PROOF note.
+    """
     quadratures = mean_46_contact_quadratures()
 
     b4_rows = []
@@ -552,6 +565,15 @@ def mean_46_small_support_equality_catalog() -> dict[str, object]:
             "every r=2 contact makes each cross-coefficient column constant, "
             "so the equality cell depends only on the small parity side"
         ),
+        "general_slice_globalization": {
+            "outside_sizes": [19, 20],
+            "zero_contact_outside_weight": 12,
+            "pair_contact_outside_weight": 10,
+            "fixed_weight_quadratic_kernel": "q(y)=(sum y-12)*(lambda+sum mu_j*y_j)",
+            "cross_pair_sums_force_each_row_constant": True,
+            "all_small_side_bit_patterns_extend": True,
+            "proof_note": "evidence/NOTE_2026-09-04_P23_SMALL_BOUNDARY_EQUALITY_PROOF.md",
+        },
         "cross_column_pair_sum_rank": {
             "b=4_active_columns": 4,
             "b=4_pair_sum_matrix_rank": _rank_mod(
@@ -594,10 +616,34 @@ def middle_boundary_equality_exclusion() -> dict[str, object]:
         columns, rank = _degree_two_even_half_rank(active)
         row = next(item for item in quadratures["rows"] if item["b"] == boundary)
         forced_original_layers = list(row["nodes"])
+        covering_cases = []
+        for selected_on_small_side in range(active + 1):
+            # Every selected small-side point needs an unselected outside
+            # partner; every unselected one needs a selected outside partner.
+            outside_selected = M - selected_on_small_side
+            outside_unselected = P - active - outside_selected
+            covering_cases.append({
+                "selected_on_small_side": selected_on_small_side,
+                "outside_selected": outside_selected,
+                "outside_unselected": outside_unselected,
+                "selected_partner_slack": outside_selected - (active - selected_on_small_side),
+                "unselected_partner_slack": outside_unselected - selected_on_small_side,
+            })
+        original_intersections = [
+            weight if boundary <= Q else M - weight
+            for weight in range(0, active + 1, 2)
+        ]
+        covers = all(
+            case["selected_partner_slack"] == M - active >= 0
+            and case["unselected_partner_slack"] == Q - active >= 0
+            for case in covering_cases
+        )
         proved = bool(
             5 <= active <= Q
             and rank == columns == 1 + active + comb(active, 2)
             and all(pattern % 2 == 0 for pattern in forced_original_layers)
+            and sorted(original_intersections) == forced_original_layers
+            and covers
         )
         _require(proved, f"the b={boundary} even-half rank failed")
         rows.append(
@@ -605,6 +651,10 @@ def middle_boundary_equality_exclusion() -> dict[str, object]:
                 "b": boundary,
                 "smaller_parity_side_size": active,
                 "all_patterns_on_smaller_side_extend_to_J(23,12)": True,
+                "every_slice_point_has_cross_boundary_swap_cube": covers,
+                "covering_capacity_cases": covering_cases,
+                "fixed_selected_outside_count": M - active,
+                "cube_original_intersection": "r" if boundary <= Q else "12-r",
                 "degree_at_most_two_dimension": columns,
                 "even_half_evaluation_rank_mod_1000003": rank,
                 "contact_layers_in_original_b_coordinate": forced_original_layers,
@@ -622,7 +672,52 @@ def middle_boundary_equality_exclusion() -> dict[str, object]:
             "no two subsets of size at most two are complements, so their "
             "restrictions are linearly independent"
         ),
+        "covering_proof": (
+            "pair each smaller-side coordinate with a distinct outside coordinate "
+            "of opposite membership in the prescribed 12-set; capacities have "
+            "slacks 12-d and11-d. Fix the remaining12-d selected coordinates. "
+            "Choosing one point from every pair gives a d-cube through the set. "
+            "Original boundary intersection has the parity of the cube weight."
+        ),
         "proved": all(row["excluded"] for row in rows),
+    }
+
+
+def middle_boundary_swap_cube(boundary: int, selected: tuple[int, ...]) -> dict[str, object]:
+    """Construct a full cross-boundary cube through a prescribed 12-set."""
+    if boundary not in range(6, 20, 2):
+        raise ValueError("need b in {6,8,10,12,14,16,18}")
+    chosen = set(selected)
+    if len(selected) != M or len(chosen) != M or not chosen <= set(range(P)):
+        raise ValueError("selected must contain twelve distinct coordinates in0..22")
+    boundary_set = set(range(boundary))
+    small = boundary_set if boundary <= Q else set(range(P)) - boundary_set
+    outside = set(range(P)) - small
+    selected_partners = iter(sorted(outside & chosen))
+    unselected_partners = iter(sorted(outside - chosen))
+    pairs = tuple(
+        (point, next(unselected_partners if point in chosen else selected_partners))
+        for point in sorted(small)
+    )
+    paired = {point for pair in pairs for point in pair}
+    fixed = tuple(sorted(chosen - paired))
+    original_mask = sum(1 << index for index, pair in enumerate(pairs) if pair[0] in chosen)
+    recovered = set(fixed) | {
+        pair[0] if original_mask & (1 << index) else pair[1]
+        for index, pair in enumerate(pairs)
+    }
+    _require(
+        len(paired) == 2 * len(small)
+        and len(fixed) == M - len(small)
+        and recovered == chosen,
+        "the covering cube lost its base point",
+    )
+    return {
+        "b": boundary,
+        "dimension": len(small),
+        "pairs": pairs,
+        "fixed_selected": fixed,
+        "base_point_mask": original_mask,
     }
 
 
@@ -993,10 +1088,106 @@ def p23_u9_two_unit_carry_exclusion() -> dict[str, object]:
 
 
 @lru_cache(maxsize=1)
+def p23_phase_zero_mass_exclusions() -> dict[str, object]:
+    r"""Exclude opposite scaled means 8 and 32 for every even boundary.
+
+    Write a=2p E[A], with A nonnegative, integral, quadratic and of
+    phase-zero parity |B intersect X| on J(23,12). The exact floors leave
+    b=0 only at a=8, and b=0,2,22 at a=32. At b=0, A=2L. At b=2 the
+    parity minimum is (x_i-x_j)^2; at b=22 it is x_j for the omitted point.
+    Both minima are Boolean quadratics of scaled mean24. Hence subtracting
+    them and dividing by two gives a NONNEGATIVE integral quadratic L,
+    not merely a formal difference. Its mass4p E[L] is the excess.
+
+    Positive mass8 contradicts Proposition15.688's sharp mass20 floor;
+    mass32 at b=0 contradicts the local, band-independent Proposition15.752.
+    """
+    floor_certificate = residual_even_floor_table(P)
+    floors = {
+        int(boundary): int(value)
+        for boundary, value in floor_certificate["phase_zero_floors"].items()
+    }
+    sharp = sharp_integral_quadratic_lift_floor(P)
+    sharp_mass = int(sharp["sharp_scaled_floor"])
+    local = p_plus_nine_local_exclusion(P)
+    baseline_tables = {
+        2: [(left - right) ** 2 for left, right in product((0, 1), repeat=2)],
+        22: [0, 1],
+    }
+    baseline_parities = {
+        2: [(left + right) % 2 for left, right in product((0, 1), repeat=2)],
+        22: [(M - omitted) % 2 for omitted in (0, 1)],
+    }
+    baseline_means = {
+        2: Fraction(2 * M * (P - M), P * (P - 1)),
+        22: Fraction(M, P),
+    }
+    _require(
+        all(baseline_tables[b] == baseline_parities[b] for b in (2, 22))
+        and all(2 * P * baseline_means[b] == 24 for b in (2, 22)),
+        "the phase-zero pointwise parity baselines changed",
+    )
+    rows = []
+    for mass in (8, 32):
+        boundary_rows = []
+        for boundary, floor in floors.items():
+            if floor > mass:
+                reason = "scaled mean below exact phase-zero floor"
+                lift_mass = None
+                excluded = True
+            else:
+                _require(boundary in (0, 2, 22), "unclassified phase-zero boundary")
+                lift_mass = mass - floor
+                if 0 < lift_mass < sharp_mass:
+                    reason = "nonzero nonnegative integral quadratic lift below mass20"
+                    excluded = bool(sharp["proved"])
+                elif boundary == 0 and lift_mass == P + 9:
+                    reason = "b=0 gives A=2L, excluded by local p+9 theorem15.752"
+                    excluded = bool(local["proved"])
+                else:
+                    raise ArithmeticError("unclassified phase-zero lift mass")
+            boundary_rows.append({
+                "b": boundary,
+                "phase_zero_floor": floor,
+                "lift_mass": lift_mass,
+                "reason": reason,
+                "excluded": excluded,
+            })
+        rows.append({
+            "scaled_mean": mass,
+            "floor_surviving_boundaries": [b for b, floor in floors.items() if floor <= mass],
+            "boundary_rows": boundary_rows,
+            "excluded": all(row["excluded"] for row in boundary_rows),
+        })
+    proved = bool(
+        floor_certificate["proved"] and sharp["proved"] and local["proved"]
+        and sharp_mass == 20
+        and rows[0]["floor_surviving_boundaries"] == [0]
+        and rows[1]["floor_surviving_boundaries"] == [0, 2, 22]
+        and all(row["excluded"] for row in rows)
+    )
+    _require(proved, "an opposite mass8 or mass32 boundary survived")
+    return {
+        "p": P,
+        "phase": 0,
+        "scaled_mean_definition": "a=2p E[A]",
+        "lift_scaled_mass_definition": "a-floor=4p E[L]",
+        "pointwise_baselines": {"b=0": "0", "b=2": "(x_i-x_j)^2", "b=22": "x_j"},
+        "baseline_subtraction_is_nonnegative_by_parity": True,
+        "sharp_positive_lift_mass_floor": sharp_mass,
+        "local_p_plus_nine_dependency": local,
+        "rows": rows,
+        "excluded_scaled_means": [8, 32],
+        "all_even_boundaries_excluded": proved,
+        "proved": proved,
+    }
+
+
+@lru_cache(maxsize=1)
 def p23_u11_all_one_common_row_exclusion() -> dict[str, object]:
     """Exclude the no-quotient-zero, all-mean-46 hard branch."""
     catalog = mean_46_hard_family_catalog()
-    local = p_plus_nine_local_exclusion(P)
+    local = p23_phase_zero_mass_exclusions()
     rows = []
     for offset in catalog["possible_coefficient_offsets"]:
         offset = int(offset)
@@ -1052,7 +1243,8 @@ def p23_u11_all_one_common_row_exclusion() -> dict[str, object]:
         "common_row_identity": "hT=24P-115",
         "opposite_mean_identity": "a(Q)=24(P+Q)-184",
         "offset_ledgers": rows,
-        "dependency": "Proposition 15.752 p+9 local exclusion",
+        "all_boundary_opposite_mass_bridge": local,
+        "dependency": "phase-zero floors, pointwise parity baselines, and15.688/15.752",
         "excluded": proved,
         "proved": proved,
     }
@@ -1062,7 +1254,7 @@ def p23_u11_all_one_common_row_exclusion() -> dict[str, object]:
 def p23_u11_zero_quotient_exclusion() -> dict[str, object]:
     """Exclude ``u=11`` when one old exact quotient-zero row occurs."""
     rules = baseline_coefficient_rules(P)
-    local = p_plus_nine_local_exclusion(P)
+    local = p23_phase_zero_mass_exclusions()
     baseline_rows = (
         (2, BRANCH_B2, int(rules[BRANCH_B2]["offset"])),
         (P - 1, BRANCH_P3_LAST, int(rules[BRANCH_P3_LAST]["offset"])),
@@ -1126,7 +1318,8 @@ def p23_u11_zero_quotient_exclusion() -> dict[str, object]:
         "common_row_identity": "hT=24c-91 and P_L=c+k_L",
         "opposite_mean_identity": "a(Q)=24(c+Q)-160",
         "baseline_ledgers": rows,
-        "dependency": "Proposition 15.752 p+9 local exclusion",
+        "all_boundary_opposite_mass_bridge": local,
+        "dependency": "phase-zero floors, pointwise parity baselines, and15.688/15.752",
         "excluded": proved,
         "proved": proved,
     }
@@ -1154,7 +1347,7 @@ def p23_u11_common_row_exclusion() -> dict[str, object]:
 
 @lru_cache(maxsize=1)
 def proposition_15771() -> dict[str, object]:
-    """Package the checked candidate, without claiming reviewed closure."""
+    """Package the reviewed all-boundary ``p=23,t=11,k=114`` theorem."""
     residues = p23_third_post_band_residue_ledger()
     u9 = p23_u9_two_unit_carry_exclusion()
     u10 = p23_p_minus_one_local_exclusion()
@@ -1169,14 +1362,21 @@ def proposition_15771() -> dict[str, object]:
     _require(proved, "Proposition 15.771 failed")
     return {
         "prop": "15.771",
-        "status": "REVIEW_PENDING all-boundary exceptional endpoint candidate",
+        "status": "PROVED all-boundary exceptional endpoint theorem",
         "certificate_checks_passed": proved,
-        "proof_review_complete": False,
-        "pending_proof_bridges": [
+        "proof_review_complete": True,
+        "pending_proof_bridges": [],
+        "completed_proof_bridges": [
             "general-slice equality reduction for b=4 and b=20",
             "covering swap cubes for the middle-boundary rank certificates",
             "phase-zero mass-32 floor and p+9 exclusion bridge",
         ],
+        "proof_notes": [
+            "evidence/NOTE_2026-09-04_P23_THIRD_POST_BAND_CLOSE.md",
+            "evidence/NOTE_2026-09-04_P23_SMALL_BOUNDARY_EQUALITY_PROOF.md",
+            "evidence/NOTE_2026-09-04_P23_MIDDLE_BOUNDARY_CUBE_PROOF.md",
+        ],
+        "independent_mesh_replay": "evidence/p23_third_post_band_mesh_replay.json",
         "statement": (
             "the residual-(ii) isolated-chart branch at p=23,t=11,k=114 "
             "is empty for every boundary size"
@@ -1193,8 +1393,8 @@ def proposition_15771() -> dict[str, object]:
             },
             "u=11": u11,
         },
-        "p23_k114_closed": False,
-        "all_boundary_sizes_excluded": False,
+        "p23_k114_closed": proved,
+        "all_boundary_sizes_excluded": proved,
         "new_graph_or_residual_configuration_census_used": False,
         "fixed_four_bit_boolean_catalog_reused": True,
         "fixed_p23_five_set_coefficient_certificate_reused_for_u9": True,
@@ -1202,7 +1402,7 @@ def proposition_15771() -> dict[str, object]:
         "residual_ii_closed_globally": False,
         "E1_closed": False,
         "quadratic_minmax_limit_closed": False,
-        "proved": False,
+        "proved": proved,
     }
 
 

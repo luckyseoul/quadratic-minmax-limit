@@ -2,16 +2,69 @@
 
 **Current mathematical status: L OPEN.**
 
-## Checkpoint before the full-mesh attack (2026-09-04)
+## Completed full-mesh target: Proposition 15.771 (2026-09-04)
+
+The pre-attack checkpoint `f8af445a0569cd03032f71ed8e18b30822a63721` was
+committed and pushed to `origin/residual/p13-u6-common-moments` before this
+attack. The active checkout is `/home/nick/quadratic-minmax-limit-residual-ii`
+on that branch, not the separate `main` worktree.
+
+Proposition 15.771 now **closes `p=23,t=11,k=114` for every boundary size**.
+The general-slice `b=4,20` equality proof, the covering swap-cube proof for
+`b=6,8,...,18`, and the phase-zero mass-32 bridge are explicit and have
+passed independent proof review. The new hard equality offsets are exactly
+`4,5,6,7,8`; both quotient-profile branches force at least five opposite
+rows of mass32, and every such boundary is excluded. The p23 frontier
+therefore starts at `t=12,k=116`. No generic frontier or global gate changes.
+
+The sole chosen target is completed; no later-layer search is running.
+Do not extend the old five-set certificate or rerun a graph/slice census at
+`t=9,10,11`. The next deliberately selected Paley attack should reassess
+the new all-mean-46 equality theorem against the still-open generic third
+post-band layer (`p=1 mod4,p>=29,t=q-1`), before launching any computation.
+That implication has not been proved or attacked in this checkpoint.
+The direct original-MO route remains separate and open.
+
+Authoritative proof: `evidence/NOTE_2026-09-04_P23_THIRD_POST_BAND_CLOSE.md`.
+Complementary mesh checks all exited zero: soulkiller checked nine rational
+contact quadratures and phase-one LP floors; NUKA certified both small-side
+contact ranks250 with27 independent kernel witnesses; jellyfin checked all
+seven covering cubes and exact Walsh Gram identities; Orin checked the
+phase-zero floors and row ledgers with ARM64 exact arithmetic. These are
+bounded independent checks, not substitutes for the analytic proof.
+No GPU research job, installation, or mount change was needed.
+
+Replay:
+`PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -q -n 0 tests/test_prop15768.py tests/test_prop15769.py tests/test_prop15770.py tests/test_prop15771.py tests/test_p23_post_band_moment_close.py tests/test_p23_second_post_band_moment_close.py tests/test_p23_third_post_band_mesh_check.py tests/test_main_chain_docs.py`.
+
+Final regression: **238 tests passed**, covering all 28 test files added in
+`f8af445`, the new independent mesh-check file, and the documentation gate.
+This includes exact equality of the live proposition payload and saved JSON,
+proof-note presence, current p23 frontier checks, and all four recorded node
+outputs with the pinned checker hash. `git diff --check` is clean.
+
+SHA-256 values:
+
+- `evidence/e1_gmin_m4_prop15771.json`:
+  `20ffd08d29bf08f33c9a50d12ea07e7c3c021bb3d6dfe22d0298ee5e7e2de3e2`.
+- `evidence/p23_third_post_band_mesh_replay.json`:
+  `2cd9c8388bab4f3e320d2f3ca0d296307c3f568b5189cf5fdc978e3a9197b50a`.
+- `scripts/p23_third_post_band_mesh_check.py`:
+  `72915dde0bec34aaf60ced93bd682b67eff39577e70c03ff7e7f2638cc3b6de4`.
+
+## Historical checkpoint before the full-mesh attack (2026-09-04)
+
+The following pending-review record describes `f8af445`, not the current
+verdict; the completed section above supersedes it.
 
 The working branch is `residual/p13-u6-common-moments`, based on
 `54932032984c66061977a43f54b80ee41b7cb3f3`. This checkpoint preserves the
 post-15.761 work and the reviewed post-band closes through 15.770.
-Proposition 15.771 is an **open reduction / REVIEW_PENDING candidate** for
-`p=23,t=11,k=114`, not reviewed endpoint closure. Its executable checks pass;
-the public closure flags remain false until the three proof bridges listed
-in `evidence/NOTE_2026-09-04_P23_THIRD_POST_BAND_REVIEW.md` are completed.
-The canonical p23 frontier remains `t>=11`; all global gates remain open.
+Proposition 15.771 was then an **open reduction / REVIEW_PENDING candidate**
+for `p=23,t=11,k=114`, not reviewed endpoint closure. Its executable checks
+passed; the public closure flags remained false until the three proof bridges
+in `evidence/NOTE_2026-09-04_P23_THIRD_POST_BAND_REVIEW.md` were completed.
+The canonical p23 frontier then remained `t>=11`; all global gates were open.
 
 The pre-checkpoint focused run covered all 28 newly added test files plus
 `tests/test_main_chain_docs.py` (230 tests passed). The status correction is
@@ -288,7 +341,7 @@ gate; all newly added source and script files also compile. The pending
   has isolated an exact all-orders invariant and ruled out two seductive
   false shortcuts.
 
-## Current working checkpoint (2026-09-04; audited Proposition 15.770 and post-15.761 exact reductions)
+## Current working checkpoint (2026-09-04; audited Proposition 15.771 and post-15.761 exact reductions)
 
 - Propositions 15.757--15.761 continue the separately audited
   15.755--15.756 reductions at the full edge--Radon map of one common graph.
@@ -369,8 +422,10 @@ gate; all newly added source and script files also compile. The pending
   degree-four and degree-eight forms.  The corrected opposite surplus is
   four, so at least eight mass-36 rows occur; coefficient compatibility
   again forces `P=4,Q=5,F_5`, contradicting the same fixed 33,649-five-set
-  certificate.  Thus the currently unclaimed `p=23` frontier starts at
-  `t=11,k=114`.  SHA-256 values for the 15.768, 15.769, 15.770, first-p23,
+  certificate. Proposition 15.771 subsequently closes `t=11,k=114` by
+  the all-boundary equality and mass-32 arguments above; the unclaimed
+  p23 frontier now starts at `t=12,k=116`.
+  SHA-256 values for the 15.768, 15.769, 15.770, first-p23,
   and second-p23 evidence JSON are respectively
   `ec69d440ee064988434fd73abe6ede7bafb9293abc6466747bf65ab7c2ed68bc`,
   `5d1d96c16ef3f843250804fdad2acb90d2e75da277e912bcd2ee5fc247e2db38`,
@@ -379,7 +434,7 @@ gate; all newly added source and script files also compile. The pending
   and `8ca51868389f2d136d45a045907a9ddd5cd5b54492b959cf09f4b8a474c699b3`.
 - With `q=(p-1)/2` and `k=4p+2t`, the exact residual-(ii) frontier is
   critical `p=5,7`; `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`;
-  `p=23,t>=11`; `p=1 mod 4,p>=29,t>=q-1`;
+  `p=23,t>=12`; `p=1 mod 4,p>=29,t>=q-1`;
   `p=3 mod 4,p>=31,t>=q`; and the separately tracked positive
   `p=7,z=7` branch.  Residual (ii), E1, and the limit remain open.
 - The completed global Mobius-incidence calculation is a route barrier:
@@ -807,26 +862,29 @@ earlier line listing generic branch-B `t=3` as open; Proposition 15.750
 supersedes every earlier Type-I status line. Propositions 15.768--15.770
 supersede every earlier line that treats the first two generic post-band
 layers, or `p=23,t=9,k=110` or `p=23,t=10,k=112`, as open.
+Proposition 15.771 supersedes the former `p=23,t=11,k=114` pending review.
 
-**Date:** 2026-09-04 (through Propositions 6.3--6.10a and audited 15.770; required bi-tight levels 2 and 3 and multi-level Type I are
+**Date:** 2026-09-04 (through Propositions 6.3--6.10a and audited 15.771; required bi-tight levels 2 and 3 and multi-level Type I are
 closed, residual (ii) is closed for every boundary at
 `k in {4p,4p+2,4p+4}` for every prime `p>=11`, the entire fourth shell
 `k=4p+6` for every prime `p>=13`, the entire fifth shell `k=4p+8` for every
 prime `p>=13`, Proposition 15.752's contiguous higher band, and the exceptional
 and generic branches at `p=13,k=58`, the generic `p=17,k=74` row, and the
 `u=3,0,4,6` branches at `p=13,k=60`, the first two generic post-band
-layers, and `p=23,t=9,10` are closed; with `q=(p-1)/2`, the remaining
+layers, and `p=23,t=9,10,11` are closed; with `q=(p-1)/2`, the remaining
 frontier is critical `p=5,7`, `p=11,t>=3` (`k>=50`),
-`p=13,17,19,t>=5`, `p=23,t>=11`, `p=1 mod 4,p>=29,t>=q-1`,
+`p=13,17,19,t>=5`, `p=23,t>=12`, `p=1 mod 4,p>=29,t>=q-1`,
 `p=3 mod 4,p>=31,t>=q`, and the positive `p=7,z=7` branch)
 **The quadratic-minmax limit is still OPEN.**
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
-**HEAD:** on `main`. Working brain is ALWAYS main.
+**Active research branch:** `residual/p13-u6-common-moments` in
+`/home/nick/quadratic-minmax-limit-residual-ii`; `main` is the integration
+branch, not this checkpoint's current HEAD.
 
 **Mandatory preflight:** read
 `evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md` before launching another
 solver, projection, shell, channel, orbit, or timeout. It accounts for every
-assigned proposition through 15.770 and maps the former scratch scripts to
+assigned proposition through 15.771 and maps the former scratch scripts to
 closed, dead, necessary-only, or live routes.  The 2026-08-31 worktree
 cleanup and remote archive are recorded in
 `evidence/NOTE_2026-08-31_DIRTY_WORKTREE_TRIAGE.md`.
@@ -846,9 +904,10 @@ explicit contiguous higher band. Proposition 15.753 closes the p17/p19
 fifth-shell endpoints, and Proposition 15.754 closes `p=13,k=60,u=6`, so
 the fifth shell is closed for every `p>=13`. Propositions 15.768--15.770
 then close the first two generic post-band layers and the exceptional
-`p=23,t=9,k=110` and `p=23,t=10,k=112` endpoints. With
+`p=23,t=9,k=110` and `p=23,t=10,k=112` endpoints. Proposition 15.771
+adds `p=23,t=11,k=114`. With
 `q=(p-1)/2`, they leave critical `p=5,7`, `p=11,t>=3`,
-`p=13,17,19,t>=5`, `p=23,t>=11`, `p=1 mod 4,p>=29,t>=q-1`, and
+`p=13,17,19,t>=5`, `p=23,t>=12`, `p=1 mod 4,p>=29,t>=q-1`, and
 `p=3 mod 4,p>=31,t>=q`. Propositions
 15.738--15.739 additionally close the exceptional `p=13,t=3,u=3` row;
 15.740--15.741 reduce its generic complement to the common-graph energy
@@ -4421,7 +4480,7 @@ estimates remain; none is proved. See
 | Leftover | Predicate | Remaining estimate |
 |---|---|---|
 | 1 | `phi_F_ge_6_proved_general` | QVAR on k≥7 (all p≥13) **and** principal `\|\|δ\|\|^2 ≤ n(n+10)^2/[6(n-14)(n-6)]`. Crude `E[s^4]≤2n^3` is too weak. |
-| 2 | `residual_ii_k_eq_4p_empty` / `multilevel_ND_k_ge_4p_proved` | Historical 2026-08-21 target, updated through 15.770: 15.734--15.754 close the first five shells and 15.752's higher band; 15.768--15.770 close the next two generic post-band layers and `p=23,t=9,10`. With `q=(p-1)/2`, the exact frontier is critical `p=5,7`; `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`; `p=23,t>=11`; `p=1 mod 4,p>=29,t>=q-1`; `p=3 mod 4,p>=31,t>=q`; and positive `p=7,z=7`, so the all-prime predicate remains False. |
+| 2 | `residual_ii_k_eq_4p_empty` / `multilevel_ND_k_ge_4p_proved` | Historical 2026-08-21 target, updated through 15.771: 15.734--15.754 close the first five shells and 15.752's higher band; 15.768--15.770 close the next two generic post-band layers and `p=23,t=9,10`; 15.771 closes `p=23,t=11,k=114`. With `q=(p-1)/2`, the exact frontier is critical `p=5,7`; `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`; `p=23,t>=12`; `p=1 mod 4,p>=29,t>=q-1`; `p=3 mod 4,p>=31,t>=q`; and positive `p=7,z=7`, so the all-prime predicate remains False. |
 | 3 | `type_I_multilevel_bad_case_ND_closed=True` | **Closed by 15.750.** The older `|μ|`, `3A+B`, and Aut_e estimates remain incomplete as mechanisms but are no longer global gates. |
 
 Historical dump: all three then-live leftovers were False; Gsum False;
@@ -4490,7 +4549,7 @@ overridden twice.
 | Item | Flag | Status |
 |---|---|---|
 | \(\lambda_{\min}(\Phi)\ge6\) on \(Z\) | `phi_F_ge_6_proved_general=False` | Historically open, but no longer an E(1) acceptance gate after 15.720. Exceptional QVAR is closed through `k=6` and remains on `k>=7` from `p=13`; principal blocks retain the delta-variance target only within this optional stronger route. |
-| Residual (ii), even \(k\ge4p\) | `residual_ii_k_eq_4p_empty=False` | Open globally. Propositions 15.734--15.754 close the first five shells and 15.752's higher band; 15.768--15.770 close the next two generic post-band layers and `p=23,t=9,10`. With `q=(p-1)/2`, the exact frontier is critical `p=5,7`; `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`; `p=23,t>=11`; `p=1 mod 4,p>=29,t>=q-1`; `p=3 mod 4,p>=31,t>=q`; and positive `p=7,z=7`. The all-prime legacy predicate therefore stays False. |
+| Residual (ii), even \(k\ge4p\) | `residual_ii_k_eq_4p_empty=False` | Open globally. Propositions 15.734--15.754 close the first five shells and 15.752's higher band; 15.768--15.770 close the next two generic post-band layers and `p=23,t=9,10`; 15.771 closes `p=23,t=11,k=114`. With `q=(p-1)/2`, the exact frontier is critical `p=5,7`; `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`; `p=23,t>=12`; `p=1 mod 4,p>=29,t>=q-1`; `p=3 mod 4,p>=31,t>=q`; and positive `p=7,z=7`. The all-prime legacy predicate therefore stays False. |
 | Type I, Max− not two-level \(\{-1,-3\}\) | `type_I_multilevel_bad_case_ND_closed=True` | Closed by Proposition 15.750 using isolated-chart parity halving and exact `p=5,7` Farkas certificates. |
 | Lemma D | True | Closed. Do not unflip. |
 
@@ -4569,9 +4628,10 @@ Official class is leftover Max− together with \(s_+\ge2\). leftover-only (\(s_
   fourth shell for `p>=13`; 15.752--15.754 together close the fifth shell
   for every `p>=13`, and 15.752 also closes its stated higher band.
   Propositions 15.768--15.770 close the next two generic post-band layers
-  and `p=23,t=9,10`. With `q=(p-1)/2`, the exact remaining frontier is
+  and `p=23,t=9,10`; 15.771 adds `p=23,t=11,k=114`.
+  With `q=(p-1)/2`, the exact remaining frontier is
   critical `p=5,7`; `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`;
-  `p=23,t>=11`; `p=1 mod 4,p>=29,t>=q-1`;
+  `p=23,t>=12`; `p=1 mod 4,p>=29,t>=q-1`;
   `p=3 mod 4,p>=31,t>=q`; and positive `p=7,z=7`. Proposition 15.753 closes the p17/p19 fifth-shell
   endpoints and 15.754 closes p13 `u=6`.
   Propositions 15.738--15.742 close both `p=13,k=58` branches, 15.743 closes

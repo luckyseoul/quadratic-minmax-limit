@@ -1,5 +1,14 @@
 # Third p23 post-band endpoint: checkpoint and acceptance gate
 
+**Resolved later on 2026-09-04.** All three proof bridges below are now
+explicit and independently reviewed; the four complementary node checks
+also passed. Proposition15.771 closes `p=23,t=11,k=114`, and the p23
+frontier advances to `t>=12,k>=116`. See
+`NOTE_2026-09-04_P23_THIRD_POST_BAND_CLOSE.md` and
+`p23_third_post_band_mesh_replay.json`. The rest of this note preserves
+the historical pending-review state in checkpoint
+`f8af445a0569cd03032f71ed8e18b30822a63721`; it is not the current verdict.
+
 Classification: **open reduction**, with a passing executable certificate
 candidate. Proposition 15.771 is **REVIEW_PENDING**, not a reviewed theorem.
 The candidate endpoint is `p=23,t=11,k=114`; the preceding endpoints

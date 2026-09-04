@@ -3,7 +3,7 @@
 **Date:** 2026-09-04
 
 **Scope:** Propositions 6.3--6.10a, every assigned proposition through
-Proposition 15.770 (with protected 15.766--15.767 work left in its existing
+Proposition 15.771 (with protected 15.766--15.767 work left in its existing
 scope), the audited post-15.761 support/conic/Boolean reductions,
 the live predicate wiring, and the attack scripts present during the audit
 
@@ -12,11 +12,18 @@ or finite-prime rerun from being mistaken for a new mathematical attack
 
 ## Verdict
 
-Checkpoint addition: 15.771 is an **OPEN REDUCTION / REVIEW_PENDING**
-candidate for `p=23,t=11,k=114`, with passing executable checks but three
-pending proof bridges. It does not change this audit's reviewed frontier.
-See `NOTE_2026-09-04_P23_THIRD_POST_BAND_REVIEW.md`; do not mistake the
-candidate's internal arithmetic checks for public endpoint closure.
+Checkpoint history: commit `f8af445` correctly preserved 15.771 as an
+**OPEN REDUCTION / REVIEW_PENDING** candidate. Its three missing bridges
+are now explicit and independently reviewed: general-slice equality at
+`b=4,20`, covering swap cubes at `b=6,8,...,18`, and pointwise phase-zero
+subtraction followed by the mass-32 exclusion. Proposition 15.771 is a
+**PROVED ALL-BOUNDARY ENDPOINT THEOREM** at `p=23,t=11,k=114`; the p23
+frontier is now `t>=12,k>=116`. The generic frontiers and all global open
+predicates are unchanged. See [the completed proof](NOTE_2026-09-04_P23_THIRD_POST_BAND_CLOSE.md)
+and [the four-node independent bridge checks](p23_third_post_band_mesh_replay.json).
+The earlier review note remains checkpoint history. Do not repeat a graph,
+orbit, slice, or five-set census at this closed endpoint, and do not confuse
+hardware agreement with the analytic proof bridges it verifies.
 
 The duplication concern was correct.
 
@@ -1271,11 +1278,11 @@ name until this file is checked first.
 
 - Propositions 15.1--15.82 are written directly in `solution.md` and related
   early modules.
-- There are 684 source-backed proposition modules from 15.83 through 15.770.
+- There are 685 source-backed proposition modules from 15.83 through 15.771.
 - The labels 15.537, 15.583, 15.584, and 15.767 have no proposition module.
   The first three are unassigned labels, not unreviewed propositions; 15.767
   has protected note-only work and is not reclassified by this sync.
-- Every source-backed proposition through 15.770 is included in this audit.
+- Every source-backed proposition through 15.771 is included in this audit.
   The grouped ledger below is by shared mathematical route rather than a
   full row-by-row restatement of the source-backed propositions.
 
@@ -1286,10 +1293,10 @@ The public theorem is gated consistently by the corrected global
 currently `False`. The historical bounded `True` is available only through
 `e1_bounded_residual_split_closed()` and is not a global theorem predicate.
 
-| unit | exact live content | status after audit through 15.770 |
+| unit | exact live content | status after audit through 15.771 |
 |---|---|---|
 | required bi-tight levels 2 and 3 | 15.720 degree congruence using 15.272/15.207 | **TRUE** |
-| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — 15.734--15.754 close the first five shells and 15.752's explicit contiguous band. Propositions 15.768--15.770 close the next two generic layers and `p=23,t=9,10`. With `q=(p-1)/2`, the exact frontier is critical `p=5,7`; `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`; `p=23,t>=11`; `p=1 mod 4,p>=29,t>=q-1`; `p=3 mod 4,p>=31,t>=q`; and positive `p=7,z=7`. The global predicate stays false. |
+| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — 15.734--15.754 close the first five shells and 15.752's explicit contiguous band. Propositions 15.768--15.770 close the next two generic layers and `p=23,t=9,10`; 15.771 closes `p=23,t=11,k=114`. With `q=(p-1)/2`, the exact frontier is critical `p=5,7`; `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`; `p=23,t>=12` (`k>=116`); `p=1 mod 4,p>=29,t>=q-1`; `p=3 mod 4,p>=31,t>=q`; and positive `p=7,z=7`. The global predicate stays false. |
 | Type I | the multi-level `3A+B>0` bad case | **TRUE** (15.750) — isolated-chart rigidity and parity halving close every prime `p>=11`; exact integer Farkas identities close `p=5,7` |
 | Lemma D | every good-line triple and its Fejer two-plane amplitudes | **TRUE** (15.276) |
 
@@ -1372,6 +1379,7 @@ top-level front.
 | **15.768** | first `p=1 mod 4` post-band residue, pointwise complement-triple equality, and local mass `p+15` exclusion | **PROVED INFINITE-FAMILY THEOREM WITH THE FIXED FOUR-BIT CERTIFICATE.** For every prime `p=1 mod 4,p>=29`, it closes `t=q-3`, equivalently `k=5p-7`. The `p=29` height endpoint uses the dimension-free cube theorem `E[g]=3/4 => max(g)<=6`; no prime, graph, orbit, slice, or residual-cell census is used. |
 | **15.769** | first `p=3 mod 4` post-band residue, sharp `p-3` lift classification, common-row offsets, and exceptional p23 moment close | **PROVED INFINITE-FAMILY AND ENDPOINT THEOREM.** For every prime `p=3 mod 4,p>=31`, it closes `t=q-2`, equivalently `k=5p-5`. It also closes `p=23,t=9,k=110`: half-mean equality globalizes to `F_4/F_5`, offsets leave `F_5`, twelve roots annihilate the quartic/octic forms, and the exact 33,649-five-set counts `(33649,1518,2024,0)` have no joint zero. |
 | **15.770** | one-row carry of the newly classified equalities and sharp local exclusions | **PROVED TWO INFINITE ONE-LAYER EXTENSIONS AND ENDPOINT THEOREM.** It closes `t=q-2,k=5p-5` for `p=1 mod 4,p>=29`, `t=q-1,k=5p-3` for `p=3 mod 4,p>=31`, and `p=23,t=10,k=112`. At p23, eleven low triangle-minus-star roots still annihilate both forms; the corrected surplus gives at least eight opposite mass-36 rows, and the same fixed five-set certificate excludes `P=4,Q=5,F_5`. Later layers and residual (ii) globally remain open. |
+| **15.771** | third p23 post-band endpoint, full mean-46 equality classification, and all-boundary phase-zero mass-32 bridge | **PROVED ALL-BOUNDARY ENDPOINT THEOREM WITH REUSED FINITE CERTIFICATE.** It closes `p=23,t=11,k=114`. The `u=9` carry retains ten low roots, `u=10` forces a forbidden mass-22 lift, and both `u=11` quotient branches force at least five opposite mass-32 rows. Explicit small-side globalization and covering swap cubes complete the equality classification; pointwise parity baselines justify the nonnegative lift subtraction. Four-node exact checks corroborate the reviewed proof. The next p23 frontier is `t>=12,k>=116`; generic ranges and global predicates are unchanged. No repeat endpoint census is authorized. |
 | **all-prime odd--Radon gate** | support/line isolation for `b` compact plus `r-1` all-equal branch-C rows under zero odd global forms | **PROVED STRUCTURAL REDUCTION.** For every prime `p=4r+3`, `r>=7`, the chain is central when `3b<=r+2`; balanced branch C is covered through `delta=(2r+2)floor((r+2)/3)`. Nonzero forms, unbalanced allocations, and even moments remain open. |
 | **p31 local gate** | arbitrary compact plus six all-equal atoms, all odd rows and joint degree six/eight with zero global forms | **EXHAUSTIVE LOCAL CERTIFICATE AND BALANCED COROLLARY.** All 450 scaling orbits are covered (449 noncentered `UNSAT`, one independently excluded centered orbit, zero `SAT`), excluding every balanced `69<=t<=99` zero-form profile because each contains that row. Unbalanced/nonzero-form cases and the Boolean box remain open. |
 | **seven-channel dominance** | exact degree-six/eight Jacobian minors for four compact and four all-equal atoms | **PROVED ALGEBRAIC METHOD BARRIER.** Both maps are dominant over the algebraic closure in characteristic at least 11, so no universal seven-channel identity can close the gate. Extension-valued points are not `F_p` or Boolean lifts. |
@@ -1551,9 +1559,13 @@ Before spending mesh/GPU time:
    15.754 closes the remaining p13 residue `u=6` by its exact common-form
    certificate.
    Propositions 15.768--15.770 additionally close the first two generic
-   post-band layers and `p=23,t=9,10`. With `q=(p-1)/2`, the live residual
+   post-band layers and `p=23,t=9,10`; Proposition 15.771 additionally
+   closes `p=23,t=11,k=114` after explicit all-boundary proof review.
+   Do not reopen the closed t11 endpoint with a graph, orbit, slice, or
+   five-set census.
+   With `q=(p-1)/2`, the live residual
    frontier is critical `p=5,7`; `p=11,t>=3` (`k>=50`);
-   `p=13,17,19,t>=5`; `p=23,t>=11`;
+   `p=13,17,19,t>=5`; `p=23,t>=12` (`k>=116`);
    `p=1 mod 4,p>=29,t>=q-1`; `p=3 mod 4,p>=31,t>=q`; and positive
    `p=7,z=7`.
    Propositions 15.751--15.754 close the former generic `t=3` range, the

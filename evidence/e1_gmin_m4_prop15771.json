@@ -1,13 +1,20 @@
 {
   "prop": "15.771",
-  "status": "REVIEW_PENDING all-boundary exceptional endpoint candidate",
+  "status": "PROVED all-boundary exceptional endpoint theorem",
   "certificate_checks_passed": true,
-  "proof_review_complete": false,
-  "pending_proof_bridges": [
+  "proof_review_complete": true,
+  "pending_proof_bridges": [],
+  "completed_proof_bridges": [
     "general-slice equality reduction for b=4 and b=20",
     "covering swap cubes for the middle-boundary rank certificates",
     "phase-zero mass-32 floor and p+9 exclusion bridge"
   ],
+  "proof_notes": [
+    "evidence/NOTE_2026-09-04_P23_THIRD_POST_BAND_CLOSE.md",
+    "evidence/NOTE_2026-09-04_P23_SMALL_BOUNDARY_EQUALITY_PROOF.md",
+    "evidence/NOTE_2026-09-04_P23_MIDDLE_BOUNDARY_CUBE_PROOF.md"
+  ],
+  "independent_mesh_replay": "evidence/p23_third_post_band_mesh_replay.json",
   "statement": "the residual-(ii) isolated-chart branch at p=23,t=11,k=114 is empty for every boundary size",
   "residue_ledger": {
     "p": 23,
@@ -736,7 +743,270 @@
             "excluded_by_Proposition_15_752": true
           }
         ],
-        "dependency": "Proposition 15.752 p+9 local exclusion",
+        "all_boundary_opposite_mass_bridge": {
+          "p": 23,
+          "phase": 0,
+          "scaled_mean_definition": "a=2p E[A]",
+          "lift_scaled_mass_definition": "a-floor=4p E[L]",
+          "pointwise_baselines": {
+            "b=0": "0",
+            "b=2": "(x_i-x_j)^2",
+            "b=22": "x_j"
+          },
+          "baseline_subtraction_is_nonnegative_by_parity": true,
+          "sharp_positive_lift_mass_floor": 20,
+          "local_p_plus_nine_dependency": {
+            "p": 23,
+            "statement": "no nonzero nonnegative integer-valued quadratic B on J(23,12) has 4p E[B]=p+9",
+            "height_at_least_two": {
+              "p": 23,
+              "slice": "J(23,12)",
+              "scaled_mass_4p_E_B": 32,
+              "assumed_maximum_at_least": 2,
+              "every_paired_cube_mean_at_least": "1/2",
+              "paired_cube_mean_lattice": "(1/4)Z",
+              "height_lower_bound": "4",
+              "stabilizer_branch": "4p E[B]>=4H",
+              "stabilizer_height_upper_bound": "8",
+              "paired_cube_average_upper_bound": "2/3",
+              "some_paired_cube_has_mean_exactly": "1/2",
+              "half_mean_cube_maximum_upper_bound": 3,
+              "contradiction": true,
+              "proved": true
+            },
+            "height_one_boolean": {
+              "p": 23,
+              "complementary_slice": "J(23,11)",
+              "target_density": "8/23",
+              "relevant_pair_influence_floor": "10/161",
+              "total_influence_upper_bound": "2640/529",
+              "largest_zero_influence_class_complement_bound": "3696/529",
+              "seven_gap_polynomial": "p^3-29p^2+150p-108",
+              "seven_gap_at_p_23": 168,
+              "seven_gap_derivative_at_p_23": 403,
+              "seven_gap_second_derivative_at_p_23": 80,
+              "junta_coordinates_at_most": 6,
+              "cube_coordinates_actually_needed_at_most": 4,
+              "possible_four_bit_density_values": [
+                "0",
+                "5/23",
+                "6/23",
+                "11/23",
+                "12/23",
+                "17/23",
+                "18/23",
+                "1"
+              ],
+              "target_strict_bracket": [
+                "6/23",
+                "11/23"
+              ],
+              "target_absent": true,
+              "proved": true
+            },
+            "excluded": true,
+            "finite_slice_or_prime_census_used": false,
+            "fixed_four_bit_catalog_reused": true,
+            "proved": true
+          },
+          "rows": [
+            {
+              "scaled_mean": 8,
+              "floor_surviving_boundaries": [
+                0
+              ],
+              "boundary_rows": [
+                {
+                  "b": 0,
+                  "phase_zero_floor": 0,
+                  "lift_mass": 8,
+                  "reason": "nonzero nonnegative integral quadratic lift below mass20",
+                  "excluded": true
+                },
+                {
+                  "b": 2,
+                  "phase_zero_floor": 24,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 4,
+                  "phase_zero_floor": 40,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 6,
+                  "phase_zero_floor": 46,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 8,
+                  "phase_zero_floor": 46,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 10,
+                  "phase_zero_floor": 46,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 12,
+                  "phase_zero_floor": 46,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 14,
+                  "phase_zero_floor": 46,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 16,
+                  "phase_zero_floor": 46,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 18,
+                  "phase_zero_floor": 46,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 20,
+                  "phase_zero_floor": 40,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 22,
+                  "phase_zero_floor": 24,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                }
+              ],
+              "excluded": true
+            },
+            {
+              "scaled_mean": 32,
+              "floor_surviving_boundaries": [
+                0,
+                2,
+                22
+              ],
+              "boundary_rows": [
+                {
+                  "b": 0,
+                  "phase_zero_floor": 0,
+                  "lift_mass": 32,
+                  "reason": "b=0 gives A=2L, excluded by local p+9 theorem15.752",
+                  "excluded": true
+                },
+                {
+                  "b": 2,
+                  "phase_zero_floor": 24,
+                  "lift_mass": 8,
+                  "reason": "nonzero nonnegative integral quadratic lift below mass20",
+                  "excluded": true
+                },
+                {
+                  "b": 4,
+                  "phase_zero_floor": 40,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 6,
+                  "phase_zero_floor": 46,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 8,
+                  "phase_zero_floor": 46,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 10,
+                  "phase_zero_floor": 46,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 12,
+                  "phase_zero_floor": 46,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 14,
+                  "phase_zero_floor": 46,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 16,
+                  "phase_zero_floor": 46,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 18,
+                  "phase_zero_floor": 46,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 20,
+                  "phase_zero_floor": 40,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 22,
+                  "phase_zero_floor": 24,
+                  "lift_mass": 8,
+                  "reason": "nonzero nonnegative integral quadratic lift below mass20",
+                  "excluded": true
+                }
+              ],
+              "excluded": true
+            }
+          ],
+          "excluded_scaled_means": [
+            8,
+            32
+          ],
+          "all_even_boundaries_excluded": true,
+          "proved": true
+        },
+        "dependency": "phase-zero floors, pointwise parity baselines, and15.688/15.752",
         "excluded": true,
         "proved": true
       },
@@ -945,7 +1215,270 @@
             "excluded_by_Proposition_15_752": true
           }
         ],
-        "dependency": "Proposition 15.752 p+9 local exclusion",
+        "all_boundary_opposite_mass_bridge": {
+          "p": 23,
+          "phase": 0,
+          "scaled_mean_definition": "a=2p E[A]",
+          "lift_scaled_mass_definition": "a-floor=4p E[L]",
+          "pointwise_baselines": {
+            "b=0": "0",
+            "b=2": "(x_i-x_j)^2",
+            "b=22": "x_j"
+          },
+          "baseline_subtraction_is_nonnegative_by_parity": true,
+          "sharp_positive_lift_mass_floor": 20,
+          "local_p_plus_nine_dependency": {
+            "p": 23,
+            "statement": "no nonzero nonnegative integer-valued quadratic B on J(23,12) has 4p E[B]=p+9",
+            "height_at_least_two": {
+              "p": 23,
+              "slice": "J(23,12)",
+              "scaled_mass_4p_E_B": 32,
+              "assumed_maximum_at_least": 2,
+              "every_paired_cube_mean_at_least": "1/2",
+              "paired_cube_mean_lattice": "(1/4)Z",
+              "height_lower_bound": "4",
+              "stabilizer_branch": "4p E[B]>=4H",
+              "stabilizer_height_upper_bound": "8",
+              "paired_cube_average_upper_bound": "2/3",
+              "some_paired_cube_has_mean_exactly": "1/2",
+              "half_mean_cube_maximum_upper_bound": 3,
+              "contradiction": true,
+              "proved": true
+            },
+            "height_one_boolean": {
+              "p": 23,
+              "complementary_slice": "J(23,11)",
+              "target_density": "8/23",
+              "relevant_pair_influence_floor": "10/161",
+              "total_influence_upper_bound": "2640/529",
+              "largest_zero_influence_class_complement_bound": "3696/529",
+              "seven_gap_polynomial": "p^3-29p^2+150p-108",
+              "seven_gap_at_p_23": 168,
+              "seven_gap_derivative_at_p_23": 403,
+              "seven_gap_second_derivative_at_p_23": 80,
+              "junta_coordinates_at_most": 6,
+              "cube_coordinates_actually_needed_at_most": 4,
+              "possible_four_bit_density_values": [
+                "0",
+                "5/23",
+                "6/23",
+                "11/23",
+                "12/23",
+                "17/23",
+                "18/23",
+                "1"
+              ],
+              "target_strict_bracket": [
+                "6/23",
+                "11/23"
+              ],
+              "target_absent": true,
+              "proved": true
+            },
+            "excluded": true,
+            "finite_slice_or_prime_census_used": false,
+            "fixed_four_bit_catalog_reused": true,
+            "proved": true
+          },
+          "rows": [
+            {
+              "scaled_mean": 8,
+              "floor_surviving_boundaries": [
+                0
+              ],
+              "boundary_rows": [
+                {
+                  "b": 0,
+                  "phase_zero_floor": 0,
+                  "lift_mass": 8,
+                  "reason": "nonzero nonnegative integral quadratic lift below mass20",
+                  "excluded": true
+                },
+                {
+                  "b": 2,
+                  "phase_zero_floor": 24,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 4,
+                  "phase_zero_floor": 40,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 6,
+                  "phase_zero_floor": 46,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 8,
+                  "phase_zero_floor": 46,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 10,
+                  "phase_zero_floor": 46,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 12,
+                  "phase_zero_floor": 46,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 14,
+                  "phase_zero_floor": 46,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 16,
+                  "phase_zero_floor": 46,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 18,
+                  "phase_zero_floor": 46,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 20,
+                  "phase_zero_floor": 40,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 22,
+                  "phase_zero_floor": 24,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                }
+              ],
+              "excluded": true
+            },
+            {
+              "scaled_mean": 32,
+              "floor_surviving_boundaries": [
+                0,
+                2,
+                22
+              ],
+              "boundary_rows": [
+                {
+                  "b": 0,
+                  "phase_zero_floor": 0,
+                  "lift_mass": 32,
+                  "reason": "b=0 gives A=2L, excluded by local p+9 theorem15.752",
+                  "excluded": true
+                },
+                {
+                  "b": 2,
+                  "phase_zero_floor": 24,
+                  "lift_mass": 8,
+                  "reason": "nonzero nonnegative integral quadratic lift below mass20",
+                  "excluded": true
+                },
+                {
+                  "b": 4,
+                  "phase_zero_floor": 40,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 6,
+                  "phase_zero_floor": 46,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 8,
+                  "phase_zero_floor": 46,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 10,
+                  "phase_zero_floor": 46,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 12,
+                  "phase_zero_floor": 46,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 14,
+                  "phase_zero_floor": 46,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 16,
+                  "phase_zero_floor": 46,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 18,
+                  "phase_zero_floor": 46,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 20,
+                  "phase_zero_floor": 40,
+                  "lift_mass": null,
+                  "reason": "scaled mean below exact phase-zero floor",
+                  "excluded": true
+                },
+                {
+                  "b": 22,
+                  "phase_zero_floor": 24,
+                  "lift_mass": 8,
+                  "reason": "nonzero nonnegative integral quadratic lift below mass20",
+                  "excluded": true
+                }
+              ],
+              "excluded": true
+            }
+          ],
+          "excluded_scaled_means": [
+            8,
+            32
+          ],
+          "all_even_boundaries_excluded": true,
+          "proved": true
+        },
+        "dependency": "phase-zero floors, pointwise parity baselines, and15.688/15.752",
         "excluded": true,
         "proved": true
       },
@@ -953,8 +1486,8 @@
       "proved": true
     }
   },
-  "p23_k114_closed": false,
-  "all_boundary_sizes_excluded": false,
+  "p23_k114_closed": true,
+  "all_boundary_sizes_excluded": true,
   "new_graph_or_residual_configuration_census_used": false,
   "fixed_four_bit_boolean_catalog_reused": true,
   "fixed_p23_five_set_coefficient_certificate_reused_for_u9": true,
@@ -962,5 +1495,5 @@
   "residual_ii_closed_globally": false,
   "E1_closed": false,
   "quadratic_minmax_limit_closed": false,
-  "proved": false
+  "proved": true
 }
