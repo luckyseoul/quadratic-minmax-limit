@@ -2,6 +2,17 @@
 
 **Current mathematical status: L OPEN.**
 
+## Committed proof checkpoint (2026-09-04)
+
+The complete 15.773/15.774 package is committed as
+`1ad44bcfa1235868310e0511922ace68565f9d32` on
+`residual/p13-u6-common-moments`. It contains the 507-pass verified
+checkpoint below; the former uncommitted-work descriptions are historical.
+The next attack is the remaining all-size residual/minimal-witness
+obstruction, not a repetition of the closed layers. Exact replay commands,
+evidence hashes, and open predicates are recorded below and in
+`evidence/small_mass_two_type_regression.json`.
+
 ## Current theorem checkpoint: Proposition 15.774 (2026-09-04; technical regression verified)
 
 The active checkout remains `/home/nick/quadratic-minmax-limit-residual-ii`,
