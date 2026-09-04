@@ -286,7 +286,7 @@ A hostile review for public scrutiny found the following. **None of these is Aut
 
 1. **Spectral floor (not an acceptance caveat).** \(\lambda_{\min}(\Phi)\ge6\) remains open for all \(p\), and the old Kneser-mask proof is false. Proposition 15.720 bypasses this entirely for E(1), so QVAR/R1 work cannot be counted as closing a remaining gate.
 
-2. **Residual (ii), exact current remainder.** Proposition 15.236/237 covers even \(k\in[3p+1,4p-2]\), and affine two-level is dead for all \(k\ge3p\) (15.179). At **\(k\ge4p\)**, Propositions 15.734--15.737 close the first three shells, Proposition 15.751 closes \(k=4p+6\) for every \(p\ge13\), Proposition 15.752 closes \(k=4p+8\) for every \(p\ge23\) plus its stated contiguous higher band, and Propositions 15.753--15.754 complete the p17/p19/p13 fifth-shell endpoints. Thus the fifth shell is closed for every \(p\ge13\). Propositions 15.768--15.770 close the next two generic layers: `t=q-3,q-2` for `p=1 mod 4,p>=29` and `t=q-2,q-1` for `p=3 mod 4,p>=31`, where `q=(p-1)/2`; they also close `p=23,t=9,10`. The second p23 endpoint has eleven low roots and reuses the fixed exact scan of all 33,649 five-sets. Proposition 15.771 closes the third endpoint `p=23,t=11,k=114`: its carried residue retains ten roots, while the new mean-46 equality classification and pointwise phase-zero bridge force and exclude at least five mass-32 opposite rows. Proposition 15.772 closes the third generic p1 layer `p=1 mod 4,p>=29,t=q-1,k=5p-3`. The exact open frontier is: critical `p=5,7`; `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`; `p=23,t>=12` (`k>=116`); `p=1 mod 4,p>=29,t>=q`; `p=3 mod 4,p>=31,t>=q`; and the separate positive `p=7,z=7` branch. The global residual predicate remains false.
+2. **Residual (ii), exact current remainder.** Proposition 15.236/237 covers even \(k\in[3p+1,4p-2]\), and affine two-level is dead for all \(k\ge3p\) (15.179). At **\(k\ge4p\)**, Propositions 15.734--15.737 close the first three shells, Proposition 15.751 closes \(k=4p+6\) for every \(p\ge13\), Proposition 15.752 closes \(k=4p+8\) for every \(p\ge23\) plus its stated contiguous higher band, and Propositions 15.753--15.754 complete the p17/p19/p13 fifth-shell endpoints. Thus the fifth shell is closed for every \(p\ge13\). Propositions 15.768--15.770 close the next two generic layers: `t=q-3,q-2` for `p=1 mod 4,p>=29` and `t=q-2,q-1` for `p=3 mod 4,p>=31`, where `q=(p-1)/2`; they also close `p=23,t=9,10`. The second p23 endpoint has eleven low roots and reuses the fixed exact scan of all 33,649 five-sets. Proposition 15.771 closes the third endpoint `p=23,t=11,k=114`: its carried residue retains ten roots, while the new mean-46 equality classification and pointwise phase-zero bridge force and exclude at least five mass-32 opposite rows. Proposition 15.772 closes the third generic p1 layer `p=1 mod 4,p>=29,t=q-1,k=5p-3`. Proposition 15.773 closes `p>=29,t=q,k=5p-1` in both classes. Proposition 15.774 closes `p>=29,t=q+1,q+2,k=5p+1,5p+3`. The exact open frontier is: critical `p=5,7`; `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`; `p=23,t>=12` (`k>=116`); `p=1 mod 4,p>=29,t>=q+3`; `p=3 mod 4,p>=31,t>=q+3`; and the separate positive `p=7,z=7` branch. The global residual predicate remains false.
 
    The [completed 15.771 proof](../NOTE_2026-09-04_P23_THIRD_POST_BAND_CLOSE.md)
    includes the small-boundary general-slice reduction, covering swap cubes,
@@ -302,14 +302,39 @@ A hostile review for public scrutiny found the following. **None of these is Aut
    equality of offset four. Common-row normalization and the new local
    mass-`p+11` exclusion finish the proof; the
    [four-node checks](../p1_third_post_band_mesh_replay.json) corroborate
-   those identities. The next common generic layer `t=q,k=5p-1` is not
-   attacked here. The global residual predicate remains false.
+   those identities. Proposition 15.773 then closes `p>=29,t=q,k=5p-1`
+   in both classes: earlier low-row arguments carry, and the new flat
+   mean-`2p` branch forces five forbidden mass-`p+9` rows without a new
+   equality classification. See the
+   [joint proof](../NOTE_2026-09-04_JOINT_5P_MINUS_ONE_CLOSE.md) and
+   [four-node record](../joint_5p_minus_one_mesh_replay.json).
+   Proposition 15.774 closes `p>=29,t=q+1,q+2,k=5p+1,5p+3`.
+   Its [local spectrum](../NOTE_2026-09-04_SHARP_SMALL_MASS_SPECTRUM.md)
+   proves that a nonnegative integral quadratic on `J(p,(p+1)/2)`
+   with `0<4p E[C]<2p-10` has Boolean mass `p-3` or `p+1`;
+   the affine-parity union is `{0,p-3,p-1,p+1}`. The
+   [two-type bridge](../NOTE_2026-09-04_SMALL_MASS_TWO_TYPE_BRIDGE.md)
+   couples `u_++u_-=r mod m` with the full type quota. It excludes
+   shell floors `r=3,4,5` through `5p+4,6p+4,7p+6` for `p>=37`,
+   or `5p-12,6p-12,7p-12` for every prime `p>=29`; the two
+   residual carries cover p29/p31. The next unclaimed generic layer
+   is `t=q+3,k=5p+5`, so the open frontier is `t>=q+3,k>=5p+5`.
+   493 technical tests passed on soulkiller; the final documentation-gate result is recorded in `evidence/small_mass_two_type_regression.json`.
+   Provenance is recorded in `evidence/small_mass_two_type_regression.json`.
+   The global residual predicate remains false.
 
    **Separate implication bridge.** Proposition 15.764 proves that an
    all-deletions minimal four-gap set enters the official residual-(ii) unit
-   when `|H|` is odd and at most `5p`. It also identifies the exact remaining
-   failure ranges: even `|H|>=4p+2` and odd `|H|>=5p+2`. This bridge is a
-   separate acceptance predicate; closing residual (ii) alone cannot close E(1).
+   when `|H|` is odd and at most `5p`. Those historical bridge ranges
+   are now sharpened by 15.774: odd minimal four-gap sets are excluded
+   through `5p+4`; even and odd-no-level-three sets obey the r4/r5
+   bounds above. There is still no all-size localization theorem.
+   The first uncovered eventual layer admits exact scalar quota
+   survivors, not graph witnesses. This bridge remains a separate
+   acceptance predicate; closing residual (ii) alone cannot close E(1).
+   Eventual E1 for all sufficiently large primes would suffice for
+   `L=1/2` by denseness, but these bounded-size theorems are not
+   eventual E1 and provide no `o(p^3)` deficit bound.
 
 3. **Type I dual-eq is the two-level Max− law \(S\in\{-1,-3\}\).** The 15.169 bad case \(f_e\equiv-1\) on \(\{S=-1\}\) only gives \(\Phi(H)\ge\Phi-4\) if Max− is multi-level. 15.275 writes the mass \(2a+c(3+\mu_c)=2/p\), the pairing min \(E[Sf_e]\ge3/p-2\), \(E[R^2]=E[S^2]-5+4E[Sf]\), integrality \(n_{-1}=M+n_c+t\), the unique 2-orbit Aut\(_e\) collapse \(\mu_{\mathrm{far}}=-2(2p-3)/(p(p^2-1))<0\), and the 3-weight Max− identity \(F_-|_{f=+1}=-(p+1)/(p-1)+\mu_{\mathrm{far}}p(p+1)\). Paley Aut\(_e\) has **two** star orbits (\(\sigma_\square=(p-1)(1+f_e)\), \(\sigma_\boxtimes=(p+1)(1-f_e)\)) and several far orbits. The 3-weight slices \(\mu_\square=\mu_\boxtimes\) and \(\mu_\boxtimes=0\) are empty (negative weight). The slice \(\mu_{\mathrm{far}}=0\) stays a \([0,1]\) solution of \(F_+\bar x=3-2f_e\), but it (and the whole \(\mu_{\mathrm{far}}\ge0\) 3-weight family) **cannot realise the bad case**: \(F_-|_{f=+1}\ge-(p+1)/(p-1)>-2\), while a gap-2 undercutter with \(f_e\equiv-1\) on \(\{S=-1\}\) needs \(S\le-3\) on \(\{f=+1\}\). Star-supported 0-1 Type I graphs Aut\(_e\)-average to that point (\(n_\square=(p+1)/2\), \(n_\boxtimes=5(p-1)/2\)). Dual-eq empty kills only the two-level / pairing-min slice. **Historical leftover:** split far Aut\(_e\) classes (unequal 4-set interpolants) did not reduce to the collapsed-far bound. Proposition 15.750 supersedes that leftover and proves `type_I_multilevel_bad_case_ND_closed=True` for every prime \(p\ge5\).
 

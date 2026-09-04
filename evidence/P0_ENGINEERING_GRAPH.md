@@ -1,6 +1,6 @@
 # P0 Engineering Graph (persistent — update every turn)
 
-> **AUTHORITATIVE LIVE OVERLAY (2026-09-04; through Proposition 15.772).** Sections 1--8 below are an
+> **AUTHORITATIVE LIVE OVERLAY (2026-09-04; through Proposition 15.774).** Sections 1--8 below are an
 > archived Path-C graph from 2026-08-13 and are not a routing authority. The
 > live graph is:
 >
@@ -18,8 +18,10 @@
 >            +-- next two generic layers; p23 t=9,10 (15.768--15.770) [CLOSED]
 >            +-- p23 t=11,k=114; reviewed all-boundary bridges (15.771) [CLOSED]
 >            +-- p1 p>=29: t=q-1,k=5p-3; punctured gap + mass p+11 (15.772) [CLOSED]
+>            +-- both classes p>=29: t=q,k=5p-1; flat-row ledger (15.773) [CLOSED]
+>            +-- both classes p>=29: t=q+1,q+2,k=5p+1,5p+3 (15.774) [CLOSED]
 >            `-- p5,7; p11 t>=3; p13,17,19 t>=5; p23 t>=12,k>=116;
->                p=1 mod4,p>=29: t>=q; p=3 mod4,p>=31: t>=q;
+>                p=1 mod4,p>=29: t>=q+3; p=3 mod4,p>=31: t>=q+3;
 >                positive p7,z7 [OPEN], where q=(p-1)/2
 > ```
 >
@@ -42,14 +44,31 @@
 > repairs the 15.770 gap-two premise and retains the new gap-four equality;
 > the row ledger forces forbidden local masses, including the new `p+11`.
 > [Four-node checks](p1_third_post_band_mesh_replay.json) corroborate it.
-> The next common generic layer `t=q,k=5p-1` has not been attacked here.
+> The [15.773 joint proof](NOTE_2026-09-04_JOINT_5P_MINUS_ONE_CLOSE.md)
+> now closes `p>=29,t=q,k=5p-1` in both classes. The new flat mean-`2p`
+> branch forces five mass-`p+9` rows without a local equality classification;
+> [four-node arithmetic](joint_5p_minus_one_mesh_replay.json) corroborates
+> the carried and flat ledgers. The [15.774 local spectrum](NOTE_2026-09-04_SHARP_SMALL_MASS_SPECTRUM.md)
+> and [two-type bridge](NOTE_2026-09-04_SMALL_MASS_TWO_TYPE_BRIDGE.md)
+> now close `t=q+1,q+2,k=5p+1,5p+3` for every prime `p>=29`.
+> On `J(p,(p+1)/2)`, strict mass `<2p-10` leaves affine-parity
+> union `{0,p-3,p-1,p+1}` for nonnegative integral quadratics.
+> The type quota bound gives signed shell-floor `r=3,4,5` exclusions
+> through `5p+4,6p+4,7p+6` at `p>=37`, or
+> `5p-12,6p-12,7p-12` for every `p>=29`. The first uncovered
+> eventual layer has exact scalar survivors, not graph realizations.
+> The next unclaimed generic layer is `t=q+3,k=5p+5`, and the
+> generic open frontier is `t>=q+3,k>=5p+5`. The all-size
+> minimal-witness localization, E1, and the limit remain open.
+> 493 technical tests passed on soulkiller; the final documentation-gate result is recorded in `evidence/small_mass_two_type_regression.json`.
+> Provenance is recorded in `evidence/small_mass_two_type_regression.json`.
 > All small-prime and global acceptance gates remain open.
 
 **Machine:** 88 CPU + Tesla V100-SXM2-16GB (CuPy).  
 **Policy:** F17 (no single-core thrash) · F19 (no moduli class-refine loops) · F20 (no GPU theater) · F21 (no False-predicate 15.xxx) · F22 (no e1 flip on census).  
 **L = lim α_n:** **OPEN** (2026-09-04). The 2026-08-05 “CLOSED” claim was retracted (disj Gsum LB / 15.158). Current status is residual **(ii) OPEN** globally and multi-level Type I **CLOSED** by 15.750. Trust the live overlay and `HANDOFF.md` / `STATUS.md`, not the DAG below (stale Path-C framing).
 **Optional open:** Path-C residual / 16N (not required for denseness L).  
-**Last update:** 2026-09-04 (15.772 reviewed generic endpoint/frontier sync; sections 1--8 remain archived chronology).
+**Last update:** 2026-09-04 (15.774 small-mass and two-type frontier sync; sections 1--8 remain archived chronology).
 
 ---
 

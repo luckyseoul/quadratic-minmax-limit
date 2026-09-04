@@ -627,8 +627,8 @@ def test_docs_track_all_prime_group_support_without_closing_residual():
     assert "residual (ii)" in solution
 
 
-def test_prop15772_canonical_frontier_and_repaired_premise():
-    """The generic p1 close advances one layer, not the global open gates."""
+def test_prop15772_15774_canonical_frontier_and_repaired_premise():
+    """Two further layers and size bounds do not close the all-size gates."""
     from pathlib import Path
 
     root = Path(__file__).resolve().parents[1]
@@ -643,11 +643,19 @@ def test_prop15772_canonical_frontier_and_repaired_premise():
         text = (root / name).read_text(encoding="utf-8")
         flat = " ".join(text.split())
         assert "15.772" in text, name
+        assert "15.773" in text, name
+        assert "15.774" in text, name
         assert "NOTE_2026-09-04_P1_THIRD_POST_BAND_CLOSE.md" in text, name
         assert "NOTE_2026-09-04_COMPLEMENT_TRIPLE_PUNCTURED_GAP.md" in text, name
+        assert "NOTE_2026-09-04_JOINT_5P_MINUS_ONE_CLOSE.md" in text, name
+        assert "NOTE_2026-09-04_SHARP_SMALL_MASS_SPECTRUM.md" in text, name
+        assert "NOTE_2026-09-04_SMALL_MASS_TWO_TYPE_BRIDGE.md" in text, name
         assert "p=1 mod 4,p>=29,t>=q-1" not in text, name
         assert "p=1 mod4,p>=29: t>=q-1" not in text, name
-        assert "t>=q" in text, name
+        assert "t>=q+3" in text, name
+        assert "k>=5p+5" in text, name
+        assert "all-size" in text, name
+        assert "small_mass_two_type_regression.json" in text, name
         assert "t>=12" in text, name
         assert "p+11" in text, name
         assert "gap-four" in flat or "gap four" in flat or "floor-plus-four" in flat, name
@@ -655,13 +663,19 @@ def test_prop15772_canonical_frontier_and_repaired_premise():
     dedup = (root / names[6]).read_text(encoding="utf-8")
     modules = [
         root / "src" / f"e1_gmin_m4_prop15{label}.py"
-        for label in range(83, 773)
+        for label in range(83, 775)
     ]
-    assert sum(path.exists() for path in modules) == 686
-    assert "686 source-backed proposition modules from 15.83 through 15.772" in dedup
+    assert sum(path.exists() for path in modules) == 688
+    assert "688 source-backed proposition modules from 15.83 through 15.774" in dedup
     solution = (root / "solution.md").read_text(encoding="utf-8")
     assert "## Proposition 15.772" in solution
+    assert "## Proposition 15.773" in solution
+    assert "## Proposition 15.774" in solution
     assert "As of Proposition 15.770" in solution  # Historical frontier is retained.
     handoff = (root / "HANDOFF.md").read_text(encoding="utf-8")
     assert "Historical completed full-mesh target: Proposition 15.771" in handoff
-    assert "next common generic layer is `t=q,k=5p-1`" in handoff
+    assert "Historical completed full-mesh target: Proposition 15.772" in handoff
+    assert "Historical completed verified target: Proposition 15.773" in handoff
+    assert "layer is `t=q+3,k=5p+5`" in " ".join(handoff.split())
+    assert "first uncovered" in solution
+    assert "not graph realizations" in handoff

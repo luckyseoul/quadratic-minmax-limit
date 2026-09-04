@@ -111,6 +111,28 @@ Anything else — including “honest OPEN,” “structure shipped,” “censu
   forbidden opposite masses, including the newly excluded `p+11`.
   See the [generic proof](evidence/NOTE_2026-09-04_P1_THIRD_POST_BAND_CLOSE.md)
   and [local gap theorem](evidence/NOTE_2026-09-04_COMPLEMENT_TRIPLE_PUNCTURED_GAP.md).
+  Proposition 15.773 then closes `t=q,k=5p-1` for every prime `p>=29`.
+  All old low-row branches carry; the new flat mean-`2p` branch directly
+  forces five forbidden mass-`p+9` rows, without a new equality
+  classification. See the [joint proof](evidence/NOTE_2026-09-04_JOINT_5P_MINUS_ONE_CLOSE.md).
+  Proposition 15.774 adds `t=q+1,q+2,k=5p+1,5p+3` for every
+  prime `p>=29`. On `J(p,(p+1)/2)`, its strict spectrum
+  `0<4p E[C]<2p-10` for nonnegative integral quadratics permits
+  only Boolean masses `p-3,p+1`; the affine-parity union is
+  `{0,p-3,p-1,p+1}`. Coupled type quotas exclude signed shell floors
+  `r=3,4,5` through `5p+4,6p+4,7p+6` at `p>=37`, with uniform
+  bounds `5p-12,6p-12,7p-12` at every `p>=29`. Residual carries
+  cover p29/p31 as well. See the
+  [local proof](evidence/NOTE_2026-09-04_SHARP_SMALL_MASS_SPECTRUM.md) and
+  [two-type bridge](evidence/NOTE_2026-09-04_SMALL_MASS_TWO_TYPE_BRIDGE.md).
+  The generic frontier is `t>=q+3,k>=5p+5`.
+  493 technical tests passed on soulkiller; the final documentation-gate result is recorded in `evidence/small_mass_two_type_regression.json`.
+  Provenance is recorded in `evidence/small_mass_two_type_regression.json`.
+  Exact scalar survivors at the first uncovered eventual layer are
+  not graph witnesses. No all-size witness localization is proved.
+  Eventual E1 for all sufficiently large primes would suffice for
+  `L=1/2` by denseness, but bounded-size exclusions are not eventual
+  E1 and give no `o(p^3)` deficit estimate. All global gates remain open.
   Propositions 15.755--15.756 prove a sharp
   full-cube defect dichotomy and rule out arbitrary-boundary Weil/Parseval as
   a global close; both are reductions/method barriers, not residual closure.
@@ -121,7 +143,7 @@ is the two-ray amplification theorem of Proposition 6.3 (or any other proof
 of convergence/non-existence).  The value-specific route to \(L=1/2\) is
 **E(1)** on \(n=p^2+1\).  On that optional Paley route, the live gate is the
 corrected dictionary returned by
-`src/e1_main_chain_status.py`; as of 2026-09-04 through audited Proposition 15.772 it
+`src/e1_main_chain_status.py`; as of 2026-09-04 through Proposition 15.774 it
 reads:
 
 1. **Required bi-tight levels 2 and 3:** TRUE by 15.720. The spectral floor,
@@ -137,10 +159,12 @@ reads:
    the next two generic post-band layers and the exceptional
    `p=23,t=9,10` endpoints. Proposition 15.771 closes `p=23,t=11,k=114`.
    Proposition 15.772 closes `p=1 mod 4,p>=29,t=q-1,k=5p-3`.
+   Proposition 15.773 closes `p>=29,t=q,k=5p-1` in both congruence classes.
+   Proposition 15.774 closes `p>=29,t=q+1,q+2,k=5p+1,5p+3`.
    With `q=(p-1)/2`, the exact live frontier is
    critical `p=5,7`; `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`;
-   `p=23,t>=12` (`k>=116`); `p=1 mod 4,p>=29,t>=q`;
-   `p=3 mod 4,p>=31,t>=q`; and the positive `p=7,z=7` subbranch.
+   `p=23,t>=12` (`k>=116`); `p=1 mod 4,p>=29,t>=q+3`;
+   `p=3 mod 4,p>=31,t>=q+3`; and the positive `p=7,z=7` subbranch.
    Proposition 15.751 closes generic branch B at `p>=29,t=3`, hence the
    entire fourth shell for `p>=13`; Proposition 15.752 closes the displayed
    higher band, and together with Propositions 15.753--15.754 closes the

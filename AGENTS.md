@@ -236,7 +236,32 @@ distinguished edge. Do not reopen the `3A+B`, Aut_e, finite-LP, or small-prime
 census routes as Type-I work. They remain incomplete historical mechanisms,
 not live global gates. Residual (ii), E1, and the limit remain open.
 
-## Current residual-(ii) gate after audited Proposition 15.772 and the post-15.761 exact reductions
+## Current residual-(ii) gate after Proposition 15.774 and the post-15.761 exact reductions
+
+Proposition 15.774 closes `p>=29,t=q+1,q+2,k=5p+1,5p+3` and advances
+the generic frontier to `t>=q+3,k>=5p+5`, where `q=(p-1)/2`.
+Its local small-mass theorem on `J(p,(p+1)/2)` is strict:
+`0<4p E[C]<2p-10` forces Boolean mass `p-3` or `p+1`;
+do not classify the endpoint `2p-10`.
+For an affine even-boundary parity, the union of allowed `2p E[A]`
+below that endpoint is `{0,p-3,p-1,p+1}`. At shell floor `r=4`, do
+not assume opposite phases or phase one: both types use this union.
+The residue coupling and type capacity exclude shell floors `r=3,4,5`
+through `|H|=5p+4,6p+4,7p+6` for `p>=37`, and through
+`5p-12,6p-12,7p-12` for every `p>=29`. The two carried residual
+layers complete the r3 endpoints at p29/p31. If no quotient one occurs,
+retain the quotient-two `u<s` branches; never infer a low row from a
+nonpositive count. The low `P<=9` bound does not cap elevated rows.
+
+See `evidence/NOTE_2026-09-04_SHARP_SMALL_MASS_SPECTRUM.md` and
+`evidence/NOTE_2026-09-04_SMALL_MASS_TWO_TYPE_BRIDGE.md`.
+The first uncovered eventual layer has exact scalar quota survivors,
+not local cells or graph witnesses. Do not repeat the same scalar
+capacity calculation as an all-size close. Every minimal witness is
+not yet localized into a covered band; residual (ii), E1, `L=1/2`,
+and the original MO limit remain open. 493 technical tests passed on
+soulkiller; the final documentation-gate result is recorded in
+`evidence/small_mass_two_type_regression.json`.
 
 Do not reopen `p=13,k=58` or `p=17,k=74`.  Proposition 15.742 combines the
 `M_2=0` congruence with six multiplicative interval cuts and closes the
@@ -490,8 +515,31 @@ See `NOTE_2026-09-04_P1_THIRD_POST_BAND_CLOSE.md` and
 `NOTE_2026-09-04_COMPLEMENT_TRIPLE_PUNCTURED_GAP.md` under `evidence/`;
 the four-node replay is `evidence/p1_third_post_band_mesh_replay.json`.
 Do not rerun a prime, graph, orbit, slice, or cell census at this closed
-layer. The next common generic layer is `t=q,k=5p-1`, not attacked in
-this checkpoint. The small-prime and global gates remain open.
+layer. Proposition 15.773 subsequently closes the common generic layer
+`t=q,k=5p-1` for every prime `p>=29`.
+
+At `|H|=5p`, the hard quotient sum is `p-u`. For `u<q`, at least
+`u+1` quotients remain one, so the existing low-cell classifications
+apply. Normalize every row via `P_L=P+k_L-ell` before selecting a
+coefficient offset. In the p3 sharp branch, there are two carry units:
+either one quotient-three row or two quotient-two rows; only
+`hard edges=mP+2` and at least `m-2` low rows are needed. The exact
+opposite ledger still forces seven forbidden mass-`p+13` rows.
+
+At `u=q`, retain both the quotient-zero baselines and the new all-one
+branch. The latter has common mean `2p`, hence common actual `P<=9`
+without an equality catalog, and
+`a_opp(Q)=(p+1)(P+Q)-8p`. Negative means and forbidden mass eight give
+`P+Q>=9`; the surplus is `m-5`, forcing five mass-`p+9` rows. At
+`P=9`, do not invent an actual `Q=-1` row: use `P+Q>=9` directly.
+The phase-zero pointwise baselines and 15.752 exclude these rows.
+Do not launch a mean-`2p` classification, covering-cube census, or later
+prime search to reopen this completed implication.
+See `evidence/NOTE_2026-09-04_JOINT_5P_MINUS_ONE_CLOSE.md` and
+`evidence/joint_5p_minus_one_mesh_replay.json`.
+At that 15.773 checkpoint the next layer was `t=q+1,k=5p+1`;
+15.774 above now closes it and `t=q+2,k=5p+3`.
+The small-prime and global gates remain open.
 
 The global Mobius-incidence audit also proves that distinct target
 directions, all signed fixed-word intersections, and physical ternarity
@@ -815,8 +863,8 @@ Residual (ii), E1, `L=1/2`, and the original MO limit remain OPEN.
 Consequently the fifth shell `k=4p+8` is closed for every prime `p>=13`.
 With `q=(p-1)/2` and `k=4p+2t`, the exact residual-(ii) frontier is now:
 critical `p=5,7`; `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`;
-`p=23,t>=12`; `p=1 mod 4,p>=29,t>=q`; and
-`p=3 mod 4,p>=31,t>=q`.  The separate positive `p=7,z=7` branch also
+`p=23,t>=12`; `p=1 mod 4,p>=29,t>=q+3`; and
+`p=3 mod 4,p>=31,t>=q+3`.  The separate positive `p=7,z=7` branch also
 remains open.  Propositions 15.743--15.749 and
 15.753--15.754 are finite certificates or branch theorems, not an all-prime
 row theorem.  The preferred generic front is therefore a structural version

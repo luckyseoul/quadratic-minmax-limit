@@ -1,0 +1,534 @@
+{
+  "E1_closed": false,
+  "new_catalog_or_prime_census_used": false,
+  "proved": true,
+  "quadratic_minmax_limit_closed": false,
+  "residual_ii_closed": false,
+  "sample_exact_symbolic_evaluations": {
+    "29": {
+      "affine_parity": {
+        "all_even_boundary_sizes_covered": true,
+        "b0_local_dependency_proved": true,
+        "new_catalog_or_prime_census_used": false,
+        "no_punctured_complement_triple_difference_used": true,
+        "nonnegative_integral_quadratic_required": true,
+        "only_genuine_pointwise_parity_minima_subtracted": true,
+        "p": 29,
+        "parity_hypothesis": "A(x)=phase+sum_(i in B)x_i modulo 2; |B| even",
+        "phase_one_allowed_masses": [
+          28,
+          30
+        ],
+        "phase_zero_allowed_masses": [
+          0,
+          26,
+          28,
+          30
+        ],
+        "phases": {
+          "0": {
+            "all_other_boundaries_excluded_by_floor": true,
+            "allowed_masses": [
+              0,
+              26,
+              28,
+              30
+            ],
+            "b0_is_twice_nonnegative_integral_quadratic": true,
+            "candidate_boundary_sizes": [
+              0,
+              2,
+              28
+            ],
+            "pointwise_baselines": [
+              {
+                "C_equals_half_difference_is_nonnegative_integral_quadratic": true,
+                "b": 2,
+                "formula": "(x_i-x_j)^2",
+                "lift_mass_equals_a_minus_baseline_mass": true,
+                "phase": 0,
+                "pointwise_parity_minimum": true,
+                "positive_lift_excluded": true,
+                "positive_lift_mass_floor": 26,
+                "positive_lift_mass_strictly_below": 18,
+                "proved": true,
+                "scaled_mass": 30,
+                "truth_values": [
+                  0,
+                  1,
+                  1,
+                  0
+                ]
+              },
+              {
+                "C_equals_half_difference_is_nonnegative_integral_quadratic": true,
+                "b": 28,
+                "formula": "1-x_j",
+                "lift_mass_equals_a_minus_baseline_mass": true,
+                "phase": 0,
+                "pointwise_parity_minimum": true,
+                "positive_lift_excluded": true,
+                "positive_lift_mass_floor": 26,
+                "positive_lift_mass_strictly_below": 20,
+                "proved": true,
+                "scaled_mass": 28,
+                "truth_values": [
+                  1,
+                  0
+                ]
+              }
+            ],
+            "proved": true
+          },
+          "1": {
+            "all_other_boundaries_excluded_by_floor": true,
+            "allowed_masses": [
+              28,
+              30
+            ],
+            "b0_is_twice_nonnegative_integral_quadratic": false,
+            "candidate_boundary_sizes": [
+              2,
+              28
+            ],
+            "pointwise_baselines": [
+              {
+                "C_equals_half_difference_is_nonnegative_integral_quadratic": true,
+                "b": 2,
+                "formula": "1-(x_i-x_j)^2",
+                "lift_mass_equals_a_minus_baseline_mass": true,
+                "phase": 1,
+                "pointwise_parity_minimum": true,
+                "positive_lift_excluded": true,
+                "positive_lift_mass_floor": 26,
+                "positive_lift_mass_strictly_below": 20,
+                "proved": true,
+                "scaled_mass": 28,
+                "truth_values": [
+                  1,
+                  0,
+                  0,
+                  1
+                ]
+              },
+              {
+                "C_equals_half_difference_is_nonnegative_integral_quadratic": true,
+                "b": 28,
+                "formula": "x_j",
+                "lift_mass_equals_a_minus_baseline_mass": true,
+                "phase": 1,
+                "pointwise_parity_minimum": true,
+                "positive_lift_excluded": true,
+                "positive_lift_mass_floor": 26,
+                "positive_lift_mass_strictly_below": 18,
+                "proved": true,
+                "scaled_mass": 30,
+                "truth_values": [
+                  0,
+                  1
+                ]
+              }
+            ],
+            "proved": true
+          }
+        },
+        "proved": true,
+        "scaled_mass_definition": "a=2p E[A]",
+        "strict_upper_mass": 48,
+        "union_allowed_masses": [
+          0,
+          26,
+          28,
+          30
+        ]
+      },
+      "local": {
+        "allowed_positive_masses": [
+          26,
+          30
+        ],
+        "attaining_boolean_examples": [
+          {
+            "formula": "(1-x_i)(1-x_j)",
+            "scaled_mass": 26
+          },
+          {
+            "formula": "x_i*x_j",
+            "scaled_mass": 30
+          }
+        ],
+        "boolean_below_strict_upper_mass": true,
+        "boolean_spectrum": {
+          "all_boolean_scaled_masses": [
+            0,
+            26,
+            30,
+            56,
+            60,
+            86,
+            90,
+            116
+          ],
+          "all_kept_coordinate_patterns_extend_to_slice": true,
+          "allowed_positive_masses": [
+            26,
+            30
+          ],
+          "cube_coordinates_actually_needed_at_most": 4,
+          "cube_relevant_coordinate_influence_floor": "1/2",
+          "cube_total_influence_upper": 2,
+          "fixed_catalog_dependency": {
+            "catalog_rerun": false,
+            "catalog_sha256": "63c9daf2b117b540a5199b1b007cb4e6997ba01704fbc6017efaaa9735859396",
+            "evidence": "evidence/e1_gmin_m4_prop15751.json",
+            "evidence_sha256": "b25b0f8896fccfb01c48c92b6266724bf484a0b14f4841655229a647bc2a61a7",
+            "profile_count": 14,
+            "proved": true,
+            "valid_tables": 222
+          },
+          "influence_definition": "I_ij=(1/4)Pr[f(X)!=f(X^(ij))]",
+          "junta_coordinates_at_most": 7,
+          "largest_invariant_class_complement_bound": "504/65",
+          "proved": true,
+          "relevant_pair_count_lower": "p*L/2",
+          "relevant_pair_influence_floor": "65/1044",
+          "strict_gap_below_eight": "16/65",
+          "symmetrization_preserves_degree_at_most_two": true,
+          "total_influence_upper": "(p-1)mu(1-mu)"
+        },
+        "height_gap": {
+          "all_maximizing_cubes_final_mean_at_least": 1,
+          "all_maximizing_cubes_initial_mean_at_least": "1/2",
+          "all_maximizing_cubes_refined_mean_at_least": "3/4",
+          "all_prime_congruence_classes": true,
+          "contradiction": "every maximizing cube has mean>=1 but their average is<1",
+          "first_height_strictly_greater_than": "3",
+          "half_mean_cube_maximum": 3,
+          "hypothesis": "2<=H=max C and 0<M=4p E[C]<2p-10",
+          "paired_cube_average_endpoint_upper": "6/7",
+          "paired_cube_identity": "T C(X)=(4H+M)/(4(p+1))",
+          "proved": true,
+          "refined_height_strictly_greater_than": "21/2",
+          "stabilizer_coefficient": "7/2",
+          "strict_upper_mass": 48,
+          "three_quarter_mean_cube_maximum": 6,
+          "uniform_paired_cube_average_endpoint_upper": "6/7"
+        },
+        "hypotheses": "C is nonzero, nonnegative, integer-valued and degree at most two",
+        "limit_closed": false,
+        "new_catalog_or_prime_census_used": false,
+        "nonboolean_mass_lower_bound": 48,
+        "p": 29,
+        "proved": true,
+        "residual_ii_closed": false,
+        "scaled_mass_definition": "M=4p E[C]",
+        "sharp_endpoint": {
+          "classification_of_endpoint_equalities_claimed": false,
+          "examples": [
+            {
+              "formula": "3-2r+binom(r,2)",
+              "height": 3,
+              "layer_values": [
+                3,
+                1,
+                0,
+                0,
+                1
+              ],
+              "mean": "12/29",
+              "proved": true,
+              "r": "|X intersect R|",
+              "scaled_mass": 48,
+              "support_size": 4
+            },
+            {
+              "formula": "3-2r+binom(r,2)",
+              "height": 3,
+              "layer_values": [
+                3,
+                1,
+                0,
+                0,
+                1,
+                3
+              ],
+              "mean": "12/29",
+              "proved": true,
+              "r": "|X intersect R|",
+              "scaled_mass": 48,
+              "support_size": 5
+            }
+          ],
+          "proved": true,
+          "scaled_mass": 48,
+          "strict_upper_endpoint_is_necessary": true
+        },
+        "slice": "J(29,15)",
+        "strict_upper_mass": 48
+      }
+    },
+    "31": {
+      "affine_parity": {
+        "all_even_boundary_sizes_covered": true,
+        "b0_local_dependency_proved": true,
+        "new_catalog_or_prime_census_used": false,
+        "no_punctured_complement_triple_difference_used": true,
+        "nonnegative_integral_quadratic_required": true,
+        "only_genuine_pointwise_parity_minima_subtracted": true,
+        "p": 31,
+        "parity_hypothesis": "A(x)=phase+sum_(i in B)x_i modulo 2; |B| even",
+        "phase_one_allowed_masses": [
+          30
+        ],
+        "phase_zero_allowed_masses": [
+          0,
+          28,
+          32
+        ],
+        "phases": {
+          "0": {
+            "all_other_boundaries_excluded_by_floor": true,
+            "allowed_masses": [
+              0,
+              28,
+              32
+            ],
+            "b0_is_twice_nonnegative_integral_quadratic": true,
+            "candidate_boundary_sizes": [
+              0,
+              2,
+              30
+            ],
+            "pointwise_baselines": [
+              {
+                "C_equals_half_difference_is_nonnegative_integral_quadratic": true,
+                "b": 2,
+                "formula": "(x_i-x_j)^2",
+                "lift_mass_equals_a_minus_baseline_mass": true,
+                "phase": 0,
+                "pointwise_parity_minimum": true,
+                "positive_lift_excluded": true,
+                "positive_lift_mass_floor": 28,
+                "positive_lift_mass_strictly_below": 20,
+                "proved": true,
+                "scaled_mass": 32,
+                "truth_values": [
+                  0,
+                  1,
+                  1,
+                  0
+                ]
+              },
+              {
+                "C_equals_half_difference_is_nonnegative_integral_quadratic": true,
+                "b": 30,
+                "formula": "x_j",
+                "lift_mass_equals_a_minus_baseline_mass": true,
+                "phase": 0,
+                "pointwise_parity_minimum": true,
+                "positive_lift_excluded": true,
+                "positive_lift_mass_floor": 28,
+                "positive_lift_mass_strictly_below": 20,
+                "proved": true,
+                "scaled_mass": 32,
+                "truth_values": [
+                  0,
+                  1
+                ]
+              }
+            ],
+            "proved": true
+          },
+          "1": {
+            "all_other_boundaries_excluded_by_floor": true,
+            "allowed_masses": [
+              30
+            ],
+            "b0_is_twice_nonnegative_integral_quadratic": false,
+            "candidate_boundary_sizes": [
+              2,
+              30
+            ],
+            "pointwise_baselines": [
+              {
+                "C_equals_half_difference_is_nonnegative_integral_quadratic": true,
+                "b": 2,
+                "formula": "1-(x_i-x_j)^2",
+                "lift_mass_equals_a_minus_baseline_mass": true,
+                "phase": 1,
+                "pointwise_parity_minimum": true,
+                "positive_lift_excluded": true,
+                "positive_lift_mass_floor": 28,
+                "positive_lift_mass_strictly_below": 22,
+                "proved": true,
+                "scaled_mass": 30,
+                "truth_values": [
+                  1,
+                  0,
+                  0,
+                  1
+                ]
+              },
+              {
+                "C_equals_half_difference_is_nonnegative_integral_quadratic": true,
+                "b": 30,
+                "formula": "1-x_j",
+                "lift_mass_equals_a_minus_baseline_mass": true,
+                "phase": 1,
+                "pointwise_parity_minimum": true,
+                "positive_lift_excluded": true,
+                "positive_lift_mass_floor": 28,
+                "positive_lift_mass_strictly_below": 22,
+                "proved": true,
+                "scaled_mass": 30,
+                "truth_values": [
+                  1,
+                  0
+                ]
+              }
+            ],
+            "proved": true
+          }
+        },
+        "proved": true,
+        "scaled_mass_definition": "a=2p E[A]",
+        "strict_upper_mass": 52,
+        "union_allowed_masses": [
+          0,
+          28,
+          30,
+          32
+        ]
+      },
+      "local": {
+        "allowed_positive_masses": [
+          28,
+          32
+        ],
+        "attaining_boolean_examples": [
+          {
+            "formula": "(1-x_i)(1-x_j)",
+            "scaled_mass": 28
+          },
+          {
+            "formula": "x_i*x_j",
+            "scaled_mass": 32
+          }
+        ],
+        "boolean_below_strict_upper_mass": true,
+        "boolean_spectrum": {
+          "all_boolean_scaled_masses": [
+            0,
+            28,
+            32,
+            60,
+            64,
+            92,
+            96,
+            124
+          ],
+          "all_kept_coordinate_patterns_extend_to_slice": true,
+          "allowed_positive_masses": [
+            28,
+            32
+          ],
+          "cube_coordinates_actually_needed_at_most": 4,
+          "cube_relevant_coordinate_influence_floor": "1/2",
+          "cube_total_influence_upper": 2,
+          "fixed_catalog_dependency": {
+            "catalog_rerun": false,
+            "catalog_sha256": "63c9daf2b117b540a5199b1b007cb4e6997ba01704fbc6017efaaa9735859396",
+            "evidence": "evidence/e1_gmin_m4_prop15751.json",
+            "evidence_sha256": "b25b0f8896fccfb01c48c92b6266724bf484a0b14f4841655229a647bc2a61a7",
+            "profile_count": 14,
+            "proved": true,
+            "valid_tables": 222
+          },
+          "influence_definition": "I_ij=(1/4)Pr[f(X)!=f(X^(ij))]",
+          "junta_coordinates_at_most": 7,
+          "largest_invariant_class_complement_bound": "435/56",
+          "proved": true,
+          "relevant_pair_count_lower": "p*L/2",
+          "relevant_pair_influence_floor": "56/899",
+          "strict_gap_below_eight": "13/56",
+          "symmetrization_preserves_degree_at_most_two": true,
+          "total_influence_upper": "(p-1)mu(1-mu)"
+        },
+        "height_gap": {
+          "all_maximizing_cubes_final_mean_at_least": 1,
+          "all_maximizing_cubes_initial_mean_at_least": "1/2",
+          "all_maximizing_cubes_refined_mean_at_least": "3/4",
+          "all_prime_congruence_classes": true,
+          "contradiction": "every maximizing cube has mean>=1 but their average is<1",
+          "first_height_strictly_greater_than": "3",
+          "half_mean_cube_maximum": 3,
+          "hypothesis": "2<=H=max C and 0<M=4p E[C]<2p-10",
+          "paired_cube_average_endpoint_upper": "13/16",
+          "paired_cube_identity": "T C(X)=(4H+M)/(4(p+1))",
+          "proved": true,
+          "refined_height_strictly_greater_than": "11",
+          "stabilizer_coefficient": "4",
+          "strict_upper_mass": 52,
+          "three_quarter_mean_cube_maximum": 6,
+          "uniform_paired_cube_average_endpoint_upper": "13/15"
+        },
+        "hypotheses": "C is nonzero, nonnegative, integer-valued and degree at most two",
+        "limit_closed": false,
+        "new_catalog_or_prime_census_used": false,
+        "nonboolean_mass_lower_bound": 52,
+        "p": 31,
+        "proved": true,
+        "residual_ii_closed": false,
+        "scaled_mass_definition": "M=4p E[C]",
+        "sharp_endpoint": {
+          "classification_of_endpoint_equalities_claimed": false,
+          "examples": [
+            {
+              "formula": "3-2r+binom(r,2)",
+              "height": 3,
+              "layer_values": [
+                3,
+                1,
+                0,
+                0,
+                1
+              ],
+              "mean": "13/31",
+              "proved": true,
+              "r": "|X intersect R|",
+              "scaled_mass": 52,
+              "support_size": 4
+            },
+            {
+              "formula": "3-2r+binom(r,2)",
+              "height": 3,
+              "layer_values": [
+                3,
+                1,
+                0,
+                0,
+                1,
+                3
+              ],
+              "mean": "13/31",
+              "proved": true,
+              "r": "|X intersect R|",
+              "scaled_mass": 52,
+              "support_size": 5
+            }
+          ],
+          "proved": true,
+          "scaled_mass": 52,
+          "strict_upper_endpoint_is_necessary": true
+        },
+        "slice": "J(31,16)",
+        "strict_upper_mass": 52
+      }
+    }
+  },
+  "scope": "all primes p>=29; both congruence classes",
+  "sharp_nonboolean_threshold": "2p-10, attained by F4 and F5",
+  "statement": "0<4p E[C]<2p-10 implies C Boolean and 4p E[C] in {p-3,p+1}",
+  "status": "PROVED INFINITE-FAMILY THEOREM",
+  "theorem": "sharp small-mass spectrum"
+}

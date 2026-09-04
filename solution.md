@@ -125,8 +125,13 @@ certificate. Proposition 15.771 closes `p=23,t=11,k=114` by the general
 mean-46 equality classification and the all-boundary phase-zero mass-32
 contradiction. Proposition 15.772 closes the third generic p1 layer
 `p=1 mod 4,p>=29,t=q-1,k=5p-3` using the complement-triple punctured-gap
-theorem and a new local mass-`p+11` exclusion. The exact live residual is
-recorded in `STATUS.md`.
+theorem and a new local mass-`p+11` exclusion. Proposition 15.773 then
+closes `p>=29,t=q,k=5p-1` in both congruence classes by carrying the low
+rows and using the classification-free flat mean-`2p` ledger. Proposition
+15.774 adds `t=q+1,q+2,k=5p+1,5p+3` for every prime `p>=29` by
+the strict small-mass spectrum and coupled type capacities. The exact
+live residual is `t>=q+3,k>=5p+5` generically; the unchanged
+small-prime frontiers are recorded in `STATUS.md`.
 Proposition 15.755 further reduces any hypothetical dangerous descent on the
 full Boolean cube to a sharp defect dichotomy `delta=2p` or
 `delta>=6p-12` for `p>=11`.  Neither branch is empty: affine line aliases and
@@ -195,6 +200,11 @@ generic classes and `p=23,t=10,k=112`; 15.771 the third exceptional p23
 layer `t=11,k=114` by general-slice equality and a forced mass-32 row;
 15.772 the third generic p1 layer `t=q-1,k=5p-3` for every `p>=29`,
 with a repaired gap-two premise and the new gap-four equality;
+15.773 the joint generic layer `t=q,k=5p-1` for every `p>=29`, without
+a mean-`2p` equality classification;
+15.774 strict small-mass spectrum, two generic residual layers
+`t=q+1,q+2`, and bounded-size minimal-four-gap exclusions; the all-size
+implication, eventual E1, and the limit remain open;
 15.755 full-cube dangerous-spike dichotomy and its sharp affine/triangle
 counterfamilies; 15.756 arbitrary-boundary character-cap no-go;
 15.757 exact binary edge--Radon image; 15.758 sharp coefficient cancellation
@@ -218,7 +228,7 @@ remaining `z=7` pointed systems and identify their projected high-catalog
 semigroups through grade six, but exclude no source boundary.  All 56 actual
 `z=7` line boundaries in two orbits remain open.
 
-The intended Type I two-level close is 15.272 (\(k=1\cup k=3\) span \(\Rightarrow G_+\succ0\)), not Gsum and not Aut-Schur. **Status (2026-09-04; through audited record 15.772 and the post-15.761 support, conic, and Boolean reductions).** The direct multiplier-2 and multiplier-3 estimates are open: Proposition 6.6 narrows multiplier two to (6.20); Proposition 6.7 narrows direct tripling to an unshielded tetrahedral diamond; and Proposition 6.8 gives a different \(1:2\) reduction with residual (6.42)--(6.43). None closes its ray. Proposition 6.9 kills every fixed-temperature version of the signed-Eulerian free-energy target, so \(c=3\) is no longer a live fallback. Proposition 6.10 gives an exact optimized critical-pressure sufficient gate but proves that common-raw-temperature interpolation and ordinary graphon convergence do not establish it. Proposition 6.10a additionally disproves the proposed conference-product lower curve at every positive temperature; its universal entropy fallback has only the known \(1/\pi\) limiting slope. The natural rank-one phase self-gluing of the same two halves is also excluded by the exact amplification \(\nu_4(K\otimes H)=4\nu_4(H)\), versus the required \(2\sqrt2\). The optional Paley \(L=1/2\) route remains open at both residual (ii) and the minimal-four-gap implication bridge exposed by Proposition 15.764. Proposition 15.752 closes an infinite contiguous band of higher shells, Proposition 15.753 closes the \(p=17,19\) fifth-shell endpoints, and Proposition 15.754 closes the remaining \(p=13\) endpoint. Propositions 15.768--15.770 close the next two generic layers and `p=23,t=9,10`; Proposition 15.771 closes `p=23,t=11,k=114`, while Propositions 15.755--15.765 isolate surviving common-graph regimes and refute the attempted universal affine classification without closing either gate. Proposition 15.772 additionally closes `p=1 mod 4,p>=29,t=q-1,k=5p-3`. With `q=(p-1)/2`, the exact residual-(ii) frontier is `p=5,7`; `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`; `p=23,t>=12`; `p=1 mod 4,p>=29,t>=q`; `p=3 mod 4,p>=31,t>=q`; and positive `p=7,z=7`. Details: `evidence/share/denseness_path_package.md` § Caveats.
+The intended Type I two-level close is 15.272 (\(k=1\cup k=3\) span \(\Rightarrow G_+\succ0\)), not Gsum and not Aut-Schur. **Status (2026-09-04; through record 15.774 and the post-15.761 support, conic, and Boolean reductions).** The direct multiplier-2 and multiplier-3 estimates are open: Proposition 6.6 narrows multiplier two to (6.20); Proposition 6.7 narrows direct tripling to an unshielded tetrahedral diamond; and Proposition 6.8 gives a different \(1:2\) reduction with residual (6.42)--(6.43). None closes its ray. Proposition 6.9 kills every fixed-temperature version of the signed-Eulerian free-energy target, so \(c=3\) is no longer a live fallback. Proposition 6.10 gives an exact optimized critical-pressure sufficient gate but proves that common-raw-temperature interpolation and ordinary graphon convergence do not establish it. Proposition 6.10a additionally disproves the proposed conference-product lower curve at every positive temperature; its universal entropy fallback has only the known \(1/\pi\) limiting slope. The natural rank-one phase self-gluing of the same two halves is also excluded by the exact amplification \(\nu_4(K\otimes H)=4\nu_4(H)\), versus the required \(2\sqrt2\). The optional Paley \(L=1/2\) route remains open at both residual (ii) and the minimal-four-gap implication bridge exposed by Proposition 15.764. Proposition 15.752 closes an infinite contiguous band of higher shells, Proposition 15.753 closes the \(p=17,19\) fifth-shell endpoints, and Proposition 15.754 closes the remaining \(p=13\) endpoint. Propositions 15.768--15.770 close the next two generic layers and `p=23,t=9,10`; Proposition 15.771 closes `p=23,t=11,k=114`, while Propositions 15.755--15.765 isolate surviving common-graph regimes and refute the attempted universal affine classification without closing either gate. Proposition 15.772 additionally closes `p=1 mod 4,p>=29,t=q-1,k=5p-3`. Proposition 15.773 closes `p>=29,t=q,k=5p-1`, and Proposition 15.774 closes `t=q+1,q+2,k=5p+1,5p+3` for every `p>=29`. With `q=(p-1)/2`, the exact residual-(ii) frontier is `p=5,7`; `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`; `p=23,t>=12`; `p=1 mod 4,p>=29,t>=q+3`; `p=3 mod 4,p>=31,t>=q+3`; and positive `p=7,z=7`. Details: `evidence/share/denseness_path_package.md` § Caveats.
 
 The separate cross-rectangle Fourier calculation proves exact analytic
 stability and Gram rigidity and exhibits an infinite Gram-perfect family at
@@ -15250,11 +15260,12 @@ and (15.754.1) follows. Together with Propositions 15.752--15.753,
 This closes the fifth shell, not residual (ii) globally. Propositions
 15.768--15.770 later close the next two generic post-band layers and the
 \(p=23,t=9,10\) endpoints. Proposition 15.771 adds \(p=23,t=11\), and
-15.772 adds \(p\equiv1\pmod4,p\ge29,t=q-1\).
+15.772 adds \(p\equiv1\pmod4,p\ge29,t=q-1\), and 15.773 adds
+\(p\ge29,t=q\) in both congruence classes.
 With \(q=(p-1)/2\), the exact live frontier is
 \(p=5,7\); \(p=11,t\ge3\) (\(k\ge50\)); \(p=13,17,19,t\ge5\);
-\(p=23,t\ge12\); \(p\equiv1\pmod4,p\ge29,t\ge q\);
-\(p\equiv3\pmod4,p\ge31,t\ge q\); and the positive \(p=7,z=7\)
+\(p=23,t\ge12\); \(p\equiv1\pmod4,p\ge29,t\ge q+1\);
+\(p\equiv3\pmod4,p\ge31,t\ge q+1\); and the positive \(p=7,z=7\)
 boundary systems. Thus residual (ii), E(1), \(L=1/2\), and the original
 convergence problem remain open.
 
@@ -16542,8 +16553,9 @@ Boolean quadratic influence leaves at most four active variables. The
 fixed catalog omits \((p+11)/(4p)\). This exhausts (15.772.5) and proves
 (15.772.1).
 
-The p1 frontier is now \(t\ge q\), matching the p3 frontier; the next
-common generic layer \(t=q,k=5p-1\) has not been attacked here. The p23
+At the 15.772 checkpoint the p1 frontier reached \(t\ge q\), matching
+the p3 frontier; 15.773 below closes the next common generic layer.
+The p23
 frontier remains \(t\ge12\), and all small-prime and global open gates
 remain unchanged. Residual (ii), E1, \(L=1/2\), and the original limit
 remain open.
@@ -16556,6 +16568,206 @@ Exact packages: `src/e1_gmin_m4_prop15772.py`,
 `evidence/p1_third_post_band_mesh_replay.json` independently checks the
 quadrature, contact kernel, equality tables, and row ledger; it is not a
 substitute for the analytic proof.
+
+## Proposition 15.773 — the joint generic layer k=5p-1 is empty
+
+For every prime \(p\ge29\), put \(q=(p-1)/2\), \(m=q+1\).
+Residual (ii) is empty for every boundary size at
+
+\[
+t=q,\qquad k=5p-1,\qquad |H|=5p.                    \tag{15.773.1}
+\]
+
+There are at least \(p^2-10p+1>0\) isolated vertices. Transport one
+to infinity, so \(I=0\). Recompute \(T=\sum_{e\in H}C_e\) and
+\(c_H=\prod_{e\in H}C_e\) in that chart. The phase law
+\((-1)^\eta=\epsilon(-1)^{(5p-3)/2}c_H\) chooses hard phase-one sign
+\(h=c_H\) for \(p\equiv1\pmod4\), and \(h=-c_H\) for
+\(p\equiv3\pmod4\). Every directional boundary is even.
+
+The common-row identity is universal, not an equality-model assumption.
+Every hard parallel edge has \(hC_e=1\); the off-fibre signed sum is
+\(hT-P_L\). Since \(E[z_i z_j]=-1/p\) on \(J(p,m)\), averaging
+the signed target \(3+2A_L\) gives
+
+\[
+a_L=2pE[A_L]=(p+1)P_L-hT-3p.
+\]
+
+The residue equations are therefore
+
+\[
+a_L=2u+(p+1)k_L,\quad 0\le u\le q,\quad k_L\in\mathbf Z_{\ge0},
+\qquad\sum_{L\ {m hard}}k_L=p-u.                  \tag{15.773.2}
+\]
+
+If \(u<q\), a zero quotient would lie below the least phase-one floor
+\(p-1\). Hence at least \(2m-(p-u)=u+1\) rows have quotient one.
+Their low means and classifications are unchanged from 15.772 in the p1
+class and 15.770 in the p3 class. For a classified low row of quotient
+\(\ell\), mean \(a\), and count \(P\), the common identity first gives
+
+\[
+P_L=P+k_L-\ell,\qquad H_{\rm hard}=m(P-\ell)+p-u.      \tag{15.773.3}
+\]
+
+Nonnegative opposite count bounds \(P\le9<q\) when \(\ell=1\),
+and \(P\le8<q\) when \(\ell=0,u=q\). Only afterward does the
+coefficient congruence fix \(P\) to its classified offset.
+
+In the p1 class the surviving carried residues are \(0,q-3,q-2,q-1\),
+and the zero-quotient XNOR alternative at \(u=q\). Their forced
+opposite masses and minimum row counts are respectively
+\((p+7,4),(p+15,8),(p+13,7),(p+11,6),(p+9,5)\).
+In the p3 class, \(u\le q-3\) is below the sharp lift floor, and
+\(u=q-1\) is excluded by the existing mass-\(p-1\) theorem.
+At \(u=q-2\), the four sharp offsets are \(P=2,3,4,5\).
+There are two carry units, distributed either over two quotient-two rows
+or one quotient-three row; (15.773.3) gives \(H_{\rm hard}=mP+2\)
+in both cases. The opposite ledger forces seven mass-\(p+13\) rows.
+At \(u=q\), the quotient-zero baselines \(P=3,4\) each force five
+mass-\(p+9\) rows. These conclusions use no classification of high rows.
+
+It remains to treat \(u=q\) with no zero quotient. The sum in
+(15.773.2) is \(m\), so all quotients are one and all hard means are
+\(2p\). The universal identity directly gives common actual integer
+\(0\le P\le9\), without a local equality classification. Thus
+
+\[
+H_{\rm hard}=mP,\quad hT=(p+1)P-5p,\quad
+a_{\rm opp}(Q)=(p+1)(P+Q)-8p.                        \tag{15.773.4}
+\]
+
+If \(P+Q\le7\), the mean is negative; if \(P+Q=8\), it is the
+forbidden positive mass eight. Consequently \(Q\ge9-P\), and
+
+\[
+\sum(Q-(9-P))=5p-mP-m(9-P)={p-9\over2}=m-5.          \tag{15.773.5}
+\]
+
+At least five opposite rows attain \(Q=9-P\), of mass \(p+9\).
+For \(P=9\), the formal mass-eight index is \(Q=-1\); no row at
+that illegal index is assumed, since \(P+Q\ge9\) follows already
+from \(Q\ge0\).
+
+For every forced mass above, the phase-zero floors leave only
+\(b=0,2,p-1\). At the nonzero boundaries, pointwise XOR or the
+appropriate omitted-bit parity minimum leaves a genuine positive lift
+below the sharp mass \(p-3\). At \(b=0\), the local exclusions of
+15.751--15.752 and 15.768--15.772 apply to the indicated mass and
+congruence class. Thus every branch is impossible, proving (15.773.1).
+
+At the 15.773 checkpoint both generic frontiers reached \(t\ge q+1\),
+equivalently \(k\ge5p+1\). These historical next layers are superseded
+by 15.774 below. The p23 frontier
+remains \(t\ge12\), and the other small-prime and global open gates
+are unchanged. Residual (ii), E1, \(L=1/2\), and the original limit
+remain open.
+
+Full proof and complete carry table:
+`evidence/NOTE_2026-09-04_JOINT_5P_MINUS_ONE_CLOSE.md`.
+Exact package: `src/e1_gmin_m4_prop15773.py`, `tests/test_prop15773.py`.
+Independent offloaded checks:
+`evidence/joint_5p_minus_one_mesh_replay.json` and
+`tests/test_joint_5p_minus_one_mesh_check.py`.
+
+## Proposition 15.774 — strict small mass, two-type capacity, and the next two residual layers
+
+For every prime \(p\ge29\), a nonnegative integer-valued quadratic
+\(C\) on \(J(p,(p+1)/2)\) with
+\[
+ 0<4pE[C]<2p-10
+\]
+is Boolean, with mass \(p-3\) or \(p+1\). The local proof is
+`evidence/NOTE_2026-09-04_SHARP_SMALL_MASS_SPECTRUM.md`. Its
+strict endpoint is not classified. For a nonnegative integral quadratic
+\(A\) of affine parity with even active-coordinate boundary, pointwise
+parity minima and the sharp lift floor give the phase-independent union
+\[
+ a=2pE[A]<2p-10\quad\Longrightarrow\quad
+ a\in\{0,p-3,p-1,p+1\}.                         \tag{15.774.1}
+\]
+This is a union over phases, not a claim of realization at each boundary.
+In particular the baseline-four argument assumes neither opposite phases
+nor the existence of a phase-one type.
+
+Suppose both signed eigenshells of a finite edge set \(H\) have floor
+\(r\in\{3,4,5\}\), and write \(|H|=rp+2t\). An isolated chart exists
+through every bound below. Put \(m=(p+1)/2\), transport to infinity,
+and recompute \(T=\sum_{e\in H}C_e\). For each direction of type
+\(\epsilon\), the universal row and total identities give
+\[
+\begin{split}
+ a_d&=(p+1)P_d-\epsilon T-rp
+       =2u_\epsilon+(p+1)k_d,\\
+ 0&\le u_\epsilon<m,\qquad k_d\in\mathbf Z_{\ge0},\\
+ \sum_{d:\epsilon}k_d&=t-u_\epsilon,\qquad
+ u_++u_-\equiv r\pmod m.                       \tag{15.774.2}
+\end{split}
+\]
+Equation (15.774.1) forces the necessary quotient floor
+\[
+k_{\min}(u)=
+\begin{cases}
+0,&u\in\{0,m-2,m-1\},\\
+2,&1\le u\le m-7,\\
+1,&m-6\le u\le m-3,
+\end{cases}
+\qquad t\ge u+m k_{\min}(u).                   \tag{15.774.3}
+\]
+The value \(u=m-6,k=1\) has mass exactly \(2p-10\) and must remain.
+For \(t\le p-6\), averaging leaves only \(u=0,m-2,m-1\); their
+pair sums do not equal \(r\) modulo \(m\). Thus for all \(p\ge29\),
+the floors \(r=3,4,5\) are excluded through \(5p-12,6p-12,7p-12\).
+
+For \(p\ge37\), put \(s_r=\lceil r/2\rceil-1\). At every
+\(t\le2m+s_r\), (15.774.3) leaves only
+\([0,s_r]\cup[m-6,m-1]\). Low-low, low-high, and high-high pairs
+all miss \(r\) modulo \(m\): \(2s_r<r\), \(m-6>r\), and
+\(m-12>r\). Hence the sharper respective bounds are
+\[
+ |H|\le5p+4,\qquad |H|\le6p+4,\qquad
+ |H|\le7p+6.                                  \tag{15.774.4}
+\]
+This scalar relaxation is sharp at the first uncovered layer
+\(t=p+1+\lceil r/2\rceil\): take residues
+\(\lfloor r/2\rfloor,\lceil r/2\rceil\), all quotients two except
+one quotient three in the lower-residue type when \(r\) is odd, and
+\(P_d=r+k_d\). The signed totals \(r-2u_\epsilon\) are opposite,
+and all masses are at least \(2p-10\). These are scalar survivors,
+not local-cell or graph constructions.
+
+The complete two-layer continuation of 15.773 also covers p29/p31.
+In its original residual notation \(t=q+s\), \(|H|=5p+2s\),
+\(s=1,2\), the hard quotient sum is \(p+s-u\). If a quotient-one
+row occurs at \(u<q\), its old classification applies, and every
+forced opposite count drops by \(s\), remaining positive. If none
+occurs, all quotients are at least two and \(u<s\); the common actual
+low count yields at least \(4-s-u\) rows of mass \(p+7-2u\).
+At \(u=q\), both the zero and no-zero alternatives force \(5-s\)
+rows of mass \(p+9\). All newly needed masses \(p+5,p+7,p+9\)
+are forbidden below the strict endpoint. Throughout use \(P+Q\ge9\),
+including \(P=9\), not a fictitious \(Q=-1\) row. Therefore
+\[
+ p\ge29,\quad t=q+1,q+2,\quad k=5p+1,5p+3
+ \quad\Longrightarrow\quad\text{residual (ii) empty}.       \tag{15.774.5}
+\]
+
+Together with 15.764 and Type I closure, odd inclusion-minimal four-gap
+sets are impossible through \(5p+4\); even sets satisfy the r4 bound,
+and odd sets without a level-three row satisfy the r5 bound. These are
+bounded-support theorems. No all-size localization or \(o(p^3)\)
+deficit theorem follows. Eventual E1 for all sufficiently large primes
+would suffice for \(L=1/2\) by denseness, but these bounds are not
+eventual E1. The generic residual frontier is `t>=q+3,k>=5p+5`;
+small-prime frontiers are unchanged. Residual (ii), the all-size bridge,
+E1, and the original MO limit remain open.
+
+Full proof: `evidence/NOTE_2026-09-04_SMALL_MASS_TWO_TYPE_BRIDGE.md`.
+Source: `src/e1_gmin_m4_prop15774.py` and
+`src/e1_gmin_m4_small_mass_spectrum.py`.
+493 technical tests passed on soulkiller; the final documentation-gate result is recorded in `evidence/small_mass_two_type_regression.json`.
+The provenance record is `evidence/small_mass_two_type_regression.json`.
 
 **All-prime branch-C odd--Radon centrality (2026-09-03).**
 Let \(p=4r+3\) be prime with \(r\ge7\). Suppose one opposite row on the

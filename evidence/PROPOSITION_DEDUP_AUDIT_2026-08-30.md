@@ -3,7 +3,7 @@
 **Date:** 2026-09-04
 
 **Scope:** Propositions 6.3--6.10a, every assigned proposition through
-Proposition 15.772 (with protected 15.766--15.767 work left in its existing
+Proposition 15.774 (with protected 15.766--15.767 work left in its existing
 scope), the audited post-15.761 support/conic/Boolean reductions,
 the live predicate wiring, and the attack scripts present during the audit
 
@@ -11,6 +11,47 @@ the live predicate wiring, and the attack scripts present during the audit
 or finite-prime rerun from being mistaken for a new mathematical attack
 
 ## Verdict
+
+Proposition 15.774 is a **PROVED INFINITE-FAMILY THEOREM**: the local
+strict spectrum `0<4p E[C]<2p-10` for nonnegative integral quadratics
+on `J(p,(p+1)/2)` gives Boolean masses `p-3,p+1` for every prime
+`p>=29`. The affine even-boundary parity union is
+`{0,p-3,p-1,p+1}`. Coupled residues and full type capacity exclude
+signed shell floors `r=3,4,5` through `5p+4,6p+4,7p+6` for
+`p>=37`, and through `5p-12,6p-12,7p-12` for every `p>=29`.
+The complete residual carries close `t=q+1,q+2,k=5p+1,5p+3`,
+including p29/p31. The live generic frontier is `t>=q+3,k>=5p+5`;
+small-prime frontiers are unchanged. See the
+[local proof](NOTE_2026-09-04_SHARP_SMALL_MASS_SPECTRUM.md) and
+[two-type bridge](NOTE_2026-09-04_SMALL_MASS_TWO_TYPE_BRIDGE.md).
+
+Do not classify mass `2p-10` or assume phase one at baseline four.
+Do not reopen the same scalar capacity method beyond its threshold:
+exact scalar survivors already exist at `t=p+1+ceil(r/2)` and are
+not graph witnesses. Odd minimal four-gap sets are excluded through
+`5p+4`; even and odd-no-bridge bounds are the r4/r5 bounds above,
+but an all-size witness-localization theorem remains missing.
+Eventual E1 would suffice for the limit, whereas these bounded-size
+theorems give neither eventual E1 nor an `o(p^3)` deficit estimate.
+Residual (ii), E1, and the original MO limit remain open.
+493 technical tests passed on soulkiller; the final documentation-gate result is recorded in `evidence/small_mass_two_type_regression.json`.
+Provenance is recorded in `evidence/small_mass_two_type_regression.json`.
+No new prime, graph, slice, or equality catalog is introduced; carried
+dependencies may replay the previously fixed four-bit certificate.
+
+The preceding Proposition 15.773 is a **PROVED INFINITE-FAMILY THEOREM** closing
+`p>=29,t=q,k=5p-1`, with `q=(p-1)/2`, in both congruence classes.
+All earlier low-mean residues carry with positive remaining row counts.
+The p3 sharp branch has two carry units and `hard edges=mP+2`, not
+necessarily one high row. The new flat all-mean-`2p` branch needs no
+local equality classification: common actual `P<=9` and
+`a_opp(Q)=(p+1)(P+Q)-8p` force five forbidden mass-`p+9` rows.
+See the [joint proof](NOTE_2026-09-04_JOINT_5P_MINUS_ONE_CLOSE.md) and
+[mesh record](joint_5p_minus_one_mesh_replay.json). Both generic
+frontiers then began at `t>=q+1`, equivalently `k>=5p+1`; that
+historical frontier is superseded by 15.774 above. The p23,
+small-prime, and global gates are unchanged. Do not reopen this completed implication with a
+mean-`2p` equality catalog or covering-cube census.
 
 Proposition 15.772 is a **PROVED INFINITE-FAMILY THEOREM** closing
 `p=1 mod 4,p>=29,t=q-1,k=5p-3`, with `q=(p-1)/2`. Its complement-triple
@@ -22,8 +63,9 @@ mass-`p+11` exclusion complete the all-boundary endpoint proof. See the
 [generic proof](NOTE_2026-09-04_P1_THIRD_POST_BAND_CLOSE.md),
 [local gap theorem](NOTE_2026-09-04_COMPLEMENT_TRIPLE_PUNCTURED_GAP.md), and
 [four-node replay](p1_third_post_band_mesh_replay.json).
-The p1 frontier is now `t>=q`; p23 remains `t>=12` and p3 remains `t>=q`.
-The next common generic layer `t=q,k=5p-1` is not attacked here.
+At that checkpoint the p1 frontier reached `t>=q`, while p23 remained
+`t>=12` and p3 remained `t>=q`. Proposition 15.773 above now closes
+the next common generic layer `t=q,k=5p-1`.
 No prime, graph, orbit, slice, or cell census at the closed layer is
 authorized; residual (ii) and all global gates remain open.
 
@@ -1294,11 +1336,11 @@ name until this file is checked first.
 
 - Propositions 15.1--15.82 are written directly in `solution.md` and related
   early modules.
-- There are 686 source-backed proposition modules from 15.83 through 15.772.
+- There are 688 source-backed proposition modules from 15.83 through 15.774.
 - The labels 15.537, 15.583, 15.584, and 15.767 have no proposition module.
   The first three are unassigned labels, not unreviewed propositions; 15.767
   has protected note-only work and is not reclassified by this sync.
-- Every source-backed proposition through 15.772 is included in this audit.
+- Every source-backed proposition through 15.774 is included in this audit.
   The grouped ledger below is by shared mathematical route rather than a
   full row-by-row restatement of the source-backed propositions.
 
@@ -1309,10 +1351,10 @@ The public theorem is gated consistently by the corrected global
 currently `False`. The historical bounded `True` is available only through
 `e1_bounded_residual_split_closed()` and is not a global theorem predicate.
 
-| unit | exact live content | status after audit through 15.772 |
+| unit | exact live content | status after audit through 15.774 |
 |---|---|---|
 | required bi-tight levels 2 and 3 | 15.720 degree congruence using 15.272/15.207 | **TRUE** |
-| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — 15.734--15.754 close the first five shells and 15.752's explicit contiguous band. Propositions 15.768--15.770 close the next two generic layers and `p=23,t=9,10`; 15.771 closes `p=23,t=11,k=114`. Proposition 15.772 additionally closes `p=1 mod 4,p>=29,t=q-1,k=5p-3`. With `q=(p-1)/2`, the exact frontier is critical `p=5,7`; `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`; `p=23,t>=12` (`k>=116`); `p=1 mod 4,p>=29,t>=q`; `p=3 mod 4,p>=31,t>=q`; and positive `p=7,z=7`. The global predicate stays false. |
+| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — 15.734--15.754 close the first five shells and 15.752's explicit contiguous band. Propositions 15.768--15.770 close the next two generic layers and `p=23,t=9,10`; 15.771 closes `p=23,t=11,k=114`. Proposition 15.772 additionally closes `p=1 mod 4,p>=29,t=q-1,k=5p-3`. Proposition 15.773 closes `p>=29,t=q,k=5p-1` in both classes. Proposition 15.774 closes `p>=29,t=q+1,q+2,k=5p+1,5p+3`. With `q=(p-1)/2`, the exact frontier is critical `p=5,7`; `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`; `p=23,t>=12` (`k>=116`); `p=1 mod 4,p>=29,t>=q+3`; `p=3 mod 4,p>=31,t>=q+3`; and positive `p=7,z=7`. The global predicate stays false. |
 | Type I | the multi-level `3A+B>0` bad case | **TRUE** (15.750) — isolated-chart rigidity and parity halving close every prime `p>=11`; exact integer Farkas identities close `p=5,7` |
 | Lemma D | every good-line triple and its Fejer two-plane amplitudes | **TRUE** (15.276) |
 
@@ -1325,8 +1367,10 @@ implication bridge.
 Proposition 15.764 makes one part of that final implication audit explicit:
 an arbitrary all-deletions minimal four-gap path is not automatically an
 even-cardinality residual-(ii) instance. The bridge is proved for odd
-`|H|<=5p`; even `|H|>=4p+2` and odd `|H|>=5p+2` remain outside the current
-exhaustive unit reduction.
+`|H|<=5p`. Proposition 15.774 now excludes every odd minimal witness
+through `5p+4`, and the even and odd-no-critical-row branches through
+the r4/r5 bands above. Those are bounded-support exclusions, not an
+all-size localization; the global implication bridge remains open.
 
 The positive `p=7,z=7` catalog is one finite residual subbranch, not a fourth
 top-level front.
@@ -1397,6 +1441,8 @@ top-level front.
 | **15.770** | one-row carry of the newly classified equalities and sharp local exclusions | **PROVED TWO INFINITE ONE-LAYER EXTENSIONS AND ENDPOINT THEOREM.** It closes `t=q-2,k=5p-5` for `p=1 mod 4,p>=29`, `t=q-1,k=5p-3` for `p=3 mod 4,p>=31`, and `p=23,t=10,k=112`. At p23, eleven low triangle-minus-star roots still annihilate both forms; the corrected surplus gives at least eight opposite mass-36 rows, and the same fixed five-set certificate excludes `P=4,Q=5,F_5`. Later layers and residual (ii) globally remain open. |
 | **15.771** | third p23 post-band endpoint, full mean-46 equality classification, and all-boundary phase-zero mass-32 bridge | **PROVED ALL-BOUNDARY ENDPOINT THEOREM WITH REUSED FINITE CERTIFICATE.** It closes `p=23,t=11,k=114`. The `u=9` carry retains ten low roots, `u=10` forces a forbidden mass-22 lift, and both `u=11` quotient branches force at least five opposite mass-32 rows. Explicit small-side globalization and covering swap cubes complete the equality classification; pointwise parity baselines justify the nonnegative lift subtraction. Four-node exact checks corroborate the reviewed proof. The next p23 frontier is `t>=12,k>=116`; generic ranges and global predicates are unchanged. No repeat endpoint census is authorized. |
 | **15.772** | third generic p1 post-band layer, punctured complement-triple gap and equality theorem, common-row ledger, and local mass `p+11` exclusion | **PROVED INFINITE-FAMILY THEOREM.** It closes `p=1 mod 4,p>=29,t=q-1,k=5p-3` for every boundary. Positive quadrature and the neighboring-slice/kernel argument repair gap two in 15.770 and classify gap four as exactly three offset-four equalities, without asserting a nonnegative punctured difference. All residues force forbidden opposite local masses. The p1 frontier is `t>=q`; all other frontiers and global predicates are unchanged. No new catalog or prime census is used. |
+| **15.773** | joint generic H=5p layer, two-unit p3 sharp carry, quotient-zero endpoints, and classification-free flat row identity | **PROVED INFINITE-FAMILY THEOREM.** It closes `p>=29,t=q,k=5p-1` in both congruence classes. Earlier low-row classifications retain positive forcing counts; the p3 sharp branch gives `hard edges=mP+2` without assuming a unique high row. The new all-mean-`2p` branch has common actual `P<=9`, and `a_opp(Q)=(p+1)(P+Q)-8p` forces five mass-`p+9` rows. No local mean-`2p` equality classification or new census is used. Both generic frontiers then moved to `t>=q+1`; all other frontiers and global predicates are unchanged. |
+| **15.774** | strict small-mass spectrum, full two-type capacities, two residual carries, and exact minimal-four-gap consequences | **PROVED INFINITE-FAMILY THEOREM.** It closes `p>=29,t=q+1,q+2,k=5p+1,5p+3`. At `p>=37`, shell floors r3/r4/r5 are excluded through `5p+4,6p+4,7p+6`; the uniform bounds at `p>=29` are `5p-12,6p-12,7p-12`. Exact first-uncovered scalar survivors forbid claiming a stronger scalar-capacity close; they are not graph witnesses. The live generic frontier is `t>=q+3,k>=5p+5`. No all-size localization, eventual E1, or limit theorem follows. No new prime, graph, or equality catalog is introduced. |
 | **all-prime odd--Radon gate** | support/line isolation for `b` compact plus `r-1` all-equal branch-C rows under zero odd global forms | **PROVED STRUCTURAL REDUCTION.** For every prime `p=4r+3`, `r>=7`, the chain is central when `3b<=r+2`; balanced branch C is covered through `delta=(2r+2)floor((r+2)/3)`. Nonzero forms, unbalanced allocations, and even moments remain open. |
 | **p31 local gate** | arbitrary compact plus six all-equal atoms, all odd rows and joint degree six/eight with zero global forms | **EXHAUSTIVE LOCAL CERTIFICATE AND BALANCED COROLLARY.** All 450 scaling orbits are covered (449 noncentered `UNSAT`, one independently excluded centered orbit, zero `SAT`), excluding every balanced `69<=t<=99` zero-form profile because each contains that row. Unbalanced/nonzero-form cases and the Boolean box remain open. |
 | **seven-channel dominance** | exact degree-six/eight Jacobian minors for four compact and four all-equal atoms | **PROVED ALGEBRAIC METHOD BARRIER.** Both maps are dominant over the algebraic closure in characteristic at least 11, so no universal seven-channel identity can close the gate. Extension-valued points are not `F_p` or Boolean lifts. |
@@ -1580,12 +1626,14 @@ Before spending mesh/GPU time:
    closes `p=23,t=11,k=114` after explicit all-boundary proof review.
    Proposition 15.772 additionally closes `p=1 mod 4,p>=29,t=q-1,k=5p-3`
    by the punctured-gap classification and local mass-`p+11` exclusion.
+   Proposition 15.773 closes `p>=29,t=q,k=5p-1` in both classes by
+   carrying the low rows and using the classification-free flat ledger.
    Do not reopen the closed t11 endpoint with a graph, orbit, slice, or
    five-set census.
    With `q=(p-1)/2`, the live residual
    frontier is critical `p=5,7`; `p=11,t>=3` (`k>=50`);
    `p=13,17,19,t>=5`; `p=23,t>=12` (`k>=116`);
-   `p=1 mod 4,p>=29,t>=q`; `p=3 mod 4,p>=31,t>=q`; and positive
+   `p=1 mod 4,p>=29,t>=q+3`; `p=3 mod 4,p>=31,t>=q+3`; and positive
    `p=7,z=7`.
    Propositions 15.751--15.754 close the former generic `t=3` range, the
    displayed higher band, and all fifth-shell endpoints for `p>=13`; no further

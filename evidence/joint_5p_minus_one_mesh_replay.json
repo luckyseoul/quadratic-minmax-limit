@@ -1,0 +1,1796 @@
+{
+  "checkpoint_commit": "7044d8263f2fd6556549a3917d2a53f7fcf2ace2",
+  "target": "all primes p>=29,t=q,k=5p-1,H=5p",
+  "changed_premise": "The new all-mean-2p hard branch has common actual parallel count P<=9, so its opposite mass8/p+9 pigeonhole contradiction needs no equality-family catalog. Existing branches carry to H=5p.",
+  "classification": "Independent exact symbolic and bounded representative-parameter bridge checks. Local exclusions and common-row normalization remain analytic dependencies; node agreement is not global closure.",
+  "script": "scripts/joint_5p_minus_one_mesh_check.py",
+  "script_sha256": "a1569a12d021f1ab5ab8cc9d521f5777aef08f6c32c7a481c2fe0eeb10f5744f",
+  "preflight_utc": "2026-09-04T20:15:56Z",
+  "preflight": [
+    {
+      "ip": "192.168.1.113",
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.113 'date -u +%Y-%m-%dT%H:%M:%SZ; hostname; uname -m; uptime; nproc; free -m; ps -eo pid,comm,%cpu,%mem --sort=-%cpu | head -8'",
+      "exit_code": 0,
+      "stdout": "2026-09-04T20:15:56Z\nsoulkiller\nx86_64\n 20:15:56 up 6 days, 11:06,  4 users,  load average: 2.05, 2.20, 3.07\n88\n               total        used        free      shared  buff/cache   available\nMem:           61935        4044       20993         649       38417       57890\nSwap:           8191        2035        6156\n    PID COMMAND         %CPU %MEM\n3354979 python          99.9  0.5\n    593 irq/29-aerdrv   87.3  0.0\n3665031 codex            5.3  0.5\n3757514 sshd-session     2.6  0.0\n3757513 ssh              2.5  0.0\n3525502 systemd-journal  0.8  0.1\n4073693 sshd-session     0.3  0.0\n"
+    },
+    {
+      "ip": "192.168.1.192",
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.192 'date -u +%Y-%m-%dT%H:%M:%SZ; hostname; uname -m; uptime; nproc; free -m; ps -eo pid,comm,%cpu,%mem --sort=-%cpu | head -8'",
+      "exit_code": 0,
+      "stdout": "2026-09-04T20:15:56Z\nNUKA\nx86_64\n 15:15:56 up 6 days, 11:01,  3 users,  load average: 0.00, 0.00, 0.00\n16\n               total        used        free      shared  buff/cache   available\nMem:           15942        1952       14030        1041        1281       13989\nSwap:           4096         189        3906\n    PID COMMAND         %CPU %MEM\n 174399 bash            33.3  0.0\n 174358 sshd-session     1.4  0.0\n    307 snapd            0.0  0.2\n      1 systemd          0.0  0.0\n      6 ssh              0.0  0.0\n      7 mount.fuse.sshf  0.0  0.0\n     63 systemd-journal  0.0  0.1\n"
+    },
+    {
+      "ip": "192.168.1.191",
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.191 'date -u +%Y-%m-%dT%H:%M:%SZ; hostname; uname -m; uptime; nproc; free -m; ps -eo pid,comm,%cpu,%mem --sort=-%cpu | head -8'",
+      "exit_code": 0,
+      "stdout": "2026-09-04T20:15:56Z\njellyfin\nx86_64\n 15:15:56 up 6 days, 11:06,  1 user,  load average: 0.00, 0.00, 0.00\n16\n               total        used        free      shared  buff/cache   available\nMem:           14832        2346        4626         245        8439       12486\nSwap:           4095         398        3697\n    PID COMMAND         %CPU %MEM\n 688255 modprobe         100  0.0\n 688336 cloud-id         100  0.1\n 688354 ps               100  0.0\n 688147 pro             80.0  0.2\n 688108 wireplumber     47.0  0.1\n 688053 systemd         44.4  0.0\n 688082 user-session-he 44.4  0.0\n"
+    },
+    {
+      "ip": "192.168.1.135",
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.135 'date -u +%Y-%m-%dT%H:%M:%SZ; hostname; uname -m; uptime; nproc; free -m; ps -eo pid,comm,%cpu,%mem --sort=-%cpu | head -8'",
+      "exit_code": 0,
+      "stdout": "2026-09-04T20:15:56Z\norin\naarch64\n 15:15:56 up 6 days, 11:07,  2 users,  load average: 0.26, 0.07, 0.02\n6\n               total        used        free      shared  buff/cache   available\nMem:            7546        1415        3015         100        3441        6130\nSwap:           2047          15        2032\n    PID COMMAND         %CPU %MEM\n 507591 sshd            12.9  0.1\n 503536 (udev-worker)    0.3  0.1\n   1891 jtop             0.2  0.5\n    292 systemd-udevd    0.1  0.1\n   3193 gnome-shell      0.1  4.1\n   1680 nvgpu_channel_p  0.1  0.0\n   2497 containerd       0.0  0.6\n"
+    }
+  ],
+  "routing": {
+    "soulkiller": "Exact bivariate rational-coefficient identities for arbitrary actual P; existing 88-thread Python/pytest environment also reserved for offloaded package regression.",
+    "NUKA": "Independent p1 seven-branch carried-ledger arithmetic at p29,37,41,53.",
+    "jellyfin": "Independent p3 four sharp families, two zero-quotient branches, and mass p-1 branch arithmetic at p31,43,47,59.",
+    "orin": "ARM64 Python3.12 rational parity-floor LP at p29/31 and actual P0..9 integer-ledger portability, including legal-Q handling at P9; no routine duplicate CUDA."
+  },
+  "local_equality_catalog_used": false,
+  "old_graph_slice_cube_catalog_census_rerun": false,
+  "gpu_research_jobs_launched": false,
+  "controller_regression_run": false,
+  "runs": [
+    {
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.113 'PYTHONDONTWRITEBYTECODE=1 /home/nick/.venvs/mo-exact/bin/python /tmp/joint-5p-minus-one.XZVoSh/joint_5p_minus_one_mesh_check.py flat-symbolic'",
+      "exit_code": 0,
+      "output": {
+        "architecture": "x86_64",
+        "classification": "independent exact joint H=5p bridge check",
+        "host": "soulkiller",
+        "mode": "flat-symbolic",
+        "passed": true,
+        "python": "3.14.4",
+        "result": {
+          "P9_caution": "Q=-1 is not an actual row; P=9 and Q>=0 already imply P+Q>=9",
+          "all_coefficient_residuals_zero": true,
+          "classification": "exact symbolic row identities, conditional on common-row normalization and local mass exclusions",
+          "common_actual_P_range": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "equality_catalog_used": false,
+          "forced_mass": "p+9",
+          "forced_row_count": 5,
+          "hard_sign_times_T": {
+            "p^0 P^1": "1",
+            "p^1 P^0": "-5",
+            "p^1 P^1": "1"
+          },
+          "identity_residuals": {
+            "P_plus_Q_eight_scaled_mass": {},
+            "P_plus_Q_nine_scaled_mass": {},
+            "forced_rows_is_five": {},
+            "hard_edges_from_global_T": {},
+            "surplus_is_m_minus_five": {}
+          },
+          "opposite_total": {
+            "p^0 P^1": "-1/2",
+            "p^1 P^0": "5",
+            "p^1 P^1": "-1/2"
+          },
+          "polynomial_variables": [
+            "p",
+            "P"
+          ],
+          "shifted_positive_polynomials_at_p29": {
+            "five_p_minus_nine_m": [
+              "10",
+              "1/2"
+            ],
+            "isolated_vertices": [
+              552,
+              48,
+              1
+            ],
+            "ten_m_minus_five_p": [
+              5
+            ]
+          },
+          "surplus": {
+            "p^0 P^0": "-9/2",
+            "p^1 P^0": "1/2"
+          }
+        },
+        "script_sha256": "a1569a12d021f1ab5ab8cc9d521f5777aef08f6c32c7a481c2fe0eeb10f5744f"
+      }
+    },
+    {
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.192 'PYTHONDONTWRITEBYTECODE=1 /home/nick/.venvs/qml-mesh/bin/python /tmp/joint-5p-minus-one.JLkxHf/joint_5p_minus_one_mesh_check.py p1-carries'",
+      "exit_code": 0,
+      "output": {
+        "architecture": "x86_64",
+        "classification": "independent exact joint H=5p bridge check",
+        "host": "NUKA",
+        "mode": "p1-carries",
+        "passed": true,
+        "python": "3.14.4",
+        "result": {
+          "classification": "independent representative-prime p1 carried-ledger arithmetic; prior local theorems are dependencies",
+          "rows": [
+            {
+              "H_edge_count": 145,
+              "branches": [
+                {
+                  "branch": "old_complement_literal",
+                  "forbidden_Q": 2,
+                  "forbidden_mass": 6,
+                  "forced_Q": 3,
+                  "forced_mass": 36,
+                  "forced_rows_at_least": 4,
+                  "h_times_T": 33,
+                  "hard_edges": 89,
+                  "hard_low_mean": 30,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 1,
+                  "opposite_edges": 56,
+                  "parallel_offset": 5,
+                  "quotient_carry": 14,
+                  "quotient_sum": 29,
+                  "surplus": 11,
+                  "u": 0
+                },
+                {
+                  "branch": "carried_complement_triple",
+                  "forbidden_Q": 6,
+                  "forbidden_mass": 14,
+                  "forced_Q": 7,
+                  "forced_mass": 44,
+                  "forced_rows_at_least": 8,
+                  "h_times_T": -79,
+                  "hard_edges": 33,
+                  "hard_low_mean": 52,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 12,
+                  "opposite_edges": 112,
+                  "parallel_offset": 2,
+                  "quotient_carry": 3,
+                  "quotient_sum": 18,
+                  "surplus": 7,
+                  "u": 11
+                },
+                {
+                  "branch": "carried_XNOR_omitted_pair",
+                  "forbidden_Q": 5,
+                  "forbidden_mass": 12,
+                  "forced_Q": 6,
+                  "forced_mass": 42,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": -51,
+                  "hard_edges": 47,
+                  "hard_low_mean": 54,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 13,
+                  "opposite_edges": 98,
+                  "parallel_offset": 3,
+                  "quotient_carry": 2,
+                  "quotient_sum": 17,
+                  "surplus": 8,
+                  "u": 12
+                },
+                {
+                  "branch": "carried_XNOR_all_equal_triple",
+                  "forbidden_Q": 3,
+                  "forbidden_mass": 12,
+                  "forced_Q": 4,
+                  "forced_mass": 42,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": 9,
+                  "hard_edges": 77,
+                  "hard_low_mean": 54,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 13,
+                  "opposite_edges": 68,
+                  "parallel_offset": 5,
+                  "quotient_carry": 2,
+                  "quotient_sum": 17,
+                  "surplus": 8,
+                  "u": 12
+                },
+                {
+                  "branch": "carried_offset_four",
+                  "forbidden_Q": 4,
+                  "forbidden_mass": 10,
+                  "forced_Q": 5,
+                  "forced_mass": 40,
+                  "forced_rows_at_least": 6,
+                  "h_times_T": -23,
+                  "hard_edges": 61,
+                  "hard_low_mean": 56,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 14,
+                  "opposite_edges": 84,
+                  "parallel_offset": 4,
+                  "quotient_carry": 1,
+                  "quotient_sum": 16,
+                  "surplus": 9,
+                  "u": 13
+                },
+                {
+                  "branch": "carried_offset_six",
+                  "forbidden_Q": 2,
+                  "forbidden_mass": 10,
+                  "forced_Q": 3,
+                  "forced_mass": 40,
+                  "forced_rows_at_least": 6,
+                  "h_times_T": 37,
+                  "hard_edges": 91,
+                  "hard_low_mean": 56,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 14,
+                  "opposite_edges": 54,
+                  "parallel_offset": 6,
+                  "quotient_carry": 1,
+                  "quotient_sum": 16,
+                  "surplus": 9,
+                  "u": 13
+                },
+                {
+                  "branch": "quotient_zero_XNOR",
+                  "forbidden_Q": 3,
+                  "forbidden_mass": 8,
+                  "forced_Q": 4,
+                  "forced_mass": 38,
+                  "forced_rows_at_least": 5,
+                  "h_times_T": 5,
+                  "hard_edges": 75,
+                  "hard_low_mean": 28,
+                  "low_quotient": 0,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 0,
+                  "opposite_edges": 70,
+                  "parallel_offset": 4,
+                  "quotient_carry": 15,
+                  "quotient_sum": 15,
+                  "surplus": 10,
+                  "u": 14
+                }
+              ],
+              "k": 144,
+              "p": 29,
+              "t": 14
+            },
+            {
+              "H_edge_count": 185,
+              "branches": [
+                {
+                  "branch": "old_complement_literal",
+                  "forbidden_Q": 2,
+                  "forbidden_mass": 6,
+                  "forced_Q": 3,
+                  "forced_mass": 44,
+                  "forced_rows_at_least": 4,
+                  "h_times_T": 41,
+                  "hard_edges": 113,
+                  "hard_low_mean": 38,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 1,
+                  "opposite_edges": 72,
+                  "parallel_offset": 5,
+                  "quotient_carry": 18,
+                  "quotient_sum": 37,
+                  "surplus": 15,
+                  "u": 0
+                },
+                {
+                  "branch": "carried_complement_triple",
+                  "forbidden_Q": 6,
+                  "forbidden_mass": 14,
+                  "forced_Q": 7,
+                  "forced_mass": 52,
+                  "forced_rows_at_least": 8,
+                  "h_times_T": -103,
+                  "hard_edges": 41,
+                  "hard_low_mean": 68,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 16,
+                  "opposite_edges": 144,
+                  "parallel_offset": 2,
+                  "quotient_carry": 3,
+                  "quotient_sum": 22,
+                  "surplus": 11,
+                  "u": 15
+                },
+                {
+                  "branch": "carried_XNOR_omitted_pair",
+                  "forbidden_Q": 5,
+                  "forbidden_mass": 12,
+                  "forced_Q": 6,
+                  "forced_mass": 50,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": -67,
+                  "hard_edges": 59,
+                  "hard_low_mean": 70,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 17,
+                  "opposite_edges": 126,
+                  "parallel_offset": 3,
+                  "quotient_carry": 2,
+                  "quotient_sum": 21,
+                  "surplus": 12,
+                  "u": 16
+                },
+                {
+                  "branch": "carried_XNOR_all_equal_triple",
+                  "forbidden_Q": 3,
+                  "forbidden_mass": 12,
+                  "forced_Q": 4,
+                  "forced_mass": 50,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": 9,
+                  "hard_edges": 97,
+                  "hard_low_mean": 70,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 17,
+                  "opposite_edges": 88,
+                  "parallel_offset": 5,
+                  "quotient_carry": 2,
+                  "quotient_sum": 21,
+                  "surplus": 12,
+                  "u": 16
+                },
+                {
+                  "branch": "carried_offset_four",
+                  "forbidden_Q": 4,
+                  "forbidden_mass": 10,
+                  "forced_Q": 5,
+                  "forced_mass": 48,
+                  "forced_rows_at_least": 6,
+                  "h_times_T": -31,
+                  "hard_edges": 77,
+                  "hard_low_mean": 72,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 18,
+                  "opposite_edges": 108,
+                  "parallel_offset": 4,
+                  "quotient_carry": 1,
+                  "quotient_sum": 20,
+                  "surplus": 13,
+                  "u": 17
+                },
+                {
+                  "branch": "carried_offset_six",
+                  "forbidden_Q": 2,
+                  "forbidden_mass": 10,
+                  "forced_Q": 3,
+                  "forced_mass": 48,
+                  "forced_rows_at_least": 6,
+                  "h_times_T": 45,
+                  "hard_edges": 115,
+                  "hard_low_mean": 72,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 18,
+                  "opposite_edges": 70,
+                  "parallel_offset": 6,
+                  "quotient_carry": 1,
+                  "quotient_sum": 20,
+                  "surplus": 13,
+                  "u": 17
+                },
+                {
+                  "branch": "quotient_zero_XNOR",
+                  "forbidden_Q": 3,
+                  "forbidden_mass": 8,
+                  "forced_Q": 4,
+                  "forced_mass": 46,
+                  "forced_rows_at_least": 5,
+                  "h_times_T": 5,
+                  "hard_edges": 95,
+                  "hard_low_mean": 36,
+                  "low_quotient": 0,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 0,
+                  "opposite_edges": 90,
+                  "parallel_offset": 4,
+                  "quotient_carry": 19,
+                  "quotient_sum": 19,
+                  "surplus": 14,
+                  "u": 18
+                }
+              ],
+              "k": 184,
+              "p": 37,
+              "t": 18
+            },
+            {
+              "H_edge_count": 205,
+              "branches": [
+                {
+                  "branch": "old_complement_literal",
+                  "forbidden_Q": 2,
+                  "forbidden_mass": 6,
+                  "forced_Q": 3,
+                  "forced_mass": 48,
+                  "forced_rows_at_least": 4,
+                  "h_times_T": 45,
+                  "hard_edges": 125,
+                  "hard_low_mean": 42,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 1,
+                  "opposite_edges": 80,
+                  "parallel_offset": 5,
+                  "quotient_carry": 20,
+                  "quotient_sum": 41,
+                  "surplus": 17,
+                  "u": 0
+                },
+                {
+                  "branch": "carried_complement_triple",
+                  "forbidden_Q": 6,
+                  "forbidden_mass": 14,
+                  "forced_Q": 7,
+                  "forced_mass": 56,
+                  "forced_rows_at_least": 8,
+                  "h_times_T": -115,
+                  "hard_edges": 45,
+                  "hard_low_mean": 76,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 18,
+                  "opposite_edges": 160,
+                  "parallel_offset": 2,
+                  "quotient_carry": 3,
+                  "quotient_sum": 24,
+                  "surplus": 13,
+                  "u": 17
+                },
+                {
+                  "branch": "carried_XNOR_omitted_pair",
+                  "forbidden_Q": 5,
+                  "forbidden_mass": 12,
+                  "forced_Q": 6,
+                  "forced_mass": 54,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": -75,
+                  "hard_edges": 65,
+                  "hard_low_mean": 78,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 19,
+                  "opposite_edges": 140,
+                  "parallel_offset": 3,
+                  "quotient_carry": 2,
+                  "quotient_sum": 23,
+                  "surplus": 14,
+                  "u": 18
+                },
+                {
+                  "branch": "carried_XNOR_all_equal_triple",
+                  "forbidden_Q": 3,
+                  "forbidden_mass": 12,
+                  "forced_Q": 4,
+                  "forced_mass": 54,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": 9,
+                  "hard_edges": 107,
+                  "hard_low_mean": 78,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 19,
+                  "opposite_edges": 98,
+                  "parallel_offset": 5,
+                  "quotient_carry": 2,
+                  "quotient_sum": 23,
+                  "surplus": 14,
+                  "u": 18
+                },
+                {
+                  "branch": "carried_offset_four",
+                  "forbidden_Q": 4,
+                  "forbidden_mass": 10,
+                  "forced_Q": 5,
+                  "forced_mass": 52,
+                  "forced_rows_at_least": 6,
+                  "h_times_T": -35,
+                  "hard_edges": 85,
+                  "hard_low_mean": 80,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 20,
+                  "opposite_edges": 120,
+                  "parallel_offset": 4,
+                  "quotient_carry": 1,
+                  "quotient_sum": 22,
+                  "surplus": 15,
+                  "u": 19
+                },
+                {
+                  "branch": "carried_offset_six",
+                  "forbidden_Q": 2,
+                  "forbidden_mass": 10,
+                  "forced_Q": 3,
+                  "forced_mass": 52,
+                  "forced_rows_at_least": 6,
+                  "h_times_T": 49,
+                  "hard_edges": 127,
+                  "hard_low_mean": 80,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 20,
+                  "opposite_edges": 78,
+                  "parallel_offset": 6,
+                  "quotient_carry": 1,
+                  "quotient_sum": 22,
+                  "surplus": 15,
+                  "u": 19
+                },
+                {
+                  "branch": "quotient_zero_XNOR",
+                  "forbidden_Q": 3,
+                  "forbidden_mass": 8,
+                  "forced_Q": 4,
+                  "forced_mass": 50,
+                  "forced_rows_at_least": 5,
+                  "h_times_T": 5,
+                  "hard_edges": 105,
+                  "hard_low_mean": 40,
+                  "low_quotient": 0,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 0,
+                  "opposite_edges": 100,
+                  "parallel_offset": 4,
+                  "quotient_carry": 21,
+                  "quotient_sum": 21,
+                  "surplus": 16,
+                  "u": 20
+                }
+              ],
+              "k": 204,
+              "p": 41,
+              "t": 20
+            },
+            {
+              "H_edge_count": 265,
+              "branches": [
+                {
+                  "branch": "old_complement_literal",
+                  "forbidden_Q": 2,
+                  "forbidden_mass": 6,
+                  "forced_Q": 3,
+                  "forced_mass": 60,
+                  "forced_rows_at_least": 4,
+                  "h_times_T": 57,
+                  "hard_edges": 161,
+                  "hard_low_mean": 54,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 1,
+                  "opposite_edges": 104,
+                  "parallel_offset": 5,
+                  "quotient_carry": 26,
+                  "quotient_sum": 53,
+                  "surplus": 23,
+                  "u": 0
+                },
+                {
+                  "branch": "carried_complement_triple",
+                  "forbidden_Q": 6,
+                  "forbidden_mass": 14,
+                  "forced_Q": 7,
+                  "forced_mass": 68,
+                  "forced_rows_at_least": 8,
+                  "h_times_T": -151,
+                  "hard_edges": 57,
+                  "hard_low_mean": 100,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 24,
+                  "opposite_edges": 208,
+                  "parallel_offset": 2,
+                  "quotient_carry": 3,
+                  "quotient_sum": 30,
+                  "surplus": 19,
+                  "u": 23
+                },
+                {
+                  "branch": "carried_XNOR_omitted_pair",
+                  "forbidden_Q": 5,
+                  "forbidden_mass": 12,
+                  "forced_Q": 6,
+                  "forced_mass": 66,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": -99,
+                  "hard_edges": 83,
+                  "hard_low_mean": 102,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 25,
+                  "opposite_edges": 182,
+                  "parallel_offset": 3,
+                  "quotient_carry": 2,
+                  "quotient_sum": 29,
+                  "surplus": 20,
+                  "u": 24
+                },
+                {
+                  "branch": "carried_XNOR_all_equal_triple",
+                  "forbidden_Q": 3,
+                  "forbidden_mass": 12,
+                  "forced_Q": 4,
+                  "forced_mass": 66,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": 9,
+                  "hard_edges": 137,
+                  "hard_low_mean": 102,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 25,
+                  "opposite_edges": 128,
+                  "parallel_offset": 5,
+                  "quotient_carry": 2,
+                  "quotient_sum": 29,
+                  "surplus": 20,
+                  "u": 24
+                },
+                {
+                  "branch": "carried_offset_four",
+                  "forbidden_Q": 4,
+                  "forbidden_mass": 10,
+                  "forced_Q": 5,
+                  "forced_mass": 64,
+                  "forced_rows_at_least": 6,
+                  "h_times_T": -47,
+                  "hard_edges": 109,
+                  "hard_low_mean": 104,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 26,
+                  "opposite_edges": 156,
+                  "parallel_offset": 4,
+                  "quotient_carry": 1,
+                  "quotient_sum": 28,
+                  "surplus": 21,
+                  "u": 25
+                },
+                {
+                  "branch": "carried_offset_six",
+                  "forbidden_Q": 2,
+                  "forbidden_mass": 10,
+                  "forced_Q": 3,
+                  "forced_mass": 64,
+                  "forced_rows_at_least": 6,
+                  "h_times_T": 61,
+                  "hard_edges": 163,
+                  "hard_low_mean": 104,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 26,
+                  "opposite_edges": 102,
+                  "parallel_offset": 6,
+                  "quotient_carry": 1,
+                  "quotient_sum": 28,
+                  "surplus": 21,
+                  "u": 25
+                },
+                {
+                  "branch": "quotient_zero_XNOR",
+                  "forbidden_Q": 3,
+                  "forbidden_mass": 8,
+                  "forced_Q": 4,
+                  "forced_mass": 62,
+                  "forced_rows_at_least": 5,
+                  "h_times_T": 5,
+                  "hard_edges": 135,
+                  "hard_low_mean": 52,
+                  "low_quotient": 0,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 0,
+                  "opposite_edges": 130,
+                  "parallel_offset": 4,
+                  "quotient_carry": 27,
+                  "quotient_sum": 27,
+                  "surplus": 22,
+                  "u": 26
+                }
+              ],
+              "k": 264,
+              "p": 53,
+              "t": 26
+            }
+          ]
+        },
+        "script_sha256": "a1569a12d021f1ab5ab8cc9d521f5777aef08f6c32c7a481c2fe0eeb10f5744f"
+      }
+    },
+    {
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.191 'PYTHONDONTWRITEBYTECODE=1 /home/nick/.venvs/mo-intel/bin/python /tmp/joint-5p-minus-one.YJY4lc/joint_5p_minus_one_mesh_check.py p3-carries'",
+      "exit_code": 0,
+      "output": {
+        "architecture": "x86_64",
+        "classification": "independent exact joint H=5p bridge check",
+        "host": "jellyfin",
+        "mode": "p3-carries",
+        "passed": true,
+        "python": "3.14.4",
+        "result": {
+          "classification": "independent representative-prime p3 carry and zero-quotient arithmetic; no graph or local-equality census",
+          "rows": [
+            {
+              "p": 31,
+              "p_minus_one_branch": {
+                "baseline_mean": 30,
+                "lift_mass": 30,
+                "low_mean": 60,
+                "low_rows_at_least": 15,
+                "u": 14
+              },
+              "sharp_branches": [
+                {
+                  "branch": "sharp_offset_2",
+                  "forbidden_Q": 6,
+                  "forbidden_mass": 12,
+                  "forced_Q": 7,
+                  "forced_mass": 44,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": -87,
+                  "hard_edges": 34,
+                  "hard_low_mean": 58,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 14,
+                  "opposite_edges": 121,
+                  "parallel_offset": 2,
+                  "quotient_carry": 2,
+                  "quotient_sum": 18,
+                  "surplus": 9,
+                  "u": 13
+                },
+                {
+                  "branch": "sharp_offset_3",
+                  "forbidden_Q": 5,
+                  "forbidden_mass": 12,
+                  "forced_Q": 6,
+                  "forced_mass": 44,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": -55,
+                  "hard_edges": 50,
+                  "hard_low_mean": 58,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 14,
+                  "opposite_edges": 105,
+                  "parallel_offset": 3,
+                  "quotient_carry": 2,
+                  "quotient_sum": 18,
+                  "surplus": 9,
+                  "u": 13
+                },
+                {
+                  "branch": "sharp_offset_4",
+                  "forbidden_Q": 4,
+                  "forbidden_mass": 12,
+                  "forced_Q": 5,
+                  "forced_mass": 44,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": -23,
+                  "hard_edges": 66,
+                  "hard_low_mean": 58,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 14,
+                  "opposite_edges": 89,
+                  "parallel_offset": 4,
+                  "quotient_carry": 2,
+                  "quotient_sum": 18,
+                  "surplus": 9,
+                  "u": 13
+                },
+                {
+                  "branch": "sharp_offset_5",
+                  "forbidden_Q": 3,
+                  "forbidden_mass": 12,
+                  "forced_Q": 4,
+                  "forced_mass": 44,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": 9,
+                  "hard_edges": 82,
+                  "hard_low_mean": 58,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 14,
+                  "opposite_edges": 73,
+                  "parallel_offset": 5,
+                  "quotient_carry": 2,
+                  "quotient_sum": 18,
+                  "surplus": 9,
+                  "u": 13
+                }
+              ],
+              "zero_quotient_branches": [
+                {
+                  "branch": "quotient_zero_XNOR",
+                  "forbidden_Q": 3,
+                  "forbidden_mass": 8,
+                  "forced_Q": 4,
+                  "forced_mass": 40,
+                  "forced_rows_at_least": 5,
+                  "h_times_T": 5,
+                  "hard_edges": 80,
+                  "hard_low_mean": 30,
+                  "low_quotient": 0,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 0,
+                  "opposite_edges": 75,
+                  "parallel_offset": 4,
+                  "quotient_carry": 16,
+                  "quotient_sum": 16,
+                  "surplus": 11,
+                  "u": 15
+                },
+                {
+                  "branch": "quotient_zero_complement_literal",
+                  "forbidden_Q": 4,
+                  "forbidden_mass": 8,
+                  "forced_Q": 5,
+                  "forced_mass": 40,
+                  "forced_rows_at_least": 5,
+                  "h_times_T": -27,
+                  "hard_edges": 64,
+                  "hard_low_mean": 30,
+                  "low_quotient": 0,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 0,
+                  "opposite_edges": 91,
+                  "parallel_offset": 3,
+                  "quotient_carry": 16,
+                  "quotient_sum": 16,
+                  "surplus": 11,
+                  "u": 15
+                }
+              ]
+            },
+            {
+              "p": 43,
+              "p_minus_one_branch": {
+                "baseline_mean": 42,
+                "lift_mass": 42,
+                "low_mean": 84,
+                "low_rows_at_least": 21,
+                "u": 20
+              },
+              "sharp_branches": [
+                {
+                  "branch": "sharp_offset_2",
+                  "forbidden_Q": 6,
+                  "forbidden_mass": 12,
+                  "forced_Q": 7,
+                  "forced_mass": 56,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": -123,
+                  "hard_edges": 46,
+                  "hard_low_mean": 82,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 20,
+                  "opposite_edges": 169,
+                  "parallel_offset": 2,
+                  "quotient_carry": 2,
+                  "quotient_sum": 24,
+                  "surplus": 15,
+                  "u": 19
+                },
+                {
+                  "branch": "sharp_offset_3",
+                  "forbidden_Q": 5,
+                  "forbidden_mass": 12,
+                  "forced_Q": 6,
+                  "forced_mass": 56,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": -79,
+                  "hard_edges": 68,
+                  "hard_low_mean": 82,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 20,
+                  "opposite_edges": 147,
+                  "parallel_offset": 3,
+                  "quotient_carry": 2,
+                  "quotient_sum": 24,
+                  "surplus": 15,
+                  "u": 19
+                },
+                {
+                  "branch": "sharp_offset_4",
+                  "forbidden_Q": 4,
+                  "forbidden_mass": 12,
+                  "forced_Q": 5,
+                  "forced_mass": 56,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": -35,
+                  "hard_edges": 90,
+                  "hard_low_mean": 82,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 20,
+                  "opposite_edges": 125,
+                  "parallel_offset": 4,
+                  "quotient_carry": 2,
+                  "quotient_sum": 24,
+                  "surplus": 15,
+                  "u": 19
+                },
+                {
+                  "branch": "sharp_offset_5",
+                  "forbidden_Q": 3,
+                  "forbidden_mass": 12,
+                  "forced_Q": 4,
+                  "forced_mass": 56,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": 9,
+                  "hard_edges": 112,
+                  "hard_low_mean": 82,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 20,
+                  "opposite_edges": 103,
+                  "parallel_offset": 5,
+                  "quotient_carry": 2,
+                  "quotient_sum": 24,
+                  "surplus": 15,
+                  "u": 19
+                }
+              ],
+              "zero_quotient_branches": [
+                {
+                  "branch": "quotient_zero_XNOR",
+                  "forbidden_Q": 3,
+                  "forbidden_mass": 8,
+                  "forced_Q": 4,
+                  "forced_mass": 52,
+                  "forced_rows_at_least": 5,
+                  "h_times_T": 5,
+                  "hard_edges": 110,
+                  "hard_low_mean": 42,
+                  "low_quotient": 0,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 0,
+                  "opposite_edges": 105,
+                  "parallel_offset": 4,
+                  "quotient_carry": 22,
+                  "quotient_sum": 22,
+                  "surplus": 17,
+                  "u": 21
+                },
+                {
+                  "branch": "quotient_zero_complement_literal",
+                  "forbidden_Q": 4,
+                  "forbidden_mass": 8,
+                  "forced_Q": 5,
+                  "forced_mass": 52,
+                  "forced_rows_at_least": 5,
+                  "h_times_T": -39,
+                  "hard_edges": 88,
+                  "hard_low_mean": 42,
+                  "low_quotient": 0,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 0,
+                  "opposite_edges": 127,
+                  "parallel_offset": 3,
+                  "quotient_carry": 22,
+                  "quotient_sum": 22,
+                  "surplus": 17,
+                  "u": 21
+                }
+              ]
+            },
+            {
+              "p": 47,
+              "p_minus_one_branch": {
+                "baseline_mean": 46,
+                "lift_mass": 46,
+                "low_mean": 92,
+                "low_rows_at_least": 23,
+                "u": 22
+              },
+              "sharp_branches": [
+                {
+                  "branch": "sharp_offset_2",
+                  "forbidden_Q": 6,
+                  "forbidden_mass": 12,
+                  "forced_Q": 7,
+                  "forced_mass": 60,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": -135,
+                  "hard_edges": 50,
+                  "hard_low_mean": 90,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 22,
+                  "opposite_edges": 185,
+                  "parallel_offset": 2,
+                  "quotient_carry": 2,
+                  "quotient_sum": 26,
+                  "surplus": 17,
+                  "u": 21
+                },
+                {
+                  "branch": "sharp_offset_3",
+                  "forbidden_Q": 5,
+                  "forbidden_mass": 12,
+                  "forced_Q": 6,
+                  "forced_mass": 60,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": -87,
+                  "hard_edges": 74,
+                  "hard_low_mean": 90,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 22,
+                  "opposite_edges": 161,
+                  "parallel_offset": 3,
+                  "quotient_carry": 2,
+                  "quotient_sum": 26,
+                  "surplus": 17,
+                  "u": 21
+                },
+                {
+                  "branch": "sharp_offset_4",
+                  "forbidden_Q": 4,
+                  "forbidden_mass": 12,
+                  "forced_Q": 5,
+                  "forced_mass": 60,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": -39,
+                  "hard_edges": 98,
+                  "hard_low_mean": 90,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 22,
+                  "opposite_edges": 137,
+                  "parallel_offset": 4,
+                  "quotient_carry": 2,
+                  "quotient_sum": 26,
+                  "surplus": 17,
+                  "u": 21
+                },
+                {
+                  "branch": "sharp_offset_5",
+                  "forbidden_Q": 3,
+                  "forbidden_mass": 12,
+                  "forced_Q": 4,
+                  "forced_mass": 60,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": 9,
+                  "hard_edges": 122,
+                  "hard_low_mean": 90,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 22,
+                  "opposite_edges": 113,
+                  "parallel_offset": 5,
+                  "quotient_carry": 2,
+                  "quotient_sum": 26,
+                  "surplus": 17,
+                  "u": 21
+                }
+              ],
+              "zero_quotient_branches": [
+                {
+                  "branch": "quotient_zero_XNOR",
+                  "forbidden_Q": 3,
+                  "forbidden_mass": 8,
+                  "forced_Q": 4,
+                  "forced_mass": 56,
+                  "forced_rows_at_least": 5,
+                  "h_times_T": 5,
+                  "hard_edges": 120,
+                  "hard_low_mean": 46,
+                  "low_quotient": 0,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 0,
+                  "opposite_edges": 115,
+                  "parallel_offset": 4,
+                  "quotient_carry": 24,
+                  "quotient_sum": 24,
+                  "surplus": 19,
+                  "u": 23
+                },
+                {
+                  "branch": "quotient_zero_complement_literal",
+                  "forbidden_Q": 4,
+                  "forbidden_mass": 8,
+                  "forced_Q": 5,
+                  "forced_mass": 56,
+                  "forced_rows_at_least": 5,
+                  "h_times_T": -43,
+                  "hard_edges": 96,
+                  "hard_low_mean": 46,
+                  "low_quotient": 0,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 0,
+                  "opposite_edges": 139,
+                  "parallel_offset": 3,
+                  "quotient_carry": 24,
+                  "quotient_sum": 24,
+                  "surplus": 19,
+                  "u": 23
+                }
+              ]
+            },
+            {
+              "p": 59,
+              "p_minus_one_branch": {
+                "baseline_mean": 58,
+                "lift_mass": 58,
+                "low_mean": 116,
+                "low_rows_at_least": 29,
+                "u": 28
+              },
+              "sharp_branches": [
+                {
+                  "branch": "sharp_offset_2",
+                  "forbidden_Q": 6,
+                  "forbidden_mass": 12,
+                  "forced_Q": 7,
+                  "forced_mass": 72,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": -171,
+                  "hard_edges": 62,
+                  "hard_low_mean": 114,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 28,
+                  "opposite_edges": 233,
+                  "parallel_offset": 2,
+                  "quotient_carry": 2,
+                  "quotient_sum": 32,
+                  "surplus": 23,
+                  "u": 27
+                },
+                {
+                  "branch": "sharp_offset_3",
+                  "forbidden_Q": 5,
+                  "forbidden_mass": 12,
+                  "forced_Q": 6,
+                  "forced_mass": 72,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": -111,
+                  "hard_edges": 92,
+                  "hard_low_mean": 114,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 28,
+                  "opposite_edges": 203,
+                  "parallel_offset": 3,
+                  "quotient_carry": 2,
+                  "quotient_sum": 32,
+                  "surplus": 23,
+                  "u": 27
+                },
+                {
+                  "branch": "sharp_offset_4",
+                  "forbidden_Q": 4,
+                  "forbidden_mass": 12,
+                  "forced_Q": 5,
+                  "forced_mass": 72,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": -51,
+                  "hard_edges": 122,
+                  "hard_low_mean": 114,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 28,
+                  "opposite_edges": 173,
+                  "parallel_offset": 4,
+                  "quotient_carry": 2,
+                  "quotient_sum": 32,
+                  "surplus": 23,
+                  "u": 27
+                },
+                {
+                  "branch": "sharp_offset_5",
+                  "forbidden_Q": 3,
+                  "forbidden_mass": 12,
+                  "forced_Q": 4,
+                  "forced_mass": 72,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": 9,
+                  "hard_edges": 152,
+                  "hard_low_mean": 114,
+                  "low_quotient": 1,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 28,
+                  "opposite_edges": 143,
+                  "parallel_offset": 5,
+                  "quotient_carry": 2,
+                  "quotient_sum": 32,
+                  "surplus": 23,
+                  "u": 27
+                }
+              ],
+              "zero_quotient_branches": [
+                {
+                  "branch": "quotient_zero_XNOR",
+                  "forbidden_Q": 3,
+                  "forbidden_mass": 8,
+                  "forced_Q": 4,
+                  "forced_mass": 68,
+                  "forced_rows_at_least": 5,
+                  "h_times_T": 5,
+                  "hard_edges": 150,
+                  "hard_low_mean": 58,
+                  "low_quotient": 0,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 0,
+                  "opposite_edges": 145,
+                  "parallel_offset": 4,
+                  "quotient_carry": 30,
+                  "quotient_sum": 30,
+                  "surplus": 25,
+                  "u": 29
+                },
+                {
+                  "branch": "quotient_zero_complement_literal",
+                  "forbidden_Q": 4,
+                  "forbidden_mass": 8,
+                  "forced_Q": 5,
+                  "forced_mass": 68,
+                  "forced_rows_at_least": 5,
+                  "h_times_T": -55,
+                  "hard_edges": 120,
+                  "hard_low_mean": 58,
+                  "low_quotient": 0,
+                  "low_quotient_rows_at_least_if_all_at_least_low": 0,
+                  "opposite_edges": 175,
+                  "parallel_offset": 3,
+                  "quotient_carry": 30,
+                  "quotient_sum": 30,
+                  "surplus": 25,
+                  "u": 29
+                }
+              ]
+            }
+          ]
+        },
+        "script_sha256": "a1569a12d021f1ab5ab8cc9d521f5777aef08f6c32c7a481c2fe0eeb10f5744f"
+      }
+    },
+    {
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.135 'PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 /tmp/joint-5p-minus-one.Y8D6xU/joint_5p_minus_one_mesh_check.py arm-floors'",
+      "exit_code": 0,
+      "output": {
+        "architecture": "aarch64",
+        "classification": "independent exact joint H=5p bridge check",
+        "host": "orin",
+        "mode": "arm-floors",
+        "passed": true,
+        "python": "3.12.3",
+        "result": {
+          "P_values_are_actual_counts_not_equality_offsets": true,
+          "analytic_dependencies_not_reproved": [
+            "phase-zero pointwise parity baseline subtraction",
+            "sharp integral lift floor",
+            "local p+9 theorem"
+          ],
+          "classification": "ARM64 rational-floor and integer-ledger portability, not an all-prime proof",
+          "flat_rows": [
+            {
+              "actual_P": 0,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 38,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 9,
+              "p": 29
+            },
+            {
+              "actual_P": 1,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 38,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 8,
+              "p": 29
+            },
+            {
+              "actual_P": 2,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 38,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 7,
+              "p": 29
+            },
+            {
+              "actual_P": 3,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 38,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 6,
+              "p": 29
+            },
+            {
+              "actual_P": 4,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 38,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 5,
+              "p": 29
+            },
+            {
+              "actual_P": 5,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 38,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 4,
+              "p": 29
+            },
+            {
+              "actual_P": 6,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 38,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 3,
+              "p": 29
+            },
+            {
+              "actual_P": 7,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 38,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 2,
+              "p": 29
+            },
+            {
+              "actual_P": 8,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 38,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 1,
+              "p": 29
+            },
+            {
+              "actual_P": 9,
+              "forbidden_Q_is_legal": false,
+              "forced_mass": 38,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 0,
+              "p": 29
+            },
+            {
+              "actual_P": 0,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 40,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 9,
+              "p": 31
+            },
+            {
+              "actual_P": 1,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 40,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 8,
+              "p": 31
+            },
+            {
+              "actual_P": 2,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 40,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 7,
+              "p": 31
+            },
+            {
+              "actual_P": 3,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 40,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 6,
+              "p": 31
+            },
+            {
+              "actual_P": 4,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 40,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 5,
+              "p": 31
+            },
+            {
+              "actual_P": 5,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 40,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 4,
+              "p": 31
+            },
+            {
+              "actual_P": 6,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 40,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 3,
+              "p": 31
+            },
+            {
+              "actual_P": 7,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 40,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 2,
+              "p": 31
+            },
+            {
+              "actual_P": 8,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 40,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 1,
+              "p": 31
+            },
+            {
+              "actual_P": 9,
+              "forbidden_Q_is_legal": false,
+              "forced_mass": 40,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 0,
+              "p": 31
+            },
+            {
+              "actual_P": 0,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 46,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 9,
+              "p": 37
+            },
+            {
+              "actual_P": 1,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 46,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 8,
+              "p": 37
+            },
+            {
+              "actual_P": 2,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 46,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 7,
+              "p": 37
+            },
+            {
+              "actual_P": 3,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 46,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 6,
+              "p": 37
+            },
+            {
+              "actual_P": 4,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 46,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 5,
+              "p": 37
+            },
+            {
+              "actual_P": 5,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 46,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 4,
+              "p": 37
+            },
+            {
+              "actual_P": 6,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 46,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 3,
+              "p": 37
+            },
+            {
+              "actual_P": 7,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 46,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 2,
+              "p": 37
+            },
+            {
+              "actual_P": 8,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 46,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 1,
+              "p": 37
+            },
+            {
+              "actual_P": 9,
+              "forbidden_Q_is_legal": false,
+              "forced_mass": 46,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 0,
+              "p": 37
+            },
+            {
+              "actual_P": 0,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 50,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 9,
+              "p": 41
+            },
+            {
+              "actual_P": 1,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 50,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 8,
+              "p": 41
+            },
+            {
+              "actual_P": 2,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 50,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 7,
+              "p": 41
+            },
+            {
+              "actual_P": 3,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 50,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 6,
+              "p": 41
+            },
+            {
+              "actual_P": 4,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 50,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 5,
+              "p": 41
+            },
+            {
+              "actual_P": 5,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 50,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 4,
+              "p": 41
+            },
+            {
+              "actual_P": 6,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 50,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 3,
+              "p": 41
+            },
+            {
+              "actual_P": 7,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 50,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 2,
+              "p": 41
+            },
+            {
+              "actual_P": 8,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 50,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 1,
+              "p": 41
+            },
+            {
+              "actual_P": 9,
+              "forbidden_Q_is_legal": false,
+              "forced_mass": 50,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 0,
+              "p": 41
+            },
+            {
+              "actual_P": 0,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 52,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 9,
+              "p": 43
+            },
+            {
+              "actual_P": 1,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 52,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 8,
+              "p": 43
+            },
+            {
+              "actual_P": 2,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 52,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 7,
+              "p": 43
+            },
+            {
+              "actual_P": 3,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 52,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 6,
+              "p": 43
+            },
+            {
+              "actual_P": 4,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 52,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 5,
+              "p": 43
+            },
+            {
+              "actual_P": 5,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 52,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 4,
+              "p": 43
+            },
+            {
+              "actual_P": 6,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 52,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 3,
+              "p": 43
+            },
+            {
+              "actual_P": 7,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 52,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 2,
+              "p": 43
+            },
+            {
+              "actual_P": 8,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 52,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 1,
+              "p": 43
+            },
+            {
+              "actual_P": 9,
+              "forbidden_Q_is_legal": false,
+              "forced_mass": 52,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 0,
+              "p": 43
+            },
+            {
+              "actual_P": 0,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 62,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 9,
+              "p": 53
+            },
+            {
+              "actual_P": 1,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 62,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 8,
+              "p": 53
+            },
+            {
+              "actual_P": 2,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 62,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 7,
+              "p": 53
+            },
+            {
+              "actual_P": 3,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 62,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 6,
+              "p": 53
+            },
+            {
+              "actual_P": 4,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 62,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 5,
+              "p": 53
+            },
+            {
+              "actual_P": 5,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 62,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 4,
+              "p": 53
+            },
+            {
+              "actual_P": 6,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 62,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 3,
+              "p": 53
+            },
+            {
+              "actual_P": 7,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 62,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 2,
+              "p": 53
+            },
+            {
+              "actual_P": 8,
+              "forbidden_Q_is_legal": true,
+              "forced_mass": 62,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 1,
+              "p": 53
+            },
+            {
+              "actual_P": 9,
+              "forbidden_Q_is_legal": false,
+              "forced_mass": 62,
+              "forced_rows_at_least": 5,
+              "least_allowed_Q": 0,
+              "p": 53
+            }
+          ],
+          "independent_floor_rows": [
+            {
+              "mass_p_plus_nine_surviving_boundaries": [
+                0,
+                2,
+                28
+              ],
+              "omitted_bit_pointwise_parity_baseline_values": [
+                1,
+                0
+              ],
+              "p": 29,
+              "phase_zero_LP_floors": {
+                "0": "0",
+                "2": "30",
+                "4": "52",
+                "6": "58",
+                "8": "58",
+                "10": "58",
+                "12": "58",
+                "14": "58",
+                "16": "58",
+                "18": "58",
+                "20": "58",
+                "22": "58",
+                "24": "58",
+                "26": "58",
+                "28": "28"
+              }
+            },
+            {
+              "mass_p_plus_nine_surviving_boundaries": [
+                0,
+                2,
+                30
+              ],
+              "omitted_bit_pointwise_parity_baseline_values": [
+                0,
+                1
+              ],
+              "p": 31,
+              "phase_zero_LP_floors": {
+                "0": "0",
+                "2": "32",
+                "4": "56",
+                "6": "62",
+                "8": "62",
+                "10": "62",
+                "12": "62",
+                "14": "62",
+                "16": "62",
+                "18": "62",
+                "20": "62",
+                "22": "62",
+                "24": "62",
+                "26": "62",
+                "28": "56",
+                "30": "32"
+              }
+            }
+          ]
+        },
+        "script_sha256": "a1569a12d021f1ab5ab8cc9d521f5777aef08f6c32c7a481c2fe0eeb10f5744f"
+      }
+    }
+  ]
+}
