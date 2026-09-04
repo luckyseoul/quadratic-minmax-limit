@@ -1,0 +1,1789 @@
+{
+  "checkpoint_commit": "ab80dc52d234e291f4ff2494ebdfd162c110c42a",
+  "target": "p=1 mod4,p>=29,t=q-1,k=5p-3",
+  "changed_premise": "New complement-triple punctured gap: floor-plus-two is excluded by neighboring-slice positivity, not by invalid nonnegative baseline subtraction; floor-plus-four has three new offset-four equality forms.",
+  "proof_reference": "evidence/NOTE_2026-09-04_COMPLEMENT_TRIPLE_PUNCTURED_GAP.md",
+  "classification": "Complementary exact bounded checks of the new proof bridges; representative parameters and finite contact rank are not an all-prime endpoint theorem.",
+  "script": "scripts/p1_third_post_band_mesh_check.py",
+  "script_sha256": "836c745d651bba9b00fcf0b23ebdbeabf4423ac876514b9db8fac07ce72c9ccd",
+  "preflight_utc": "2026-09-04T19:40:06Z/2026-09-04T19:40:07Z",
+  "preflight_command_template": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@IP 'date -u +%Y-%m-%dT%H:%M:%SZ; hostname; uname -m; uptime; nproc; free -m'",
+  "preflight_summary": [
+    {
+      "host": "soulkiller",
+      "ip": "192.168.1.113",
+      "architecture": "x86_64",
+      "threads": 88,
+      "load_1_5_15": [
+        2.04,
+        4.68,
+        4.83
+      ],
+      "available_memory_MiB": 57975
+    },
+    {
+      "host": "NUKA",
+      "ip": "192.168.1.192",
+      "architecture": "x86_64",
+      "threads": 16,
+      "load_1_5_15": [
+        0,
+        0,
+        0
+      ],
+      "available_memory_MiB": 13960
+    },
+    {
+      "host": "jellyfin",
+      "ip": "192.168.1.191",
+      "architecture": "x86_64",
+      "threads": 16,
+      "load_1_5_15": [
+        0.08,
+        0.03,
+        0.06
+      ],
+      "available_memory_MiB": 12533
+    },
+    {
+      "host": "orin",
+      "ip": "192.168.1.135",
+      "architecture": "aarch64",
+      "threads": 6,
+      "load_1_5_15": [
+        0,
+        0,
+        0
+      ],
+      "available_memory_MiB": 6130
+    }
+  ],
+  "routing": {
+    "soulkiller": "Rational hypergeometric quadratures, neighboring-slice section-average identities at seven odd orders including composite33, and exact shifted positive polynomial.",
+    "NUKA": "Fresh p29 r=1,3 contact rank403 of436 coefficients, with30 slice-ideal and3 odd-contact kernels; no full slice enumeration.",
+    "jellyfin": "Complete residual three-bit delta0/delta4 equality tables with signed Walsh coefficients and offsets, retaining negative punctured difference.",
+    "orin": "ARM64 Python3.12 integer and Fraction portability for eight branch ledgers at p29,37,41,53; distinct architecture unavailable on V100 host, no duplicate CUDA."
+  },
+  "gpu_research_jobs_launched": false,
+  "old_p23_certificate_rerun": false,
+  "runs": [
+    {
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.113 'PYTHONDONTWRITEBYTECODE=1 /home/nick/.venvs/mo-exact/bin/python /tmp/p1-third-post-band.zi7uLd/p1_third_post_band_mesh_check.py quadrature'",
+      "exit_code": 0,
+      "output": {
+        "architecture": "x86_64",
+        "classification": "independent bounded check of the new punctured-gap and third-layer bridge",
+        "host": "soulkiller",
+        "mode": "quadrature",
+        "passed": true,
+        "python": "3.14.4",
+        "result": {
+          "analytic_dependency": "odd-middle-slice integral quadratic floor and at most two identically zero sections",
+          "rows": [
+            {
+              "baseline_scaled_mean": "52",
+              "moments": [
+                "1",
+                "45/29",
+                "90/29"
+              ],
+              "neighboring_slice_nonzero_mean_lower_bound": "66/325",
+              "odd_order": 29,
+              "outside_order": 26,
+              "prime_hypothesis_used": false,
+              "quadrature_weights": [
+                "39/58",
+                "3/29",
+                "13/58"
+              ],
+              "section_average_ratios": [
+                "1",
+                "1"
+              ],
+              "single_nonzero_contact_contribution_lower_bound": "132/25",
+              "strict_gap_above_four": "32/25"
+            },
+            {
+              "baseline_scaled_mean": "56",
+              "moments": [
+                "1",
+                "48/31",
+                "96/31"
+              ],
+              "neighboring_slice_nonzero_mean_lower_bound": "13/63",
+              "odd_order": 31,
+              "outside_order": 28,
+              "prime_hypothesis_used": false,
+              "quadrature_weights": [
+                "21/31",
+                "3/31",
+                "7/31"
+              ],
+              "section_average_ratios": [
+                "1",
+                "1"
+              ],
+              "single_nonzero_contact_contribution_lower_bound": "52/9",
+              "strict_gap_above_four": "16/9"
+            },
+            {
+              "baseline_scaled_mean": "60",
+              "moments": [
+                "1",
+                "17/11",
+                "34/11"
+              ],
+              "neighboring_slice_nonzero_mean_lower_bound": "91/435",
+              "odd_order": 33,
+              "outside_order": 30,
+              "prime_hypothesis_used": false,
+              "quadrature_weights": [
+                "15/22",
+                "1/11",
+                "5/22"
+              ],
+              "section_average_ratios": [
+                "1",
+                "1"
+              ],
+              "single_nonzero_contact_contribution_lower_bound": "182/29",
+              "strict_gap_above_four": "66/29"
+            },
+            {
+              "baseline_scaled_mean": "68",
+              "moments": [
+                "1",
+                "57/37",
+                "114/37"
+              ],
+              "neighboring_slice_nonzero_mean_lower_bound": "40/187",
+              "odd_order": 37,
+              "outside_order": 34,
+              "prime_hypothesis_used": false,
+              "quadrature_weights": [
+                "51/74",
+                "3/37",
+                "17/74"
+              ],
+              "section_average_ratios": [
+                "1",
+                "1"
+              ],
+              "single_nonzero_contact_contribution_lower_bound": "80/11",
+              "strict_gap_above_four": "36/11"
+            },
+            {
+              "baseline_scaled_mean": "76",
+              "moments": [
+                "1",
+                "63/41",
+                "126/41"
+              ],
+              "neighboring_slice_nonzero_mean_lower_bound": "153/703",
+              "odd_order": 41,
+              "outside_order": 38,
+              "prime_hypothesis_used": false,
+              "quadrature_weights": [
+                "57/82",
+                "3/41",
+                "19/82"
+              ],
+              "section_average_ratios": [
+                "1",
+                "1"
+              ],
+              "single_nonzero_contact_contribution_lower_bound": "306/37",
+              "strict_gap_above_four": "158/37"
+            },
+            {
+              "baseline_scaled_mean": "100",
+              "moments": [
+                "1",
+                "81/53",
+                "162/53"
+              ],
+              "neighboring_slice_nonzero_mean_lower_bound": "276/1225",
+              "odd_order": 53,
+              "outside_order": 50,
+              "prime_hypothesis_used": false,
+              "quadrature_weights": [
+                "75/106",
+                "3/53",
+                "25/106"
+              ],
+              "section_average_ratios": [
+                "1",
+                "1"
+              ],
+              "single_nonzero_contact_contribution_lower_bound": "552/49",
+              "strict_gap_above_four": "356/49"
+            },
+            {
+              "baseline_scaled_mean": "196",
+              "moments": [
+                "1",
+                "153/101",
+                "306/101"
+              ],
+              "neighboring_slice_nonzero_mean_lower_bound": "1128/4753",
+              "odd_order": 101,
+              "outside_order": 98,
+              "prime_hypothesis_used": false,
+              "quadrature_weights": [
+                "147/202",
+                "3/101",
+                "49/202"
+              ],
+              "section_average_ratios": [
+                "1",
+                "1"
+              ],
+              "single_nonzero_contact_contribution_lower_bound": "2256/97",
+              "strict_gap_above_four": "1868/97"
+            }
+          ],
+          "shifted_gap_numerator_coefficients": [
+            128,
+            30,
+            1
+          ]
+        },
+        "script_sha256": "836c745d651bba9b00fcf0b23ebdbeabf4423ac876514b9db8fac07ce72c9ccd"
+      }
+    },
+    {
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.192 'PYTHONDONTWRITEBYTECODE=1 /home/nick/.venvs/qml-mesh/bin/python /tmp/p1-third-post-band.35mMiU/p1_third_post_band_mesh_check.py contact-kernel'",
+      "exit_code": 0,
+      "output": {
+        "architecture": "x86_64",
+        "classification": "independent bounded check of the new punctured-gap and third-layer bridge",
+        "host": "NUKA",
+        "mode": "contact-kernel",
+        "passed": true,
+        "python": "3.14.4",
+        "result": {
+          "classification": "finite exact coefficient-rank certificate supplementing the general slice-kernel proof; not a slice census",
+          "contact_rank": 403,
+          "explicit_independent_kernel_vectors": 33,
+          "independent_contact_masks": [
+            23313575,
+            116865668,
+            207970076,
+            486897065,
+            350005041,
+            421736170,
+            487012244,
+            503480017,
+            446285516,
+            356119089,
+            388812580,
+            292373207,
+            309632313,
+            98179303,
+            17234143,
+            63601844,
+            32312215,
+            205339015,
+            418187220,
+            57860903,
+            110894329,
+            77158863,
+            148123423,
+            13060799,
+            12422012,
+            128310412,
+            367600455,
+            111880570,
+            351972737,
+            472660567,
+            7191319,
+            481482146,
+            366494495,
+            160955521,
+            353187175,
+            464119332,
+            56769719,
+            30121396,
+            429959146,
+            425402671,
+            153082468,
+            445286330,
+            59499607,
+            144357591,
+            8208172,
+            43712026,
+            383992471,
+            80826354,
+            89879892,
+            407718631,
+            147687335,
+            336940655,
+            244392639,
+            517747284,
+            387838220,
+            210206500,
+            455029074,
+            515576916,
+            213687047,
+            175529796,
+            337198023,
+            299020177,
+            386039594,
+            410402330,
+            48050652,
+            376017876,
+            23577399,
+            135986745,
+            511945634,
+            272215943,
+            36530087,
+            45000039,
+            56069066,
+            398708241,
+            301380258,
+            328911196,
+            82495831,
+            410766092,
+            454650473,
+            409945906,
+            46591290,
+            300577617,
+            355910124,
+            386985393,
+            175822380,
+            131128148,
+            343717642,
+            121378935,
+            493519639,
+            441158890,
+            73100559,
+            486434834,
+            224217436,
+            467837031,
+            526415978,
+            335296652,
+            174519636,
+            428392268,
+            33053239,
+            384922386,
+            7520113,
+            342955961,
+            432181599,
+            96081295,
+            479111223,
+            377178450,
+            382505863,
+            374242060,
+            212628071,
+            106272527,
+            127187513,
+            506167751,
+            344888231,
+            479371703,
+            226541143,
+            208503655,
+            188327706,
+            152225751,
+            224537580,
+            251007218,
+            335029335,
+            297483786,
+            77779199,
+            260189625,
+            352406495,
+            180417895,
+            489957628,
+            509145260,
+            503878127,
+            358306202,
+            322773970,
+            271760543,
+            392709455,
+            310775039,
+            99197583,
+            167649831,
+            437419689,
+            260730692,
+            48973399,
+            209574945,
+            81091530,
+            483503436,
+            38432159,
+            33316377,
+            141931399,
+            82708466,
+            258298540,
+            69172401,
+            429927887,
+            454371228,
+            220121545,
+            429744473,
+            280824439,
+            289789215,
+            411508708,
+            87905850,
+            69175671,
+            493430295,
+            505163527,
+            306658769,
+            178507114,
+            40168119,
+            107569041,
+            78412087,
+            424903839,
+            395142033,
+            66061951,
+            29110591,
+            122661652,
+            101447975,
+            249000466,
+            316198490,
+            156410719,
+            56799719,
+            520448775,
+            391470348,
+            90419991,
+            408992215,
+            528105642,
+            95569271,
+            38379119,
+            183978337,
+            453425799,
+            144287151,
+            445267143,
+            412199487,
+            165996815,
+            107191327,
+            18212775,
+            232636530,
+            524583607,
+            338868954,
+            486040732,
+            474360527,
+            421106463,
+            303479623,
+            361817722,
+            123816855,
+            344226879,
+            226182407,
+            509765233,
+            170748615,
+            416439252,
+            293695743,
+            380634495,
+            32593338,
+            227568583,
+            59705775,
+            234621991,
+            521164559,
+            500027420,
+            377694879,
+            331799202,
+            208061335,
+            487431844,
+            301409841,
+            343709097,
+            358690492,
+            154951588,
+            59525047,
+            357946962,
+            91588175,
+            367389252,
+            31049543,
+            118386863,
+            481368010,
+            180959034,
+            161060023,
+            358019207,
+            48985508,
+            291720937,
+            471017695,
+            419820468,
+            305633065,
+            155842639,
+            508441145,
+            478288815,
+            417946514,
+            441556569,
+            42446631,
+            307086231,
+            94075433,
+            211708679,
+            154896999,
+            248727770,
+            516540817,
+            211099260,
+            6813199,
+            59328991,
+            369340330,
+            458466585,
+            447388316,
+            187402855,
+            344176847,
+            156066975,
+            19785271,
+            384323143,
+            361168138,
+            529254545,
+            73851890,
+            440043335,
+            8580591,
+            277082935,
+            150384911,
+            324683319,
+            349378919,
+            467420218,
+            228922551,
+            128156079,
+            321606506,
+            493505868,
+            27424655,
+            237737676,
+            222051351,
+            176748951,
+            53076839,
+            23584879,
+            471419127,
+            492127180,
+            416105759,
+            37037023,
+            58434450,
+            143226527,
+            414145300,
+            391023676,
+            434648095,
+            371296991,
+            50271892,
+            479317767,
+            516524807,
+            367576143,
+            362367898,
+            336502588,
+            166336279,
+            210712516,
+            31554103,
+            66421372,
+            305637463,
+            381551911,
+            71005593,
+            30195124,
+            507410945,
+            286355903,
+            110462962,
+            14348666,
+            402684415,
+            31859071,
+            312007015,
+            182066055,
+            178448330,
+            217676817,
+            108938473,
+            335953503,
+            441147511,
+            511898530,
+            93534887,
+            321722767,
+            298028215,
+            473403828,
+            470737351,
+            153450903,
+            22507631,
+            84049023,
+            30159103,
+            291097570,
+            278767791,
+            148160263,
+            125368348,
+            352529823,
+            106573359,
+            410014623,
+            415581692,
+            521409423,
+            312321505,
+            471519439,
+            413112428,
+            487772906,
+            104355578,
+            102745500,
+            301859271,
+            291219297,
+            513962393,
+            138858103,
+            503903916,
+            252584567,
+            430022316,
+            123175695,
+            198432820,
+            296540263,
+            252826159,
+            472332890,
+            425364452,
+            156327143,
+            452048903,
+            298211820,
+            512537713,
+            442207562,
+            477558818,
+            290427740,
+            362471527,
+            415949290,
+            85799279,
+            134393343,
+            471581881,
+            140176439,
+            13490775,
+            443335130,
+            345666711,
+            23977378,
+            452305098,
+            116690215,
+            399140740,
+            219014604,
+            370957913,
+            360624169,
+            104414812,
+            34012463,
+            247671284,
+            96653919,
+            191519130,
+            149148719,
+            510249185,
+            52261079,
+            64699441,
+            78519071,
+            368646740,
+            24717180,
+            430872905,
+            305903770,
+            402309442,
+            164883092,
+            466757945,
+            525445676,
+            515251250,
+            56482953,
+            211125991,
+            435501130,
+            157206842,
+            103802026,
+            224808660,
+            536027681,
+            395006820,
+            240187049
+          ],
+          "odd_contact_extra_kernel_dimension": 3,
+          "original_small_side_contact_layers": [
+            1,
+            3
+          ],
+          "p": 29,
+          "prime": 1000003,
+          "raw_coefficients": 436,
+          "sampled_rows_examined": 403,
+          "slice_ideal_kernel_dimension": 30,
+          "slice_weight": 15
+        },
+        "script_sha256": "836c745d651bba9b00fcf0b23ebdbeabf4423ac876514b9db8fac07ce72c9ccd"
+      }
+    },
+    {
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.191 'PYTHONDONTWRITEBYTECODE=1 /home/nick/.venvs/mo-intel/bin/python /tmp/p1-third-post-band.9d4elL/p1_third_post_band_mesh_check.py cube-equality'",
+      "exit_code": 0,
+      "output": {
+        "architecture": "x86_64",
+        "classification": "independent bounded check of the new punctured-gap and third-layer bridge",
+        "host": "jellyfin",
+        "mode": "cube-equality",
+        "passed": true,
+        "python": "3.14.4",
+        "result": {
+          "classification": "complete residual three-bit equality check after the separately proved globalization",
+          "delta_two_excluded_by": "delta=4*sum(nonnegative integer pair values)",
+          "forms": [
+            {
+              "A_truth_table": [
+                4,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                1
+              ],
+              "delta": 0,
+              "difference_truth_table": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "pair_values": [
+                0,
+                0,
+                0
+              ],
+              "signed_offset": 2,
+              "signed_target_Walsh_coefficients_mask_order": [
+                "5",
+                "-1",
+                "-1",
+                "1",
+                "-1",
+                "1",
+                "1",
+                "0"
+              ]
+            },
+            {
+              "A_truth_table": [
+                2,
+                1,
+                1,
+                0,
+                1,
+                0,
+                2,
+                1
+              ],
+              "delta": 4,
+              "difference_truth_table": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0
+              ],
+              "pair_values": [
+                0,
+                0,
+                1
+              ],
+              "signed_offset": 4,
+              "signed_target_Walsh_coefficients_mask_order": [
+                "5",
+                "-1",
+                "0",
+                "0",
+                "0",
+                "0",
+                "1",
+                "0"
+              ]
+            },
+            {
+              "A_truth_table": [
+                2,
+                1,
+                1,
+                0,
+                1,
+                2,
+                0,
+                1
+              ],
+              "delta": 4,
+              "difference_truth_table": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0
+              ],
+              "pair_values": [
+                0,
+                1,
+                0
+              ],
+              "signed_offset": 4,
+              "signed_target_Walsh_coefficients_mask_order": [
+                "5",
+                "0",
+                "-1",
+                "0",
+                "0",
+                "1",
+                "0",
+                "0"
+              ]
+            },
+            {
+              "A_truth_table": [
+                2,
+                1,
+                1,
+                2,
+                1,
+                0,
+                0,
+                1
+              ],
+              "delta": 4,
+              "difference_truth_table": [
+                -1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "pair_values": [
+                1,
+                0,
+                0
+              ],
+              "signed_offset": 4,
+              "signed_target_Walsh_coefficients_mask_order": [
+                "5",
+                "0",
+                "0",
+                "1",
+                "-1",
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          ],
+          "negative_difference_at_empty_set_is_retained": true
+        },
+        "script_sha256": "836c745d651bba9b00fcf0b23ebdbeabf4423ac876514b9db8fac07ce72c9ccd"
+      }
+    },
+    {
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.135 'PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 /tmp/p1-third-post-band.1GX7WC/p1_third_post_band_mesh_check.py branch-ledger'",
+      "exit_code": 0,
+      "output": {
+        "architecture": "aarch64",
+        "classification": "independent bounded check of the new punctured-gap and third-layer bridge",
+        "host": "orin",
+        "mode": "branch-ledger",
+        "passed": true,
+        "python": "3.12.3",
+        "result": {
+          "analytic_dependencies_not_reproved": [
+            "isolated-chart common row and coefficient congruence",
+            "phase-zero exact floor table",
+            "sharp integral lift floor",
+            "local p+7,p+9,p+11,p+13,p+15 exclusions"
+          ],
+          "classification": "representative-prime exact integer/Fraction portability check, not an all-prime theorem",
+          "rows": [
+            {
+              "H_edge_count": 143,
+              "branches": [
+                {
+                  "branch": "literal",
+                  "forbidden_Q": 2,
+                  "forbidden_mass": 6,
+                  "forced_Q": 3,
+                  "forced_mass": 36,
+                  "forced_rows_at_least": 5,
+                  "h_times_T": 33,
+                  "hard_edges": 88,
+                  "hard_low_mean": 30,
+                  "nonzero_boundary_floor_and_lift_rows": [
+                    [
+                      2,
+                      30,
+                      6
+                    ],
+                    [
+                      28,
+                      28,
+                      8
+                    ]
+                  ],
+                  "opposite_edges": 55,
+                  "parallel_offset": 5,
+                  "quotient_carry": 13,
+                  "surplus": 10
+                },
+                {
+                  "branch": "XNOR_zero_quotient",
+                  "forbidden_Q": 3,
+                  "forbidden_mass": 8,
+                  "forced_Q": 4,
+                  "forced_mass": 38,
+                  "forced_rows_at_least": 6,
+                  "h_times_T": 5,
+                  "hard_edges": 74,
+                  "hard_low_mean": 28,
+                  "nonzero_boundary_floor_and_lift_rows": [
+                    [
+                      2,
+                      30,
+                      8
+                    ],
+                    [
+                      28,
+                      28,
+                      10
+                    ]
+                  ],
+                  "opposite_edges": 69,
+                  "parallel_offset": 4,
+                  "quotient_carry": 14,
+                  "surplus": 9
+                },
+                {
+                  "branch": "triple_delta0_two_unit_carry",
+                  "forbidden_Q": 6,
+                  "forbidden_mass": 14,
+                  "forced_Q": 7,
+                  "forced_mass": 44,
+                  "forced_rows_at_least": 9,
+                  "h_times_T": -79,
+                  "hard_edges": 32,
+                  "hard_low_mean": 52,
+                  "nonzero_boundary_floor_and_lift_rows": [
+                    [
+                      2,
+                      30,
+                      14
+                    ],
+                    [
+                      28,
+                      28,
+                      16
+                    ]
+                  ],
+                  "opposite_edges": 111,
+                  "parallel_offset": 2,
+                  "quotient_carry": 2,
+                  "surplus": 6
+                },
+                {
+                  "branch": "XNOR_sharp_P3_one_unit_carry",
+                  "forbidden_Q": 5,
+                  "forbidden_mass": 12,
+                  "forced_Q": 6,
+                  "forced_mass": 42,
+                  "forced_rows_at_least": 8,
+                  "h_times_T": -51,
+                  "hard_edges": 46,
+                  "hard_low_mean": 54,
+                  "nonzero_boundary_floor_and_lift_rows": [
+                    [
+                      2,
+                      30,
+                      12
+                    ],
+                    [
+                      28,
+                      28,
+                      14
+                    ]
+                  ],
+                  "opposite_edges": 97,
+                  "parallel_offset": 3,
+                  "quotient_carry": 1,
+                  "surplus": 7
+                },
+                {
+                  "branch": "XNOR_sharp_P5_one_unit_carry",
+                  "forbidden_Q": 3,
+                  "forbidden_mass": 12,
+                  "forced_Q": 4,
+                  "forced_mass": 42,
+                  "forced_rows_at_least": 8,
+                  "h_times_T": 9,
+                  "hard_edges": 76,
+                  "hard_low_mean": 54,
+                  "nonzero_boundary_floor_and_lift_rows": [
+                    [
+                      2,
+                      30,
+                      12
+                    ],
+                    [
+                      28,
+                      28,
+                      14
+                    ]
+                  ],
+                  "opposite_edges": 67,
+                  "parallel_offset": 5,
+                  "quotient_carry": 1,
+                  "surplus": 7
+                },
+                {
+                  "branch": "literal_sharp_P4",
+                  "forbidden_Q": 4,
+                  "forbidden_mass": 10,
+                  "forced_Q": 5,
+                  "forced_mass": 40,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": -23,
+                  "hard_edges": 60,
+                  "hard_low_mean": 56,
+                  "nonzero_boundary_floor_and_lift_rows": [
+                    [
+                      2,
+                      30,
+                      10
+                    ],
+                    [
+                      28,
+                      28,
+                      12
+                    ]
+                  ],
+                  "opposite_edges": 83,
+                  "parallel_offset": 4,
+                  "quotient_carry": 0,
+                  "surplus": 8
+                },
+                {
+                  "branch": "literal_sharp_P6",
+                  "forbidden_Q": 2,
+                  "forbidden_mass": 10,
+                  "forced_Q": 3,
+                  "forced_mass": 40,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": 37,
+                  "hard_edges": 90,
+                  "hard_low_mean": 56,
+                  "nonzero_boundary_floor_and_lift_rows": [
+                    [
+                      2,
+                      30,
+                      10
+                    ],
+                    [
+                      28,
+                      28,
+                      12
+                    ]
+                  ],
+                  "opposite_edges": 53,
+                  "parallel_offset": 6,
+                  "quotient_carry": 0,
+                  "surplus": 8
+                },
+                {
+                  "branch": "triple_delta4_P4",
+                  "forbidden_Q": 4,
+                  "forbidden_mass": 10,
+                  "forced_Q": 5,
+                  "forced_mass": 40,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": -23,
+                  "hard_edges": 60,
+                  "hard_low_mean": 56,
+                  "nonzero_boundary_floor_and_lift_rows": [
+                    [
+                      2,
+                      30,
+                      10
+                    ],
+                    [
+                      28,
+                      28,
+                      12
+                    ]
+                  ],
+                  "opposite_edges": 83,
+                  "parallel_offset": 4,
+                  "quotient_carry": 0,
+                  "surplus": 8
+                }
+              ],
+              "guaranteed_isolated_vertices": 556,
+              "original_k": 142,
+              "p": 29,
+              "t": 13
+            },
+            {
+              "H_edge_count": 183,
+              "branches": [
+                {
+                  "branch": "literal",
+                  "forbidden_Q": 2,
+                  "forbidden_mass": 6,
+                  "forced_Q": 3,
+                  "forced_mass": 44,
+                  "forced_rows_at_least": 5,
+                  "h_times_T": 41,
+                  "hard_edges": 112,
+                  "hard_low_mean": 38,
+                  "nonzero_boundary_floor_and_lift_rows": [
+                    [
+                      2,
+                      38,
+                      6
+                    ],
+                    [
+                      36,
+                      36,
+                      8
+                    ]
+                  ],
+                  "opposite_edges": 71,
+                  "parallel_offset": 5,
+                  "quotient_carry": 17,
+                  "surplus": 14
+                },
+                {
+                  "branch": "XNOR_zero_quotient",
+                  "forbidden_Q": 3,
+                  "forbidden_mass": 8,
+                  "forced_Q": 4,
+                  "forced_mass": 46,
+                  "forced_rows_at_least": 6,
+                  "h_times_T": 5,
+                  "hard_edges": 94,
+                  "hard_low_mean": 36,
+                  "nonzero_boundary_floor_and_lift_rows": [
+                    [
+                      2,
+                      38,
+                      8
+                    ],
+                    [
+                      36,
+                      36,
+                      10
+                    ]
+                  ],
+                  "opposite_edges": 89,
+                  "parallel_offset": 4,
+                  "quotient_carry": 18,
+                  "surplus": 13
+                },
+                {
+                  "branch": "triple_delta0_two_unit_carry",
+                  "forbidden_Q": 6,
+                  "forbidden_mass": 14,
+                  "forced_Q": 7,
+                  "forced_mass": 52,
+                  "forced_rows_at_least": 9,
+                  "h_times_T": -103,
+                  "hard_edges": 40,
+                  "hard_low_mean": 68,
+                  "nonzero_boundary_floor_and_lift_rows": [
+                    [
+                      2,
+                      38,
+                      14
+                    ],
+                    [
+                      36,
+                      36,
+                      16
+                    ]
+                  ],
+                  "opposite_edges": 143,
+                  "parallel_offset": 2,
+                  "quotient_carry": 2,
+                  "surplus": 10
+                },
+                {
+                  "branch": "XNOR_sharp_P3_one_unit_carry",
+                  "forbidden_Q": 5,
+                  "forbidden_mass": 12,
+                  "forced_Q": 6,
+                  "forced_mass": 50,
+                  "forced_rows_at_least": 8,
+                  "h_times_T": -67,
+                  "hard_edges": 58,
+                  "hard_low_mean": 70,
+                  "nonzero_boundary_floor_and_lift_rows": [
+                    [
+                      2,
+                      38,
+                      12
+                    ],
+                    [
+                      36,
+                      36,
+                      14
+                    ]
+                  ],
+                  "opposite_edges": 125,
+                  "parallel_offset": 3,
+                  "quotient_carry": 1,
+                  "surplus": 11
+                },
+                {
+                  "branch": "XNOR_sharp_P5_one_unit_carry",
+                  "forbidden_Q": 3,
+                  "forbidden_mass": 12,
+                  "forced_Q": 4,
+                  "forced_mass": 50,
+                  "forced_rows_at_least": 8,
+                  "h_times_T": 9,
+                  "hard_edges": 96,
+                  "hard_low_mean": 70,
+                  "nonzero_boundary_floor_and_lift_rows": [
+                    [
+                      2,
+                      38,
+                      12
+                    ],
+                    [
+                      36,
+                      36,
+                      14
+                    ]
+                  ],
+                  "opposite_edges": 87,
+                  "parallel_offset": 5,
+                  "quotient_carry": 1,
+                  "surplus": 11
+                },
+                {
+                  "branch": "literal_sharp_P4",
+                  "forbidden_Q": 4,
+                  "forbidden_mass": 10,
+                  "forced_Q": 5,
+                  "forced_mass": 48,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": -31,
+                  "hard_edges": 76,
+                  "hard_low_mean": 72,
+                  "nonzero_boundary_floor_and_lift_rows": [
+                    [
+                      2,
+                      38,
+                      10
+                    ],
+                    [
+                      36,
+                      36,
+                      12
+                    ]
+                  ],
+                  "opposite_edges": 107,
+                  "parallel_offset": 4,
+                  "quotient_carry": 0,
+                  "surplus": 12
+                },
+                {
+                  "branch": "literal_sharp_P6",
+                  "forbidden_Q": 2,
+                  "forbidden_mass": 10,
+                  "forced_Q": 3,
+                  "forced_mass": 48,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": 45,
+                  "hard_edges": 114,
+                  "hard_low_mean": 72,
+                  "nonzero_boundary_floor_and_lift_rows": [
+                    [
+                      2,
+                      38,
+                      10
+                    ],
+                    [
+                      36,
+                      36,
+                      12
+                    ]
+                  ],
+                  "opposite_edges": 69,
+                  "parallel_offset": 6,
+                  "quotient_carry": 0,
+                  "surplus": 12
+                },
+                {
+                  "branch": "triple_delta4_P4",
+                  "forbidden_Q": 4,
+                  "forbidden_mass": 10,
+                  "forced_Q": 5,
+                  "forced_mass": 48,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": -31,
+                  "hard_edges": 76,
+                  "hard_low_mean": 72,
+                  "nonzero_boundary_floor_and_lift_rows": [
+                    [
+                      2,
+                      38,
+                      10
+                    ],
+                    [
+                      36,
+                      36,
+                      12
+                    ]
+                  ],
+                  "opposite_edges": 107,
+                  "parallel_offset": 4,
+                  "quotient_carry": 0,
+                  "surplus": 12
+                }
+              ],
+              "guaranteed_isolated_vertices": 1004,
+              "original_k": 182,
+              "p": 37,
+              "t": 17
+            },
+            {
+              "H_edge_count": 203,
+              "branches": [
+                {
+                  "branch": "literal",
+                  "forbidden_Q": 2,
+                  "forbidden_mass": 6,
+                  "forced_Q": 3,
+                  "forced_mass": 48,
+                  "forced_rows_at_least": 5,
+                  "h_times_T": 45,
+                  "hard_edges": 124,
+                  "hard_low_mean": 42,
+                  "nonzero_boundary_floor_and_lift_rows": [
+                    [
+                      2,
+                      42,
+                      6
+                    ],
+                    [
+                      40,
+                      40,
+                      8
+                    ]
+                  ],
+                  "opposite_edges": 79,
+                  "parallel_offset": 5,
+                  "quotient_carry": 19,
+                  "surplus": 16
+                },
+                {
+                  "branch": "XNOR_zero_quotient",
+                  "forbidden_Q": 3,
+                  "forbidden_mass": 8,
+                  "forced_Q": 4,
+                  "forced_mass": 50,
+                  "forced_rows_at_least": 6,
+                  "h_times_T": 5,
+                  "hard_edges": 104,
+                  "hard_low_mean": 40,
+                  "nonzero_boundary_floor_and_lift_rows": [
+                    [
+                      2,
+                      42,
+                      8
+                    ],
+                    [
+                      40,
+                      40,
+                      10
+                    ]
+                  ],
+                  "opposite_edges": 99,
+                  "parallel_offset": 4,
+                  "quotient_carry": 20,
+                  "surplus": 15
+                },
+                {
+                  "branch": "triple_delta0_two_unit_carry",
+                  "forbidden_Q": 6,
+                  "forbidden_mass": 14,
+                  "forced_Q": 7,
+                  "forced_mass": 56,
+                  "forced_rows_at_least": 9,
+                  "h_times_T": -115,
+                  "hard_edges": 44,
+                  "hard_low_mean": 76,
+                  "nonzero_boundary_floor_and_lift_rows": [
+                    [
+                      2,
+                      42,
+                      14
+                    ],
+                    [
+                      40,
+                      40,
+                      16
+                    ]
+                  ],
+                  "opposite_edges": 159,
+                  "parallel_offset": 2,
+                  "quotient_carry": 2,
+                  "surplus": 12
+                },
+                {
+                  "branch": "XNOR_sharp_P3_one_unit_carry",
+                  "forbidden_Q": 5,
+                  "forbidden_mass": 12,
+                  "forced_Q": 6,
+                  "forced_mass": 54,
+                  "forced_rows_at_least": 8,
+                  "h_times_T": -75,
+                  "hard_edges": 64,
+                  "hard_low_mean": 78,
+                  "nonzero_boundary_floor_and_lift_rows": [
+                    [
+                      2,
+                      42,
+                      12
+                    ],
+                    [
+                      40,
+                      40,
+                      14
+                    ]
+                  ],
+                  "opposite_edges": 139,
+                  "parallel_offset": 3,
+                  "quotient_carry": 1,
+                  "surplus": 13
+                },
+                {
+                  "branch": "XNOR_sharp_P5_one_unit_carry",
+                  "forbidden_Q": 3,
+                  "forbidden_mass": 12,
+                  "forced_Q": 4,
+                  "forced_mass": 54,
+                  "forced_rows_at_least": 8,
+                  "h_times_T": 9,
+                  "hard_edges": 106,
+                  "hard_low_mean": 78,
+                  "nonzero_boundary_floor_and_lift_rows": [
+                    [
+                      2,
+                      42,
+                      12
+                    ],
+                    [
+                      40,
+                      40,
+                      14
+                    ]
+                  ],
+                  "opposite_edges": 97,
+                  "parallel_offset": 5,
+                  "quotient_carry": 1,
+                  "surplus": 13
+                },
+                {
+                  "branch": "literal_sharp_P4",
+                  "forbidden_Q": 4,
+                  "forbidden_mass": 10,
+                  "forced_Q": 5,
+                  "forced_mass": 52,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": -35,
+                  "hard_edges": 84,
+                  "hard_low_mean": 80,
+                  "nonzero_boundary_floor_and_lift_rows": [
+                    [
+                      2,
+                      42,
+                      10
+                    ],
+                    [
+                      40,
+                      40,
+                      12
+                    ]
+                  ],
+                  "opposite_edges": 119,
+                  "parallel_offset": 4,
+                  "quotient_carry": 0,
+                  "surplus": 14
+                },
+                {
+                  "branch": "literal_sharp_P6",
+                  "forbidden_Q": 2,
+                  "forbidden_mass": 10,
+                  "forced_Q": 3,
+                  "forced_mass": 52,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": 49,
+                  "hard_edges": 126,
+                  "hard_low_mean": 80,
+                  "nonzero_boundary_floor_and_lift_rows": [
+                    [
+                      2,
+                      42,
+                      10
+                    ],
+                    [
+                      40,
+                      40,
+                      12
+                    ]
+                  ],
+                  "opposite_edges": 77,
+                  "parallel_offset": 6,
+                  "quotient_carry": 0,
+                  "surplus": 14
+                },
+                {
+                  "branch": "triple_delta4_P4",
+                  "forbidden_Q": 4,
+                  "forbidden_mass": 10,
+                  "forced_Q": 5,
+                  "forced_mass": 52,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": -35,
+                  "hard_edges": 84,
+                  "hard_low_mean": 80,
+                  "nonzero_boundary_floor_and_lift_rows": [
+                    [
+                      2,
+                      42,
+                      10
+                    ],
+                    [
+                      40,
+                      40,
+                      12
+                    ]
+                  ],
+                  "opposite_edges": 119,
+                  "parallel_offset": 4,
+                  "quotient_carry": 0,
+                  "surplus": 14
+                }
+              ],
+              "guaranteed_isolated_vertices": 1276,
+              "original_k": 202,
+              "p": 41,
+              "t": 19
+            },
+            {
+              "H_edge_count": 263,
+              "branches": [
+                {
+                  "branch": "literal",
+                  "forbidden_Q": 2,
+                  "forbidden_mass": 6,
+                  "forced_Q": 3,
+                  "forced_mass": 60,
+                  "forced_rows_at_least": 5,
+                  "h_times_T": 57,
+                  "hard_edges": 160,
+                  "hard_low_mean": 54,
+                  "nonzero_boundary_floor_and_lift_rows": [
+                    [
+                      2,
+                      54,
+                      6
+                    ],
+                    [
+                      52,
+                      52,
+                      8
+                    ]
+                  ],
+                  "opposite_edges": 103,
+                  "parallel_offset": 5,
+                  "quotient_carry": 25,
+                  "surplus": 22
+                },
+                {
+                  "branch": "XNOR_zero_quotient",
+                  "forbidden_Q": 3,
+                  "forbidden_mass": 8,
+                  "forced_Q": 4,
+                  "forced_mass": 62,
+                  "forced_rows_at_least": 6,
+                  "h_times_T": 5,
+                  "hard_edges": 134,
+                  "hard_low_mean": 52,
+                  "nonzero_boundary_floor_and_lift_rows": [
+                    [
+                      2,
+                      54,
+                      8
+                    ],
+                    [
+                      52,
+                      52,
+                      10
+                    ]
+                  ],
+                  "opposite_edges": 129,
+                  "parallel_offset": 4,
+                  "quotient_carry": 26,
+                  "surplus": 21
+                },
+                {
+                  "branch": "triple_delta0_two_unit_carry",
+                  "forbidden_Q": 6,
+                  "forbidden_mass": 14,
+                  "forced_Q": 7,
+                  "forced_mass": 68,
+                  "forced_rows_at_least": 9,
+                  "h_times_T": -151,
+                  "hard_edges": 56,
+                  "hard_low_mean": 100,
+                  "nonzero_boundary_floor_and_lift_rows": [
+                    [
+                      2,
+                      54,
+                      14
+                    ],
+                    [
+                      52,
+                      52,
+                      16
+                    ]
+                  ],
+                  "opposite_edges": 207,
+                  "parallel_offset": 2,
+                  "quotient_carry": 2,
+                  "surplus": 18
+                },
+                {
+                  "branch": "XNOR_sharp_P3_one_unit_carry",
+                  "forbidden_Q": 5,
+                  "forbidden_mass": 12,
+                  "forced_Q": 6,
+                  "forced_mass": 66,
+                  "forced_rows_at_least": 8,
+                  "h_times_T": -99,
+                  "hard_edges": 82,
+                  "hard_low_mean": 102,
+                  "nonzero_boundary_floor_and_lift_rows": [
+                    [
+                      2,
+                      54,
+                      12
+                    ],
+                    [
+                      52,
+                      52,
+                      14
+                    ]
+                  ],
+                  "opposite_edges": 181,
+                  "parallel_offset": 3,
+                  "quotient_carry": 1,
+                  "surplus": 19
+                },
+                {
+                  "branch": "XNOR_sharp_P5_one_unit_carry",
+                  "forbidden_Q": 3,
+                  "forbidden_mass": 12,
+                  "forced_Q": 4,
+                  "forced_mass": 66,
+                  "forced_rows_at_least": 8,
+                  "h_times_T": 9,
+                  "hard_edges": 136,
+                  "hard_low_mean": 102,
+                  "nonzero_boundary_floor_and_lift_rows": [
+                    [
+                      2,
+                      54,
+                      12
+                    ],
+                    [
+                      52,
+                      52,
+                      14
+                    ]
+                  ],
+                  "opposite_edges": 127,
+                  "parallel_offset": 5,
+                  "quotient_carry": 1,
+                  "surplus": 19
+                },
+                {
+                  "branch": "literal_sharp_P4",
+                  "forbidden_Q": 4,
+                  "forbidden_mass": 10,
+                  "forced_Q": 5,
+                  "forced_mass": 64,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": -47,
+                  "hard_edges": 108,
+                  "hard_low_mean": 104,
+                  "nonzero_boundary_floor_and_lift_rows": [
+                    [
+                      2,
+                      54,
+                      10
+                    ],
+                    [
+                      52,
+                      52,
+                      12
+                    ]
+                  ],
+                  "opposite_edges": 155,
+                  "parallel_offset": 4,
+                  "quotient_carry": 0,
+                  "surplus": 20
+                },
+                {
+                  "branch": "literal_sharp_P6",
+                  "forbidden_Q": 2,
+                  "forbidden_mass": 10,
+                  "forced_Q": 3,
+                  "forced_mass": 64,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": 61,
+                  "hard_edges": 162,
+                  "hard_low_mean": 104,
+                  "nonzero_boundary_floor_and_lift_rows": [
+                    [
+                      2,
+                      54,
+                      10
+                    ],
+                    [
+                      52,
+                      52,
+                      12
+                    ]
+                  ],
+                  "opposite_edges": 101,
+                  "parallel_offset": 6,
+                  "quotient_carry": 0,
+                  "surplus": 20
+                },
+                {
+                  "branch": "triple_delta4_P4",
+                  "forbidden_Q": 4,
+                  "forbidden_mass": 10,
+                  "forced_Q": 5,
+                  "forced_mass": 64,
+                  "forced_rows_at_least": 7,
+                  "h_times_T": -47,
+                  "hard_edges": 108,
+                  "hard_low_mean": 104,
+                  "nonzero_boundary_floor_and_lift_rows": [
+                    [
+                      2,
+                      54,
+                      10
+                    ],
+                    [
+                      52,
+                      52,
+                      12
+                    ]
+                  ],
+                  "opposite_edges": 155,
+                  "parallel_offset": 4,
+                  "quotient_carry": 0,
+                  "surplus": 20
+                }
+              ],
+              "guaranteed_isolated_vertices": 2284,
+              "original_k": 262,
+              "p": 53,
+              "t": 25
+            }
+          ]
+        },
+        "script_sha256": "836c745d651bba9b00fcf0b23ebdbeabf4423ac876514b9db8fac07ce72c9ccd"
+      }
+    }
+  ]
+}

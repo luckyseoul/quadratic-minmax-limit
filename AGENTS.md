@@ -236,7 +236,7 @@ distinguished edge. Do not reopen the `3A+B`, Aut_e, finite-LP, or small-prime
 census routes as Type-I work. They remain incomplete historical mechanisms,
 not live global gates. Residual (ii), E1, and the limit remain open.
 
-## Current residual-(ii) gate after audited Proposition 15.771 and the post-15.761 exact reductions
+## Current residual-(ii) gate after audited Proposition 15.772 and the post-15.761 exact reductions
 
 Do not reopen `p=13,k=58` or `p=17,k=74`.  Proposition 15.742 combines the
 `M_2=0` congruence with six multiplicative interval cuts and closes the
@@ -467,6 +467,31 @@ and middle-boundary proof notes. The four-node independent arithmetic
 replay is `evidence/p23_third_post_band_mesh_replay.json`; it supplements
 the analytic proof. Generic later layers and residual(ii) globally remain
 open.
+
+Proposition 15.772 closes the third generic p1 post-band layer:
+`p=1 mod 4,p>=29,t=q-1,k=5p-3`, where `q=(p-1)/2`. Its local
+complement-triple theorem must precede the row ledger. For `r=|X intersect C|`,
+`|C|=3`, the baseline `(r-2)^2` is not a pointwise parity minimum at
+`r=0`; the half-difference can be negative there. Do not apply 15.688 to
+that difference. Positive quadrature, a prime-free neighboring-slice lower
+bound, and the fixed-weight quadratic kernel instead exclude gap two,
+repairing the 15.770 premise without changing its range. They classify
+gap four as exactly `A=2-x_i-x_j-x_k+2x_i*x_j`, with three pair choices
+and coefficient offset four. Do not discard this new equality.
+
+The exhaustive hard residues have offsets `2,3,4,5,6`; apply common `hT`
+before setting `P=offset`. Their ledgers force opposite local masses
+`p+7,p+15,p+13,p+11,p+9`. The new mass-`p+11` exclusion uses the
+half-mean cube bound at height at least two and the existing four-bit
+catalog at height one. The mass-`p-1` equality likewise needs the
+maximizing-cube argument, not just its non-strict height bound. No
+mean-`2p` classification is required: `u=q` has a quotient-zero XNOR row.
+See `NOTE_2026-09-04_P1_THIRD_POST_BAND_CLOSE.md` and
+`NOTE_2026-09-04_COMPLEMENT_TRIPLE_PUNCTURED_GAP.md` under `evidence/`;
+the four-node replay is `evidence/p1_third_post_band_mesh_replay.json`.
+Do not rerun a prime, graph, orbit, slice, or cell census at this closed
+layer. The next common generic layer is `t=q,k=5p-1`, not attacked in
+this checkpoint. The small-prime and global gates remain open.
 
 The global Mobius-incidence audit also proves that distinct target
 directions, all signed fixed-word intersections, and physical ternarity
@@ -790,7 +815,7 @@ Residual (ii), E1, `L=1/2`, and the original MO limit remain OPEN.
 Consequently the fifth shell `k=4p+8` is closed for every prime `p>=13`.
 With `q=(p-1)/2` and `k=4p+2t`, the exact residual-(ii) frontier is now:
 critical `p=5,7`; `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`;
-`p=23,t>=12`; `p=1 mod 4,p>=29,t>=q-1`; and
+`p=23,t>=12`; `p=1 mod 4,p>=29,t>=q`; and
 `p=3 mod 4,p>=31,t>=q`.  The separate positive `p=7,z=7` branch also
 remains open.  Propositions 15.743--15.749 and
 15.753--15.754 are finite certificates or branch theorems, not an all-prime

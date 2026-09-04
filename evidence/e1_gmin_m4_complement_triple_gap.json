@@ -1,0 +1,325 @@
+{
+  "classification": "proved generic local lemmas with exact symbolic inequalities",
+  "proof_note": "evidence/NOTE_2026-09-04_COMPLEMENT_TRIPLE_PUNCTURED_GAP.md",
+  "endpoint_instantiations": {
+    "complement_triple_punctured_gap": {
+      "p": 29,
+      "scope": "all odd integers p>=29; large-boundary phase-one translation uses p=1 mod4",
+      "small_side_size": 3,
+      "small_side_parity": "r mod2",
+      "old_baseline": "A0=(r-2)^2",
+      "old_baseline_is_pointwise_parity_minimum_globally": false,
+      "difference_L_is_nonnegative_on_contacts_only": [
+        1,
+        2,
+        3
+      ],
+      "neighboring_slice_bound": {
+        "outside_order": 26,
+        "conditional_weights": [
+          14,
+          12
+        ],
+        "odd_section_order": 25,
+        "odd_section_need_not_be_prime": true,
+        "identically_zero_coordinate_sections_at_most": 2,
+        "zero_section_argument": "three forbidden coordinate sections give a three-swap cube zero away from its origin",
+        "section_averaging_identity": "mean of all coordinate one-sections or all zero-sections equals E[f]",
+        "nonzero_odd_section_mean_floor": "11/50",
+        "nonzero_neighbor_mean_floor": "66/325",
+        "one_nonzero_outer_contact_contribution_at_least": "132/25",
+        "strict_gap_above_four": {
+          "coefficients_in_p_descending": [
+            1,
+            -28,
+            99
+          ],
+          "translated_variable": "x=p-29>=0",
+          "coefficients_in_x_descending": [
+            1,
+            30,
+            128
+          ],
+          "translation_checked_coefficientwise": true,
+          "strictly_positive_for_every_p_at_least_29": true,
+          "proved": true
+        },
+        "proved": true
+      },
+      "quadrature_nodes": [
+        1,
+        2,
+        3
+      ],
+      "quadrature_weights": [
+        "39/58",
+        "3/29",
+        "13/58"
+      ],
+      "conditional_means_are_symmetrized_over_small_patterns_of_equal_weight": true,
+      "exact_excess_identity": "delta=(p-3)*(sum_singletons mu_S+mu_C)+4*sum_pairs mu_S",
+      "delta_at_most_four_forces_singleton_and_triple_sections_zero": true,
+      "globalization": {
+        "complemented_bits": "w_i=1-x_i for the three small-side coordinates only",
+        "outside_slice_identity": "sum y=m-3+sum w",
+        "kernel_elimination_sign": "PLUS",
+        "contacts_in_w": [
+          0,
+          2
+        ],
+        "all_small_side_patterns_extend": true,
+        "conclusion": "L depends only on the three small-side coordinates"
+      },
+      "residual_integer_identity": "delta=4*sum(nonnegative integer pair values)",
+      "allowed_excesses_in_zero_to_four": [
+        0,
+        4
+      ],
+      "excess_two_excluded": true,
+      "excess_four_excluded": false,
+      "excess_zero_form": "(r-2)^2",
+      "excess_zero_coefficient_offset": 2,
+      "excess_four_forms": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "complement_literal_coordinate": 2,
+          "values_in_binary_mask_order": [
+            2,
+            1,
+            1,
+            2,
+            1,
+            0,
+            0,
+            1
+          ],
+          "half_difference_from_old_baseline": [
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "signed_target": "5+z_0*z_1-z_2",
+          "coefficient_offset": 4
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "complement_literal_coordinate": 1,
+          "values_in_binary_mask_order": [
+            2,
+            1,
+            1,
+            0,
+            1,
+            2,
+            0,
+            1
+          ],
+          "half_difference_from_old_baseline": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "signed_target": "5+z_0*z_2-z_1",
+          "coefficient_offset": 4
+        },
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "complement_literal_coordinate": 0,
+          "values_in_binary_mask_order": [
+            2,
+            1,
+            1,
+            0,
+            1,
+            0,
+            2,
+            1
+          ],
+          "half_difference_from_old_baseline": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "signed_target": "5+z_1*z_2-z_0",
+          "coefficient_offset": 4
+        }
+      ],
+      "excess_four_coefficient_offsets": [
+        4
+      ],
+      "proof_note": "evidence/NOTE_2026-09-04_COMPLEMENT_TRIPLE_PUNCTURED_GAP.md",
+      "new_graph_prime_slice_or_catalog_census_used": false,
+      "proved": true
+    },
+    "p1_p_minus_one": {
+      "p": 29,
+      "scaled_mass": 28,
+      "scaled_mass_definition": "4p E[L]",
+      "statement": "no nonzero nonnegative integral quadratic on J(p,(p+1)/2) has mass p-1",
+      "height_at_least_two": {
+        "paired_height_lower_bound": "8",
+        "stabilizer_height_upper_bound": "8",
+        "forced_height": 8,
+        "every_maximizing_cube_mean_at_least": "1/2",
+        "average_maximizing_cube_mean": "1/2",
+        "therefore_every_maximizing_cube_mean": "1/2",
+        "half_mean_cube_maximum_upper_bound": 3,
+        "excluded": true,
+        "proved": true
+      },
+      "height_one_boolean": {
+        "density": "7/29",
+        "relevant_pair_influence_floor": "65/1044",
+        "total_influence_upper_bound": "4312/841",
+        "largest_zero_influence_class_complement_bound": "310464/54665",
+        "strict_junta_upper_bound": 6,
+        "generic_junta_gap_polynomial": {
+          "coefficients_in_p_descending": [
+            10,
+            -40,
+            2,
+            4
+          ],
+          "translated_variable": "x=p-29>=0",
+          "coefficients_in_x_descending": [
+            10,
+            830,
+            22912,
+            210312
+          ],
+          "translation_checked_coefficientwise": true,
+          "strictly_positive_for_every_p_at_least_29": true,
+          "proved": true
+        },
+        "junta_coordinates_at_most": 5,
+        "all_junta_patterns_extend_to_both_slice_sides": true,
+        "cube_active_coordinates_at_most": 4,
+        "four_bit_density_values": [
+          "0",
+          "13/58",
+          "15/58",
+          "14/29",
+          "15/29",
+          "43/58",
+          "45/58",
+          "1"
+        ],
+        "density_formula_dependency": "Proposition15.751 fixed fourteen-profile symbolic density formulas",
+        "target_strict_bracket": [
+          "13/58",
+          "15/58"
+        ],
+        "target_density_absent": true,
+        "fixed_catalog_sha256": "63c9daf2b117b540a5199b1b007cb4e6997ba01704fbc6017efaaa9735859396",
+        "fixed_four_bit_catalog_reused": true,
+        "new_catalog_used": false,
+        "proved": true
+      },
+      "proof_note": "evidence/NOTE_2026-09-04_COMPLEMENT_TRIPLE_PUNCTURED_GAP.md",
+      "new_graph_prime_slice_or_catalog_census_used": false,
+      "excluded": true,
+      "proved": true
+    },
+    "p1_p_plus_eleven": {
+      "p": 29,
+      "scaled_mass": 40,
+      "scaled_mass_definition": "4p E[L]",
+      "statement": "no nonzero nonnegative integral quadratic on J(p,(p+1)/2) has mass p+11",
+      "height_at_least_two": {
+        "paired_height_lower_bound": "5",
+        "stabilizer_height_upper_bound": "80/7",
+        "every_maximizing_cube_mean_at_least": "1/2",
+        "cube_mean_lattice": "(1/4)Z",
+        "average_maximizing_cube_mean_upper_bound": "5/7",
+        "strict_gap_below_three_quarters": "1/28",
+        "generic_strict_gap_identity": "3/4-(p+11)/(2(p-1))=(p-25)/(4(p-1))>0",
+        "some_maximizing_cube_has_mean_exactly": "1/2",
+        "half_mean_cube_maximum_upper_bound": 3,
+        "excluded": true,
+        "proved": true
+      },
+      "height_one_boolean": {
+        "density": "10/29",
+        "relevant_pair_influence_floor": "65/1044",
+        "total_influence_upper_bound": "5320/841",
+        "largest_zero_influence_class_complement_bound": "76608/10933",
+        "strict_junta_upper_bound": 8,
+        "generic_junta_gap_polynomial": {
+          "coefficients_in_p_descending": [
+            2,
+            -42,
+            338,
+            -814,
+            484
+          ],
+          "translated_variable": "x=p-29>=0",
+          "coefficients_in_x_descending": [
+            2,
+            190,
+            6776,
+            107936,
+            651360
+          ],
+          "translation_checked_coefficientwise": true,
+          "strictly_positive_for_every_p_at_least_29": true,
+          "proved": true
+        },
+        "junta_coordinates_at_most": 7,
+        "all_junta_patterns_extend_to_both_slice_sides": true,
+        "cube_active_coordinates_at_most": 4,
+        "four_bit_density_values": [
+          "0",
+          "13/58",
+          "15/58",
+          "14/29",
+          "15/29",
+          "43/58",
+          "45/58",
+          "1"
+        ],
+        "density_formula_dependency": "Proposition15.751 fixed fourteen-profile symbolic density formulas",
+        "target_strict_bracket": [
+          "15/58",
+          "14/29"
+        ],
+        "target_density_absent": true,
+        "fixed_catalog_sha256": "63c9daf2b117b540a5199b1b007cb4e6997ba01704fbc6017efaaa9735859396",
+        "fixed_four_bit_catalog_reused": true,
+        "new_catalog_used": false,
+        "proved": true
+      },
+      "proof_note": "evidence/NOTE_2026-09-04_COMPLEMENT_TRIPLE_PUNCTURED_GAP.md",
+      "new_graph_prime_slice_or_catalog_census_used": false,
+      "excluded": true,
+      "proved": true
+    }
+  },
+  "all_parameter_inequalities_proved_by_exact_identities_not_endpoint_sampling": true,
+  "complement_triple_excess_four_is_attained_not_excluded": true,
+  "standalone_endpoint_or_global_closure_claimed": false,
+  "proved": true
+}

@@ -1,6 +1,6 @@
 # P0 Engineering Graph (persistent — update every turn)
 
-> **AUTHORITATIVE LIVE OVERLAY (2026-09-04; through Proposition 15.771).** Sections 1--8 below are an
+> **AUTHORITATIVE LIVE OVERLAY (2026-09-04; through Proposition 15.772).** Sections 1--8 below are an
 > archived Path-C graph from 2026-08-13 and are not a routing authority. The
 > live graph is:
 >
@@ -17,8 +17,9 @@
 >            +-- first five shells and 15.752 higher band [CLOSED]
 >            +-- next two generic layers; p23 t=9,10 (15.768--15.770) [CLOSED]
 >            +-- p23 t=11,k=114; reviewed all-boundary bridges (15.771) [CLOSED]
+>            +-- p1 p>=29: t=q-1,k=5p-3; punctured gap + mass p+11 (15.772) [CLOSED]
 >            `-- p5,7; p11 t>=3; p13,17,19 t>=5; p23 t>=12,k>=116;
->                p=1 mod4,p>=29: t>=q-1; p=3 mod4,p>=31: t>=q;
+>                p=1 mod4,p>=29: t>=q; p=3 mod4,p>=31: t>=q;
 >                positive p7,z7 [OPEN], where q=(p-1)/2
 > ```
 >
@@ -35,13 +36,20 @@
 > phase-zero mass-32 bridge. [Four-node exact checks](p23_third_post_band_mesh_replay.json)
 > independently verify those inputs; they are not the proof. Do not reopen
 > the closed p23 t11 endpoint with another graph, orbit, slice, or five-set
-> census. Generic frontiers and global acceptance predicates are unchanged.
+> census. The separate [15.772 generic proof](NOTE_2026-09-04_P1_THIRD_POST_BAND_CLOSE.md)
+> closes `p=1 mod 4,p>=29,t=q-1,k=5p-3`, moving that frontier to `t>=q`.
+> Its [punctured-gap theorem](NOTE_2026-09-04_COMPLEMENT_TRIPLE_PUNCTURED_GAP.md)
+> repairs the 15.770 gap-two premise and retains the new gap-four equality;
+> the row ledger forces forbidden local masses, including the new `p+11`.
+> [Four-node checks](p1_third_post_band_mesh_replay.json) corroborate it.
+> The next common generic layer `t=q,k=5p-1` has not been attacked here.
+> All small-prime and global acceptance gates remain open.
 
 **Machine:** 88 CPU + Tesla V100-SXM2-16GB (CuPy).  
 **Policy:** F17 (no single-core thrash) · F19 (no moduli class-refine loops) · F20 (no GPU theater) · F21 (no False-predicate 15.xxx) · F22 (no e1 flip on census).  
 **L = lim α_n:** **OPEN** (2026-09-04). The 2026-08-05 “CLOSED” claim was retracted (disj Gsum LB / 15.158). Current status is residual **(ii) OPEN** globally and multi-level Type I **CLOSED** by 15.750. Trust the live overlay and `HANDOFF.md` / `STATUS.md`, not the DAG below (stale Path-C framing).
 **Optional open:** Path-C residual / 16N (not required for denseness L).  
-**Last update:** 2026-09-04 (15.771 reviewed endpoint/frontier sync; sections 1--8 remain archived chronology).
+**Last update:** 2026-09-04 (15.772 reviewed generic endpoint/frontier sync; sections 1--8 remain archived chronology).
 
 ---
 

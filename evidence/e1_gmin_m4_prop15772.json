@@ -1,0 +1,3489 @@
+{
+  "prop": "15.772",
+  "status": "PROVED_INFINITE_FAMILY",
+  "statement": "For every prime p=1 mod4, p>=29, residual(ii) at k=5p-3 is empty",
+  "proof_note": "evidence/NOTE_2026-09-04_P1_THIRD_POST_BAND_CLOSE.md",
+  "new_local_theorem_note": "evidence/NOTE_2026-09-04_COMPLEMENT_TRIPLE_PUNCTURED_GAP.md",
+  "symbolic_range": {
+    "minimum_prime": 29,
+    "p_mod_4": 1,
+    "t": "(p-3)/2",
+    "k": "5p-3"
+  },
+  "new_p1_frontier": "p=1 mod4,p>=29,t>=(p-1)/2",
+  "records_are_identity_replays_not_exhaustive_prime_evidence": true,
+  "records": [
+    {
+      "p": 29,
+      "p_mod_4": 1,
+      "m": 15,
+      "layer_index_t": 13,
+      "original_k": 142,
+      "H_edge_count": 143,
+      "residue_ledger": {
+        "p": 29,
+        "q": 14,
+        "m": 15,
+        "t": 13,
+        "k": 142,
+        "H_edge_count": 143,
+        "guaranteed_isolated_vertices": 556,
+        "all_positive_quotients_when_u_less_than_q": true,
+        "quotient_zero_forced_when_u_equals_q": true,
+        "mean_2p_high_rows_need_no_separate_classification": true,
+        "surviving_residues": [
+          0,
+          11,
+          12,
+          13,
+          14
+        ],
+        "rows": [
+          {
+            "u": 0,
+            "quotient_sum": 28,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 30,
+            "forced_low_count_at_least": 2,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 28,
+                "excess": 2,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 28,
+                "floor": 30,
+                "excess": 0,
+                "classification": "exact_complement_literal"
+              }
+            ],
+            "live_rows": [
+              {
+                "b": 28,
+                "classification": "exact_complement_literal"
+              }
+            ]
+          },
+          {
+            "u": 1,
+            "quotient_sum": 27,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 32,
+            "forced_low_count_at_least": 3,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 28,
+                "excess": 4,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 28,
+                "floor": 30,
+                "excess": 2,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 2,
+            "quotient_sum": 26,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 34,
+            "forced_low_count_at_least": 4,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 28,
+                "excess": 6,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 28,
+                "floor": 30,
+                "excess": 4,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 3,
+            "quotient_sum": 25,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 36,
+            "forced_low_count_at_least": 5,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 28,
+                "excess": 8,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 28,
+                "floor": 30,
+                "excess": 6,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 4,
+            "quotient_sum": 24,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 38,
+            "forced_low_count_at_least": 6,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 28,
+                "excess": 10,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 28,
+                "floor": 30,
+                "excess": 8,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 5,
+            "quotient_sum": 23,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 40,
+            "forced_low_count_at_least": 7,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 28,
+                "excess": 12,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 28,
+                "floor": 30,
+                "excess": 10,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 6,
+            "quotient_sum": 22,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 42,
+            "forced_low_count_at_least": 8,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 28,
+                "excess": 14,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 28,
+                "floor": 30,
+                "excess": 12,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 7,
+            "quotient_sum": 21,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 44,
+            "forced_low_count_at_least": 9,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 28,
+                "excess": 16,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 28,
+                "floor": 30,
+                "excess": 14,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 8,
+            "quotient_sum": 20,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 46,
+            "forced_low_count_at_least": 10,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 28,
+                "excess": 18,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 28,
+                "floor": 30,
+                "excess": 16,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 9,
+            "quotient_sum": 19,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 48,
+            "forced_low_count_at_least": 11,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 28,
+                "excess": 20,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 28,
+                "floor": 30,
+                "excess": 18,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 10,
+            "quotient_sum": 18,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 50,
+            "forced_low_count_at_least": 12,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 28,
+                "excess": 22,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 28,
+                "floor": 30,
+                "excess": 20,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 11,
+            "quotient_sum": 17,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 52,
+            "forced_low_count_at_least": 13,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 28,
+                "excess": 24,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 26,
+                "floor": 52,
+                "excess": 0,
+                "classification": "exact_complement_triple"
+              },
+              {
+                "b": 28,
+                "floor": 30,
+                "excess": 22,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": [
+              {
+                "b": 26,
+                "classification": "exact_complement_triple"
+              }
+            ]
+          },
+          {
+            "u": 12,
+            "quotient_sum": 16,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 54,
+            "forced_low_count_at_least": 14,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 28,
+                "excess": 26,
+                "classification": "XNOR_sharp_lift"
+              },
+              {
+                "b": 26,
+                "floor": 52,
+                "excess": 2,
+                "classification": "excluded_punctured_gap_two"
+              },
+              {
+                "b": 28,
+                "floor": 30,
+                "excess": 24,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": [
+              {
+                "b": 2,
+                "classification": "XNOR_sharp_lift"
+              }
+            ]
+          },
+          {
+            "u": 13,
+            "quotient_sum": 15,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 56,
+            "forced_low_count_at_least": 15,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 28,
+                "excess": 28,
+                "classification": "excluded_mass_p_minus_one"
+              },
+              {
+                "b": 26,
+                "floor": 52,
+                "excess": 4,
+                "classification": "triple_gap_four"
+              },
+              {
+                "b": 28,
+                "floor": 30,
+                "excess": 26,
+                "classification": "literal_sharp_lift"
+              }
+            ],
+            "live_rows": [
+              {
+                "b": 26,
+                "classification": "triple_gap_four"
+              },
+              {
+                "b": 28,
+                "classification": "literal_sharp_lift"
+              }
+            ]
+          },
+          {
+            "u": 14,
+            "quotient_sum": 14,
+            "forced_low_quotient": 0,
+            "forced_low_mean": 28,
+            "forced_low_count_at_least": 1,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 28,
+                "excess": 0,
+                "classification": "exact_XNOR"
+              }
+            ],
+            "live_rows": [
+              {
+                "b": 2,
+                "classification": "exact_XNOR"
+              }
+            ]
+          }
+        ],
+        "proved": true
+      },
+      "new_hard_family_catalog": {
+        "p": 29,
+        "scaled_mean": 56,
+        "families": [
+          {
+            "b": 26,
+            "family": "pair_plus_complement_literal",
+            "signed_target": "5+z_i*z_j-z_k",
+            "coefficient_offset": 4
+          },
+          {
+            "b": 28,
+            "family": "literal_plus_omitted_pair",
+            "signed_target": "(4+z_a)+(1-z_i-z_j+z_i*z_j)",
+            "coefficient_offset": 4
+          },
+          {
+            "b": 28,
+            "family": "literal_plus_all_equal_triple",
+            "signed_target": "(4+z_a)+(1+z_i*z_j+z_i*z_k+z_j*z_k)",
+            "coefficient_offset": 6
+          }
+        ],
+        "coefficient_offsets": [
+          4,
+          6
+        ],
+        "b2_mass_p_minus_one_excluded": true,
+        "arbitrary_support_overlap_allowed": true,
+        "proved": true
+      },
+      "branch_exclusions": {
+        "old_complement_literal": {
+          "u": 0,
+          "low_quotient": 1,
+          "low_scaled_mean": 30,
+          "coefficient_offset": 5,
+          "common_low_parallel_candidates": [
+            5
+          ],
+          "common_low_parallel_upper_bound": 8,
+          "every_hard_parallel_formula": "P_L=4+k_L",
+          "hard_edge_count": 88,
+          "hard_sign_times_global_T": 33,
+          "opposite_edge_count": 55,
+          "forbidden_Q": 2,
+          "forbidden_scaled_mean": 6,
+          "forced_next_Q": 3,
+          "forced_next_scaled_mean": 36,
+          "surplus": 10,
+          "forced_next_row_count_at_least": 5,
+          "nonzero_boundary_floor_excess_rows": [
+            [
+              2,
+              30,
+              6
+            ],
+            [
+              28,
+              28,
+              8
+            ]
+          ],
+          "checks": {
+            "common_row_sum_equals_signed_total": true,
+            "lower_Q_means_negative": true,
+            "forbidden_Q_mean": true,
+            "forbidden_positive_below_both_floors": true,
+            "next_Q_mean": true,
+            "positive_number_of_next_rows": true,
+            "only_nonzero_boundary_candidates_are_pointwise_baselines": true,
+            "every_nonzero_boundary_leaves_genuine_subsharp_lift": true,
+            "boundary_zero_local_exclusion": true
+          },
+          "proved": true
+        },
+        "carried_complement_triple": {
+          "u": 11,
+          "low_quotient": 1,
+          "low_scaled_mean": 52,
+          "coefficient_offset": 2,
+          "common_low_parallel_candidates": [
+            2
+          ],
+          "common_low_parallel_upper_bound": 9,
+          "every_hard_parallel_formula": "P_L=1+k_L",
+          "hard_edge_count": 32,
+          "hard_sign_times_global_T": -79,
+          "opposite_edge_count": 111,
+          "forbidden_Q": 6,
+          "forbidden_scaled_mean": 14,
+          "forced_next_Q": 7,
+          "forced_next_scaled_mean": 44,
+          "surplus": 6,
+          "forced_next_row_count_at_least": 9,
+          "nonzero_boundary_floor_excess_rows": [
+            [
+              2,
+              30,
+              14
+            ],
+            [
+              28,
+              28,
+              16
+            ]
+          ],
+          "checks": {
+            "common_row_sum_equals_signed_total": true,
+            "lower_Q_means_negative": true,
+            "forbidden_Q_mean": true,
+            "forbidden_positive_below_both_floors": true,
+            "next_Q_mean": true,
+            "positive_number_of_next_rows": true,
+            "only_nonzero_boundary_candidates_are_pointwise_baselines": true,
+            "every_nonzero_boundary_leaves_genuine_subsharp_lift": true,
+            "boundary_zero_local_exclusion": true
+          },
+          "proved": true
+        },
+        "carried_XNOR_omitted_pair": {
+          "u": 12,
+          "low_quotient": 1,
+          "low_scaled_mean": 54,
+          "coefficient_offset": 3,
+          "common_low_parallel_candidates": [
+            3
+          ],
+          "common_low_parallel_upper_bound": 9,
+          "every_hard_parallel_formula": "P_L=2+k_L",
+          "hard_edge_count": 46,
+          "hard_sign_times_global_T": -51,
+          "opposite_edge_count": 97,
+          "forbidden_Q": 5,
+          "forbidden_scaled_mean": 12,
+          "forced_next_Q": 6,
+          "forced_next_scaled_mean": 42,
+          "surplus": 7,
+          "forced_next_row_count_at_least": 8,
+          "nonzero_boundary_floor_excess_rows": [
+            [
+              2,
+              30,
+              12
+            ],
+            [
+              28,
+              28,
+              14
+            ]
+          ],
+          "checks": {
+            "common_row_sum_equals_signed_total": true,
+            "lower_Q_means_negative": true,
+            "forbidden_Q_mean": true,
+            "forbidden_positive_below_both_floors": true,
+            "next_Q_mean": true,
+            "positive_number_of_next_rows": true,
+            "only_nonzero_boundary_candidates_are_pointwise_baselines": true,
+            "every_nonzero_boundary_leaves_genuine_subsharp_lift": true,
+            "boundary_zero_local_exclusion": true
+          },
+          "proved": true
+        },
+        "carried_XNOR_all_equal_triple": {
+          "u": 12,
+          "low_quotient": 1,
+          "low_scaled_mean": 54,
+          "coefficient_offset": 5,
+          "common_low_parallel_candidates": [
+            5
+          ],
+          "common_low_parallel_upper_bound": 9,
+          "every_hard_parallel_formula": "P_L=4+k_L",
+          "hard_edge_count": 76,
+          "hard_sign_times_global_T": 9,
+          "opposite_edge_count": 67,
+          "forbidden_Q": 3,
+          "forbidden_scaled_mean": 12,
+          "forced_next_Q": 4,
+          "forced_next_scaled_mean": 42,
+          "surplus": 7,
+          "forced_next_row_count_at_least": 8,
+          "nonzero_boundary_floor_excess_rows": [
+            [
+              2,
+              30,
+              12
+            ],
+            [
+              28,
+              28,
+              14
+            ]
+          ],
+          "checks": {
+            "common_row_sum_equals_signed_total": true,
+            "lower_Q_means_negative": true,
+            "forbidden_Q_mean": true,
+            "forbidden_positive_below_both_floors": true,
+            "next_Q_mean": true,
+            "positive_number_of_next_rows": true,
+            "only_nonzero_boundary_candidates_are_pointwise_baselines": true,
+            "every_nonzero_boundary_leaves_genuine_subsharp_lift": true,
+            "boundary_zero_local_exclusion": true
+          },
+          "proved": true
+        },
+        "new_offset_four": {
+          "u": 13,
+          "low_quotient": 1,
+          "low_scaled_mean": 56,
+          "coefficient_offset": 4,
+          "common_low_parallel_candidates": [
+            4
+          ],
+          "common_low_parallel_upper_bound": 9,
+          "every_hard_parallel_formula": "P_L=3+k_L",
+          "hard_edge_count": 60,
+          "hard_sign_times_global_T": -23,
+          "opposite_edge_count": 83,
+          "forbidden_Q": 4,
+          "forbidden_scaled_mean": 10,
+          "forced_next_Q": 5,
+          "forced_next_scaled_mean": 40,
+          "surplus": 8,
+          "forced_next_row_count_at_least": 7,
+          "nonzero_boundary_floor_excess_rows": [
+            [
+              2,
+              30,
+              10
+            ],
+            [
+              28,
+              28,
+              12
+            ]
+          ],
+          "checks": {
+            "common_row_sum_equals_signed_total": true,
+            "lower_Q_means_negative": true,
+            "forbidden_Q_mean": true,
+            "forbidden_positive_below_both_floors": true,
+            "next_Q_mean": true,
+            "positive_number_of_next_rows": true,
+            "only_nonzero_boundary_candidates_are_pointwise_baselines": true,
+            "every_nonzero_boundary_leaves_genuine_subsharp_lift": true,
+            "boundary_zero_local_exclusion": true
+          },
+          "proved": true
+        },
+        "new_offset_six": {
+          "u": 13,
+          "low_quotient": 1,
+          "low_scaled_mean": 56,
+          "coefficient_offset": 6,
+          "common_low_parallel_candidates": [
+            6
+          ],
+          "common_low_parallel_upper_bound": 9,
+          "every_hard_parallel_formula": "P_L=5+k_L",
+          "hard_edge_count": 90,
+          "hard_sign_times_global_T": 37,
+          "opposite_edge_count": 53,
+          "forbidden_Q": 2,
+          "forbidden_scaled_mean": 10,
+          "forced_next_Q": 3,
+          "forced_next_scaled_mean": 40,
+          "surplus": 8,
+          "forced_next_row_count_at_least": 7,
+          "nonzero_boundary_floor_excess_rows": [
+            [
+              2,
+              30,
+              10
+            ],
+            [
+              28,
+              28,
+              12
+            ]
+          ],
+          "checks": {
+            "common_row_sum_equals_signed_total": true,
+            "lower_Q_means_negative": true,
+            "forbidden_Q_mean": true,
+            "forbidden_positive_below_both_floors": true,
+            "next_Q_mean": true,
+            "positive_number_of_next_rows": true,
+            "only_nonzero_boundary_candidates_are_pointwise_baselines": true,
+            "every_nonzero_boundary_leaves_genuine_subsharp_lift": true,
+            "boundary_zero_local_exclusion": true
+          },
+          "proved": true
+        },
+        "quotient_zero_XNOR": {
+          "u": 14,
+          "low_quotient": 0,
+          "low_scaled_mean": 28,
+          "coefficient_offset": 4,
+          "common_low_parallel_candidates": [
+            4
+          ],
+          "common_low_parallel_upper_bound": 8,
+          "every_hard_parallel_formula": "P_L=4+k_L",
+          "hard_edge_count": 74,
+          "hard_sign_times_global_T": 5,
+          "opposite_edge_count": 69,
+          "forbidden_Q": 3,
+          "forbidden_scaled_mean": 8,
+          "forced_next_Q": 4,
+          "forced_next_scaled_mean": 38,
+          "surplus": 9,
+          "forced_next_row_count_at_least": 6,
+          "nonzero_boundary_floor_excess_rows": [
+            [
+              2,
+              30,
+              8
+            ],
+            [
+              28,
+              28,
+              10
+            ]
+          ],
+          "checks": {
+            "common_row_sum_equals_signed_total": true,
+            "lower_Q_means_negative": true,
+            "forbidden_Q_mean": true,
+            "forbidden_positive_below_both_floors": true,
+            "next_Q_mean": true,
+            "positive_number_of_next_rows": true,
+            "only_nonzero_boundary_candidates_are_pointwise_baselines": true,
+            "every_nonzero_boundary_leaves_genuine_subsharp_lift": true,
+            "boundary_zero_local_exclusion": true
+          },
+          "proved": true
+        }
+      },
+      "all_boundary_sizes_excluded": true,
+      "residual_ii_layer_excluded": true,
+      "finite_prime_graph_or_slice_census_used": false,
+      "proved": true
+    },
+    {
+      "p": 37,
+      "p_mod_4": 1,
+      "m": 19,
+      "layer_index_t": 17,
+      "original_k": 182,
+      "H_edge_count": 183,
+      "residue_ledger": {
+        "p": 37,
+        "q": 18,
+        "m": 19,
+        "t": 17,
+        "k": 182,
+        "H_edge_count": 183,
+        "guaranteed_isolated_vertices": 1004,
+        "all_positive_quotients_when_u_less_than_q": true,
+        "quotient_zero_forced_when_u_equals_q": true,
+        "mean_2p_high_rows_need_no_separate_classification": true,
+        "surviving_residues": [
+          0,
+          15,
+          16,
+          17,
+          18
+        ],
+        "rows": [
+          {
+            "u": 0,
+            "quotient_sum": 36,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 38,
+            "forced_low_count_at_least": 2,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 36,
+                "excess": 2,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 36,
+                "floor": 38,
+                "excess": 0,
+                "classification": "exact_complement_literal"
+              }
+            ],
+            "live_rows": [
+              {
+                "b": 36,
+                "classification": "exact_complement_literal"
+              }
+            ]
+          },
+          {
+            "u": 1,
+            "quotient_sum": 35,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 40,
+            "forced_low_count_at_least": 3,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 36,
+                "excess": 4,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 36,
+                "floor": 38,
+                "excess": 2,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 2,
+            "quotient_sum": 34,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 42,
+            "forced_low_count_at_least": 4,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 36,
+                "excess": 6,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 36,
+                "floor": 38,
+                "excess": 4,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 3,
+            "quotient_sum": 33,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 44,
+            "forced_low_count_at_least": 5,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 36,
+                "excess": 8,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 36,
+                "floor": 38,
+                "excess": 6,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 4,
+            "quotient_sum": 32,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 46,
+            "forced_low_count_at_least": 6,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 36,
+                "excess": 10,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 36,
+                "floor": 38,
+                "excess": 8,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 5,
+            "quotient_sum": 31,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 48,
+            "forced_low_count_at_least": 7,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 36,
+                "excess": 12,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 36,
+                "floor": 38,
+                "excess": 10,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 6,
+            "quotient_sum": 30,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 50,
+            "forced_low_count_at_least": 8,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 36,
+                "excess": 14,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 36,
+                "floor": 38,
+                "excess": 12,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 7,
+            "quotient_sum": 29,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 52,
+            "forced_low_count_at_least": 9,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 36,
+                "excess": 16,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 36,
+                "floor": 38,
+                "excess": 14,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 8,
+            "quotient_sum": 28,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 54,
+            "forced_low_count_at_least": 10,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 36,
+                "excess": 18,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 36,
+                "floor": 38,
+                "excess": 16,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 9,
+            "quotient_sum": 27,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 56,
+            "forced_low_count_at_least": 11,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 36,
+                "excess": 20,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 36,
+                "floor": 38,
+                "excess": 18,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 10,
+            "quotient_sum": 26,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 58,
+            "forced_low_count_at_least": 12,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 36,
+                "excess": 22,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 36,
+                "floor": 38,
+                "excess": 20,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 11,
+            "quotient_sum": 25,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 60,
+            "forced_low_count_at_least": 13,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 36,
+                "excess": 24,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 36,
+                "floor": 38,
+                "excess": 22,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 12,
+            "quotient_sum": 24,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 62,
+            "forced_low_count_at_least": 14,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 36,
+                "excess": 26,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 36,
+                "floor": 38,
+                "excess": 24,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 13,
+            "quotient_sum": 23,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 64,
+            "forced_low_count_at_least": 15,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 36,
+                "excess": 28,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 36,
+                "floor": 38,
+                "excess": 26,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 14,
+            "quotient_sum": 22,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 66,
+            "forced_low_count_at_least": 16,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 36,
+                "excess": 30,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 36,
+                "floor": 38,
+                "excess": 28,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 15,
+            "quotient_sum": 21,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 68,
+            "forced_low_count_at_least": 17,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 36,
+                "excess": 32,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 34,
+                "floor": 68,
+                "excess": 0,
+                "classification": "exact_complement_triple"
+              },
+              {
+                "b": 36,
+                "floor": 38,
+                "excess": 30,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": [
+              {
+                "b": 34,
+                "classification": "exact_complement_triple"
+              }
+            ]
+          },
+          {
+            "u": 16,
+            "quotient_sum": 20,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 70,
+            "forced_low_count_at_least": 18,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 36,
+                "excess": 34,
+                "classification": "XNOR_sharp_lift"
+              },
+              {
+                "b": 34,
+                "floor": 68,
+                "excess": 2,
+                "classification": "excluded_punctured_gap_two"
+              },
+              {
+                "b": 36,
+                "floor": 38,
+                "excess": 32,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": [
+              {
+                "b": 2,
+                "classification": "XNOR_sharp_lift"
+              }
+            ]
+          },
+          {
+            "u": 17,
+            "quotient_sum": 19,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 72,
+            "forced_low_count_at_least": 19,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 36,
+                "excess": 36,
+                "classification": "excluded_mass_p_minus_one"
+              },
+              {
+                "b": 34,
+                "floor": 68,
+                "excess": 4,
+                "classification": "triple_gap_four"
+              },
+              {
+                "b": 36,
+                "floor": 38,
+                "excess": 34,
+                "classification": "literal_sharp_lift"
+              }
+            ],
+            "live_rows": [
+              {
+                "b": 34,
+                "classification": "triple_gap_four"
+              },
+              {
+                "b": 36,
+                "classification": "literal_sharp_lift"
+              }
+            ]
+          },
+          {
+            "u": 18,
+            "quotient_sum": 18,
+            "forced_low_quotient": 0,
+            "forced_low_mean": 36,
+            "forced_low_count_at_least": 1,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 36,
+                "excess": 0,
+                "classification": "exact_XNOR"
+              }
+            ],
+            "live_rows": [
+              {
+                "b": 2,
+                "classification": "exact_XNOR"
+              }
+            ]
+          }
+        ],
+        "proved": true
+      },
+      "new_hard_family_catalog": {
+        "p": 37,
+        "scaled_mean": 72,
+        "families": [
+          {
+            "b": 34,
+            "family": "pair_plus_complement_literal",
+            "signed_target": "5+z_i*z_j-z_k",
+            "coefficient_offset": 4
+          },
+          {
+            "b": 36,
+            "family": "literal_plus_omitted_pair",
+            "signed_target": "(4+z_a)+(1-z_i-z_j+z_i*z_j)",
+            "coefficient_offset": 4
+          },
+          {
+            "b": 36,
+            "family": "literal_plus_all_equal_triple",
+            "signed_target": "(4+z_a)+(1+z_i*z_j+z_i*z_k+z_j*z_k)",
+            "coefficient_offset": 6
+          }
+        ],
+        "coefficient_offsets": [
+          4,
+          6
+        ],
+        "b2_mass_p_minus_one_excluded": true,
+        "arbitrary_support_overlap_allowed": true,
+        "proved": true
+      },
+      "branch_exclusions": {
+        "old_complement_literal": {
+          "u": 0,
+          "low_quotient": 1,
+          "low_scaled_mean": 38,
+          "coefficient_offset": 5,
+          "common_low_parallel_candidates": [
+            5
+          ],
+          "common_low_parallel_upper_bound": 8,
+          "every_hard_parallel_formula": "P_L=4+k_L",
+          "hard_edge_count": 112,
+          "hard_sign_times_global_T": 41,
+          "opposite_edge_count": 71,
+          "forbidden_Q": 2,
+          "forbidden_scaled_mean": 6,
+          "forced_next_Q": 3,
+          "forced_next_scaled_mean": 44,
+          "surplus": 14,
+          "forced_next_row_count_at_least": 5,
+          "nonzero_boundary_floor_excess_rows": [
+            [
+              2,
+              38,
+              6
+            ],
+            [
+              36,
+              36,
+              8
+            ]
+          ],
+          "checks": {
+            "common_row_sum_equals_signed_total": true,
+            "lower_Q_means_negative": true,
+            "forbidden_Q_mean": true,
+            "forbidden_positive_below_both_floors": true,
+            "next_Q_mean": true,
+            "positive_number_of_next_rows": true,
+            "only_nonzero_boundary_candidates_are_pointwise_baselines": true,
+            "every_nonzero_boundary_leaves_genuine_subsharp_lift": true,
+            "boundary_zero_local_exclusion": true
+          },
+          "proved": true
+        },
+        "carried_complement_triple": {
+          "u": 15,
+          "low_quotient": 1,
+          "low_scaled_mean": 68,
+          "coefficient_offset": 2,
+          "common_low_parallel_candidates": [
+            2
+          ],
+          "common_low_parallel_upper_bound": 9,
+          "every_hard_parallel_formula": "P_L=1+k_L",
+          "hard_edge_count": 40,
+          "hard_sign_times_global_T": -103,
+          "opposite_edge_count": 143,
+          "forbidden_Q": 6,
+          "forbidden_scaled_mean": 14,
+          "forced_next_Q": 7,
+          "forced_next_scaled_mean": 52,
+          "surplus": 10,
+          "forced_next_row_count_at_least": 9,
+          "nonzero_boundary_floor_excess_rows": [
+            [
+              2,
+              38,
+              14
+            ],
+            [
+              36,
+              36,
+              16
+            ]
+          ],
+          "checks": {
+            "common_row_sum_equals_signed_total": true,
+            "lower_Q_means_negative": true,
+            "forbidden_Q_mean": true,
+            "forbidden_positive_below_both_floors": true,
+            "next_Q_mean": true,
+            "positive_number_of_next_rows": true,
+            "only_nonzero_boundary_candidates_are_pointwise_baselines": true,
+            "every_nonzero_boundary_leaves_genuine_subsharp_lift": true,
+            "boundary_zero_local_exclusion": true
+          },
+          "proved": true
+        },
+        "carried_XNOR_omitted_pair": {
+          "u": 16,
+          "low_quotient": 1,
+          "low_scaled_mean": 70,
+          "coefficient_offset": 3,
+          "common_low_parallel_candidates": [
+            3
+          ],
+          "common_low_parallel_upper_bound": 9,
+          "every_hard_parallel_formula": "P_L=2+k_L",
+          "hard_edge_count": 58,
+          "hard_sign_times_global_T": -67,
+          "opposite_edge_count": 125,
+          "forbidden_Q": 5,
+          "forbidden_scaled_mean": 12,
+          "forced_next_Q": 6,
+          "forced_next_scaled_mean": 50,
+          "surplus": 11,
+          "forced_next_row_count_at_least": 8,
+          "nonzero_boundary_floor_excess_rows": [
+            [
+              2,
+              38,
+              12
+            ],
+            [
+              36,
+              36,
+              14
+            ]
+          ],
+          "checks": {
+            "common_row_sum_equals_signed_total": true,
+            "lower_Q_means_negative": true,
+            "forbidden_Q_mean": true,
+            "forbidden_positive_below_both_floors": true,
+            "next_Q_mean": true,
+            "positive_number_of_next_rows": true,
+            "only_nonzero_boundary_candidates_are_pointwise_baselines": true,
+            "every_nonzero_boundary_leaves_genuine_subsharp_lift": true,
+            "boundary_zero_local_exclusion": true
+          },
+          "proved": true
+        },
+        "carried_XNOR_all_equal_triple": {
+          "u": 16,
+          "low_quotient": 1,
+          "low_scaled_mean": 70,
+          "coefficient_offset": 5,
+          "common_low_parallel_candidates": [
+            5
+          ],
+          "common_low_parallel_upper_bound": 9,
+          "every_hard_parallel_formula": "P_L=4+k_L",
+          "hard_edge_count": 96,
+          "hard_sign_times_global_T": 9,
+          "opposite_edge_count": 87,
+          "forbidden_Q": 3,
+          "forbidden_scaled_mean": 12,
+          "forced_next_Q": 4,
+          "forced_next_scaled_mean": 50,
+          "surplus": 11,
+          "forced_next_row_count_at_least": 8,
+          "nonzero_boundary_floor_excess_rows": [
+            [
+              2,
+              38,
+              12
+            ],
+            [
+              36,
+              36,
+              14
+            ]
+          ],
+          "checks": {
+            "common_row_sum_equals_signed_total": true,
+            "lower_Q_means_negative": true,
+            "forbidden_Q_mean": true,
+            "forbidden_positive_below_both_floors": true,
+            "next_Q_mean": true,
+            "positive_number_of_next_rows": true,
+            "only_nonzero_boundary_candidates_are_pointwise_baselines": true,
+            "every_nonzero_boundary_leaves_genuine_subsharp_lift": true,
+            "boundary_zero_local_exclusion": true
+          },
+          "proved": true
+        },
+        "new_offset_four": {
+          "u": 17,
+          "low_quotient": 1,
+          "low_scaled_mean": 72,
+          "coefficient_offset": 4,
+          "common_low_parallel_candidates": [
+            4
+          ],
+          "common_low_parallel_upper_bound": 9,
+          "every_hard_parallel_formula": "P_L=3+k_L",
+          "hard_edge_count": 76,
+          "hard_sign_times_global_T": -31,
+          "opposite_edge_count": 107,
+          "forbidden_Q": 4,
+          "forbidden_scaled_mean": 10,
+          "forced_next_Q": 5,
+          "forced_next_scaled_mean": 48,
+          "surplus": 12,
+          "forced_next_row_count_at_least": 7,
+          "nonzero_boundary_floor_excess_rows": [
+            [
+              2,
+              38,
+              10
+            ],
+            [
+              36,
+              36,
+              12
+            ]
+          ],
+          "checks": {
+            "common_row_sum_equals_signed_total": true,
+            "lower_Q_means_negative": true,
+            "forbidden_Q_mean": true,
+            "forbidden_positive_below_both_floors": true,
+            "next_Q_mean": true,
+            "positive_number_of_next_rows": true,
+            "only_nonzero_boundary_candidates_are_pointwise_baselines": true,
+            "every_nonzero_boundary_leaves_genuine_subsharp_lift": true,
+            "boundary_zero_local_exclusion": true
+          },
+          "proved": true
+        },
+        "new_offset_six": {
+          "u": 17,
+          "low_quotient": 1,
+          "low_scaled_mean": 72,
+          "coefficient_offset": 6,
+          "common_low_parallel_candidates": [
+            6
+          ],
+          "common_low_parallel_upper_bound": 9,
+          "every_hard_parallel_formula": "P_L=5+k_L",
+          "hard_edge_count": 114,
+          "hard_sign_times_global_T": 45,
+          "opposite_edge_count": 69,
+          "forbidden_Q": 2,
+          "forbidden_scaled_mean": 10,
+          "forced_next_Q": 3,
+          "forced_next_scaled_mean": 48,
+          "surplus": 12,
+          "forced_next_row_count_at_least": 7,
+          "nonzero_boundary_floor_excess_rows": [
+            [
+              2,
+              38,
+              10
+            ],
+            [
+              36,
+              36,
+              12
+            ]
+          ],
+          "checks": {
+            "common_row_sum_equals_signed_total": true,
+            "lower_Q_means_negative": true,
+            "forbidden_Q_mean": true,
+            "forbidden_positive_below_both_floors": true,
+            "next_Q_mean": true,
+            "positive_number_of_next_rows": true,
+            "only_nonzero_boundary_candidates_are_pointwise_baselines": true,
+            "every_nonzero_boundary_leaves_genuine_subsharp_lift": true,
+            "boundary_zero_local_exclusion": true
+          },
+          "proved": true
+        },
+        "quotient_zero_XNOR": {
+          "u": 18,
+          "low_quotient": 0,
+          "low_scaled_mean": 36,
+          "coefficient_offset": 4,
+          "common_low_parallel_candidates": [
+            4
+          ],
+          "common_low_parallel_upper_bound": 8,
+          "every_hard_parallel_formula": "P_L=4+k_L",
+          "hard_edge_count": 94,
+          "hard_sign_times_global_T": 5,
+          "opposite_edge_count": 89,
+          "forbidden_Q": 3,
+          "forbidden_scaled_mean": 8,
+          "forced_next_Q": 4,
+          "forced_next_scaled_mean": 46,
+          "surplus": 13,
+          "forced_next_row_count_at_least": 6,
+          "nonzero_boundary_floor_excess_rows": [
+            [
+              2,
+              38,
+              8
+            ],
+            [
+              36,
+              36,
+              10
+            ]
+          ],
+          "checks": {
+            "common_row_sum_equals_signed_total": true,
+            "lower_Q_means_negative": true,
+            "forbidden_Q_mean": true,
+            "forbidden_positive_below_both_floors": true,
+            "next_Q_mean": true,
+            "positive_number_of_next_rows": true,
+            "only_nonzero_boundary_candidates_are_pointwise_baselines": true,
+            "every_nonzero_boundary_leaves_genuine_subsharp_lift": true,
+            "boundary_zero_local_exclusion": true
+          },
+          "proved": true
+        }
+      },
+      "all_boundary_sizes_excluded": true,
+      "residual_ii_layer_excluded": true,
+      "finite_prime_graph_or_slice_census_used": false,
+      "proved": true
+    },
+    {
+      "p": 41,
+      "p_mod_4": 1,
+      "m": 21,
+      "layer_index_t": 19,
+      "original_k": 202,
+      "H_edge_count": 203,
+      "residue_ledger": {
+        "p": 41,
+        "q": 20,
+        "m": 21,
+        "t": 19,
+        "k": 202,
+        "H_edge_count": 203,
+        "guaranteed_isolated_vertices": 1276,
+        "all_positive_quotients_when_u_less_than_q": true,
+        "quotient_zero_forced_when_u_equals_q": true,
+        "mean_2p_high_rows_need_no_separate_classification": true,
+        "surviving_residues": [
+          0,
+          17,
+          18,
+          19,
+          20
+        ],
+        "rows": [
+          {
+            "u": 0,
+            "quotient_sum": 40,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 42,
+            "forced_low_count_at_least": 2,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 40,
+                "excess": 2,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 40,
+                "floor": 42,
+                "excess": 0,
+                "classification": "exact_complement_literal"
+              }
+            ],
+            "live_rows": [
+              {
+                "b": 40,
+                "classification": "exact_complement_literal"
+              }
+            ]
+          },
+          {
+            "u": 1,
+            "quotient_sum": 39,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 44,
+            "forced_low_count_at_least": 3,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 40,
+                "excess": 4,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 40,
+                "floor": 42,
+                "excess": 2,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 2,
+            "quotient_sum": 38,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 46,
+            "forced_low_count_at_least": 4,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 40,
+                "excess": 6,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 40,
+                "floor": 42,
+                "excess": 4,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 3,
+            "quotient_sum": 37,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 48,
+            "forced_low_count_at_least": 5,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 40,
+                "excess": 8,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 40,
+                "floor": 42,
+                "excess": 6,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 4,
+            "quotient_sum": 36,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 50,
+            "forced_low_count_at_least": 6,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 40,
+                "excess": 10,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 40,
+                "floor": 42,
+                "excess": 8,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 5,
+            "quotient_sum": 35,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 52,
+            "forced_low_count_at_least": 7,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 40,
+                "excess": 12,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 40,
+                "floor": 42,
+                "excess": 10,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 6,
+            "quotient_sum": 34,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 54,
+            "forced_low_count_at_least": 8,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 40,
+                "excess": 14,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 40,
+                "floor": 42,
+                "excess": 12,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 7,
+            "quotient_sum": 33,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 56,
+            "forced_low_count_at_least": 9,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 40,
+                "excess": 16,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 40,
+                "floor": 42,
+                "excess": 14,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 8,
+            "quotient_sum": 32,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 58,
+            "forced_low_count_at_least": 10,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 40,
+                "excess": 18,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 40,
+                "floor": 42,
+                "excess": 16,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 9,
+            "quotient_sum": 31,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 60,
+            "forced_low_count_at_least": 11,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 40,
+                "excess": 20,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 40,
+                "floor": 42,
+                "excess": 18,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 10,
+            "quotient_sum": 30,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 62,
+            "forced_low_count_at_least": 12,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 40,
+                "excess": 22,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 40,
+                "floor": 42,
+                "excess": 20,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 11,
+            "quotient_sum": 29,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 64,
+            "forced_low_count_at_least": 13,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 40,
+                "excess": 24,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 40,
+                "floor": 42,
+                "excess": 22,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 12,
+            "quotient_sum": 28,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 66,
+            "forced_low_count_at_least": 14,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 40,
+                "excess": 26,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 40,
+                "floor": 42,
+                "excess": 24,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 13,
+            "quotient_sum": 27,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 68,
+            "forced_low_count_at_least": 15,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 40,
+                "excess": 28,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 40,
+                "floor": 42,
+                "excess": 26,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 14,
+            "quotient_sum": 26,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 70,
+            "forced_low_count_at_least": 16,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 40,
+                "excess": 30,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 40,
+                "floor": 42,
+                "excess": 28,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 15,
+            "quotient_sum": 25,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 72,
+            "forced_low_count_at_least": 17,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 40,
+                "excess": 32,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 40,
+                "floor": 42,
+                "excess": 30,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 16,
+            "quotient_sum": 24,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 74,
+            "forced_low_count_at_least": 18,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 40,
+                "excess": 34,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 40,
+                "floor": 42,
+                "excess": 32,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 17,
+            "quotient_sum": 23,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 76,
+            "forced_low_count_at_least": 19,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 40,
+                "excess": 36,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 38,
+                "floor": 76,
+                "excess": 0,
+                "classification": "exact_complement_triple"
+              },
+              {
+                "b": 40,
+                "floor": 42,
+                "excess": 34,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": [
+              {
+                "b": 38,
+                "classification": "exact_complement_triple"
+              }
+            ]
+          },
+          {
+            "u": 18,
+            "quotient_sum": 22,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 78,
+            "forced_low_count_at_least": 20,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 40,
+                "excess": 38,
+                "classification": "XNOR_sharp_lift"
+              },
+              {
+                "b": 38,
+                "floor": 76,
+                "excess": 2,
+                "classification": "excluded_punctured_gap_two"
+              },
+              {
+                "b": 40,
+                "floor": 42,
+                "excess": 36,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": [
+              {
+                "b": 2,
+                "classification": "XNOR_sharp_lift"
+              }
+            ]
+          },
+          {
+            "u": 19,
+            "quotient_sum": 21,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 80,
+            "forced_low_count_at_least": 21,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 40,
+                "excess": 40,
+                "classification": "excluded_mass_p_minus_one"
+              },
+              {
+                "b": 38,
+                "floor": 76,
+                "excess": 4,
+                "classification": "triple_gap_four"
+              },
+              {
+                "b": 40,
+                "floor": 42,
+                "excess": 38,
+                "classification": "literal_sharp_lift"
+              }
+            ],
+            "live_rows": [
+              {
+                "b": 38,
+                "classification": "triple_gap_four"
+              },
+              {
+                "b": 40,
+                "classification": "literal_sharp_lift"
+              }
+            ]
+          },
+          {
+            "u": 20,
+            "quotient_sum": 20,
+            "forced_low_quotient": 0,
+            "forced_low_mean": 40,
+            "forced_low_count_at_least": 1,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 40,
+                "excess": 0,
+                "classification": "exact_XNOR"
+              }
+            ],
+            "live_rows": [
+              {
+                "b": 2,
+                "classification": "exact_XNOR"
+              }
+            ]
+          }
+        ],
+        "proved": true
+      },
+      "new_hard_family_catalog": {
+        "p": 41,
+        "scaled_mean": 80,
+        "families": [
+          {
+            "b": 38,
+            "family": "pair_plus_complement_literal",
+            "signed_target": "5+z_i*z_j-z_k",
+            "coefficient_offset": 4
+          },
+          {
+            "b": 40,
+            "family": "literal_plus_omitted_pair",
+            "signed_target": "(4+z_a)+(1-z_i-z_j+z_i*z_j)",
+            "coefficient_offset": 4
+          },
+          {
+            "b": 40,
+            "family": "literal_plus_all_equal_triple",
+            "signed_target": "(4+z_a)+(1+z_i*z_j+z_i*z_k+z_j*z_k)",
+            "coefficient_offset": 6
+          }
+        ],
+        "coefficient_offsets": [
+          4,
+          6
+        ],
+        "b2_mass_p_minus_one_excluded": true,
+        "arbitrary_support_overlap_allowed": true,
+        "proved": true
+      },
+      "branch_exclusions": {
+        "old_complement_literal": {
+          "u": 0,
+          "low_quotient": 1,
+          "low_scaled_mean": 42,
+          "coefficient_offset": 5,
+          "common_low_parallel_candidates": [
+            5
+          ],
+          "common_low_parallel_upper_bound": 8,
+          "every_hard_parallel_formula": "P_L=4+k_L",
+          "hard_edge_count": 124,
+          "hard_sign_times_global_T": 45,
+          "opposite_edge_count": 79,
+          "forbidden_Q": 2,
+          "forbidden_scaled_mean": 6,
+          "forced_next_Q": 3,
+          "forced_next_scaled_mean": 48,
+          "surplus": 16,
+          "forced_next_row_count_at_least": 5,
+          "nonzero_boundary_floor_excess_rows": [
+            [
+              2,
+              42,
+              6
+            ],
+            [
+              40,
+              40,
+              8
+            ]
+          ],
+          "checks": {
+            "common_row_sum_equals_signed_total": true,
+            "lower_Q_means_negative": true,
+            "forbidden_Q_mean": true,
+            "forbidden_positive_below_both_floors": true,
+            "next_Q_mean": true,
+            "positive_number_of_next_rows": true,
+            "only_nonzero_boundary_candidates_are_pointwise_baselines": true,
+            "every_nonzero_boundary_leaves_genuine_subsharp_lift": true,
+            "boundary_zero_local_exclusion": true
+          },
+          "proved": true
+        },
+        "carried_complement_triple": {
+          "u": 17,
+          "low_quotient": 1,
+          "low_scaled_mean": 76,
+          "coefficient_offset": 2,
+          "common_low_parallel_candidates": [
+            2
+          ],
+          "common_low_parallel_upper_bound": 9,
+          "every_hard_parallel_formula": "P_L=1+k_L",
+          "hard_edge_count": 44,
+          "hard_sign_times_global_T": -115,
+          "opposite_edge_count": 159,
+          "forbidden_Q": 6,
+          "forbidden_scaled_mean": 14,
+          "forced_next_Q": 7,
+          "forced_next_scaled_mean": 56,
+          "surplus": 12,
+          "forced_next_row_count_at_least": 9,
+          "nonzero_boundary_floor_excess_rows": [
+            [
+              2,
+              42,
+              14
+            ],
+            [
+              40,
+              40,
+              16
+            ]
+          ],
+          "checks": {
+            "common_row_sum_equals_signed_total": true,
+            "lower_Q_means_negative": true,
+            "forbidden_Q_mean": true,
+            "forbidden_positive_below_both_floors": true,
+            "next_Q_mean": true,
+            "positive_number_of_next_rows": true,
+            "only_nonzero_boundary_candidates_are_pointwise_baselines": true,
+            "every_nonzero_boundary_leaves_genuine_subsharp_lift": true,
+            "boundary_zero_local_exclusion": true
+          },
+          "proved": true
+        },
+        "carried_XNOR_omitted_pair": {
+          "u": 18,
+          "low_quotient": 1,
+          "low_scaled_mean": 78,
+          "coefficient_offset": 3,
+          "common_low_parallel_candidates": [
+            3
+          ],
+          "common_low_parallel_upper_bound": 9,
+          "every_hard_parallel_formula": "P_L=2+k_L",
+          "hard_edge_count": 64,
+          "hard_sign_times_global_T": -75,
+          "opposite_edge_count": 139,
+          "forbidden_Q": 5,
+          "forbidden_scaled_mean": 12,
+          "forced_next_Q": 6,
+          "forced_next_scaled_mean": 54,
+          "surplus": 13,
+          "forced_next_row_count_at_least": 8,
+          "nonzero_boundary_floor_excess_rows": [
+            [
+              2,
+              42,
+              12
+            ],
+            [
+              40,
+              40,
+              14
+            ]
+          ],
+          "checks": {
+            "common_row_sum_equals_signed_total": true,
+            "lower_Q_means_negative": true,
+            "forbidden_Q_mean": true,
+            "forbidden_positive_below_both_floors": true,
+            "next_Q_mean": true,
+            "positive_number_of_next_rows": true,
+            "only_nonzero_boundary_candidates_are_pointwise_baselines": true,
+            "every_nonzero_boundary_leaves_genuine_subsharp_lift": true,
+            "boundary_zero_local_exclusion": true
+          },
+          "proved": true
+        },
+        "carried_XNOR_all_equal_triple": {
+          "u": 18,
+          "low_quotient": 1,
+          "low_scaled_mean": 78,
+          "coefficient_offset": 5,
+          "common_low_parallel_candidates": [
+            5
+          ],
+          "common_low_parallel_upper_bound": 9,
+          "every_hard_parallel_formula": "P_L=4+k_L",
+          "hard_edge_count": 106,
+          "hard_sign_times_global_T": 9,
+          "opposite_edge_count": 97,
+          "forbidden_Q": 3,
+          "forbidden_scaled_mean": 12,
+          "forced_next_Q": 4,
+          "forced_next_scaled_mean": 54,
+          "surplus": 13,
+          "forced_next_row_count_at_least": 8,
+          "nonzero_boundary_floor_excess_rows": [
+            [
+              2,
+              42,
+              12
+            ],
+            [
+              40,
+              40,
+              14
+            ]
+          ],
+          "checks": {
+            "common_row_sum_equals_signed_total": true,
+            "lower_Q_means_negative": true,
+            "forbidden_Q_mean": true,
+            "forbidden_positive_below_both_floors": true,
+            "next_Q_mean": true,
+            "positive_number_of_next_rows": true,
+            "only_nonzero_boundary_candidates_are_pointwise_baselines": true,
+            "every_nonzero_boundary_leaves_genuine_subsharp_lift": true,
+            "boundary_zero_local_exclusion": true
+          },
+          "proved": true
+        },
+        "new_offset_four": {
+          "u": 19,
+          "low_quotient": 1,
+          "low_scaled_mean": 80,
+          "coefficient_offset": 4,
+          "common_low_parallel_candidates": [
+            4
+          ],
+          "common_low_parallel_upper_bound": 9,
+          "every_hard_parallel_formula": "P_L=3+k_L",
+          "hard_edge_count": 84,
+          "hard_sign_times_global_T": -35,
+          "opposite_edge_count": 119,
+          "forbidden_Q": 4,
+          "forbidden_scaled_mean": 10,
+          "forced_next_Q": 5,
+          "forced_next_scaled_mean": 52,
+          "surplus": 14,
+          "forced_next_row_count_at_least": 7,
+          "nonzero_boundary_floor_excess_rows": [
+            [
+              2,
+              42,
+              10
+            ],
+            [
+              40,
+              40,
+              12
+            ]
+          ],
+          "checks": {
+            "common_row_sum_equals_signed_total": true,
+            "lower_Q_means_negative": true,
+            "forbidden_Q_mean": true,
+            "forbidden_positive_below_both_floors": true,
+            "next_Q_mean": true,
+            "positive_number_of_next_rows": true,
+            "only_nonzero_boundary_candidates_are_pointwise_baselines": true,
+            "every_nonzero_boundary_leaves_genuine_subsharp_lift": true,
+            "boundary_zero_local_exclusion": true
+          },
+          "proved": true
+        },
+        "new_offset_six": {
+          "u": 19,
+          "low_quotient": 1,
+          "low_scaled_mean": 80,
+          "coefficient_offset": 6,
+          "common_low_parallel_candidates": [
+            6
+          ],
+          "common_low_parallel_upper_bound": 9,
+          "every_hard_parallel_formula": "P_L=5+k_L",
+          "hard_edge_count": 126,
+          "hard_sign_times_global_T": 49,
+          "opposite_edge_count": 77,
+          "forbidden_Q": 2,
+          "forbidden_scaled_mean": 10,
+          "forced_next_Q": 3,
+          "forced_next_scaled_mean": 52,
+          "surplus": 14,
+          "forced_next_row_count_at_least": 7,
+          "nonzero_boundary_floor_excess_rows": [
+            [
+              2,
+              42,
+              10
+            ],
+            [
+              40,
+              40,
+              12
+            ]
+          ],
+          "checks": {
+            "common_row_sum_equals_signed_total": true,
+            "lower_Q_means_negative": true,
+            "forbidden_Q_mean": true,
+            "forbidden_positive_below_both_floors": true,
+            "next_Q_mean": true,
+            "positive_number_of_next_rows": true,
+            "only_nonzero_boundary_candidates_are_pointwise_baselines": true,
+            "every_nonzero_boundary_leaves_genuine_subsharp_lift": true,
+            "boundary_zero_local_exclusion": true
+          },
+          "proved": true
+        },
+        "quotient_zero_XNOR": {
+          "u": 20,
+          "low_quotient": 0,
+          "low_scaled_mean": 40,
+          "coefficient_offset": 4,
+          "common_low_parallel_candidates": [
+            4
+          ],
+          "common_low_parallel_upper_bound": 8,
+          "every_hard_parallel_formula": "P_L=4+k_L",
+          "hard_edge_count": 104,
+          "hard_sign_times_global_T": 5,
+          "opposite_edge_count": 99,
+          "forbidden_Q": 3,
+          "forbidden_scaled_mean": 8,
+          "forced_next_Q": 4,
+          "forced_next_scaled_mean": 50,
+          "surplus": 15,
+          "forced_next_row_count_at_least": 6,
+          "nonzero_boundary_floor_excess_rows": [
+            [
+              2,
+              42,
+              8
+            ],
+            [
+              40,
+              40,
+              10
+            ]
+          ],
+          "checks": {
+            "common_row_sum_equals_signed_total": true,
+            "lower_Q_means_negative": true,
+            "forbidden_Q_mean": true,
+            "forbidden_positive_below_both_floors": true,
+            "next_Q_mean": true,
+            "positive_number_of_next_rows": true,
+            "only_nonzero_boundary_candidates_are_pointwise_baselines": true,
+            "every_nonzero_boundary_leaves_genuine_subsharp_lift": true,
+            "boundary_zero_local_exclusion": true
+          },
+          "proved": true
+        }
+      },
+      "all_boundary_sizes_excluded": true,
+      "residual_ii_layer_excluded": true,
+      "finite_prime_graph_or_slice_census_used": false,
+      "proved": true
+    },
+    {
+      "p": 53,
+      "p_mod_4": 1,
+      "m": 27,
+      "layer_index_t": 25,
+      "original_k": 262,
+      "H_edge_count": 263,
+      "residue_ledger": {
+        "p": 53,
+        "q": 26,
+        "m": 27,
+        "t": 25,
+        "k": 262,
+        "H_edge_count": 263,
+        "guaranteed_isolated_vertices": 2284,
+        "all_positive_quotients_when_u_less_than_q": true,
+        "quotient_zero_forced_when_u_equals_q": true,
+        "mean_2p_high_rows_need_no_separate_classification": true,
+        "surviving_residues": [
+          0,
+          23,
+          24,
+          25,
+          26
+        ],
+        "rows": [
+          {
+            "u": 0,
+            "quotient_sum": 52,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 54,
+            "forced_low_count_at_least": 2,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 52,
+                "excess": 2,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 52,
+                "floor": 54,
+                "excess": 0,
+                "classification": "exact_complement_literal"
+              }
+            ],
+            "live_rows": [
+              {
+                "b": 52,
+                "classification": "exact_complement_literal"
+              }
+            ]
+          },
+          {
+            "u": 1,
+            "quotient_sum": 51,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 56,
+            "forced_low_count_at_least": 3,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 52,
+                "excess": 4,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 52,
+                "floor": 54,
+                "excess": 2,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 2,
+            "quotient_sum": 50,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 58,
+            "forced_low_count_at_least": 4,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 52,
+                "excess": 6,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 52,
+                "floor": 54,
+                "excess": 4,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 3,
+            "quotient_sum": 49,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 60,
+            "forced_low_count_at_least": 5,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 52,
+                "excess": 8,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 52,
+                "floor": 54,
+                "excess": 6,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 4,
+            "quotient_sum": 48,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 62,
+            "forced_low_count_at_least": 6,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 52,
+                "excess": 10,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 52,
+                "floor": 54,
+                "excess": 8,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 5,
+            "quotient_sum": 47,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 64,
+            "forced_low_count_at_least": 7,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 52,
+                "excess": 12,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 52,
+                "floor": 54,
+                "excess": 10,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 6,
+            "quotient_sum": 46,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 66,
+            "forced_low_count_at_least": 8,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 52,
+                "excess": 14,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 52,
+                "floor": 54,
+                "excess": 12,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 7,
+            "quotient_sum": 45,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 68,
+            "forced_low_count_at_least": 9,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 52,
+                "excess": 16,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 52,
+                "floor": 54,
+                "excess": 14,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 8,
+            "quotient_sum": 44,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 70,
+            "forced_low_count_at_least": 10,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 52,
+                "excess": 18,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 52,
+                "floor": 54,
+                "excess": 16,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 9,
+            "quotient_sum": 43,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 72,
+            "forced_low_count_at_least": 11,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 52,
+                "excess": 20,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 52,
+                "floor": 54,
+                "excess": 18,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 10,
+            "quotient_sum": 42,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 74,
+            "forced_low_count_at_least": 12,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 52,
+                "excess": 22,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 52,
+                "floor": 54,
+                "excess": 20,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 11,
+            "quotient_sum": 41,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 76,
+            "forced_low_count_at_least": 13,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 52,
+                "excess": 24,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 52,
+                "floor": 54,
+                "excess": 22,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 12,
+            "quotient_sum": 40,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 78,
+            "forced_low_count_at_least": 14,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 52,
+                "excess": 26,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 52,
+                "floor": 54,
+                "excess": 24,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 13,
+            "quotient_sum": 39,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 80,
+            "forced_low_count_at_least": 15,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 52,
+                "excess": 28,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 52,
+                "floor": 54,
+                "excess": 26,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 14,
+            "quotient_sum": 38,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 82,
+            "forced_low_count_at_least": 16,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 52,
+                "excess": 30,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 52,
+                "floor": 54,
+                "excess": 28,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 15,
+            "quotient_sum": 37,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 84,
+            "forced_low_count_at_least": 17,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 52,
+                "excess": 32,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 52,
+                "floor": 54,
+                "excess": 30,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 16,
+            "quotient_sum": 36,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 86,
+            "forced_low_count_at_least": 18,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 52,
+                "excess": 34,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 52,
+                "floor": 54,
+                "excess": 32,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 17,
+            "quotient_sum": 35,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 88,
+            "forced_low_count_at_least": 19,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 52,
+                "excess": 36,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 52,
+                "floor": 54,
+                "excess": 34,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 18,
+            "quotient_sum": 34,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 90,
+            "forced_low_count_at_least": 20,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 52,
+                "excess": 38,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 52,
+                "floor": 54,
+                "excess": 36,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 19,
+            "quotient_sum": 33,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 92,
+            "forced_low_count_at_least": 21,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 52,
+                "excess": 40,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 52,
+                "floor": 54,
+                "excess": 38,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 20,
+            "quotient_sum": 32,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 94,
+            "forced_low_count_at_least": 22,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 52,
+                "excess": 42,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 52,
+                "floor": 54,
+                "excess": 40,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 21,
+            "quotient_sum": 31,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 96,
+            "forced_low_count_at_least": 23,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 52,
+                "excess": 44,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 52,
+                "floor": 54,
+                "excess": 42,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 22,
+            "quotient_sum": 30,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 98,
+            "forced_low_count_at_least": 24,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 52,
+                "excess": 46,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 52,
+                "floor": 54,
+                "excess": 44,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": []
+          },
+          {
+            "u": 23,
+            "quotient_sum": 29,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 100,
+            "forced_low_count_at_least": 25,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 52,
+                "excess": 48,
+                "classification": "excluded_genuine_subsharp_lift"
+              },
+              {
+                "b": 50,
+                "floor": 100,
+                "excess": 0,
+                "classification": "exact_complement_triple"
+              },
+              {
+                "b": 52,
+                "floor": 54,
+                "excess": 46,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": [
+              {
+                "b": 50,
+                "classification": "exact_complement_triple"
+              }
+            ]
+          },
+          {
+            "u": 24,
+            "quotient_sum": 28,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 102,
+            "forced_low_count_at_least": 26,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 52,
+                "excess": 50,
+                "classification": "XNOR_sharp_lift"
+              },
+              {
+                "b": 50,
+                "floor": 100,
+                "excess": 2,
+                "classification": "excluded_punctured_gap_two"
+              },
+              {
+                "b": 52,
+                "floor": 54,
+                "excess": 48,
+                "classification": "excluded_genuine_subsharp_lift"
+              }
+            ],
+            "live_rows": [
+              {
+                "b": 2,
+                "classification": "XNOR_sharp_lift"
+              }
+            ]
+          },
+          {
+            "u": 25,
+            "quotient_sum": 27,
+            "forced_low_quotient": 1,
+            "forced_low_mean": 104,
+            "forced_low_count_at_least": 27,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 52,
+                "excess": 52,
+                "classification": "excluded_mass_p_minus_one"
+              },
+              {
+                "b": 50,
+                "floor": 100,
+                "excess": 4,
+                "classification": "triple_gap_four"
+              },
+              {
+                "b": 52,
+                "floor": 54,
+                "excess": 50,
+                "classification": "literal_sharp_lift"
+              }
+            ],
+            "live_rows": [
+              {
+                "b": 50,
+                "classification": "triple_gap_four"
+              },
+              {
+                "b": 52,
+                "classification": "literal_sharp_lift"
+              }
+            ]
+          },
+          {
+            "u": 26,
+            "quotient_sum": 26,
+            "forced_low_quotient": 0,
+            "forced_low_mean": 52,
+            "forced_low_count_at_least": 1,
+            "candidate_rows": [
+              {
+                "b": 2,
+                "floor": 52,
+                "excess": 0,
+                "classification": "exact_XNOR"
+              }
+            ],
+            "live_rows": [
+              {
+                "b": 2,
+                "classification": "exact_XNOR"
+              }
+            ]
+          }
+        ],
+        "proved": true
+      },
+      "new_hard_family_catalog": {
+        "p": 53,
+        "scaled_mean": 104,
+        "families": [
+          {
+            "b": 50,
+            "family": "pair_plus_complement_literal",
+            "signed_target": "5+z_i*z_j-z_k",
+            "coefficient_offset": 4
+          },
+          {
+            "b": 52,
+            "family": "literal_plus_omitted_pair",
+            "signed_target": "(4+z_a)+(1-z_i-z_j+z_i*z_j)",
+            "coefficient_offset": 4
+          },
+          {
+            "b": 52,
+            "family": "literal_plus_all_equal_triple",
+            "signed_target": "(4+z_a)+(1+z_i*z_j+z_i*z_k+z_j*z_k)",
+            "coefficient_offset": 6
+          }
+        ],
+        "coefficient_offsets": [
+          4,
+          6
+        ],
+        "b2_mass_p_minus_one_excluded": true,
+        "arbitrary_support_overlap_allowed": true,
+        "proved": true
+      },
+      "branch_exclusions": {
+        "old_complement_literal": {
+          "u": 0,
+          "low_quotient": 1,
+          "low_scaled_mean": 54,
+          "coefficient_offset": 5,
+          "common_low_parallel_candidates": [
+            5
+          ],
+          "common_low_parallel_upper_bound": 8,
+          "every_hard_parallel_formula": "P_L=4+k_L",
+          "hard_edge_count": 160,
+          "hard_sign_times_global_T": 57,
+          "opposite_edge_count": 103,
+          "forbidden_Q": 2,
+          "forbidden_scaled_mean": 6,
+          "forced_next_Q": 3,
+          "forced_next_scaled_mean": 60,
+          "surplus": 22,
+          "forced_next_row_count_at_least": 5,
+          "nonzero_boundary_floor_excess_rows": [
+            [
+              2,
+              54,
+              6
+            ],
+            [
+              52,
+              52,
+              8
+            ]
+          ],
+          "checks": {
+            "common_row_sum_equals_signed_total": true,
+            "lower_Q_means_negative": true,
+            "forbidden_Q_mean": true,
+            "forbidden_positive_below_both_floors": true,
+            "next_Q_mean": true,
+            "positive_number_of_next_rows": true,
+            "only_nonzero_boundary_candidates_are_pointwise_baselines": true,
+            "every_nonzero_boundary_leaves_genuine_subsharp_lift": true,
+            "boundary_zero_local_exclusion": true
+          },
+          "proved": true
+        },
+        "carried_complement_triple": {
+          "u": 23,
+          "low_quotient": 1,
+          "low_scaled_mean": 100,
+          "coefficient_offset": 2,
+          "common_low_parallel_candidates": [
+            2
+          ],
+          "common_low_parallel_upper_bound": 9,
+          "every_hard_parallel_formula": "P_L=1+k_L",
+          "hard_edge_count": 56,
+          "hard_sign_times_global_T": -151,
+          "opposite_edge_count": 207,
+          "forbidden_Q": 6,
+          "forbidden_scaled_mean": 14,
+          "forced_next_Q": 7,
+          "forced_next_scaled_mean": 68,
+          "surplus": 18,
+          "forced_next_row_count_at_least": 9,
+          "nonzero_boundary_floor_excess_rows": [
+            [
+              2,
+              54,
+              14
+            ],
+            [
+              52,
+              52,
+              16
+            ]
+          ],
+          "checks": {
+            "common_row_sum_equals_signed_total": true,
+            "lower_Q_means_negative": true,
+            "forbidden_Q_mean": true,
+            "forbidden_positive_below_both_floors": true,
+            "next_Q_mean": true,
+            "positive_number_of_next_rows": true,
+            "only_nonzero_boundary_candidates_are_pointwise_baselines": true,
+            "every_nonzero_boundary_leaves_genuine_subsharp_lift": true,
+            "boundary_zero_local_exclusion": true
+          },
+          "proved": true
+        },
+        "carried_XNOR_omitted_pair": {
+          "u": 24,
+          "low_quotient": 1,
+          "low_scaled_mean": 102,
+          "coefficient_offset": 3,
+          "common_low_parallel_candidates": [
+            3
+          ],
+          "common_low_parallel_upper_bound": 9,
+          "every_hard_parallel_formula": "P_L=2+k_L",
+          "hard_edge_count": 82,
+          "hard_sign_times_global_T": -99,
+          "opposite_edge_count": 181,
+          "forbidden_Q": 5,
+          "forbidden_scaled_mean": 12,
+          "forced_next_Q": 6,
+          "forced_next_scaled_mean": 66,
+          "surplus": 19,
+          "forced_next_row_count_at_least": 8,
+          "nonzero_boundary_floor_excess_rows": [
+            [
+              2,
+              54,
+              12
+            ],
+            [
+              52,
+              52,
+              14
+            ]
+          ],
+          "checks": {
+            "common_row_sum_equals_signed_total": true,
+            "lower_Q_means_negative": true,
+            "forbidden_Q_mean": true,
+            "forbidden_positive_below_both_floors": true,
+            "next_Q_mean": true,
+            "positive_number_of_next_rows": true,
+            "only_nonzero_boundary_candidates_are_pointwise_baselines": true,
+            "every_nonzero_boundary_leaves_genuine_subsharp_lift": true,
+            "boundary_zero_local_exclusion": true
+          },
+          "proved": true
+        },
+        "carried_XNOR_all_equal_triple": {
+          "u": 24,
+          "low_quotient": 1,
+          "low_scaled_mean": 102,
+          "coefficient_offset": 5,
+          "common_low_parallel_candidates": [
+            5
+          ],
+          "common_low_parallel_upper_bound": 9,
+          "every_hard_parallel_formula": "P_L=4+k_L",
+          "hard_edge_count": 136,
+          "hard_sign_times_global_T": 9,
+          "opposite_edge_count": 127,
+          "forbidden_Q": 3,
+          "forbidden_scaled_mean": 12,
+          "forced_next_Q": 4,
+          "forced_next_scaled_mean": 66,
+          "surplus": 19,
+          "forced_next_row_count_at_least": 8,
+          "nonzero_boundary_floor_excess_rows": [
+            [
+              2,
+              54,
+              12
+            ],
+            [
+              52,
+              52,
+              14
+            ]
+          ],
+          "checks": {
+            "common_row_sum_equals_signed_total": true,
+            "lower_Q_means_negative": true,
+            "forbidden_Q_mean": true,
+            "forbidden_positive_below_both_floors": true,
+            "next_Q_mean": true,
+            "positive_number_of_next_rows": true,
+            "only_nonzero_boundary_candidates_are_pointwise_baselines": true,
+            "every_nonzero_boundary_leaves_genuine_subsharp_lift": true,
+            "boundary_zero_local_exclusion": true
+          },
+          "proved": true
+        },
+        "new_offset_four": {
+          "u": 25,
+          "low_quotient": 1,
+          "low_scaled_mean": 104,
+          "coefficient_offset": 4,
+          "common_low_parallel_candidates": [
+            4
+          ],
+          "common_low_parallel_upper_bound": 9,
+          "every_hard_parallel_formula": "P_L=3+k_L",
+          "hard_edge_count": 108,
+          "hard_sign_times_global_T": -47,
+          "opposite_edge_count": 155,
+          "forbidden_Q": 4,
+          "forbidden_scaled_mean": 10,
+          "forced_next_Q": 5,
+          "forced_next_scaled_mean": 64,
+          "surplus": 20,
+          "forced_next_row_count_at_least": 7,
+          "nonzero_boundary_floor_excess_rows": [
+            [
+              2,
+              54,
+              10
+            ],
+            [
+              52,
+              52,
+              12
+            ]
+          ],
+          "checks": {
+            "common_row_sum_equals_signed_total": true,
+            "lower_Q_means_negative": true,
+            "forbidden_Q_mean": true,
+            "forbidden_positive_below_both_floors": true,
+            "next_Q_mean": true,
+            "positive_number_of_next_rows": true,
+            "only_nonzero_boundary_candidates_are_pointwise_baselines": true,
+            "every_nonzero_boundary_leaves_genuine_subsharp_lift": true,
+            "boundary_zero_local_exclusion": true
+          },
+          "proved": true
+        },
+        "new_offset_six": {
+          "u": 25,
+          "low_quotient": 1,
+          "low_scaled_mean": 104,
+          "coefficient_offset": 6,
+          "common_low_parallel_candidates": [
+            6
+          ],
+          "common_low_parallel_upper_bound": 9,
+          "every_hard_parallel_formula": "P_L=5+k_L",
+          "hard_edge_count": 162,
+          "hard_sign_times_global_T": 61,
+          "opposite_edge_count": 101,
+          "forbidden_Q": 2,
+          "forbidden_scaled_mean": 10,
+          "forced_next_Q": 3,
+          "forced_next_scaled_mean": 64,
+          "surplus": 20,
+          "forced_next_row_count_at_least": 7,
+          "nonzero_boundary_floor_excess_rows": [
+            [
+              2,
+              54,
+              10
+            ],
+            [
+              52,
+              52,
+              12
+            ]
+          ],
+          "checks": {
+            "common_row_sum_equals_signed_total": true,
+            "lower_Q_means_negative": true,
+            "forbidden_Q_mean": true,
+            "forbidden_positive_below_both_floors": true,
+            "next_Q_mean": true,
+            "positive_number_of_next_rows": true,
+            "only_nonzero_boundary_candidates_are_pointwise_baselines": true,
+            "every_nonzero_boundary_leaves_genuine_subsharp_lift": true,
+            "boundary_zero_local_exclusion": true
+          },
+          "proved": true
+        },
+        "quotient_zero_XNOR": {
+          "u": 26,
+          "low_quotient": 0,
+          "low_scaled_mean": 52,
+          "coefficient_offset": 4,
+          "common_low_parallel_candidates": [
+            4
+          ],
+          "common_low_parallel_upper_bound": 8,
+          "every_hard_parallel_formula": "P_L=4+k_L",
+          "hard_edge_count": 134,
+          "hard_sign_times_global_T": 5,
+          "opposite_edge_count": 129,
+          "forbidden_Q": 3,
+          "forbidden_scaled_mean": 8,
+          "forced_next_Q": 4,
+          "forced_next_scaled_mean": 62,
+          "surplus": 21,
+          "forced_next_row_count_at_least": 6,
+          "nonzero_boundary_floor_excess_rows": [
+            [
+              2,
+              54,
+              8
+            ],
+            [
+              52,
+              52,
+              10
+            ]
+          ],
+          "checks": {
+            "common_row_sum_equals_signed_total": true,
+            "lower_Q_means_negative": true,
+            "forbidden_Q_mean": true,
+            "forbidden_positive_below_both_floors": true,
+            "next_Q_mean": true,
+            "positive_number_of_next_rows": true,
+            "only_nonzero_boundary_candidates_are_pointwise_baselines": true,
+            "every_nonzero_boundary_leaves_genuine_subsharp_lift": true,
+            "boundary_zero_local_exclusion": true
+          },
+          "proved": true
+        }
+      },
+      "all_boundary_sizes_excluded": true,
+      "residual_ii_layer_excluded": true,
+      "finite_prime_graph_or_slice_census_used": false,
+      "proved": true
+    }
+  ],
+  "proved": true,
+  "residual_ii_closed_general": false,
+  "e1_closed_general": false,
+  "original_MO_limit_closed": false
+}

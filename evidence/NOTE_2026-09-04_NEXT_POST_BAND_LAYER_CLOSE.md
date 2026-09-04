@@ -52,9 +52,17 @@ u=m-3:   b=2 XNOR plus a sharp lift of mass p-3;
 u=m-1:   exact b=2 XNOR endpoint.
 ```
 
-All other candidate rows are nonzero integral lifts of scaled mass strictly
-between zero and the sharp Proposition 15.688 floor `p-3`, or have a forced
-quotient-zero mean below every phase-one floor.
+All other candidate rows either have a forced quotient-zero mean below
+every phase-one floor, are nonzero integral lifts from the pointwise
+`b=2,p-1` parity baselines below Proposition 15.688's sharp floor `p-3`,
+or are the `b=p-3` complement-triple cell at excess two. That last cell
+requires the separate [punctured-gap theorem](NOTE_2026-09-04_COMPLEMENT_TRIPLE_PUNCTURED_GAP.md),
+not ordinary nonnegative lift subtraction: `(r-2)^2=4` at `r=0`, while
+the pointwise parity minimum there is zero. The theorem's neighboring-slice
+bound, positive contact quadrature, and small-side kernel reduction give
+`delta=4*sum(nonnegative integer pair values)`, excluding `delta=2`.
+This supplies the previously implicit justification without changing the
+four surviving branches or the endpoint conclusion.
 
 The two old endpoint branches retain their standard forced opposite cells:
 

@@ -40,6 +40,7 @@ import json
 from fractions import Fraction
 from pathlib import Path
 
+from e1_gmin_m4_complement_triple_gap import complement_triple_gap_certificate
 from e1_gmin_m4_prop15652 import parity_floor_certificate
 from e1_gmin_m4_prop15688 import sharp_integral_quadratic_lift_floor
 from e1_gmin_m4_prop15721 import is_prime
@@ -458,7 +459,16 @@ def _residue_ledger(p: int, congruence: int) -> dict[str, object]:
             excess = low_mean - floor
             if excess == 0:
                 classification = "exact"
-            elif excess < lift_floor:
+            elif congruence == 1 and boundary == p - 3 and excess == 2:
+                # The complement-triple baseline is four on r=0, not
+                # the pointwise parity minimum there. Its difference is
+                # a punctured lift, so the ordinary sharp lift floor is
+                # not a valid justification for excluding this row.
+                gap = complement_triple_gap_certificate(p)
+                _require(gap["proved"] and gap["excess_two_excluded"],
+                         "the complement-triple punctured gap-two bridge failed")
+                classification = "excluded_complement_triple_punctured_gap_two"
+            elif boundary in {2, p - 1} and excess < lift_floor:
                 classification = "excluded_sub_sharp_lift"
             elif excess == lift_floor:
                 classification = "sharp_p_minus_3"
@@ -476,7 +486,10 @@ def _residue_ledger(p: int, congruence: int) -> dict[str, object]:
                     "classification": classification,
                 }
             )
-            if classification != "excluded_sub_sharp_lift":
+            if classification not in {
+                "excluded_sub_sharp_lift",
+                "excluded_complement_triple_punctured_gap_two",
+            }:
                 live.append((boundary, classification))
 
         _require(
@@ -517,6 +530,9 @@ def _residue_ledger(p: int, congruence: int) -> dict[str, object]:
         "phase_one_mean_form": f"a_L=2u+{p + 1}k_L",
         "phase_one_quotient_sum": "sum k_L=m+t-u",
         "sharp_lift_floor": lift_floor,
+        "complement_triple_punctured_gap_dependency": (
+            complement_triple_gap_certificate(p) if congruence == 1 else None
+        ),
         "arithmetic_surviving_residues": sorted(expected_live),
         "rows": rows,
         "proved": proved,
@@ -890,6 +906,10 @@ def proposition_15770() -> dict[str, object]:
         "changed_premise": (
             "Props. 15.768--15.769 close the equality branches that become "
             "m-1 low rows plus one high row at the following layer"
+        ),
+        "complement_triple_gap_two_justification": (
+            "explicit punctured-gap theorem; the old complement-triple "
+            "baseline is not globally the pointwise parity minimum"
         ),
         "p1_mod_4_statement": (
             "for every prime p>=29 congruent to 1 modulo 4, residual (ii) "

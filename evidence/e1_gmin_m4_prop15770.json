@@ -3,6 +3,7 @@
   "title": "Next post-band residual layers by one-row carry",
   "result_status": "proved two infinite one-layer extensions plus the p23 endpoint",
   "changed_premise": "Props. 15.768--15.769 close the equality branches that become m-1 low rows plus one high row at the following layer",
+  "complement_triple_gap_two_justification": "explicit punctured-gap theorem; the old complement-triple baseline is not globally the pointwise parity minimum",
   "p1_mod_4_statement": "for every prime p>=29 congruent to 1 modulo 4, residual (ii) is empty at t=(p-5)/2, equivalently k=5p-5",
   "p3_mod_4_statement": "for every prime p>=31 congruent to 3 modulo 4, residual (ii) is empty at t=(p-3)/2, equivalently k=5p-3",
   "p1_parameterized_threshold_replays": {
@@ -23,6 +24,179 @@
         "phase_one_mean_form": "a_L=2u+30k_L",
         "phase_one_quotient_sum": "sum k_L=m+t-u",
         "sharp_lift_floor": 26,
+        "complement_triple_punctured_gap_dependency": {
+          "p": 29,
+          "scope": "all odd integers p>=29; large-boundary phase-one translation uses p=1 mod4",
+          "small_side_size": 3,
+          "small_side_parity": "r mod2",
+          "old_baseline": "A0=(r-2)^2",
+          "old_baseline_is_pointwise_parity_minimum_globally": false,
+          "difference_L_is_nonnegative_on_contacts_only": [
+            1,
+            2,
+            3
+          ],
+          "neighboring_slice_bound": {
+            "outside_order": 26,
+            "conditional_weights": [
+              14,
+              12
+            ],
+            "odd_section_order": 25,
+            "odd_section_need_not_be_prime": true,
+            "identically_zero_coordinate_sections_at_most": 2,
+            "zero_section_argument": "three forbidden coordinate sections give a three-swap cube zero away from its origin",
+            "section_averaging_identity": "mean of all coordinate one-sections or all zero-sections equals E[f]",
+            "nonzero_odd_section_mean_floor": "11/50",
+            "nonzero_neighbor_mean_floor": "66/325",
+            "one_nonzero_outer_contact_contribution_at_least": "132/25",
+            "strict_gap_above_four": {
+              "coefficients_in_p_descending": [
+                1,
+                -28,
+                99
+              ],
+              "translated_variable": "x=p-29>=0",
+              "coefficients_in_x_descending": [
+                1,
+                30,
+                128
+              ],
+              "translation_checked_coefficientwise": true,
+              "strictly_positive_for_every_p_at_least_29": true,
+              "proved": true
+            },
+            "proved": true
+          },
+          "quadrature_nodes": [
+            1,
+            2,
+            3
+          ],
+          "quadrature_weights": [
+            "39/58",
+            "3/29",
+            "13/58"
+          ],
+          "conditional_means_are_symmetrized_over_small_patterns_of_equal_weight": true,
+          "exact_excess_identity": "delta=(p-3)*(sum_singletons mu_S+mu_C)+4*sum_pairs mu_S",
+          "delta_at_most_four_forces_singleton_and_triple_sections_zero": true,
+          "globalization": {
+            "complemented_bits": "w_i=1-x_i for the three small-side coordinates only",
+            "outside_slice_identity": "sum y=m-3+sum w",
+            "kernel_elimination_sign": "PLUS",
+            "contacts_in_w": [
+              0,
+              2
+            ],
+            "all_small_side_patterns_extend": true,
+            "conclusion": "L depends only on the three small-side coordinates"
+          },
+          "residual_integer_identity": "delta=4*sum(nonnegative integer pair values)",
+          "allowed_excesses_in_zero_to_four": [
+            0,
+            4
+          ],
+          "excess_two_excluded": true,
+          "excess_four_excluded": false,
+          "excess_zero_form": "(r-2)^2",
+          "excess_zero_coefficient_offset": 2,
+          "excess_four_forms": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "complement_literal_coordinate": 2,
+              "values_in_binary_mask_order": [
+                2,
+                1,
+                1,
+                2,
+                1,
+                0,
+                0,
+                1
+              ],
+              "half_difference_from_old_baseline": [
+                -1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "signed_target": "5+z_0*z_1-z_2",
+              "coefficient_offset": 4
+            },
+            {
+              "pair": [
+                0,
+                2
+              ],
+              "complement_literal_coordinate": 1,
+              "values_in_binary_mask_order": [
+                2,
+                1,
+                1,
+                0,
+                1,
+                2,
+                0,
+                1
+              ],
+              "half_difference_from_old_baseline": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0
+              ],
+              "signed_target": "5+z_0*z_2-z_1",
+              "coefficient_offset": 4
+            },
+            {
+              "pair": [
+                1,
+                2
+              ],
+              "complement_literal_coordinate": 0,
+              "values_in_binary_mask_order": [
+                2,
+                1,
+                1,
+                0,
+                1,
+                0,
+                2,
+                1
+              ],
+              "half_difference_from_old_baseline": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0
+              ],
+              "signed_target": "5+z_1*z_2-z_0",
+              "coefficient_offset": 4
+            }
+          ],
+          "excess_four_coefficient_offsets": [
+            4
+          ],
+          "proof_note": "evidence/NOTE_2026-09-04_COMPLEMENT_TRIPLE_PUNCTURED_GAP.md",
+          "new_graph_prime_slice_or_catalog_census_used": false,
+          "proved": true
+        },
         "arithmetic_surviving_residues": [
           0,
           11,
@@ -339,7 +513,7 @@
                 "b": 26,
                 "floor": 52,
                 "excess": 2,
-                "classification": "excluded_sub_sharp_lift"
+                "classification": "excluded_complement_triple_punctured_gap_two"
               },
               {
                 "b": 28,
@@ -724,6 +898,179 @@
         "phase_one_mean_form": "a_L=2u+38k_L",
         "phase_one_quotient_sum": "sum k_L=m+t-u",
         "sharp_lift_floor": 34,
+        "complement_triple_punctured_gap_dependency": {
+          "p": 37,
+          "scope": "all odd integers p>=29; large-boundary phase-one translation uses p=1 mod4",
+          "small_side_size": 3,
+          "small_side_parity": "r mod2",
+          "old_baseline": "A0=(r-2)^2",
+          "old_baseline_is_pointwise_parity_minimum_globally": false,
+          "difference_L_is_nonnegative_on_contacts_only": [
+            1,
+            2,
+            3
+          ],
+          "neighboring_slice_bound": {
+            "outside_order": 34,
+            "conditional_weights": [
+              18,
+              16
+            ],
+            "odd_section_order": 33,
+            "odd_section_need_not_be_prime": true,
+            "identically_zero_coordinate_sections_at_most": 2,
+            "zero_section_argument": "three forbidden coordinate sections give a three-swap cube zero away from its origin",
+            "section_averaging_identity": "mean of all coordinate one-sections or all zero-sections equals E[f]",
+            "nonzero_odd_section_mean_floor": "5/22",
+            "nonzero_neighbor_mean_floor": "40/187",
+            "one_nonzero_outer_contact_contribution_at_least": "80/11",
+            "strict_gap_above_four": {
+              "coefficients_in_p_descending": [
+                1,
+                -28,
+                99
+              ],
+              "translated_variable": "x=p-29>=0",
+              "coefficients_in_x_descending": [
+                1,
+                30,
+                128
+              ],
+              "translation_checked_coefficientwise": true,
+              "strictly_positive_for_every_p_at_least_29": true,
+              "proved": true
+            },
+            "proved": true
+          },
+          "quadrature_nodes": [
+            1,
+            2,
+            3
+          ],
+          "quadrature_weights": [
+            "51/74",
+            "3/37",
+            "17/74"
+          ],
+          "conditional_means_are_symmetrized_over_small_patterns_of_equal_weight": true,
+          "exact_excess_identity": "delta=(p-3)*(sum_singletons mu_S+mu_C)+4*sum_pairs mu_S",
+          "delta_at_most_four_forces_singleton_and_triple_sections_zero": true,
+          "globalization": {
+            "complemented_bits": "w_i=1-x_i for the three small-side coordinates only",
+            "outside_slice_identity": "sum y=m-3+sum w",
+            "kernel_elimination_sign": "PLUS",
+            "contacts_in_w": [
+              0,
+              2
+            ],
+            "all_small_side_patterns_extend": true,
+            "conclusion": "L depends only on the three small-side coordinates"
+          },
+          "residual_integer_identity": "delta=4*sum(nonnegative integer pair values)",
+          "allowed_excesses_in_zero_to_four": [
+            0,
+            4
+          ],
+          "excess_two_excluded": true,
+          "excess_four_excluded": false,
+          "excess_zero_form": "(r-2)^2",
+          "excess_zero_coefficient_offset": 2,
+          "excess_four_forms": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "complement_literal_coordinate": 2,
+              "values_in_binary_mask_order": [
+                2,
+                1,
+                1,
+                2,
+                1,
+                0,
+                0,
+                1
+              ],
+              "half_difference_from_old_baseline": [
+                -1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "signed_target": "5+z_0*z_1-z_2",
+              "coefficient_offset": 4
+            },
+            {
+              "pair": [
+                0,
+                2
+              ],
+              "complement_literal_coordinate": 1,
+              "values_in_binary_mask_order": [
+                2,
+                1,
+                1,
+                0,
+                1,
+                2,
+                0,
+                1
+              ],
+              "half_difference_from_old_baseline": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0
+              ],
+              "signed_target": "5+z_0*z_2-z_1",
+              "coefficient_offset": 4
+            },
+            {
+              "pair": [
+                1,
+                2
+              ],
+              "complement_literal_coordinate": 0,
+              "values_in_binary_mask_order": [
+                2,
+                1,
+                1,
+                0,
+                1,
+                0,
+                2,
+                1
+              ],
+              "half_difference_from_old_baseline": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0
+              ],
+              "signed_target": "5+z_1*z_2-z_0",
+              "coefficient_offset": 4
+            }
+          ],
+          "excess_four_coefficient_offsets": [
+            4
+          ],
+          "proof_note": "evidence/NOTE_2026-09-04_COMPLEMENT_TRIPLE_PUNCTURED_GAP.md",
+          "new_graph_prime_slice_or_catalog_census_used": false,
+          "proved": true
+        },
         "arithmetic_surviving_residues": [
           0,
           15,
@@ -1132,7 +1479,7 @@
                 "b": 34,
                 "floor": 68,
                 "excess": 2,
-                "classification": "excluded_sub_sharp_lift"
+                "classification": "excluded_complement_triple_punctured_gap_two"
               },
               {
                 "b": 36,
@@ -1512,6 +1859,179 @@
         "phase_one_mean_form": "a_L=2u+42k_L",
         "phase_one_quotient_sum": "sum k_L=m+t-u",
         "sharp_lift_floor": 38,
+        "complement_triple_punctured_gap_dependency": {
+          "p": 41,
+          "scope": "all odd integers p>=29; large-boundary phase-one translation uses p=1 mod4",
+          "small_side_size": 3,
+          "small_side_parity": "r mod2",
+          "old_baseline": "A0=(r-2)^2",
+          "old_baseline_is_pointwise_parity_minimum_globally": false,
+          "difference_L_is_nonnegative_on_contacts_only": [
+            1,
+            2,
+            3
+          ],
+          "neighboring_slice_bound": {
+            "outside_order": 38,
+            "conditional_weights": [
+              20,
+              18
+            ],
+            "odd_section_order": 37,
+            "odd_section_need_not_be_prime": true,
+            "identically_zero_coordinate_sections_at_most": 2,
+            "zero_section_argument": "three forbidden coordinate sections give a three-swap cube zero away from its origin",
+            "section_averaging_identity": "mean of all coordinate one-sections or all zero-sections equals E[f]",
+            "nonzero_odd_section_mean_floor": "17/74",
+            "nonzero_neighbor_mean_floor": "153/703",
+            "one_nonzero_outer_contact_contribution_at_least": "306/37",
+            "strict_gap_above_four": {
+              "coefficients_in_p_descending": [
+                1,
+                -28,
+                99
+              ],
+              "translated_variable": "x=p-29>=0",
+              "coefficients_in_x_descending": [
+                1,
+                30,
+                128
+              ],
+              "translation_checked_coefficientwise": true,
+              "strictly_positive_for_every_p_at_least_29": true,
+              "proved": true
+            },
+            "proved": true
+          },
+          "quadrature_nodes": [
+            1,
+            2,
+            3
+          ],
+          "quadrature_weights": [
+            "57/82",
+            "3/41",
+            "19/82"
+          ],
+          "conditional_means_are_symmetrized_over_small_patterns_of_equal_weight": true,
+          "exact_excess_identity": "delta=(p-3)*(sum_singletons mu_S+mu_C)+4*sum_pairs mu_S",
+          "delta_at_most_four_forces_singleton_and_triple_sections_zero": true,
+          "globalization": {
+            "complemented_bits": "w_i=1-x_i for the three small-side coordinates only",
+            "outside_slice_identity": "sum y=m-3+sum w",
+            "kernel_elimination_sign": "PLUS",
+            "contacts_in_w": [
+              0,
+              2
+            ],
+            "all_small_side_patterns_extend": true,
+            "conclusion": "L depends only on the three small-side coordinates"
+          },
+          "residual_integer_identity": "delta=4*sum(nonnegative integer pair values)",
+          "allowed_excesses_in_zero_to_four": [
+            0,
+            4
+          ],
+          "excess_two_excluded": true,
+          "excess_four_excluded": false,
+          "excess_zero_form": "(r-2)^2",
+          "excess_zero_coefficient_offset": 2,
+          "excess_four_forms": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "complement_literal_coordinate": 2,
+              "values_in_binary_mask_order": [
+                2,
+                1,
+                1,
+                2,
+                1,
+                0,
+                0,
+                1
+              ],
+              "half_difference_from_old_baseline": [
+                -1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "signed_target": "5+z_0*z_1-z_2",
+              "coefficient_offset": 4
+            },
+            {
+              "pair": [
+                0,
+                2
+              ],
+              "complement_literal_coordinate": 1,
+              "values_in_binary_mask_order": [
+                2,
+                1,
+                1,
+                0,
+                1,
+                2,
+                0,
+                1
+              ],
+              "half_difference_from_old_baseline": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0
+              ],
+              "signed_target": "5+z_0*z_2-z_1",
+              "coefficient_offset": 4
+            },
+            {
+              "pair": [
+                1,
+                2
+              ],
+              "complement_literal_coordinate": 0,
+              "values_in_binary_mask_order": [
+                2,
+                1,
+                1,
+                0,
+                1,
+                0,
+                2,
+                1
+              ],
+              "half_difference_from_old_baseline": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0
+              ],
+              "signed_target": "5+z_1*z_2-z_0",
+              "coefficient_offset": 4
+            }
+          ],
+          "excess_four_coefficient_offsets": [
+            4
+          ],
+          "proof_note": "evidence/NOTE_2026-09-04_COMPLEMENT_TRIPLE_PUNCTURED_GAP.md",
+          "new_graph_prime_slice_or_catalog_census_used": false,
+          "proved": true
+        },
         "arithmetic_surviving_residues": [
           0,
           17,
@@ -1966,7 +2486,7 @@
                 "b": 38,
                 "floor": 76,
                 "excess": 2,
-                "classification": "excluded_sub_sharp_lift"
+                "classification": "excluded_complement_triple_punctured_gap_two"
               },
               {
                 "b": 40,
@@ -2346,6 +2866,179 @@
         "phase_one_mean_form": "a_L=2u+54k_L",
         "phase_one_quotient_sum": "sum k_L=m+t-u",
         "sharp_lift_floor": 50,
+        "complement_triple_punctured_gap_dependency": {
+          "p": 53,
+          "scope": "all odd integers p>=29; large-boundary phase-one translation uses p=1 mod4",
+          "small_side_size": 3,
+          "small_side_parity": "r mod2",
+          "old_baseline": "A0=(r-2)^2",
+          "old_baseline_is_pointwise_parity_minimum_globally": false,
+          "difference_L_is_nonnegative_on_contacts_only": [
+            1,
+            2,
+            3
+          ],
+          "neighboring_slice_bound": {
+            "outside_order": 50,
+            "conditional_weights": [
+              26,
+              24
+            ],
+            "odd_section_order": 49,
+            "odd_section_need_not_be_prime": true,
+            "identically_zero_coordinate_sections_at_most": 2,
+            "zero_section_argument": "three forbidden coordinate sections give a three-swap cube zero away from its origin",
+            "section_averaging_identity": "mean of all coordinate one-sections or all zero-sections equals E[f]",
+            "nonzero_odd_section_mean_floor": "23/98",
+            "nonzero_neighbor_mean_floor": "276/1225",
+            "one_nonzero_outer_contact_contribution_at_least": "552/49",
+            "strict_gap_above_four": {
+              "coefficients_in_p_descending": [
+                1,
+                -28,
+                99
+              ],
+              "translated_variable": "x=p-29>=0",
+              "coefficients_in_x_descending": [
+                1,
+                30,
+                128
+              ],
+              "translation_checked_coefficientwise": true,
+              "strictly_positive_for_every_p_at_least_29": true,
+              "proved": true
+            },
+            "proved": true
+          },
+          "quadrature_nodes": [
+            1,
+            2,
+            3
+          ],
+          "quadrature_weights": [
+            "75/106",
+            "3/53",
+            "25/106"
+          ],
+          "conditional_means_are_symmetrized_over_small_patterns_of_equal_weight": true,
+          "exact_excess_identity": "delta=(p-3)*(sum_singletons mu_S+mu_C)+4*sum_pairs mu_S",
+          "delta_at_most_four_forces_singleton_and_triple_sections_zero": true,
+          "globalization": {
+            "complemented_bits": "w_i=1-x_i for the three small-side coordinates only",
+            "outside_slice_identity": "sum y=m-3+sum w",
+            "kernel_elimination_sign": "PLUS",
+            "contacts_in_w": [
+              0,
+              2
+            ],
+            "all_small_side_patterns_extend": true,
+            "conclusion": "L depends only on the three small-side coordinates"
+          },
+          "residual_integer_identity": "delta=4*sum(nonnegative integer pair values)",
+          "allowed_excesses_in_zero_to_four": [
+            0,
+            4
+          ],
+          "excess_two_excluded": true,
+          "excess_four_excluded": false,
+          "excess_zero_form": "(r-2)^2",
+          "excess_zero_coefficient_offset": 2,
+          "excess_four_forms": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "complement_literal_coordinate": 2,
+              "values_in_binary_mask_order": [
+                2,
+                1,
+                1,
+                2,
+                1,
+                0,
+                0,
+                1
+              ],
+              "half_difference_from_old_baseline": [
+                -1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "signed_target": "5+z_0*z_1-z_2",
+              "coefficient_offset": 4
+            },
+            {
+              "pair": [
+                0,
+                2
+              ],
+              "complement_literal_coordinate": 1,
+              "values_in_binary_mask_order": [
+                2,
+                1,
+                1,
+                0,
+                1,
+                2,
+                0,
+                1
+              ],
+              "half_difference_from_old_baseline": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0
+              ],
+              "signed_target": "5+z_0*z_2-z_1",
+              "coefficient_offset": 4
+            },
+            {
+              "pair": [
+                1,
+                2
+              ],
+              "complement_literal_coordinate": 0,
+              "values_in_binary_mask_order": [
+                2,
+                1,
+                1,
+                0,
+                1,
+                0,
+                2,
+                1
+              ],
+              "half_difference_from_old_baseline": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0
+              ],
+              "signed_target": "5+z_1*z_2-z_0",
+              "coefficient_offset": 4
+            }
+          ],
+          "excess_four_coefficient_offsets": [
+            4
+          ],
+          "proof_note": "evidence/NOTE_2026-09-04_COMPLEMENT_TRIPLE_PUNCTURED_GAP.md",
+          "new_graph_prime_slice_or_catalog_census_used": false,
+          "proved": true
+        },
         "arithmetic_surviving_residues": [
           0,
           23,
@@ -2938,7 +3631,7 @@
                 "b": 50,
                 "floor": 100,
                 "excess": 2,
-                "classification": "excluded_sub_sharp_lift"
+                "classification": "excluded_complement_triple_punctured_gap_two"
               },
               {
                 "b": 52,
@@ -3320,6 +4013,7 @@
         "phase_one_mean_form": "a_L=2u+32k_L",
         "phase_one_quotient_sum": "sum k_L=m+t-u",
         "sharp_lift_floor": 28,
+        "complement_triple_punctured_gap_dependency": null,
         "arithmetic_surviving_residues": [
           13,
           14,
@@ -4055,6 +4749,7 @@
         "phase_one_mean_form": "a_L=2u+44k_L",
         "phase_one_quotient_sum": "sum k_L=m+t-u",
         "sharp_lift_floor": 40,
+        "complement_triple_punctured_gap_dependency": null,
         "arithmetic_surviving_residues": [
           19,
           20,
@@ -4928,6 +5623,7 @@
         "phase_one_mean_form": "a_L=2u+48k_L",
         "phase_one_quotient_sum": "sum k_L=m+t-u",
         "sharp_lift_floor": 44,
+        "complement_triple_punctured_gap_dependency": null,
         "arithmetic_surviving_residues": [
           21,
           22,
@@ -5847,6 +6543,7 @@
         "phase_one_mean_form": "a_L=2u+60k_L",
         "phase_one_quotient_sum": "sum k_L=m+t-u",
         "sharp_lift_floor": 56,
+        "complement_triple_punctured_gap_dependency": null,
         "arithmetic_surviving_residues": [
           27,
           28,

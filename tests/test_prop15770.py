@@ -1,6 +1,8 @@
 """Tests for Proposition 15.770."""
 
+import json
 from fractions import Fraction
+from pathlib import Path
 
 import pytest
 
@@ -109,6 +111,28 @@ def test_p1_next_layer_closes_all_old_carried_and_new_branches() -> None:
     assert row["residual_ii_layer_excluded"] is True
 
 
+def test_p1_complement_triple_excess_two_uses_punctured_gap_not_sharp_lift() -> None:
+    row = p1_next_residue_ledger(29)
+    residue = next(entry for entry in row["rows"] if entry["u"] == 12)
+    candidate = next(entry for entry in residue["candidate_rows"] if entry["b"] == 26)
+    assert candidate["excess"] == 2
+    assert candidate["classification"] == "excluded_complement_triple_punctured_gap_two"
+    dependency = row["complement_triple_punctured_gap_dependency"]
+    assert dependency["old_baseline_is_pointwise_parity_minimum_globally"] is False
+    assert dependency["excess_two_excluded"] is True
+    assert dependency["excess_four_excluded"] is False
+
+
+def test_p1_ledger_refuses_to_close_if_punctured_gap_dependency_fails(monkeypatch) -> None:
+    import e1_gmin_m4_prop15770 as module
+
+    monkeypatch.setattr(module, "complement_triple_gap_certificate", lambda p: {
+        "proved": False, "excess_two_excluded": False,
+    })
+    with pytest.raises(ArithmeticError, match="punctured gap-two bridge"):
+        module.p1_next_residue_ledger(29)
+
+
 def test_p_minus_one_local_branch_is_boolean_and_catalog_absent() -> None:
     row = p_minus_one_local_exclusion(31)
     assert row["scaled_mass"] == 30
@@ -182,3 +206,11 @@ def test_packaged_scope_is_honest() -> None:
     assert row["later_layers_closed"] is False
     assert row["residual_ii_closed_globally"] is False
     assert row["quadratic_minmax_limit_closed"] is False
+
+
+def test_saved_evidence_equals_the_repaired_live_payload() -> None:
+    root = Path(__file__).resolve().parents[1]
+    saved = json.loads((root / "evidence/e1_gmin_m4_prop15770.json").read_text())
+    row = proposition_15770()
+    assert saved == json.loads(json.dumps(row))
+    assert "punctured-gap theorem" in row["complement_triple_gap_two_justification"]

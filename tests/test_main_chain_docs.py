@@ -625,3 +625,43 @@ def test_docs_track_all_prime_group_support_without_closing_residual():
     assert "\\boxed{d_{\\rm row}(D)=ph}" in solution
     assert "SYMMETRIC_HALVED_ROW_CODE_GAP" in solution
     assert "residual (ii)" in solution
+
+
+def test_prop15772_canonical_frontier_and_repaired_premise():
+    """The generic p1 close advances one layer, not the global open gates."""
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parents[1]
+    names = (
+        "AGENTS.md", "STATUS.md", "HANDOFF.md", "LONG_HORIZON_GOAL.md",
+        "README.md", "solution.md",
+        "evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md",
+        "evidence/share/denseness_path_package.md",
+        "evidence/P0_ENGINEERING_GRAPH.md",
+    )
+    for name in names:
+        text = (root / name).read_text(encoding="utf-8")
+        flat = " ".join(text.split())
+        assert "15.772" in text, name
+        assert "NOTE_2026-09-04_P1_THIRD_POST_BAND_CLOSE.md" in text, name
+        assert "NOTE_2026-09-04_COMPLEMENT_TRIPLE_PUNCTURED_GAP.md" in text, name
+        assert "p=1 mod 4,p>=29,t>=q-1" not in text, name
+        assert "p=1 mod4,p>=29: t>=q-1" not in text, name
+        assert "t>=q" in text, name
+        assert "t>=12" in text, name
+        assert "p+11" in text, name
+        assert "gap-four" in flat or "gap four" in flat or "floor-plus-four" in flat, name
+
+    dedup = (root / names[6]).read_text(encoding="utf-8")
+    modules = [
+        root / "src" / f"e1_gmin_m4_prop15{label}.py"
+        for label in range(83, 773)
+    ]
+    assert sum(path.exists() for path in modules) == 686
+    assert "686 source-backed proposition modules from 15.83 through 15.772" in dedup
+    solution = (root / "solution.md").read_text(encoding="utf-8")
+    assert "## Proposition 15.772" in solution
+    assert "As of Proposition 15.770" in solution  # Historical frontier is retained.
+    handoff = (root / "HANDOFF.md").read_text(encoding="utf-8")
+    assert "Historical completed full-mesh target: Proposition 15.771" in handoff
+    assert "next common generic layer is `t=q,k=5p-1`" in handoff

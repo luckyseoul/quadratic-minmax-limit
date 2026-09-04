@@ -286,7 +286,7 @@ A hostile review for public scrutiny found the following. **None of these is Aut
 
 1. **Spectral floor (not an acceptance caveat).** \(\lambda_{\min}(\Phi)\ge6\) remains open for all \(p\), and the old Kneser-mask proof is false. Proposition 15.720 bypasses this entirely for E(1), so QVAR/R1 work cannot be counted as closing a remaining gate.
 
-2. **Residual (ii), exact current remainder.** Proposition 15.236/237 covers even \(k\in[3p+1,4p-2]\), and affine two-level is dead for all \(k\ge3p\) (15.179). At **\(k\ge4p\)**, Propositions 15.734--15.737 close the first three shells, Proposition 15.751 closes \(k=4p+6\) for every \(p\ge13\), Proposition 15.752 closes \(k=4p+8\) for every \(p\ge23\) plus its stated contiguous higher band, and Propositions 15.753--15.754 complete the p17/p19/p13 fifth-shell endpoints. Thus the fifth shell is closed for every \(p\ge13\). Propositions 15.768--15.770 close the next two generic layers: `t=q-3,q-2` for `p=1 mod 4,p>=29` and `t=q-2,q-1` for `p=3 mod 4,p>=31`, where `q=(p-1)/2`; they also close `p=23,t=9,10`. The second p23 endpoint has eleven low roots and reuses the fixed exact scan of all 33,649 five-sets. Proposition 15.771 closes the third endpoint `p=23,t=11,k=114`: its carried residue retains ten roots, while the new mean-46 equality classification and pointwise phase-zero bridge force and exclude at least five mass-32 opposite rows. The exact open frontier is: critical `p=5,7`; `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`; `p=23,t>=12` (`k>=116`); `p=1 mod 4,p>=29,t>=q-1`; `p=3 mod 4,p>=31,t>=q`; and the separate positive `p=7,z=7` branch. The global residual predicate remains false.
+2. **Residual (ii), exact current remainder.** Proposition 15.236/237 covers even \(k\in[3p+1,4p-2]\), and affine two-level is dead for all \(k\ge3p\) (15.179). At **\(k\ge4p\)**, Propositions 15.734--15.737 close the first three shells, Proposition 15.751 closes \(k=4p+6\) for every \(p\ge13\), Proposition 15.752 closes \(k=4p+8\) for every \(p\ge23\) plus its stated contiguous higher band, and Propositions 15.753--15.754 complete the p17/p19/p13 fifth-shell endpoints. Thus the fifth shell is closed for every \(p\ge13\). Propositions 15.768--15.770 close the next two generic layers: `t=q-3,q-2` for `p=1 mod 4,p>=29` and `t=q-2,q-1` for `p=3 mod 4,p>=31`, where `q=(p-1)/2`; they also close `p=23,t=9,10`. The second p23 endpoint has eleven low roots and reuses the fixed exact scan of all 33,649 five-sets. Proposition 15.771 closes the third endpoint `p=23,t=11,k=114`: its carried residue retains ten roots, while the new mean-46 equality classification and pointwise phase-zero bridge force and exclude at least five mass-32 opposite rows. Proposition 15.772 closes the third generic p1 layer `p=1 mod 4,p>=29,t=q-1,k=5p-3`. The exact open frontier is: critical `p=5,7`; `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`; `p=23,t>=12` (`k>=116`); `p=1 mod 4,p>=29,t>=q`; `p=3 mod 4,p>=31,t>=q`; and the separate positive `p=7,z=7` branch. The global residual predicate remains false.
 
    The [completed 15.771 proof](../NOTE_2026-09-04_P23_THIRD_POST_BAND_CLOSE.md)
    includes the small-boundary general-slice reduction, covering swap cubes,
@@ -294,6 +294,16 @@ A hostile review for public scrutiny found the following. **None of these is Aut
    [four-node exact bridge checks](../p23_third_post_band_mesh_replay.json)
    independently corroborate those arguments; no repeat graph, orbit,
    slice, or five-set census at this closed endpoint is warranted.
+
+   Proposition 15.772 additionally closes `p=1 mod 4,p>=29,t=q-1,k=5p-3`.
+   The [generic proof](../NOTE_2026-09-04_P1_THIRD_POST_BAND_CLOSE.md)
+   uses the [punctured-gap theorem](../NOTE_2026-09-04_COMPLEMENT_TRIPLE_PUNCTURED_GAP.md)
+   to repair the gap-two premise of 15.770 and retain the new gap-four
+   equality of offset four. Common-row normalization and the new local
+   mass-`p+11` exclusion finish the proof; the
+   [four-node checks](../p1_third_post_band_mesh_replay.json) corroborate
+   those identities. The next common generic layer `t=q,k=5p-1` is not
+   attacked here. The global residual predicate remains false.
 
    **Separate implication bridge.** Proposition 15.764 proves that an
    all-deletions minimal four-gap set enters the official residual-(ii) unit
