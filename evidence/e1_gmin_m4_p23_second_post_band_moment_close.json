@@ -1,0 +1,574 @@
+{
+  "title": "p23 second post-band one-row carry and eleven-root close",
+  "result_status": "proved endpoint theorem reusing one fixed finite coefficient certificate",
+  "statement": "the residual-(ii) isolated-chart branch at p=23,t=10,k=112 is empty for every boundary size",
+  "residue_ledger": {
+    "p": 23,
+    "q": 11,
+    "m": 12,
+    "layer_index_t": 10,
+    "original_k": 112,
+    "H_edge_count": 113,
+    "guaranteed_isolated_vertices": 304,
+    "phase_one_mean_form": "a_L=2u+24*k_L",
+    "phase_one_quotient_sum": "sum k_L=22-u",
+    "sharp_lift_floor": 20,
+    "arithmetic_surviving_residues": [
+      9,
+      10,
+      11
+    ],
+    "rows": [
+      {
+        "u": 0,
+        "quotient_sum": 22,
+        "forced_low_quotient": 1,
+        "forced_low_direction_count_at_least": 2,
+        "forced_low_mean": 24,
+        "candidate_rows": [
+          {
+            "b": 2,
+            "floor": 22,
+            "excess": 2,
+            "classification": "excluded_sub_sharp_lift"
+          },
+          {
+            "b": 22,
+            "floor": 22,
+            "excess": 2,
+            "classification": "excluded_sub_sharp_lift"
+          }
+        ],
+        "live_rows": [],
+        "excluded_arithmetically": true
+      },
+      {
+        "u": 1,
+        "quotient_sum": 21,
+        "forced_low_quotient": 1,
+        "forced_low_direction_count_at_least": 3,
+        "forced_low_mean": 26,
+        "candidate_rows": [
+          {
+            "b": 2,
+            "floor": 22,
+            "excess": 4,
+            "classification": "excluded_sub_sharp_lift"
+          },
+          {
+            "b": 22,
+            "floor": 22,
+            "excess": 4,
+            "classification": "excluded_sub_sharp_lift"
+          }
+        ],
+        "live_rows": [],
+        "excluded_arithmetically": true
+      },
+      {
+        "u": 2,
+        "quotient_sum": 20,
+        "forced_low_quotient": 1,
+        "forced_low_direction_count_at_least": 4,
+        "forced_low_mean": 28,
+        "candidate_rows": [
+          {
+            "b": 2,
+            "floor": 22,
+            "excess": 6,
+            "classification": "excluded_sub_sharp_lift"
+          },
+          {
+            "b": 22,
+            "floor": 22,
+            "excess": 6,
+            "classification": "excluded_sub_sharp_lift"
+          }
+        ],
+        "live_rows": [],
+        "excluded_arithmetically": true
+      },
+      {
+        "u": 3,
+        "quotient_sum": 19,
+        "forced_low_quotient": 1,
+        "forced_low_direction_count_at_least": 5,
+        "forced_low_mean": 30,
+        "candidate_rows": [
+          {
+            "b": 2,
+            "floor": 22,
+            "excess": 8,
+            "classification": "excluded_sub_sharp_lift"
+          },
+          {
+            "b": 22,
+            "floor": 22,
+            "excess": 8,
+            "classification": "excluded_sub_sharp_lift"
+          }
+        ],
+        "live_rows": [],
+        "excluded_arithmetically": true
+      },
+      {
+        "u": 4,
+        "quotient_sum": 18,
+        "forced_low_quotient": 1,
+        "forced_low_direction_count_at_least": 6,
+        "forced_low_mean": 32,
+        "candidate_rows": [
+          {
+            "b": 2,
+            "floor": 22,
+            "excess": 10,
+            "classification": "excluded_sub_sharp_lift"
+          },
+          {
+            "b": 22,
+            "floor": 22,
+            "excess": 10,
+            "classification": "excluded_sub_sharp_lift"
+          }
+        ],
+        "live_rows": [],
+        "excluded_arithmetically": true
+      },
+      {
+        "u": 5,
+        "quotient_sum": 17,
+        "forced_low_quotient": 1,
+        "forced_low_direction_count_at_least": 7,
+        "forced_low_mean": 34,
+        "candidate_rows": [
+          {
+            "b": 2,
+            "floor": 22,
+            "excess": 12,
+            "classification": "excluded_sub_sharp_lift"
+          },
+          {
+            "b": 22,
+            "floor": 22,
+            "excess": 12,
+            "classification": "excluded_sub_sharp_lift"
+          }
+        ],
+        "live_rows": [],
+        "excluded_arithmetically": true
+      },
+      {
+        "u": 6,
+        "quotient_sum": 16,
+        "forced_low_quotient": 1,
+        "forced_low_direction_count_at_least": 8,
+        "forced_low_mean": 36,
+        "candidate_rows": [
+          {
+            "b": 2,
+            "floor": 22,
+            "excess": 14,
+            "classification": "excluded_sub_sharp_lift"
+          },
+          {
+            "b": 22,
+            "floor": 22,
+            "excess": 14,
+            "classification": "excluded_sub_sharp_lift"
+          }
+        ],
+        "live_rows": [],
+        "excluded_arithmetically": true
+      },
+      {
+        "u": 7,
+        "quotient_sum": 15,
+        "forced_low_quotient": 1,
+        "forced_low_direction_count_at_least": 9,
+        "forced_low_mean": 38,
+        "candidate_rows": [
+          {
+            "b": 2,
+            "floor": 22,
+            "excess": 16,
+            "classification": "excluded_sub_sharp_lift"
+          },
+          {
+            "b": 22,
+            "floor": 22,
+            "excess": 16,
+            "classification": "excluded_sub_sharp_lift"
+          }
+        ],
+        "live_rows": [],
+        "excluded_arithmetically": true
+      },
+      {
+        "u": 8,
+        "quotient_sum": 14,
+        "forced_low_quotient": 1,
+        "forced_low_direction_count_at_least": 10,
+        "forced_low_mean": 40,
+        "candidate_rows": [
+          {
+            "b": 2,
+            "floor": 22,
+            "excess": 18,
+            "classification": "excluded_sub_sharp_lift"
+          },
+          {
+            "b": 22,
+            "floor": 22,
+            "excess": 18,
+            "classification": "excluded_sub_sharp_lift"
+          }
+        ],
+        "live_rows": [],
+        "excluded_arithmetically": true
+      },
+      {
+        "u": 9,
+        "quotient_sum": 13,
+        "forced_low_quotient": 1,
+        "forced_low_direction_count_at_least": 11,
+        "forced_low_mean": 42,
+        "candidate_rows": [
+          {
+            "b": 2,
+            "floor": 22,
+            "excess": 20,
+            "classification": "sharp_p_minus_3"
+          },
+          {
+            "b": 22,
+            "floor": 22,
+            "excess": 20,
+            "classification": "sharp_p_minus_3"
+          }
+        ],
+        "live_rows": [
+          {
+            "b": 2,
+            "classification": "sharp_p_minus_3"
+          },
+          {
+            "b": 22,
+            "classification": "sharp_p_minus_3"
+          }
+        ],
+        "excluded_arithmetically": false
+      },
+      {
+        "u": 10,
+        "quotient_sum": 12,
+        "forced_low_quotient": 1,
+        "forced_low_direction_count_at_least": 12,
+        "forced_low_mean": 44,
+        "candidate_rows": [
+          {
+            "b": 2,
+            "floor": 22,
+            "excess": 22,
+            "classification": "p_minus_one"
+          },
+          {
+            "b": 22,
+            "floor": 22,
+            "excess": 22,
+            "classification": "p_minus_one"
+          }
+        ],
+        "live_rows": [
+          {
+            "b": 2,
+            "classification": "p_minus_one"
+          },
+          {
+            "b": 22,
+            "classification": "p_minus_one"
+          }
+        ],
+        "excluded_arithmetically": false
+      },
+      {
+        "u": 11,
+        "quotient_sum": 11,
+        "forced_low_quotient": 0,
+        "forced_low_direction_count_at_least": 1,
+        "forced_low_mean": 22,
+        "candidate_rows": [
+          {
+            "b": 2,
+            "floor": 22,
+            "excess": 0,
+            "classification": "exact"
+          },
+          {
+            "b": 22,
+            "floor": 22,
+            "excess": 0,
+            "classification": "exact"
+          }
+        ],
+        "live_rows": [
+          {
+            "b": 2,
+            "classification": "exact"
+          },
+          {
+            "b": 22,
+            "classification": "exact"
+          }
+        ],
+        "excluded_arithmetically": false
+      }
+    ],
+    "proved": true
+  },
+  "branch_exclusions": {
+    "hard_b2": {
+      "branch": "hard_b2",
+      "hard_parallel_count": 4,
+      "hard_sign_times_global_T": 5,
+      "hard_edge_count": 59,
+      "opposite_edge_count": 54,
+      "forbidden_minimum_Q": 3,
+      "forbidden_minimum_mass": 8,
+      "forced_next_Q": 4,
+      "forced_next_scaled_mass": 32,
+      "directions_at_next_Q_at_least": 6,
+      "dependency": "Proposition 15.752 p+9 local exclusion",
+      "proved": true
+    },
+    "p3_all_low_b_p_minus_1": {
+      "branch": "p3_all_low_b_p_minus_1",
+      "hard_parallel_count": 3,
+      "hard_sign_times_global_T": -19,
+      "hard_edge_count": 47,
+      "opposite_edge_count": 66,
+      "forbidden_minimum_Q": 4,
+      "forbidden_minimum_mass": 8,
+      "forced_next_Q": 5,
+      "forced_next_scaled_mass": 32,
+      "directions_at_next_Q_at_least": 6,
+      "dependency": "Proposition 15.752 p+9 local exclusion",
+      "proved": true
+    },
+    "carried_sharp_p_minus_3": {
+      "branch": "carried_sharp_p_minus_3",
+      "changed_premise": "the p23,t=9 all-low sharp family becomes eleven low P rows and one high P+1 row",
+      "family_ledgers": [
+        {
+          "baseline": "complement_literal",
+          "baseline_b": 22,
+          "lift": "omitted_pair",
+          "baseline_offset": 3,
+          "lift_offset_increment": -1,
+          "coefficient_offset": 2,
+          "hard_parallel_candidates": [
+            2
+          ],
+          "low_hard_direction_count": 11,
+          "unique_high_direction_count": 1,
+          "forced_high_parallel_count": 3,
+          "hard_edge_count": 25,
+          "opposite_edge_count": 88,
+          "hard_sign_times_global_T": -63,
+          "forbidden_Q": 6,
+          "forbidden_scaled_mass": 12,
+          "forced_low_Q": 7,
+          "forced_low_scaled_mass": 36,
+          "surplus_after_every_opposite_Q_at_least_forced_low": 4,
+          "directions_at_forced_low_Q_at_least": 8,
+          "nonzero_boundary_floor_and_lift_rows": [
+            [
+              2,
+              24,
+              12
+            ],
+            [
+              22,
+              24,
+              12
+            ]
+          ],
+          "forced_low_Q_is_boundary_zero": true,
+          "compatible_slice_forms": [],
+          "excluded_by_local_offset": true
+        },
+        {
+          "baseline": "complement_literal",
+          "baseline_b": 22,
+          "lift": "all_equal_triple",
+          "baseline_offset": 3,
+          "lift_offset_increment": 1,
+          "coefficient_offset": 4,
+          "hard_parallel_candidates": [
+            4
+          ],
+          "low_hard_direction_count": 11,
+          "unique_high_direction_count": 1,
+          "forced_high_parallel_count": 5,
+          "hard_edge_count": 49,
+          "opposite_edge_count": 64,
+          "hard_sign_times_global_T": -15,
+          "forbidden_Q": 4,
+          "forbidden_scaled_mass": 12,
+          "forced_low_Q": 5,
+          "forced_low_scaled_mass": 36,
+          "surplus_after_every_opposite_Q_at_least_forced_low": 4,
+          "directions_at_forced_low_Q_at_least": 8,
+          "nonzero_boundary_floor_and_lift_rows": [
+            [
+              2,
+              24,
+              12
+            ],
+            [
+              22,
+              24,
+              12
+            ]
+          ],
+          "forced_low_Q_is_boundary_zero": true,
+          "compatible_slice_forms": [
+            "F5"
+          ],
+          "excluded_by_local_offset": false
+        },
+        {
+          "baseline": "XNOR",
+          "baseline_b": 2,
+          "lift": "omitted_pair",
+          "baseline_offset": 4,
+          "lift_offset_increment": -1,
+          "coefficient_offset": 3,
+          "hard_parallel_candidates": [
+            3
+          ],
+          "low_hard_direction_count": 11,
+          "unique_high_direction_count": 1,
+          "forced_high_parallel_count": 4,
+          "hard_edge_count": 37,
+          "opposite_edge_count": 76,
+          "hard_sign_times_global_T": -39,
+          "forbidden_Q": 5,
+          "forbidden_scaled_mass": 12,
+          "forced_low_Q": 6,
+          "forced_low_scaled_mass": 36,
+          "surplus_after_every_opposite_Q_at_least_forced_low": 4,
+          "directions_at_forced_low_Q_at_least": 8,
+          "nonzero_boundary_floor_and_lift_rows": [
+            [
+              2,
+              24,
+              12
+            ],
+            [
+              22,
+              24,
+              12
+            ]
+          ],
+          "forced_low_Q_is_boundary_zero": true,
+          "compatible_slice_forms": [],
+          "excluded_by_local_offset": true
+        },
+        {
+          "baseline": "XNOR",
+          "baseline_b": 2,
+          "lift": "all_equal_triple",
+          "baseline_offset": 4,
+          "lift_offset_increment": 1,
+          "coefficient_offset": 5,
+          "hard_parallel_candidates": [
+            5
+          ],
+          "low_hard_direction_count": 11,
+          "unique_high_direction_count": 1,
+          "forced_high_parallel_count": 6,
+          "hard_edge_count": 61,
+          "opposite_edge_count": 52,
+          "hard_sign_times_global_T": 9,
+          "forbidden_Q": 3,
+          "forbidden_scaled_mass": 12,
+          "forced_low_Q": 4,
+          "forced_low_scaled_mass": 36,
+          "surplus_after_every_opposite_Q_at_least_forced_low": 4,
+          "directions_at_forced_low_Q_at_least": 8,
+          "nonzero_boundary_floor_and_lift_rows": [
+            [
+              2,
+              24,
+              12
+            ],
+            [
+              22,
+              24,
+              12
+            ]
+          ],
+          "forced_low_Q_is_boundary_zero": true,
+          "compatible_slice_forms": [],
+          "excluded_by_local_offset": true
+        }
+      ],
+      "unique_survivor_before_moments": {
+        "hard_P": 4,
+        "opposite_Q": 5,
+        "opposite_form": "F5"
+      },
+      "low_triangle_minus_star_projective_roots": 11,
+      "maximum_common_form_degree": 8,
+      "low_roots_force_G4_and_G8_identically_zero": true,
+      "opposite_K5_simultaneous_zero_count": 0,
+      "fixed_five_set_certificate_reused": true,
+      "excluded": true,
+      "proved": true
+    },
+    "all_low_p_minus_one_lift": {
+      "residue": 10,
+      "baseline_boundary_values": [
+        2,
+        22
+      ],
+      "difference_scaled_mass": 22,
+      "local_exclusion": {
+        "p": 23,
+        "scaled_mass": 22,
+        "H_at_least_two_scaled_floor": 24,
+        "therefore_height_one_boolean": true,
+        "density": "11/46",
+        "relevant_pair_influence_floor": "10/161",
+        "total_influence_upper_bound": "4235/1058",
+        "largest_zero_influence_class_complement_bound": "5929/1058",
+        "junta_coordinates_at_most": 5,
+        "five_less_than_both_slice_sides": true,
+        "cube_active_coordinates_at_most": 4,
+        "four_bit_density_values": [
+          "0",
+          "5/23",
+          "6/23",
+          "11/23",
+          "12/23",
+          "17/23",
+          "18/23",
+          "1"
+        ],
+        "target_density_absent": true,
+        "finite_slice_or_graph_census_used": false,
+        "proved": true
+      },
+      "proved": true
+    }
+  },
+  "p23_k112_closed": true,
+  "all_boundary_sizes_excluded": true,
+  "new_graph_or_residual_configuration_census_used": false,
+  "fixed_p23_five_set_coefficient_certificate_reused": true,
+  "later_layers_closed": false,
+  "residual_ii_closed_globally": false,
+  "E1_closed": false,
+  "quadratic_minmax_limit_closed": false,
+  "proved": true
+}

@@ -1,0 +1,917 @@
+{
+  "title": "p23 first post-band equality and K5 moment close",
+  "result_status": "proved endpoint theorem with exhaustive finite coefficient certificate",
+  "statement": "the residual-(ii) isolated-chart branch at p=23,t=9,k=110 is empty for every boundary size",
+  "changed_premise": "all half-mean height-three equality forms are classified and globalized before the simultaneous degree-four/eight K5 sieve",
+  "half_mean_cube_equality_classification": {
+    "hypotheses": "g is a nonnegative integer-valued polynomial of degree at most two on a Boolean cube, E[g]=1/2, and g(0)=max(g)=3",
+    "origin_facet_mean_options": [
+      "1/2",
+      "3/4"
+    ],
+    "excluded_origin_facet_means": {
+      "1/4": "support-floor equality would make a facet containing 3 Boolean",
+      "1": "the zero opposite facet makes the origin facet affine; mean one would give coefficient sum -4 but nonnegativity gives at least -3"
+    },
+    "induction_half_mean_facet": {
+      "F4_extension_affine_pairs_c_u": [
+        [
+          -2,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "F4_extensions": [
+        "dummy",
+        "F5 via ell=-2+s"
+      ],
+      "F5_empty_and_full_values": [
+        3,
+        3
+      ],
+      "F5_two_and_three_layers_are_zero": true,
+      "F5_extensions": [
+        "dummy"
+      ]
+    },
+    "all_three_quarter_facets": {
+      "global_mean_equation": "2A+B=-10",
+      "facet_equations": "2a_i+sum_(j!=i)b_ij=-1",
+      "summed_facet_equation": "A+B=-d/2",
+      "therefore_A": "-10+d/2",
+      "opposite_facets_boolean_implies": "a_i in {-3,-2}",
+      "possible_dimensions": [
+        4
+      ],
+      "forced_dimension": 4,
+      "forced_linear_sum": -8,
+      "forced_pair_sum": 6,
+      "forced_pair_row_sum": 3,
+      "forced_coefficients": "a_i=-2 and b_ij=1"
+    },
+    "classified_forms": {
+      "F4": {
+        "formula": "3-2s+binom(s,2)",
+        "active_coordinates": 4,
+        "layer_values": [
+          3,
+          1,
+          0,
+          0,
+          1
+        ],
+        "mean": "1/2"
+      },
+      "F5": {
+        "formula": "3-2s+binom(s,2)",
+        "active_coordinates": 5,
+        "layer_values": [
+          3,
+          1,
+          0,
+          0,
+          1,
+          3
+        ],
+        "mean": "1/2"
+      }
+    },
+    "dummy_coordinates_allowed": true,
+    "classification_exhaustive_in_every_dimension": true,
+    "proved": true
+  },
+  "local_mass_36_height_equality": {
+    "p": 23,
+    "slice": "J(23,12)",
+    "scaled_mass_4p_E_C": 36,
+    "mean": "9/23",
+    "height_one_exclusion": {
+      "relevant_pair_influence_floor": "10/161",
+      "total_influence_upper_bound": "2772/529",
+      "largest_zero_class_complement_bound": "19404/2645",
+      "junta_coordinates_at_most": 7,
+      "four_bit_density_values": [
+        "0",
+        "5/23",
+        "6/23",
+        "11/23",
+        "12/23",
+        "17/23",
+        "18/23",
+        "1"
+      ],
+      "target_density_absent": true,
+      "excluded": true
+    },
+    "height_at_least_two": {
+      "paired_cube_operator": "T C(X)=(C(X)+23*E[C])/24=(H+9)/24",
+      "paired_cube_mean_lattice": "(1/4)Z",
+      "every_paired_cube_mean_at_least": "1/2",
+      "initial_height_lower_bound": 3,
+      "stabilizer_height_upper_bound": "9",
+      "if_H_at_least_four": "half-mean cubes are impossible, so every cube has mean at least 3/4 and H>=9",
+      "H_equals_nine_would_force_every_cube_mean": "3/4",
+      "three_quarter_cube_maximum_upper_bound": 6,
+      "therefore_H_at_least_four_is_impossible": true
+    },
+    "forced_height": 3,
+    "paired_cube_average_at_forced_height": "1/2",
+    "every_paired_cube_through_a_maximizer_has_mean": "1/2",
+    "proved": true
+  },
+  "slice_equality_globalization": {
+    "p": 23,
+    "slice": "J(23,12)",
+    "cube_equality_dependency": {
+      "hypotheses": "g is a nonnegative integer-valued polynomial of degree at most two on a Boolean cube, E[g]=1/2, and g(0)=max(g)=3",
+      "origin_facet_mean_options": [
+        "1/2",
+        "3/4"
+      ],
+      "excluded_origin_facet_means": {
+        "1/4": "support-floor equality would make a facet containing 3 Boolean",
+        "1": "the zero opposite facet makes the origin facet affine; mean one would give coefficient sum -4 but nonnegativity gives at least -3"
+      },
+      "induction_half_mean_facet": {
+        "F4_extension_affine_pairs_c_u": [
+          [
+            -2,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "F4_extensions": [
+          "dummy",
+          "F5 via ell=-2+s"
+        ],
+        "F5_empty_and_full_values": [
+          3,
+          3
+        ],
+        "F5_two_and_three_layers_are_zero": true,
+        "F5_extensions": [
+          "dummy"
+        ]
+      },
+      "all_three_quarter_facets": {
+        "global_mean_equation": "2A+B=-10",
+        "facet_equations": "2a_i+sum_(j!=i)b_ij=-1",
+        "summed_facet_equation": "A+B=-d/2",
+        "therefore_A": "-10+d/2",
+        "opposite_facets_boolean_implies": "a_i in {-3,-2}",
+        "possible_dimensions": [
+          4
+        ],
+        "forced_dimension": 4,
+        "forced_linear_sum": -8,
+        "forced_pair_sum": 6,
+        "forced_pair_row_sum": 3,
+        "forced_coefficients": "a_i=-2 and b_ij=1"
+      },
+      "classified_forms": {
+        "F4": {
+          "formula": "3-2s+binom(s,2)",
+          "active_coordinates": 4,
+          "layer_values": [
+            3,
+            1,
+            0,
+            0,
+            1
+          ],
+          "mean": "1/2"
+        },
+        "F5": {
+          "formula": "3-2s+binom(s,2)",
+          "active_coordinates": 5,
+          "layer_values": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            3
+          ],
+          "mean": "1/2"
+        }
+      },
+      "dummy_coordinates_allowed": true,
+      "classification_exhaustive_in_every_dimension": true,
+      "proved": true
+    },
+    "cross_activity_matrix": "D_xy=1 iff C(X-x+y)=1 for x in X and y outside X",
+    "same_double_swap_two_pairings": "F(D_xu+D_yv)=F(D_xv+D_yu); F(0),F(1),F(2)=(3,1,0) are distinct",
+    "all_additive_two_by_two_minors_vanish": true,
+    "additive_binary_rectangle_catalog": [
+      {
+        "entries_row_major": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "row_constant": true,
+        "column_constant": true
+      },
+      {
+        "entries_row_major": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "row_constant": true,
+        "column_constant": false
+      },
+      {
+        "entries_row_major": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "row_constant": false,
+        "column_constant": true
+      },
+      {
+        "entries_row_major": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "row_constant": false,
+        "column_constant": true
+      },
+      {
+        "entries_row_major": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "row_constant": true,
+        "column_constant": false
+      },
+      {
+        "entries_row_major": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "row_constant": true,
+        "column_constant": true
+      }
+    ],
+    "additive_binary_rectangle_classification_proved": true,
+    "binary_additive_matrix_classification": [
+      "column-only",
+      "row-only"
+    ],
+    "active_column_counts": [
+      4,
+      5
+    ],
+    "active_row_counts": [
+      5
+    ],
+    "paired_cube_coverage_by_swap_count": [
+      {
+        "swap_count": 0,
+        "common_points_available": 12,
+        "unused_rows_after_retaining_one": 11,
+        "unused_columns": 11,
+        "partial_matching_extends": true
+      },
+      {
+        "swap_count": 1,
+        "common_points_available": 11,
+        "unused_rows_after_retaining_one": 10,
+        "unused_columns": 10,
+        "partial_matching_extends": true
+      },
+      {
+        "swap_count": 2,
+        "common_points_available": 10,
+        "unused_rows_after_retaining_one": 9,
+        "unused_columns": 9,
+        "partial_matching_extends": true
+      },
+      {
+        "swap_count": 3,
+        "common_points_available": 9,
+        "unused_rows_after_retaining_one": 8,
+        "unused_columns": 8,
+        "partial_matching_extends": true
+      },
+      {
+        "swap_count": 4,
+        "common_points_available": 8,
+        "unused_rows_after_retaining_one": 7,
+        "unused_columns": 7,
+        "partial_matching_extends": true
+      },
+      {
+        "swap_count": 5,
+        "common_points_available": 7,
+        "unused_rows_after_retaining_one": 6,
+        "unused_columns": 6,
+        "partial_matching_extends": true
+      },
+      {
+        "swap_count": 6,
+        "common_points_available": 6,
+        "unused_rows_after_retaining_one": 5,
+        "unused_columns": 5,
+        "partial_matching_extends": true
+      },
+      {
+        "swap_count": 7,
+        "common_points_available": 5,
+        "unused_rows_after_retaining_one": 4,
+        "unused_columns": 4,
+        "partial_matching_extends": true
+      },
+      {
+        "swap_count": 8,
+        "common_points_available": 4,
+        "unused_rows_after_retaining_one": 3,
+        "unused_columns": 3,
+        "partial_matching_extends": true
+      },
+      {
+        "swap_count": 9,
+        "common_points_available": 3,
+        "unused_rows_after_retaining_one": 2,
+        "unused_columns": 2,
+        "partial_matching_extends": true
+      },
+      {
+        "swap_count": 10,
+        "common_points_available": 2,
+        "unused_rows_after_retaining_one": 1,
+        "unused_columns": 1,
+        "partial_matching_extends": true
+      },
+      {
+        "swap_count": 11,
+        "common_points_available": 1,
+        "unused_rows_after_retaining_one": 0,
+        "unused_columns": 0,
+        "partial_matching_extends": true
+      }
+    ],
+    "every_slice_point_lies_in_a_paired_cube_through_X": true,
+    "row_only_symmetry": "F(5-r)=F(r) for r=0,...,5",
+    "global_slice_forms": [
+      {
+        "name": "F4",
+        "active_coordinates": 4,
+        "layer_values": [
+          3,
+          1,
+          0,
+          0,
+          1
+        ],
+        "slice_mean": "9/23",
+        "scaled_mass_4p_E": 36,
+        "signed_target_constant": 5,
+        "signed_target_linear_coefficient": -1,
+        "signed_target_pair_coefficients": 1,
+        "coefficient_offset": 1,
+        "signed_target": "3+4C=5+(-sum_(i in R)z_i)+sum_({i,j} subset R)z_i*z_j"
+      },
+      {
+        "name": "F5",
+        "active_coordinates": 5,
+        "layer_values": [
+          3,
+          1,
+          0,
+          0,
+          1,
+          3
+        ],
+        "slice_mean": "9/23",
+        "scaled_mass_4p_E": 36,
+        "signed_target_constant": 5,
+        "signed_target_linear_coefficient": 0,
+        "signed_target_pair_coefficients": 1,
+        "coefficient_offset": 5,
+        "signed_target": "3+4C=5+(0)+sum_({i,j} subset R)z_i*z_j"
+      }
+    ],
+    "opposite_coefficient_congruence": "11 divides Q-offset",
+    "compatible_hard_opposite_rows": [
+      {
+        "hard_P": 4,
+        "opposite_Q": 5,
+        "form": "F5",
+        "offset": 5
+      }
+    ],
+    "all_forced_local_equality_forms_enumerated": true,
+    "proved": true
+  },
+  "endpoint_residue_and_parallel_ledger": {
+    "p": 23,
+    "q": 11,
+    "m": 12,
+    "layer_index_t": 9,
+    "original_k": 110,
+    "H_edge_count": 111,
+    "guaranteed_isolated_vertices": 308,
+    "phase_one_mean_form": "a_L=2u+24*k_L",
+    "phase_one_quotient_sum": "sum k_L=21-u",
+    "phase_one_low_b_values": [
+      2,
+      22
+    ],
+    "sharp_integral_lift_floor": 20,
+    "residue_rows": [
+      {
+        "u": 0,
+        "quotient_sum": 21,
+        "k_zero_mean": 0,
+        "k_one_mean": 24,
+        "status": "excluded below phase-one or sharp-lift floor"
+      },
+      {
+        "u": 1,
+        "quotient_sum": 20,
+        "k_zero_mean": 2,
+        "k_one_mean": 26,
+        "status": "excluded below phase-one or sharp-lift floor"
+      },
+      {
+        "u": 2,
+        "quotient_sum": 19,
+        "k_zero_mean": 4,
+        "k_one_mean": 28,
+        "status": "excluded below phase-one or sharp-lift floor"
+      },
+      {
+        "u": 3,
+        "quotient_sum": 18,
+        "k_zero_mean": 6,
+        "k_one_mean": 30,
+        "status": "excluded below phase-one or sharp-lift floor"
+      },
+      {
+        "u": 4,
+        "quotient_sum": 17,
+        "k_zero_mean": 8,
+        "k_one_mean": 32,
+        "status": "excluded below phase-one or sharp-lift floor"
+      },
+      {
+        "u": 5,
+        "quotient_sum": 16,
+        "k_zero_mean": 10,
+        "k_one_mean": 34,
+        "status": "excluded below phase-one or sharp-lift floor"
+      },
+      {
+        "u": 6,
+        "quotient_sum": 15,
+        "k_zero_mean": 12,
+        "k_one_mean": 36,
+        "status": "excluded below phase-one or sharp-lift floor"
+      },
+      {
+        "u": 7,
+        "quotient_sum": 14,
+        "k_zero_mean": 14,
+        "k_one_mean": 38,
+        "status": "excluded below phase-one or sharp-lift floor"
+      },
+      {
+        "u": 8,
+        "quotient_sum": 13,
+        "k_zero_mean": 16,
+        "k_one_mean": 40,
+        "status": "excluded below phase-one or sharp-lift floor"
+      },
+      {
+        "u": 9,
+        "quotient_sum": 12,
+        "k_zero_mean": 18,
+        "k_one_mean": 42,
+        "status": "hard_sharp_p_minus_3_lift"
+      },
+      {
+        "u": 10,
+        "quotient_sum": 11,
+        "k_zero_mean": 20,
+        "k_one_mean": 44,
+        "status": "excluded because the quotient sum is below twelve"
+      },
+      {
+        "u": 11,
+        "quotient_sum": 10,
+        "k_zero_mean": 22,
+        "k_one_mean": 46,
+        "status": "old endpoint A/C dichotomy"
+      }
+    ],
+    "surviving_residues": [
+      9,
+      11
+    ],
+    "old_branch_exclusions": [
+      {
+        "branch": "hard_b2",
+        "hard_edge_count": 58,
+        "opposite_edge_count": 53,
+        "hard_sign_times_global_T": 5,
+        "minimum_Q": 3,
+        "minimum_mean": 8,
+        "forced_next_Q": 4,
+        "forced_next_scaled_mean": 32,
+        "surplus_after_next_Q": 5,
+        "directions_at_next_Q_at_least": 7,
+        "dependency": "Proposition 15.752 p+9 local exclusion",
+        "excluded": true
+      },
+      {
+        "branch": "p3_all_low_b_p_minus_1",
+        "hard_edge_count": 46,
+        "opposite_edge_count": 65,
+        "hard_sign_times_global_T": -19,
+        "minimum_Q": 4,
+        "minimum_mean": 8,
+        "forced_next_Q": 5,
+        "forced_next_scaled_mean": 32,
+        "surplus_after_next_Q": 5,
+        "directions_at_next_Q_at_least": 7,
+        "dependency": "Proposition 15.752 p+9 local exclusion",
+        "excluded": true
+      }
+    ],
+    "new_sharp_branch_family_ledgers": [
+      {
+        "baseline": "complement_literal",
+        "baseline_b": 22,
+        "lift": "omitted_pair",
+        "baseline_offset": 3,
+        "lift_offset_increment": -1,
+        "coefficient_offset": 2,
+        "forced_hard_parallel_count": 2,
+        "hard_edge_count": 24,
+        "opposite_edge_count": 87,
+        "hard_sign_times_global_T": -63,
+        "mass_twelve_Q": 6,
+        "mass_twelve_excluded": true,
+        "forced_low_Q": 7,
+        "forced_low_scaled_mean": 36,
+        "surplus_after_every_Q_at_least_forced_low_Q": 3,
+        "directions_at_forced_low_Q_at_least": 9,
+        "nonzero_b_floor_and_lift_rows": [
+          [
+            2,
+            24,
+            12
+          ],
+          [
+            22,
+            24,
+            12
+          ]
+        ],
+        "forced_low_Q_is_b_zero": true,
+        "forced_local_quadratic": "A=2C and 92*E[C]=36",
+        "compatible_slice_forms": [],
+        "excluded_by_local_offset": true
+      },
+      {
+        "baseline": "complement_literal",
+        "baseline_b": 22,
+        "lift": "all_equal_triple",
+        "baseline_offset": 3,
+        "lift_offset_increment": 1,
+        "coefficient_offset": 4,
+        "forced_hard_parallel_count": 4,
+        "hard_edge_count": 48,
+        "opposite_edge_count": 63,
+        "hard_sign_times_global_T": -15,
+        "mass_twelve_Q": 4,
+        "mass_twelve_excluded": true,
+        "forced_low_Q": 5,
+        "forced_low_scaled_mean": 36,
+        "surplus_after_every_Q_at_least_forced_low_Q": 3,
+        "directions_at_forced_low_Q_at_least": 9,
+        "nonzero_b_floor_and_lift_rows": [
+          [
+            2,
+            24,
+            12
+          ],
+          [
+            22,
+            24,
+            12
+          ]
+        ],
+        "forced_low_Q_is_b_zero": true,
+        "forced_local_quadratic": "A=2C and 92*E[C]=36",
+        "compatible_slice_forms": [
+          "F5"
+        ],
+        "excluded_by_local_offset": false
+      },
+      {
+        "baseline": "XNOR",
+        "baseline_b": 2,
+        "lift": "omitted_pair",
+        "baseline_offset": 4,
+        "lift_offset_increment": -1,
+        "coefficient_offset": 3,
+        "forced_hard_parallel_count": 3,
+        "hard_edge_count": 36,
+        "opposite_edge_count": 75,
+        "hard_sign_times_global_T": -39,
+        "mass_twelve_Q": 5,
+        "mass_twelve_excluded": true,
+        "forced_low_Q": 6,
+        "forced_low_scaled_mean": 36,
+        "surplus_after_every_Q_at_least_forced_low_Q": 3,
+        "directions_at_forced_low_Q_at_least": 9,
+        "nonzero_b_floor_and_lift_rows": [
+          [
+            2,
+            24,
+            12
+          ],
+          [
+            22,
+            24,
+            12
+          ]
+        ],
+        "forced_low_Q_is_b_zero": true,
+        "forced_local_quadratic": "A=2C and 92*E[C]=36",
+        "compatible_slice_forms": [],
+        "excluded_by_local_offset": true
+      },
+      {
+        "baseline": "XNOR",
+        "baseline_b": 2,
+        "lift": "all_equal_triple",
+        "baseline_offset": 4,
+        "lift_offset_increment": 1,
+        "coefficient_offset": 5,
+        "forced_hard_parallel_count": 5,
+        "hard_edge_count": 60,
+        "opposite_edge_count": 51,
+        "hard_sign_times_global_T": 9,
+        "mass_twelve_Q": 3,
+        "mass_twelve_excluded": true,
+        "forced_low_Q": 4,
+        "forced_low_scaled_mean": 36,
+        "surplus_after_every_Q_at_least_forced_low_Q": 3,
+        "directions_at_forced_low_Q_at_least": 9,
+        "nonzero_b_floor_and_lift_rows": [
+          [
+            2,
+            24,
+            12
+          ],
+          [
+            22,
+            24,
+            12
+          ]
+        ],
+        "forced_low_Q_is_b_zero": true,
+        "forced_local_quadratic": "A=2C and 92*E[C]=36",
+        "compatible_slice_forms": [],
+        "excluded_by_local_offset": true
+      }
+    ],
+    "unique_new_survivor_before_moments": {
+      "hard_P": 4,
+      "opposite_Q": 5,
+      "hard_family": "complement-literal plus all-equal-triple",
+      "opposite_form": "F5",
+      "opposite_Q5_directions_at_least": 9
+    },
+    "proved": true
+  },
+  "hard_triangle_minus_star_root_certificate": {
+    "field": "F_23",
+    "global_even_moments": "M_d(L)=sum_({u,v} in H)chi(u-v)*(L(u)-L(v))^d",
+    "hard_target": "5-z_j+sum_({a,b} subset T)z_a*z_b = 4 + triangle(T) - full_star(j) on sum z_i=1",
+    "full_star_power_sums_degrees_2_4_6_8": {
+      "2": 0,
+      "4": 0,
+      "6": 0,
+      "8": 0
+    },
+    "full_star_vanishes_because": "sum_(a in F_23^*) a^d=0 for 0<d<22",
+    "triangle_pairs_checked": 529,
+    "triangle_G4_identity": "2*S4-S2^2=0",
+    "triangle_G8_identity": "24*S8-32*S2*S6+5*S2^4=0",
+    "hard_sign": "h in {+1,-1}, common on the twelve hard directions",
+    "homogeneous_forms": {
+      "G4": "2*h*M4-M2^2",
+      "G8": "24*h*M8-32*M2*M6+5*M2^4"
+    },
+    "form_degrees": {
+      "G4": 4,
+      "G8": 8
+    },
+    "distinct_hard_projective_roots": 12,
+    "both_forms_identically_zero": true,
+    "opposite_F5_evaluations": {
+      "G4": "-2*S4-S2^2",
+      "G8": "-24*S8-32*S2*S6+5*S2^4"
+    },
+    "proved": true
+  },
+  "opposite_K5_moment_sieve": {
+    "field": "F_23",
+    "five_sets_checked": 33649,
+    "moment_definition": "S_d(R)=sum_({i,j} subset R)(i-j)^d mod 23",
+    "G4": "-2*S4-S2^2",
+    "G8": "-24*S8-32*S2*S6+5*S2^4",
+    "G4_zero_count": 1518,
+    "G8_zero_count": 2024,
+    "simultaneous_zero_count": 0,
+    "G4_zero_sets_sha256": "82460f67f3414a1f461b24605c108861d215f970063c0d0af82772de21240c1a",
+    "G8_zero_sets_sha256": "733bc62c7ad8d0d7083388480d307ad7298d56b4f9e1fcd12562848350c8d6c7",
+    "affine_group": "AGL(1,23), x maps to a*x+b with a nonzero",
+    "affine_orbit_count": 69,
+    "affine_orbit_size_histogram": {
+      "253": 5,
+      "506": 64
+    },
+    "affine_orbit_representatives_sha256": "34eeb59b625d24907758658f78c0f966291728a72cebb0426a3d4a883fb2022a",
+    "G4_zero_orbits": [
+      {
+        "representative": [
+          0,
+          1,
+          2,
+          3,
+          12
+        ],
+        "orbit_size": 506,
+        "moments_S2_S4_S6_S8": [
+          6,
+          5,
+          13,
+          0
+        ],
+        "G4": 0,
+        "G8": 5
+      },
+      {
+        "representative": [
+          0,
+          1,
+          2,
+          4,
+          15
+        ],
+        "orbit_size": 506,
+        "moments_S2_S4_S6_S8": [
+          10,
+          19,
+          18,
+          4
+        ],
+        "G4": 0,
+        "G8": 7
+      },
+      {
+        "representative": [
+          0,
+          1,
+          2,
+          7,
+          17
+        ],
+        "orbit_size": 506,
+        "moments_S2_S4_S6_S8": [
+          20,
+          7,
+          10,
+          18
+        ],
+        "G4": 0,
+        "G8": 13
+      }
+    ],
+    "G8_zero_orbits": [
+      {
+        "representative": [
+          0,
+          1,
+          2,
+          3,
+          10
+        ],
+        "orbit_size": 506,
+        "moments_S2_S4_S6_S8": [
+          15,
+          13,
+          12,
+          0
+        ],
+        "G4": 2,
+        "G8": 0
+      },
+      {
+        "representative": [
+          0,
+          1,
+          2,
+          4,
+          17
+        ],
+        "orbit_size": 506,
+        "moments_S2_S4_S6_S8": [
+          8,
+          17,
+          22,
+          13
+        ],
+        "G4": 17,
+        "G8": 0
+      },
+      {
+        "representative": [
+          0,
+          1,
+          2,
+          4,
+          18
+        ],
+        "orbit_size": 506,
+        "moments_S2_S4_S6_S8": [
+          19,
+          7,
+          14,
+          13
+        ],
+        "G4": 16,
+        "G8": 0
+      },
+      {
+        "representative": [
+          0,
+          1,
+          2,
+          7,
+          10
+        ],
+        "orbit_size": 506,
+        "moments_S2_S4_S6_S8": [
+          2,
+          8,
+          13,
+          7
+        ],
+        "G4": 3,
+        "G8": 0
+      }
+    ],
+    "zero_orbit_representatives_disjoint": true,
+    "independent_accelerator_replay": {
+      "script": "scripts/p23_k5_moment_gpu.py",
+      "script_sha256": "4afa5d397ccf38dc6e61f8b006c7a697c533ff067b9c7af944441f35c986ee1d",
+      "reported_backends": [
+        "NUKA gfx1201 OpenCL",
+        "Jellyfin Arc A380 OpenCL",
+        "Soulkiller V100 CUDA"
+      ],
+      "each_reported_counts": [
+        33649,
+        1518,
+        2024,
+        0
+      ],
+      "authoritative_certificate": false,
+      "purpose": "independent implementation replay"
+    },
+    "classification": "exhaustive finite coefficient certificate",
+    "proved": true
+  },
+  "p23_k110_closed": true,
+  "all_boundary_sizes_excluded": true,
+  "finite_graph_or_residual_configuration_census_used": false,
+  "fixed_five_set_coefficient_certificate_used": true,
+  "later_layers_closed": false,
+  "residual_ii_closed_globally": false,
+  "E1_closed": false,
+  "quadratic_minmax_limit_closed": false,
+  "proved": true
+}

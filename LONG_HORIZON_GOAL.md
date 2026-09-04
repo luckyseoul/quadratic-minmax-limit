@@ -94,7 +94,11 @@ Anything else — including “honest OPEN,” “structure shipped,” “censu
   exceptional p17/p19 endpoints by exact common-energy certificates.
   Proposition 15.754 closes the last `p=13,k=60,u=6` residue by an exact
   finite aggregate/common-form certificate. Thus the fifth shell is closed
-  for every prime `p>=13`. Propositions 15.755--15.756 then prove a sharp
+  for every prime `p>=13`. Propositions 15.768--15.770 close the first two
+  generic post-band layers in each congruence class. They also close the
+  exceptional `p=23,t=9,k=110` and `p=23,t=10,k=112` endpoints; the latter
+  has eleven low roots and reuses the fixed 33,649-five-set quartic/octic
+  certificate. Propositions 15.755--15.756 prove a sharp
   full-cube defect dichotomy and rule out arbitrary-boundary Weil/Parseval as
   a global close; both are reductions/method barriers, not residual closure.
 - Exact Paley optimality is **false** (\(m_{10}=13<15\)). E(1) is asymptotic.
@@ -104,7 +108,7 @@ is the two-ray amplification theorem of Proposition 6.3 (or any other proof
 of convergence/non-existence).  The value-specific route to \(L=1/2\) is
 **E(1)** on \(n=p^2+1\).  On that optional Paley route, the live gate is the
 corrected dictionary returned by
-`src/e1_main_chain_status.py`; as of 2026-09-02 through Proposition 15.756 it
+`src/e1_main_chain_status.py`; as of 2026-09-04 through Proposition 15.770 it
 reads:
 
 1. **Required bi-tight levels 2 and 3:** TRUE by 15.720. The spectral floor,
@@ -116,9 +120,12 @@ reads:
    `u in {0,3,4,6}`; Propositions 15.744--15.745 close `u=3,0`, and
    Propositions 15.746--15.749 close `u=4`. Proposition 15.754 closes the
    remaining `u=6` by exact joint common-form and collision-energy
-   certificates, completing `p=13,k=60`. The live remainder includes
-   critical `p=5,7`, `p=11,k>=50`, later p13 layers, layers beyond
-   Proposition 15.752's band, and the positive `p=7,z=7` subbranch.
+   certificates, completing `p=13,k=60`. Propositions 15.768--15.770 close
+   the next two generic post-band layers and the exceptional
+   `p=23,t=9,10` endpoints. With `q=(p-1)/2`, the exact live frontier is
+   critical `p=5,7`; `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`;
+   `p=23,t>=11`; `p=1 mod 4,p>=29,t>=q-1`;
+   `p=3 mod 4,p>=31,t>=q`; and the positive `p=7,z=7` subbranch.
    Proposition 15.751 closes generic branch B at `p>=29,t=3`, hence the
    entire fourth shell for `p>=13`; Proposition 15.752 closes the displayed
    higher band, and together with Propositions 15.753--15.754 closes the

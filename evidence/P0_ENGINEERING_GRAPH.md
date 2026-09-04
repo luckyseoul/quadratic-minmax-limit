@@ -1,6 +1,6 @@
 # P0 Engineering Graph (persistent — update every turn)
 
-> **AUTHORITATIVE LIVE OVERLAY (2026-09-02).** Sections 1--8 below are an
+> **AUTHORITATIVE LIVE OVERLAY (2026-09-04; through Proposition 15.770).** Sections 1--8 below are an
 > archived Path-C graph from 2026-08-13 and are not a routing authority. The
 > live graph is:
 >
@@ -14,9 +14,11 @@
 >  |    `-- tetrahedral alternative [OPEN]
 >  `-- Paley E(1), stronger value route
 >       `-- residual_ii_k_ge_4p_ND_closed [OPEN]
->            +-- first four shells in stated prime ranges [CLOSED]
->            +-- fifth shell p>=13 (15.752--15.754) [CLOSED]
->            `-- p=5,7; p11 k>=50; later p13 / beyond-band [OPEN]
+>            +-- first five shells and 15.752 higher band [CLOSED]
+>            +-- next two generic layers; p23 t=9,10 (15.768--15.770) [CLOSED]
+>            `-- p5,7; p11 t>=3; p13,17,19 t>=5; p23 t>=11;
+>                p=1 mod4,p>=29: t>=q-1; p=3 mod4,p>=31: t>=q;
+>                positive p7,z7 [OPEN], where q=(p-1)/2
 > ```
 >
 > Direct routing rules: doubling must use global-minimizer information or a
@@ -29,9 +31,9 @@
 
 **Machine:** 88 CPU + Tesla V100-SXM2-16GB (CuPy).  
 **Policy:** F17 (no single-core thrash) · F19 (no moduli class-refine loops) · F20 (no GPU theater) · F21 (no False-predicate 15.xxx) · F22 (no e1 flip on census).  
-**L = lim α_n:** **OPEN** (2026-08-13). The 2026-08-05 “CLOSED” claim was retracted (disj Gsum LB / 15.158). Residual **(ii) CLOSED**; residual **(i) OPEN**. Trust `HANDOFF.md` / `STATUS.md`, not the DAG below (stale Path-C framing).  
+**L = lim α_n:** **OPEN** (2026-09-04). The 2026-08-05 “CLOSED” claim was retracted (disj Gsum LB / 15.158). Current status is residual **(ii) OPEN** globally and multi-level Type I **CLOSED** by 15.750. Trust the live overlay and `HANDOFF.md` / `STATUS.md`, not the DAG below (stale Path-C framing).
 **Optional open:** Path-C residual / 16N (not required for denseness L).  
-**Last update:** 2026-08-13 evening (residual-(i) attack log; leftover still \(\lvert\mu\rvert\le1/(2p)\)).
+**Last update:** 2026-09-04 (15.768--15.770 frontier sync; sections 1--8 remain archived chronology).
 
 ---
 

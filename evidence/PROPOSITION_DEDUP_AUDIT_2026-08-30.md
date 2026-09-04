@@ -1,15 +1,22 @@
 # Proposition and route de-duplication audit
 
-**Date:** 2026-09-03
+**Date:** 2026-09-04
 
 **Scope:** Propositions 6.3--6.10a, every assigned proposition through
-Proposition 15.762, the audited post-15.761 support/conic/Boolean reductions,
+Proposition 15.770 (with protected 15.766--15.767 work left in its existing
+scope), the audited post-15.761 support/conic/Boolean reductions,
 the live predicate wiring, and the attack scripts present during the audit
 
 **Purpose:** prevent a reformulation, solver/backend change, longer timeout,
 or finite-prime rerun from being mistaken for a new mathematical attack
 
 ## Verdict
+
+Checkpoint addition: 15.771 is an **OPEN REDUCTION / REVIEW_PENDING**
+candidate for `p=23,t=11,k=114`, with passing executable checks but three
+pending proof bridges. It does not change this audit's reviewed frontier.
+See `NOTE_2026-09-04_P23_THIRD_POST_BAND_REVIEW.md`; do not mistake the
+candidate's internal arithmetic checks for public endpoint closure.
 
 The duplication concern was correct.
 
@@ -268,24 +275,67 @@ parallel-parity floor: for `s=(t+1) mod (p+1)` and
 not a transverse lift or residual close. Frozen proof:
 `evidence/NOTE_2026-09-03_MOBIUS_PARALLEL_PARITY_ENDPOINT.md`.
 
+Do not reopen the opposite-fixed top `j=0` localized-Mobius family at
+`t=t_max`, `s=m+2`.  It is now closed for every applicable `p=4r+3` by an
+adaptive kernel-selector product, without enumerating designs or assuming a
+clean collision.  For
+`q_(L,M,c)=boundary(E_(L,M,c))+1_(L=c)`, let
+`sigma_K=(-1)^<S_K,q>` where `S_K` contains zero and one representative from
+each nonzero antipodal pair in `ker K`.  In the coordinate
+`D(z)=M+z(L-M)`,
+
+`sigma_L=-1`, `sigma_(L-M)=epsilon_L`, and
+`sigma_(D(z))=epsilon_(D(z^2))` for finite `z!=1`,
+
+so `product_K sigma_K=-epsilon_M`.  The forced auxiliary SDR has `m-2` hard
+and two opposite directions; since `m` is even, all halves have product
+`+1`.  Ternary corrections on nonorigin inversion orbits change two kernel
+bits and preserve the product.  The SDR makes the half-origin orbits distinct,
+whereas the unique fixed edge changes one kernel bit, giving final product
+`-1`.  This is a construction-family contradiction only: residual (ii),
+hard-fixed cases, and arbitrary lifts remain open.
+
+The exhaustive `p=31` option replay checked 14,880 half options, 446,400
+center instances, and 14,284,800 selector pairings with zero failures.  The
+artifact
+`evidence/e1_gmin_m4_p31_top_mobius_boundary_parity_global_replay.json` has
+SHA-256
+`9ce413b62c65b7a541388f49bb390c690af44389556e6e8676ec138ef2cbc533`.
+The independent bounded-component replay
+`evidence/e1_gmin_m4_p31_top_mobius_boundary_parity_component_replay.json`
+witnessed all 2,969 searchable designs, with no universal fixed selector and
+at least seven adaptive selectors per design; its SHA-256 is
+`1e6cb15792a681f6e9b02290e60e0e14f16225282c56258c562564d1b0556650`.
+Replay with
+`PYTHONPATH=src:. python -m pytest -q -n 0 tests/test_p31_top_mobius_boundary_parity.py`.
+
+For `j=1`, do not normalize globally to `f=1,d=1`.  Preserve the
+`f=3,d=0` alternative, including its origin-collision branch, and the
+conditional `f=1,d=1` alternative.  The next nonduplicate target is full
+degree-boundary/compact-atom synchronization across both alternatives, not a
+fixed-`F` restart or QR/BCH code search.
+
 Do not retry automatic centre coherence as a consequence of the moment
-ledger, or a two-silent-group consequence of grouped uncertainty. Fixed
+ledger, or a two-silent-group consequence of grouped uncertainty; neither
+bypasses the adaptive-selector obstruction. Fixed
 complementary scales do require `M_i(x)^2=4j_i^2`, but hard-star centres are
 invisible to all recorded aggregate and moment constraints. This leaves an
-adaptive center-dependent complementary choice open. The local four-candidate
+adaptive center-dependent complementary choice only in the remaining `j=1`,
+hard-fixed, and arbitrary-lift branches. The local four-candidate
 system has clean one-overlap solutions, and `K(v,-v;0)` is an actual compact
 common-moment source whose singleton fixed word has exactly one silent group.
 Frozen barrier: `evidence/NOTE_2026-09-03_MOBIUS_ENDPOINT_BARRIER.md`.
 
-Do not reopen centre coherence as a pairwise matching question. The adaptive
-theorem now handles arbitrary nonzero centres by choosing the singleton
+Do not reopen centre coherence as a pairwise matching question. The older
+adaptive theorem handles arbitrary nonzero centres by choosing the singleton
 magnitude and signs, then perfectly matching all hard targets with nonsquare
 complement parameters. What remains is the strictly stronger prescribed-set
 factorization: the forced two-point outputs must be distinct and equal the
 quota set. Its exact equation and necessary paired-square/common-ratio
 invariant are frozen in
-`evidence/NOTE_2026-09-03_ADAPTIVE_MOBIUS_PAIRING.md`. Do not retry a product,
-discriminant, or square-polynomial shortcut: even `g^2` fibre multiplicities
+`evidence/NOTE_2026-09-03_ADAPTIVE_MOBIUS_PAIRING.md`. This matching route is
+superseded for the closed opposite-fixed top `j=0` family. Do not retry a
+discriminant or square-polynomial shortcut: even `g^2` fibre multiplicities
 do not impose the one common chord ratio.
 
 Do not retry an uncoupled fixed-word Hamming count or a one-block-per-half-pair
@@ -293,8 +343,9 @@ claim. The exact atom equation is `z=c_U+ell+s_x`; it forces the collision
 surplus recorded in
 `evidence/NOTE_2026-09-03_MOBIUS_FIXED_WORD_ATOM_COUPLING.md`. The valid
 universal pair-intersection bound is eight, and an explicit pair shares three.
-The resulting scalar inequalities have positive room, so the live target is
-the global Mobius block intersection coupled to even/nonfixed coordinates.
+The resulting scalar inequalities have positive room. The next live target
+is full boundary/atom synchronization for both `j=1` Hamming alternatives,
+coupled to the even and nonfixed coordinates.
 
 For an equal-square common block, reuse the exact anchor/free-slot Hall
 formulation. Anchor deficiency two excludes both saturated incidence
@@ -311,12 +362,13 @@ or a Boolean completion. The new frozen notes are
 
 The exact ordered gate still includes unbalanced zero-form allocations and
 simultaneous nonzero even global forms over `F_p`, coordinated across
-directions. In the balanced zero-odd branch, only the coupled symmetric
-pair-total box remains after the Mobius lift. No common simple graph has been
-constructed. Residual (ii), E1, and the limit remain open.
+directions. In the balanced zero-odd branch, the opposite-fixed top `j=0`
+Mobius family is closed, while the two `j=1` branches and the remaining
+coupled symmetric pair-total boxes are open. No general common simple graph
+has been constructed. Residual (ii), E1, and the limit remain open.
 
 Focused replay of the post-15.761 records:
-`PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -q tests/test_compact_ray_moment_gate.py tests/test_conic_odd_radon.py tests/test_p31_equi_zero68_mitm.py tests/test_signed_boolean_defect.py tests/test_ridge_kernel.py tests/test_equianharmonic_component_packing.py tests/test_hard_compact_odd_radon.py tests/test_hard_star_antisymmetric_support.py tests/test_inversion_antisymmetric_radon.py tests/test_equianharmonic_threshold_even_barrier.py tests/test_inversion_symmetric_lattice.py tests/test_mobius_half_symmetric.py tests/test_all_active_pencil_support.py tests/test_symmetric_fixed_edge_elimination.py tests/test_symmetric_halved_mod2.py tests/test_symmetric_halved_mobius_cover.py tests/test_symmetric_slice_exchange.py tests/test_mobius_half_intersections.py tests/test_symmetric_halved_row_code.py tests/test_prescribed_center_common_block.py tests/test_rigid_pair_fixed_word.py tests/test_grouped_uncertainty_square.py tests/test_symmetric_halved_row_code_gap.py tests/test_symmetric_quota_cardinality_barrier.py tests/test_main_chain_docs.py`.
+`PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -q tests/test_compact_ray_moment_gate.py tests/test_conic_odd_radon.py tests/test_p31_equi_zero68_mitm.py tests/test_signed_boolean_defect.py tests/test_ridge_kernel.py tests/test_equianharmonic_component_packing.py tests/test_hard_compact_odd_radon.py tests/test_hard_star_antisymmetric_support.py tests/test_inversion_antisymmetric_radon.py tests/test_equianharmonic_threshold_even_barrier.py tests/test_inversion_symmetric_lattice.py tests/test_mobius_half_symmetric.py tests/test_all_active_pencil_support.py tests/test_symmetric_fixed_edge_elimination.py tests/test_symmetric_halved_mod2.py tests/test_symmetric_halved_mobius_cover.py tests/test_symmetric_slice_exchange.py tests/test_mobius_half_intersections.py tests/test_symmetric_halved_row_code.py tests/test_prescribed_center_common_block.py tests/test_rigid_pair_fixed_word.py tests/test_grouped_uncertainty_square.py tests/test_symmetric_halved_row_code_gap.py tests/test_symmetric_quota_cardinality_barrier.py tests/test_p31_top_mobius_boundary_parity.py tests/test_main_chain_docs.py`.
 Residual (ii), E1, `L=1/2`, and the original MO limit remain OPEN.
 
 ### Propositions 15.755--15.756: full-cube spikes and D-only Weil are settled reductions
@@ -1219,13 +1271,13 @@ name until this file is checked first.
 
 - Propositions 15.1--15.82 are written directly in `solution.md` and related
   early modules.
-- There are 676 source-backed proposition modules from 15.83 through 15.761.
-- The labels 15.537, 15.583, and 15.584 have no proposition module.  They are
-  unassigned labels, not unreviewed propositions; later source headers mention
-  those numbers only as historical range/state markers.
-- Therefore every assigned proposition through 15.761 was included in this
-  audit.  The grouped ledger below is by shared mathematical route rather than
-  a 736-row restatement of the assigned propositions.
+- There are 684 source-backed proposition modules from 15.83 through 15.770.
+- The labels 15.537, 15.583, 15.584, and 15.767 have no proposition module.
+  The first three are unassigned labels, not unreviewed propositions; 15.767
+  has protected note-only work and is not reclassified by this sync.
+- Every source-backed proposition through 15.770 is included in this audit.
+  The grouped ledger below is by shared mathematical route rather than a
+  full row-by-row restatement of the source-backed propositions.
 
 ## Authoritative acceptance chain
 
@@ -1234,10 +1286,10 @@ The public theorem is gated consistently by the corrected global
 currently `False`. The historical bounded `True` is available only through
 `e1_bounded_residual_split_closed()` and is not a global theorem predicate.
 
-| unit | exact live content | status after audit of 15.761 |
+| unit | exact live content | status after audit through 15.770 |
 |---|---|---|
 | required bi-tight levels 2 and 3 | 15.720 degree congruence using 15.272/15.207 | **TRUE** |
-| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — 15.734--15.737 close the first three shells; 15.751 closes `k=4p+6` for every `p>=13`; 15.752 closes `k=4p+8` for every `p>=23` and its explicit contiguous band; 15.753 closes the p17/p19 fifth-shell endpoints; 15.744--15.749 close `u=0,3,4` at `p=13,k=60`; and 15.754 closes the remaining `u=6` endpoint. Thus the fifth shell is closed for every `p>=13`. The exact remainder includes critical `p=5,7`, `p=11,k>=50`, later p13 layers, layers beyond 15.752's band, and positive `p=7,z=7`. The global predicate stays false. |
+| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — 15.734--15.754 close the first five shells and 15.752's explicit contiguous band. Propositions 15.768--15.770 close the next two generic layers and `p=23,t=9,10`. With `q=(p-1)/2`, the exact frontier is critical `p=5,7`; `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`; `p=23,t>=11`; `p=1 mod 4,p>=29,t>=q-1`; `p=3 mod 4,p>=31,t>=q`; and positive `p=7,z=7`. The global predicate stays false. |
 | Type I | the multi-level `3A+B>0` bad case | **TRUE** (15.750) — isolated-chart rigidity and parity halving close every prime `p>=11`; exact integer Farkas identities close `p=5,7` |
 | Lemma D | every good-line triple and its Fejer two-plane amplitudes | **TRUE** (15.276) |
 
@@ -1317,6 +1369,9 @@ top-level front.
 | **15.763** | signed affine-alias cut incidence and exact active-state H-score | **PROVED CONDITIONAL AFFINE-FAMILY THEOREM.** For admissible odd `r`, `|H|>=oddceil((pr^2+1)m(m-1)/(2r(m-r))-pr^2+2)`; at `r=1` this is `(p^2+11)/4`. Either a noncrossing alias reaches deletion eigenshell level two or `pr^2+1` strengthens to `pr^2+3`. The nonaffine minimum shell and cross-deletion coordinate alignment remain open, so no global predicate changes. |
 | **15.764** | exact parity shell bridge for an all-deletions minimal four-gap H | **PROVED PARTIAL BRIDGE AND METHOD BARRIER.** Odd H has a level-two deletion iff it hits signed shell level three; frame averaging plus a level-five degree/anticommutator exclusion forces this for `|H|<=5p`. The H-floor freezes the active edge, `-C` normalizes the phase by switching/permutation, and `k>=3p+1`, so the full official residual-(ii) entry follows. Even H has the wrong deletion parity. Failure remains possible only from even `|H|>=4p+2` or odd `|H|>=5p+2`; a non-Paley affine-score model shows the scalar identities alone cannot close those ranges. No global predicate changes. |
 | **15.765** | published four-special-direction set adapted to the one-coordinate-three Paley shell | **PROVED EXACT COUNTEREXAMPLE TO AN AFFINE-SHELL CLASSIFICATION.** At `p=11`, the Kiss--Somlai construction gives `D` of size 77 with `Q1_D=11 1_D-7 1`; hence `(3,2 1_D-1)` is an integral `+11` conference eigenvector and its Boolean shadow has defect `22=2p`. Four nonconstant line profiles rule out a union of parallel affine lines. This is not a common all-deletions H, residual counterexample, or closure; do not rerun an affine-shell classification as though it covered the full shell. |
+| **15.768** | first `p=1 mod 4` post-band residue, pointwise complement-triple equality, and local mass `p+15` exclusion | **PROVED INFINITE-FAMILY THEOREM WITH THE FIXED FOUR-BIT CERTIFICATE.** For every prime `p=1 mod 4,p>=29`, it closes `t=q-3`, equivalently `k=5p-7`. The `p=29` height endpoint uses the dimension-free cube theorem `E[g]=3/4 => max(g)<=6`; no prime, graph, orbit, slice, or residual-cell census is used. |
+| **15.769** | first `p=3 mod 4` post-band residue, sharp `p-3` lift classification, common-row offsets, and exceptional p23 moment close | **PROVED INFINITE-FAMILY AND ENDPOINT THEOREM.** For every prime `p=3 mod 4,p>=31`, it closes `t=q-2`, equivalently `k=5p-5`. It also closes `p=23,t=9,k=110`: half-mean equality globalizes to `F_4/F_5`, offsets leave `F_5`, twelve roots annihilate the quartic/octic forms, and the exact 33,649-five-set counts `(33649,1518,2024,0)` have no joint zero. |
+| **15.770** | one-row carry of the newly classified equalities and sharp local exclusions | **PROVED TWO INFINITE ONE-LAYER EXTENSIONS AND ENDPOINT THEOREM.** It closes `t=q-2,k=5p-5` for `p=1 mod 4,p>=29`, `t=q-1,k=5p-3` for `p=3 mod 4,p>=31`, and `p=23,t=10,k=112`. At p23, eleven low triangle-minus-star roots still annihilate both forms; the corrected surplus gives at least eight opposite mass-36 rows, and the same fixed five-set certificate excludes `P=4,Q=5,F_5`. Later layers and residual (ii) globally remain open. |
 | **all-prime odd--Radon gate** | support/line isolation for `b` compact plus `r-1` all-equal branch-C rows under zero odd global forms | **PROVED STRUCTURAL REDUCTION.** For every prime `p=4r+3`, `r>=7`, the chain is central when `3b<=r+2`; balanced branch C is covered through `delta=(2r+2)floor((r+2)/3)`. Nonzero forms, unbalanced allocations, and even moments remain open. |
 | **p31 local gate** | arbitrary compact plus six all-equal atoms, all odd rows and joint degree six/eight with zero global forms | **EXHAUSTIVE LOCAL CERTIFICATE AND BALANCED COROLLARY.** All 450 scaling orbits are covered (449 noncentered `UNSAT`, one independently excluded centered orbit, zero `SAT`), excluding every balanced `69<=t<=99` zero-form profile because each contains that row. Unbalanced/nonzero-form cases and the Boolean box remain open. |
 | **seven-channel dominance** | exact degree-six/eight Jacobian minors for four compact and four all-equal atoms | **PROVED ALGEBRAIC METHOD BARRIER.** Both maps are dominant over the algebraic closure in characteristic at least 11, so no universal seven-channel identity can close the gate. Extension-valued points are not `F_p` or Boolean lifts. |
@@ -1495,8 +1550,12 @@ Before spending mesh/GPU time:
    moment intersection, 15.753 closes `p=17,k=76` and `p=19,k=84`, and
    15.754 closes the remaining p13 residue `u=6` by its exact common-form
    certificate.
-   The live residual ranges are critical `p=5,7`, `p=11,k>=50`,
-   later p13 layers, and layers beyond 15.752's band.
+   Propositions 15.768--15.770 additionally close the first two generic
+   post-band layers and `p=23,t=9,10`. With `q=(p-1)/2`, the live residual
+   frontier is critical `p=5,7`; `p=11,t>=3` (`k>=50`);
+   `p=13,17,19,t>=5`; `p=23,t>=11`;
+   `p=1 mod 4,p>=29,t>=q-1`; `p=3 mod 4,p>=31,t>=q`; and positive
+   `p=7,z=7`.
    Propositions 15.751--15.754 close the former generic `t=3` range, the
    displayed higher band, and all fifth-shell endpoints for `p>=13`; no further
    cell, graph, slice, or prime census

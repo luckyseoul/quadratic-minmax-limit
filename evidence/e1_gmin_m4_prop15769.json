@@ -1,0 +1,4905 @@
+{
+  "prop": "15.769",
+  "title": "First post-15.752 p=3 mod 4 residual layer",
+  "result_status": "proved infinite-family theorem with fixed four-bit catalog",
+  "statement": "for every prime p>=31 congruent to 3 modulo 4, residual (ii) is empty at t=(p-5)/2, equivalently k=5p-5",
+  "new_local_theorem": "no nonzero nonnegative integral quadratic on J(p,(p+1)/2) has 4p E[C]=p+13",
+  "first_layer_beyond_prop_15752": true,
+  "sharp_p_minus_three_four_bit_catalog": {
+    "source_catalog_valid_tables": 222,
+    "source_catalog_sha256": "63c9daf2b117b540a5199b1b007cb4e6997ba01704fbc6017efaaa9735859396",
+    "target_symbolic_density": "(p-3)/(4p)",
+    "target_layer_profiles": [
+      [
+        0,
+        0,
+        1,
+        2,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        1
+      ]
+    ],
+    "selected_table_count": 10,
+    "selected_pair_table_count": 6,
+    "all_equal_triple_table_count": 4,
+    "complement_back_to_original_slice": {
+      "selected_pair": "(1-x_i)(1-x_j), an omitted-pair lift",
+      "all_equal_triple": "all-equal is invariant under complementation"
+    },
+    "selected_tables_sha256": "a52ce893775839abe2c2d3d5f7371f858591640358172ee77f0ff75a21e0dd34",
+    "tables": [
+      {
+        "table": 33153,
+        "table_hex": "8181",
+        "layer_counts": [
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "family": "all_equal_triple",
+        "anf_coefficients": [
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "table": 34833,
+        "table_hex": "8811",
+        "layer_counts": [
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "family": "all_equal_triple",
+        "anf_coefficients": [
+          1,
+          -1,
+          -1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "table": 34952,
+        "table_hex": "8888",
+        "layer_counts": [
+          0,
+          0,
+          1,
+          2,
+          1
+        ],
+        "family": "selected_pair_on_complementary_slice",
+        "anf_coefficients": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "table": 40965,
+        "table_hex": "a005",
+        "layer_counts": [
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "family": "all_equal_triple",
+        "anf_coefficients": [
+          1,
+          -1,
+          0,
+          0,
+          -1,
+          1,
+          0,
+          0,
+          -1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "table": 41120,
+        "table_hex": "a0a0",
+        "layer_counts": [
+          0,
+          0,
+          1,
+          2,
+          1
+        ],
+        "family": "selected_pair_on_complementary_slice",
+        "anf_coefficients": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "table": 43520,
+        "table_hex": "aa00",
+        "layer_counts": [
+          0,
+          0,
+          1,
+          2,
+          1
+        ],
+        "family": "selected_pair_on_complementary_slice",
+        "anf_coefficients": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "table": 49155,
+        "table_hex": "c003",
+        "layer_counts": [
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "family": "all_equal_triple",
+        "anf_coefficients": [
+          1,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "table": 49344,
+        "table_hex": "c0c0",
+        "layer_counts": [
+          0,
+          0,
+          1,
+          2,
+          1
+        ],
+        "family": "selected_pair_on_complementary_slice",
+        "anf_coefficients": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "table": 52224,
+        "table_hex": "cc00",
+        "layer_counts": [
+          0,
+          0,
+          1,
+          2,
+          1
+        ],
+        "family": "selected_pair_on_complementary_slice",
+        "anf_coefficients": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "table": 61440,
+        "table_hex": "f000",
+        "layer_counts": [
+          0,
+          0,
+          1,
+          2,
+          1
+        ],
+        "family": "selected_pair_on_complementary_slice",
+        "anf_coefficients": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "proved": true
+  },
+  "parameterized_threshold_replays": {
+    "31": {
+      "p": 31,
+      "p_mod_4": 3,
+      "layer_index_t": 13,
+      "original_k": 150,
+      "H_edge_count": 151,
+      "residue_ledger": {
+        "p": 31,
+        "q": 15,
+        "m": 16,
+        "layer_index_t": 13,
+        "original_k": 150,
+        "H_edge_count": 151,
+        "guaranteed_isolated_vertices": 660,
+        "phase_one_mean_form": "a_L=2u+32k_L",
+        "phase_one_quotient_sum": "sum k_L=m+t-u",
+        "phase_one_low_b_values": [
+          2,
+          30
+        ],
+        "residue_rows": [
+          {
+            "u": 0,
+            "quotient_sum": 29,
+            "k_zero_mean": 0,
+            "k_one_mean": 32,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 1,
+            "quotient_sum": 28,
+            "k_zero_mean": 2,
+            "k_one_mean": 34,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 2,
+            "quotient_sum": 27,
+            "k_zero_mean": 4,
+            "k_one_mean": 36,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 3,
+            "quotient_sum": 26,
+            "k_zero_mean": 6,
+            "k_one_mean": 38,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 4,
+            "quotient_sum": 25,
+            "k_zero_mean": 8,
+            "k_one_mean": 40,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 5,
+            "quotient_sum": 24,
+            "k_zero_mean": 10,
+            "k_one_mean": 42,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 6,
+            "quotient_sum": 23,
+            "k_zero_mean": 12,
+            "k_one_mean": 44,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 7,
+            "quotient_sum": 22,
+            "k_zero_mean": 14,
+            "k_one_mean": 46,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 8,
+            "quotient_sum": 21,
+            "k_zero_mean": 16,
+            "k_one_mean": 48,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 9,
+            "quotient_sum": 20,
+            "k_zero_mean": 18,
+            "k_one_mean": 50,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 10,
+            "quotient_sum": 19,
+            "k_zero_mean": 20,
+            "k_one_mean": 52,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 11,
+            "quotient_sum": 18,
+            "k_zero_mean": 22,
+            "k_one_mean": 54,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 12,
+            "quotient_sum": 17,
+            "k_zero_mean": 24,
+            "k_one_mean": 56,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 13,
+            "quotient_sum": 16,
+            "k_zero_mean": 26,
+            "k_one_mean": 58,
+            "status": "hard_sharp_p_minus_3_lift"
+          },
+          {
+            "u": 14,
+            "quotient_sum": 15,
+            "k_zero_mean": 28,
+            "k_one_mean": 60,
+            "status": "excluded: k=0 is sub-floor but sum k<m"
+          },
+          {
+            "u": 15,
+            "quotient_sum": 14,
+            "k_zero_mean": 30,
+            "k_one_mean": 62,
+            "status": "old endpoint A/C dichotomy"
+          }
+        ],
+        "surviving_residues": [
+          13,
+          15
+        ],
+        "new_branch_all_quotients_equal_one": true,
+        "new_branch_scaled_mean": 58,
+        "new_branch_baseline_scaled_mean": 30,
+        "new_branch_sharp_lift_mass": 28,
+        "possible_branches": [
+          "hard_b2",
+          "p3_all_low_b_p_minus_1",
+          "hard_sharp_p_minus_3_lift"
+        ],
+        "proved": true
+      },
+      "branch_exclusions": {
+        "hard_b2": {
+          "branch": "hard_b2",
+          "hard_edge_count": 78,
+          "opposite_edge_count": 73,
+          "hard_sign_times_global_T": 5,
+          "minimum_opposite_Q": 3,
+          "minimum_opposite_mean": 8,
+          "minimum_cell_excluded": true,
+          "forced_next_Q": 4,
+          "forced_next_scaled_mean": 40,
+          "surplus_after_raising_every_Q": 9,
+          "directions_at_next_Q_at_least": 7,
+          "local_dependency": "Proposition 15.752 p+9 exclusion",
+          "excluded": true,
+          "proved": true
+        },
+        "p3_all_low_b_p_minus_1": {
+          "branch": "p3_all_low_b_p_minus_1",
+          "hard_edge_count": 62,
+          "opposite_edge_count": 89,
+          "hard_sign_times_global_T": -27,
+          "minimum_opposite_Q": 4,
+          "minimum_opposite_mean": 8,
+          "minimum_cell_excluded": true,
+          "forced_next_Q": 5,
+          "forced_next_scaled_mean": 40,
+          "surplus_after_raising_every_Q": 9,
+          "directions_at_next_Q_at_least": 7,
+          "local_dependency": "Proposition 15.752 p+9 exclusion",
+          "excluded": true,
+          "proved": true
+        },
+        "hard_sharp_p_minus_3_lift": {
+          "branch": "hard_sharp_p_minus_3_lift",
+          "hard_family_catalog": {
+            "p": 31,
+            "parity_baselines": {
+              "b=2": "A_0=(1-x_i-x_j)^2, target 4+z_i*z_j, offset 4",
+              "b=p-1": "A_0=1-x_j, target 4-z_j, offset 3"
+            },
+            "difference_lift": "B=(A-A_0)/2",
+            "difference_is_nonzero_nonnegative_integral": true,
+            "difference_scaled_mass": "4p E[B]=p-3",
+            "sharp_lift_dependency": "Proposition 15.688",
+            "sharp_lift_forces_boolean": true,
+            "boolean_classification": {
+              "p": 31,
+              "complementary_slice": "J(31,15)",
+              "density": "7/31",
+              "relevant_pair_influence_floor": "56/899",
+              "total_influence_upper_bound": "5040/961",
+              "largest_zero_influence_class_complement_bound": "5220/961",
+              "junta_coordinates_at_most": 5,
+              "five_less_than_both_slice_sides": true,
+              "all_junta_patterns_extend_to_slice": true,
+              "symmetrized_representative_extends_to_boolean_cube": true,
+              "cube_total_influence_upper_bound": 2,
+              "cube_relevant_coordinate_influence_floor": "1/2",
+              "cube_active_coordinates_at_most": 4,
+              "matching_four_bit_layer_profiles": [
+                [
+                  1,
+                  1,
+                  0,
+                  1,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  1,
+                  2,
+                  1
+                ]
+              ],
+              "four_bit_classification": {
+                "source_catalog_valid_tables": 222,
+                "source_catalog_sha256": "63c9daf2b117b540a5199b1b007cb4e6997ba01704fbc6017efaaa9735859396",
+                "target_symbolic_density": "(p-3)/(4p)",
+                "target_layer_profiles": [
+                  [
+                    0,
+                    0,
+                    1,
+                    2,
+                    1
+                  ],
+                  [
+                    1,
+                    1,
+                    0,
+                    1,
+                    1
+                  ]
+                ],
+                "selected_table_count": 10,
+                "selected_pair_table_count": 6,
+                "all_equal_triple_table_count": 4,
+                "complement_back_to_original_slice": {
+                  "selected_pair": "(1-x_i)(1-x_j), an omitted-pair lift",
+                  "all_equal_triple": "all-equal is invariant under complementation"
+                },
+                "selected_tables_sha256": "a52ce893775839abe2c2d3d5f7371f858591640358172ee77f0ff75a21e0dd34",
+                "tables": [
+                  {
+                    "table": 33153,
+                    "table_hex": "8181",
+                    "layer_counts": [
+                      1,
+                      1,
+                      0,
+                      1,
+                      1
+                    ],
+                    "family": "all_equal_triple",
+                    "anf_coefficients": [
+                      1,
+                      -1,
+                      -1,
+                      1,
+                      -1,
+                      1,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 34833,
+                    "table_hex": "8811",
+                    "layer_counts": [
+                      1,
+                      1,
+                      0,
+                      1,
+                      1
+                    ],
+                    "family": "all_equal_triple",
+                    "anf_coefficients": [
+                      1,
+                      -1,
+                      -1,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      -1,
+                      1,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 34952,
+                    "table_hex": "8888",
+                    "layer_counts": [
+                      0,
+                      0,
+                      1,
+                      2,
+                      1
+                    ],
+                    "family": "selected_pair_on_complementary_slice",
+                    "anf_coefficients": [
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 40965,
+                    "table_hex": "a005",
+                    "layer_counts": [
+                      1,
+                      1,
+                      0,
+                      1,
+                      1
+                    ],
+                    "family": "all_equal_triple",
+                    "anf_coefficients": [
+                      1,
+                      -1,
+                      0,
+                      0,
+                      -1,
+                      1,
+                      0,
+                      0,
+                      -1,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 41120,
+                    "table_hex": "a0a0",
+                    "layer_counts": [
+                      0,
+                      0,
+                      1,
+                      2,
+                      1
+                    ],
+                    "family": "selected_pair_on_complementary_slice",
+                    "anf_coefficients": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 43520,
+                    "table_hex": "aa00",
+                    "layer_counts": [
+                      0,
+                      0,
+                      1,
+                      2,
+                      1
+                    ],
+                    "family": "selected_pair_on_complementary_slice",
+                    "anf_coefficients": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 49155,
+                    "table_hex": "c003",
+                    "layer_counts": [
+                      1,
+                      1,
+                      0,
+                      1,
+                      1
+                    ],
+                    "family": "all_equal_triple",
+                    "anf_coefficients": [
+                      1,
+                      0,
+                      -1,
+                      0,
+                      -1,
+                      0,
+                      1,
+                      0,
+                      -1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 49344,
+                    "table_hex": "c0c0",
+                    "layer_counts": [
+                      0,
+                      0,
+                      1,
+                      2,
+                      1
+                    ],
+                    "family": "selected_pair_on_complementary_slice",
+                    "anf_coefficients": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 52224,
+                    "table_hex": "cc00",
+                    "layer_counts": [
+                      0,
+                      0,
+                      1,
+                      2,
+                      1
+                    ],
+                    "family": "selected_pair_on_complementary_slice",
+                    "anf_coefficients": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 61440,
+                    "table_hex": "f000",
+                    "layer_counts": [
+                      0,
+                      0,
+                      1,
+                      2,
+                      1
+                    ],
+                    "family": "selected_pair_on_complementary_slice",
+                    "anf_coefficients": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0
+                    ]
+                  }
+                ],
+                "proved": true
+              },
+              "original_slice_families": [
+                "omitted_pair",
+                "all_equal_triple"
+              ],
+              "proved": true
+            },
+            "families": [
+              {
+                "baseline": "complement_literal",
+                "baseline_b": 30,
+                "baseline_scaled_mean": 30,
+                "lift": "omitted_pair",
+                "lift_scaled_mass": 28,
+                "total_scaled_mean": 58,
+                "baseline_offset": 3,
+                "lift_offset_increment": -1,
+                "coefficient_offset": 2,
+                "coefficient_congruence": "15 divides I+P-2"
+              },
+              {
+                "baseline": "complement_literal",
+                "baseline_b": 30,
+                "baseline_scaled_mean": 30,
+                "lift": "all_equal_triple",
+                "lift_scaled_mass": 28,
+                "total_scaled_mean": 58,
+                "baseline_offset": 3,
+                "lift_offset_increment": 1,
+                "coefficient_offset": 4,
+                "coefficient_congruence": "15 divides I+P-4"
+              },
+              {
+                "baseline": "XNOR",
+                "baseline_b": 2,
+                "baseline_scaled_mean": 30,
+                "lift": "omitted_pair",
+                "lift_scaled_mass": 28,
+                "total_scaled_mean": 58,
+                "baseline_offset": 4,
+                "lift_offset_increment": -1,
+                "coefficient_offset": 3,
+                "coefficient_congruence": "15 divides I+P-3"
+              },
+              {
+                "baseline": "XNOR",
+                "baseline_b": 2,
+                "baseline_scaled_mean": 30,
+                "lift": "all_equal_triple",
+                "lift_scaled_mass": 28,
+                "total_scaled_mean": 58,
+                "baseline_offset": 4,
+                "lift_offset_increment": 1,
+                "coefficient_offset": 5,
+                "coefficient_congruence": "15 divides I+P-5"
+              }
+            ],
+            "proved": true
+          },
+          "common_row_sum_identity": "sum q_L=p*P_L-3p-(2p-4)=hT-P_L",
+          "equal_hard_means_force_one_common_P": true,
+          "different_offsets_cannot_mix_mod_q": true,
+          "family_ledgers": [
+            {
+              "baseline": "complement_literal",
+              "baseline_b": 30,
+              "baseline_scaled_mean": 30,
+              "lift": "omitted_pair",
+              "lift_scaled_mass": 28,
+              "total_scaled_mean": 58,
+              "baseline_offset": 3,
+              "lift_offset_increment": -1,
+              "coefficient_offset": 2,
+              "coefficient_congruence": "15 divides I+P-2",
+              "hard_parallel_upper_bound": 9,
+              "hard_parallel_candidates": [
+                2
+              ],
+              "forced_hard_parallel_count": 2,
+              "hard_edge_count": 32,
+              "opposite_edge_count": 119,
+              "hard_sign_times_global_T": -87,
+              "opposite_mean_formula": "a(Q)=32Q+(-87)-93",
+              "last_negative_Q": 5,
+              "last_negative_mean": -20,
+              "forbidden_mass_twelve_Q": 6,
+              "mass_twelve_Q_mean": 12,
+              "forced_low_Q": 7,
+              "surplus_after_every_Q_at_least_forced_low_Q": 7,
+              "directions_at_forced_low_Q_at_least": 9,
+              "forced_low_Q_scaled_mean": 44,
+              "nonzero_b_floor_and_lift_rows": [
+                [
+                  2,
+                  32,
+                  12
+                ],
+                [
+                  30,
+                  32,
+                  12
+                ]
+              ],
+              "forced_low_Q_is_b_zero": true,
+              "forced_local_cell": "A=2C, 4p E[C]=p+13",
+              "excluded": true,
+              "proved": true
+            },
+            {
+              "baseline": "complement_literal",
+              "baseline_b": 30,
+              "baseline_scaled_mean": 30,
+              "lift": "all_equal_triple",
+              "lift_scaled_mass": 28,
+              "total_scaled_mean": 58,
+              "baseline_offset": 3,
+              "lift_offset_increment": 1,
+              "coefficient_offset": 4,
+              "coefficient_congruence": "15 divides I+P-4",
+              "hard_parallel_upper_bound": 9,
+              "hard_parallel_candidates": [
+                4
+              ],
+              "forced_hard_parallel_count": 4,
+              "hard_edge_count": 64,
+              "opposite_edge_count": 87,
+              "hard_sign_times_global_T": -23,
+              "opposite_mean_formula": "a(Q)=32Q+(-23)-93",
+              "last_negative_Q": 3,
+              "last_negative_mean": -20,
+              "forbidden_mass_twelve_Q": 4,
+              "mass_twelve_Q_mean": 12,
+              "forced_low_Q": 5,
+              "surplus_after_every_Q_at_least_forced_low_Q": 7,
+              "directions_at_forced_low_Q_at_least": 9,
+              "forced_low_Q_scaled_mean": 44,
+              "nonzero_b_floor_and_lift_rows": [
+                [
+                  2,
+                  32,
+                  12
+                ],
+                [
+                  30,
+                  32,
+                  12
+                ]
+              ],
+              "forced_low_Q_is_b_zero": true,
+              "forced_local_cell": "A=2C, 4p E[C]=p+13",
+              "excluded": true,
+              "proved": true
+            },
+            {
+              "baseline": "XNOR",
+              "baseline_b": 2,
+              "baseline_scaled_mean": 30,
+              "lift": "omitted_pair",
+              "lift_scaled_mass": 28,
+              "total_scaled_mean": 58,
+              "baseline_offset": 4,
+              "lift_offset_increment": -1,
+              "coefficient_offset": 3,
+              "coefficient_congruence": "15 divides I+P-3",
+              "hard_parallel_upper_bound": 9,
+              "hard_parallel_candidates": [
+                3
+              ],
+              "forced_hard_parallel_count": 3,
+              "hard_edge_count": 48,
+              "opposite_edge_count": 103,
+              "hard_sign_times_global_T": -55,
+              "opposite_mean_formula": "a(Q)=32Q+(-55)-93",
+              "last_negative_Q": 4,
+              "last_negative_mean": -20,
+              "forbidden_mass_twelve_Q": 5,
+              "mass_twelve_Q_mean": 12,
+              "forced_low_Q": 6,
+              "surplus_after_every_Q_at_least_forced_low_Q": 7,
+              "directions_at_forced_low_Q_at_least": 9,
+              "forced_low_Q_scaled_mean": 44,
+              "nonzero_b_floor_and_lift_rows": [
+                [
+                  2,
+                  32,
+                  12
+                ],
+                [
+                  30,
+                  32,
+                  12
+                ]
+              ],
+              "forced_low_Q_is_b_zero": true,
+              "forced_local_cell": "A=2C, 4p E[C]=p+13",
+              "excluded": true,
+              "proved": true
+            },
+            {
+              "baseline": "XNOR",
+              "baseline_b": 2,
+              "baseline_scaled_mean": 30,
+              "lift": "all_equal_triple",
+              "lift_scaled_mass": 28,
+              "total_scaled_mean": 58,
+              "baseline_offset": 4,
+              "lift_offset_increment": 1,
+              "coefficient_offset": 5,
+              "coefficient_congruence": "15 divides I+P-5",
+              "hard_parallel_upper_bound": 9,
+              "hard_parallel_candidates": [
+                5
+              ],
+              "forced_hard_parallel_count": 5,
+              "hard_edge_count": 80,
+              "opposite_edge_count": 71,
+              "hard_sign_times_global_T": 9,
+              "opposite_mean_formula": "a(Q)=32Q+(9)-93",
+              "last_negative_Q": 2,
+              "last_negative_mean": -20,
+              "forbidden_mass_twelve_Q": 3,
+              "mass_twelve_Q_mean": 12,
+              "forced_low_Q": 4,
+              "surplus_after_every_Q_at_least_forced_low_Q": 7,
+              "directions_at_forced_low_Q_at_least": 9,
+              "forced_low_Q_scaled_mean": 44,
+              "nonzero_b_floor_and_lift_rows": [
+                [
+                  2,
+                  32,
+                  12
+                ],
+                [
+                  30,
+                  32,
+                  12
+                ]
+              ],
+              "forced_low_Q_is_b_zero": true,
+              "forced_local_cell": "A=2C, 4p E[C]=p+13",
+              "excluded": true,
+              "proved": true
+            }
+          ],
+          "common_forced_opposite_local_mass": "p+13",
+          "local_mass_exclusion": {
+            "p": 31,
+            "slice": "J(31,16)",
+            "statement": "no nonzero nonnegative integer-valued quadratic C has 4p E[C]=p+13",
+            "height_at_least_two": {
+              "height_lower_bound": "5",
+              "stabilizer_height_upper_bound": "11",
+              "paired_cube_average_upper_bound": "11/16",
+              "some_paired_cube_has_mean_exactly": "1/2",
+              "half_mean_cube_height_upper_bound": 3,
+              "proved": true
+            },
+            "height_one_boolean": {
+              "target_density": "11/31",
+              "relevant_pair_influence_floor": "56/899",
+              "total_influence_upper_bound": "6600/961",
+              "largest_zero_influence_class_complement_bound": "47850/6727",
+              "eight_gap_polynomial": "p^4-25p^3+229p^2-559p+338",
+              "eight_gap_at_p_equals_x_plus_31": [
+                1,
+                99,
+                3670,
+                60728,
+                381824
+              ],
+              "junta_coordinates_at_most": 7,
+              "seven_less_than_both_complementary_slice_sizes": true,
+              "all_junta_patterns_extend_to_slice": true,
+              "cube_coordinates_actually_needed_at_most": 4,
+              "possible_four_bit_density_values": [
+                "0",
+                "7/31",
+                "8/31",
+                "15/31",
+                "16/31",
+                "23/31",
+                "24/31",
+                "1"
+              ],
+              "target_absent": true,
+              "proved": true
+            },
+            "finite_prime_or_slice_census_used": false,
+            "fixed_four_bit_catalog_reused": true,
+            "excluded": true,
+            "proved": true
+          },
+          "excluded": true,
+          "proved": true
+        }
+      },
+      "all_boundary_sizes_excluded": true,
+      "finite_prime_graph_or_slice_census_used": false,
+      "residual_ii_layer_excluded": true,
+      "proved": true
+    },
+    "43": {
+      "p": 43,
+      "p_mod_4": 3,
+      "layer_index_t": 19,
+      "original_k": 210,
+      "H_edge_count": 211,
+      "residue_ledger": {
+        "p": 43,
+        "q": 21,
+        "m": 22,
+        "layer_index_t": 19,
+        "original_k": 210,
+        "H_edge_count": 211,
+        "guaranteed_isolated_vertices": 1428,
+        "phase_one_mean_form": "a_L=2u+44k_L",
+        "phase_one_quotient_sum": "sum k_L=m+t-u",
+        "phase_one_low_b_values": [
+          2,
+          42
+        ],
+        "residue_rows": [
+          {
+            "u": 0,
+            "quotient_sum": 41,
+            "k_zero_mean": 0,
+            "k_one_mean": 44,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 1,
+            "quotient_sum": 40,
+            "k_zero_mean": 2,
+            "k_one_mean": 46,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 2,
+            "quotient_sum": 39,
+            "k_zero_mean": 4,
+            "k_one_mean": 48,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 3,
+            "quotient_sum": 38,
+            "k_zero_mean": 6,
+            "k_one_mean": 50,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 4,
+            "quotient_sum": 37,
+            "k_zero_mean": 8,
+            "k_one_mean": 52,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 5,
+            "quotient_sum": 36,
+            "k_zero_mean": 10,
+            "k_one_mean": 54,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 6,
+            "quotient_sum": 35,
+            "k_zero_mean": 12,
+            "k_one_mean": 56,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 7,
+            "quotient_sum": 34,
+            "k_zero_mean": 14,
+            "k_one_mean": 58,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 8,
+            "quotient_sum": 33,
+            "k_zero_mean": 16,
+            "k_one_mean": 60,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 9,
+            "quotient_sum": 32,
+            "k_zero_mean": 18,
+            "k_one_mean": 62,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 10,
+            "quotient_sum": 31,
+            "k_zero_mean": 20,
+            "k_one_mean": 64,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 11,
+            "quotient_sum": 30,
+            "k_zero_mean": 22,
+            "k_one_mean": 66,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 12,
+            "quotient_sum": 29,
+            "k_zero_mean": 24,
+            "k_one_mean": 68,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 13,
+            "quotient_sum": 28,
+            "k_zero_mean": 26,
+            "k_one_mean": 70,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 14,
+            "quotient_sum": 27,
+            "k_zero_mean": 28,
+            "k_one_mean": 72,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 15,
+            "quotient_sum": 26,
+            "k_zero_mean": 30,
+            "k_one_mean": 74,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 16,
+            "quotient_sum": 25,
+            "k_zero_mean": 32,
+            "k_one_mean": 76,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 17,
+            "quotient_sum": 24,
+            "k_zero_mean": 34,
+            "k_one_mean": 78,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 18,
+            "quotient_sum": 23,
+            "k_zero_mean": 36,
+            "k_one_mean": 80,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 19,
+            "quotient_sum": 22,
+            "k_zero_mean": 38,
+            "k_one_mean": 82,
+            "status": "hard_sharp_p_minus_3_lift"
+          },
+          {
+            "u": 20,
+            "quotient_sum": 21,
+            "k_zero_mean": 40,
+            "k_one_mean": 84,
+            "status": "excluded: k=0 is sub-floor but sum k<m"
+          },
+          {
+            "u": 21,
+            "quotient_sum": 20,
+            "k_zero_mean": 42,
+            "k_one_mean": 86,
+            "status": "old endpoint A/C dichotomy"
+          }
+        ],
+        "surviving_residues": [
+          19,
+          21
+        ],
+        "new_branch_all_quotients_equal_one": true,
+        "new_branch_scaled_mean": 82,
+        "new_branch_baseline_scaled_mean": 42,
+        "new_branch_sharp_lift_mass": 40,
+        "possible_branches": [
+          "hard_b2",
+          "p3_all_low_b_p_minus_1",
+          "hard_sharp_p_minus_3_lift"
+        ],
+        "proved": true
+      },
+      "branch_exclusions": {
+        "hard_b2": {
+          "branch": "hard_b2",
+          "hard_edge_count": 108,
+          "opposite_edge_count": 103,
+          "hard_sign_times_global_T": 5,
+          "minimum_opposite_Q": 3,
+          "minimum_opposite_mean": 8,
+          "minimum_cell_excluded": true,
+          "forced_next_Q": 4,
+          "forced_next_scaled_mean": 52,
+          "surplus_after_raising_every_Q": 15,
+          "directions_at_next_Q_at_least": 7,
+          "local_dependency": "Proposition 15.752 p+9 exclusion",
+          "excluded": true,
+          "proved": true
+        },
+        "p3_all_low_b_p_minus_1": {
+          "branch": "p3_all_low_b_p_minus_1",
+          "hard_edge_count": 86,
+          "opposite_edge_count": 125,
+          "hard_sign_times_global_T": -39,
+          "minimum_opposite_Q": 4,
+          "minimum_opposite_mean": 8,
+          "minimum_cell_excluded": true,
+          "forced_next_Q": 5,
+          "forced_next_scaled_mean": 52,
+          "surplus_after_raising_every_Q": 15,
+          "directions_at_next_Q_at_least": 7,
+          "local_dependency": "Proposition 15.752 p+9 exclusion",
+          "excluded": true,
+          "proved": true
+        },
+        "hard_sharp_p_minus_3_lift": {
+          "branch": "hard_sharp_p_minus_3_lift",
+          "hard_family_catalog": {
+            "p": 43,
+            "parity_baselines": {
+              "b=2": "A_0=(1-x_i-x_j)^2, target 4+z_i*z_j, offset 4",
+              "b=p-1": "A_0=1-x_j, target 4-z_j, offset 3"
+            },
+            "difference_lift": "B=(A-A_0)/2",
+            "difference_is_nonzero_nonnegative_integral": true,
+            "difference_scaled_mass": "4p E[B]=p-3",
+            "sharp_lift_dependency": "Proposition 15.688",
+            "sharp_lift_forces_boolean": true,
+            "boolean_classification": {
+              "p": 43,
+              "complementary_slice": "J(43,21)",
+              "density": "10/43",
+              "relevant_pair_influence_floor": "110/1763",
+              "total_influence_upper_bound": "13860/1849",
+              "largest_zero_influence_class_complement_bound": "10332/1849",
+              "junta_coordinates_at_most": 5,
+              "five_less_than_both_slice_sides": true,
+              "all_junta_patterns_extend_to_slice": true,
+              "symmetrized_representative_extends_to_boolean_cube": true,
+              "cube_total_influence_upper_bound": 2,
+              "cube_relevant_coordinate_influence_floor": "1/2",
+              "cube_active_coordinates_at_most": 4,
+              "matching_four_bit_layer_profiles": [
+                [
+                  1,
+                  1,
+                  0,
+                  1,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  1,
+                  2,
+                  1
+                ]
+              ],
+              "four_bit_classification": {
+                "source_catalog_valid_tables": 222,
+                "source_catalog_sha256": "63c9daf2b117b540a5199b1b007cb4e6997ba01704fbc6017efaaa9735859396",
+                "target_symbolic_density": "(p-3)/(4p)",
+                "target_layer_profiles": [
+                  [
+                    0,
+                    0,
+                    1,
+                    2,
+                    1
+                  ],
+                  [
+                    1,
+                    1,
+                    0,
+                    1,
+                    1
+                  ]
+                ],
+                "selected_table_count": 10,
+                "selected_pair_table_count": 6,
+                "all_equal_triple_table_count": 4,
+                "complement_back_to_original_slice": {
+                  "selected_pair": "(1-x_i)(1-x_j), an omitted-pair lift",
+                  "all_equal_triple": "all-equal is invariant under complementation"
+                },
+                "selected_tables_sha256": "a52ce893775839abe2c2d3d5f7371f858591640358172ee77f0ff75a21e0dd34",
+                "tables": [
+                  {
+                    "table": 33153,
+                    "table_hex": "8181",
+                    "layer_counts": [
+                      1,
+                      1,
+                      0,
+                      1,
+                      1
+                    ],
+                    "family": "all_equal_triple",
+                    "anf_coefficients": [
+                      1,
+                      -1,
+                      -1,
+                      1,
+                      -1,
+                      1,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 34833,
+                    "table_hex": "8811",
+                    "layer_counts": [
+                      1,
+                      1,
+                      0,
+                      1,
+                      1
+                    ],
+                    "family": "all_equal_triple",
+                    "anf_coefficients": [
+                      1,
+                      -1,
+                      -1,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      -1,
+                      1,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 34952,
+                    "table_hex": "8888",
+                    "layer_counts": [
+                      0,
+                      0,
+                      1,
+                      2,
+                      1
+                    ],
+                    "family": "selected_pair_on_complementary_slice",
+                    "anf_coefficients": [
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 40965,
+                    "table_hex": "a005",
+                    "layer_counts": [
+                      1,
+                      1,
+                      0,
+                      1,
+                      1
+                    ],
+                    "family": "all_equal_triple",
+                    "anf_coefficients": [
+                      1,
+                      -1,
+                      0,
+                      0,
+                      -1,
+                      1,
+                      0,
+                      0,
+                      -1,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 41120,
+                    "table_hex": "a0a0",
+                    "layer_counts": [
+                      0,
+                      0,
+                      1,
+                      2,
+                      1
+                    ],
+                    "family": "selected_pair_on_complementary_slice",
+                    "anf_coefficients": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 43520,
+                    "table_hex": "aa00",
+                    "layer_counts": [
+                      0,
+                      0,
+                      1,
+                      2,
+                      1
+                    ],
+                    "family": "selected_pair_on_complementary_slice",
+                    "anf_coefficients": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 49155,
+                    "table_hex": "c003",
+                    "layer_counts": [
+                      1,
+                      1,
+                      0,
+                      1,
+                      1
+                    ],
+                    "family": "all_equal_triple",
+                    "anf_coefficients": [
+                      1,
+                      0,
+                      -1,
+                      0,
+                      -1,
+                      0,
+                      1,
+                      0,
+                      -1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 49344,
+                    "table_hex": "c0c0",
+                    "layer_counts": [
+                      0,
+                      0,
+                      1,
+                      2,
+                      1
+                    ],
+                    "family": "selected_pair_on_complementary_slice",
+                    "anf_coefficients": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 52224,
+                    "table_hex": "cc00",
+                    "layer_counts": [
+                      0,
+                      0,
+                      1,
+                      2,
+                      1
+                    ],
+                    "family": "selected_pair_on_complementary_slice",
+                    "anf_coefficients": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 61440,
+                    "table_hex": "f000",
+                    "layer_counts": [
+                      0,
+                      0,
+                      1,
+                      2,
+                      1
+                    ],
+                    "family": "selected_pair_on_complementary_slice",
+                    "anf_coefficients": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0
+                    ]
+                  }
+                ],
+                "proved": true
+              },
+              "original_slice_families": [
+                "omitted_pair",
+                "all_equal_triple"
+              ],
+              "proved": true
+            },
+            "families": [
+              {
+                "baseline": "complement_literal",
+                "baseline_b": 42,
+                "baseline_scaled_mean": 42,
+                "lift": "omitted_pair",
+                "lift_scaled_mass": 40,
+                "total_scaled_mean": 82,
+                "baseline_offset": 3,
+                "lift_offset_increment": -1,
+                "coefficient_offset": 2,
+                "coefficient_congruence": "21 divides I+P-2"
+              },
+              {
+                "baseline": "complement_literal",
+                "baseline_b": 42,
+                "baseline_scaled_mean": 42,
+                "lift": "all_equal_triple",
+                "lift_scaled_mass": 40,
+                "total_scaled_mean": 82,
+                "baseline_offset": 3,
+                "lift_offset_increment": 1,
+                "coefficient_offset": 4,
+                "coefficient_congruence": "21 divides I+P-4"
+              },
+              {
+                "baseline": "XNOR",
+                "baseline_b": 2,
+                "baseline_scaled_mean": 42,
+                "lift": "omitted_pair",
+                "lift_scaled_mass": 40,
+                "total_scaled_mean": 82,
+                "baseline_offset": 4,
+                "lift_offset_increment": -1,
+                "coefficient_offset": 3,
+                "coefficient_congruence": "21 divides I+P-3"
+              },
+              {
+                "baseline": "XNOR",
+                "baseline_b": 2,
+                "baseline_scaled_mean": 42,
+                "lift": "all_equal_triple",
+                "lift_scaled_mass": 40,
+                "total_scaled_mean": 82,
+                "baseline_offset": 4,
+                "lift_offset_increment": 1,
+                "coefficient_offset": 5,
+                "coefficient_congruence": "21 divides I+P-5"
+              }
+            ],
+            "proved": true
+          },
+          "common_row_sum_identity": "sum q_L=p*P_L-3p-(2p-4)=hT-P_L",
+          "equal_hard_means_force_one_common_P": true,
+          "different_offsets_cannot_mix_mod_q": true,
+          "family_ledgers": [
+            {
+              "baseline": "complement_literal",
+              "baseline_b": 42,
+              "baseline_scaled_mean": 42,
+              "lift": "omitted_pair",
+              "lift_scaled_mass": 40,
+              "total_scaled_mean": 82,
+              "baseline_offset": 3,
+              "lift_offset_increment": -1,
+              "coefficient_offset": 2,
+              "coefficient_congruence": "21 divides I+P-2",
+              "hard_parallel_upper_bound": 9,
+              "hard_parallel_candidates": [
+                2
+              ],
+              "forced_hard_parallel_count": 2,
+              "hard_edge_count": 44,
+              "opposite_edge_count": 167,
+              "hard_sign_times_global_T": -123,
+              "opposite_mean_formula": "a(Q)=44Q+(-123)-129",
+              "last_negative_Q": 5,
+              "last_negative_mean": -32,
+              "forbidden_mass_twelve_Q": 6,
+              "mass_twelve_Q_mean": 12,
+              "forced_low_Q": 7,
+              "surplus_after_every_Q_at_least_forced_low_Q": 13,
+              "directions_at_forced_low_Q_at_least": 9,
+              "forced_low_Q_scaled_mean": 56,
+              "nonzero_b_floor_and_lift_rows": [
+                [
+                  2,
+                  44,
+                  12
+                ],
+                [
+                  42,
+                  44,
+                  12
+                ]
+              ],
+              "forced_low_Q_is_b_zero": true,
+              "forced_local_cell": "A=2C, 4p E[C]=p+13",
+              "excluded": true,
+              "proved": true
+            },
+            {
+              "baseline": "complement_literal",
+              "baseline_b": 42,
+              "baseline_scaled_mean": 42,
+              "lift": "all_equal_triple",
+              "lift_scaled_mass": 40,
+              "total_scaled_mean": 82,
+              "baseline_offset": 3,
+              "lift_offset_increment": 1,
+              "coefficient_offset": 4,
+              "coefficient_congruence": "21 divides I+P-4",
+              "hard_parallel_upper_bound": 9,
+              "hard_parallel_candidates": [
+                4
+              ],
+              "forced_hard_parallel_count": 4,
+              "hard_edge_count": 88,
+              "opposite_edge_count": 123,
+              "hard_sign_times_global_T": -35,
+              "opposite_mean_formula": "a(Q)=44Q+(-35)-129",
+              "last_negative_Q": 3,
+              "last_negative_mean": -32,
+              "forbidden_mass_twelve_Q": 4,
+              "mass_twelve_Q_mean": 12,
+              "forced_low_Q": 5,
+              "surplus_after_every_Q_at_least_forced_low_Q": 13,
+              "directions_at_forced_low_Q_at_least": 9,
+              "forced_low_Q_scaled_mean": 56,
+              "nonzero_b_floor_and_lift_rows": [
+                [
+                  2,
+                  44,
+                  12
+                ],
+                [
+                  42,
+                  44,
+                  12
+                ]
+              ],
+              "forced_low_Q_is_b_zero": true,
+              "forced_local_cell": "A=2C, 4p E[C]=p+13",
+              "excluded": true,
+              "proved": true
+            },
+            {
+              "baseline": "XNOR",
+              "baseline_b": 2,
+              "baseline_scaled_mean": 42,
+              "lift": "omitted_pair",
+              "lift_scaled_mass": 40,
+              "total_scaled_mean": 82,
+              "baseline_offset": 4,
+              "lift_offset_increment": -1,
+              "coefficient_offset": 3,
+              "coefficient_congruence": "21 divides I+P-3",
+              "hard_parallel_upper_bound": 9,
+              "hard_parallel_candidates": [
+                3
+              ],
+              "forced_hard_parallel_count": 3,
+              "hard_edge_count": 66,
+              "opposite_edge_count": 145,
+              "hard_sign_times_global_T": -79,
+              "opposite_mean_formula": "a(Q)=44Q+(-79)-129",
+              "last_negative_Q": 4,
+              "last_negative_mean": -32,
+              "forbidden_mass_twelve_Q": 5,
+              "mass_twelve_Q_mean": 12,
+              "forced_low_Q": 6,
+              "surplus_after_every_Q_at_least_forced_low_Q": 13,
+              "directions_at_forced_low_Q_at_least": 9,
+              "forced_low_Q_scaled_mean": 56,
+              "nonzero_b_floor_and_lift_rows": [
+                [
+                  2,
+                  44,
+                  12
+                ],
+                [
+                  42,
+                  44,
+                  12
+                ]
+              ],
+              "forced_low_Q_is_b_zero": true,
+              "forced_local_cell": "A=2C, 4p E[C]=p+13",
+              "excluded": true,
+              "proved": true
+            },
+            {
+              "baseline": "XNOR",
+              "baseline_b": 2,
+              "baseline_scaled_mean": 42,
+              "lift": "all_equal_triple",
+              "lift_scaled_mass": 40,
+              "total_scaled_mean": 82,
+              "baseline_offset": 4,
+              "lift_offset_increment": 1,
+              "coefficient_offset": 5,
+              "coefficient_congruence": "21 divides I+P-5",
+              "hard_parallel_upper_bound": 9,
+              "hard_parallel_candidates": [
+                5
+              ],
+              "forced_hard_parallel_count": 5,
+              "hard_edge_count": 110,
+              "opposite_edge_count": 101,
+              "hard_sign_times_global_T": 9,
+              "opposite_mean_formula": "a(Q)=44Q+(9)-129",
+              "last_negative_Q": 2,
+              "last_negative_mean": -32,
+              "forbidden_mass_twelve_Q": 3,
+              "mass_twelve_Q_mean": 12,
+              "forced_low_Q": 4,
+              "surplus_after_every_Q_at_least_forced_low_Q": 13,
+              "directions_at_forced_low_Q_at_least": 9,
+              "forced_low_Q_scaled_mean": 56,
+              "nonzero_b_floor_and_lift_rows": [
+                [
+                  2,
+                  44,
+                  12
+                ],
+                [
+                  42,
+                  44,
+                  12
+                ]
+              ],
+              "forced_low_Q_is_b_zero": true,
+              "forced_local_cell": "A=2C, 4p E[C]=p+13",
+              "excluded": true,
+              "proved": true
+            }
+          ],
+          "common_forced_opposite_local_mass": "p+13",
+          "local_mass_exclusion": {
+            "p": 43,
+            "slice": "J(43,22)",
+            "statement": "no nonzero nonnegative integer-valued quadratic C has 4p E[C]=p+13",
+            "height_at_least_two": {
+              "height_lower_bound": "8",
+              "stabilizer_height_upper_bound": "14",
+              "paired_cube_average_upper_bound": "7/11",
+              "some_paired_cube_has_mean_exactly": "1/2",
+              "half_mean_cube_height_upper_bound": 3,
+              "proved": true
+            },
+            "height_one_boolean": {
+              "target_density": "14/43",
+              "relevant_pair_influence_floor": "110/1763",
+              "total_influence_upper_bound": "17052/1849",
+              "largest_zero_influence_class_complement_bound": "699132/101695",
+              "eight_gap_polynomial": "p^4-25p^3+229p^2-559p+338",
+              "eight_gap_at_p_equals_x_plus_31": [
+                1,
+                99,
+                3670,
+                60728,
+                381824
+              ],
+              "junta_coordinates_at_most": 7,
+              "seven_less_than_both_complementary_slice_sizes": true,
+              "all_junta_patterns_extend_to_slice": true,
+              "cube_coordinates_actually_needed_at_most": 4,
+              "possible_four_bit_density_values": [
+                "0",
+                "10/43",
+                "11/43",
+                "21/43",
+                "22/43",
+                "32/43",
+                "33/43",
+                "1"
+              ],
+              "target_absent": true,
+              "proved": true
+            },
+            "finite_prime_or_slice_census_used": false,
+            "fixed_four_bit_catalog_reused": true,
+            "excluded": true,
+            "proved": true
+          },
+          "excluded": true,
+          "proved": true
+        }
+      },
+      "all_boundary_sizes_excluded": true,
+      "finite_prime_graph_or_slice_census_used": false,
+      "residual_ii_layer_excluded": true,
+      "proved": true
+    },
+    "47": {
+      "p": 47,
+      "p_mod_4": 3,
+      "layer_index_t": 21,
+      "original_k": 230,
+      "H_edge_count": 231,
+      "residue_ledger": {
+        "p": 47,
+        "q": 23,
+        "m": 24,
+        "layer_index_t": 21,
+        "original_k": 230,
+        "H_edge_count": 231,
+        "guaranteed_isolated_vertices": 1748,
+        "phase_one_mean_form": "a_L=2u+48k_L",
+        "phase_one_quotient_sum": "sum k_L=m+t-u",
+        "phase_one_low_b_values": [
+          2,
+          46
+        ],
+        "residue_rows": [
+          {
+            "u": 0,
+            "quotient_sum": 45,
+            "k_zero_mean": 0,
+            "k_one_mean": 48,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 1,
+            "quotient_sum": 44,
+            "k_zero_mean": 2,
+            "k_one_mean": 50,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 2,
+            "quotient_sum": 43,
+            "k_zero_mean": 4,
+            "k_one_mean": 52,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 3,
+            "quotient_sum": 42,
+            "k_zero_mean": 6,
+            "k_one_mean": 54,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 4,
+            "quotient_sum": 41,
+            "k_zero_mean": 8,
+            "k_one_mean": 56,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 5,
+            "quotient_sum": 40,
+            "k_zero_mean": 10,
+            "k_one_mean": 58,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 6,
+            "quotient_sum": 39,
+            "k_zero_mean": 12,
+            "k_one_mean": 60,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 7,
+            "quotient_sum": 38,
+            "k_zero_mean": 14,
+            "k_one_mean": 62,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 8,
+            "quotient_sum": 37,
+            "k_zero_mean": 16,
+            "k_one_mean": 64,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 9,
+            "quotient_sum": 36,
+            "k_zero_mean": 18,
+            "k_one_mean": 66,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 10,
+            "quotient_sum": 35,
+            "k_zero_mean": 20,
+            "k_one_mean": 68,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 11,
+            "quotient_sum": 34,
+            "k_zero_mean": 22,
+            "k_one_mean": 70,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 12,
+            "quotient_sum": 33,
+            "k_zero_mean": 24,
+            "k_one_mean": 72,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 13,
+            "quotient_sum": 32,
+            "k_zero_mean": 26,
+            "k_one_mean": 74,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 14,
+            "quotient_sum": 31,
+            "k_zero_mean": 28,
+            "k_one_mean": 76,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 15,
+            "quotient_sum": 30,
+            "k_zero_mean": 30,
+            "k_one_mean": 78,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 16,
+            "quotient_sum": 29,
+            "k_zero_mean": 32,
+            "k_one_mean": 80,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 17,
+            "quotient_sum": 28,
+            "k_zero_mean": 34,
+            "k_one_mean": 82,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 18,
+            "quotient_sum": 27,
+            "k_zero_mean": 36,
+            "k_one_mean": 84,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 19,
+            "quotient_sum": 26,
+            "k_zero_mean": 38,
+            "k_one_mean": 86,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 20,
+            "quotient_sum": 25,
+            "k_zero_mean": 40,
+            "k_one_mean": 88,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 21,
+            "quotient_sum": 24,
+            "k_zero_mean": 42,
+            "k_one_mean": 90,
+            "status": "hard_sharp_p_minus_3_lift"
+          },
+          {
+            "u": 22,
+            "quotient_sum": 23,
+            "k_zero_mean": 44,
+            "k_one_mean": 92,
+            "status": "excluded: k=0 is sub-floor but sum k<m"
+          },
+          {
+            "u": 23,
+            "quotient_sum": 22,
+            "k_zero_mean": 46,
+            "k_one_mean": 94,
+            "status": "old endpoint A/C dichotomy"
+          }
+        ],
+        "surviving_residues": [
+          21,
+          23
+        ],
+        "new_branch_all_quotients_equal_one": true,
+        "new_branch_scaled_mean": 90,
+        "new_branch_baseline_scaled_mean": 46,
+        "new_branch_sharp_lift_mass": 44,
+        "possible_branches": [
+          "hard_b2",
+          "p3_all_low_b_p_minus_1",
+          "hard_sharp_p_minus_3_lift"
+        ],
+        "proved": true
+      },
+      "branch_exclusions": {
+        "hard_b2": {
+          "branch": "hard_b2",
+          "hard_edge_count": 118,
+          "opposite_edge_count": 113,
+          "hard_sign_times_global_T": 5,
+          "minimum_opposite_Q": 3,
+          "minimum_opposite_mean": 8,
+          "minimum_cell_excluded": true,
+          "forced_next_Q": 4,
+          "forced_next_scaled_mean": 56,
+          "surplus_after_raising_every_Q": 17,
+          "directions_at_next_Q_at_least": 7,
+          "local_dependency": "Proposition 15.752 p+9 exclusion",
+          "excluded": true,
+          "proved": true
+        },
+        "p3_all_low_b_p_minus_1": {
+          "branch": "p3_all_low_b_p_minus_1",
+          "hard_edge_count": 94,
+          "opposite_edge_count": 137,
+          "hard_sign_times_global_T": -43,
+          "minimum_opposite_Q": 4,
+          "minimum_opposite_mean": 8,
+          "minimum_cell_excluded": true,
+          "forced_next_Q": 5,
+          "forced_next_scaled_mean": 56,
+          "surplus_after_raising_every_Q": 17,
+          "directions_at_next_Q_at_least": 7,
+          "local_dependency": "Proposition 15.752 p+9 exclusion",
+          "excluded": true,
+          "proved": true
+        },
+        "hard_sharp_p_minus_3_lift": {
+          "branch": "hard_sharp_p_minus_3_lift",
+          "hard_family_catalog": {
+            "p": 47,
+            "parity_baselines": {
+              "b=2": "A_0=(1-x_i-x_j)^2, target 4+z_i*z_j, offset 4",
+              "b=p-1": "A_0=1-x_j, target 4-z_j, offset 3"
+            },
+            "difference_lift": "B=(A-A_0)/2",
+            "difference_is_nonzero_nonnegative_integral": true,
+            "difference_scaled_mass": "4p E[B]=p-3",
+            "sharp_lift_dependency": "Proposition 15.688",
+            "sharp_lift_forces_boolean": true,
+            "boolean_classification": {
+              "p": 47,
+              "complementary_slice": "J(47,23)",
+              "density": "11/47",
+              "relevant_pair_influence_floor": "44/705",
+              "total_influence_upper_bound": "18216/2209",
+              "largest_zero_influence_class_complement_bound": "12420/2209",
+              "junta_coordinates_at_most": 5,
+              "five_less_than_both_slice_sides": true,
+              "all_junta_patterns_extend_to_slice": true,
+              "symmetrized_representative_extends_to_boolean_cube": true,
+              "cube_total_influence_upper_bound": 2,
+              "cube_relevant_coordinate_influence_floor": "1/2",
+              "cube_active_coordinates_at_most": 4,
+              "matching_four_bit_layer_profiles": [
+                [
+                  1,
+                  1,
+                  0,
+                  1,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  1,
+                  2,
+                  1
+                ]
+              ],
+              "four_bit_classification": {
+                "source_catalog_valid_tables": 222,
+                "source_catalog_sha256": "63c9daf2b117b540a5199b1b007cb4e6997ba01704fbc6017efaaa9735859396",
+                "target_symbolic_density": "(p-3)/(4p)",
+                "target_layer_profiles": [
+                  [
+                    0,
+                    0,
+                    1,
+                    2,
+                    1
+                  ],
+                  [
+                    1,
+                    1,
+                    0,
+                    1,
+                    1
+                  ]
+                ],
+                "selected_table_count": 10,
+                "selected_pair_table_count": 6,
+                "all_equal_triple_table_count": 4,
+                "complement_back_to_original_slice": {
+                  "selected_pair": "(1-x_i)(1-x_j), an omitted-pair lift",
+                  "all_equal_triple": "all-equal is invariant under complementation"
+                },
+                "selected_tables_sha256": "a52ce893775839abe2c2d3d5f7371f858591640358172ee77f0ff75a21e0dd34",
+                "tables": [
+                  {
+                    "table": 33153,
+                    "table_hex": "8181",
+                    "layer_counts": [
+                      1,
+                      1,
+                      0,
+                      1,
+                      1
+                    ],
+                    "family": "all_equal_triple",
+                    "anf_coefficients": [
+                      1,
+                      -1,
+                      -1,
+                      1,
+                      -1,
+                      1,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 34833,
+                    "table_hex": "8811",
+                    "layer_counts": [
+                      1,
+                      1,
+                      0,
+                      1,
+                      1
+                    ],
+                    "family": "all_equal_triple",
+                    "anf_coefficients": [
+                      1,
+                      -1,
+                      -1,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      -1,
+                      1,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 34952,
+                    "table_hex": "8888",
+                    "layer_counts": [
+                      0,
+                      0,
+                      1,
+                      2,
+                      1
+                    ],
+                    "family": "selected_pair_on_complementary_slice",
+                    "anf_coefficients": [
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 40965,
+                    "table_hex": "a005",
+                    "layer_counts": [
+                      1,
+                      1,
+                      0,
+                      1,
+                      1
+                    ],
+                    "family": "all_equal_triple",
+                    "anf_coefficients": [
+                      1,
+                      -1,
+                      0,
+                      0,
+                      -1,
+                      1,
+                      0,
+                      0,
+                      -1,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 41120,
+                    "table_hex": "a0a0",
+                    "layer_counts": [
+                      0,
+                      0,
+                      1,
+                      2,
+                      1
+                    ],
+                    "family": "selected_pair_on_complementary_slice",
+                    "anf_coefficients": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 43520,
+                    "table_hex": "aa00",
+                    "layer_counts": [
+                      0,
+                      0,
+                      1,
+                      2,
+                      1
+                    ],
+                    "family": "selected_pair_on_complementary_slice",
+                    "anf_coefficients": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 49155,
+                    "table_hex": "c003",
+                    "layer_counts": [
+                      1,
+                      1,
+                      0,
+                      1,
+                      1
+                    ],
+                    "family": "all_equal_triple",
+                    "anf_coefficients": [
+                      1,
+                      0,
+                      -1,
+                      0,
+                      -1,
+                      0,
+                      1,
+                      0,
+                      -1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 49344,
+                    "table_hex": "c0c0",
+                    "layer_counts": [
+                      0,
+                      0,
+                      1,
+                      2,
+                      1
+                    ],
+                    "family": "selected_pair_on_complementary_slice",
+                    "anf_coefficients": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 52224,
+                    "table_hex": "cc00",
+                    "layer_counts": [
+                      0,
+                      0,
+                      1,
+                      2,
+                      1
+                    ],
+                    "family": "selected_pair_on_complementary_slice",
+                    "anf_coefficients": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 61440,
+                    "table_hex": "f000",
+                    "layer_counts": [
+                      0,
+                      0,
+                      1,
+                      2,
+                      1
+                    ],
+                    "family": "selected_pair_on_complementary_slice",
+                    "anf_coefficients": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0
+                    ]
+                  }
+                ],
+                "proved": true
+              },
+              "original_slice_families": [
+                "omitted_pair",
+                "all_equal_triple"
+              ],
+              "proved": true
+            },
+            "families": [
+              {
+                "baseline": "complement_literal",
+                "baseline_b": 46,
+                "baseline_scaled_mean": 46,
+                "lift": "omitted_pair",
+                "lift_scaled_mass": 44,
+                "total_scaled_mean": 90,
+                "baseline_offset": 3,
+                "lift_offset_increment": -1,
+                "coefficient_offset": 2,
+                "coefficient_congruence": "23 divides I+P-2"
+              },
+              {
+                "baseline": "complement_literal",
+                "baseline_b": 46,
+                "baseline_scaled_mean": 46,
+                "lift": "all_equal_triple",
+                "lift_scaled_mass": 44,
+                "total_scaled_mean": 90,
+                "baseline_offset": 3,
+                "lift_offset_increment": 1,
+                "coefficient_offset": 4,
+                "coefficient_congruence": "23 divides I+P-4"
+              },
+              {
+                "baseline": "XNOR",
+                "baseline_b": 2,
+                "baseline_scaled_mean": 46,
+                "lift": "omitted_pair",
+                "lift_scaled_mass": 44,
+                "total_scaled_mean": 90,
+                "baseline_offset": 4,
+                "lift_offset_increment": -1,
+                "coefficient_offset": 3,
+                "coefficient_congruence": "23 divides I+P-3"
+              },
+              {
+                "baseline": "XNOR",
+                "baseline_b": 2,
+                "baseline_scaled_mean": 46,
+                "lift": "all_equal_triple",
+                "lift_scaled_mass": 44,
+                "total_scaled_mean": 90,
+                "baseline_offset": 4,
+                "lift_offset_increment": 1,
+                "coefficient_offset": 5,
+                "coefficient_congruence": "23 divides I+P-5"
+              }
+            ],
+            "proved": true
+          },
+          "common_row_sum_identity": "sum q_L=p*P_L-3p-(2p-4)=hT-P_L",
+          "equal_hard_means_force_one_common_P": true,
+          "different_offsets_cannot_mix_mod_q": true,
+          "family_ledgers": [
+            {
+              "baseline": "complement_literal",
+              "baseline_b": 46,
+              "baseline_scaled_mean": 46,
+              "lift": "omitted_pair",
+              "lift_scaled_mass": 44,
+              "total_scaled_mean": 90,
+              "baseline_offset": 3,
+              "lift_offset_increment": -1,
+              "coefficient_offset": 2,
+              "coefficient_congruence": "23 divides I+P-2",
+              "hard_parallel_upper_bound": 9,
+              "hard_parallel_candidates": [
+                2
+              ],
+              "forced_hard_parallel_count": 2,
+              "hard_edge_count": 48,
+              "opposite_edge_count": 183,
+              "hard_sign_times_global_T": -135,
+              "opposite_mean_formula": "a(Q)=48Q+(-135)-141",
+              "last_negative_Q": 5,
+              "last_negative_mean": -36,
+              "forbidden_mass_twelve_Q": 6,
+              "mass_twelve_Q_mean": 12,
+              "forced_low_Q": 7,
+              "surplus_after_every_Q_at_least_forced_low_Q": 15,
+              "directions_at_forced_low_Q_at_least": 9,
+              "forced_low_Q_scaled_mean": 60,
+              "nonzero_b_floor_and_lift_rows": [
+                [
+                  2,
+                  48,
+                  12
+                ],
+                [
+                  46,
+                  48,
+                  12
+                ]
+              ],
+              "forced_low_Q_is_b_zero": true,
+              "forced_local_cell": "A=2C, 4p E[C]=p+13",
+              "excluded": true,
+              "proved": true
+            },
+            {
+              "baseline": "complement_literal",
+              "baseline_b": 46,
+              "baseline_scaled_mean": 46,
+              "lift": "all_equal_triple",
+              "lift_scaled_mass": 44,
+              "total_scaled_mean": 90,
+              "baseline_offset": 3,
+              "lift_offset_increment": 1,
+              "coefficient_offset": 4,
+              "coefficient_congruence": "23 divides I+P-4",
+              "hard_parallel_upper_bound": 9,
+              "hard_parallel_candidates": [
+                4
+              ],
+              "forced_hard_parallel_count": 4,
+              "hard_edge_count": 96,
+              "opposite_edge_count": 135,
+              "hard_sign_times_global_T": -39,
+              "opposite_mean_formula": "a(Q)=48Q+(-39)-141",
+              "last_negative_Q": 3,
+              "last_negative_mean": -36,
+              "forbidden_mass_twelve_Q": 4,
+              "mass_twelve_Q_mean": 12,
+              "forced_low_Q": 5,
+              "surplus_after_every_Q_at_least_forced_low_Q": 15,
+              "directions_at_forced_low_Q_at_least": 9,
+              "forced_low_Q_scaled_mean": 60,
+              "nonzero_b_floor_and_lift_rows": [
+                [
+                  2,
+                  48,
+                  12
+                ],
+                [
+                  46,
+                  48,
+                  12
+                ]
+              ],
+              "forced_low_Q_is_b_zero": true,
+              "forced_local_cell": "A=2C, 4p E[C]=p+13",
+              "excluded": true,
+              "proved": true
+            },
+            {
+              "baseline": "XNOR",
+              "baseline_b": 2,
+              "baseline_scaled_mean": 46,
+              "lift": "omitted_pair",
+              "lift_scaled_mass": 44,
+              "total_scaled_mean": 90,
+              "baseline_offset": 4,
+              "lift_offset_increment": -1,
+              "coefficient_offset": 3,
+              "coefficient_congruence": "23 divides I+P-3",
+              "hard_parallel_upper_bound": 9,
+              "hard_parallel_candidates": [
+                3
+              ],
+              "forced_hard_parallel_count": 3,
+              "hard_edge_count": 72,
+              "opposite_edge_count": 159,
+              "hard_sign_times_global_T": -87,
+              "opposite_mean_formula": "a(Q)=48Q+(-87)-141",
+              "last_negative_Q": 4,
+              "last_negative_mean": -36,
+              "forbidden_mass_twelve_Q": 5,
+              "mass_twelve_Q_mean": 12,
+              "forced_low_Q": 6,
+              "surplus_after_every_Q_at_least_forced_low_Q": 15,
+              "directions_at_forced_low_Q_at_least": 9,
+              "forced_low_Q_scaled_mean": 60,
+              "nonzero_b_floor_and_lift_rows": [
+                [
+                  2,
+                  48,
+                  12
+                ],
+                [
+                  46,
+                  48,
+                  12
+                ]
+              ],
+              "forced_low_Q_is_b_zero": true,
+              "forced_local_cell": "A=2C, 4p E[C]=p+13",
+              "excluded": true,
+              "proved": true
+            },
+            {
+              "baseline": "XNOR",
+              "baseline_b": 2,
+              "baseline_scaled_mean": 46,
+              "lift": "all_equal_triple",
+              "lift_scaled_mass": 44,
+              "total_scaled_mean": 90,
+              "baseline_offset": 4,
+              "lift_offset_increment": 1,
+              "coefficient_offset": 5,
+              "coefficient_congruence": "23 divides I+P-5",
+              "hard_parallel_upper_bound": 9,
+              "hard_parallel_candidates": [
+                5
+              ],
+              "forced_hard_parallel_count": 5,
+              "hard_edge_count": 120,
+              "opposite_edge_count": 111,
+              "hard_sign_times_global_T": 9,
+              "opposite_mean_formula": "a(Q)=48Q+(9)-141",
+              "last_negative_Q": 2,
+              "last_negative_mean": -36,
+              "forbidden_mass_twelve_Q": 3,
+              "mass_twelve_Q_mean": 12,
+              "forced_low_Q": 4,
+              "surplus_after_every_Q_at_least_forced_low_Q": 15,
+              "directions_at_forced_low_Q_at_least": 9,
+              "forced_low_Q_scaled_mean": 60,
+              "nonzero_b_floor_and_lift_rows": [
+                [
+                  2,
+                  48,
+                  12
+                ],
+                [
+                  46,
+                  48,
+                  12
+                ]
+              ],
+              "forced_low_Q_is_b_zero": true,
+              "forced_local_cell": "A=2C, 4p E[C]=p+13",
+              "excluded": true,
+              "proved": true
+            }
+          ],
+          "common_forced_opposite_local_mass": "p+13",
+          "local_mass_exclusion": {
+            "p": 47,
+            "slice": "J(47,24)",
+            "statement": "no nonzero nonnegative integer-valued quadratic C has 4p E[C]=p+13",
+            "height_at_least_two": {
+              "height_lower_bound": "9",
+              "stabilizer_height_upper_bound": "15",
+              "paired_cube_average_upper_bound": "5/8",
+              "some_paired_cube_has_mean_exactly": "1/2",
+              "half_mean_cube_height_upper_bound": 3,
+              "proved": true
+            },
+            "height_one_boolean": {
+              "target_density": "15/47",
+              "relevant_pair_influence_floor": "44/705",
+              "total_influence_upper_bound": "22080/2209",
+              "largest_zero_influence_class_complement_bound": "165600/24299",
+              "eight_gap_polynomial": "p^4-25p^3+229p^2-559p+338",
+              "eight_gap_at_p_equals_x_plus_31": [
+                1,
+                99,
+                3670,
+                60728,
+                381824
+              ],
+              "junta_coordinates_at_most": 7,
+              "seven_less_than_both_complementary_slice_sizes": true,
+              "all_junta_patterns_extend_to_slice": true,
+              "cube_coordinates_actually_needed_at_most": 4,
+              "possible_four_bit_density_values": [
+                "0",
+                "11/47",
+                "12/47",
+                "23/47",
+                "24/47",
+                "35/47",
+                "36/47",
+                "1"
+              ],
+              "target_absent": true,
+              "proved": true
+            },
+            "finite_prime_or_slice_census_used": false,
+            "fixed_four_bit_catalog_reused": true,
+            "excluded": true,
+            "proved": true
+          },
+          "excluded": true,
+          "proved": true
+        }
+      },
+      "all_boundary_sizes_excluded": true,
+      "finite_prime_graph_or_slice_census_used": false,
+      "residual_ii_layer_excluded": true,
+      "proved": true
+    },
+    "59": {
+      "p": 59,
+      "p_mod_4": 3,
+      "layer_index_t": 27,
+      "original_k": 290,
+      "H_edge_count": 291,
+      "residue_ledger": {
+        "p": 59,
+        "q": 29,
+        "m": 30,
+        "layer_index_t": 27,
+        "original_k": 290,
+        "H_edge_count": 291,
+        "guaranteed_isolated_vertices": 2900,
+        "phase_one_mean_form": "a_L=2u+60k_L",
+        "phase_one_quotient_sum": "sum k_L=m+t-u",
+        "phase_one_low_b_values": [
+          2,
+          58
+        ],
+        "residue_rows": [
+          {
+            "u": 0,
+            "quotient_sum": 57,
+            "k_zero_mean": 0,
+            "k_one_mean": 60,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 1,
+            "quotient_sum": 56,
+            "k_zero_mean": 2,
+            "k_one_mean": 62,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 2,
+            "quotient_sum": 55,
+            "k_zero_mean": 4,
+            "k_one_mean": 64,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 3,
+            "quotient_sum": 54,
+            "k_zero_mean": 6,
+            "k_one_mean": 66,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 4,
+            "quotient_sum": 53,
+            "k_zero_mean": 8,
+            "k_one_mean": 68,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 5,
+            "quotient_sum": 52,
+            "k_zero_mean": 10,
+            "k_one_mean": 70,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 6,
+            "quotient_sum": 51,
+            "k_zero_mean": 12,
+            "k_one_mean": 72,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 7,
+            "quotient_sum": 50,
+            "k_zero_mean": 14,
+            "k_one_mean": 74,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 8,
+            "quotient_sum": 49,
+            "k_zero_mean": 16,
+            "k_one_mean": 76,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 9,
+            "quotient_sum": 48,
+            "k_zero_mean": 18,
+            "k_one_mean": 78,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 10,
+            "quotient_sum": 47,
+            "k_zero_mean": 20,
+            "k_one_mean": 80,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 11,
+            "quotient_sum": 46,
+            "k_zero_mean": 22,
+            "k_one_mean": 82,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 12,
+            "quotient_sum": 45,
+            "k_zero_mean": 24,
+            "k_one_mean": 84,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 13,
+            "quotient_sum": 44,
+            "k_zero_mean": 26,
+            "k_one_mean": 86,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 14,
+            "quotient_sum": 43,
+            "k_zero_mean": 28,
+            "k_one_mean": 88,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 15,
+            "quotient_sum": 42,
+            "k_zero_mean": 30,
+            "k_one_mean": 90,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 16,
+            "quotient_sum": 41,
+            "k_zero_mean": 32,
+            "k_one_mean": 92,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 17,
+            "quotient_sum": 40,
+            "k_zero_mean": 34,
+            "k_one_mean": 94,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 18,
+            "quotient_sum": 39,
+            "k_zero_mean": 36,
+            "k_one_mean": 96,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 19,
+            "quotient_sum": 38,
+            "k_zero_mean": 38,
+            "k_one_mean": 98,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 20,
+            "quotient_sum": 37,
+            "k_zero_mean": 40,
+            "k_one_mean": 100,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 21,
+            "quotient_sum": 36,
+            "k_zero_mean": 42,
+            "k_one_mean": 102,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 22,
+            "quotient_sum": 35,
+            "k_zero_mean": 44,
+            "k_one_mean": 104,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 23,
+            "quotient_sum": 34,
+            "k_zero_mean": 46,
+            "k_one_mean": 106,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 24,
+            "quotient_sum": 33,
+            "k_zero_mean": 48,
+            "k_one_mean": 108,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 25,
+            "quotient_sum": 32,
+            "k_zero_mean": 50,
+            "k_one_mean": 110,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 26,
+            "quotient_sum": 31,
+            "k_zero_mean": 52,
+            "k_one_mean": 112,
+            "status": "excluded: k=0 is sub-floor and k=1 is a nonzero lift below p-3"
+          },
+          {
+            "u": 27,
+            "quotient_sum": 30,
+            "k_zero_mean": 54,
+            "k_one_mean": 114,
+            "status": "hard_sharp_p_minus_3_lift"
+          },
+          {
+            "u": 28,
+            "quotient_sum": 29,
+            "k_zero_mean": 56,
+            "k_one_mean": 116,
+            "status": "excluded: k=0 is sub-floor but sum k<m"
+          },
+          {
+            "u": 29,
+            "quotient_sum": 28,
+            "k_zero_mean": 58,
+            "k_one_mean": 118,
+            "status": "old endpoint A/C dichotomy"
+          }
+        ],
+        "surviving_residues": [
+          27,
+          29
+        ],
+        "new_branch_all_quotients_equal_one": true,
+        "new_branch_scaled_mean": 114,
+        "new_branch_baseline_scaled_mean": 58,
+        "new_branch_sharp_lift_mass": 56,
+        "possible_branches": [
+          "hard_b2",
+          "p3_all_low_b_p_minus_1",
+          "hard_sharp_p_minus_3_lift"
+        ],
+        "proved": true
+      },
+      "branch_exclusions": {
+        "hard_b2": {
+          "branch": "hard_b2",
+          "hard_edge_count": 148,
+          "opposite_edge_count": 143,
+          "hard_sign_times_global_T": 5,
+          "minimum_opposite_Q": 3,
+          "minimum_opposite_mean": 8,
+          "minimum_cell_excluded": true,
+          "forced_next_Q": 4,
+          "forced_next_scaled_mean": 68,
+          "surplus_after_raising_every_Q": 23,
+          "directions_at_next_Q_at_least": 7,
+          "local_dependency": "Proposition 15.752 p+9 exclusion",
+          "excluded": true,
+          "proved": true
+        },
+        "p3_all_low_b_p_minus_1": {
+          "branch": "p3_all_low_b_p_minus_1",
+          "hard_edge_count": 118,
+          "opposite_edge_count": 173,
+          "hard_sign_times_global_T": -55,
+          "minimum_opposite_Q": 4,
+          "minimum_opposite_mean": 8,
+          "minimum_cell_excluded": true,
+          "forced_next_Q": 5,
+          "forced_next_scaled_mean": 68,
+          "surplus_after_raising_every_Q": 23,
+          "directions_at_next_Q_at_least": 7,
+          "local_dependency": "Proposition 15.752 p+9 exclusion",
+          "excluded": true,
+          "proved": true
+        },
+        "hard_sharp_p_minus_3_lift": {
+          "branch": "hard_sharp_p_minus_3_lift",
+          "hard_family_catalog": {
+            "p": 59,
+            "parity_baselines": {
+              "b=2": "A_0=(1-x_i-x_j)^2, target 4+z_i*z_j, offset 4",
+              "b=p-1": "A_0=1-x_j, target 4-z_j, offset 3"
+            },
+            "difference_lift": "B=(A-A_0)/2",
+            "difference_is_nonzero_nonnegative_integral": true,
+            "difference_scaled_mass": "4p E[B]=p-3",
+            "sharp_lift_dependency": "Proposition 15.688",
+            "sharp_lift_forces_boolean": true,
+            "boolean_classification": {
+              "p": 59,
+              "complementary_slice": "J(59,29)",
+              "density": "14/59",
+              "relevant_pair_influence_floor": "70/1121",
+              "total_influence_upper_bound": "36540/3481",
+              "largest_zero_influence_class_complement_bound": "19836/3481",
+              "junta_coordinates_at_most": 5,
+              "five_less_than_both_slice_sides": true,
+              "all_junta_patterns_extend_to_slice": true,
+              "symmetrized_representative_extends_to_boolean_cube": true,
+              "cube_total_influence_upper_bound": 2,
+              "cube_relevant_coordinate_influence_floor": "1/2",
+              "cube_active_coordinates_at_most": 4,
+              "matching_four_bit_layer_profiles": [
+                [
+                  1,
+                  1,
+                  0,
+                  1,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  1,
+                  2,
+                  1
+                ]
+              ],
+              "four_bit_classification": {
+                "source_catalog_valid_tables": 222,
+                "source_catalog_sha256": "63c9daf2b117b540a5199b1b007cb4e6997ba01704fbc6017efaaa9735859396",
+                "target_symbolic_density": "(p-3)/(4p)",
+                "target_layer_profiles": [
+                  [
+                    0,
+                    0,
+                    1,
+                    2,
+                    1
+                  ],
+                  [
+                    1,
+                    1,
+                    0,
+                    1,
+                    1
+                  ]
+                ],
+                "selected_table_count": 10,
+                "selected_pair_table_count": 6,
+                "all_equal_triple_table_count": 4,
+                "complement_back_to_original_slice": {
+                  "selected_pair": "(1-x_i)(1-x_j), an omitted-pair lift",
+                  "all_equal_triple": "all-equal is invariant under complementation"
+                },
+                "selected_tables_sha256": "a52ce893775839abe2c2d3d5f7371f858591640358172ee77f0ff75a21e0dd34",
+                "tables": [
+                  {
+                    "table": 33153,
+                    "table_hex": "8181",
+                    "layer_counts": [
+                      1,
+                      1,
+                      0,
+                      1,
+                      1
+                    ],
+                    "family": "all_equal_triple",
+                    "anf_coefficients": [
+                      1,
+                      -1,
+                      -1,
+                      1,
+                      -1,
+                      1,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 34833,
+                    "table_hex": "8811",
+                    "layer_counts": [
+                      1,
+                      1,
+                      0,
+                      1,
+                      1
+                    ],
+                    "family": "all_equal_triple",
+                    "anf_coefficients": [
+                      1,
+                      -1,
+                      -1,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      -1,
+                      1,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 34952,
+                    "table_hex": "8888",
+                    "layer_counts": [
+                      0,
+                      0,
+                      1,
+                      2,
+                      1
+                    ],
+                    "family": "selected_pair_on_complementary_slice",
+                    "anf_coefficients": [
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 40965,
+                    "table_hex": "a005",
+                    "layer_counts": [
+                      1,
+                      1,
+                      0,
+                      1,
+                      1
+                    ],
+                    "family": "all_equal_triple",
+                    "anf_coefficients": [
+                      1,
+                      -1,
+                      0,
+                      0,
+                      -1,
+                      1,
+                      0,
+                      0,
+                      -1,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 41120,
+                    "table_hex": "a0a0",
+                    "layer_counts": [
+                      0,
+                      0,
+                      1,
+                      2,
+                      1
+                    ],
+                    "family": "selected_pair_on_complementary_slice",
+                    "anf_coefficients": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 43520,
+                    "table_hex": "aa00",
+                    "layer_counts": [
+                      0,
+                      0,
+                      1,
+                      2,
+                      1
+                    ],
+                    "family": "selected_pair_on_complementary_slice",
+                    "anf_coefficients": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 49155,
+                    "table_hex": "c003",
+                    "layer_counts": [
+                      1,
+                      1,
+                      0,
+                      1,
+                      1
+                    ],
+                    "family": "all_equal_triple",
+                    "anf_coefficients": [
+                      1,
+                      0,
+                      -1,
+                      0,
+                      -1,
+                      0,
+                      1,
+                      0,
+                      -1,
+                      0,
+                      1,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 49344,
+                    "table_hex": "c0c0",
+                    "layer_counts": [
+                      0,
+                      0,
+                      1,
+                      2,
+                      1
+                    ],
+                    "family": "selected_pair_on_complementary_slice",
+                    "anf_coefficients": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 52224,
+                    "table_hex": "cc00",
+                    "layer_counts": [
+                      0,
+                      0,
+                      1,
+                      2,
+                      1
+                    ],
+                    "family": "selected_pair_on_complementary_slice",
+                    "anf_coefficients": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "table": 61440,
+                    "table_hex": "f000",
+                    "layer_counts": [
+                      0,
+                      0,
+                      1,
+                      2,
+                      1
+                    ],
+                    "family": "selected_pair_on_complementary_slice",
+                    "anf_coefficients": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0
+                    ]
+                  }
+                ],
+                "proved": true
+              },
+              "original_slice_families": [
+                "omitted_pair",
+                "all_equal_triple"
+              ],
+              "proved": true
+            },
+            "families": [
+              {
+                "baseline": "complement_literal",
+                "baseline_b": 58,
+                "baseline_scaled_mean": 58,
+                "lift": "omitted_pair",
+                "lift_scaled_mass": 56,
+                "total_scaled_mean": 114,
+                "baseline_offset": 3,
+                "lift_offset_increment": -1,
+                "coefficient_offset": 2,
+                "coefficient_congruence": "29 divides I+P-2"
+              },
+              {
+                "baseline": "complement_literal",
+                "baseline_b": 58,
+                "baseline_scaled_mean": 58,
+                "lift": "all_equal_triple",
+                "lift_scaled_mass": 56,
+                "total_scaled_mean": 114,
+                "baseline_offset": 3,
+                "lift_offset_increment": 1,
+                "coefficient_offset": 4,
+                "coefficient_congruence": "29 divides I+P-4"
+              },
+              {
+                "baseline": "XNOR",
+                "baseline_b": 2,
+                "baseline_scaled_mean": 58,
+                "lift": "omitted_pair",
+                "lift_scaled_mass": 56,
+                "total_scaled_mean": 114,
+                "baseline_offset": 4,
+                "lift_offset_increment": -1,
+                "coefficient_offset": 3,
+                "coefficient_congruence": "29 divides I+P-3"
+              },
+              {
+                "baseline": "XNOR",
+                "baseline_b": 2,
+                "baseline_scaled_mean": 58,
+                "lift": "all_equal_triple",
+                "lift_scaled_mass": 56,
+                "total_scaled_mean": 114,
+                "baseline_offset": 4,
+                "lift_offset_increment": 1,
+                "coefficient_offset": 5,
+                "coefficient_congruence": "29 divides I+P-5"
+              }
+            ],
+            "proved": true
+          },
+          "common_row_sum_identity": "sum q_L=p*P_L-3p-(2p-4)=hT-P_L",
+          "equal_hard_means_force_one_common_P": true,
+          "different_offsets_cannot_mix_mod_q": true,
+          "family_ledgers": [
+            {
+              "baseline": "complement_literal",
+              "baseline_b": 58,
+              "baseline_scaled_mean": 58,
+              "lift": "omitted_pair",
+              "lift_scaled_mass": 56,
+              "total_scaled_mean": 114,
+              "baseline_offset": 3,
+              "lift_offset_increment": -1,
+              "coefficient_offset": 2,
+              "coefficient_congruence": "29 divides I+P-2",
+              "hard_parallel_upper_bound": 9,
+              "hard_parallel_candidates": [
+                2
+              ],
+              "forced_hard_parallel_count": 2,
+              "hard_edge_count": 60,
+              "opposite_edge_count": 231,
+              "hard_sign_times_global_T": -171,
+              "opposite_mean_formula": "a(Q)=60Q+(-171)-177",
+              "last_negative_Q": 5,
+              "last_negative_mean": -48,
+              "forbidden_mass_twelve_Q": 6,
+              "mass_twelve_Q_mean": 12,
+              "forced_low_Q": 7,
+              "surplus_after_every_Q_at_least_forced_low_Q": 21,
+              "directions_at_forced_low_Q_at_least": 9,
+              "forced_low_Q_scaled_mean": 72,
+              "nonzero_b_floor_and_lift_rows": [
+                [
+                  2,
+                  60,
+                  12
+                ],
+                [
+                  58,
+                  60,
+                  12
+                ]
+              ],
+              "forced_low_Q_is_b_zero": true,
+              "forced_local_cell": "A=2C, 4p E[C]=p+13",
+              "excluded": true,
+              "proved": true
+            },
+            {
+              "baseline": "complement_literal",
+              "baseline_b": 58,
+              "baseline_scaled_mean": 58,
+              "lift": "all_equal_triple",
+              "lift_scaled_mass": 56,
+              "total_scaled_mean": 114,
+              "baseline_offset": 3,
+              "lift_offset_increment": 1,
+              "coefficient_offset": 4,
+              "coefficient_congruence": "29 divides I+P-4",
+              "hard_parallel_upper_bound": 9,
+              "hard_parallel_candidates": [
+                4
+              ],
+              "forced_hard_parallel_count": 4,
+              "hard_edge_count": 120,
+              "opposite_edge_count": 171,
+              "hard_sign_times_global_T": -51,
+              "opposite_mean_formula": "a(Q)=60Q+(-51)-177",
+              "last_negative_Q": 3,
+              "last_negative_mean": -48,
+              "forbidden_mass_twelve_Q": 4,
+              "mass_twelve_Q_mean": 12,
+              "forced_low_Q": 5,
+              "surplus_after_every_Q_at_least_forced_low_Q": 21,
+              "directions_at_forced_low_Q_at_least": 9,
+              "forced_low_Q_scaled_mean": 72,
+              "nonzero_b_floor_and_lift_rows": [
+                [
+                  2,
+                  60,
+                  12
+                ],
+                [
+                  58,
+                  60,
+                  12
+                ]
+              ],
+              "forced_low_Q_is_b_zero": true,
+              "forced_local_cell": "A=2C, 4p E[C]=p+13",
+              "excluded": true,
+              "proved": true
+            },
+            {
+              "baseline": "XNOR",
+              "baseline_b": 2,
+              "baseline_scaled_mean": 58,
+              "lift": "omitted_pair",
+              "lift_scaled_mass": 56,
+              "total_scaled_mean": 114,
+              "baseline_offset": 4,
+              "lift_offset_increment": -1,
+              "coefficient_offset": 3,
+              "coefficient_congruence": "29 divides I+P-3",
+              "hard_parallel_upper_bound": 9,
+              "hard_parallel_candidates": [
+                3
+              ],
+              "forced_hard_parallel_count": 3,
+              "hard_edge_count": 90,
+              "opposite_edge_count": 201,
+              "hard_sign_times_global_T": -111,
+              "opposite_mean_formula": "a(Q)=60Q+(-111)-177",
+              "last_negative_Q": 4,
+              "last_negative_mean": -48,
+              "forbidden_mass_twelve_Q": 5,
+              "mass_twelve_Q_mean": 12,
+              "forced_low_Q": 6,
+              "surplus_after_every_Q_at_least_forced_low_Q": 21,
+              "directions_at_forced_low_Q_at_least": 9,
+              "forced_low_Q_scaled_mean": 72,
+              "nonzero_b_floor_and_lift_rows": [
+                [
+                  2,
+                  60,
+                  12
+                ],
+                [
+                  58,
+                  60,
+                  12
+                ]
+              ],
+              "forced_low_Q_is_b_zero": true,
+              "forced_local_cell": "A=2C, 4p E[C]=p+13",
+              "excluded": true,
+              "proved": true
+            },
+            {
+              "baseline": "XNOR",
+              "baseline_b": 2,
+              "baseline_scaled_mean": 58,
+              "lift": "all_equal_triple",
+              "lift_scaled_mass": 56,
+              "total_scaled_mean": 114,
+              "baseline_offset": 4,
+              "lift_offset_increment": 1,
+              "coefficient_offset": 5,
+              "coefficient_congruence": "29 divides I+P-5",
+              "hard_parallel_upper_bound": 9,
+              "hard_parallel_candidates": [
+                5
+              ],
+              "forced_hard_parallel_count": 5,
+              "hard_edge_count": 150,
+              "opposite_edge_count": 141,
+              "hard_sign_times_global_T": 9,
+              "opposite_mean_formula": "a(Q)=60Q+(9)-177",
+              "last_negative_Q": 2,
+              "last_negative_mean": -48,
+              "forbidden_mass_twelve_Q": 3,
+              "mass_twelve_Q_mean": 12,
+              "forced_low_Q": 4,
+              "surplus_after_every_Q_at_least_forced_low_Q": 21,
+              "directions_at_forced_low_Q_at_least": 9,
+              "forced_low_Q_scaled_mean": 72,
+              "nonzero_b_floor_and_lift_rows": [
+                [
+                  2,
+                  60,
+                  12
+                ],
+                [
+                  58,
+                  60,
+                  12
+                ]
+              ],
+              "forced_low_Q_is_b_zero": true,
+              "forced_local_cell": "A=2C, 4p E[C]=p+13",
+              "excluded": true,
+              "proved": true
+            }
+          ],
+          "common_forced_opposite_local_mass": "p+13",
+          "local_mass_exclusion": {
+            "p": 59,
+            "slice": "J(59,30)",
+            "statement": "no nonzero nonnegative integer-valued quadratic C has 4p E[C]=p+13",
+            "height_at_least_two": {
+              "height_lower_bound": "12",
+              "stabilizer_height_upper_bound": "18",
+              "paired_cube_average_upper_bound": "3/5",
+              "some_paired_cube_has_mean_exactly": "1/2",
+              "half_mean_cube_height_upper_bound": 3,
+              "proved": true
+            },
+            "height_one_boolean": {
+              "target_density": "18/59",
+              "relevant_pair_influence_floor": "70/1121",
+              "total_influence_upper_bound": "42804/3481",
+              "largest_zero_influence_class_complement_bound": "813276/121835",
+              "eight_gap_polynomial": "p^4-25p^3+229p^2-559p+338",
+              "eight_gap_at_p_equals_x_plus_31": [
+                1,
+                99,
+                3670,
+                60728,
+                381824
+              ],
+              "junta_coordinates_at_most": 7,
+              "seven_less_than_both_complementary_slice_sizes": true,
+              "all_junta_patterns_extend_to_slice": true,
+              "cube_coordinates_actually_needed_at_most": 4,
+              "possible_four_bit_density_values": [
+                "0",
+                "14/59",
+                "15/59",
+                "29/59",
+                "30/59",
+                "44/59",
+                "45/59",
+                "1"
+              ],
+              "target_absent": true,
+              "proved": true
+            },
+            "finite_prime_or_slice_census_used": false,
+            "fixed_four_bit_catalog_reused": true,
+            "excluded": true,
+            "proved": true
+          },
+          "excluded": true,
+          "proved": true
+        }
+      },
+      "all_boundary_sizes_excluded": true,
+      "finite_prime_graph_or_slice_census_used": false,
+      "residual_ii_layer_excluded": true,
+      "proved": true
+    }
+  },
+  "p23_local_threshold_witness": {
+    "p": 23,
+    "formula": "C=3-2r+binom(r,2), r=|X intersect R|, |R|=4",
+    "layer_values": [
+      3,
+      1,
+      0,
+      0,
+      1
+    ],
+    "mean": "9/23",
+    "scaled_mass_4p_E_C": 36,
+    "is_only_a_local_quadratic_not_a_residual_graph": true,
+    "proved": true
+  },
+  "p23_exceptional_equality_moment_certificate": {
+    "title": "p23 first post-band equality and K5 moment close",
+    "result_status": "proved endpoint theorem with exhaustive finite coefficient certificate",
+    "statement": "the residual-(ii) isolated-chart branch at p=23,t=9,k=110 is empty for every boundary size",
+    "changed_premise": "all half-mean height-three equality forms are classified and globalized before the simultaneous degree-four/eight K5 sieve",
+    "half_mean_cube_equality_classification": {
+      "hypotheses": "g is a nonnegative integer-valued polynomial of degree at most two on a Boolean cube, E[g]=1/2, and g(0)=max(g)=3",
+      "origin_facet_mean_options": [
+        "1/2",
+        "3/4"
+      ],
+      "excluded_origin_facet_means": {
+        "1/4": "support-floor equality would make a facet containing 3 Boolean",
+        "1": "the zero opposite facet makes the origin facet affine; mean one would give coefficient sum -4 but nonnegativity gives at least -3"
+      },
+      "induction_half_mean_facet": {
+        "F4_extension_affine_pairs_c_u": [
+          [
+            -2,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "F4_extensions": [
+          "dummy",
+          "F5 via ell=-2+s"
+        ],
+        "F5_empty_and_full_values": [
+          3,
+          3
+        ],
+        "F5_two_and_three_layers_are_zero": true,
+        "F5_extensions": [
+          "dummy"
+        ]
+      },
+      "all_three_quarter_facets": {
+        "global_mean_equation": "2A+B=-10",
+        "facet_equations": "2a_i+sum_(j!=i)b_ij=-1",
+        "summed_facet_equation": "A+B=-d/2",
+        "therefore_A": "-10+d/2",
+        "opposite_facets_boolean_implies": "a_i in {-3,-2}",
+        "possible_dimensions": [
+          4
+        ],
+        "forced_dimension": 4,
+        "forced_linear_sum": -8,
+        "forced_pair_sum": 6,
+        "forced_pair_row_sum": 3,
+        "forced_coefficients": "a_i=-2 and b_ij=1"
+      },
+      "classified_forms": {
+        "F4": {
+          "formula": "3-2s+binom(s,2)",
+          "active_coordinates": 4,
+          "layer_values": [
+            3,
+            1,
+            0,
+            0,
+            1
+          ],
+          "mean": "1/2"
+        },
+        "F5": {
+          "formula": "3-2s+binom(s,2)",
+          "active_coordinates": 5,
+          "layer_values": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            3
+          ],
+          "mean": "1/2"
+        }
+      },
+      "dummy_coordinates_allowed": true,
+      "classification_exhaustive_in_every_dimension": true,
+      "proved": true
+    },
+    "local_mass_36_height_equality": {
+      "p": 23,
+      "slice": "J(23,12)",
+      "scaled_mass_4p_E_C": 36,
+      "mean": "9/23",
+      "height_one_exclusion": {
+        "relevant_pair_influence_floor": "10/161",
+        "total_influence_upper_bound": "2772/529",
+        "largest_zero_class_complement_bound": "19404/2645",
+        "junta_coordinates_at_most": 7,
+        "four_bit_density_values": [
+          "0",
+          "5/23",
+          "6/23",
+          "11/23",
+          "12/23",
+          "17/23",
+          "18/23",
+          "1"
+        ],
+        "target_density_absent": true,
+        "excluded": true
+      },
+      "height_at_least_two": {
+        "paired_cube_operator": "T C(X)=(C(X)+23*E[C])/24=(H+9)/24",
+        "paired_cube_mean_lattice": "(1/4)Z",
+        "every_paired_cube_mean_at_least": "1/2",
+        "initial_height_lower_bound": 3,
+        "stabilizer_height_upper_bound": "9",
+        "if_H_at_least_four": "half-mean cubes are impossible, so every cube has mean at least 3/4 and H>=9",
+        "H_equals_nine_would_force_every_cube_mean": "3/4",
+        "three_quarter_cube_maximum_upper_bound": 6,
+        "therefore_H_at_least_four_is_impossible": true
+      },
+      "forced_height": 3,
+      "paired_cube_average_at_forced_height": "1/2",
+      "every_paired_cube_through_a_maximizer_has_mean": "1/2",
+      "proved": true
+    },
+    "slice_equality_globalization": {
+      "p": 23,
+      "slice": "J(23,12)",
+      "cube_equality_dependency": {
+        "hypotheses": "g is a nonnegative integer-valued polynomial of degree at most two on a Boolean cube, E[g]=1/2, and g(0)=max(g)=3",
+        "origin_facet_mean_options": [
+          "1/2",
+          "3/4"
+        ],
+        "excluded_origin_facet_means": {
+          "1/4": "support-floor equality would make a facet containing 3 Boolean",
+          "1": "the zero opposite facet makes the origin facet affine; mean one would give coefficient sum -4 but nonnegativity gives at least -3"
+        },
+        "induction_half_mean_facet": {
+          "F4_extension_affine_pairs_c_u": [
+            [
+              -2,
+              1
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "F4_extensions": [
+            "dummy",
+            "F5 via ell=-2+s"
+          ],
+          "F5_empty_and_full_values": [
+            3,
+            3
+          ],
+          "F5_two_and_three_layers_are_zero": true,
+          "F5_extensions": [
+            "dummy"
+          ]
+        },
+        "all_three_quarter_facets": {
+          "global_mean_equation": "2A+B=-10",
+          "facet_equations": "2a_i+sum_(j!=i)b_ij=-1",
+          "summed_facet_equation": "A+B=-d/2",
+          "therefore_A": "-10+d/2",
+          "opposite_facets_boolean_implies": "a_i in {-3,-2}",
+          "possible_dimensions": [
+            4
+          ],
+          "forced_dimension": 4,
+          "forced_linear_sum": -8,
+          "forced_pair_sum": 6,
+          "forced_pair_row_sum": 3,
+          "forced_coefficients": "a_i=-2 and b_ij=1"
+        },
+        "classified_forms": {
+          "F4": {
+            "formula": "3-2s+binom(s,2)",
+            "active_coordinates": 4,
+            "layer_values": [
+              3,
+              1,
+              0,
+              0,
+              1
+            ],
+            "mean": "1/2"
+          },
+          "F5": {
+            "formula": "3-2s+binom(s,2)",
+            "active_coordinates": 5,
+            "layer_values": [
+              3,
+              1,
+              0,
+              0,
+              1,
+              3
+            ],
+            "mean": "1/2"
+          }
+        },
+        "dummy_coordinates_allowed": true,
+        "classification_exhaustive_in_every_dimension": true,
+        "proved": true
+      },
+      "cross_activity_matrix": "D_xy=1 iff C(X-x+y)=1 for x in X and y outside X",
+      "same_double_swap_two_pairings": "F(D_xu+D_yv)=F(D_xv+D_yu); F(0),F(1),F(2)=(3,1,0) are distinct",
+      "all_additive_two_by_two_minors_vanish": true,
+      "additive_binary_rectangle_catalog": [
+        {
+          "entries_row_major": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "row_constant": true,
+          "column_constant": true
+        },
+        {
+          "entries_row_major": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "row_constant": true,
+          "column_constant": false
+        },
+        {
+          "entries_row_major": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "row_constant": false,
+          "column_constant": true
+        },
+        {
+          "entries_row_major": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "row_constant": false,
+          "column_constant": true
+        },
+        {
+          "entries_row_major": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "row_constant": true,
+          "column_constant": false
+        },
+        {
+          "entries_row_major": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "row_constant": true,
+          "column_constant": true
+        }
+      ],
+      "additive_binary_rectangle_classification_proved": true,
+      "binary_additive_matrix_classification": [
+        "column-only",
+        "row-only"
+      ],
+      "active_column_counts": [
+        4,
+        5
+      ],
+      "active_row_counts": [
+        5
+      ],
+      "paired_cube_coverage_by_swap_count": [
+        {
+          "swap_count": 0,
+          "common_points_available": 12,
+          "unused_rows_after_retaining_one": 11,
+          "unused_columns": 11,
+          "partial_matching_extends": true
+        },
+        {
+          "swap_count": 1,
+          "common_points_available": 11,
+          "unused_rows_after_retaining_one": 10,
+          "unused_columns": 10,
+          "partial_matching_extends": true
+        },
+        {
+          "swap_count": 2,
+          "common_points_available": 10,
+          "unused_rows_after_retaining_one": 9,
+          "unused_columns": 9,
+          "partial_matching_extends": true
+        },
+        {
+          "swap_count": 3,
+          "common_points_available": 9,
+          "unused_rows_after_retaining_one": 8,
+          "unused_columns": 8,
+          "partial_matching_extends": true
+        },
+        {
+          "swap_count": 4,
+          "common_points_available": 8,
+          "unused_rows_after_retaining_one": 7,
+          "unused_columns": 7,
+          "partial_matching_extends": true
+        },
+        {
+          "swap_count": 5,
+          "common_points_available": 7,
+          "unused_rows_after_retaining_one": 6,
+          "unused_columns": 6,
+          "partial_matching_extends": true
+        },
+        {
+          "swap_count": 6,
+          "common_points_available": 6,
+          "unused_rows_after_retaining_one": 5,
+          "unused_columns": 5,
+          "partial_matching_extends": true
+        },
+        {
+          "swap_count": 7,
+          "common_points_available": 5,
+          "unused_rows_after_retaining_one": 4,
+          "unused_columns": 4,
+          "partial_matching_extends": true
+        },
+        {
+          "swap_count": 8,
+          "common_points_available": 4,
+          "unused_rows_after_retaining_one": 3,
+          "unused_columns": 3,
+          "partial_matching_extends": true
+        },
+        {
+          "swap_count": 9,
+          "common_points_available": 3,
+          "unused_rows_after_retaining_one": 2,
+          "unused_columns": 2,
+          "partial_matching_extends": true
+        },
+        {
+          "swap_count": 10,
+          "common_points_available": 2,
+          "unused_rows_after_retaining_one": 1,
+          "unused_columns": 1,
+          "partial_matching_extends": true
+        },
+        {
+          "swap_count": 11,
+          "common_points_available": 1,
+          "unused_rows_after_retaining_one": 0,
+          "unused_columns": 0,
+          "partial_matching_extends": true
+        }
+      ],
+      "every_slice_point_lies_in_a_paired_cube_through_X": true,
+      "row_only_symmetry": "F(5-r)=F(r) for r=0,...,5",
+      "global_slice_forms": [
+        {
+          "name": "F4",
+          "active_coordinates": 4,
+          "layer_values": [
+            3,
+            1,
+            0,
+            0,
+            1
+          ],
+          "slice_mean": "9/23",
+          "scaled_mass_4p_E": 36,
+          "signed_target_constant": 5,
+          "signed_target_linear_coefficient": -1,
+          "signed_target_pair_coefficients": 1,
+          "coefficient_offset": 1,
+          "signed_target": "3+4C=5+(-sum_(i in R)z_i)+sum_({i,j} subset R)z_i*z_j"
+        },
+        {
+          "name": "F5",
+          "active_coordinates": 5,
+          "layer_values": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            3
+          ],
+          "slice_mean": "9/23",
+          "scaled_mass_4p_E": 36,
+          "signed_target_constant": 5,
+          "signed_target_linear_coefficient": 0,
+          "signed_target_pair_coefficients": 1,
+          "coefficient_offset": 5,
+          "signed_target": "3+4C=5+(0)+sum_({i,j} subset R)z_i*z_j"
+        }
+      ],
+      "opposite_coefficient_congruence": "11 divides Q-offset",
+      "compatible_hard_opposite_rows": [
+        {
+          "hard_P": 4,
+          "opposite_Q": 5,
+          "form": "F5",
+          "offset": 5
+        }
+      ],
+      "all_forced_local_equality_forms_enumerated": true,
+      "proved": true
+    },
+    "endpoint_residue_and_parallel_ledger": {
+      "p": 23,
+      "q": 11,
+      "m": 12,
+      "layer_index_t": 9,
+      "original_k": 110,
+      "H_edge_count": 111,
+      "guaranteed_isolated_vertices": 308,
+      "phase_one_mean_form": "a_L=2u+24*k_L",
+      "phase_one_quotient_sum": "sum k_L=21-u",
+      "phase_one_low_b_values": [
+        2,
+        22
+      ],
+      "sharp_integral_lift_floor": 20,
+      "residue_rows": [
+        {
+          "u": 0,
+          "quotient_sum": 21,
+          "k_zero_mean": 0,
+          "k_one_mean": 24,
+          "status": "excluded below phase-one or sharp-lift floor"
+        },
+        {
+          "u": 1,
+          "quotient_sum": 20,
+          "k_zero_mean": 2,
+          "k_one_mean": 26,
+          "status": "excluded below phase-one or sharp-lift floor"
+        },
+        {
+          "u": 2,
+          "quotient_sum": 19,
+          "k_zero_mean": 4,
+          "k_one_mean": 28,
+          "status": "excluded below phase-one or sharp-lift floor"
+        },
+        {
+          "u": 3,
+          "quotient_sum": 18,
+          "k_zero_mean": 6,
+          "k_one_mean": 30,
+          "status": "excluded below phase-one or sharp-lift floor"
+        },
+        {
+          "u": 4,
+          "quotient_sum": 17,
+          "k_zero_mean": 8,
+          "k_one_mean": 32,
+          "status": "excluded below phase-one or sharp-lift floor"
+        },
+        {
+          "u": 5,
+          "quotient_sum": 16,
+          "k_zero_mean": 10,
+          "k_one_mean": 34,
+          "status": "excluded below phase-one or sharp-lift floor"
+        },
+        {
+          "u": 6,
+          "quotient_sum": 15,
+          "k_zero_mean": 12,
+          "k_one_mean": 36,
+          "status": "excluded below phase-one or sharp-lift floor"
+        },
+        {
+          "u": 7,
+          "quotient_sum": 14,
+          "k_zero_mean": 14,
+          "k_one_mean": 38,
+          "status": "excluded below phase-one or sharp-lift floor"
+        },
+        {
+          "u": 8,
+          "quotient_sum": 13,
+          "k_zero_mean": 16,
+          "k_one_mean": 40,
+          "status": "excluded below phase-one or sharp-lift floor"
+        },
+        {
+          "u": 9,
+          "quotient_sum": 12,
+          "k_zero_mean": 18,
+          "k_one_mean": 42,
+          "status": "hard_sharp_p_minus_3_lift"
+        },
+        {
+          "u": 10,
+          "quotient_sum": 11,
+          "k_zero_mean": 20,
+          "k_one_mean": 44,
+          "status": "excluded because the quotient sum is below twelve"
+        },
+        {
+          "u": 11,
+          "quotient_sum": 10,
+          "k_zero_mean": 22,
+          "k_one_mean": 46,
+          "status": "old endpoint A/C dichotomy"
+        }
+      ],
+      "surviving_residues": [
+        9,
+        11
+      ],
+      "old_branch_exclusions": [
+        {
+          "branch": "hard_b2",
+          "hard_edge_count": 58,
+          "opposite_edge_count": 53,
+          "hard_sign_times_global_T": 5,
+          "minimum_Q": 3,
+          "minimum_mean": 8,
+          "forced_next_Q": 4,
+          "forced_next_scaled_mean": 32,
+          "surplus_after_next_Q": 5,
+          "directions_at_next_Q_at_least": 7,
+          "dependency": "Proposition 15.752 p+9 local exclusion",
+          "excluded": true
+        },
+        {
+          "branch": "p3_all_low_b_p_minus_1",
+          "hard_edge_count": 46,
+          "opposite_edge_count": 65,
+          "hard_sign_times_global_T": -19,
+          "minimum_Q": 4,
+          "minimum_mean": 8,
+          "forced_next_Q": 5,
+          "forced_next_scaled_mean": 32,
+          "surplus_after_next_Q": 5,
+          "directions_at_next_Q_at_least": 7,
+          "dependency": "Proposition 15.752 p+9 local exclusion",
+          "excluded": true
+        }
+      ],
+      "new_sharp_branch_family_ledgers": [
+        {
+          "baseline": "complement_literal",
+          "baseline_b": 22,
+          "lift": "omitted_pair",
+          "baseline_offset": 3,
+          "lift_offset_increment": -1,
+          "coefficient_offset": 2,
+          "forced_hard_parallel_count": 2,
+          "hard_edge_count": 24,
+          "opposite_edge_count": 87,
+          "hard_sign_times_global_T": -63,
+          "mass_twelve_Q": 6,
+          "mass_twelve_excluded": true,
+          "forced_low_Q": 7,
+          "forced_low_scaled_mean": 36,
+          "surplus_after_every_Q_at_least_forced_low_Q": 3,
+          "directions_at_forced_low_Q_at_least": 9,
+          "nonzero_b_floor_and_lift_rows": [
+            [
+              2,
+              24,
+              12
+            ],
+            [
+              22,
+              24,
+              12
+            ]
+          ],
+          "forced_low_Q_is_b_zero": true,
+          "forced_local_quadratic": "A=2C and 92*E[C]=36",
+          "compatible_slice_forms": [],
+          "excluded_by_local_offset": true
+        },
+        {
+          "baseline": "complement_literal",
+          "baseline_b": 22,
+          "lift": "all_equal_triple",
+          "baseline_offset": 3,
+          "lift_offset_increment": 1,
+          "coefficient_offset": 4,
+          "forced_hard_parallel_count": 4,
+          "hard_edge_count": 48,
+          "opposite_edge_count": 63,
+          "hard_sign_times_global_T": -15,
+          "mass_twelve_Q": 4,
+          "mass_twelve_excluded": true,
+          "forced_low_Q": 5,
+          "forced_low_scaled_mean": 36,
+          "surplus_after_every_Q_at_least_forced_low_Q": 3,
+          "directions_at_forced_low_Q_at_least": 9,
+          "nonzero_b_floor_and_lift_rows": [
+            [
+              2,
+              24,
+              12
+            ],
+            [
+              22,
+              24,
+              12
+            ]
+          ],
+          "forced_low_Q_is_b_zero": true,
+          "forced_local_quadratic": "A=2C and 92*E[C]=36",
+          "compatible_slice_forms": [
+            "F5"
+          ],
+          "excluded_by_local_offset": false
+        },
+        {
+          "baseline": "XNOR",
+          "baseline_b": 2,
+          "lift": "omitted_pair",
+          "baseline_offset": 4,
+          "lift_offset_increment": -1,
+          "coefficient_offset": 3,
+          "forced_hard_parallel_count": 3,
+          "hard_edge_count": 36,
+          "opposite_edge_count": 75,
+          "hard_sign_times_global_T": -39,
+          "mass_twelve_Q": 5,
+          "mass_twelve_excluded": true,
+          "forced_low_Q": 6,
+          "forced_low_scaled_mean": 36,
+          "surplus_after_every_Q_at_least_forced_low_Q": 3,
+          "directions_at_forced_low_Q_at_least": 9,
+          "nonzero_b_floor_and_lift_rows": [
+            [
+              2,
+              24,
+              12
+            ],
+            [
+              22,
+              24,
+              12
+            ]
+          ],
+          "forced_low_Q_is_b_zero": true,
+          "forced_local_quadratic": "A=2C and 92*E[C]=36",
+          "compatible_slice_forms": [],
+          "excluded_by_local_offset": true
+        },
+        {
+          "baseline": "XNOR",
+          "baseline_b": 2,
+          "lift": "all_equal_triple",
+          "baseline_offset": 4,
+          "lift_offset_increment": 1,
+          "coefficient_offset": 5,
+          "forced_hard_parallel_count": 5,
+          "hard_edge_count": 60,
+          "opposite_edge_count": 51,
+          "hard_sign_times_global_T": 9,
+          "mass_twelve_Q": 3,
+          "mass_twelve_excluded": true,
+          "forced_low_Q": 4,
+          "forced_low_scaled_mean": 36,
+          "surplus_after_every_Q_at_least_forced_low_Q": 3,
+          "directions_at_forced_low_Q_at_least": 9,
+          "nonzero_b_floor_and_lift_rows": [
+            [
+              2,
+              24,
+              12
+            ],
+            [
+              22,
+              24,
+              12
+            ]
+          ],
+          "forced_low_Q_is_b_zero": true,
+          "forced_local_quadratic": "A=2C and 92*E[C]=36",
+          "compatible_slice_forms": [],
+          "excluded_by_local_offset": true
+        }
+      ],
+      "unique_new_survivor_before_moments": {
+        "hard_P": 4,
+        "opposite_Q": 5,
+        "hard_family": "complement-literal plus all-equal-triple",
+        "opposite_form": "F5",
+        "opposite_Q5_directions_at_least": 9
+      },
+      "proved": true
+    },
+    "hard_triangle_minus_star_root_certificate": {
+      "field": "F_23",
+      "global_even_moments": "M_d(L)=sum_({u,v} in H)chi(u-v)*(L(u)-L(v))^d",
+      "hard_target": "5-z_j+sum_({a,b} subset T)z_a*z_b = 4 + triangle(T) - full_star(j) on sum z_i=1",
+      "full_star_power_sums_degrees_2_4_6_8": {
+        "2": 0,
+        "4": 0,
+        "6": 0,
+        "8": 0
+      },
+      "full_star_vanishes_because": "sum_(a in F_23^*) a^d=0 for 0<d<22",
+      "triangle_pairs_checked": 529,
+      "triangle_G4_identity": "2*S4-S2^2=0",
+      "triangle_G8_identity": "24*S8-32*S2*S6+5*S2^4=0",
+      "hard_sign": "h in {+1,-1}, common on the twelve hard directions",
+      "homogeneous_forms": {
+        "G4": "2*h*M4-M2^2",
+        "G8": "24*h*M8-32*M2*M6+5*M2^4"
+      },
+      "form_degrees": {
+        "G4": 4,
+        "G8": 8
+      },
+      "distinct_hard_projective_roots": 12,
+      "both_forms_identically_zero": true,
+      "opposite_F5_evaluations": {
+        "G4": "-2*S4-S2^2",
+        "G8": "-24*S8-32*S2*S6+5*S2^4"
+      },
+      "proved": true
+    },
+    "opposite_K5_moment_sieve": {
+      "field": "F_23",
+      "five_sets_checked": 33649,
+      "moment_definition": "S_d(R)=sum_({i,j} subset R)(i-j)^d mod 23",
+      "G4": "-2*S4-S2^2",
+      "G8": "-24*S8-32*S2*S6+5*S2^4",
+      "G4_zero_count": 1518,
+      "G8_zero_count": 2024,
+      "simultaneous_zero_count": 0,
+      "G4_zero_sets_sha256": "82460f67f3414a1f461b24605c108861d215f970063c0d0af82772de21240c1a",
+      "G8_zero_sets_sha256": "733bc62c7ad8d0d7083388480d307ad7298d56b4f9e1fcd12562848350c8d6c7",
+      "affine_group": "AGL(1,23), x maps to a*x+b with a nonzero",
+      "affine_orbit_count": 69,
+      "affine_orbit_size_histogram": {
+        "253": 5,
+        "506": 64
+      },
+      "affine_orbit_representatives_sha256": "34eeb59b625d24907758658f78c0f966291728a72cebb0426a3d4a883fb2022a",
+      "G4_zero_orbits": [
+        {
+          "representative": [
+            0,
+            1,
+            2,
+            3,
+            12
+          ],
+          "orbit_size": 506,
+          "moments_S2_S4_S6_S8": [
+            6,
+            5,
+            13,
+            0
+          ],
+          "G4": 0,
+          "G8": 5
+        },
+        {
+          "representative": [
+            0,
+            1,
+            2,
+            4,
+            15
+          ],
+          "orbit_size": 506,
+          "moments_S2_S4_S6_S8": [
+            10,
+            19,
+            18,
+            4
+          ],
+          "G4": 0,
+          "G8": 7
+        },
+        {
+          "representative": [
+            0,
+            1,
+            2,
+            7,
+            17
+          ],
+          "orbit_size": 506,
+          "moments_S2_S4_S6_S8": [
+            20,
+            7,
+            10,
+            18
+          ],
+          "G4": 0,
+          "G8": 13
+        }
+      ],
+      "G8_zero_orbits": [
+        {
+          "representative": [
+            0,
+            1,
+            2,
+            3,
+            10
+          ],
+          "orbit_size": 506,
+          "moments_S2_S4_S6_S8": [
+            15,
+            13,
+            12,
+            0
+          ],
+          "G4": 2,
+          "G8": 0
+        },
+        {
+          "representative": [
+            0,
+            1,
+            2,
+            4,
+            17
+          ],
+          "orbit_size": 506,
+          "moments_S2_S4_S6_S8": [
+            8,
+            17,
+            22,
+            13
+          ],
+          "G4": 17,
+          "G8": 0
+        },
+        {
+          "representative": [
+            0,
+            1,
+            2,
+            4,
+            18
+          ],
+          "orbit_size": 506,
+          "moments_S2_S4_S6_S8": [
+            19,
+            7,
+            14,
+            13
+          ],
+          "G4": 16,
+          "G8": 0
+        },
+        {
+          "representative": [
+            0,
+            1,
+            2,
+            7,
+            10
+          ],
+          "orbit_size": 506,
+          "moments_S2_S4_S6_S8": [
+            2,
+            8,
+            13,
+            7
+          ],
+          "G4": 3,
+          "G8": 0
+        }
+      ],
+      "zero_orbit_representatives_disjoint": true,
+      "independent_accelerator_replay": {
+        "script": "scripts/p23_k5_moment_gpu.py",
+        "script_sha256": "4afa5d397ccf38dc6e61f8b006c7a697c533ff067b9c7af944441f35c986ee1d",
+        "reported_backends": [
+          "NUKA gfx1201 OpenCL",
+          "Jellyfin Arc A380 OpenCL",
+          "Soulkiller V100 CUDA"
+        ],
+        "each_reported_counts": [
+          33649,
+          1518,
+          2024,
+          0
+        ],
+        "authoritative_certificate": false,
+        "purpose": "independent implementation replay"
+      },
+      "classification": "exhaustive finite coefficient certificate",
+      "proved": true
+    },
+    "p23_k110_closed": true,
+    "all_boundary_sizes_excluded": true,
+    "finite_graph_or_residual_configuration_census_used": false,
+    "fixed_five_set_coefficient_certificate_used": true,
+    "later_layers_closed": false,
+    "residual_ii_closed_globally": false,
+    "E1_closed": false,
+    "quadratic_minmax_limit_closed": false,
+    "proved": true
+  },
+  "p23_same_layer_closed": true,
+  "p23_original_k": 110,
+  "later_layers_closed": false,
+  "prop_15274_slope_scope": "only the dual-bad/two-level subcase; it does not apply to this multi-level isolated-chart equality branch",
+  "residual_ii_closed_globally": false,
+  "quadratic_minmax_limit_closed": false,
+  "proved": true
+}

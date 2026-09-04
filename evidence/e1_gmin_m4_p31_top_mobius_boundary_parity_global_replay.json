@@ -1,0 +1,72 @@
+{
+  "schema": "resii_p31_global_kernel_product_replay_v1",
+  "p": 31,
+  "hard_target_count": 16,
+  "half_option_count": 14880,
+  "center_count_per_option": 30,
+  "center_half_instance_count": 446400,
+  "kernel_selector_count": 32,
+  "selector_pairing_count": 14284800,
+  "center_variation_count": 0,
+  "centrality_failure_count": 0,
+  "origin_failure_count": 0,
+  "selector_partition_failure_count": 0,
+  "product_identity": "product_K (-1)^g_K = -epsilon(M)",
+  "product_failure_count": 0,
+  "special_case_counts": [
+    {
+      "case": "K=L",
+      "auxiliary_epsilon": -1,
+      "g": 1,
+      "count": 7680
+    },
+    {
+      "case": "K=L",
+      "auxiliary_epsilon": 1,
+      "g": 1,
+      "count": 7200
+    },
+    {
+      "case": "K=L-M",
+      "auxiliary_epsilon": -1,
+      "g": 0,
+      "count": 7680
+    },
+    {
+      "case": "K=L-M",
+      "auxiliary_epsilon": 1,
+      "g": 0,
+      "count": 7200
+    },
+    {
+      "case": "K=M",
+      "auxiliary_epsilon": -1,
+      "g": 1,
+      "count": 7680
+    },
+    {
+      "case": "K=M",
+      "auxiliary_epsilon": 1,
+      "g": 0,
+      "count": 7200
+    }
+  ],
+  "sum_K_g_histogram_over_options": {
+    "11": 640,
+    "12": 1280,
+    "13": 1152,
+    "14": 1728,
+    "15": 2048,
+    "16": 1792,
+    "17": 1568,
+    "18": 1792,
+    "19": 1152,
+    "20": 768,
+    "21": 640,
+    "22": 320
+  },
+  "option_signature_sha256": "a517a3ab70bdd165dae7bd2beed9289f72b6dcb1cb3fe1cf236de8aa4cb27b5d",
+  "elapsed_seconds": 134.48824511899147,
+  "proved_for_enumerated_p31_half_options": true,
+  "residual_ii_closed": false
+}

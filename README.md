@@ -14,7 +14,7 @@ m_n = min_{a_ij = ±1}  max_{x_j = ±1}  | Σ_{1≤i<j≤n} a_ij · x_i · x_j |
 Machine-assisted attack on a 2022 MathOverflow problem: whether the normalized
 min-max ±1 quadratic form converges. The limit **L is OPEN**. This repo is a
 proof ledger with source-backed computational proposition modules through
-15.765, audited post-15.761 support/conic/Boolean reductions, and reviewed
+15.770, audited post-15.761 support/conic/Boolean reductions, and reviewed
 analytic arguments in `solution.md`. Machine gates use
 explicit `True`/`False` predicates, and soft-closing is banned by test
 (`tests/test_main_chain_docs.py`); Propositions 6.3--6.10a are proved in prose,
@@ -26,7 +26,7 @@ not represented as computational predicates.
 
 **Main claim:** L = lim_n α_n is **OPEN** (2026-09-04).
 
-### Current audit (2026-09-04; through audited Proposition 15.765, the post-15.761 exact reductions, and Propositions 6.3--6.10a)
+### Current audit (2026-09-04; through audited Proposition 15.770, the post-15.761 exact reductions, and Propositions 6.3--6.10a)
 
 - **Original-question correction and new direct gate.** MathOverflow 413935
   asks whether the limit exists; identifying its value is optional.  With
@@ -287,8 +287,21 @@ not represented as computational predicates.
   `p=19,k=84`. Proposition 15.754 closes the last fifth-shell endpoint
   `p=13,k=60,u=6` by an exact finite aggregate/common-form certificate.
   Hence the whole fifth shell `k=4p+8` is closed for every `p>=13`.
-  Residual (ii) remains open at critical `p=5,7`, at `p=11,k>=50`, in later
-  p13 layers, and beyond Proposition 15.752's band.
+  Propositions 15.768--15.770 then advance the generic frontier by two
+  complete layers beyond Proposition 15.752's band.  For
+  `p=1 mod 4`, `p>=29`, they close `k=5p-7` and `k=5p-5`; for
+  `p=3 mod 4`, `p>=31`, they close `k=5p-5` and `k=5p-3`.
+  Proposition 15.769 also closes the exceptional first post-band endpoint
+  `p=23,t=9,k=110` by globalizing the only half-mean equality forms and
+  applying an exact quartic/octic five-set certificate.  Proposition 15.770
+  also closes `p=23,t=10,k=112`: eleven low hard roots still annihilate the
+  quartic and octic forms, and the corrected surplus forces at least eight
+  opposite mass-36 rows, so the same fixed 33,649-five-set certificate
+  applies.  With `q=(p-1)/2`, the exact residual-(ii) frontier is critical
+  `p=5,7`; `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`;
+  `p=23,t>=11`; `p=1 mod 4,p>=29,t>=q-1`;
+  `p=3 mod 4,p>=31,t>=q`; and the separately tracked positive
+  `p=7,z=7` branch.  Residual (ii) remains open globally.
 - **Exceptional fourth-shell branch close.** Proposition 15.738 gives an
   exhaustive `J(13,7)` certificate for the forced phase-zero mass-14 cells:
   height four is exactly infeasible at `Q=0,6`, and the 1,092 Boolean
@@ -737,7 +750,7 @@ legacy-named `four_e1_units_closed()` acceptance ledger is:
 | GOAL unit | live predicate | status |
 |---|---|---|
 | required bi-tight levels 2 and 3 | `bitight_levels_2_3` | **TRUE** — 15.720 degree congruence; bi-tight level 4 is a corollary, while generic one-sided covers exist and only joint residual compatibility remains open |
-| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Propositions 15.734--15.737 close the first three shells, 15.751 closes `k=4p+6` for every `p>=13`, and 15.752--15.754 together close `k=4p+8` for every `p>=13`. Proposition 15.752 also closes its stated contiguous higher band. Critical `p=5,7`, `p=11,k>=50`, later p13 layers, layers beyond that band, and the separately tracked positive `p=7,z=7` remainder remain. Hence the global predicate stays false. |
+| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Propositions 15.734--15.737 close the first three shells, 15.751 closes `k=4p+6` for every `p>=13`, and 15.752--15.754 together close `k=4p+8` for every `p>=13`. Proposition 15.752 closes its stated contiguous higher band; 15.768--15.770 close the next two layers for `p=1 mod 4, p>=29` and `p=3 mod 4, p>=31`, plus `p=23,t=9,10`. With `q=(p-1)/2`, the exact frontier is critical `p=5,7`; `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`; `p=23,t>=11`; `p=1 mod 4,p>=29,t>=q-1`; `p=3 mod 4,p>=31,t>=q`; and positive `p=7,z=7`. Hence the global predicate stays false. |
 | Type I, multi-level Max− | `type_I_multilevel` | **TRUE** — Proposition 15.750: isolated-chart square rigidity, parity halving, the sharp lift floor, and exact `p=5,7` Farkas certificates |
 | Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |
 | minimal-four-gap implication bridge | `minimal_gap4_shell_bridge` | **OPEN** — 15.764 covers odd `|H|<=5p`; even `|H|>=4p+2` and odd `|H|>=5p+2` remain |
@@ -1231,7 +1244,8 @@ graph TD
     T3CLOSE --> BAND["15.752: p>=23 fifth shell + contiguous band <b>CLOSED</b>"]
     BAND --> ENDPOINTS["15.753: p17/p19 fifth-shell endpoints <b>CLOSED</b>"]
     ENDPOINTS --> P13U6["15.754: p13 k=60 u=6 common forms<br/><b>CLOSED</b>; fifth shell closed for p>=13"]
-    P13U6 --> STRICTP["p=5,7 critical; p=11 k>=50; later p13 layers;<br/>beyond band <b>OPEN</b>"]
+    P13U6 --> POSTBAND["15.768--15.770: first two generic post-band layers<br/>plus p23 t=9,10 <b>CLOSED</b>"]
+    POSTBAND --> STRICTP["p5,7; p11 t>=3; p13,17,19 t>=5; p23 t>=11;<br/>p=1 mod4,p>=29: t>=q-1; p=3 mod4,p>=31: t>=q; positive p7,z7 <b>OPEN</b>"]
     style L fill:#ffe6e6
     style D fill:#e6ffe6
     style FLOOR fill:#fff4e6
@@ -1506,6 +1520,9 @@ Proposition 15.721 supersedes the active all-finite shell statuses in
 | 15.763 | retain signed affine-alias cut incidences and the exact active-state H-score | **proved conditional affine-family theorem:** the odd-`r` bound is `oddceil((pr^2+1)m(m-1)/(2r(m-r))-pr^2+2)` and becomes `(p^2+11)/4` at `r=1`; nonaffine first-shell points and common coordinates across deletions remain open |
 | 15.764 | audit the deletion-to-unit parity bridge for an all-deletions minimal four-gap H | **proved partial bridge:** odd `|H|<=5p` forces a deletion with `s_+=2` or `s_-=-2`; even `|H|>=4p+2` and odd `|H|>=5p+2` remain open, and the scalar countermodel is explicitly non-Paley |
 | 15.765 | adapt a published four-special-direction set to the one-coordinate-three Paley shell | **proved exact nonaffine first-shell point:** at `p=11`, `Cy=11y` with a unique coordinate `3`, its Boolean shadow has defect `22`, and four line-profile directions rule out every parallel-line representation; no common H or residual closure |
+| 15.768 | classify the first `p=1 mod 4` post-band residue, make its complement-triple equality pointwise, and exclude the forced local mass `p+15` | **proved infinite-family theorem:** for every prime `p=1 mod 4`, `p>=29`, residual (ii) is empty at `t=(p-7)/2`, equivalently `k=5p-7`; the `p=29` endpoint uses the sharp dimension-free mean-`3/4` cube bound `max<=6` |
+| 15.769 | classify the first `p=3 mod 4` post-band residue, reduce the sharp `p-3` lift to ten four-bit tables, and impose the common-row coefficient offsets | **proved infinite-family plus exceptional-endpoint theorem:** `k=5p-5` is empty for every prime `p=3 mod 4`, `p>=31`; at `p=23,k=110`, half-mean equality globalizes to `F_4/F_5`, offset compatibility leaves `F_5`, and the exact five-set counts `(33649,1518,2024,0)` close the endpoint |
+| 15.770 | carry each newly classified equality branch forward by one quotient unit and reuse the fixed local theorems | **proved two one-layer extensions plus an exceptional endpoint:** for `p=1 mod 4`, `p>=29`, `k=5p-5` is empty; for `p=3 mod 4`, `p>=31`, `k=5p-3` is empty; and `p=23,t=10,k=112` is empty because eleven low roots reuse the fixed 33,649-five-set quartic/octic certificate. Later layers and residual (ii) globally remain open |
 | all-prime odd--Radon gate | pair odd moment rows on edge-negation orbits and apply support/line isolation to `b` compact plus `r-1` all-equal atoms | **proved structural reduction:** for every prime `p=4r+3`, `r>=7`, zero odd global forms force centrality whenever `3b<=r+2`; balanced branch C is covered through `delta=(2r+2)floor((r+2)/3)`, but unbalanced allocations and even moments remain open |
 | p31 local gate | force arbitrary-compact odd centrality and exhaust the zero-form degree-six/eight completion with six all-equal atoms | **exhaustive local certificate and balanced corollary:** 450 scaling orbits covered, 449 noncentered `UNSAT`, the centered orbit independently excluded, and zero `SAT`; every balanced `69<=t<=99` profile contains the excluded row, while unbalanced/nonzero-form cases and the Boolean box remain open |
 | seven-channel dominance | evaluate exact degree-six/eight Jacobian minors for four compact and four all-equal atoms | **proved algebraic method barrier:** both maps are dominant over the algebraic closure in characteristic at least 11, so no universal seven-channel polynomial identity exists; extension-valued points are not `F_p` lifts and do not settle odd/higher moments or the Boolean box |
@@ -1775,11 +1792,17 @@ the nonzero hard quartic. Thus, at that stage, only `u=6` remained at
 `p=13,k=60`; Proposition 15.754 subsequently closes it by the common-form
 certificate summarized above.
 For generic branch B at `p>=29`, higher even moments and conditioned cuts give
-the current exact `t=3` reduction. Proposition 15.752 closes the fifth shell
+the exact `t=3` reduction closed by Proposition 15.751. Proposition 15.752 closes the fifth shell
 for `p>=23` and its explicit contiguous band; Proposition 15.753 closes the
 `p=17,19` endpoints, and Proposition 15.754 closes the `p=13,u=6` endpoint.
 Thus the fifth shell is closed for every `p>=13`. The prior `p<=11` gate,
-later p13 layers, and layers beyond the band are still open.
+later p13 layers, and sufficiently late layers beyond the band are still open.
+Propositions 15.768--15.770 now close the first two post-band layers in both
+generic prime classes: `k=5p-7,5p-5` for `p=1 mod 4, p>=29`, and
+`k=5p-5,5p-3` for `p=3 mod 4, p>=31`. Proposition 15.769 also closes
+`p=23,t=9,k=110`, and Proposition 15.770 closes
+`p=23,t=10,k=112`; the currently unclaimed `p=23` frontier starts at
+`t=11,k=114`.
 The eleven-of-twelve
 complete-22-arc audit and the repair first-jet problem are therefore no
 longer live endpoint routes, while the `t=3` cross-direction coupling is.
@@ -1838,8 +1861,13 @@ unidentified glue-class phase, unknown broad mass, or classified low shell.
    `p=13,k=58`, Proposition 15.743 closes `p=17,k=74`, and Propositions
    15.744--15.745 close `u=3,0` at `p=13,k=60`, Propositions
    15.746--15.749 classify and close `u=4`, and Proposition 15.754 closes
-   `u=6`. The exact remainder is critical `p=5,7`, `p=11,k>=50`, later p13
-   layers, and the layers beyond Proposition 15.752's band. Proposition
+   `u=6`. Propositions 15.768--15.770 additionally close the first two layers
+   beyond Proposition 15.752's band for both generic congruence classes, and
+   15.769--15.770 close the exceptional `p=23,t=9,10` endpoints. With
+   `q=(p-1)/2`, the exact remainder is critical `p=5,7`;
+   `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`; `p=23,t>=11`;
+   `p=1 mod 4,p>=29,t>=q-1`; `p=3 mod 4,p>=31,t>=q`; and the
+   positive `p=7,z=7` branch. Proposition
    15.751 closes the former generic branch B at
    `p>=29,t=3`; Proposition 15.752 closes `k=4p+8` for every `p>=23` and
    the contiguous ranges through `t=(p-9)/2` or `(p-7)/2`; Proposition
@@ -1851,7 +1879,8 @@ unidentified glue-class phase, unknown broad mass, or classified low shell.
    A broad mass-12/support-396 census is not the gate; the `P=3` branch and
    support-330 classification are complete. Generic `p>=29,t=3` is also a
    closed input by 15.751 and must not be reopened. The `p>=23` rows inside
-   15.752's band are likewise closed inputs, not census targets.
+   15.752's band and the two 15.768--15.770 post-band layers are likewise
+   closed inputs, not census targets.
 Type I is no longer on the work list. Proposition 15.750 bypasses the old
 `3A+B` / Aut_e sign routes; those mechanism-local leftovers are not current
 global gates.
@@ -2087,6 +2116,9 @@ Lemma D is complete and is no longer on the work list.
 | `src/e1_gmin_m4_prop15763.py`, `tests/test_prop15763.py`, `evidence/NOTE_2026-09-04_SIGNED_AFFINE_ALIAS_BOUND.md`, `evidence/e1_gmin_m4_prop15763.json` | Exact signed affine-alias incidence theorem and critical-internal-alias alternative (15.763); conditional branch reduction, not residual closure |
 | `src/e1_gmin_m4_prop15764.py`, `tests/test_prop15764.py`, `evidence/NOTE_2026-09-04_MINIMAL_GAP4_SHELL_BRIDGE.md`, `evidence/e1_gmin_m4_prop15764.json` | Exact parity equivalence, odd `|H|<=5p` shell bridge, level-five exclusion, and non-Paley scalar method barrier (15.764); larger/parity-opposite regimes remain open |
 | `src/e1_gmin_m4_prop15765.py`, `tests/test_prop15765.py`, `evidence/NOTE_2026-09-04_NONAFFINE_FIRST_DEFECT_SHELL.md`, `evidence/e1_gmin_m4_prop15765.json` | Exact Kiss--Somlai `p=11` nonaffine first-defect-shell construction, pointwise Paley convolution, line-profile certificate, and primary-source hashes (15.765); not a common-H or residual close |
+| `src/e1_gmin_m4_prop15768.py`, `tests/test_prop15768.py`, `evidence/NOTE_2026-09-04_P1_FIRST_POST_BAND_CLOSE.md`, `evidence/e1_gmin_m4_prop15768.json` | First `p=1 mod 4` post-band layer, pointwise complement-triple rigidity, dimension-free mean-`3/4` cube theorem, and uniform `p+15` exclusion (15.768) |
+| `src/e1_gmin_m4_prop15769.py`, `tests/test_prop15769.py`, `tests/test_p23_post_band_moment_close.py`, `evidence/NOTE_2026-09-04_P3_FIRST_POST_BAND_CLOSE.md`, `evidence/NOTE_2026-09-04_P23_POST_BAND_MOMENT_CLOSE.md`, `evidence/e1_gmin_m4_prop15769.json`, `evidence/e1_gmin_m4_p23_post_band_moment_close.json`, `evidence/p23_k5_moment_mesh_replay.json` | First `p=3 mod 4` post-band layer and exceptional `p=23,t=9,k=110` close: exact `F_4/F_5` equality globalization and disjoint quartic/octic five-set zero loci (15.769) |
+| `src/e1_gmin_m4_prop15770.py`, `tests/test_prop15770.py`, `tests/test_p23_second_post_band_moment_close.py`, `evidence/NOTE_2026-09-04_NEXT_POST_BAND_LAYER_CLOSE.md`, `evidence/NOTE_2026-09-04_P23_SECOND_POST_BAND_MOMENT_CLOSE.md`, `evidence/e1_gmin_m4_prop15770.json`, `evidence/e1_gmin_m4_p23_second_post_band_moment_close.json` | One-row carry theorem closing the next post-band layer in each prime class and exceptional `p=23,t=10,k=112`; eleven low roots reuse the fixed five-set certificate, with no graph, orbit, slice, or residual-candidate census (15.770) |
 | `evidence/NOTE_2026-09-03_MOBIUS_GLOBAL_INCIDENCE_BARRIER.md` | All-prime proof that fixed-word incidence plus physical ternarity alone cannot contradict the endpoint collision demand |
 | `evidence/NOTE_2026-09-03_ORDER122_SWITCHING_STOP.md`, `evidence/order122_switching/` | Exact WQH(3,3), two-line, and line-supported WQH(4,4) exclusions, bounded OA/GM candidate scan, and source hashes; no global conference classification |
 | `src/sporadic_peisert529_exact.py`, `tests/test_sporadic_peisert529_exact.py`, `evidence/NOTE_2026-09-04_SPORADIC_PEISERT_529_DEDUP.md`, `evidence/sporadic_peisert529_exact.json` | Exact reconstruction of `P**(529)`, published-source hashes, and explicit `+23`/`-23` Boolean eigenshell witnesses; regularizable linear-OA/PN class, not residual closure |

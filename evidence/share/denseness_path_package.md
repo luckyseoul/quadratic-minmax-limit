@@ -23,7 +23,7 @@ legacy-named expanded acceptance gates now test the same predicates.
 | Denseness (Prop 6.1) | **Proved** (below) |
 | Required bi-tight levels 2 and 3, all \(p\ge5\) | **Proved** (15.720; degree congruence + 15.272/15.207 kernel) |
 | Residual (ii), affine + even \(k\le4p-2\) | **Proved** (15.179+236+237) |
-| Residual (ii), even \(k\ge4p\) | **Open** — 15.734--15.749 close the first three all-prime shells and several later rows; see Caveat 2 for the exact remainder |
+| Residual (ii), even \(k\ge4p\) | **Open** — 15.734--15.754 close the first five shells and a higher band; 15.768--15.770 close the next two generic layers and `p=23,t=9,10`; see Caveat 2 for the exact remainder |
 | Minimal-four-gap implication bridge | **Open** — 15.764 proves odd `|H|<=5p`; failure ranges start at even `|H|>=4p+2` and odd `|H|>=5p+2` |
 | Residual (i) Type I, two-level Max− | **Proved** (15.272 → 15.207 → 15.249 → 15.216) |
 | Residual (i) Type I, multi-level Max− | **Proved** (15.750) |
@@ -286,7 +286,7 @@ A hostile review for public scrutiny found the following. **None of these is Aut
 
 1. **Spectral floor (not an acceptance caveat).** \(\lambda_{\min}(\Phi)\ge6\) remains open for all \(p\), and the old Kneser-mask proof is false. Proposition 15.720 bypasses this entirely for E(1), so QVAR/R1 work cannot be counted as closing a remaining gate.
 
-2. **Residual (ii), exact current remainder.** Proposition 15.236/237 covers even \(k\in[3p+1,4p-2]\), and affine two-level is dead for all \(k\ge3p\) (15.179). At **\(k\ge4p\)**, Propositions 15.734--15.737 close the first three shells, Proposition 15.751 closes \(k=4p+6\) for every \(p\ge13\), Proposition 15.752 closes \(k=4p+8\) for every \(p\ge23\) plus its stated contiguous higher band, and Proposition 15.753 closes the p17/p19 fifth-shell endpoints. Propositions 15.744--15.749 close \(u=0,3,4\) at \(p=13,k=60\), and Proposition 15.754 closes the remaining \(u=6\) by an exact finite aggregate/common-form certificate. Thus the fifth shell is closed for every \(p\ge13\). The exact open remainder is: critical \(p=5,7\); \(p=11,k\ge50\); later \(p=13\) layers; layers beyond 15.752's band; and the separate positive \(p=7,z=7\) branch. The global residual predicate remains false.
+2. **Residual (ii), exact current remainder.** Proposition 15.236/237 covers even \(k\in[3p+1,4p-2]\), and affine two-level is dead for all \(k\ge3p\) (15.179). At **\(k\ge4p\)**, Propositions 15.734--15.737 close the first three shells, Proposition 15.751 closes \(k=4p+6\) for every \(p\ge13\), Proposition 15.752 closes \(k=4p+8\) for every \(p\ge23\) plus its stated contiguous higher band, and Propositions 15.753--15.754 complete the p17/p19/p13 fifth-shell endpoints. Thus the fifth shell is closed for every \(p\ge13\). Propositions 15.768--15.770 close the next two generic layers: `t=q-3,q-2` for `p=1 mod 4,p>=29` and `t=q-2,q-1` for `p=3 mod 4,p>=31`, where `q=(p-1)/2`; they also close `p=23,t=9,10`. The second p23 endpoint has eleven low roots and reuses the fixed exact scan of all 33,649 five-sets. The exact open frontier is: critical `p=5,7`; `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`; `p=23,t>=11`; `p=1 mod 4,p>=29,t>=q-1`; `p=3 mod 4,p>=31,t>=q`; and the separate positive `p=7,z=7` branch. The global residual predicate remains false.
 
    **Separate implication bridge.** Proposition 15.764 proves that an
    all-deletions minimal four-gap set enters the official residual-(ii) unit
