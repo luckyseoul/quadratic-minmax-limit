@@ -1,0 +1,25 @@
+{
+  "check_count": 11,
+  "checks": {
+    "a_along_curve_decreases": true,
+    "a_curvature_endpoint_positive": true,
+    "a_interval_positive": true,
+    "b_chord_coefficient_positive": true,
+    "b_curvature_endpoint_positive": true,
+    "first_square_root_bound": true,
+    "kappa_coarse_interval": true,
+    "second_square_root_bound": true,
+    "strictly_below_inverse_sqrt_two": true,
+    "total_is_70708_over_100000": true,
+    "upper_function_decreases": true
+  },
+  "first_bound": "35317/100000",
+  "pi_interval": "31415926/10000000 < pi < 31415927/10000000",
+  "pi_interval_source_checker_sha256": "d3af3d3bac9ba4d73a7589ba9ed4ff6261fde3263c64d04de36da7f36a1c65d3",
+  "pi_interval_source_result_sha256": "fbc10c4760d963f9364dca586cca3d8df5692ab786cd155634a651fac3a62d9d",
+  "scope": "one fixed eta=3/5 rational certificate, not an optimization",
+  "second_bound": "35391/100000",
+  "square_margin_to_half": "23671/625000000",
+  "status": "PASS",
+  "total_bound": "17677/25000"
+}

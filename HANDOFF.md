@@ -21,6 +21,55 @@ predicates. Valid local results retain their stated scope and evidence.
 
 ## Next mathematical work
 
+The latest evaluated small-gap package is
+`evidence/original_mo_small_gap_evaluation_milestone.json`:
+
+- `NOTE_2026-09-05_FULL_SDP_GAP_ORIGINAL_PHASE_BOUND.md`
+  (SHA-256 `1d36878bdd157be36b1e935f0e92a0e977cbbabb1bbf23784a645860ac1142c0`)
+  constructs two ACTUAL unit-diagonal PSD Gaussian phases with the same
+  coordinate normalization. Subtracting their ORIGINAL quadratic energies
+  gives the coefficient kappa/2 directly, not through beta(K)<=4Phi(K).
+  Here D is trace-optimal for the FULL SDP, S=tr D=tau(K), q=N-1,
+  and gamma=(S-tr|K|^3/q)/S. Under a fixed original norm cap,
+  `Phi(K)>=kappa S/2-O(N^(3/2)sqrt(gamma)+N^(5/4))`.
+  Its finite bound retains the actual weighted mask loss. It is vacuous
+  for gamma>=1/4; do not reuse it as a complementary large-gap gain.
+  The conclusion `u=c_D/n>=kappa-o(1)` additionally needs the ACTUAL
+  active pure-cross conditions p=q_A=0 and c=Phi(K), with N=2n.
+- `NOTE_2026-09-05_SMALL_GAP_PURE_CROSS_UPPER.md`
+  (SHA-256 `035c8e9d042fe8b54773784988356d16ed7c1257f35c470c5c64aa68dd65cfa6`)
+  evaluates the actual
+  squared-singular-value measure of W_D, including zeros. The exact
+  sign-square identity and compatibility give
+  `m=integral y dnu(y)=u^2/f_n^2+o(1)`, where c=f_n n^(3/2).
+  For standard centered signs, at fixed t=3/5, concavity of A and B's convexity bound
+  EVERY actual measure by the algebraic expression (3.5); no Dirac law
+  or common extremizing measure is assumed. For
+  f_n tending to sqrt(2), gamma tending to zero and the active conditions
+  above, the resulting cell upper is
+  `limsup E max X_z/(2n^(3/2))<=17677/25000<1/sqrt(2)`.
+  The monotonicity argument covers all u>=kappa up to vanishing errors.
+
+Both proofs and their complete review provenance are in the manifest.
+Exactly eleven new fixed Fraction comparisons passed one soulkiller run;
+result SHA-256
+`0ea064435322e698b8e33a4d9bce8ab29156e3cfe013c9885f1f35e205156e41`.
+The squared strict margin is `23671/625000000`. The earlier pi enclosure
+was reused, not recomputed. The replay artifact is
+`python3 evidence/original_mo_small_gap_pure_cross_rational_certificate.py`;
+do not rerun unchanged arithmetic merely for another receipt.
+
+This evaluates a previously unevaluated ACTUAL-law diagnostic face, not
+the supremum over all coupled original/weighted cells. The general
+formula retains f_n; the desired bound is still `F<=2sqrt(2)Phi(A)`.
+If Phi(A)/n^(3/2) is below 1/2, the f=sqrt(2) result alone does not meet
+that smaller target. The next implications are a bound at the actual
+smaller normalization, control of nonzero original internal energies,
+and a genuinely complementary positive-gap argument. A norm cap or
+optimizer label does not supply small canonical gap. Original all-orders
+convergence remains OPEN; none of these route-specific premises is a
+necessary condition imposed on every possible convergence proof.
+
 The latest quantified compatibility package is
 `evidence/original_mo_gap_compatibility_milestone.json`:
 

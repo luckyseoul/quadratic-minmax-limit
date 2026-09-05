@@ -42,6 +42,29 @@ See `ARTIFACTS.md` for the preserved branches and terminology.
 
 ## Fresh mathematical target
 
+The [evaluated small-gap package](evidence/original_mo_small_gap_evaluation_milestone.json)
+adds a correctly normalized ORIGINAL-phase bound and an actual-law upper.
+For D trace-optimal for the FULL SDP, S=tr D=tau(K), two positive
+phases of the same full signing give, under a fixed original norm cap,
+`Phi(K)>=kappa tr(D)/2-O(N^(3/2)sqrt(gamma)+N^(5/4))`, kappa=2/pi.
+The finite bound is vacuous for gamma>=1/4. Small gap and the SEPARATE
+active original conditions p=q_A=0, c=Phi(K) imply `u=c_D/n>=kappa-o(1)`.
+For the ACTUAL squared-singular-value measure of W_D,
+`m=u^2/f_n^2+o(1)`, c=f_n n^(3/2). For standard centered signs, the
+concavity and convexity bounds at the fixed
+metric t=3/5 evaluate its two-trace upper for every actual measure, not
+a formal Dirac choice. When f_n tends to sqrt(2), the active small-gap
+cell satisfies `limsup E max X_z/(2n^(3/2))<=17677/25000<1/sqrt(2)`.
+Eleven predetermined exact Fraction comparisons passed once on soulkiller;
+the earlier pi certificate was reused without a rerun.
+
+The smaller-f formula, other original internal-energy cells, and positive
+canonical-gap sources are still unresolved. In particular the intended
+conditional bound `F<=2sqrt(2)Phi(A)` is not replaced by an absolute
+sqrt(2)n^(3/2) bound when the original normalized minimum is below 1/2.
+The two fully reviewed proofs are conditional advances, not a proof of
+original convergence or a claim that all optimizers have small gap.
+
 The [canonical-gap compatibility package](evidence/original_mo_gap_compatibility_milestone.json)
 now controls the actual weighted/unweighted discrepancy in a quantified
 small-gap regime. For ANY trace-optimal full-signing diagonal D, with

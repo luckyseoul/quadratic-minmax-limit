@@ -8,6 +8,35 @@ The old ledgers are fully preserved on the two branches in `ARTIFACTS.md`.
 No local theorem is made false by parking its route; no open implication
 is made necessary for the original problem by its old status field.
 
+**Original phases and evaluated actual-law pure-cross face (2026-09-05).**
+`original_mo_small_gap_evaluation_milestone.json` records the common
+coordinate-normalized PSD phase construction and its masked-residual
+estimate. The ORIGINAL quadratic-energy difference gives kappa/2 without
+a rectangular factor loss. With D trace-optimal for the FULL SDP and
+S=tr D=tau(K), under a fixed original norm cap it proves
+`Phi(K)>=kappa S/2-O(N^(3/2)sqrt(gamma)+N^(5/4))`.
+Its explicitly evaluated finite bound is vacuous for gamma>=1/4;
+repeating it cannot resolve that complementary branch. The active
+conditions p=q_A=0 and c=Phi(K) are separate from small gap and yield
+u=c_D/n>=kappa-o(1) only when both are present.
+
+The second proof uses the ACTUAL measure of squared singular values of
+W_D and its exact inverse-diagonal product moment. Compatibility gives
+m=u^2/f_n^2+o(1); it does not justify m=u^2/2 at an arbitrary original
+normalization. For standard centered signs, fixed t=3/5, Jensen for A and the
+endpoint chord for convex B give a uniform actual-measure expression.
+For f_n tending to sqrt(2), its active small-gap upper is strictly below
+1/sqrt(2) after normalization by 2n^(3/2), with certified bound 17677/25000.
+Eleven new fixed rational comparisons were run once; the prior pi
+enclosure was reused and no signing or spectral-law search was performed.
+
+Do not return to the already superseded formal weak-Dirac diagnostic at
+this same normalization. Retain the general f dependence, the actual
+weighted matrices and all other original/weighted cells. The smaller
+target F<=2sqrt(2)Phi(A), nonzero internal shells and positive-gap range
+remain open. Exact zero-gap rigidity must not be promoted to asymptotic
+rigidity without a separate argument. Original MO convergence is OPEN.
+
 **Full canonical gap and actual-diagonal metric stability (2026-09-05).**
 `original_mo_gap_compatibility_milestone.json` quantifies the previously
 missing weighted/unweighted compatibility. For trace-optimal full-K D,
