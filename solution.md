@@ -1,4 +1,13 @@
-# Existence of \(\displaystyle\lim_{n\to\infty}n^{-3/2}\min_{a_{ij}=\pm1}\max_{x=\pm1}\bigl|\sum_{i<j}a_{ij}x_ix_j\bigr|\)
+# Proof collection for the quadratic minimax limit question
+
+**Scope after the 2026-09-05 reset.** The original MO limit is OPEN.
+Start with `CORE.md` for the reviewed route-neutral core and `STATUS.md`
+for current claims. This long collection preserves scoped proofs and
+historical reductions; it is not a completed solution or a mandatory work
+plan. Residual (ii), E1, and the current amplification constructions are
+optional routes, not known necessary conditions for convergence.
+Historical references below to a live or required gate are local to the
+route and date in question. See `ARTIFACTS.md` for full archived ledgers.
 
 ## Statement
 
@@ -372,7 +381,8 @@ In particular \(m_n\ge n\sqrt{n-1}/\pi\) and
 \liminf_{n\to\infty}\alpha_n\;\ge\;\frac1\pi.
 \]
 
-*Proof.* Fix \(A\in\mathcal S_n\), let \(g\sim N(0,I_n)\), and set \(t=\sqrt{n/(n-1)}\). Define
+*Proof.* For \(n=2\), directly \(\Phi(A)=1\ge2/\pi\).
+Hence assume \(n\ge3\). Fix \(A\in\mathcal S_n\), let \(g\sim N(0,I_n)\), and set \(t=\sqrt{n/(n-1)}\). Define
 \[
 z^{\pm}=\Bigl(I\pm\frac{t}{\sqrt n}\,A\Bigr)g,
 \qquad
@@ -407,7 +417,8 @@ v
 \frac{n-2}{2(n-1)}+\frac1{\sqrt{n-1}}
 <1
 \]
-for all \(n\ge2\) (direct check at \(n=2,3\); for \(n\ge4\) the right-hand side is \(<1\)).
+for all \(n\ge3\), since the right-hand side equals
+\(1/2+v-v^2/2<1\) for \(0<v<1\).
 
 The arcsine law for a centered bivariate Gaussian of correlation \(r\) states
 \(\mathbb E[\operatorname{sgn}Z_1\operatorname{sgn}Z_2]=(2/\pi)\arcsin r\). Hence
@@ -501,7 +512,8 @@ the original question, not a proof of the limit.
 
 ## §6. Denseness
 
-**Proposition 6.1.** If \(n_{k+1}/n_k\to1\), then
+**Proposition 6.1.** Let \((n_k)\) be a strictly increasing, unbounded
+sequence of integers at least two. If \(n_{k+1}/n_k\to1\), then
 \[
 \liminf_n\alpha_n=\liminf_k\alpha_{n_k},
 \qquad

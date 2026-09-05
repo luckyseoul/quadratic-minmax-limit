@@ -8,9 +8,9 @@ Per-stratum QVAR on every k≥7 is false at (41,7) and is **not** equivalent
 to (i).
 
 Does **not** treat G_{u,disj} as a Gram.  Aut-Schur / Gsum / pairing stay
-their own units.  L follows the four-leftover AND and may close if leftover
-1, leftover 2/3, and lemma D are all actually proved.  p=13 orbits are not
-a close.
+their own optional-route units. Global convergence is tracked independently
+in original_mo_status; a historical leftover conjunction neither certifies
+nor vetoes it. p=13 orbits are not a close.
 
 IDENTITIES (proved Max+-free Fraction)
   A. λ_exc = 32 E|Z_ψ|² / [q(q-1)]  (15.589 E).  QVAR
@@ -283,10 +283,10 @@ def leftover1_reductions_ok() -> bool:
 
 
 def live_L_status() -> str:
-    """CLOSED only if leftover 1, leftover 2/3, and lemma D are all proved."""
-    from e1_main_chain_status import four_e1_units_closed
+    """Global limit status is independent of this optional Paley route."""
+    from original_mo_status import original_mo_status
 
-    return "CLOSED" if four_e1_units_closed().get("closed") else "OPEN"
+    return original_mo_status()["limit_status"]
 
 
 def dump_leftover_predicates() -> dict:

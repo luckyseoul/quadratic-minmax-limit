@@ -1,0 +1,146 @@
+{
+  "schema": "original-mo-route-neutral-reset-regression-v1",
+  "date_utc": "2026-09-05",
+  "classification": "Software and documentation regression checks; separate analytic proof review, not a convergence certificate",
+  "workspace": "/home/nick/quadratic-minmax-limit",
+  "active_branch": "main",
+  "base_commit": "ad8c6920412af0b3c23629afe2a9e95060c5471e",
+  "preservation": [
+    {
+      "branch": "archive/2026-09-05-paley-research",
+      "commit": "ad8c6920412af0b3c23629afe2a9e95060c5471e",
+      "preserved_dirty_files": 48
+    },
+    {
+      "branch": "archive/2026-09-05-main-local-edits",
+      "commit": "c2e13218cceb7e1fb36de8f2625bf4c4a7c0a606",
+      "preserved_dirty_files": 22
+    }
+  ],
+  "execution": {
+    "host": "soulkiller",
+    "address": "192.168.1.113",
+    "remote_directory": "/tmp/original-mo-reset-replay.W2zk3m",
+    "local_receipt_directory": "/tmp/original-mo-reset-receipt.9y60GJ",
+    "logical_cpus": 88,
+    "preflight_load_averages": [
+      2.52,
+      2.29,
+      2.14
+    ],
+    "workers": 1,
+    "thread_limits": 1,
+    "controller_test_compute": false,
+    "proof_census_or_solver_run": false,
+    "runtime": "/home/nick/.venvs/mo-exact/bin/python",
+    "snapshot_note": "Full staged manifests include incidental copied .venv Python files and the pytest cache README; the run uses the explicitly named external interpreter. All 5902 final staged file hashes were checked against the local checkout.",
+    "setup_note": "Remote rg was unavailable. Standard find generated the technical manifest after test start, with staged source/test/document inputs unchanged. No technical test was rerun for this setup issue."
+  },
+  "summary": {
+    "technical_tests_passed": 40,
+    "documentation_tests_final_passed": 17,
+    "distinct_tests_successful_across_runs": 57,
+    "single_combined_all_pass_run": false,
+    "full_repository_suite_run": false,
+    "initial_documentation_failures": "Two stale assertions depended on phrasing in removed canonical navigation prose. They were redirected to equivalent scope statements in retained proof artifacts; no mathematical source changed.",
+    "original_mo_status": "OPEN",
+    "reviewed_global_completion_entries": 0
+  },
+  "runs": [
+    {
+      "id": "technical",
+      "test_selection": "tests/test_original_mo_status.py tests/test_leftover1_qvar_principal.py::test_other_leftovers_are_live_units_not_baked_false tests/test_global_qvar.py::test_L_status_not_baked tests/test_qvar_k_ge_7.py::test_qvar_k_ge_7_wiring_no_handwritten_true",
+      "passed": 40,
+      "failed": 0,
+      "exit_code": 0,
+      "seconds": 44.83,
+      "log_sha256": "798a8fe4cc4f9b455bd65a320e39ef73848c6ab1c75c1630baf6a49569898658",
+      "junit_sha256": "162612d0015117572875e9daa908837f8ecd3a76be55f2bfcf4790d14e220399",
+      "manifest": "input-manifest-technical.sha256",
+      "manifest_sha256": "76288365928625ce8058b79c1633fec140d6ee7e18e658eefc602bbc224d441a",
+      "staged_file_count": 5901,
+      "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 /home/nick/.venvs/mo-exact/bin/python -m pytest -q -n 0 -o addopts= tests/test_original_mo_status.py tests/test_leftover1_qvar_principal.py::test_other_leftovers_are_live_units_not_baked_false tests/test_global_qvar.py::test_L_status_not_baked tests/test_qvar_k_ge_7.py::test_qvar_k_ge_7_wiring_no_handwritten_true --junitxml=replay-technical.xml",
+      "log_file": "replay-technical.log",
+      "junit_file": "replay-technical.xml",
+      "log_text": "........................................                                 [100%]\n40 passed in 44.83s\n"
+    },
+    {
+      "id": "docs",
+      "test_selection": "tests/test_main_chain_docs.py",
+      "passed": 15,
+      "failed": 2,
+      "exit_code": 1,
+      "seconds": 2.92,
+      "log_sha256": "cd84b4715e54400cd11f13b95820e20803cef8ee6ea42321cf51d2582588613f",
+      "junit_sha256": "fa5ce7e0201103801e9128ea87c6aaffdd4af3aeb0a3b20761bcf3a84cb5df61",
+      "manifest": "input-manifest-docs.sha256",
+      "manifest_sha256": "83bc0bc86821ba81435880a80a4260fdb159c7db723ec3cc4d77ca89acb01d99",
+      "staged_file_count": 5902,
+      "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 /home/nick/.venvs/mo-exact/bin/python -m pytest -q -n 0 -o addopts= tests/test_main_chain_docs.py --junitxml=replay-docs.xml",
+      "log_file": "replay-docs.log",
+      "junit_file": "replay-docs.xml",
+      "log_text": "....FF...........                                                        [100%]\n=================================== FAILURES ===================================\n_________ test_prop15757_15761_edge_radon_docs_preserve_open_box_gate __________\n\n    def test_prop15757_15761_edge_radon_docs_preserve_open_box_gate():\n        from pathlib import Path\n    \n        root = Path(__file__).resolve().parents[1]\n        solution = (root / \"solution.md\").read_text(encoding=\"utf-8\", errors=\"replace\")\n        for prop in range(15757, 15762):\n            label = f\"15.{prop - 15000}\"\n            assert f\"## Proposition {label}\" in solution\n    \n        assert \"\\\\operatorname {rank}_{\\\\mathbf F_2}R_2\" in solution\n        assert \"{(m-1)(4m^2+7m+6)\\\\over6}\" in solution\n        assert \"{\\\\cal A}/R\\\\mathbf Z^{\\\\binom V2}\" in solution\n        assert \"(z_0+\\\\ker_{\\\\mathbf Z}R)\\\\cap\" in solution\n        assert \"{\\\\cal Q}(W,P,T)\\\\le|H|\" in solution\n        assert \"Audited \\\\(p=31,t=69\\\\) arbitrary-compact local gate\" in solution\n        assert \"449 free noncentered orbits\" in solution\n        assert \"no `SAT` orbit exists\" in solution\n        assert \"All-prime branch-C odd--Radon centrality\" in solution\n        assert \"\\\\(p=4r+3\\\\)\" in solution\n        assert \"\\\\(r\\\\ge7\\\\)\" in solution\n        assert \"N=3(r+b-1)\\\\le4r-1\" in solution\n        assert \"3b\\\\le r+2\" in solution\n        assert \"0\\\\le\\\\delta\\\\le(2r+2)\" in solution\n        assert \"69\\\\le t\\\\le99\" in solution\n        assert \"unbalanced allocations\" in solution\n        assert \"Seven-channel algebraic-dominance barrier\" in solution\n        assert \"226534996574208000\" in solution\n        assert \"220242357780480000\" in solution\n        assert \"does **not** provide labels or form coefficients in \\\\(\\\\mathbf F_p\\\\)\" in solution\n        assert \"No common simple graph\" in solution or \"not a common graph construction\" in solution\n        assert \"Residual (ii), E(1), and the limit remain\\nopen\" in solution\n    \n        binding_names = (\"evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md\",)\n        binding_parts = [\n            (root / name).read_text(encoding=\"utf-8\", errors=\"replace\")\n            for name in binding_names\n        ]\n        binding = \"\\n\".join(binding_parts)\n>       assert \"p31 arbitrary-compact\" in binding\nE       AssertionError: assert 'p31 arbitrary-compact' in '# Proposition and route de-duplication audit\\n\\n**2026-09-05 scope reset.** This is a historical lookup and duplicati... the replacement for extending a finished line with one\\nmore solver, projection, shell, channel, orbit, or timeout.\\n'\n\ntests/test_main_chain_docs.py:219: AssertionError\n_______ test_post15761_geometry_conic_and_boolean_reductions_are_scoped ________\n\n    def test_post15761_geometry_conic_and_boolean_reductions_are_scoped():\n        from pathlib import Path\n    \n        root = Path(__file__).resolve().parents[1]\n        names = (\"solution.md\", \"evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md\")\n        texts = {\n            name: (root / name).read_text(encoding=\"utf-8\", errors=\"replace\")\n            for name in names\n        }\n    \n        for name, text in texts.items():\n            flat = \" \".join(text.split())\n            normalized = text.replace(\"\\\\beta\", \"beta\").replace(\"{,}\", \",\")\n            assert \"Couvreur\" in text, name\n            assert \"boundary cubic\" in text.lower(), name\n            assert \"q^3=1\" in text, name\n            assert \"k^2=-3\" in text, name\n            assert \"p=31,b=7,k=11\" in text, name\n            assert \"230,314,710\" in normalized, name\n            assert \"17,076\" in normalized, name\n            assert \"beta_R(y)=0\" in normalized, name\n            assert \"complete Graver\" in text, name\n            assert \"tests/test_p31_equi_zero68_mitm.py\" in text, name\n            assert (\n                \"Residual (ii), E1, `L=1/2`, and the original MO limit remain OPEN.\"\n                in flat\n            ), name\n            assert \"compact-threshold conjecture\" not in text.lower(), name\n    \n        solution = texts[\"solution.md\"]\n        assert \"{h(h+1)\\\\over2}>3h-6\" in solution\n        assert \"3p-15>p+1+8\\\\sqrt p\" in solution\n        assert \"p\\\\equiv7\\\\pmod {12}\" in solution\n        assert \"F_6=(11,19,10)\" in solution\n        assert \"F_8=(12,11,23,6)\" in solution\n        assert \"\\\\ker_{\\\\mathbf Z}R/{\\\\cal K}_{\\\\rm ridge}\" in solution\n        assert \"\\\\nu_p=dpm^2+{m(m-1)(4m+1)\\\\over6}\" in solution\n        assert (\n            \"not the complete Graver system and not a signed Boolean lift\"\n            in \" \".join(solution.split())\n        )\n    \n        for name in names:\n            if name == \"solution.md\":\n                continue\n            text = texts[name]\n            assert \"p=7 mod 12\" in text, name\n            assert \"K_ridge\" in text, name\n            assert \"nu_p=d p m^2+m(m-1)(4m+1)/6\" in text, name\n    \n        binding = \"\\n\".join(texts.values())\n>       assert \"finite-fiber theorem\" in binding\nE       AssertionError: assert 'finite-fiber theorem' in '# Proof collection for the quadratic minimax limit question\\n\\n**Scope after the 2026-09-05 reset.** The original MO ... the replacement for extending a finished line with one\\nmore solver, projection, shell, channel, orbit, or timeout.\\n'\n\ntests/test_main_chain_docs.py:305: AssertionError\n=========================== short test summary info ============================\nFAILED tests/test_main_chain_docs.py::test_prop15757_15761_edge_radon_docs_preserve_open_box_gate\nFAILED tests/test_main_chain_docs.py::test_post15761_geometry_conic_and_boolean_reductions_are_scoped\n2 failed, 15 passed in 2.92s\n"
+    },
+    {
+      "id": "docs-corrected",
+      "test_selection": "tests/test_main_chain_docs.py",
+      "passed": 17,
+      "failed": 0,
+      "exit_code": 0,
+      "seconds": 2.99,
+      "log_sha256": "234410f4bd4bc0d092053c49cf72ad95f8dd66a976f8ecbfe9957596e932ec7e",
+      "junit_sha256": "d9b9b05769007341a80cf1551799cc36c96c7fe373c4052578ffc4f8e5e43375",
+      "manifest": "input-manifest-docs-corrected.sha256",
+      "manifest_sha256": "9ed8559184c4606fce896547e55dd9e971ad84b480a700ae9e85a7390871bfad",
+      "staged_file_count": 5902,
+      "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 /home/nick/.venvs/mo-exact/bin/python -m pytest -q -n 0 -o addopts= tests/test_main_chain_docs.py --junitxml=replay-docs-corrected.xml",
+      "log_file": "replay-docs-corrected.log",
+      "junit_file": "replay-docs-corrected.xml",
+      "log_text": ".................                                                        [100%]\n17 passed in 2.99s\n"
+    }
+  ],
+  "deltas": {
+    "technical_to_first_docs": {
+      "modified": [
+        "HANDOFF.md",
+        "STATUS.md",
+        "evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md"
+      ],
+      "added": [
+        "evidence/NOTE_2026-09-05_INDUCED_OPTIMIZER_RESTRICTIONS.md"
+      ],
+      "source_or_test_changes": []
+    },
+    "first_docs_to_corrected_docs": {
+      "modified": [
+        "tests/test_main_chain_docs.py"
+      ],
+      "source_or_proof_changes": []
+    }
+  },
+  "final_input_verification": {
+    "command": "sha256sum --quiet -c /tmp/original-mo-reset-receipt.9y60GJ/input-manifest-docs-corrected.sha256",
+    "cwd": "/home/nick/quadratic-minmax-limit",
+    "exit_code": 0,
+    "checked_files": 5902,
+    "receipt_itself_not_in_input_manifest": true
+  },
+  "key_sha256": {
+    "CORE.md": "f70cb5120d6554c75bc9b10311d993087099796cce79eee4effe5342c6dfde26",
+    "ARTIFACTS.md": "b161aa494a1513a1c2cd837d5aa4efc03bc5baf0edb176b61ef8af0fae3d800b",
+    "STATUS.md": "791215cc415194109ed8f818a2bc70183a1b8019612403aed2c0bcf3f8cded16",
+    "HANDOFF.md": "d34d42a102d588d129e3034f88ae476d1bc0c9cd90d22c1230ec5f3616d532cf",
+    "src/original_mo_status.py": "12a84771fd2f0c3aefd48ebe94a1b40f4e9a096241fb8ac8348f4274cecab597",
+    "src/e1_main_chain_status.py": "a65238343f1109eb152a5ad5b80fafe9d08909e02e9b437639dd4ac26be6572e",
+    "tests/test_original_mo_status.py": "034aa05485bc166af6e52a7fd1497be58e29f44b537e2ba86c62337cfad5419a",
+    "tests/test_main_chain_docs.py": "d37e678e9fae1bf2ad4d66e372d10cb043de2d0b797f93d885962d6b66982cdf",
+    "evidence/NOTE_2026-09-05_INDUCED_OPTIMIZER_RESTRICTIONS.md": "ab65d46bb48627170344219850131aa77ed9cbe9d152e143346a7fec71d42409"
+  },
+  "mathematical_review": {
+    "reviewers": "Full root review and independent full-proof audit",
+    "core": "Definitions, restriction/padding, random upper bound, Gaussian lower bound with n=2 correction, interval limit-point set, increasing unbounded ratio-dense transfer, conference construction, and optional Dini criterion reviewed.",
+    "new_proof": "Complete induced-signing TV estimate, all-pattern universality, fresh-column greedy independence and exponential lower tail, uniform-marginal sampling union bound.",
+    "essential_hypotheses": "n tends to infinity, n^2=o(log N), source norm O(N^(3/2)); source-normalized sampling failure additionally uses source limsup normalized norm <=1/2.",
+    "scope": "Smaller-order m_n-optimal restrictions exist. Source-constant-preserving restrictions are not proved to exist; their existence under universality is equivalent to the still-unproved cross-order comparison. No convergence, nonconvergence, or exact limit value follows."
+  }
+}

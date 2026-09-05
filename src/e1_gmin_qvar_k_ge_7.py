@@ -2893,10 +2893,10 @@ def qvar_k_ge_7_proved_general() -> bool:
 
 
 def live_L_status() -> str:
-    """L follows the four-leftover AND.  Not baked OPEN."""
-    from e1_main_chain_status import four_e1_units_closed
+    """Global limit status is independent of this optional Paley route."""
+    from original_mo_status import original_mo_status
 
-    return "CLOSED" if four_e1_units_closed().get("closed") else "OPEN"
+    return original_mo_status()["limit_status"]
 
 
 def main() -> dict:

@@ -93,7 +93,8 @@ def test_FWW_principal_room_n14_not_n6(p):
 def test_other_leftovers_are_live_units_not_baked_false():
     from e1_gmin_m4_prop15274 import residual_ii_k_ge_4p_ND_closed
     from e1_gmin_m4_prop15275 import type_I_aut_e_3AB_positive_general
-    from e1_main_chain_status import four_e1_units_closed, run_main_chain
+    from e1_main_chain_status import run_main_chain
+    from original_mo_status import original_mo_status
 
     dump = L.dump_leftover_predicates()
     assert dump["gsum_disj_lb_proved_general"] is gsum_disj_lb_proved_general()
@@ -105,9 +106,8 @@ def test_other_leftovers_are_live_units_not_baked_false():
     assert dump["type_I_multilevel_bad_case_ND_closed"] is (
         type_I_multilevel_bad_case_ND_closed()
     )
-    units = four_e1_units_closed()
     out = run_main_chain()
-    expect = "CLOSED" if units["closed"] else "OPEN"
+    expect = original_mo_status()["limit_status"]
     assert dump["L_status"] == expect
     assert out["L_status"] == expect
     # The corrected live e1 gate remains open; this route does not flip it.

@@ -27,8 +27,10 @@ Honest predicates:
   residual_ii_full_closed = False          (live even-k≥4p remainder open)
   deep_s2_freeness_fail_k_ge_3p_ND_closed wires to residual_ii_full_closed.
 
-E1_closed when residual (i) ∧ residual (ii) full ∧ bi-tight.
-L closed iff E1 ∧ bi-tight. Soft-close forbidden.
+Historical E1 diagnostics also require the all-size entry bridge (15.764).
+The full E1 hypothesis with bi-tightness suffices for L=1/2; it is not
+necessary for an independent convergence proof. Global status is recorded
+separately in original_mo_status. Soft-close forbidden.
 
 Writes evidence/e1_gmin_m4_prop15171.json
 """
@@ -435,13 +437,21 @@ def e1_closed_general() -> bool:
 
 
 def main_L_from_e1(e1: bool, bitight: bool) -> dict:
+    """Legacy Paley implication diagnostic; not the original-problem status.
+
+    The L_* keys are retained for compatibility and refer only to this
+    sufficient route. OPEN means this route does not establish the result.
+    """
     L_closed = bool(e1 and bitight)
     return {
+        "scope": "optional_paley_route",
+        "sufficient_not_necessary": True,
+        "paley_route_closed": L_closed,
         "bi_tight": bitight,
         "E1": e1,
         "L_closed": L_closed,
         "L_status": "CLOSED" if L_closed else "OPEN",
-        "rule": "L closed iff bi-tight ∧ E(1); denseness Prop 6.2",
+        "rule": "bi-tight and the full E(1) hypothesis suffice for L=1/2; not a necessity claim",
     }
 
 

@@ -5,7 +5,8 @@ Global QVAR — leftover-1 quartic-variance conjunct, all k mixed.
 Does **not** number leftover 1 (principal δ-room is a separate import).
 Does **not** require QVAR on each k-stratum.  p=13 orbits / mesh k=6
 are not a general close.  Aut-Schur / Gsum / pairing stay their own
-units.  L follows the four-leftover AND.
+optional-route units. Global convergence is tracked independently in
+original_mo_status, not by a conjunction of these historical leftovers.
 
 CLAIM (Max+-free)
   Over the full Max+ ensemble (every activity k, λ=0 not split),
@@ -1055,10 +1056,10 @@ def global_qvar_proved_general() -> bool:
 
 
 def live_L_status() -> str:
-    """L follows the four-leftover AND.  Not baked OPEN."""
-    from e1_main_chain_status import four_e1_units_closed
+    """Global limit status is independent of this optional Paley route."""
+    from original_mo_status import original_mo_status
 
-    return "CLOSED" if four_e1_units_closed().get("closed") else "OPEN"
+    return original_mo_status()["limit_status"]
 
 
 def main() -> dict:

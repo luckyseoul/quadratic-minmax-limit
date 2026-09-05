@@ -1,5 +1,24 @@
 # Proposition and route de-duplication audit
 
+**2026-09-05 scope reset.** This is a historical lookup and duplication
+audit, not a mandatory work plan. `CORE.md`, `STATUS.md`, and `HANDOFF.md`
+set the route-neutral current task. Residual (ii), the all-size entry
+bridge, and current amplification constructions are optional avenues.
+The old ledgers are fully preserved on the two branches in `ARTIFACTS.md`.
+No local theorem is made false by parking its route; no open implication
+is made necessary for the original problem by its old status field.
+
+**Fresh route-neutral theorem (2026-09-05).**
+`NOTE_2026-09-05_INDUCED_OPTIMIZER_RESTRICTIONS.md` proves the complete
+induced-signing law estimate, all-pattern universality, and a quantitative
+greedy lower tail. For `n -> infinity`, `n^2=o(log N)`, smaller-order
+optimal restrictions exist inside every `O(N^(3/2))` source, while
+`exp(o(n))` uniform-marginal samples cannot preserve a globally optimal
+source's constant with nonvanishing probability. The source-constant
+existence assertion remains an unproved cross-order comparison, not a
+consequence of universality. This is distinct from the old prefix-total-
+variation and graphon-pressure barriers. No finite census was run.
+
 **Date:** 2026-09-04
 
 **Scope:** Propositions 6.3--6.10a, every assigned proposition through
@@ -14,7 +33,7 @@ or finite-prime rerun from being mistaken for a new mathematical attack
 
 ### Global bridge: restricted Type-I scope, not a closure
 
-The active task is the global minimal-four-gap implication. The proved
+The archived Paley task was the global minimal-four-gap implication. The proved
 15.750 box assumes `k=3p-2` and `S_G=3-2*f_e on Max+`; even H
 contact at two gives only general odd-k level-one alignment. The latter
 does not enter that box without a new theorem. The 15.774 unconditional

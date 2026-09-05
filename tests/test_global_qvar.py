@@ -294,11 +294,11 @@ def test_leftover1_wires_global_not_k_ge_7():
 
 
 def test_L_status_not_baked():
-    from e1_main_chain_status import four_e1_units_closed, run_main_chain
+    from e1_main_chain_status import run_main_chain
+    from original_mo_status import original_mo_status
 
-    units = four_e1_units_closed()
     out = run_main_chain()
-    expect = "CLOSED" if units["closed"] else "OPEN"
+    expect = original_mo_status()["limit_status"]
     assert G.live_L_status() == expect
     assert L.live_L_status() == expect
     assert out["L_status"] == expect

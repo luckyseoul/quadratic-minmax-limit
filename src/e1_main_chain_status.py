@@ -1,12 +1,9 @@
 #!/usr/bin/env python3
-"""
-Public-doc honesty check for E(1) / L.
+"""Original-problem status with separately retained Paley-route diagnostics.
 
-    Writeup may assert L=1/2 only after the corrected GOAL.md units are
-    actually imported (not the retired Gsum hinge or the retracted 15.167
-    spectral arrow). ``e1_closed_general`` now agrees with the live open
-    gates. The legacy-named four-unit record also includes the 15.764
-    implication bridge exposed after that ledger was designed. Soft-close banned.
+Legacy E1 names describe the stronger Paley gap-two proof architecture.
+They neither certify nor veto the original MathOverflow conclusion.  Global
+status comes only from the explicit reviewed registry in original_mo_status.
 """
 from __future__ import annotations
 
@@ -23,13 +20,13 @@ from e1_gmin_m4_prop15168 import (  # noqa: E402
     e1_closed_general,
     e1_residual_open,
     main as prop15168_main,
-    main_L_from_e1,
 )
 from e1_gmin_m4_prop15170 import gsum_disj_lb_proved_general  # noqa: E402
+from original_mo_status import original_mo_status  # noqa: E402
 
 
 def four_e1_units_closed() -> dict:
-    """Expanded GOAL.md acceptance under the legacy public function name."""
+    """Historical Paley-route diagnostic, not global proof acceptance."""
     try:
         from e1_gmin_m4_prop15720 import required_bitight_levels_empty_all_primes
         from e1_gmin_m4_prop15274 import residual_ii_k_ge_4p_ND_closed
@@ -65,11 +62,11 @@ def _props_15167_171_slice(solution: str) -> str:
 
 
 def check_docs_L_status() -> dict:
-    """
-    Docs OK iff status asserts L OPEN (or true L closed with proved hinge)
-    and no soft-close 'L CLOSED' / residual closed claims while the
-    legacy-named expanded acceptance gate is open.
-    Scans HANDOFF head, STATUS, solution top, **and** Props 15.167–171 body.
+    """Check global conclusions and historical Paley claims independently.
+
+    An open optional route cannot invalidate an independently reviewed global
+    proof.  Conversely, route flags alone never license a global conclusion.
+    This is a bounded claim scanner, not a verifier of mathematical prose.
     """
     handoff = (ROOT / "HANDOFF.md").read_text(encoding="utf-8", errors="replace")
     solution = (ROOT / "solution.md").read_text(encoding="utf-8", errors="replace")
@@ -94,39 +91,77 @@ def check_docs_L_status() -> dict:
 
     units = four_e1_units_closed()
     e1 = bool(e1_closed_general())
+    global_status = original_mo_status()
     # Fixed-width patterns only (variable-width look-behind is invalid in re).
-    soft_patterns = [
+    existence_patterns = [
         r"\*\*L CLOSED\.\*\*",
         r"\*\*L CLOSED\*\*",
-        r"L CLOSED \(via E1",
         r"L CLOSED \(via",
+        r"(?<![\w-])(?<!Non )Existence\s+(?:CLOSED|PROVED)\b",
         r"E1_closed_general\s*=\s*true\.?\s*L CLOSED",
-        r"E1_closed_general=true\. L CLOSED",
+    ]
+    half_value_patterns = [
+        r"L=\s*1/2\s*CLOSED",
         r"L=\s*\\?tfrac\{1\}\{2\}\s*CLOSED",
         r"L=\s*½\s*CLOSED",
         r"lim\s*α_n\s*=\s*1/2\s*CLOSED",
         r"Main claim.*L=.*1/2.*CLOSED",
         r"superseded.*L=.*CLOSED",
+        r"E\(1\); \$L=\\tfrac12\$",
+        r"\*\*Claim:\*\* \*\*\\?\$?L=1/2",
+    ]
+    nonexistence_patterns = [r"Non[- ]?existence\s+(?:CLOSED|PROVED)"]
+    route_patterns = [
         r"\*\*E\(1\) closed\*\*",
         r"E\(1\) closed\s*\\?Rightarrow",
+        r"E\(1\)\s*\(CLOSED",
+        r"\*\*E\(1\) CLOSED:\*\*",
         r"Closes residual \(i\) of E\(1\) for all primes",
         r"Closes residual \(ii\) of E\(1\) for all primes",
+        r"Deep freeness-fail ND \(residual ii\) \| \*\*CLOSED\*\*",
+        r"Residual \*\*\(ii\)\*\* ND is \*\*CLOSED\*\*",
+        r"Residual \(ii\) full ND closed",
+        r"Full residual \(ii\) is \*\*CLOSED\*\*",
+    ]
+    obsolete_patterns = [
         r"CLOSED for general \$p\$ by Prop 15\.170",
         r"disj: association-scheme min",
         r"association-scheme min \$-12",
+        r"Denseness path is \*\*blocked\*\*\s+by residual \*\*\(i\)\*\* only",
     ]
-    soft = False
-    soft_hit = None
+
+    def first_hit(patterns: list[str], text: str) -> str | None:
+        for pattern in patterns:
+            match = re.search(pattern, text, re.I | re.M)
+            if match:
+                return match.group(0)[:80]
+        return None
+
+    global_hits = []
+    if not global_status["existence_proved"]:
+        hit = first_hit(existence_patterns, head)
+        if hit:
+            global_hits.append(hit)
+    if not (global_status["value_proved"] and global_status["limit_value"] == "1/2"):
+        hit = first_hit(half_value_patterns, head)
+        if hit:
+            global_hits.append(hit)
+    if not global_status["nonexistence_proved"]:
+        hit = first_hit(nonexistence_patterns, head)
+        if hit:
+            global_hits.append(hit)
+    if not global_status["problem_settled"]:
+        hit = first_hit([r"\*\*Main Theorem \(limit\)\.\*\*"], head)
+        if hit:
+            global_hits.append(hit)
+
+    # These legacy closure phrases are interpreted only in the historical
+    # Paley writeup/package.  They are not prerequisites for global claims.
+    route_hit = None
     if not units.get("closed"):
-        for pat in soft_patterns:
-            m = re.search(pat, head, re.I | re.M)
-            if m:
-                soft = True
-                soft_hit = m.group(0)[:80]
-                break
-        if re.search(r"E\(1\)\s*\(CLOSED", head, re.I):
-            soft = True
-            soft_hit = soft_hit or "E(1) (CLOSED"
+        route_hit = first_hit(route_patterns, props_tail + "\n" + package)
+    soft_hit = global_hits[0] if global_hits else route_hit
+    soft = soft_hit is not None
 
     handoff_open = bool(
         re.search(
@@ -136,41 +171,27 @@ def check_docs_L_status() -> dict:
         )
     )
 
-    overclaim_patterns = [
-        r"\*\*Main Theorem \(limit\)\.\*\*",
-        r"E\(1\); \$L=\\tfrac12\$",
-        r"\*\*E\(1\) CLOSED:\*\*",
-        r"\*\*Claim:\*\* \*\*\\?\$?L=1/2",
-        r"Denseness path is \*\*blocked\*\*\s+by residual \*\*\(i\)\*\* only",
-        r"Deep freeness-fail ND \(residual ii\) \| \*\*CLOSED\*\*",
-        r"Residual \*\*\(ii\)\*\* ND is \*\*CLOSED\*\*",
-        r"Residual \(ii\) full ND closed",
-        r"Full residual \(ii\) is \*\*CLOSED\*\*",
-    ]
-    overclaim = False
-    overclaim_hit = None
-    if not units.get("closed"):
-        for pat in overclaim_patterns:
-            m = re.search(pat, head, re.I | re.M)
-            if m:
-                overclaim = True
-                overclaim_hit = m.group(0)[:80]
-                break
-
-    if not units.get("closed"):
-        docs_ok = handoff_open and not soft and not overclaim
-    else:
-        docs_ok = not soft
+    overclaim_hit = first_hit(obsolete_patterns, head)
+    overclaim = overclaim_hit is not None
+    docs_ok = bool(
+        global_status["registry_valid"]
+        and (handoff_open or global_status["problem_settled"])
+        and not soft
+        and not overclaim
+    )
 
     return {
         "HANDOFF_shows_L_OPEN": handoff_open,
         "soft_close_detected": soft,
         "soft_close_hit": soft_hit,
+        "global_claim_hits": global_hits,
+        "paley_route_claim_hit": route_hit,
         "overclaim_detected": overclaim,
         "overclaim_hit": overclaim_hit,
         "docs_ok": docs_ok,
         "e1_closed_general": e1,
         "four_e1_units": units,
+        "original_mo": global_status,
         "gsum_disj_lb_proved_general": gsum_disj_lb_proved_general(),
         "scanned_props_15167_171": True,
         "scanned_denseness_package_full": True,
@@ -184,11 +205,12 @@ def run_main_chain() -> dict:
     residual_e1 = e1_residual_open()
     bi = bool(bt["bi_tight_required_levels_empty_for_all_p_ge_5"])
     residual = False
-    Lwire = main_L_from_e1(e1_closed, bi)
     docs = check_docs_L_status()
-    L_closed = bool(docs["four_e1_units"]["closed"])
+    global_status = docs["original_mo"]
+    L_closed = global_status["existence_proved"]
+    L_status = global_status["limit_status"]
     out = {
-        "title": "Main/E(1) chain status (corrected discrete bi-tight gate)",
+        "title": "Original MO status with optional historical Paley diagnostics",
         "bi_tight_required_levels_empty_for_all_p_ge_5": bi,
         "bi_tight_all_levels_empty": False,
         "residual_closed_general": residual,
@@ -215,17 +237,22 @@ def run_main_chain() -> dict:
             ),
             "deep_all_ND_closed": p168["proved"].get("deep_all_ND_closed"),
         },
-        "Main_closed": L_closed,
+        "Main_closed": global_status["problem_settled"],
         "L_closed": L_closed,
-        "L_status": "CLOSED" if L_closed else "OPEN",
-        "writeup_L_closed": bool(docs["four_e1_units"]["closed"]),
+        "L_status": L_status,
+        "L_value": global_status["limit_value"],
+        "existence_proved": global_status["existence_proved"],
+        "nonexistence_proved": global_status["nonexistence_proved"],
+        "value_proved": global_status["value_proved"],
+        "original_mo": global_status,
+        "optional_route_diagnostics": {"paley_gap_two": docs["four_e1_units"]},
+        "writeup_L_closed": bool(L_closed and docs["docs_ok"]),
         "docs": docs,
         "rule": (
-            "Public writeup may assert L=1/2 only after the valid gates: "
-            "bi-tight levels 2/3, residual_ii k≥4p, multi-level Type I, Lemma D, "
-            "and the minimal-gap-four implication bridge. "
-            "QVAR/R1 and the spectral floor are no longer acceptance units. "
-            "Live e1_closed_general agrees with these open gates. Soft-close banned (F3)."
+            "Global completion is determined by the independent reviewed original-MO "
+            "proof registry. Legacy E1/Paley flags are optional route diagnostics, "
+            "not necessary or sufficient machine acceptance for the original question. "
+            "Existence, an identified value, and nonexistence are separate conclusions."
         ),
     }
     return out

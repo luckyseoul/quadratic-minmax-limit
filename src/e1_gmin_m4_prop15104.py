@@ -221,7 +221,7 @@ prove ray_max ≤ 5 by the following comparison with the average.
   A standard bound for quadratic forms on {±1}^n (e.g. the unequal-slices
   bound of Alon–Naor / Charikar, or the simple Grothendieck-type estimate
   specialized to diagonal-free matrices) gives
-      E_{ε∼{\pm1}^n}[(εᵀ Ã ε)²] ≤ 4 ‖Ã‖_F² = 16
+      E_{ε∼{\\pm1}^n}[(εᵀ Ã ε)²] ≤ 4 ‖Ã‖_F² = 16
   for the full hypercube (exact: E[(εᵀ Ã ε)²] = 2‖Ã‖_F² = 8 for Rademacher
   with zero diagonal — wait 2*4=8).
 

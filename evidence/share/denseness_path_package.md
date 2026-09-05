@@ -1,5 +1,13 @@
 # Denseness-path package (intended \(L=\tfrac12\); the limit is OPEN)
 
+**Optional-route archive (2026-09-05).** This package is a reference for
+one sufficient value-specific program, not a global acceptance gate.
+Residual (ii), the entry bridge, and uniform gap two are not known
+necessary for the original convergence question. `E1` here denotes the
+explicit strong gap-two target; older uses for asymptotic optimality must
+not be conflated with it. Current global status is in `STATUS.md` and
+`src/original_mo_status.py`; branch provenance is in `ARTIFACTS.md`.
+
 **Audience:** independent check of the denseness-path argument. Use **this file only**.  
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit  
 **Date:** 2026-09-04. The residual-(i) two-level hinge is 15.272, not Aut-Schur and not Gsum. \(L=\tfrac12\) is **not proved**.
@@ -70,7 +78,7 @@ E(1) on this family means \(m_n\ge\Phi(C)-2\) with \(\Phi(C)=\tfrac12 n\sqrt{n-1
 
 ## Named priors (one paragraph each)
 
-**Sandwich limsup.** A conference matrix of order \(n\) (Paley, or \(q\equiv1\pmod4\)) has \(\|C\|_{\mathrm{op}}=\sqrt{n-1}\), hence \(\Phi(C)=\tfrac12 n\sqrt{n-1}\) and \(\alpha_n\le\tfrac12\sqrt{1-1/n}\). Infinitely many such \(n\) with consecutive ratio \(\to1\), so \(\limsup\alpha_n\le\tfrac12\). (Lower sandwich \(\liminf\ge1/\pi\) is the dual-Gaussian arcsine bound, used only as a floor, not for the value \(1/2\).)
+**Sandwich limsup.** A symmetric conference matrix of order \(n\) has \(\|C\|_{\mathrm{op}}=\sqrt{n-1}\), hence only the upper bound \(\Phi(C)\le\tfrac12 n\sqrt{n-1}\), and therefore \(\alpha_n\le\tfrac12\sqrt{1-1/n}\). Equality on the cube needs a separate Boolean eigenvector; it does not follow from the spectral norm. There are infinitely many such orders with consecutive ratio \(\to1\), so \(\limsup\alpha_n\le\tfrac12\). (Lower sandwich \(\liminf\ge1/\pi\) is the dual-Gaussian arcsine bound, used only as a floor, not for the value \(1/2\).)
 
 **\(\rho=1\).** On Paley \(n=p^2+1\), the halfspace boolean vector \(x_\infty=1\), \(x_u=\sigma(L(u))\) for an \(F_p\)-form \(L\) and \(S\subset F_p\) of size \(m\) satisfies \(Cx=px\) (`evidence/PROOF_rho_eq_1.md`: fibre character sums \(p-1\) on \(\ker L\) and \(-1\) off). Thus \(\rho(C)=1\) and \(\Phi(C)=\tfrac12 n\sqrt{n-1}\).
 
@@ -82,7 +90,9 @@ E(1) on this family means \(m_n\ge\Phi(C)-2\) with \(\Phi(C)=\tfrac12 n\sqrt{n-1
 
 ## Lemma A (denseness).
 
-If \(n_{k+1}/n_k\to1\), then \(\liminf_n\alpha_n=\liminf_k\alpha_{n_k}\) and likewise for \(\limsup\).
+For a strictly increasing, unbounded integer sequence \(n_k\ge2\), if
+\(n_{k+1}/n_k\to1\), then \(\liminf_n\alpha_n=\liminf_k\alpha_{n_k}\)
+and likewise for \(\limsup\).
 
 *Proof.* \(m_n\) is nondecreasing. For \(n_k\le N\le n_{k+1}\),
 \[

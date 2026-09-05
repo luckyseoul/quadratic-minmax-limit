@@ -534,7 +534,8 @@ def test_qvar_k_ge_7_wiring_no_handwritten_true():
     """Flags are live units.  Do not bake leftover 1 / L False."""
     import inspect
 
-    from e1_main_chain_status import four_e1_units_closed, run_main_chain
+    from e1_main_chain_status import run_main_chain
+    from original_mo_status import original_mo_status
 
     proved = Q.qvar_k_ge_7_proved_general()
     assert L.qvar_k_ge_7_proved_general() is proved
@@ -552,12 +553,8 @@ def test_qvar_k_ge_7_wiring_no_handwritten_true():
     assert "global_qvar_proved_general" in and_src
     assert "qvar_k_ge_7_proved_general" not in and_src
     assert phi_F_ge_6_proved_general() is leftover1
-    units = four_e1_units_closed()
     out = run_main_chain()
-    if units["closed"]:
-        assert out["L_status"] == "CLOSED"
-    else:
-        assert out["L_status"] == "OPEN"
+    assert out["L_status"] == original_mo_status()["limit_status"]
     assert Q.live_L_status() == out["L_status"]
     assert L.live_L_status() == out["L_status"]
     assert e1_closed_general() is False  # wiring, not a close

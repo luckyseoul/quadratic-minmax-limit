@@ -363,20 +363,28 @@ def prove_status() -> dict:
             "15.720 closes required bi-tight levels. Historical two-level Type I "
             "and affine/bounded residual-(ii) slices are closed; Proposition 15.750 "
             "closes multi-level Type I. Even-k>=4p residual (ii) remains open. "
-            "E1/L use that live predicate; the optional 16N route is also open."
+            "This optional Paley route also needs the all-size entry bridge; "
+            "it does not determine global convergence status. The 16N route is open."
         ),
     }
 
 
 def main_L_from_e1(e1: bool, bitight: bool) -> dict:
-    """L closed only if BOTH e1 and bitight — e1 is currently false."""
+    """Legacy Paley implication diagnostic; not the original-problem status.
+
+    The L_* keys are retained for compatibility and refer only to this
+    sufficient route. OPEN means this route does not establish the result.
+    """
     L_closed = bool(e1 and bitight)
     return {
+        "scope": "optional_paley_route",
+        "sufficient_not_necessary": True,
+        "paley_route_closed": L_closed,
         "bi_tight": bitight,
         "E1": e1,
         "L_closed": L_closed,
         "L_status": "CLOSED" if L_closed else "OPEN",
-        "rule": "L closed iff bi-tight ∧ E(1); denseness Prop 6.2",
+        "rule": "bi-tight and the full E(1) hypothesis suffice for L=1/2; not a necessity claim",
     }
 
 
