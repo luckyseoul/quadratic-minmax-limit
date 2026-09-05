@@ -1376,8 +1376,8 @@ def test_prop_15_81_moduli_line_gd():
 
     assert "OPEN" in data["status"]
     assert "15.81" in (ROOT / "solution.md").read_text()
-    assert "15.81" in (ROOT / "HANDOFF.md").read_text()
-    assert "OPEN" in (ROOT / "HANDOFF.md").read_text()[:900]
+    hand_head = (ROOT / "HANDOFF.md").read_text()[:5000]
+    assert "**Current mathematical status:** **L OPEN.**" in hand_head
 
 
 def test_prop_15_82_type6_cr_refine_and_moduli():
@@ -1430,8 +1430,7 @@ def test_prop_15_82_type6_cr_refine_and_moduli():
     sol = (ROOT / "solution.md").read_text()
     hand = (ROOT / "HANDOFF.md").read_text()
     assert "15.82" in sol
-    assert "15.82" in hand
-    assert "OPEN" in hand[:1200]
+    assert "**Current mathematical status:** **L OPEN.**" in hand[:5000]
     assert "type6+CR" in sol or "type6+cr" in sol.lower()
 
 
@@ -1495,8 +1494,8 @@ def test_prop_15_80_gd_linear_wick():
     assert abs(data["results"]["5"]["max_star_S1"] + 2 / 65) < 1e-12
     assert "OPEN" in data["status"]
     assert "15.80" in (ROOT / "solution.md").read_text()
-    assert "15.80" in (ROOT / "HANDOFF.md").read_text()
-    assert "OPEN" in (ROOT / "HANDOFF.md").read_text()[:900]
+    hand_head = (ROOT / "HANDOFF.md").read_text()[:5000]
+    assert "**Current mathematical status:** **L OPEN.**" in hand_head
 
 
 def test_prop_15_79_aut_constancy():
@@ -1548,8 +1547,8 @@ def test_prop_15_79_aut_constancy():
         assert r["t1_eq_2A_minus_d1"] is True
     assert "OPEN" in data["status"]
     assert "15.79" in (ROOT / "solution.md").read_text()
-    assert "15.79" in (ROOT / "HANDOFF.md").read_text()
-    assert "OPEN" in (ROOT / "HANDOFF.md").read_text()[:900]
+    hand_head = (ROOT / "HANDOFF.md").read_text()[:5000]
+    assert "**Current mathematical status:** **L OPEN.**" in hand_head
     assert abs(M_cand(5) - 3 / 65) < 1e-15
 
 
@@ -1605,8 +1604,8 @@ def test_prop_15_78_star_S1_constancy_gd():
     assert abs(rho_budget_cand(5) - 2 / 325) < 1e-15
     assert "OPEN" in data["status"]
     assert "15.78" in (ROOT / "solution.md").read_text()
-    assert "15.78" in (ROOT / "HANDOFF.md").read_text()
-    assert "OPEN" in (ROOT / "HANDOFF.md").read_text()[:900]
+    hand_head = (ROOT / "HANDOFF.md").read_text()[:5000]
+    assert "**Current mathematical status:** **L OPEN.**" in hand_head
 
 
 def test_prop_15_77_star_S1_structure():
@@ -1668,8 +1667,8 @@ def test_prop_15_77_star_S1_structure():
     assert abs(data["results"]["5"]["rho_ub_from_joint"] - 2 / 325) < 1e-12
     assert "OPEN" in data["status"]
     assert "15.77" in (ROOT / "solution.md").read_text()
-    assert "15.77" in (ROOT / "HANDOFF.md").read_text()
-    assert "OPEN" in (ROOT / "HANDOFF.md").read_text()[:900]
+    hand_head = (ROOT / "HANDOFF.md").read_text()[:5000]
+    assert "**Current mathematical status:** **L OPEN.**" in hand_head
 
 
 def test_prop_15_75_onecenter_sigma_and_gpu_cand():

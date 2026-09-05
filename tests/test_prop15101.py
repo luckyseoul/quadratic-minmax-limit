@@ -130,6 +130,6 @@ def test_solution_handoff_graph():
     sol = (ROOT / "solution.md").read_text()
     assert "15.101" in sol
     hand = (ROOT / "HANDOFF.md").read_text()
-    assert "15.101" in hand
+    assert "**Current mathematical status:** **L OPEN.**" in hand[:5000]
     graph = (ROOT / "evidence" / "P0_ENGINEERING_GRAPH.md").read_text()
     assert "15.101" in graph

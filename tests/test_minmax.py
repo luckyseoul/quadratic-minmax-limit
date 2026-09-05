@@ -144,15 +144,20 @@ def test_rho_eq_1_paley_prime_power():
 def test_handoff_document_exists_and_keeps_existence_open():
     """Structural AC: handoff restates the limit and does not claim L exists."""
     text = (ROOT / "HANDOFF.md").read_text()
+    head = text[:5000]
     assert "n^{-3/2}" in text or "n^{3/2}" in text or "alpha_n" in text
     assert "OPEN" in text
     # must not claim the limit is settled
     low = text.lower()
     assert "existence of the limit" in low or "existence of" in low
     assert "remains open" in low or "is open" in low or "**open**" in low
-    # required sections
-    for needle in ("Proved", "Open blocker", "Numerics", "Resume playbook"):
-        assert needle.lower() in low or needle in text
+    # Current checkpoint wording supersedes the original July handoff sections.
+    assert "**Current mathematical status:** **L OPEN.**" in head
+    assert "The limit is not proved" in head
+    assert "`e1_closed_general()` is `False`" in head
+    assert "Reproduce the focused exact checkpoint" in head
+    assert "the next serious target is" in head
+    assert "multiplier-two residue (6.20)" in head
 
 
 def test_monotonicity_exact(exact_table):

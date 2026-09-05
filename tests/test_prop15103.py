@@ -77,5 +77,6 @@ def test_evidence_json():
 
 def test_solution_handoff_graph():
     assert "15.103" in (ROOT / "solution.md").read_text()
-    assert "15.103" in (ROOT / "HANDOFF.md").read_text()
+    hand_head = (ROOT / "HANDOFF.md").read_text()[:5000]
+    assert "**Current mathematical status:** **L OPEN.**" in hand_head
     assert "15.103" in (ROOT / "evidence" / "P0_ENGINEERING_GRAPH.md").read_text()

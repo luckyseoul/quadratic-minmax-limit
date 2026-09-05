@@ -93,4 +93,4 @@ def test_solution_handoff():
     idx = sol.index("15.92")
     assert "OPEN" in sol[idx : idx + 3500]
     hand = (ROOT / "HANDOFF.md").read_text()
-    assert "15.92" in hand
+    assert "**Current mathematical status:** **L OPEN.**" in hand[:5000]

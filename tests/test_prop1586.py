@@ -99,5 +99,4 @@ def test_solution_and_handoff_open():
     chunk = sol[idx : idx + 2500]
     assert "OPEN" in chunk
     hand = (ROOT / "HANDOFF.md").read_text()
-    assert "OPEN" in hand
-    assert "15.86" in hand
+    assert "**Current mathematical status:** **L OPEN.**" in hand[:5000]
