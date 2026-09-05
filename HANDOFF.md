@@ -21,7 +21,58 @@ predicates. Valid local results retain their stated scope and evidence.
 
 ## Next mathematical work
 
-The next Gaussian upper to evaluate is now
+The current evaluated frontier is
+`evidence/NOTE_2026-09-05_SCALAR_MOMENT_FEEDBACK_DIAGNOSTIC.md`
+(SHA-256 `cc3869aa35b88ae50425c29cb78e3d4ced9b73e24731f54556fbd0b39fab1e9c`).
+At the old scalar endpoint, strongest source feedback plus rank-four
+repaired positivity gives normalized squared upper `<9/20<1/2`.
+The explicit fixed-metric repair-trace bounds require bounded scalar q,
+not a conference-scale cap on A. Weak feedback still leaves a uniformly
+positive gap for a formal Dirac moment law, even with the entire mixed
+rounding family and its exact fourth-moment refinement. This is only a
+counterexample to sufficiency of that MOMENT RELAXATION. The law does not
+supply the top singular value and optimal Gram of an actual scalar dual,
+an actual complete signing, or compatible source and joint-shell data.
+Do not turn failure of an upper certificate into an actual width lower.
+
+The literal old Krivine endpoint is already excluded for actual matrices
+by [Braverman--Makarychev--Makarychev--Naor, Theorem 1.1](https://web.math.princeton.edu/~naor/homepage%20files/GroKri.pdf).
+The explicitly defined `K_G=pi/(2 asinh(1))` in these diagnostic notes is
+the elementary Krivine bound, not the exact real Grothendieck constant.
+The retained-moment insufficiency theorem is still valid; it is not a
+claim of insufficiency after imposing every published constraint. Actual
+realizability work must move off that excluded exact endpoint and examine
+admissible nearby ratios or a uniform range, not repeat its realization.
+
+The new actual-matrix constraints supporting this evaluation are:
+
+- `NOTE_2026-09-05_CROSS_SINGULAR_MOMENT_ROUNDING.md`: filtered cubic
+  rounding with an exact quartic error and a cap-free clipped variant.
+- `NOTE_2026-09-05_CROSS_SDP_COMPLEMENTARITY.md`: every optimal diagonal
+  is block-balanced; its canonical-primal gap controls weighted residuals.
+  Zero gap is equivalent to equal NONZERO singular values and forces a
+  scalar optimum. A scalar optimum alone is not the converse.
+- `NOTE_2026-09-05_ORIGINAL_PHASE_SPECTRAL_MOMENT.md` and
+  `NOTE_2026-09-05_ORIGINAL_PHASE_MOMENT_BOOTSTRAP.md`: actual positive
+  and negative source phases yield cubic and nuclear constraints. The
+  bootstrap retains `2(n-1)+osc diag(A|A|)` with `O_C(n^(5/4))` ORIGINAL
+  norm error under only `Phi(A)<=C n^(3/2)`, without replacing A.
+- `NOTE_2026-09-05_CROSS_TENSOR_MIXTURE_SIGN_DEFECT.md`: actual canonical
+  negative sign mass is at most half its SDP gap, or one quarter for a
+  scalar optimal dual. Tensor mixing yields an explicit limiting curve
+  strictly stronger than the cubic-only constraint below beta/tau=2/pi.
+  Its `O_(C,t)(n^(5/4))` error requires t fixed before the n limit.
+
+All paths in that list are under `evidence/`. Each complete proof has an
+independent review; exact hashes, source aliases and reviewer roles are in
+`evidence/original_mo_spectral_rounding_milestone.json`. No numerical
+mathematics or signing census was used. The live next step is to exploit
+actual optimal-Gram/coordinate and source-cross compatibility, or obtain
+a sharper upper using it; optimizing the same weak-feedback moment-only
+functional again does not address its now-proved insufficiency. The
+original all-orders convergence question remains OPEN.
+
+The underlying Gaussian upper is
 `evidence/NOTE_2026-09-05_BOOLEAN_ELLIPSOID_SHELL_UPPER.md`
 (SHA-256 `ede1b62a26a636179d918ba84a48d122ab013c38175bdb9cd164bcfd8bfeb9aa`).
 For actual PSD C, positive P and nonnegative diagonal E<=P on a Boolean

@@ -1,0 +1,111 @@
+{
+  "schema": "original_mo_spectral_rounding_milestone_v1",
+  "date_utc": "2026-09-05",
+  "base_commit": "a9941d093caf78301ded60c4c992ff4b8e49fa53",
+  "branch": "main",
+  "remote": "https://github.com/luckyseoul/quadratic-minmax-limit.git",
+  "classification": "Six reviewed actual-matrix spectral rounding, complementarity and scalar-relaxation results; original convergence OPEN",
+  "conclusions": [
+    "Cross singular-moment rounding has an exact quartic error and a cap-free clipped variant.",
+    "Original positive/negative spectral phases yield cubic and nuclear constraints; the bootstrap has original norm error O_C(n^(5/4)) under only Phi(A)<=C n^(3/2).",
+    "Every optimal diagonal SDP is block-balanced; zero canonical gap is equivalent to equal nonzero singular values and forces a scalar optimum, not conversely.",
+    "Canonical negative sign mass is at most half its actual SDP gap, or one quarter for a scalar optimal dual. Tensor mixing gives a strictly stronger necessary limiting curve below beta/tau=2/pi, with cap-free O_(C,t)(n^(5/4)) error for fixed t.",
+    "The evaluated scalar diagnostic bounds repair trace without a source operator cap. At the old strongest-feedback endpoint, repaired positivity gives normalized squared upper below 9/20.",
+    "Weak feedback admits a formal Dirac moment law satisfying the entire mixed family and exact fourth-moment refinement, yet the fully metric-optimized retained two-trace/Jensen bound has a uniform positive gap above target. This is moment-relaxation insufficiency, not an actual-width lower bound."
+  ],
+  "not_proved": [
+    "Realization of the formal moment law by an actual complete signing, scalar optimal Gram, or compatible source and joint shell.",
+    "Scalar optimality or favorable source/cross alignment for every optimizer.",
+    "Sharp all-source all-shell evaluation.",
+    "Original all-orders convergence or any identified limit value."
+  ],
+  "published_theorem_scope": {
+    "source": "https://web.math.princeton.edu/~naor/homepage%20files/GroKri.pdf",
+    "theorem": "Braverman--Makarychev--Makarychev--Naor, Theorem 1.1",
+    "statement_used": "The real Grothendieck constant is strictly below pi/(2 asinh(1)) by a uniform positive effective margin.",
+    "scope": "Primary theorem statement directly checked; the full published proof was not independently reviewed here. The literal old Krivine endpoint is excluded for actual matrices. The retained-moment diagnostic does not impose every published constraint."
+  },
+  "next_target": "Actual optimal-Gram/coordinate and source-cross compatibility at admissible nearby ratios or a uniform range; not realization of the published-theorem-excluded exact old endpoint or re-optimization of the insufficient moment-only functional.",
+  "files": {
+    "evidence/NOTE_2026-09-05_CROSS_SINGULAR_MOMENT_ROUNDING.md": "6d5129a1572842c76c8f11a008b0093cb3c340684a40219b7db8828fdeeaf756",
+    "evidence/NOTE_2026-09-05_ORIGINAL_PHASE_SPECTRAL_MOMENT.md": "7108222bd693fd65b11e552a7a4138654dd96d032bda24dc5c61d7abc92dc600",
+    "evidence/NOTE_2026-09-05_ORIGINAL_PHASE_MOMENT_BOOTSTRAP.md": "3736db69d904b5a63ade46b32f6fddcc0505019f45ef483110c3ee67b24c8915",
+    "evidence/NOTE_2026-09-05_CROSS_SDP_COMPLEMENTARITY.md": "21deee54db15dfd264106592e866bf57c2e954fadf86f84f87870ce9690ade70",
+    "evidence/original_mo_cross_singular_moment_proof_review.md": "7a5cc91cbd45eb45bc41e050eb9ff3fd6ff71f1e8c0174180af7e826ea6ed442",
+    "evidence/original_mo_original_phase_moment_exact_review.md": "6767f3e82b01a4fdc5d9bc36e219b102dd75a712760df237a904fd22d8c08a9f",
+    "evidence/original_mo_original_phase_bootstrap_docs_review.md": "a15414027e65f86cd128dc93a56ea91986a3299dc9814dd9f8cc52c2a4cf666b",
+    "evidence/original_mo_cross_sdp_complementarity_exact_review.md": "850ebd36a958c407915fec7d94c4de549e6365c693a102ed2492f08bb601ef53",
+    "evidence/original_mo_original_phase_moment_author_review.md": "ba31da0678aa65bf57f9eb7397ae8427dbaf28164dcc46b6feaa079928f8ab17",
+    "evidence/NOTE_2026-09-05_CROSS_TENSOR_MIXTURE_SIGN_DEFECT.md": "66ed4d02f4cdd7d323ae5f0c717993bc3453d59dcb3a1e00b2e2c64720d424da",
+    "evidence/original_mo_cross_tensor_mixture_proof_review.md": "c2bbb9009b9438694de91eba39e556717089cbcba2d240eec1ae40a9c6b60c34",
+    "evidence/original_mo_cross_tensor_mixture_author_review.md": "d1c46a75f1ec1cdf9c3266ea5576e9caeca3d56f7791339d834e437bd01a1498",
+    "evidence/NOTE_2026-09-05_SCALAR_MOMENT_FEEDBACK_DIAGNOSTIC.md": "cc3869aa35b88ae50425c29cb78e3d4ced9b73e24731f54556fbd0b39fab1e9c",
+    "evidence/original_mo_scalar_moment_feedback_proof_review.md": "e057ec99c9e26435c11d92f2a44a4fceac856cdbec2fdf5480aab8a90bbb911a",
+    "evidence/original_mo_cross_tensor_mixture_docs_author_review.md": "943794fa5dd10e1e5ddb2df0eba5f39dd5a66e9a3b8354c4cbe32b2861c21298",
+    "evidence/original_mo_spectral_rounding_docs_scope_review.md": "829f1b77f220ed0e98a62842eee4bce86f5680a95cbcaf662b62e394fee348a8",
+    "evidence/original_mo_spectral_rounding_root_review.md": "b82e81c25cb76f45720a326e8bd96dbd8d9b8cd2b5b3fde96f79d65b44a242a4",
+    "HANDOFF.md": "c1699d94c3fcdccec3f8944a2f55936804a81b0e41e235bef26663ce3c8a3d18",
+    "STATUS.md": "6fced05c7e847b7d1ff1e0e7b0fcb2997a1ca1aca98d5da7001247a2a9e2ca0d",
+    "evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md": "0fde7bdd79559c8b23e780a77cc3f67dd172c994e52d1340e638bc1f58079d7f",
+    "evidence/original_mo_spectral_rounding_docs_gate.json": "e85927efbef6510b1c5cffcb85265dcb847d633104c86db290d37a6903794107"
+  },
+  "source_to_canonical_path": {
+    "/tmp/original_mo_cross_singular_moment_rounding.md": "evidence/NOTE_2026-09-05_CROSS_SINGULAR_MOMENT_ROUNDING.md",
+    "/tmp/original_mo_original_phase_spectral_moment.md": "evidence/NOTE_2026-09-05_ORIGINAL_PHASE_SPECTRAL_MOMENT.md",
+    "/tmp/original_mo_original_phase_spectral_moment_bootstrap.md": "evidence/NOTE_2026-09-05_ORIGINAL_PHASE_MOMENT_BOOTSTRAP.md",
+    "/tmp/original_mo_cross_sdp_complementarity.md": "evidence/NOTE_2026-09-05_CROSS_SDP_COMPLEMENTARITY.md",
+    "/tmp/original_mo_cross_singular_moment_rounding_proof_review.md": "evidence/original_mo_cross_singular_moment_proof_review.md",
+    "/tmp/original_mo_original_phase_moment_exact_review.md": "evidence/original_mo_original_phase_moment_exact_review.md",
+    "/tmp/original_mo_original_phase_spectral_moment_bootstrap_docs_review.md": "evidence/original_mo_original_phase_bootstrap_docs_review.md",
+    "/tmp/original_mo_cross_sdp_complementarity_exact_review.md": "evidence/original_mo_cross_sdp_complementarity_exact_review.md",
+    "/tmp/original_mo_original_phase_spectral_moment_author_receipt.md": "evidence/original_mo_original_phase_moment_author_review.md",
+    "/tmp/original_mo_cross_tensor_mixture_sign_defect.md": "evidence/NOTE_2026-09-05_CROSS_TENSOR_MIXTURE_SIGN_DEFECT.md",
+    "/tmp/original_mo_cross_tensor_mixture_sign_defect_proof_review.md": "evidence/original_mo_cross_tensor_mixture_proof_review.md",
+    "/tmp/original_mo_cross_tensor_mixture_author_receipt.md": "evidence/original_mo_cross_tensor_mixture_author_review.md",
+    "/tmp/original_mo_scalar_moment_feedback_diagnostic.md": "evidence/NOTE_2026-09-05_SCALAR_MOMENT_FEEDBACK_DIAGNOSTIC.md",
+    "/tmp/original_mo_scalar_moment_feedback_diagnostic_proof_review.md": "evidence/original_mo_scalar_moment_feedback_proof_review.md",
+    "/tmp/original_mo_cross_tensor_mixture_sign_defect_docs_author_review.md": "evidence/original_mo_cross_tensor_mixture_docs_author_review.md",
+    "/tmp/original_mo_spectral_rounding_docs_scope_review.md": "evidence/original_mo_spectral_rounding_docs_scope_review.md"
+  },
+  "reviews": {
+    "cross_singular_moment": "Complete root and proof-worker independent reviews.",
+    "original_phase_pair": "Root and proof worker collaborated; docs worker independently read both complete proofs and the interpolation prerequisite. Exact worker independently reviewed the first proof.",
+    "sdp_complementarity": "Complete root and exact-worker independent reviews.",
+    "tensor_mixture": "Exact and docs workers contributed proof; independent proof-worker complete review. Root supplied developmental review feedback and complete integrated check.",
+    "scalar_diagnostic": "Docs worker, exact worker and root contributed. Proof-worker independent complete initial read and final delta review. Reviewer-proposed optional top-mass construction was not included.",
+    "documentation": "Root and docs worker checked complete changed canonical claims and final literature-scope delta. Root completely read all imported receipts.",
+    "import": "All sixteen source imports are byte-identical to their final reviewed source files."
+  },
+  "computation": {
+    "proof_basis": "Complete analytic proofs and reviews; no mathematical tool evaluation.",
+    "mathematical_runs": 0,
+    "signing_enumeration": false,
+    "simulation": false,
+    "solver_run": false,
+    "documentation": "One bounded changed-document scanner on soulkiller. 880 hashed inputs including 872 unchanged source files; docs_ok=true and original status OPEN. The audit document was staged and manually reviewed, not scanned."
+  },
+  "source_tests_and_global_predicates_changed": false,
+  "pre_commit_backup": {
+    "path": "/mnt/storage/backups/codex/quadratic-minmax-limit-2212b99a4c24/20260905T204556Z-a9941d093caf-pre-milestone-spectral-rounding.1fH0kL",
+    "covered_head": "a9941d093caf78301ded60c4c992ff4b8e49fa53",
+    "sha256sums_sha256": "375a387493a578ed55d9399fcba544137e719e853ed7eacdc4660f6104759aa5",
+    "receipt_sha256": "1d307372b9be13ce4a74678af174aa512fadd1d04706dbfe80b4c301c4aac296",
+    "full_worktree_sha256": "d1febd32974a8c4548968284562c8c7b82c81fed0e1842ea52b8335d22001821",
+    "git_common_and_dir_sha256": "2e6522465b93241b72ac37416c2676fe5d1572feedcea459a0740ad1ee25012e",
+    "repository_bundle_sha256": "aa7ccbd10f59eec234216a892dce87c7b120b67ff1546ba15ba6238b3a6c9397",
+    "complete": true,
+    "full_archives_compared_to_quiesced_source": true,
+    "all_refs_bundle_verified": true,
+    "status_and_refs_unchanged": true,
+    "coverage": "All six final complete proofs, eleven final review receipts and three final changed canonical docs, including literature-scope wording. Excludes the subsequently created docs-gate JSON and this manifest; final post-push backup will cover the entire commit."
+  },
+  "previous_post_push_backup": {
+    "path": "/mnt/storage/backups/codex/quadratic-minmax-limit-2212b99a4c24/20260905T200928Z-a9941d093caf-post-push-a9941d0.74RfB2",
+    "covered_head": "a9941d093caf78301ded60c4c992ff4b8e49fa53",
+    "sha256sums_sha256": "dd8b76362d7d1132e35f14e4376a8aecd3323fa6040934ef995db6d1128ef159",
+    "receipt_sha256": "01cdf5a7f131a14d8dd66a96739cadbe1a8359c8283ed6c8a70577af08f83ae0",
+    "full_worktree_sha256": "b527fefd783350b035a427679c4c2206970154401c378cd7047f1b37b0dd4234",
+    "complete": true
+  },
+  "publication": "Normal commit and push follow the verified pre-commit snapshot. Verify origin main SHA and create a post-push full backup; its later receipt cannot self-identify inside this commit."
+}

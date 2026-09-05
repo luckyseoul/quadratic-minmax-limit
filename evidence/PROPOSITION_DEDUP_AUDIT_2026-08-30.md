@@ -8,6 +8,31 @@ The old ledgers are fully preserved on the two branches in `ARTIFACTS.md`.
 No local theorem is made false by parking its route; no open implication
 is made necessary for the original problem by its old status field.
 
+**Actual spectral constraints and evaluated feedback split (2026-09-05).**
+The six-proof package in `original_mo_spectral_rounding_milestone.json`
+adds filtered cross moments, actual SDP complementarity, original-source
+positive/negative spectral phases, a norm-only cubic bootstrap, and the
+cross sign-defect tensor-mixture curve. The latter strictly improves the
+cubic-only limiting Boolean/SDP versus canonical-gap constraint.
+`NOTE_2026-09-05_SCALAR_MOMENT_FEEDBACK_DIAGNOSTIC.md` evaluates both
+feedback ends of the scalar-diagonal pure-cross two-trace/Jensen bound:
+strongest feedback passes the old target after the actual rank-four
+positivity restriction; sufficiently weak feedback leaves a uniform
+strict miss in the retained moment relaxation. All mixed constraints,
+negative metric parameters and an exact rational gap certificate are
+included. The formal Dirac law is not an actual scalar-optimal signing;
+its top-space and source/shell attainability conditions are unproved.
+No actual Gaussian-width lower bound or convergence counterexample is
+claimed. All complete proofs passed independent reviews. Repeating this
+moment-only optimization without new attainable-coordinate or source-cross
+information does not remove the identified gap.
+Separately, the published strict improvement of Krivine's bound already
+excludes the literal old endpoint for actual matrices; see the primary
+Theorem 1.1 linked in HANDOFF. That endpoint must not remain an actual
+realization target. The diagnostic concerns its explicitly retained
+moment constraints, not all known constraints or the exact Grothendieck
+constant.
+
 **Boolean remainder and fixed-internal-block regularization (2026-09-05).**
 `NOTE_2026-09-05_BOOLEAN_ELLIPSOID_SHELL_UPPER.md` proves the exact
 Gaussian completion-square loss from Boolean coordinates and its weaker

@@ -42,6 +42,22 @@ See `ARTIFACTS.md` for the preserved branches and terminology.
 
 ## Fresh mathematical target
 
+The [spectral rounding package](evidence/original_mo_spectral_rounding_milestone.json)
+now constrains the actual original source, cross singular moments, and
+optimal SDP diagonal. The original-phase bootstrap needs only an original
+norm cap, with `O(n^(5/4))` norm error. Tensor-mixture rounding gives a
+strictly stronger necessary relation between the Boolean/SDP ratio and
+the canonical spectral gap, also without a separate operator-cap premise.
+The [evaluated scalar diagnostic](evidence/NOTE_2026-09-05_SCALAR_MOMENT_FEEDBACK_DIAGNOSTIC.md)
+puts the old strongest-feedback case below target after imposing repaired
+positivity. Weak feedback still admits a formal moment law for which the
+entire metric-optimized two-trace/Jensen bound misses target. That law is
+not a constructed signing, optimal Gram or shell, and this is not an actual
+Gaussian-width counterexample. The next information needed by this route
+is actual optimizer/coordinate and source-cross compatibility beyond these
+moments, or a stronger upper that uses it. All six proofs passed independent
+reviews; neither this diagnostic nor the moment constraints prove convergence.
+
 The [Boolean ellipsoid upper](evidence/NOTE_2026-09-05_BOOLEAN_ELLIPSOID_SHELL_UPPER.md)
 now retains an explicit expected Boolean-coordinate penalty in the
 Gaussian completion-square bound. It gives a stronger shell bound, recovers
