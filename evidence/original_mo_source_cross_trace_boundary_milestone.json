@@ -1,0 +1,62 @@
+{
+  "schema": "original_mo_source_cross_trace_boundary_milestone_v1",
+  "date_utc": "2026-09-05",
+  "base_commit": "6a39fb21b0acc31d85ad007875be2790aafb7ee6",
+  "branch": "main",
+  "remote": "https://github.com/luckyseoul/quadratic-minmax-limit.git",
+  "classification": "Reviewed finite actual nuclear coupling plus a precisely specified formal certificate obstruction; original all-orders convergence remains OPEN",
+  "conclusions": [
+    "For any positive feasible same-diagonal D for the complete paired K, the actual cross squared-singular law satisfies integral sqrt(1-y)dnu >= kappa sqrt(m)(1-1/n)/(2alpha(1+delta)) - sqrt((2N/dbar^2)(2delta+delta^2)). No trace cap, trace optimality, small canonical gap or active cell is needed.",
+    "The error is O(sqrt(delta)+1/n) with an absolute constant for 0<=delta<=1. Actual matrices and cells remain unchanged.",
+    "The explicitly retained formal block/trace model with alpha=2/5, f=4/3, u=kappa and m=9kappa^2/16 satisfies the listed full/source/cross moment and block constraints but has drift-plus-ellipsoid certificate strictly above sqrt(2)alpha for every shifted Gaussian sign threshold and signed metric, including endpoint limits.",
+    "The same-law centered squared lower margin is 501/125000. The all-threshold extension retains the full original absolute drift and proves the failure analytically without metric or threshold scans.",
+    "No complete signing, active Boolean state, or actual optimizer realizes the formal parameters in this note. Failure of an upper certificate is not a lower bound on actual Gaussian width or a counterexample to the original inequality."
+  ],
+  "proof_source": "evidence/NOTE_2026-09-05_SOURCE_CROSS_NUCLEAR_TRACE_BOUNDARY.md",
+  "proof_source_lines": 444,
+  "review_provenance": {
+    "exact_worker": "Authored finite transfer and formal example/centered calculation; independently checked and integrated root's all-threshold extension; full final author review.",
+    "root": "Independently checked finite transfer and centered formal model; authored all-threshold extension; full final 444-line read and all summary/import reviews.",
+    "docs_worker": "Contributed finite AM-GM refinement; independently reviewed formal model and all-threshold extension; authored summary proposal and verified applied scope.",
+    "proof_worker": "Independent of all four derivation components; complete final 444-line mathematical review."
+  },
+  "new_mathematical_computation": false,
+  "reused_pi_certificate": {
+    "checker": "evidence/original_mo_scalar_template_gamma_rational_certificate.py",
+    "checker_sha256": "d3af3d3bac9ba4d73a7589ba9ed4ff6261fde3263c64d04de36da7f36a1c65d3",
+    "result_sha256": "fbc10c4760d963f9364dca586cca3d8df5692ab786cd155634a651fac3a62d9d",
+    "rerun": false
+  },
+  "documentation_gate": "evidence/original_mo_source_cross_trace_boundary_docs_gate.json",
+  "pre_milestone_backup": {
+    "path": "/mnt/storage/backups/codex/quadratic-minmax-limit-2212b99a4c24/20260905T231719Z-6a39fb21b0ac-pre-milestone-source-cross-trace.hV9vbB",
+    "covered_head": "6a39fb21b0acc31d85ad007875be2790aafb7ee6",
+    "sha256sums_sha256": "644c7bf5069a417bbc16cad3d48ad561af1417cb193b8d1a0a9252a028f2bbc4",
+    "receipt_sha256": "72cbbb1d5062e25f9a0b84b2ca8e623da1cbd986f376e38697f3d54da93b156c",
+    "source_archive_comparison_and_bundle_verified": true,
+    "scope": "Entire worktree and history, including proof, five reviews and three changed summaries; gate receipt and this manifest were added after snapshot verification."
+  },
+  "no_src_test_or_global_predicate_changes": true,
+  "global_status": "OPEN",
+  "next_implication": "Add a verified actual complete-entry, active-state or frame constraint beyond the retained trace/block relaxation, or pursue a different original-order upper argument. Do not rerun unchanged threshold/metric scans.",
+  "import_aliases": {
+    "/tmp/original_mo_source_cross_nuclear_trace_boundary.md": "evidence/NOTE_2026-09-05_SOURCE_CROSS_NUCLEAR_TRACE_BOUNDARY.md",
+    "/tmp/original_mo_source_cross_nuclear_trace_boundary_author_receipt.md": "evidence/original_mo_source_cross_trace_boundary_author_review.md",
+    "/tmp/original_mo_source_cross_nuclear_trace_boundary_proof_review.md": "evidence/original_mo_source_cross_trace_boundary_proof_review.md",
+    "/tmp/original_mo_source_cross_trace_boundary_root_review.md": "evidence/original_mo_source_cross_trace_boundary_root_review.md",
+    "/tmp/original_mo_source_cross_nuclear_trace_boundary_docs_review.md": "evidence/original_mo_source_cross_trace_boundary_docs_review.md",
+    "/tmp/original_mo_source_cross_trace_boundary_docs_scope_review.md": "evidence/original_mo_source_cross_trace_boundary_docs_scope_review.md"
+  },
+  "sha256": {
+    "evidence/NOTE_2026-09-05_SOURCE_CROSS_NUCLEAR_TRACE_BOUNDARY.md": "106cc8ae8bb4e2d7f4024f18ffc8114e123299a276005b7ce31ebab3ab74e556",
+    "evidence/original_mo_source_cross_trace_boundary_author_review.md": "d9ea7af8c77d0cde17d66ecc24a143884f52384deceb8b39bed9b064f9226843",
+    "evidence/original_mo_source_cross_trace_boundary_proof_review.md": "b9189d0a536649126bf558829689da397e3ef3df081635494d4b228f6b2a8ee3",
+    "evidence/original_mo_source_cross_trace_boundary_root_review.md": "7a08219d85f3bf8b322dea76485d1c75729fefeab6df4911c54149b55597d1bf",
+    "evidence/original_mo_source_cross_trace_boundary_docs_review.md": "b6f6c587a6d4c7e2b94066071c42c475a9949cb88afda67e4bef146c4282f869",
+    "evidence/original_mo_source_cross_trace_boundary_docs_scope_review.md": "2600b0d3aa19bff6c6551d8086a3a531908f8d6f2667a73c3348e213bf74e356",
+    "HANDOFF.md": "b61c26828092194ed0e78ab7c2e9e4a3096a2b97c6bdf19e99b70e7e10a63abf",
+    "STATUS.md": "46415474ff5e3bd8fe98fba3f164710d225c32c90c6a16ee922dbfc1ced30879",
+    "evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md": "1a190eb5a27e4a5ca0f1b18cafa62d9127437268aa333953a6ec4900c0052bd7",
+    "evidence/original_mo_source_cross_trace_boundary_docs_gate.json": "d2cf69292dbf0f703bcde2d6f21fb9a846b5a8a65167876c0a01570ca2dd6337"
+  }
+}

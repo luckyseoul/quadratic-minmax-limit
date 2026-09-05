@@ -42,6 +42,28 @@ See `ARTIFACTS.md` for the preserved branches and terminology.
 
 ## Fresh mathematical target
 
+The [actual source/cross coupling](evidence/original_mo_source_cross_trace_boundary_milestone.json)
+proves a finite cap-free inequality for every positive feasible D and the
+ACTUAL cross law nu. With alpha=Phi(A)/n^(3/2) and m=integral y dnu,
+its consequence as diagonal dispersion delta tends to zero is
+`integral sqrt(1-y)dnu >= kappa sqrt(m)/(2alpha)-O(sqrt(delta)+1/n)`.
+No optimality, small canonical gap, active cell, or source replacement is
+needed for that coupling; its exact finite error is retained in the proof.
+
+The same note gives a FORMAL trace/block relaxation at alpha=2/5,
+f=4/3, u=kappa and m=9kappa^2/16 that passes the specified full/source/
+cross moment bounds. Its drift-plus-ellipsoid certificate exceeds the
+correct target sqrt(2)alpha for every shifted Gaussian sign threshold
+and signed metric, including endpoints. The full original drift remains.
+The formal data do not supply an actual signing or an active Boolean
+optimizer, and the result is not a lower bound on actual Gaussian width.
+
+The current trace-only certificate therefore needs additional actual
+entry/active-state information or a different upper argument. No new
+mathematical run was used; the existing pi enclosure was reused.
+This scoped obstruction does not resolve the original inequality or
+original convergence, which remain OPEN.
+
 The [delta-only normalization](evidence/original_mo_delta_normalization_milestone.json)
 extends the original-norm spectral lower to positive canonical gap.
 For ANY feasible positive D with the SEPARATE cap S=tr D<=C N^(3/2),

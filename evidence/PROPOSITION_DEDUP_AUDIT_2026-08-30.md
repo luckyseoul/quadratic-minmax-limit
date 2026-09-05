@@ -8,6 +8,31 @@ The old ledgers are fully preserved on the two branches in `ARTIFACTS.md`.
 No local theorem is made false by parking its route; no open implication
 is made necessary for the original problem by its old status field.
 
+**Actual nuclear coupling and formal all-threshold boundary (2026-09-05).**
+`original_mo_source_cross_trace_boundary_milestone.json` records the finite
+cap-free source/cross inequality for ANY feasible positive D. The actual
+law satisfies integral sqrt(1-y)dnu >= kappa sqrt(m)/(2alpha)
+minus the explicit finite dispersion/order error. Direct Frobenius and
+nuclear transfer, inverse-half-sum AM-GM, and the actual block contraction
+preserve the original matrices without trimming or a small-gap premise.
+
+The separate formal alpha=2/5, f=4/3, u=kappa, Bernoulli-m law with
+m=9kappa^2/16 passes precisely the listed full/source/cross moment and
+block constraints. Its drift-plus-ellipsoid certificate fails the target
+sqrt(2)alpha for ALL shifted Gaussian sign thresholds and signed metrics,
+including their endpoint limits. The proof retains the full original
+drift z f/2 and uses L_0^2=40501/125000, not a centered-noise-only test.
+The reused pi enclosure supplies the coarse rational comparisons; no new
+checker or threshold/metric scan was run, and none is needed unchanged.
+
+Do not promote the real-matrix block model to complete-signing
+realizability or its assigned alpha/f/u to actual norms/active states.
+The obstruction concerns this UPPER certificate on its stated relaxation,
+not actual Gaussian width, the original minimum, or every spectral method.
+A next attempt within this route must add an actual entry/active-state
+constraint or change the upper argument; repeating only these trace data
+does not establish the desired comparison. Original convergence is OPEN.
+
 **Delta-only actual full-spectrum normalization (2026-09-05).**
 `original_mo_delta_normalization_milestone.json` separates small diagonal
 spread from small canonical gap. ANY feasible positive D is allowed

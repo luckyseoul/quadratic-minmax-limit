@@ -21,6 +21,42 @@ predicates. Valid local results retain their stated scope and evidence.
 
 ## Next mathematical work
 
+The latest actual coupling and formal certificate boundary are recorded in
+`evidence/original_mo_source_cross_trace_boundary_milestone.json` and
+`evidence/NOTE_2026-09-05_SOURCE_CROSS_NUCLEAR_TRACE_BOUNDARY.md`
+(SHA-256 `106cc8ae8bb4e2d7f4024f18ffc8114e123299a276005b7ce31ebab3ab74e556`).
+For ANY positive feasible D, let N=2n, dbar=tr(D)/N,
+delta=tr(D)tr(D^(-1))/N^2-1, alpha=Phi(A)/n^(3/2), and let nu be
+the ACTUAL squared-singular-value law of W_D, with mean m. The finite
+source/cross inequality is
+
+`integral sqrt(1-y)dnu >= [kappa sqrt(m)/(2alpha)](1-1/n)/(1+delta)`
+`-sqrt[(2N/dbar^2)(2delta+delta^2)]`, kappa=2/pi.
+
+This needs no trace cap, optimal diagonal, small canonical gap, or active
+cell. Its O(sqrt(delta)+1/n) consequence keeps the original matrices;
+the direct nuclear transfer requires no auxiliary trimming.
+
+The SAME note also identifies a FORMAL limitation of the listed trace/block
+relaxation. At alpha=2/5, f=4/3, u=kappa and
+nu=(1-m)delta_0+m delta_1, m=9kappa^2/16, the retained full/source/cross
+moment inequalities and block contraction all pass. Nevertheless EVERY
+shifted Gaussian sign threshold and signed ellipsoid metric, including
+endpoint limits, has formal drift-plus-certificate value above the target
+sqrt(2)alpha. The full ORIGINAL drift z f/2 is retained, with
+z=|2Phi_Gauss(h)-1|; the certificate's noise term is bounded below by
+sqrt(1-z^2)L_0, L_0^2=40501/125000>8/25.
+
+These formal parameters are not realized by complete signings or actual
+active Boolean states in this note. A lower bound on this UPPER certificate
+is not a lower bound on actual Gaussian width or the original norm.
+The next step within this route is an additional actual entry/active-state
+constraint, or a different upper argument, beyond the listed trace data.
+Do not repeat threshold/metric scans on the unchanged relaxation. The pi
+enclosure was reused analytically; no new mathematical run was needed.
+Original convergence remains OPEN; this is not a signing counterexample
+or an impossibility theorem for all methods.
+
 The latest delta-only normalization is
 `evidence/original_mo_delta_normalization_milestone.json` and its proof
 `evidence/NOTE_2026-09-05_NEAR_SCALAR_DIAGONAL_SPECTRAL_NORMALIZATION.md`
