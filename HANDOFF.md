@@ -21,6 +21,69 @@ predicates. Valid local results retain their stated scope and evidence.
 
 ## Next mathematical work
 
+The latest same-source package is
+`evidence/original_mo_weighted_covariance_milestone.json`.
+Its four analytic results are:
+
+- `NOTE_2026-09-05_DIAGONAL_MAJORIZER_CROSS_COVARIANCE.md`
+  (SHA-256 `0b3921d43d88424457ad2ed777ee158e8ac34c6751c995f0c3b86aee870e95ff`)
+  chooses D with D+-K positive for the LITERAL complete block signing.
+  The exact cross correlation is `R_D=I+Q(A tensor A-S_B+I)Q`,
+  `q_ij=1/sqrt(d_i d_(n+j))`; its operator norm is below three.
+  A norm cap supplies `tr D=O(N^(3/2))` and local correlations O(1/N)
+  without trimming or changing A,-A,B. The complete weighted Hermite
+  decomposition gives an O(n) retained-profile cost; the resulting
+  conditional ORIGINAL-norm Gaussian floor has O(n^(16/11)) error.
+  The separated even series is used only when epsilon<=1/2; the
+  remaining bounded orders are treated separately. Dropping only the
+  independent Gaussian variance padding costs O(n).
+- `NOTE_2026-09-05_DIAGONAL_MAJORIZER_WEIGHTED_SHELL_UPPER.md`
+  (SHA-256 `9aec82a5e808837ea626f2fd85f526cda1fffe883929711dfc2c6f396392f15f`)
+  proves exact positive weighted linear fields. Actual representatives
+  and width-1/n bins handle real weighted energies with O(sqrt(n))
+  comparison error; selecting all original/weighted cells costs
+  O(n sqrt(log n)). The same D majorizes the ORIGINAL cross form H_B,
+  so D-eta H_B has exact shell radius `tr D-2eta c` using unweighted c.
+  Equation (4.6) is the full all-actual-cell upper, with exact two-trace
+  field width (4.5). Its weighted feedback c_D and internal p_D,q_D
+  remain distinct from the original drift `(p-q)/2+s c`.
+- `NOTE_2026-09-05_SCALAR_TEMPLATE_CUBIC_ALIGNMENT.md`
+  (SHA-256 `60037f67234fbca8c17ee90bf52c7f4346b24e5f18eb5f2c922ebbd2d9382c2a`)
+  proves `j_3>=-1+2s^2/mu` for ACTUAL matched optimal frames.
+  For finite `tau(C)=p q`, this strengthens the Gamma UPPER-certificate
+  exclusion to `q>=12/5 => Gamma(C)>283/200>sqrt(2)`.
+  It crosses q=1+sqrt(2), the particular weak-Dirac diagnostic barrier.
+  Section 6 separately stipulates leading energy sqrt(2), derives its
+  variable-u expression, and takes n to infinity at fixed eta before
+  eta tends to one. It does not infer actual Boolean saturation from
+  a Gamma cap or prove arbitrary nonsymmetric attainability.
+- `NOTE_2026-09-05_TENSOR_DEFLATION_FIXED_CAP_RATE.md`
+  (SHA-256 `22febfa722afb3e18878f23f8e140895da90a3eb41fe0179356b08232d44f27a`)
+  constructs actual complete sources under each FIXED norm cap C>1/2.
+  Their tensor positive-part Gaussian repair has a uniform-rate lower
+  of order n^(3/2)/sqrt(K), for both tensor signs and for the symmetric
+  zero-diagonal quadratic norm. The amplitude is fixed before K, then
+  n grows. No assertion is made for C=1/2, exact source minimizers,
+  adaptively coupled slack and K, or the full A tensor A-S_B+I repair.
+
+All four note paths are under `evidence/`. Each complete proof has an
+independent review, with author/root collaboration disclosed in the
+milestone manifest. The cubic note adds exactly five rational comparisons,
+run once on soulkiller; the previous 28 clipping comparisons are reused.
+The replay artifact is
+`python3 evidence/original_mo_scalar_template_cubic_rational_certificate.py`.
+Do not rerun unchanged arithmetic for another receipt. There were no
+signing censuses, numerical optimizations, src-module or predicate changes.
+
+The live unresolved implication is a sharp upper evaluation of the
+weighted-shell note's (4.6) on ACTUAL coupled cells, using source and
+conditional optimality. In particular its (5.3)-(5.6) retain the explicit
+weighted/unweighted Delta_B and internal Delta_A discrepancies; setting
+them to zero is not justified by the trace cap. The conditional Gaussian
+floor does not supply this upper evaluation. The new covariance avoids
+scalar attenuation and the generic deflation loss, but original all-orders
+convergence and the proposed sharp dyadic inequality remain OPEN.
+
 The new actual-sign realization package is
 `evidence/original_mo_hadamard_template_milestone.json`. Its three complete
 proofs passed independent reviews:

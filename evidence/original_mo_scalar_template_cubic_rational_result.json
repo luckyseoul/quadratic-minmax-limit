@@ -1,0 +1,51 @@
+{
+  "arithmetic": "fractions.Fraction only",
+  "check_count": 5,
+  "checks": [
+    {
+      "label": "D lower threshold at q=12/5",
+      "lhs": "376910559/781250000",
+      "passed": true,
+      "relation": ">",
+      "rhs": "603/1250"
+    },
+    {
+      "label": "cubic coefficient lower threshold",
+      "lhs": "4098463663/6484375000",
+      "passed": true,
+      "relation": ">",
+      "rhs": "63/100"
+    },
+    {
+      "label": "maximal penalty cubed after clearing positive denominator",
+      "lhs": "1202067/6250000",
+      "passed": true,
+      "relation": "<",
+      "rhs": "18948069/97656250"
+    },
+    {
+      "label": "strict contradiction margin",
+      "lhs": "2077/5000",
+      "passed": true,
+      "relation": ">",
+      "rhs": "83/200"
+    },
+    {
+      "label": "weak-Dirac barrier squared",
+      "lhs": "578",
+      "passed": true,
+      "relation": ">",
+      "rhs": "576"
+    }
+  ],
+  "reused_baseline_not_rerun": {
+    "checker_sha256": "d3af3d3bac9ba4d73a7589ba9ed4ff6261fde3263c64d04de36da7f36a1c65d3",
+    "prior_check_count": 28,
+    "proof_filename": "original_mo_scalar_template_gamma_bound.md",
+    "proof_sha256": "bd5997203c52895744a078048e206241996c46ef485e8975d7955b73be41f1c6",
+    "statement": "Provenance of reused bounds; this script does not reverify the baseline.",
+    "verified_result_sha256": "fbc10c4760d963f9364dca586cca3d8df5692ab786cd155634a651fac3a62d9d"
+  },
+  "source_sha256": "bc6b5fc08120a2ed645d16ce5a4762919776853bd94d264bf5ce26d6531979ee",
+  "status": "PASS"
+}

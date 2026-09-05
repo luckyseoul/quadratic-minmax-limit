@@ -42,6 +42,38 @@ See `ARTIFACTS.md` for the preserved branches and terminology.
 
 ## Fresh mathematical target
 
+The [same-source weighted covariance package](evidence/original_mo_weighted_covariance_milestone.json)
+replaces scalar tensor normalization by a diagonal majorizer of the
+literal complete block signing. Its Gaussian covariance is positive,
+has unit diagonal and operator norm below three, and leaves A,-A and
+the cross drift B unchanged. Under an original norm cap, the full
+weighted Hermite correction and shifted-sign comparison give
+`O(n^(16/11))` expected ORIGINAL norm error. This applies to every
+actual conditional cross optimizer without a separate source operator cap.
+The weighted linear-field theorem then proves positive comparison fields,
+a polynomial-cell reduction for real weighted energies, and an explicit
+two-trace upper using the SAME diagonal and the ORIGINAL cross-energy
+shell. The live missing step is to evaluate that upper on actual coupled
+original/weighted cells. Its displayed Delta_B and internal Delta_A terms
+are not known to vanish or have a favorable sign.
+
+Two additional reviewed results constrain the routes into that comparison.
+For finite scalar-optimal templates `tau(C)=p q`,
+[cubic frame alignment](evidence/NOTE_2026-09-05_SCALAR_TEMPLATE_CUBIC_ALIGNMENT.md)
+strengthens the completion-certificate exclusion to
+`q>=12/5 => Gamma(C)>283/200>sqrt(2)`. This crosses the restricted
+weak-Dirac diagnostic barrier but does not turn Gamma into an actual
+Boolean lower or infer its separately stipulated energy.
+The [fixed-cap deflation construction](evidence/NOTE_2026-09-05_TENSOR_DEFLATION_FIXED_CAP_RATE.md)
+gives actual source signings under EVERY fixed cap C>1/2 for which
+the tensor positive-part Gaussian repair costs at least a positive
+multiple of `n^(3/2)/sqrt(K)`, including after symmetric restriction
+and diagonal removal. It rules out faster uniform fixed-cap repair
+rates, not such rates at exact minimizers or for the full coupled
+cross covariance. Five new rational comparisons were offloaded once;
+the previous 28-comparison clipping certificate was reused, not rerun.
+These four analytic results do not prove original convergence.
+
 The [actual Hadamard-template package](evidence/original_mo_hadamard_template_milestone.json)
 now realizes a flat singular bulk and finite outliers with asymptotic
 scalar SDP optimality in complete cross sign matrices. Its finite Gamma

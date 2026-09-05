@@ -8,6 +8,38 @@ The old ledgers are fully preserved on the two branches in `ARTIFACTS.md`.
 No local theorem is made false by parking its route; no open implication
 is made necessary for the original problem by its old status field.
 
+**Same-source diagonal covariance and weighted-shell comparison (2026-09-05).**
+`original_mo_weighted_covariance_milestone.json` records the actual full-D
+cross correlation and the exact weighted linear-field upper. The literal
+complete signing supplies D+-K>=0 with trace controlled by its ORIGINAL
+norm. Symmetric-edge compression and independent diagonal padding give
+unit variance and operator norm below three without altering A,-A,B.
+The weighted even-Hermite series is separated only at epsilon<=1/2;
+the bounded remaining orders have a separate argument. All retained
+weighted rank profiles together cost O(n), not merely by their rank.
+The full mean-preserving Gaussian reduction has O(n^(16/11)) error.
+Real weighted shell values are handled by actual representative bins,
+not a false polynomial count of exact values. The same D majorizes H_B,
+so the exact metric radius uses ORIGINAL c while its field traces retain
+weighted p_D,q_D,c_D. Equation (4.6) of the weighted-shell note is the
+unevaluated actual-cell upper; (5.3)-(5.6) display its missing compatibility.
+Do not rerun scalar-mu regularization or silently equate those energies.
+
+The accompanying cubic-frame theorem uses actual tau(C)=p q frames,
+not an effective-rank substitution. It proves j_3>=-1+2s^2/mu and
+Gamma>283/200 for q>=12/5, crossing the restricted weak-Dirac diagnostic
+threshold. This is still an exclusion of a Gamma UPPER certificate;
+it is not an actual Boolean lower or arbitrary-source comparison.
+Its five new rational checks reuse the earlier 28-comparison clipping
+certificate without rerunning it. Separately, the fixed-cap tensor
+deflation theorem constructs actual sources for every C>1/2 with
+n^(3/2)/sqrt(K) Gaussian positive-part repair cost for either tensor sign,
+also after symmetric restriction and diagonal removal. Faster uniform
+fixed-cap rates are excluded, not rates at exact minimizers, at C=1/2,
+or for the full coupled cross operator. The four independently reviewed
+proofs leave the weighted/unweighted compatibility evaluation and the
+original convergence question OPEN.
+
 **Actual Hadamard-template realization and Boolean attainability (2026-09-05).**
 `original_mo_hadamard_template_milestone.json` records three independently
 reviewed complete proofs. Sparse flips realize flat singular bulk, finite
