@@ -1,0 +1,94 @@
+{
+  "schema": "original_mo_boolean_ellipsoid_milestone_v1",
+  "date_utc": "2026-09-05",
+  "base_commit": "e04cc5f35856060da78fa17fee6deb580c4b5024",
+  "branch": "main",
+  "remote": "https://github.com/luckyseoul/quadratic-minmax-limit.git",
+  "classification": "Reviewed Boolean-coordinate Gaussian shell upper and fixed-internal-block cross regularization; original convergence OPEN",
+  "conclusions": [
+    "The exact expected Boolean-coordinate remainder strengthens the Gaussian ellipsoid shell bound, with all zero-factor limits retained.",
+    "The diagonal-metric specialization gives the exact unrestricted cube width for every PSD covariance.",
+    "The weaker diagonal-affine specialization is fully optimized, including negative parameters and endpoint infima. Its evaluated cushioned diagnostic improves the bound but misses the sharp target.",
+    "Cross-strip deletion leaves both source blocks A,-A literally unchanged and incurs their two internal boundary cut penalties.",
+    "For a bounded-operator source, the cross cap approximation has a vanishing error with explicit and separate source and cross near-minimum slacks."
+  ],
+  "not_proved": [
+    "Sharp all-source all-shell evaluation of the conditional Gaussian upper.",
+    "Uniform vanishing cross regularization error for every arbitrary exact original minimizer.",
+    "Absorption of the cap approximation loss into the available Gaussian gain.",
+    "Original convergence or an identified limit value."
+  ],
+  "next_target": "Combine the actual Boolean-sensitive covariance traces with attainable joint shells and actual source/cross spectral constraints. Do not replace a PSD covariance by an indefinite formal reference or substitute separate upper bounds into the oppositely signed shared trace.",
+  "files": {
+    "HANDOFF.md": "3262edd1d96ce8e33ce938ddc4f000df9b5a34ff2aabdc996c1bb2ea8251143d",
+    "STATUS.md": "1e6a5be370c66763f53124beb879b78cced6a860690dcadde240adc0272ccaf8",
+    "evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md": "5027935ca13f5e6bdf052037f90fb948286af3bf0e14f7e0b20e3ca5d39c35c4",
+    "evidence/NOTE_2026-09-05_BOOLEAN_ELLIPSOID_SHELL_UPPER.md": "ede1b62a26a636179d918ba84a48d122ab013c38175bdb9cd164bcfd8bfeb9aa",
+    "evidence/NOTE_2026-09-05_CROSS_ONLY_OPERATOR_REGULARIZATION.md": "27d9ab77768e8b7afa2d48d041cf3fe6bf3b66e8b16e481ca12abcf906a28d4f",
+    "evidence/original_mo_boolean_ellipsoid_author_review.md": "156c6063c53ebd1d2a473ed448a152e14c87decc3cc9bad0a66f4479a9104740",
+    "evidence/original_mo_boolean_ellipsoid_docs_review.md": "4f4cb47de2072e831d25e8bef353c850ddb484e060b36e009b17df744dfd78c9",
+    "evidence/original_mo_boolean_ellipsoid_root_review.md": "48d6451adb4eb8dacb17bab212ab4c97ea82a94e9befa5f6f7871496eafb9781",
+    "evidence/original_mo_cross_only_regularization_author_review.md": "448f81151240512a96a0328a0469d02e30ae7a279925c94c697bcfafd639e192",
+    "evidence/original_mo_cross_only_regularization_proof_review.md": "b68f793b4f3e5715b9d514e6966fcb9d920a2b9453af3422fb23794984c76061",
+    "evidence/original_mo_boolean_ellipsoid_docs_gate.json": "3371d0611f5207a1d75bd9109086a4508b31b0188d572d060dffee6d05ef22bb"
+  },
+  "source_to_canonical_path": {
+    "/tmp/original_mo_boolean_ellipsoid_shell_upper.md": "evidence/NOTE_2026-09-05_BOOLEAN_ELLIPSOID_SHELL_UPPER.md",
+    "/tmp/original_mo_cross_only_operator_regularization.md": "evidence/NOTE_2026-09-05_CROSS_ONLY_OPERATOR_REGULARIZATION.md",
+    "/tmp/original_mo_boolean_ellipsoid_shell_upper_author_receipt.md": "evidence/original_mo_boolean_ellipsoid_author_review.md",
+    "/tmp/original_mo_boolean_ellipsoid_shell_docs_review.md": "evidence/original_mo_boolean_ellipsoid_docs_review.md",
+    "/tmp/original_mo_cross_only_operator_regularization_author_review.md": "evidence/original_mo_cross_only_regularization_author_review.md",
+    "/tmp/original_mo_cross_only_operator_regularization_proof_review.md": "evidence/original_mo_cross_only_regularization_proof_review.md"
+  },
+  "cross_reference_aliases": {
+    "original_mo_mu_joint_shell_extension.md in Boolean Section 5": "evidence/NOTE_2026-09-05_INTRINSIC_CROSS_JOINT_SHELL_REPAIR.md"
+  },
+  "reviews": {
+    "boolean": "Proof-worker author; root collaborative-author complete read; docs-worker independent complete 322-line read. Final header-only delta verified against initial complete-read hash; formulas unchanged.",
+    "cross_regularization": "Docs-worker author; independent root and proof-worker complete 264-line reads. Final epsilon_B>0 clarification verified against initial complete-read hash.",
+    "documentation": "Root and docs-worker read all new canonical-document claims. Final STATUS/header terminology clarifies the deterministic completion-square penalty; no new mathematical claim.",
+    "import": "Both complete proofs and four imported reviews are byte-identical to their final reviewed sources. Root review accurately distinguishes collaborative authorship and independent review."
+  },
+  "computation": {
+    "documentation": "One bounded changed-document scanner on soulkiller; 880 hashed inputs, including 872 unchanged source files. docs_ok=true and original status OPEN.",
+    "local_offload_exceptions": [
+      {
+        "agent": "optimized_profile_proof",
+        "method": "Local Python elementary scalar evaluation of Boolean equation (21); exact command and output recorded in author receipt."
+      },
+      {
+        "agent": "optimized_profile_docs_gate",
+        "method": "Local JavaScript elementary scalar evaluation of the same closed expression; recorded in independent review receipt."
+      }
+    ],
+    "exception_handling": "These two small tool computations did not follow the repository offload instruction. Their provenance is retained honestly; no unchanged computation was rerun to manufacture a remote receipt. Future computational checks must offload.",
+    "proof_basis": "Exact formulas and complete analytic reviews, not rounded decimal values.",
+    "signing_enumeration": false,
+    "simulation": false,
+    "solver_run": false
+  },
+  "source_tests_and_global_predicates_changed": false,
+  "pre_commit_backup": {
+    "path": "/mnt/storage/backups/codex/quadratic-minmax-limit-2212b99a4c24/20260905T195630Z-e04cc5f35856-pre-milestone-boolean-ellipsoid.PHxapc",
+    "covered_head": "e04cc5f35856060da78fa17fee6deb580c4b5024",
+    "sha256sums_sha256": "9b19f9a43d6b4d292a8b0497ca1c1c4ab389382a1837f7286b9dbf37482277b1",
+    "receipt_sha256": "c8e68139d7a12e45349ddd5e9736db0213b46dd63b5438d29969e82f3e6bafa4",
+    "full_worktree_sha256": "e1b7cf543499fc46b9ffd0150174ba6d25a23c17938811c1216e024e705e7e4e",
+    "git_common_and_dir_sha256": "21461cdd54f57d4d7c31f6ed36b60d41e4a0562b50449cd9dcc4e7053b4888ae",
+    "repository_bundle_sha256": "5f8958f84aac4101149b3e7cd32b46736d1d4e321cd37cb80acd040e5d1f489e",
+    "complete": true,
+    "full_archives_compared_to_quiesced_source": true,
+    "all_refs_bundle_verified": true,
+    "status_and_refs_unchanged": true,
+    "coverage": "Includes both complete proofs, five reviews and three changed canonical docs before the final Boolean header, STATUS terminology, HANDOFF hash and review-delta provenance clarifications. No formulas changed after this snapshot. Excludes those final wording/provenance deltas, this manifest and the subsequently created docs-gate receipt; final post-push backup will cover the entire final commit."
+  },
+  "previous_post_push_backup": {
+    "path": "/mnt/storage/backups/codex/quadratic-minmax-limit-2212b99a4c24/20260905T192256Z-e04cc5f35856-post-push-e04cc5f.zW8fFY",
+    "covered_head": "e04cc5f35856060da78fa17fee6deb580c4b5024",
+    "sha256sums_sha256": "a796addccc96f2419deb5af3b8f4a935fa1036b00b5bcec15b79e8cd5c6befb1",
+    "receipt_sha256": "1b179659f08a56d7be2108a1e54e421588a0cd04729989b492643da2cfb63b8e",
+    "full_worktree_sha256": "361b55c8f1ffbd8e4ea5007663d9c4af6b9da869c6d01597e79609b4873366c8",
+    "complete": true
+  },
+  "publication": "Commit and normal push follow verified pre-commit backup. Verify origin main SHA and take a post-push full backup; its later receipt cannot self-identify inside this commit."
+}

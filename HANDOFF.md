@@ -21,6 +21,37 @@ predicates. Valid local results retain their stated scope and evidence.
 
 ## Next mathematical work
 
+The next Gaussian upper to evaluate is now
+`evidence/NOTE_2026-09-05_BOOLEAN_ELLIPSOID_SHELL_UPPER.md`
+(SHA-256 `ede1b62a26a636179d918ba84a48d122ab013c38175bdb9cd164bcfd8bfeb9aa`).
+For actual PSD C, positive P and nonnegative diagonal E<=P on a Boolean
+shell z^T P z=q, it proves the exact completion-square remainder (3),
+not merely a uniform sphere-to-cube multiplier. The diagonal-metric
+limit is the exact cube width. Equations (12)-(17) completely evaluate
+the weaker diagonal-affine specialization, including negative parameters
+and singular-metric limiting infima. The stronger two-trace expression
+(18) retains a trace with BOTH signs; do not substitute separate upper
+bounds into it without checking the combined expression. The actual
+cushioned scalar diagnostic improves the old bound but still exceeds
+the desired leading constant. An indefinite reference is not a covariance.
+
+The accompanying fixed-internal-block tool is
+`evidence/NOTE_2026-09-05_CROSS_ONLY_OPERATOR_REGULARIZATION.md`
+(SHA-256 `27d9ab77768e8b7afa2d48d041cf3fe6bf3b66e8b16e481ca12abcf906a28d4f`).
+Its exact loss is the two selected A-cut norms plus `2n sqrt(s)`, where
+s counts exceptional cross rows and columns. For `||A||<=K_A sqrt(n)`,
+the normalized loss is at most `(2+sqrt(2)K_A)sqrt(Lambda C/K)` and
+the new cross operator cap is `(K+8)sqrt(n)`. The source A,-A is unchanged.
+Near-source selection and subsequent cross regularization have separate
+slacks and cross cap `O(epsilon_A^(-4)epsilon_B^(-2))`. Do not transfer
+exact optimizer properties to either regularized object or overlook
+competition between this cap loss and the evaluated Gaussian gain.
+
+Both complete proofs have independent reviews. Their provenance is in
+`evidence/original_mo_boolean_ellipsoid_milestone.json`; the two elementary
+scalar-check offloading exceptions are recorded there, not relabelled
+as remote checks. The actual all-shell leading comparison remains open.
+
 The current joint-shell package has three independently reviewed proofs:
 
 - `evidence/NOTE_2026-09-05_CONDITIONAL_CROSS_JOINT_SHELL_UPPER.md`

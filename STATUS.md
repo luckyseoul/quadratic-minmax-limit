@@ -42,6 +42,23 @@ See `ARTIFACTS.md` for the preserved branches and terminology.
 
 ## Fresh mathematical target
 
+The [Boolean ellipsoid upper](evidence/NOTE_2026-09-05_BOOLEAN_ELLIPSOID_SHELL_UPPER.md)
+now retains an explicit expected Boolean-coordinate penalty in the
+Gaussian completion-square bound. It gives a stronger shell bound, recovers
+the exact cube width at a diagonal metric, and completely evaluates its
+diagonal-affine scalar specialization, including endpoint infima and the
+actual independent Hermite cushion. The evaluated scalar diagnostic
+improves the prior comparison but still misses the sharp leading target;
+the exact covariance traces and attainable joint shells remain relevant.
+The [cross-only regularization theorem](evidence/NOTE_2026-09-05_CROSS_ONLY_OPERATOR_REGULARIZATION.md)
+keeps A,-A literally fixed and retains the two internal boundary penalties
+incurred by cross-strip deletion. It gives a vanishing cap error for a
+bounded-operator source, with explicit near-optimizer slacks. It does not
+give the same uniform assertion for every exact original minimizer, and
+its cap loss cannot automatically be absorbed into the current Gaussian
+gain. Both complete proofs passed independent reviews. These are scoped
+analytic advances, not a sharp all-shell comparison or convergence proof.
+
 The [conditional joint-shell upper](evidence/NOTE_2026-09-05_CONDITIONAL_CROSS_JOINT_SHELL_UPPER.md)
 now compares the actual Gaussian cross proposal with linear fields while
 retaining the full exchange covariance and independent Gaussian cushion.

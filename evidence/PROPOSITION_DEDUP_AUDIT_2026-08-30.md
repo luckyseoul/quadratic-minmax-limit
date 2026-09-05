@@ -8,6 +8,24 @@ The old ledgers are fully preserved on the two branches in `ARTIFACTS.md`.
 No local theorem is made false by parking its route; no open implication
 is made necessary for the original problem by its old status field.
 
+**Boolean remainder and fixed-internal-block regularization (2026-09-05).**
+`NOTE_2026-09-05_BOOLEAN_ELLIPSOID_SHELL_UPPER.md` proves the exact
+Gaussian completion-square loss from Boolean coordinates and its weaker
+square-root consequence. The diagonal-affine scalar optimization is
+fully evaluated, including endpoints and the actual independent cushion.
+The exact two-trace formula is stronger but has not supplied a sharp
+all-shell comparison; its coupled positive and negative trace terms
+cannot be bounded independently without justification.
+`NOTE_2026-09-05_CROSS_ONLY_OPERATOR_REGULARIZATION.md` is genuinely
+restricted to fixed A,-A. It explicitly restores the two internal cuts
+removed by the averaging argument, rather than silently using whole-source
+regularization. Its bounded-A approximation keeps all cap and near-minimum
+slacks, and leaves the arbitrary-exact-source scope and cap competition
+open. Independent complete reviews passed. Neither theorem establishes
+original convergence. Elementary scalar checks were local exceptions to
+the offload rule and are accurately recorded in their review receipts;
+no unchanged computation was rerun to change that provenance.
+
 **Conditional joint-shell upper and intrinsic repair (2026-09-05).**
 `NOTE_2026-09-05_CONDITIONAL_CROSS_JOINT_SHELL_UPPER.md` retains the
 actual mixed exchange term in a PSD field comparison, proves the joint
