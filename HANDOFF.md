@@ -21,6 +21,28 @@ predicates. Valid local results retain their stated scope and evidence.
 
 ## Next mathematical work
 
+The new whole-source variational tool is
+`evidence/NOTE_2026-09-05_WHOLE_EDGE_SOURCE_PRESERVING_GAUSSIAN_REDUCTION.md`
+(SHA-256 `6b22fb3ab1cc878b08fe79b5b57e0e661eaaa792dfc67f850d35db9f1b68bead`).
+It uses all UNORDERED original edges and the normalized symmetric
+compression `R=(L^2 I-T)/(L^2-1)`, with `T(X)=KXK` compressed to that
+edge basis. For n>=3, `0<=R<=3I` for EVERY complete source; at n=2 the
+compression is zero and the theorem uses an explicit independent fallback.
+The entire even-Hermite correction is handled by a rank-one term and a
+four-cycle operator bound. The resulting expected ORIGINAL whole-order
+norm error is absolute `O(n^(16/11))`, uniform over deterministic h.
+
+Its full symmetric Gaussian lift removes the diagonal at expected cost
+at most `sqrt(n/pi)` and retains the exact augmented replica matrix
+`Gamma=<sigma xx^T>`, not a positive-semidefinite substitute. Equations
+(25)-(29) prove a negative-current-energy-square variance upper and an
+integrated constraint for actual ORIGINAL norm minimizers, with error
+`O(n^(16/11))` at `beta=n^(-5/11)`. Both independent complete reads passed.
+These are SAME-order constraints. A valid mapping to the required order
+upper remains unproved; do not reverse the lower inequality, assume
+opposite diagonal blocks for a full optimizer, or treat a shifted
+disorder-dependent posterior as another minimizer.
+
 The threshold-optimized extension is now
 `evidence/NOTE_2026-09-05_SHIFTED_SIGN_GAUSSIAN_UNIVERSALITY.md`
 (SHA-256 `a3ed6d9c3ee73b863c91d069e75baf9973911318a8efe9156ca61e30f55d7e25`)

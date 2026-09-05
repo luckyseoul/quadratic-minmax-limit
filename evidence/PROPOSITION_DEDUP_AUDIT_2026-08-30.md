@@ -8,6 +8,21 @@ The old ledgers are fully preserved on the two branches in `ARTIFACTS.md`.
 No local theorem is made false by parking its route; no open implication
 is made necessary for the original problem by its old status field.
 
+**Whole-edge actual-optimizer constraint (2026-09-05).**
+`NOTE_2026-09-05_WHOLE_EDGE_SOURCE_PRESERVING_GAUSSIAN_REDUCTION.md`
+proves the correctly normalized symmetric-edge minus-covariance law,
+including its genuine order-two degeneracy and explicit fallback. The
+four-cycle Schur estimate controls ALL even-Hermite orders with no source
+operator or norm cap. The matched-to-simple Gaussian error is `O(n^(5/4))`;
+the full threshold-sign expected ORIGINAL norm error is `O(n^(16/11))`.
+The full symmetric lift costs only one trace-half scalar and keeps all
+augmented replica signs. Its universal variance upper retains the actual
+source-energy square, and its integrated inequality follows from ORIGINAL
+norm optimality alone. This is a same-order lower constraint, not a
+cross-order upper. Neither a pointwise derivative sign, opposite-block
+structure of an arbitrary optimum, nor optimality of the noisy posterior
+is asserted. Root and exact-worker complete independent reviews passed.
+
 **Threshold-optimized exact-minimizer reduction (2026-09-05).**
 `NOTE_2026-09-05_SHIFTED_SIGN_GAUSSIAN_UNIVERSALITY.md` proves a
 mean-preserving, threshold-uniform correlated-sign comparison. Its

@@ -1,0 +1,57 @@
+{
+  "schema": "original_mo_whole_edge_constraint_milestone_v1",
+  "date_utc": "2026-09-05",
+  "base_commit": "90838919411db968bc0a133f123f9b60e11bb583",
+  "branch": "main",
+  "remote": "https://github.com/luckyseoul/quadratic-minmax-limit.git",
+  "classification": "Reviewed universal whole-edge Gaussian reduction and integrated actual-original-optimizer constraint; original convergence OPEN",
+  "conclusions": [
+    "Normalized symmetric-edge minus covariance is bounded by 3I for EVERY complete source of order at least three, with an explicit independent order-two fallback.",
+    "Entire even-Hermite correction is controlled through a universal four-cycle Schur estimate, with absolute expected original norm error O(n^(16/11)) uniformly over deterministic thresholds.",
+    "Full symmetric Gaussian lift costs one common trace-half scalar, at expected norm cost at most sqrt(n/pi).",
+    "The actual augmented posterior variance upper retains its negative current source-energy square and signed overlap subtraction.",
+    "Exact ORIGINAL norm optimality yields the integrated current-posterior constraint (28)-(29), without replacing a norm minimum by a pressure minimum."
+  ],
+  "not_proved": [
+    "A pointwise sign of the actual threshold derivative.",
+    "A sharp cross-order upper comparison.",
+    "Original all-orders convergence or a prescribed limit value."
+  ],
+  "next_target": "Derive an actual order upper using legitimate optimizer constraints. Do not infer opposite-block form for a full optimizer or optimality of a noisy posterior.",
+  "files": {
+    "evidence/NOTE_2026-09-05_WHOLE_EDGE_SOURCE_PRESERVING_GAUSSIAN_REDUCTION.md": "6b22fb3ab1cc878b08fe79b5b57e0e661eaaa792dfc67f850d35db9f1b68bead",
+    "evidence/original_mo_whole_edge_gaussian_author_review.md": "90561915d1fbe62e03f08747d11fa5b1fe291a6e5c83b4200e80b06cee04163f",
+    "evidence/original_mo_whole_edge_gaussian_exact_review.md": "c41be01247238b75c2bc34e5e038cd0cae0d5edb6ef3aff31247c72d3e82056d",
+    "evidence/original_mo_whole_edge_gaussian_root_review.md": "c3d853ad7141c17fa852dea3744d9aaac3c3e796784527610067fe125d44006c",
+    "evidence/original_mo_whole_edge_docs_gate.json": "c16a34cc5387d0c4f3e58f2f00656d17b840738a787a5e96481043a2d95b59a7",
+    "STATUS.md": "93976b8c2ca3a8b8d2c50d23d744cb3bba34389c9880611e3a6aed8b3a794320",
+    "HANDOFF.md": "d07fd79c4f9dd627616d75340c27f0ae15fa6da6558a7d27ab0dfa844976e4cb",
+    "evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md": "85a33de6c4697678afaa177b9a1a9e859ae3f0b269a7b483430638c1ead1f2cc"
+  },
+  "reviews": "Root and exact worker independently completely read the original 318-line proof and every added section in the final 502-line proof. Final status-header-only delta byte-verified against preceding whole-file hash.",
+  "computation": "No mathematical test, census, sampling or solver run. One bounded changed-document scanner on soulkiller; docs_ok=true and original status OPEN.",
+  "source_tests_and_global_predicates_changed": false,
+  "pre_commit_backup": {
+    "path": "/mnt/storage/backups/codex/quadratic-minmax-limit-2212b99a4c24/20260905T183851Z-90838919411d-pre-milestone-whole-edge-constraint.EtqzPk",
+    "covered_head": "90838919411db968bc0a133f123f9b60e11bb583",
+    "sha256sums_sha256": "6ce93fce7a0edac54d18982b411c6aaa7207bf8332a9af26d36dbbdb916dd8e0",
+    "receipt_sha256": "bafa3c44639d215edadf297e3d70d0fdc478e5ee0fe7d1df13b0819b030f68f5",
+    "full_worktree_sha256": "c029c0235939df59e26100d60d96724ab1792f4bc2cbf2f84d4afd1eeca8fb24",
+    "git_common_and_dir_sha256": "4025db554b81310eb05243574da217afe7c5ad24e3ab9d5d7054f86ecbdeff3c",
+    "repository_bundle_sha256": "24a4cb6c0463267937f21d32acaef985a275fc1440720d5408a4c9558efa0bc8",
+    "complete": true,
+    "full_archives_compared_to_quiesced_source": true,
+    "all_refs_bundle_verified": true,
+    "status_and_refs_unchanged": true,
+    "coverage": "Includes the proof, three reviews and all three changed canonical docs; excludes this subsequently created manifest and docs-gate receipt."
+  },
+  "previous_post_push_backup": {
+    "path": "/mnt/storage/backups/codex/quadratic-minmax-limit-2212b99a4c24/20260905T182553Z-90838919411d-post-push-9083891.fIZOjA",
+    "covered_head": "90838919411db968bc0a133f123f9b60e11bb583",
+    "sha256sums_sha256": "aa8e12472aaffe4f026b3b017f87aa78fc32fe216d9503cc1cb1f5ae977fea16",
+    "receipt_sha256": "049dc0f273a8acf10ea67090b50d70573b01a433d3bab2a3a3fd9871e88032bd",
+    "full_worktree_sha256": "32ec36a30d4b5e18bb1dc7050074a5ea2f3904f1fd5926b0eb4e113f90568471",
+    "complete": true
+  },
+  "publication": "Commit and normal push follow the verified pre-commit backup. Verify origin main SHA and take a post-push full backup; its later receipt cannot self-identify inside this commit."
+}

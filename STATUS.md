@@ -42,6 +42,22 @@ See `ARTIFACTS.md` for the preserved branches and terminology.
 
 ## Fresh mathematical target
 
+The [whole-edge optimizer constraint](evidence/NOTE_2026-09-05_WHOLE_EDGE_SOURCE_PRESERVING_GAUSSIAN_REDUCTION.md)
+now rounds every unordered edge of the source at its ORIGINAL order.
+The correctly normalized symmetric compression of `I-K tensor K/L^2`
+has covariance operator at most three for every source at order at least
+three; order two has an explicit independent-edge fallback. A universal
+four-cycle bound controls the entire even-Hermite correction, giving
+absolute expected ORIGINAL norm error `O(n^(16/11))`, uniform in the
+threshold, without any source norm or operator cap.
+For exact ORIGINAL norm minima this supplies a same-order Gaussian lower
+constraint and an integrated CURRENT-posterior inequality with the same
+subleading error. The full symmetric lift accounts for the diagonal as
+one common scalar; the variance upper retains a negative source-energy
+square and signed overlap subtraction. No pressure-minimum substitution
+is used. The missing step is a valid order-transport upper comparison;
+the same-order inequality cannot be reversed to supply it.
+
 The [shifted-sign comparison](evidence/NOTE_2026-09-05_SHIFTED_SIGN_GAUSSIAN_UNIVERSALITY.md)
 now preserves arbitrary deterministic threshold means and controls ALL
 Hermite orders, uniformly in the threshold. Its expected ORIGINAL norm
