@@ -1,0 +1,57 @@
+{
+  "schema": "original_mo_shifted_threshold_milestone_v1",
+  "date_utc": "2026-09-05",
+  "base_commit": "58b18cfe250d454bf57a3c7e1046bd6619b7677c",
+  "branch": "main",
+  "remote": "https://github.com/luckyseoul/quadratic-minmax-limit.git",
+  "classification": "Two reviewed analytic Gaussian-reduction theorems; original all-orders convergence OPEN",
+  "conclusions": [
+    "Mean-preserving shifted-sign quenched comparison uniform over all real deterministic thresholds and every bounded latent covariance operator.",
+    "Expected original norm comparison at absolute raw error O(n^(16/11)) for universal midpoint covariance.",
+    "Even-Hermite correction retained as explicit PSD noise with actual Boolean-norm bound and O(1/n) residual operator error.",
+    "Any exact original minimizer A satisfies m_(2n) <= inf_h E Phi([[A,Z_h],[Z_h^T,-A]]) + D n^(16/11)."
+  ],
+  "not_proved": [
+    "The sharp upper evaluation of the threshold infimum against m_n.",
+    "A sign for the actual mean/noise derivative.",
+    "Original all-orders convergence or a prescribed limit value."
+  ],
+  "next_target": "Evaluate an actual optimized Gaussian order bound with enough control to imply the original limit; keep coupled posterior and all replica terms.",
+  "files": {
+    "evidence/NOTE_2026-09-05_SHIFTED_SIGN_GAUSSIAN_UNIVERSALITY.md": "a3ed6d9c3ee73b863c91d069e75baf9973911318a8efe9156ca61e30f55d7e25",
+    "evidence/NOTE_2026-09-05_SHIFTED_THRESHOLD_COVARIANCE_REDUCTION.md": "74457650912a515eaf6a209b184e5c1404a13fc48c68464068871ebd61236680",
+    "evidence/original_mo_shifted_sign_universality_docs_review.md": "0c79df8140ed914d4aac08f12509748c50eea04a387231eea9fe656c701b2873",
+    "evidence/original_mo_shifted_law_combined_exact_review.md": "17349143cf3387a71cd0e3dcd5523738669928dfbf4733aa485adfa000ba19b1",
+    "evidence/original_mo_shifted_threshold_root_review.md": "04a2c948cde3cd8873eb80dee7f1afd888ac82f3c96af5e46d23b1497b69cfa2",
+    "evidence/original_mo_shifted_threshold_docs_gate.json": "1af721b62d6cdfb1c99f6d14e0d6ff2fccebeba5ac0b764155684723196746f4",
+    "STATUS.md": "e4c6f2a530d09585e655240ac39f489c195e31bf2f299a8db6e8a1da070d99da",
+    "HANDOFF.md": "edc1c30b2663cc1e9b63edf705edb294f294efc5031974ffb1d91386b0dc60b7",
+    "evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md": "c83085b6ca84448198abe26bdf1f62fe4c3692e65801162f1bc0b59d3d41ca2d"
+  },
+  "reviews": "Root and both independent workers completely read the shifted-sign proof; root and exact worker completely read the covariance proof. Receipts identify all final deltas.",
+  "computation": "No mathematical test, census, sampling or solver run. One bounded changed-document scanner on soulkiller; result docs_ok=true and original status OPEN.",
+  "source_tests_and_global_predicates_changed": false,
+  "pre_commit_backup": {
+    "path": "/mnt/storage/backups/codex/quadratic-minmax-limit-2212b99a4c24/20260905T182113Z-58b18cfe250d-pre-milestone-shifted-threshold.BMFRQT",
+    "covered_head": "58b18cfe250d454bf57a3c7e1046bd6619b7677c",
+    "sha256sums_sha256": "4a0cbfe585ccac9c9b9bb41ec62116465a545cc13a01952e05fca2d19dd161c5",
+    "receipt_sha256": "dfe40ca0aeddabf3bbad4d109f0d5d0ceef26157a98a6d3e9779b964fb16ec3b",
+    "full_worktree_sha256": "2ba07a21193dadfc761b9ef8a4a5f1180e0505adff417d6210574b4095cd6066",
+    "git_common_and_dir_sha256": "8d7ec1e8b36f5153d67bccff25004a2b74c312b601dcbd09bc9888118686e1af",
+    "repository_bundle_sha256": "87bdc170bc679841bd93471a205b81ae99af9064613ce73fcad2d67be383394f",
+    "complete": true,
+    "full_archives_compared_to_quiesced_source": true,
+    "all_refs_bundle_verified": true,
+    "status_and_refs_unchanged": true,
+    "coverage": "Includes both proofs, three reviews and all three changed canonical docs; excludes this subsequently created manifest and docs-gate receipt."
+  },
+  "previous_post_push_backup": {
+    "path": "/mnt/storage/backups/codex/quadratic-minmax-limit-2212b99a4c24/20260905T175236Z-58b18cfe250d-post-push-58b18cf.eUfUyt",
+    "covered_head": "58b18cfe250d454bf57a3c7e1046bd6619b7677c",
+    "sha256sums_sha256": "37f8b0344a6f91ddaa8e2a169b4f8a24e481eb2eea2522362bc2a3fbe95296b9",
+    "receipt_sha256": "f6ca61f27dba9401b236432b53de8b677ba5aa76ceae9769f10ea57fa2851176",
+    "full_worktree_sha256": "03734e1361aab84efa911bd14449a70cabe27619c22020d938168580e48dcea3",
+    "complete": true
+  },
+  "publication": "Commit and normal push follow this verified pre-commit backup; verify origin main SHA and take a post-push full backup. Its later receipt cannot self-identify inside this commit."
+}

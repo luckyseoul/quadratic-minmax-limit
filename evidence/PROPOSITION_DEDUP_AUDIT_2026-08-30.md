@@ -8,6 +8,22 @@ The old ledgers are fully preserved on the two branches in `ARTIFACTS.md`.
 No local theorem is made false by parking its route; no open implication
 is made necessary for the original problem by its old status field.
 
+**Threshold-optimized exact-minimizer reduction (2026-09-05).**
+`NOTE_2026-09-05_SHIFTED_SIGN_GAUSSIAN_UNIVERSALITY.md` proves a
+mean-preserving, threshold-uniform correlated-sign comparison. Its
+residual bound is two, all Hermite degrees are retained, and the full
+temperature-dependent error gives raw expected norm error `O(n^(16/11))`.
+`NOTE_2026-09-05_SHIFTED_THRESHOLD_COVARIANCE_REDUCTION.md` explicitly
+retains the even-Hermite PSD correction and bounds its actual Boolean
+cost, rather than mistaking low rank for a small norm. For ANY exact
+original minimizer A the result is
+`m_(2n)<=inf_h E Phi([[A,Z_h],[Z_h^T,-A]])+D n^(16/11)`,
+with the simple mean Gaussian model stated in the proof. The infimum
+is only over thresholds fixed before drawing the disorder. Its sharp
+upper evaluation and the actual mean/noise derivative sign are not
+proved. Complete independent proof reads passed; no computation or
+census was used. These are reductions, not original-limit closure.
+
 **Universal exact-minimizer Gaussian reduction (2026-09-05).**
 `NOTE_2026-09-05_UNIVERSAL_SPECTRAL_MIDPOINT_GAUSSIAN_REDUCTION.md`
 chooses the freely available spectral midpoint, not a mandatory Gibbs

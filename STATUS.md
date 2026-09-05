@@ -42,6 +42,22 @@ See `ARTIFACTS.md` for the preserved branches and terminology.
 
 ## Fresh mathematical target
 
+The [shifted-sign comparison](evidence/NOTE_2026-09-05_SHIFTED_SIGN_GAUSSIAN_UNIVERSALITY.md)
+now preserves arbitrary deterministic threshold means and controls ALL
+Hermite orders, uniformly in the threshold. Its expected ORIGINAL norm
+error is still `O(n^(16/11))` under a bounded latent covariance operator.
+The [shifted-threshold covariance reduction](evidence/NOTE_2026-09-05_SHIFTED_THRESHOLD_COVARIANCE_REDUCTION.md)
+retains the even-Hermite correction as explicit PSD low-rank Gaussian
+noise, bounds its Boolean-norm cost, and reduces the actual threshold
+law to `Z_h=s_h A+2 phi(h)G+sqrt(1-s_h^2-4 phi(h)^2)W`.
+For ANY exact original minimizer A this proves
+`m_(2n)<=inf_h E Phi([[A,Z_h],[Z_h^T,-A]])+D n^(16/11)`
+with an absolute constant. The infimum is over deterministic thresholds
+chosen before the disorder. It has not been evaluated at the required
+leading constant; no sign of the mean/noise derivative is asserted.
+Both complete proofs passed independent reviews. The original limit
+remains OPEN.
+
 The new [universal spectral-midpoint reduction](evidence/NOTE_2026-09-05_UNIVERSAL_SPECTRAL_MIDPOINT_GAUSSIAN_REDUCTION.md)
 removes the source operator-norm hypothesis for a freely chosen rounding
 law. If the source eigenvalue extremes are `a,-b`, choosing

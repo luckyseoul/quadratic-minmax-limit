@@ -21,7 +21,25 @@ predicates. Valid local results retain their stated scope and evidence.
 
 ## Next mathematical work
 
-The strongest current rounding reduction is now
+The threshold-optimized extension is now
+`evidence/NOTE_2026-09-05_SHIFTED_SIGN_GAUSSIAN_UNIVERSALITY.md`
+(SHA-256 `a3ed6d9c3ee73b863c91d069e75baf9973911318a8efe9156ca61e30f55d7e25`)
+and `evidence/NOTE_2026-09-05_SHIFTED_THRESHOLD_COVARIANCE_REDUCTION.md`
+(SHA-256 `74457650912a515eaf6a209b184e5c1404a13fc48c68464068871ebd61236680`).
+The mean-preserving OU proof is uniform in all real thresholds and keeps
+every Hermite order and the actual posterior. The even covariance term
+is not discarded: its PSD low-rank part has actual Gaussian Boolean-norm
+cost `O(Phi(A) sqrt(log(2n)/n))`; the remaining operator error is `O(1/n)`.
+Thus ANY exact original minimizer A satisfies the proved one-sided bound
+`m_(2n)<=inf_h E Phi([[A,Z_h],[Z_h^T,-A]])+D n^(16/11)`,
+where `Z_h=s_h A+2 phi(h)G+sqrt(1-s_h^2-4 phi(h)^2)W`,
+`s_h=2 Phi_Gauss(h)-1`, and G has the universal midpoint covariance.
+The threshold is fixed before drawing disorder, not chosen adaptively.
+Both complete proofs have independent full-read PASS receipts.
+The remaining target is an actual evaluated Gaussian upper bound, not
+another covariance identity or an unsupported derivative sign.
+
+The underlying zero-threshold rounding reduction is
 `evidence/NOTE_2026-09-05_UNIVERSAL_SPECTRAL_MIDPOINT_GAUSSIAN_REDUCTION.md`
 (SHA-256 `1fc6f5bbb69038b6ac4ed845d26e0724a0ceb0b5a9d96d01b4554a8e37e6f968`).
 For EVERY complete source A with extreme eigenvalues `a,-b`, freely choose
