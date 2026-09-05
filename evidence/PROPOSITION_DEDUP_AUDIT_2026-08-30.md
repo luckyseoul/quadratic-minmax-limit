@@ -8,6 +8,24 @@ The old ledgers are fully preserved on the two branches in `ARTIFACTS.md`.
 No local theorem is made false by parking its route; no open implication
 is made necessary for the original problem by its old status field.
 
+**Universal exact-minimizer Gaussian reduction (2026-09-05).**
+`NOTE_2026-09-05_UNIVERSAL_SPECTRAL_MIDPOINT_GAUSSIAN_REDUCTION.md`
+chooses the freely available spectral midpoint, not a mandatory Gibbs
+parameter. Its covariance operator is at most two for EVERY complete
+source and its exact arcsine remainder is `O(1/n)` with absolute constants.
+The expected ORIGINAL norm error is therefore uniformly `D n^(16/11)`,
+including ANY exact minimizer; no bounded-source-operator or regularized
+near-minimizer premise is needed for this law. The one-sided all-orders
+inequality `m_(2n)<=E Phi(paired Gaussian)+D n^(16/11)` is proved, but
+its Gaussian right side has no proved sharp comparison with `m_n`.
+`NOTE_2026-09-05_GAUSSIAN_ENERGY_SHELL_UPPER.md` and
+`NOTE_2026-09-05_ONE_PHASE_GAUSSIAN_VARIANCE_UPPER.md` give genuine
+upper reductions with subleading losses. Their constrained-width and
+current-posterior energy-product terms remain uncontrolled at the needed
+leading constant. Do not promote operator-norm optimality of the midpoint
+to pressure optimality, or a little-o dyadic target to global convergence.
+Complete independent proof reads passed; no new computation was used.
+
 **Genuine correlated-sign Gaussian reduction (2026-09-05).**
 `NOTE_2026-09-05_CORRELATED_SIGN_GAUSSIAN_FREE_ENERGY.md` proves
 `O(n^(17/18))` quenched equivalence to the matched Gaussian for n-squared

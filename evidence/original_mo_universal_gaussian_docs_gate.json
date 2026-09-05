@@ -1,0 +1,93 @@
+{
+  "schema": "original_mo_universal_gaussian_docs_gate_v1",
+  "date_utc": "2026-09-05",
+  "scope": "Changed-document scanner only; not proof verification or a new census",
+  "local_stage": "/tmp/original-mo-optimized-profile-docs-gate.76wb_2xk",
+  "files": 880,
+  "source_files": 872,
+  "source_manifest_sha256": "f53edd56689dd392b95c48360559cc5565c3f345f162aba76291e953416a4288",
+  "input_manifest_sha256": "d4e14ff91b566a0a06e05293e75ce9fada1b0b788ce9878d40f8fa054b4c9c81",
+  "file_list_sha256": "bd229e44cc226b64a9a6683a1b49056685e0f47d9bb701b3818feb96d4cdc7f3",
+  "archive_sha256": "c37f1f91d282ec1bacfb8517a017b6053b9f140bc21d566d902093535556977a",
+  "wrapper_sha256": "a19169f72fd66143f907ded22a107a8eed66f0218f6244658cacc40fb2756bd2",
+  "normalized_inner_command": "timeout 60s env PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 -c 'import json;from e1_main_chain_status import check_docs_L_status;d=check_docs_L_status();print(json.dumps(d,sort_keys=True));assert d[\"docs_ok\"];assert d[\"original_mo\"][\"status\"]==\"OPEN\"'",
+  "normalized_inner_command_sha256": "8fec15df7f3240000530c9fe7bdb5df18dcc9b6d271bb9fc61bdb1d350e688aa",
+  "expected_document_sha256": {
+    "HANDOFF.md": "a2c2f94c47db0882597b449ab99721b34ac2fdd7194c1cf97a4ad80ad41e6a74",
+    "STATUS.md": "ab41e56a8bf4e03baba8ede0ee8ea1f1850f5e7bb7ba5bcfa0a86d1301cdd8e8",
+    "evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md": "802700a6ccb1218a8ff34f8151d8c41517c50de2fc5cda63abafeda25f3a437b"
+  },
+  "complete_prior_880_input_union": true,
+  "audit_document_staged_but_not_scanned": true,
+  "no_source_or_predicate_changes": true,
+  "host": "soulkiller, nick@192.168.1.113",
+  "host_preflight": {
+    "utc": "2026-09-05T17:45:18Z",
+    "cpu_threads": 88,
+    "load_average": [
+      2.04,
+      2.21,
+      2.21
+    ],
+    "memory_available_GiB": 52,
+    "allocated_workers": 1,
+    "timeout_seconds": 60,
+    "blas_threads": 1
+  },
+  "remote_stage": "/tmp/original-mo-universal-gaussian-docs-gate.jkfj62",
+  "started_utc": "2026-09-05T17:47:43Z",
+  "finished_utc": "2026-09-05T17:47:44Z",
+  "exit_code": 0,
+  "executions": 1,
+  "result_sha256": "b2bd06560f0b9a55b0c216d1c9f98209b14c634f3c252e03dbdbdfc5c4776f17",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_empty": true,
+  "remote_archive_sha_verified_before_extraction": true,
+  "remote_input_hashes_verified_before_and_after": true,
+  "local_input_hashes_verified_after": true,
+  "process_audit": {
+    "timeout_pid": 1224973,
+    "command": "ps -p 1224973 -o pid=,stat=,args=",
+    "exit_code": 1,
+    "output": "",
+    "process_absent": true
+  },
+  "validation_scope": "Bounded changed-document claim scanner. Full analytic proof reads, not this scanner, support the new theorems. No signing census or mathematical tests were rerun.",
+  "result": {
+    "HANDOFF_shows_L_OPEN": true,
+    "docs_ok": true,
+    "e1_closed_general": false,
+    "four_e1_units": {
+      "bitight_levels_2_3": true,
+      "closed": false,
+      "lemma_D": true,
+      "minimal_gap4_shell_bridge": false,
+      "residual_ii_k_ge_4p": false,
+      "type_I_multilevel": true
+    },
+    "global_claim_hits": [],
+    "gsum_disj_lb_proved_general": false,
+    "original_mo": {
+      "existence_proved": false,
+      "limit_status": "OPEN",
+      "limit_value": null,
+      "nonexistence_proved": false,
+      "problem": "MathOverflow 413935: the actual all-orders sequence alpha_n",
+      "problem_settled": false,
+      "registry_errors": [],
+      "registry_valid": true,
+      "required_optional_routes": [],
+      "reviewed_completion_proofs": [],
+      "rule": "Only explicit reviewed all-orders proof entries determine global status. Optional route diagnostics neither certify nor veto completion. Artifact hashes verify provenance, not mathematics.",
+      "status": "OPEN",
+      "value_proved": false
+    },
+    "overclaim_detected": false,
+    "overclaim_hit": null,
+    "paley_route_claim_hit": null,
+    "scanned_denseness_package_full": true,
+    "scanned_props_15167_171": true,
+    "soft_close_detected": false,
+    "soft_close_hit": null
+  }
+}

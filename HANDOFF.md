@@ -21,6 +21,37 @@ predicates. Valid local results retain their stated scope and evidence.
 
 ## Next mathematical work
 
+The strongest current rounding reduction is now
+`evidence/NOTE_2026-09-05_UNIVERSAL_SPECTRAL_MIDPOINT_GAUSSIAN_REDUCTION.md`
+(SHA-256 `1fc6f5bbb69038b6ac4ed845d26e0724a0ceb0b5a9d96d01b4554a8e37e6f968`).
+For EVERY complete source A with extreme eigenvalues `a,-b`, freely choose
+`alpha=(a-b)/2`, `mu=(a^2+b^2)/2`. The exact covariance has operator
+norm `(a+b)^2/(a^2+b^2)<=2`, and its arcsine-linearization remainder
+is bounded by `(1-2/pi)(2/(n-1)^2+1/(n-1))`. The generic quenched
+theorem therefore gives an absolute `D n^(16/11)` expected ORIGINAL
+paired-norm error for all sources and all fixed internal energies.
+No source regularization is needed: for ANY exact original minimizer A,
+`m_(2n)<=E Phi([[A,Z],[Z^T,-A]])+D n^(16/11)`.
+The full alpha domain, operator-optimal midpoint and actual-pressure
+derivative are proved; operator optimality is not pressure optimality.
+
+The immediate Gaussian upper-bound tools are
+`evidence/NOTE_2026-09-05_GAUSSIAN_ENERGY_SHELL_UPPER.md`
+(SHA-256 `8bd3507b722d13077cdb47e8eaa47024b8e95144900226ae4e38272795c5c728`)
+and `evidence/NOTE_2026-09-05_ONE_PHASE_GAUSSIAN_VARIANCE_UPPER.md`
+(SHA-256 `1646f57b060db7fdaf15c2cc8a8766806d2f00297c6749e236d8e814e467bae0`).
+The first retains exact source-energy shells and gives a quantitative
+one-block width deficit; its central-shell two-field comparison is still
+too weak. The second removes the augmented phase at subleading expected
+cost and retains the coupled posterior in the actual variance derivative.
+The live target is an evaluated Gaussian order upper bound on actual
+original minima. Neither a favorable integral sign nor a sufficient
+cross-order inequality has been proved. An unspecified little-o dyadic
+inequality alone would still not establish convergence.
+
+The following Gibbs-generated-law results remain valid separately. They
+are not prerequisites for the freely chosen universal midpoint law.
+
 The new comparison is
 `evidence/NOTE_2026-09-05_CORRELATED_SIGN_GAUSSIAN_FREE_ENERGY.md`
 (SHA-256 `2e6537d0b1e2c4d8a72cc920e3fee50600d82be32417ba77c733aaedabc141c7`).

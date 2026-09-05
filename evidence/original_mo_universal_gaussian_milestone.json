@@ -1,0 +1,65 @@
+{
+  "schema": "original_mo_universal_gaussian_milestone_v1",
+  "date_utc": "2026-09-05",
+  "parent_head": "7af226f3ba843afb385ed04aacbaecbd58764cfc",
+  "branch": "main",
+  "intended_remote": "https://github.com/luckyseoul/quadratic-minmax-limit.git",
+  "mathematical_status": "Original MO convergence, nonconvergence, and the value 1/2 remain OPEN.",
+  "milestone": "Universal spectral-midpoint Gaussian reduction applies directly to every exact original-norm minimizer, with actual Gaussian upper reductions.",
+  "proved": [
+    "Every complete source has midpoint covariance operator at most 2, with no source operator-norm hypothesis or source regularization.",
+    "The full admissible alpha interval and unique covariance-operator-optimal midpoint are exact finite-dimensional theorems.",
+    "Exact arcsine covariance remainder is bounded by (1-2/pi)(2/(n-1)^2+1/(n-1)) uniformly over all sources.",
+    "Expected ORIGINAL paired norms of midpoint signs and their linearized Gaussian differ by at most D n^(16/11), with an absolute constant and arbitrary fixed internal prior.",
+    "The resulting one-sided inequality m_(2n)<=E Phi(paired Gaussian)+D n^(16/11) holds for every source, including ANY exact m_n minimizer.",
+    "Actual Gaussian paired norm has an exact energy-shell upper with constrained one-block widths and O(n sqrt(log n)) aggregation loss; a quantitative energy-mismatch width deficit is proved.",
+    "One-phase reduction costs O(sqrt(n)) critical pressure or O(n) raw expected norm. Its actual Gaussian differential upper retains current posterior energy products and mean-overlap subtraction."
+  ],
+  "not_proved": [
+    "An evaluated Gaussian upper bound at the source-optimal leading constant.",
+    "A favorable integrated sign for the current-posterior derivative.",
+    "Pressure optimality of the covariance-operator-optimal midpoint.",
+    "Identification of the freely chosen midpoint law with a Gibbs-generated law.",
+    "Pointwise sign/Gaussian agreement or a selected-outcome guarantee.",
+    "Convergence from an unspecified little-o dyadic estimate alone."
+  ],
+  "next_target": "An evaluated Gaussian order upper bound on actual original-norm minima, or another route to the original all-orders convergence problem. No particular route or value is mandatory.",
+  "files_sha256": {
+    "HANDOFF.md": "a2c2f94c47db0882597b449ab99721b34ac2fdd7194c1cf97a4ad80ad41e6a74",
+    "STATUS.md": "ab41e56a8bf4e03baba8ede0ee8ea1f1850f5e7bb7ba5bcfa0a86d1301cdd8e8",
+    "evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md": "802700a6ccb1218a8ff34f8151d8c41517c50de2fc5cda63abafeda25f3a437b",
+    "evidence/NOTE_2026-09-05_UNIVERSAL_SPECTRAL_MIDPOINT_GAUSSIAN_REDUCTION.md": "1fc6f5bbb69038b6ac4ed845d26e0724a0ceb0b5a9d96d01b4554a8e37e6f968",
+    "evidence/NOTE_2026-09-05_GAUSSIAN_ENERGY_SHELL_UPPER.md": "8bd3507b722d13077cdb47e8eaa47024b8e95144900226ae4e38272795c5c728",
+    "evidence/NOTE_2026-09-05_ONE_PHASE_GAUSSIAN_VARIANCE_UPPER.md": "1646f57b060db7fdaf15c2cc8a8766806d2f00297c6749e236d8e814e467bae0",
+    "evidence/original_mo_midpoint_one_phase_proof_review.md": "8c89777257dce8aa880870f78c45c3dba71bf4e457846a593792f87be42a3dae",
+    "evidence/original_mo_midpoint_shell_exact_review.md": "973e4730562e58eabe598754c45b15a5daa5f9c7134fbe25d638536b44995678",
+    "evidence/original_mo_universal_gaussian_upper_docs_review.md": "764391ab13f5098120d97140e17fd09e70631d2106c1ce9b198c71379313221e",
+    "evidence/original_mo_universal_gaussian_root_review.md": "52176f8c40a855e6ab18f9f741c31d9462fc6afc5073725eec52db24dc272758",
+    "evidence/original_mo_universal_gaussian_docs_gate.json": "3988cd30b94be555a0f05fd631fc7a96503bdbc8c10f9b52522a5b0961d4c924"
+  },
+  "review_provenance": "Root and both independent complete mathematical reviews passed each new proof. Canonical imports match the final reviewed /tmp sources exactly. No source, tests, or mathematical-status predicates changed.",
+  "documentation_gate": "evidence/original_mo_universal_gaussian_docs_gate.json",
+  "validation_scope": "One changed-document scanner on live-preflighted soulkiller; 880 hashed inputs, 872 unchanged Python source files, one CPU worker, timeout 60 seconds. Exit 0, empty stderr, pre/post hashes verified, timeout PID absent. No new signing census or mathematical tests.",
+  "backups": {
+    "previous_clean_parent": {
+      "path": "/mnt/storage/backups/codex/quadratic-minmax-limit-2212b99a4c24/20260905T172539Z-7af226f3ba84-post-push-7af226f.PpJaM7",
+      "covered_head": "7af226f3ba843afb385ed04aacbaecbd58764cfc",
+      "manifest_sha256": "62fada19cdd86df56a81cb83e6bdc1f3a9e8fde0cb59d99d278178afdae5b75b",
+      "receipt_sha256": "f302ab9f004022a2ec9690909f11c51810437543b005588b6d859f8a242f576c",
+      "complete": true
+    },
+    "pre_milestone": {
+      "path": "/mnt/storage/backups/codex/quadratic-minmax-limit-2212b99a4c24/20260905T174638Z-7af226f3ba84-pre-milestone-universal-gaussian.YhYw9Z",
+      "covered_head": "7af226f3ba843afb385ed04aacbaecbd58764cfc",
+      "manifest_sha256": "ea942959f6f6f9a92bc46ec19a31465591725bab2f2a3677d981c4cfc3ca4eec",
+      "receipt_sha256": "80aa8b979a4ab55e2d2f35929c4153ba891a0e05632f0412ef24af5d4e8e8cf0",
+      "full_worktree_sha256": "7131a75e3f317c6957966744831b89252a237adda06dc1a1c5f94a6300a19da3",
+      "git_common_and_dir_sha256": "ba902c5f71c35d9277209b7ceabdcb8a9db33f5d3aab52fe38b8cbda160aec2c",
+      "bundle_sha256": "6c34ce92ac428cc98230490daa4065e9b31b8cfc49edf4372ebee2a1f6590713",
+      "complete": true,
+      "full_archive_compared_to_quiesced_source": true,
+      "all_ref_bundle_verified": true,
+      "scope_note": "Covers all three proof notes, all four review receipts, and all three changed canonical documents. The gate receipt and this manifest were added afterward; the clean post-push backup will cover them."
+    }
+  }
+}
