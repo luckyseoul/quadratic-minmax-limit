@@ -42,6 +42,21 @@ See `ARTIFACTS.md` for the preserved branches and terminology.
 
 ## Fresh mathematical target
 
+The [delta-only normalization](evidence/original_mo_delta_normalization_milestone.json)
+extends the original-norm spectral lower to positive canonical gap.
+For ANY feasible positive D with the SEPARATE cap S=tr D<=C N^(3/2),
+let r=(N-1)/(S/N)^2 and mu_j be absolute moments of the ACTUAL full
+weighted contraction. As delta tends to zero it proves
+`2Phi(K)/S>=max{kappa(1+r)mu_3/(2r),kappa r/mu_1}`
+`-O_C(delta^(1/3)+N^(-1/2))`, and `mu_2=r+O(delta^(1/3))`.
+Its auxiliary principal submatrix only lower-bounds the original norm;
+the actual full spectral measure, covariance and cross block are retained.
+Trace optimality and small canonical gap are not required, but small
+diagonal spread is NOT inferred from near-minimality. The paired use
+retains the separate active original-zero-cell conditions. This reviewed
+analytic bound still needs actual full/cross spectral coupling and the
+all-cell width estimate; it does not prove original convergence.
+
 The [evaluated small-gap package](evidence/original_mo_small_gap_evaluation_milestone.json)
 adds a correctly normalized ORIGINAL-phase bound and an actual-law upper.
 For D trace-optimal for the FULL SDP, S=tr D=tau(K), two positive

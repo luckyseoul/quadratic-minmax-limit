@@ -8,6 +8,24 @@ The old ledgers are fully preserved on the two branches in `ARTIFACTS.md`.
 No local theorem is made false by parking its route; no open implication
 is made necessary for the original problem by its old status field.
 
+**Delta-only actual full-spectrum normalization (2026-09-05).**
+`original_mo_delta_normalization_milestone.json` separates small diagonal
+spread from small canonical gap. ANY feasible positive D is allowed
+with the separate S=tr D<=C N^(3/2) cap. Interlacing loss at most 2b
+and congruence moment errors 3epsilon, 9epsilon, (81/4)epsilon transfer
+an auxiliary principal signing's moments to the FULL actual contraction.
+With r=(N-1)/(S/N)^2, the resulting original lower is
+`2Phi(K)/S>=max{kappa(1+r)mu_3/(2r),kappa r/mu_1}`
+`-O_C(delta^(1/3)+N^(-1/2))`. The exact finite phase and nuclear
+inequalities retain all errors and use the correct denominator direction.
+Only exactly scalar D permits mu_3=r(1-gamma). No covariance or source
+replacement, mathematical rerun, or inferred asymptotic rigidity occurs.
+This supersedes an insistence on small gamma within the near-scalar
+branch, not the need to establish that branch or evaluate its actual
+coupled width. General cells retain c/Phi(K); the smaller actual source
+target and original MO convergence remain open. Do not restate the old
+large-scalar-cap regularization fallback as a new sharp-scale result.
+
 **Original phases and evaluated actual-law pure-cross face (2026-09-05).**
 `original_mo_small_gap_evaluation_milestone.json` records the common
 coordinate-normalized PSD phase construction and its masked-residual

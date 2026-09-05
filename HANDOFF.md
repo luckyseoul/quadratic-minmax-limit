@@ -21,6 +21,35 @@ predicates. Valid local results retain their stated scope and evidence.
 
 ## Next mathematical work
 
+The latest delta-only normalization is
+`evidence/original_mo_delta_normalization_milestone.json` and its proof
+`evidence/NOTE_2026-09-05_NEAR_SCALAR_DIAGONAL_SPECTRAL_NORMALIZATION.md`
+(SHA-256 `c679c9155845aa2b51c55e72b781a72f7122f27cb4b2d7c8be69fec178172fd2`).
+It permits ANY positive feasible D with the SEPARATE cap
+`S=tr D<=C N^(3/2)`: neither trace optimality nor small canonical gap
+is required. With dbar=S/N, r=(N-1)/dbar^2 and mu_j the j-th absolute
+moment of the ACTUAL full weighted contraction T, it proves
+
+`2Phi(K)/S>=max{kappa(1+r)mu_3/(2r),kappa r/mu_1}`
+`-O_C(delta^(1/3)+N^(-1/2))`, with `mu_2=r+O(delta^(1/3))`.
+
+The proof's principal signing is only an auxiliary ORIGINAL-norm lower
+bound. Interlacing and congruence transfer its moments back to the FULL
+actual T, including exceptional coordinates. It never replaces the
+source, covariance or W_D. The finite phase and nuclear inequalities
+are (4.3) and (5.2); no mathematical execution was needed.
+For EXACT scalar D, mu_3=r(1-gamma), so the phase term remains useful
+at positive gamma where the previous masked-gap estimate was vacuous.
+That identity is not silently imposed on near-scalar D with outliers.
+
+The same lower transfers to u_D=c_D/n only on the separately active
+original face p=q_A=0, c=Phi(K)>=0, at error 2sqrt(delta). Small delta
+is still a hypothesis, not established by source or conditional
+near-minimality. The next use must couple actual full and cross spectra
+at the actual norm scale, rather than enlarge scalar D and recover the
+old attenuation loss. Smaller-normalization and all-cell width estimates
+remain open, as does the original convergence problem.
+
 The latest evaluated small-gap package is
 `evidence/original_mo_small_gap_evaluation_milestone.json`:
 

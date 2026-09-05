@@ -1,0 +1,74 @@
+{
+  "schema": "original_mo_delta_normalization_milestone_v1",
+  "date_utc": "2026-09-05",
+  "base_commit": "5574851b9e56c78914e830364c198ea7cb1da099",
+  "branch": "main",
+  "remote": "https://github.com/luckyseoul/quadratic-minmax-limit.git",
+  "classification": "Reviewed analytic actual-spectrum normalization under small diagonal dispersion, allowing positive canonical gap; original convergence OPEN",
+  "conclusions": [
+    "For any positive feasible diagonal D with D+-K positive and the separate cap S=tr(D)<=C N^(3/2), write dbar=S/N, delta=S tr(D^-1)/N^2-1, r=(N-1)/dbar^2 and mu_j for absolute moments of the actual full weighted contraction T.",
+    "As delta tends to zero, 2Phi(K)/S>=max{kappa(1+r)mu_3/(2r),kappa r/mu_1}-O_C(delta^(1/3)+N^(-1/2)), and mu_2=r+O(delta^(1/3)). Trace optimality and small canonical gap are not required.",
+    "The auxiliary principal signing only lower-bounds the original Phi(K). Interlacing loss 2b and congruence moment errors C_j epsilon, C_j=3,9,81/4, return its moments to the full original actual T without replacing its covariance or cross block.",
+    "The exact finite phase and nuclear inequalities (4.3) and (5.2) retain their errors. The nuclear denominator is bounded in the correct upper direction before inversion.",
+    "Only in the exactly scalar case is mu_3=r(1-gamma) substituted. Its resulting positive-gap phase bound is useful where the earlier masked-gap formula was vacuous.",
+    "For an actual final original-zero cell with positive active c=Phi(K), the bound transfers to u_D=c_D/n with extra error at most 2sqrt(delta). General cells retain c/Phi(K)."
+  ],
+  "not_proved": [
+    "Small diagonal dispersion for every original or conditional near-minimizer; it remains a separate branch hypothesis.",
+    "A sharp upper from arbitrarily enlarging a scalar feasible diagonal or from the previously known large-cap regularization fallback.",
+    "A complete coupling of the actual full and cross spectral measures sufficient for the smaller-normalization or all-cell field upper.",
+    "Closure of all positive-gap sources, the sharp conditional inequality F<=2sqrt(2)Phi(A), original all-orders convergence or nonconvergence, or an identified limit value."
+  ],
+  "next_target": "Couple the actual full/cross matrices and Boolean active-cell geometry at the original near-minimal source scale. Evaluate smaller-normalization and nonzero-internal-energy cells without replacing actual constraints by formal spectral laws.",
+  "files": {
+    "evidence/NOTE_2026-09-05_NEAR_SCALAR_DIAGONAL_SPECTRAL_NORMALIZATION.md": "c679c9155845aa2b51c55e72b781a72f7122f27cb4b2d7c8be69fec178172fd2",
+    "evidence/original_mo_delta_normalization_author_review.md": "07d5b354ed346ce690c99153b859a24e92e8d5c7fc409b40e71df5b2dfcb17cc",
+    "evidence/original_mo_delta_normalization_docs_review.md": "5e97d723cbcb05628ee2f6bbba591250ec14e8fbc37e784e0471b2e3fb13c1f2",
+    "evidence/original_mo_delta_normalization_root_review.md": "4b003a180999af6af86a2a5b1aa5398809f55be7dce2f9a56c4577c849d90f61",
+    "evidence/original_mo_delta_normalization_docs_scope_review.md": "7d0decbcbe15c3b5ef33d68af9228e421e53df2bb6da1c4fec7dfc29beb9da1b",
+    "evidence/original_mo_delta_normalization_docs_gate.json": "b0f9ed49201735c0f2d26199d3d9a910e6be6dc32af9ea626134d6d403287a45",
+    "HANDOFF.md": "bd7fbac92ab9ae31b697c48e2da66b5d885dd64bf7e8a0bf7ff52dbdee3b53eb",
+    "STATUS.md": "712380b7f2ed195b81542545f93a900ba81bdf8a387b252d3f25485d619c6aa4",
+    "evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md": "e3fbcba792cddbebebd921601035b14086d5e08de932feec957bc7661885d203"
+  },
+  "source_to_canonical_path": {
+    "/tmp/original_mo_near_scalar_diagonal_spectral_normalization.md": "evidence/NOTE_2026-09-05_NEAR_SCALAR_DIAGONAL_SPECTRAL_NORMALIZATION.md",
+    "/tmp/original_mo_near_scalar_diagonal_spectral_normalization_author_receipt.md": "evidence/original_mo_delta_normalization_author_review.md",
+    "/tmp/original_mo_near_scalar_diagonal_spectral_normalization_docs_review.md": "evidence/original_mo_delta_normalization_docs_review.md",
+    "/tmp/original_mo_delta_normalization_root_review.md": "evidence/original_mo_delta_normalization_root_review.md",
+    "/tmp/original_mo_delta_normalization_docs_scope_review.md": "evidence/original_mo_delta_normalization_docs_scope_review.md",
+    "/tmp/original_mo_delta_normalization_docs_gate.json": "evidence/original_mo_delta_normalization_docs_gate.json"
+  },
+  "reviews": {
+    "proof": "Exact-worker author; root complete 280-line proof and required prerequisite reads; independent docs-worker complete 280-line source plus 262-,303-,252-line prerequisites, with no derivation involvement. Root posed the bounded question and source-preservation requirements; that discussion is disclosed.",
+    "receipts": "Root fully read the complete 97-line author receipt, 175-line independent proof review and 117-line independent documentation scope receipt, as well as its own 84-line complete review.",
+    "documentation": "Root and independent scope reviewer read all 62 new canonical lines and verified all source aliases. The summaries retain arbitrary feasible D with a separate trace cap, the delta hypothesis, and the scalar-only gap identity.",
+    "import": "All six imports, including the documentation-gate receipt, are byte-identical to the frozen sources."
+  },
+  "computation": {
+    "mathematical_runs": 0,
+    "local_mathematical_runs": 0,
+    "signing_sampling": false,
+    "signing_enumeration": false,
+    "solver_run": false,
+    "floating_point_evaluation": false,
+    "replay_rule": "This theorem is analytic; no mathematical replay command is required. Do not rerun prior unchanged arithmetic or proofs for another receipt.",
+    "documentation": "One completed changed-document scanner on soulkiller, 880 final hashed inputs including all 872 unchanged src modules, exit zero and original status OPEN. The proof and receipts are not scanner inputs; the scanner is not proof verification."
+  },
+  "src_modules_tests_and_global_predicates_changed": false,
+  "pre_commit_backup": {
+    "path": "/mnt/storage/backups/codex/quadratic-minmax-limit-2212b99a4c24/20260905T224804Z-5574851b9e56-pre-milestone-delta-normalization.NH4OnZ",
+    "covered_head": "5574851b9e56c78914e830364c198ea7cb1da099",
+    "sha256sums_sha256": "d6a65644ef196c53c31f985b994a72b93ced96265a25f3378d45f4bba43d00c7",
+    "receipt_sha256": "4d8337248ff9537e4625105eee43f60eb7d33945d59379a3da06448b3b945ed6",
+    "full_worktree_sha256": "8310f732ab0939f2fef0f30341ebd7248e993f2237b1b116f8f66c2c430a6c02",
+    "git_common_and_dir_sha256": "77d0807bb246190e4c12edd8b2a00bff1c1ef46c8be7a5790d3ab6fd235175e4",
+    "repository_bundle_sha256": "05292189d60ed95d379d2f5cad2cb783f86615296d337ceb93215d47c06e3407",
+    "complete": true,
+    "full_archives_compared_to_quiesced_source": true,
+    "all_refs_bundle_verified": true,
+    "status_and_refs_unchanged": true,
+    "coverage": "The frozen theorem, all four final review receipts and all three final canonical documents. Excludes the subsequently imported documentation-gate receipt and this manifest; post-push full backup covers the final commit."
+  },
+  "publication": "Normal commit and push follow the verified pre-commit snapshot. Verify origin main SHA and create a post-push full backup; its later receipt cannot self-identify inside this commit."
+}
