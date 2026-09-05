@@ -50,3 +50,27 @@ budget. Ordinary CUDA belongs on soulkiller/V100; use Orin only for a
 capability the V100 lacks. Recheck host availability before dispatch.
 Inspect actual failing logs before changing code or test expectations.
 Do not rerun unchanged mathematics merely to obtain a cleaner receipt.
+
+## Mandatory backups and milestone publication
+
+Nick explicitly requires large-drive backups across Codex sessions and a
+commit and normal push after every reviewed research milestone (2026-09-05).
+
+- Before risky changes and at every reviewed milestone, create a fresh,
+  verified backup on the actual large drive at `/mnt/storage`. During a
+  long run, also back up material uncommitted progress at least hourly.
+- Read and use `scripts/milestone_backup.sh` (also installed as
+  `/home/nick/.local/bin/codex-milestone-backup`). It preserves the entire
+  working tree, all-ref history bundle, dirty patches and checksums.
+  Verify the mount, free space, archive comparison and bundle integrity.
+  Request scoped escalation for a sandbox read-only view; never remount
+  automatically, silently substitute the OS disk, or overwrite an old backup.
+- Quiesce source edits while taking the snapshot. Record its exact path,
+  checksum and covered HEAD. Failed/partial snapshots are not completed
+  backups and must not be silently removed.
+- After verification, commit only reviewed in-scope work, update status
+  and provenance, then push to the verified intended remote/branch. Preserve
+  unfinished agent work and unrelated dirty files. Never force-push.
+  Verify the remote SHA and record the checkpoint and next unresolved target.
+- A backup, commit, push, scanner pass or finite certificate does not
+  change an open theorem into a proved result. Retain every known gap.

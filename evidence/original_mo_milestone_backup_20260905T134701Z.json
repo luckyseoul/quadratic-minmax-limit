@@ -1,0 +1,50 @@
+{
+  "schema": "original_mo_milestone_backup_record_v1",
+  "date": "2026-09-05",
+  "user_instruction": "Mandatory large-drive backups across Codex sessions and commit/push after reviewed milestones",
+  "backup": {
+    "schema": "codex_milestone_backup_v1",
+    "source": "/home/nick/quadratic-minmax-limit",
+    "head": "760cbd48adf58edfd5fc5cf885867dee05cb0095",
+    "branch": "main",
+    "utc": "20260905T134701Z",
+    "label": "pre-milestone-quenched-restrictions",
+    "destination": "/mnt/storage/backups/codex/quadratic-minmax-limit-2212b99a4c24/20260905T134701Z-760cbd48adf5-pre-milestone-quenched-restrictions.zgiKAM",
+    "mount_source": "/dev/sda2",
+    "git_dir": "/home/nick/quadratic-minmax-limit/.git",
+    "git_common_dir": "/home/nick/quadratic-minmax-limit/.git",
+    "scope": "Entire working tree including ignored/untracked files; complete Git dir and common-dir archives; all-ref Git bundle and staged/unstaged patches",
+    "full_archive_compared_to_source": true,
+    "bundle_verified": true,
+    "source_status_and_refs_unchanged": true,
+    "deletions": 0,
+    "complete": true
+  },
+  "integrity": {
+    "manifest_sha256": "8656c8b923896e3fec1ad380c44caf83ab558e56868b7e4e0d2e0409af6452d6",
+    "receipt_sha256": "e03c0f12cfeeb59c55ff3962efdbb38d30ef3022fbf4673af663d456dda672db",
+    "full_worktree_sha256": "ebd1b43bba54c921f1c2fa926fe92e86a5b35f2f8f25289eb787bf76bc7659cd",
+    "git_common_archive_sha256": "71afeeb09fadd59bfe3957025287b4210d03c58c4281c226a9a1ae810813096b",
+    "git_dir_archive_sha256": "71afeeb09fadd59bfe3957025287b4210d03c58c4281c226a9a1ae810813096b",
+    "all_ref_bundle_sha256": "1963d57081f6e5ab176b5c06ec79f3d790d3828dfdb8a2f0ce6716a6f54cc31c",
+    "bundle_ref_count": 23,
+    "full_worktree_uncompressed_bytes": 538060800,
+    "metadata_archives_combined_uncompressed_bytes": 184217600,
+    "exit_code": 0
+  },
+  "policy": {
+    "global_path": "/home/nick/.codex/AGENTS.md",
+    "global_sha256": "34b7725a720a15913cf2927c4d8174570ee7254eb97b755dd4a98eb6b1be462f",
+    "helper": "/home/nick/.local/bin/codex-milestone-backup",
+    "helper_sha256": "da3b567bb5188aea365b3999da77f0477987ea94801f4c1ef0d2b963baac9570",
+    "repository_copy": "scripts/milestone_backup.sh",
+    "independent_complete_static_review": "PASS after correcting linked Git metadata preservation and destination confinement",
+    "bash_syntax": "PASS",
+    "actual_repository_backup": "PASS",
+    "scope": "Global policy loads at new default-Codex-home session start; active team explicitly notified. No claim of remote alternate-home installation."
+  },
+  "original_problem_status": "OPEN",
+  "classification": "Operational preservation and provenance, not a mathematical certificate",
+  "snapshot_timing": "Pre-commit full checkpoint of reviewed canonical work. This record is created afterward and the external backup already contains the original receipt.",
+  "push_status_at_snapshot": "Not yet pushed; remote ancestry verified separately before normal publication"
+}

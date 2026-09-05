@@ -1,0 +1,1152 @@
+{
+  "classification": "Two independent fixed-order numerical evaluations, not an all-orders comparison or certified optimizer classification",
+  "n": 6,
+  "temperatures": [
+    0.5,
+    1,
+    2,
+    4,
+    8
+  ],
+  "new_invariant": "Opposite-phase Gibbs moment T = tr(A U A V) = E[(x^T A y)^2] and beta*T/2-a_prime at numerical minima of half log product",
+  "duplicate_scope": "Not a rerun of the earlier order-four weighted-pressure identity check. No larger-order or parameter search was performed.",
+  "source_files": {
+    "gpu": {
+      "path": "scripts/original_mo_opposite_phase_n6_gpu.py",
+      "sha256": "6e413f6c70665e2202d86826cde96db305795f3f2e7f00ba0eb6af82acef6276",
+      "review": "Root full implementation read; independent mesh full source read PASS"
+    },
+    "cpu": {
+      "path": "scripts/original_mo_opposite_phase_n6_cpu.py",
+      "sha256": "571da9852ea46d2afc1d9c3b7d5da61dd3ac0a33a51f47b9b77b887f93ee7695",
+      "review": "Independent implementation; root full source read and independent normalization audit PASS"
+    }
+  },
+  "gpu_execution": {
+    "host": "soulkiller 192.168.1.113",
+    "stage": "/tmp/mo-opposite-phase-gpu.rdam03",
+    "preflight": "Tesla V100-SXM2-16GB, 0 percent utilization, 140 MiB in use",
+    "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.113 'cd /tmp/mo-opposite-phase-gpu.rdam03 && sha256sum probe.py && timeout --kill-after=5s 60s env CUPY_ACCELERATORS= OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 /home/nick/.venvs/mo-exact/bin/python probe.py'",
+    "exit_code": 0,
+    "cleanup": "After normal exit, nvidia-smi showed no compute apps and full ps output contained no Python/timeout worker for this probe.",
+    "result": {
+      "antipodal_spin_representatives": 32,
+      "c_values": [
+        0.5,
+        1,
+        2,
+        4,
+        8
+      ],
+      "classification": "bounded_numerical_actual_host_probe_not_convergence_proof",
+      "cuda_device": "Tesla V100-SXM2-16GB",
+      "cupy_version": "14.2.0",
+      "elapsed_seconds": 2.434173032990657,
+      "hostname": "soulkiller",
+      "method": "direct_pair_bilinear_squared_float64_cuda",
+      "n": 6,
+      "pressure_tolerance": 2e-11,
+      "profiles": [
+        {
+          "beta": 0.20412414523193154,
+          "c": 0.5,
+          "candidate_T_range": [
+            25.44858707641643,
+            25.44858707641643
+          ],
+          "candidate_spectral_types": [
+            {
+              "Phi": 5,
+              "T": 25.44858707641643,
+              "T_over_n2": 0.706905196567123,
+              "a": 0.288003647881284,
+              "aprime": 2.6128756926756678,
+              "candidate_masks": [
+                220,
+                234,
+                316,
+                358,
+                425,
+                453,
+                570,
+                598,
+                665,
+                707,
+                789,
+                803
+              ],
+              "energy_spectrum": [
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5
+              ],
+              "representative_mask": 220,
+              "virial_gap_over_n": -0.0025900250847876727
+            }
+          ],
+          "maximum_T_over_n2": 1.1418508872817967,
+          "minimum_a": 0.288003647881284,
+          "next_pressure_gap": 0.011327421741224197,
+          "numerical_candidate_count": 12
+        },
+        {
+          "beta": 0.4082482904638631,
+          "c": 1,
+          "candidate_T_range": [
+            20.290038472386424,
+            20.290038472386428
+          ],
+          "candidate_spectral_types": [
+            {
+              "Phi": 5,
+              "T": 20.290038472386424,
+              "T_over_n2": 0.5636121797885117,
+              "a": 0.9645031545001743,
+              "aprime": 3.8164043668642296,
+              "candidate_masks": [
+                220,
+                234,
+                316,
+                358,
+                425,
+                453,
+                570,
+                598,
+                665,
+                707,
+                789,
+                803
+              ],
+              "energy_spectrum": [
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5
+              ],
+              "representative_mask": 220,
+              "virial_gap_over_n": 0.054213732172442596
+            }
+          ],
+          "maximum_T_over_n2": 1.1675744844784819,
+          "minimum_a": 0.9645031545001743,
+          "next_pressure_gap": 0.11392293486797556,
+          "numerical_candidate_count": 12
+        },
+        {
+          "beta": 0.8164965809277261,
+          "c": 2,
+          "candidate_T_range": [
+            16.54181347231625,
+            16.541813472316253
+          ],
+          "candidate_spectral_types": [
+            {
+              "Phi": 5,
+              "T": 16.54181347231625,
+              "T_over_n2": 0.4594948186754514,
+              "a": 2.6923948570819634,
+              "aprime": 4.493025683381481,
+              "candidate_masks": [
+                220,
+                234,
+                316,
+                358,
+                425,
+                453,
+                570,
+                598,
+                665,
+                707,
+                789,
+                803
+              ],
+              "energy_spectrum": [
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5
+              ],
+              "representative_mask": 220,
+              "virial_gap_over_n": 0.3766902313106211
+            }
+          ],
+          "maximum_T_over_n2": 1.6825623433229087,
+          "minimum_a": 2.6923948570819634,
+          "next_pressure_gap": 0.652236272843707,
+          "numerical_candidate_count": 12
+        },
+        {
+          "beta": 1.6329931618554523,
+          "c": 4,
+          "candidate_T_range": [
+            14.12125187141452,
+            14.121251871414525
+          ],
+          "candidate_spectral_types": [
+            {
+              "Phi": 5,
+              "T": 14.121251871414525,
+              "T_over_n2": 0.39225699642818124,
+              "a": 6.552651025076488,
+              "aprime": 4.880381357320164,
+              "candidate_masks": [
+                220,
+                234,
+                316,
+                358,
+                425,
+                453,
+                570,
+                598,
+                665,
+                707,
+                789,
+                803
+              ],
+              "energy_spectrum": [
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5
+              ],
+              "representative_mask": 220,
+              "virial_gap_over_n": 1.1082620856848415
+            }
+          ],
+          "maximum_T_over_n2": 3.2455103833493397,
+          "minimum_a": 6.552651025076488,
+          "next_pressure_gap": 2.1821214625917698,
+          "numerical_candidate_count": 12
+        },
+        {
+          "beta": 3.2659863237109046,
+          "c": 8,
+          "candidate_T_range": [
+            13.36559782092193,
+            13.36559782092193
+          ],
+          "candidate_spectral_types": [
+            {
+              "Phi": 5,
+              "T": 13.36559782092193,
+              "T_over_n2": 0.3712666061367203,
+              "a": 14.658379129166784,
+              "aprime": 4.995157982348216,
+              "candidate_masks": [
+                220,
+                234,
+                316,
+                358,
+                425,
+                453,
+                570,
+                598,
+                665,
+                707,
+                789,
+                803
+              ],
+              "energy_spectrum": [
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -5,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                -3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5
+              ],
+              "representative_mask": 220,
+              "virial_gap_over_n": 2.8051286438879046
+            }
+          ],
+          "maximum_T_over_n2": 3.966251268655122,
+          "minimum_a": 14.658379129166784,
+          "next_pressure_gap": 5.433848680876109,
+          "numerical_candidate_count": 12
+        }
+      ],
+      "python": "3.14.4",
+      "source_sha256": "6e413f6c70665e2202d86826cde96db305795f3f2e7f00ba0eb6af82acef6276",
+      "status": "completed",
+      "switching_normalized_signings": 1024
+    }
+  },
+  "cpu_execution": {
+    "classification": "Completed independent CPU numerical cross-check; no rigorous optimizer certification or convergence claim",
+    "host": "NUKA 192.168.1.192",
+    "remote_stage": "/tmp/original-mo-opposite-phase-cpu.e0mpXF",
+    "local_result": "/tmp/original-mo-opposite-phase-cpu.e0mpXF/result.json",
+    "local_source": "/tmp/original_mo_opposite_phase_n6_cpu.py",
+    "local_wrapper": "/tmp/original_mo_opposite_phase_n6_cpu_run.sh",
+    "source_sha256": "571da9852ea46d2afc1d9c3b7d5da61dd3ac0a33a51f47b9b77b887f93ee7695",
+    "wrapper_sha256": "133e7fa9ab5dc30118073ed27bb83b22e8bb4e3d846f2d3ecadb628cfd9e212d",
+    "protocol_sha256": "a43fbf5bb827e9926a75bd6b13fef40c0270906893a8e16ef389ec4b0147e8bd",
+    "result_sha256": "aab7991fd3b047288c96cf6ed4a5617c7a3090fd4c9aa5dbeedb2006fd080efa",
+    "run_log_sha256": "264dcb2d32a99d1e4895dd2fae0e2e537f40b2beec69e51535b3b60ffd7b1dc2",
+    "start_utc": "2026-09-05T09:16:44.740579+00:00",
+    "finish_utc": "2026-09-05T09:16:45.344033+00:00",
+    "elapsed_seconds": 0.6034466519486159,
+    "worker_pid": 176933,
+    "timeout_pid": 176931,
+    "process_group": 176931,
+    "session": 176924,
+    "exit_code": 0,
+    "final_process_check_utc": "2026-09-05 09:17:18 UTC",
+    "final_process_check": "ps -p 176933,176931 returned header only; complete nick process list showed no proof workers",
+    "checks": 22528,
+    "max_trace_double_replica_error": 1.8118839761882555e-13,
+    "max_derivative_trace_error": 3.552713678800501e-15,
+    "candidate_type_count_at_every_c": 1,
+    "candidate_count_at_every_c": 12,
+    "candidate_masks": [
+      220,
+      234,
+      316,
+      358,
+      425,
+      453,
+      570,
+      598,
+      665,
+      707,
+      789,
+      803
+    ],
+    "tie_absolute_tolerance": 2e-11,
+    "all_values_preserved": "result.json includes 1024 complete rows per c, 5120 rows total",
+    "launch_command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.192 'cd /tmp/original-mo-opposite-phase-cpu.e0mpXF && sha256sum original_mo_opposite_phase_n6_cpu.py original_mo_opposite_phase_n6_cpu_run.sh original_mo_opposite_phase_n6_cpu_protocol.json && bash -o pipefail -c \"bash original_mo_opposite_phase_n6_cpu_run.sh 2>&1 | tee run.log\"'",
+    "worker_command": "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 BLIS_NUM_THREADS=1 timeout --signal=TERM --kill-after=5s 55s /usr/bin/python3 -u original_mo_opposite_phase_n6_cpu.py --output result.json",
+    "cleanup": "No process kill was needed. Worker and timeout exited normally. No services, mounts, configurations, installed packages, or canonical repository files changed.",
+    "retained_files": "Fresh remote staging and fetched local evidence are retained; no artifacts deleted."
+  },
+  "cpu_compact_result": {
+    "Q_definition": "sum_(i<j) A_ij x_i x_j = x^T A x / 2",
+    "checks": 22528,
+    "classification": "exhaustive discrete enumeration with float64 evaluation; numerical candidate minima only",
+    "cs": [
+      0.5,
+      1,
+      2,
+      4,
+      8
+    ],
+    "elapsed_seconds": 0.6034466519486159,
+    "finished_utc": "2026-09-05T09:16:45.344033+00:00",
+    "free_edges": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "host": "NUKA",
+    "mask_definition": "A_0j=+1; bit k=1 means -1 on kth lexicographic edge of vertices 1,...,5",
+    "max_derivative_trace_error": 3.552713678800501e-15,
+    "max_trace_double_replica_error": 1.8118839761882555e-13,
+    "n": 6,
+    "not_a_convergence_proof": true,
+    "numpy": "2.3.5",
+    "pgid": 176931,
+    "pid": 176933,
+    "ppid": 176931,
+    "python": "3.14.4",
+    "sid": 176924,
+    "signing_count": 1024,
+    "source_sha256": "571da9852ea46d2afc1d9c3b7d5da61dd3ac0a33a51f47b9b77b887f93ee7695",
+    "spin_count": 64,
+    "started_utc": "2026-09-05T09:16:44.740579+00:00",
+    "summaries": [
+      {
+        "beta": 0.20412414523193154,
+        "c": 0.5,
+        "candidate_minimizing_types": [
+          {
+            "T_over_n_squared_range": [
+              0.7069051965671227,
+              0.7069051965671229
+            ],
+            "canonical_switch_permutation_sign_mask": 220,
+            "exact_energy_histogram": [
+              [
+                -5,
+                12
+              ],
+              [
+                -3,
+                20
+              ],
+              [
+                3,
+                20
+              ],
+              [
+                5,
+                12
+              ]
+            ],
+            "gap_over_n_range": [
+              -0.0025900250847878947,
+              -0.0025900250847878206
+            ],
+            "masks": [
+              220,
+              234,
+              316,
+              358,
+              425,
+              453,
+              570,
+              598,
+              665,
+              707,
+              789,
+              803
+            ],
+            "multiplicity_in_normalized_enumeration": 12,
+            "representative": {
+              "T": 25.44858707641642,
+              "T_over_n_squared": 0.7069051965671228,
+              "a": 0.28800364788128396,
+              "a_prime": 2.6128756926756678,
+              "gap_over_n": -0.0025900250847878947,
+              "mask": 220
+            },
+            "representative_matrix": [
+              [
+                0,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                0,
+                1,
+                1,
+                -1,
+                -1
+              ],
+              [
+                1,
+                1,
+                0,
+                -1,
+                1,
+                -1
+              ],
+              [
+                1,
+                1,
+                -1,
+                0,
+                -1,
+                1
+              ],
+              [
+                1,
+                -1,
+                1,
+                -1,
+                0,
+                1
+              ],
+              [
+                1,
+                -1,
+                -1,
+                1,
+                1,
+                0
+              ]
+            ]
+          }
+        ],
+        "minimum_a": 0.28800364788128396,
+        "next_non_tied_a_gap": 0.011327421741224475,
+        "tied_count": 12,
+        "type_count": 1
+      },
+      {
+        "beta": 0.4082482904638631,
+        "c": 1,
+        "candidate_minimizing_types": [
+          {
+            "T_over_n_squared_range": [
+              0.5636121797885113,
+              0.5636121797885115
+            ],
+            "canonical_switch_permutation_sign_mask": 220,
+            "exact_energy_histogram": [
+              [
+                -5,
+                12
+              ],
+              [
+                -3,
+                20
+              ],
+              [
+                3,
+                20
+              ],
+              [
+                5,
+                12
+              ]
+            ],
+            "gap_over_n_range": [
+              0.05421373217244178,
+              0.054213732172442075
+            ],
+            "masks": [
+              220,
+              234,
+              316,
+              358,
+              425,
+              453,
+              570,
+              598,
+              665,
+              707,
+              789,
+              803
+            ],
+            "multiplicity_in_normalized_enumeration": 12,
+            "representative": {
+              "T": 20.290038472386406,
+              "T_over_n_squared": 0.5636121797885113,
+              "a": 0.9645031545001743,
+              "a_prime": 3.81640436686423,
+              "gap_over_n": 0.05421373217244178,
+              "mask": 220
+            },
+            "representative_matrix": [
+              [
+                0,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                0,
+                1,
+                1,
+                -1,
+                -1
+              ],
+              [
+                1,
+                1,
+                0,
+                -1,
+                1,
+                -1
+              ],
+              [
+                1,
+                1,
+                -1,
+                0,
+                -1,
+                1
+              ],
+              [
+                1,
+                -1,
+                1,
+                -1,
+                0,
+                1
+              ],
+              [
+                1,
+                -1,
+                -1,
+                1,
+                1,
+                0
+              ]
+            ]
+          }
+        ],
+        "minimum_a": 0.9645031545001743,
+        "next_non_tied_a_gap": 0.11392293486797556,
+        "tied_count": 12,
+        "type_count": 1
+      },
+      {
+        "beta": 0.8164965809277261,
+        "c": 2,
+        "candidate_minimizing_types": [
+          {
+            "T_over_n_squared_range": [
+              0.45949481867545205,
+              0.4594948186754523
+            ],
+            "canonical_switch_permutation_sign_mask": 220,
+            "exact_energy_histogram": [
+              [
+                -5,
+                12
+              ],
+              [
+                -3,
+                20
+              ],
+              [
+                3,
+                20
+              ],
+              [
+                5,
+                12
+              ]
+            ],
+            "gap_over_n_range": [
+              0.3766902313106229,
+              0.37669023131062335
+            ],
+            "masks": [
+              220,
+              234,
+              316,
+              358,
+              425,
+              453,
+              570,
+              598,
+              665,
+              707,
+              789,
+              803
+            ],
+            "multiplicity_in_normalized_enumeration": 12,
+            "representative": {
+              "T": 16.541813472316274,
+              "T_over_n_squared": 0.45949481867545205,
+              "a": 2.6923948570819634,
+              "a_prime": 4.493025683381481,
+              "gap_over_n": 0.3766902313106229,
+              "mask": 220
+            },
+            "representative_matrix": [
+              [
+                0,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                0,
+                1,
+                1,
+                -1,
+                -1
+              ],
+              [
+                1,
+                1,
+                0,
+                -1,
+                1,
+                -1
+              ],
+              [
+                1,
+                1,
+                -1,
+                0,
+                -1,
+                1
+              ],
+              [
+                1,
+                -1,
+                1,
+                -1,
+                0,
+                1
+              ],
+              [
+                1,
+                -1,
+                -1,
+                1,
+                1,
+                0
+              ]
+            ]
+          }
+        ],
+        "minimum_a": 2.6923948570819634,
+        "next_non_tied_a_gap": 0.652236272843707,
+        "tied_count": 12,
+        "type_count": 1
+      },
+      {
+        "beta": 1.6329931618554523,
+        "c": 4,
+        "candidate_minimizing_types": [
+          {
+            "T_over_n_squared_range": [
+              0.3922569964281818,
+              0.39225699642818207
+            ],
+            "canonical_switch_permutation_sign_mask": 220,
+            "exact_energy_histogram": [
+              [
+                -5,
+                12
+              ],
+              [
+                -3,
+                20
+              ],
+              [
+                3,
+                20
+              ],
+              [
+                5,
+                12
+              ]
+            ],
+            "gap_over_n_range": [
+              1.1082620856848442,
+              1.1082620856848453
+            ],
+            "masks": [
+              220,
+              234,
+              316,
+              358,
+              425,
+              453,
+              570,
+              598,
+              665,
+              707,
+              789,
+              803
+            ],
+            "multiplicity_in_normalized_enumeration": 12,
+            "representative": {
+              "T": 14.121251871414554,
+              "T_over_n_squared": 0.39225699642818207,
+              "a": 6.552651025076488,
+              "a_prime": 4.880381357320165,
+              "gap_over_n": 1.1082620856848453,
+              "mask": 220
+            },
+            "representative_matrix": [
+              [
+                0,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                0,
+                1,
+                1,
+                -1,
+                -1
+              ],
+              [
+                1,
+                1,
+                0,
+                -1,
+                1,
+                -1
+              ],
+              [
+                1,
+                1,
+                -1,
+                0,
+                -1,
+                1
+              ],
+              [
+                1,
+                -1,
+                1,
+                -1,
+                0,
+                1
+              ],
+              [
+                1,
+                -1,
+                -1,
+                1,
+                1,
+                0
+              ]
+            ]
+          }
+        ],
+        "minimum_a": 6.552651025076488,
+        "next_non_tied_a_gap": 2.1821214625917698,
+        "tied_count": 12,
+        "type_count": 1
+      },
+      {
+        "beta": 3.2659863237109046,
+        "c": 8,
+        "candidate_minimizing_types": [
+          {
+            "T_over_n_squared_range": [
+              0.37126660613672047,
+              0.3712666061367209
+            ],
+            "canonical_switch_permutation_sign_mask": 220,
+            "exact_energy_histogram": [
+              [
+                -5,
+                12
+              ],
+              [
+                -3,
+                20
+              ],
+              [
+                3,
+                20
+              ],
+              [
+                5,
+                12
+              ]
+            ],
+            "gap_over_n_range": [
+              2.805128643887907,
+              2.8051286438879104
+            ],
+            "masks": [
+              220,
+              234,
+              316,
+              358,
+              425,
+              453,
+              570,
+              598,
+              665,
+              707,
+              789,
+              803
+            ],
+            "multiplicity_in_normalized_enumeration": 12,
+            "representative": {
+              "T": 13.365597820921945,
+              "T_over_n_squared": 0.3712666061367207,
+              "a": 14.658379129166784,
+              "a_prime": 4.995157982348216,
+              "gap_over_n": 2.8051286438879095,
+              "mask": 220
+            },
+            "representative_matrix": [
+              [
+                0,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                0,
+                1,
+                1,
+                -1,
+                -1
+              ],
+              [
+                1,
+                1,
+                0,
+                -1,
+                1,
+                -1
+              ],
+              [
+                1,
+                1,
+                -1,
+                0,
+                -1,
+                1
+              ],
+              [
+                1,
+                -1,
+                1,
+                -1,
+                0,
+                1
+              ],
+              [
+                1,
+                -1,
+                -1,
+                1,
+                1,
+                0
+              ]
+            ]
+          }
+        ],
+        "minimum_a": 14.658379129166784,
+        "next_non_tied_a_gap": 5.433848680876109,
+        "tied_count": 12,
+        "type_count": 1
+      }
+    ],
+    "thread_environment": {
+      "BLIS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    },
+    "tie_absolute_tolerance": 2e-11,
+    "type_equivalence": "diagonal switching, all vertex permutations, and global sign reversal"
+  },
+  "comparison": [
+    {
+      "c": 0.5,
+      "a_difference": 5.551115123125783e-17,
+      "T_difference": 1.0658141036401503e-14,
+      "derivative_difference": 0,
+      "gap_difference": 2.220446049250313e-16,
+      "masks_match": true
+    },
+    {
+      "c": 1,
+      "a_difference": 0,
+      "T_difference": 1.7763568394002505e-14,
+      "derivative_difference": 4.440892098500626e-16,
+      "gap_difference": 8.187894806610529e-16,
+      "masks_match": true
+    },
+    {
+      "c": 2,
+      "a_difference": 0,
+      "T_difference": 2.4868995751603507e-14,
+      "derivative_difference": 0,
+      "gap_difference": 1.7763568394002505e-15,
+      "masks_match": true
+    },
+    {
+      "c": 4,
+      "a_difference": 0,
+      "T_difference": 2.842170943040401e-14,
+      "derivative_difference": 8.881784197001252e-16,
+      "gap_difference": 3.774758283725532e-15,
+      "masks_match": true
+    },
+    {
+      "c": 8,
+      "a_difference": 0,
+      "T_difference": 1.4210854715202004e-14,
+      "derivative_difference": 0,
+      "gap_difference": 4.884981308350689e-15,
+      "masks_match": true
+    }
+  ],
+  "conclusions": [
+    "All five profiles have the same 12 numerical candidate minima; CPU switching/permutation/global-negation canonicalization gives one type, mask 220.",
+    "The zero-error virial sign fails at the numerical candidate minimum for c=1,2,4,8.",
+    "This finite result does not refute an asymptotic o(n) error, does not prove an all-orders comparison, and does not establish convergence.",
+    "Both new jobs exited normally and their worker processes were verified absent. No services or configurations changed."
+  ]
+}

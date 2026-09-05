@@ -1,0 +1,256 @@
+{
+  "schema": "original_mo_coefficient_quenched_theorems_v1",
+  "date": "2026-09-05",
+  "classification": "Five all-orders analytic method-scoped theorems with independent complete-proof reviews; not convergence and not a finite census",
+  "original_problem_status": "OPEN",
+  "mathematical_computations": 0,
+  "new_signing_censuses": 0,
+  "proofs": [
+    {
+      "path": "evidence/NOTE_2026-09-05_POSITIVE_CONE_TRUNCATION.md",
+      "sha256": "632adeb92932db37ba1ac218621eb3f7d1b8bd24e8461273abf74a379d79d304",
+      "complete_root_review": "PASS",
+      "independent_complete_review": "evidence/original_mo_coefficient_quenched_review.md",
+      "claim": "Exact positive central-factorial expansion; cutoff k<=o(N) loses extensive fixed-c pressure on actual norm and symmetric-pressure minimizers",
+      "scope": "Does not exclude sparse extensive-degree selection"
+    },
+    {
+      "path": "evidence/NOTE_2026-09-05_EXTENSIVE_COEFFICIENT_MOMENTS.md",
+      "sha256": "b07772332265dea635c59a7d293562feedb5c57cb7b66d7850f77c1ffbd4107e",
+      "complete_root_review": "PASS",
+      "independent_complete_review": "evidence/original_mo_coefficient_quenched_review.md",
+      "claim": "Uniform multiplicative comparison of extensive coefficients and full high even moments for every complete signing",
+      "scope": "Convergence of optimized scalar rates at unbounded fixed k/N would suffice; no cross-order transport proved"
+    },
+    {
+      "path": "evidence/NOTE_2026-09-05_POSITIVE_DEGREE_SELECTOR.md",
+      "sha256": "20dae4c37ece2f5c5808595c54941de1b10a241d03b63c4431c76dc373849875",
+      "complete_root_review": "PASS",
+      "independent_complete_review": "evidence/original_mo_coefficient_quenched_review.md",
+      "claim": "Exact selector and mixed-minimax inequalities with O(log N) mixed pressure loss",
+      "scope": "Pure minimum cannot be moved through a sum at o(N) cost by these results"
+    },
+    {
+      "path": "evidence/NOTE_2026-09-05_IID_QUENCHED_CROSS_OBSTRUCTION.md",
+      "sha256": "97e1aeb3ac25c2570072d9f0ebdb0c4387f739ed3c005ec7b43d30409dd7ade4",
+      "complete_root_review": "PASS",
+      "independent_complete_review": "evidence/original_mo_coefficient_quenched_review.md",
+      "claim": "Host-free iid quenched pressure floor, exponentially rare good iid blocks, and necessary extensive information at stated large fixed parameters",
+      "scope": "Does not exclude unrestricted dependent selection or full-strength canonical Gaussian signs"
+    },
+    {
+      "path": "evidence/NOTE_2026-09-05_GAUSSIAN_SIGN_INFORMATION_SCALE.md",
+      "sha256": "5846e981204f03230bbfd415443824d1a320840d56b6163267e37ee1b8e5e566",
+      "complete_root_review": "PASS",
+      "independent_complete_reviews": [
+        "evidence/original_mo_entropy_covariance_review.md",
+        "evidence/original_mo_gaussian_sign_information_scale_exact_review.md"
+      ],
+      "claim": "General discrete entropy/second-moment inequality; singular Gaussian-sign extension; fixed-strength actual law has Omega(n) information, whereas rho=o(n^(-1/2)) on actual half-product minimizers has o(n) information and is excluded by the quenched theorem",
+      "scope": "Full-strength and intermediate-strength success or failure remain open; no entropy lower bound for arbitrary mixtures of conditional host laws"
+    }
+  ],
+  "independent_reviews": [
+    {
+      "path": "evidence/original_mo_coefficient_quenched_review.md",
+      "sha256": "0972e1b45873c0d6f398b8ae8f26dfb20c471e94bbf673b3154300ae271ad9a0",
+      "classification": "Analytic complete-proof review; no checker run"
+    },
+    {
+      "path": "evidence/original_mo_entropy_covariance_review.md",
+      "sha256": "62bbdc69b0a4b7facbb747faddbcff1dcbe9717b333b9449228aa27709fb955e",
+      "classification": "Analytic complete-proof review; no checker run"
+    },
+    {
+      "path": "evidence/original_mo_gaussian_sign_information_scale_exact_review.md",
+      "sha256": "7818b4ce48cb064262cbc0af247ae8f381f3a85cffb0ddaa61c889a8907f6437",
+      "classification": "Analytic complete-proof review; no checker run"
+    }
+  ],
+  "external_primary_input": {
+    "authors": "Auffinger and Chen",
+    "url": "https://arxiv.org/pdf/1606.05335v2",
+    "local_pdf": "/tmp/original_mo_auffinger_chen_ground_state_v2.pdf",
+    "sha256": "19abfa99c606191e3c33d0c90492b79f5aa1f3a3a7ac32d44ff43aec15bf6978",
+    "used": "Theorems 1 and 2, Corollary 2, SK normalization xi(q)=q^2/2 and the extension to admissible integrable parameters",
+    "complete_required_source_review": "PASS by root and independent reviewer",
+    "new_deduction": "The explicit martingale control proves P_SK>=4/(3sqrt(pi)); this bound is derived here, not attributed verbatim to the paper",
+    "no_numerical_SK_constant_used": true
+  },
+  "changed_document_gate": {
+    "receipt_path": "/tmp/original-mo-optimized-profile-docs-gate.kjwi67sv/receipt.json",
+    "receipt_sha256": "82ce8ceec717ea9d6ffe78b511e47f353fd00c1c7a40f57ee4112bf36f08572d",
+    "receipt": {
+      "schema": "original_mo_final_theorems_changed_docs_gate_receipt_v1",
+      "classification": "Changed-document claim scanner and retained legacy predicates only; not proof verification or a new census",
+      "host": "soulkiller",
+      "ssh_target": "nick@192.168.1.113",
+      "local_stage": "/tmp/original-mo-optimized-profile-docs-gate.kjwi67sv",
+      "remote_stage": "/tmp/original-mo-final-docs-gate.xTqIUE",
+      "main_not_called": true,
+      "scanner_runs": 1,
+      "standalone_mathematical_replays": 0,
+      "limit": {
+        "worker_processes": 1,
+        "timeout_seconds": 60,
+        "blas_threads": 1
+      },
+      "preflight": {
+        "utc": "2026-09-05T12:53:15Z",
+        "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=10 nick@192.168.1.113 'date -u +%Y-%m-%dT%H:%M:%SZ && hostname && uptime && nproc && free -h && ps -eo pid,ppid,pcpu,pmem,etime,args --sort=-pcpu | head -20'",
+        "exit_code": 0,
+        "stdout": {
+          "path": "/tmp/original-mo-optimized-profile-docs-gate.kjwi67sv/preflight.stdout",
+          "sha256": "a6555c0c3746ae8c58a7ff65de50855cb0095e783ccf2c0dddd0039da0692b5b"
+        },
+        "hostname": "soulkiller",
+        "logical_cpus": 88,
+        "load_average": [
+          1.58,
+          3.67,
+          5.46
+        ],
+        "memory_available": "55Gi",
+        "highest_cpu_process": {
+          "pid": 593,
+          "cpu_percent": 87.7,
+          "command": "[irq/29-aerdrv]"
+        },
+        "observed_preparation_process": {
+          "pid": 359091,
+          "cpu_percent": 84,
+          "command": "python3 /tmp/optimized_profile_docs_gate_prepare.py --expected-doc-hashes /tmp/original_mo_final_docs_gate_expected_hashes.json",
+          "completed_before_dispatch": true
+        },
+        "matching_mathematical_workers_in_top_20": [],
+        "dispatch_budget_fits_observed_host": true,
+        "read_only": true
+      },
+      "preparation": {
+        "script": "/tmp/optimized_profile_docs_gate_prepare.py",
+        "script_sha256": "6599ffa7a96fafc18e4d97243963bd6c84e2197192f5bab0686931b042659db7",
+        "command": "python3 /tmp/optimized_profile_docs_gate_prepare.py --expected-doc-hashes /tmp/original_mo_final_docs_gate_expected_hashes.json",
+        "expected_hashes_file": "/tmp/original_mo_final_docs_gate_expected_hashes.json",
+        "expected_hashes_file_sha256": "64ec766e8b108d8d7e267bf9f5cc752daaad0197f56831a8a9b9e4d54f35afcf",
+        "source_manifest": "/tmp/original-mo-optimized-profile-docs-gate.kjwi67sv/source_manifest.sha256",
+        "input_manifest": "/tmp/original-mo-optimized-profile-docs-gate.kjwi67sv/input_manifest.sha256",
+        "file_list": "/tmp/original-mo-optimized-profile-docs-gate.kjwi67sv/file_list.txt",
+        "archive": "/tmp/original-mo-optimized-profile-docs-gate.kjwi67sv/inputs.tar.gz",
+        "scope": "Changed-document scanner only; not proof verification or a new census",
+        "local_stage": "/tmp/original-mo-optimized-profile-docs-gate.kjwi67sv",
+        "files": 880,
+        "source_files": 872,
+        "source_manifest_sha256": "f53edd56689dd392b95c48360559cc5565c3f345f162aba76291e953416a4288",
+        "input_manifest_sha256": "40661810c1fcf78af7833af9a986b87092c6d3afd659b2d08f88db775bf94269",
+        "file_list_sha256": "bd229e44cc226b64a9a6683a1b49056685e0f47d9bb701b3818feb96d4cdc7f3",
+        "archive_sha256": "3ac6871fc6a34895bab842f55f126efb36972f5f8eff230514bbb76b7fa5c71e",
+        "wrapper_sha256": "a19169f72fd66143f907ded22a107a8eed66f0218f6244658cacc40fb2756bd2",
+        "normalized_inner_command": "timeout 60s env PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 -c 'import json;from e1_main_chain_status import check_docs_L_status;d=check_docs_L_status();print(json.dumps(d,sort_keys=True));assert d[\"docs_ok\"];assert d[\"original_mo\"][\"status\"]==\"OPEN\"'",
+        "normalized_inner_command_sha256": "8fec15df7f3240000530c9fe7bdb5df18dcc9b6d271bb9fc61bdb1d350e688aa",
+        "expected_document_sha256": {
+          "HANDOFF.md": "f7335e0d5e5818baccb9807219b0544a8500023c0a98724cc874e30bd13ed5a5",
+          "STATUS.md": "8e1576ddd5973ae2dedfeb0f84a6574829536e457a275a224ff3646696b38a83",
+          "evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md": "8615063e4ead87d65191a0e5846f45282fe60166471a5bc18a72c4485c95a4c5"
+        },
+        "complete_prior_880_input_union": true,
+        "audit_document_staged_but_not_scanned": true,
+        "no_source_or_predicate_changes": true,
+        "all_872_source_hashes_match_prior_successful_recipe": true,
+        "all_880_remote_input_hashes_verified_before_run": true,
+        "remote_archive_and_wrapper_hashes_match": true,
+        "wrapper_bash_syntax_check_passed": true,
+        "remote_verification_stdout": {
+          "path": "/tmp/original-mo-optimized-profile-docs-gate.kjwi67sv/remote_input_verification.stdout",
+          "sha256": "843ffd0ccc010db5e2fed88dcff34d50811e81ac72ed0bd6ce9f346fb1daa223"
+        },
+        "all_true_legacy_file_presence_predicates_preserved": true,
+        "complete_added_dependencies_included_before_only_run": [
+          "evidence/e1_type_i_badcase_farkas_p5.json",
+          "evidence/e1_type_i_badcase_farkas_p7.json",
+          "evidence/share/A3_PROOF.md"
+        ]
+      },
+      "run": {
+        "dispatch_command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=10 nick@192.168.1.113 'cd /tmp/original-mo-final-docs-gate.xTqIUE && bash run_gate.sh'",
+        "command_in_staging_directory": "timeout 60s env PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 -c 'import json;from e1_main_chain_status import check_docs_L_status;d=check_docs_L_status();print(json.dumps(d,sort_keys=True));assert d[\"docs_ok\"];assert d[\"original_mo\"][\"status\"]==\"OPEN\"'",
+        "wrapper": "/tmp/original-mo-optimized-profile-docs-gate.kjwi67sv/inputs/run_gate.sh",
+        "wrapper_sha256": "a19169f72fd66143f907ded22a107a8eed66f0218f6244658cacc40fb2756bd2",
+        "start_utc": "2026-09-05T12:54:47Z",
+        "end_utc": "2026-09-05T12:54:48Z",
+        "exit_code": 0,
+        "timeout_pid": 361800,
+        "local_result": "/tmp/original-mo-optimized-profile-docs-gate.kjwi67sv/gate_result.json",
+        "result_sha256": "b2bd06560f0b9a55b0c216d1c9f98209b14c634f3c252e03dbdbdfc5c4776f17",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "result": {
+          "HANDOFF_shows_L_OPEN": true,
+          "docs_ok": true,
+          "e1_closed_general": false,
+          "four_e1_units": {
+            "bitight_levels_2_3": true,
+            "closed": false,
+            "lemma_D": true,
+            "minimal_gap4_shell_bridge": false,
+            "residual_ii_k_ge_4p": false,
+            "type_I_multilevel": true
+          },
+          "global_claim_hits": [],
+          "gsum_disj_lb_proved_general": false,
+          "original_mo": {
+            "existence_proved": false,
+            "limit_status": "OPEN",
+            "limit_value": null,
+            "nonexistence_proved": false,
+            "problem": "MathOverflow 413935: the actual all-orders sequence alpha_n",
+            "problem_settled": false,
+            "registry_errors": [],
+            "registry_valid": true,
+            "required_optional_routes": [],
+            "reviewed_completion_proofs": [],
+            "rule": "Only explicit reviewed all-orders proof entries determine global status. Optional route diagnostics neither certify nor veto completion. Artifact hashes verify provenance, not mathematics.",
+            "status": "OPEN",
+            "value_proved": false
+          },
+          "overclaim_detected": false,
+          "overclaim_hit": null,
+          "paley_route_claim_hit": null,
+          "scanned_denseness_package_full": true,
+          "scanned_props_15167_171": true,
+          "soft_close_detected": false,
+          "soft_close_hit": null
+        }
+      },
+      "final_verification": {
+        "utc": "2026-09-05T12:55:11Z",
+        "worker_absence_command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=10 nick@192.168.1.113 'date -u +%Y-%m-%dT%H:%M:%SZ; ps -p 361800 -o pid,ppid,comm,args; ps -eo pid,ppid,comm,args | awk \"(\\$3 == \\\"python\\\" || \\$3 == \\\"python3\\\" || \\$3 == \\\"timeout\\\") && (/check_docs_L_status/ || /original-mo-final-docs-gate.xTqIUE/)\"'",
+        "worker_absence_command_exit_code": 0,
+        "worker_absence_stdout": {
+          "path": "/tmp/original-mo-optimized-profile-docs-gate.kjwi67sv/cleanup.stdout",
+          "sha256": "7833ba41b163c19d9be57c7bd2d58df58d1aec9591ccd457910794ec08ff08f7"
+        },
+        "checked_pids_absent": [
+          361800
+        ],
+        "matching_python_timeout_workers": [],
+        "all_880_remote_input_hashes_revalidated": true,
+        "all_880_local_repository_input_hashes_revalidated": true,
+        "local_input_verification_stdout": {
+          "path": "/tmp/original-mo-optimized-profile-docs-gate.kjwi67sv/local_input_verification.stdout",
+          "sha256": "ad7751090a23dba5e4ec7ef24963613d1e23b2ffdf23a8292b56296b638ee62e"
+        },
+        "result_transfer_hash_verified": true,
+        "git_diff_check_exit_code": 0,
+        "true_legacy_predicates_match_prior_receipt": true,
+        "staged_inputs_and_outputs_retained": true,
+        "no_installs_config_mount_changes_or_deletions": true,
+        "no_retries_or_fallbacks": true
+      }
+    },
+    "scope": "Claim scanner only, not mathematical proof verification"
+  },
+  "preservation": {
+    "prior_receipts_unchanged": true,
+    "no_commit_or_push": true,
+    "no_deletions": true
+  }
+}

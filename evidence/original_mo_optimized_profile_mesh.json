@@ -1,0 +1,478 @@
+{
+  "schema": "original-mo-optimized-profile-mesh-v1",
+  "classification": "analytic_all_temperature_order_six_theorem_with_separate_exact_finite_and_floating_point_regressions",
+  "original_problem_status": "OPEN",
+  "reviewed_theorem": {
+    "path": "evidence/NOTE_2026-09-05_EXACT_OPTIMIZED_ORDER_SIX_PROFILE.md",
+    "sha256": "a1469b34118da1bf971c7d53ad0fb8c50525f588a42bf7c4f2dda9b132966fd4",
+    "complete_reviews": [
+      "root",
+      "optimized_profile_exact",
+      "optimized_profile_proof"
+    ],
+    "theorem_depends_on_computation": false,
+    "scope": "ALL u>=v>=0 at fixed order six; no large-order comparison or convergence conclusion"
+  },
+  "sources": [
+    {
+      "path": "scripts/original_mo_optimized_profile_gpu.py",
+      "sha256": "4e93904031f89d179fe6316bddaf35b73a373933ac58d8bae7adf5d48290add0"
+    },
+    {
+      "path": "scripts/original_mo_weighted_profile_n6_exact.py",
+      "sha256": "de82dcda0eb7e14787b677033cd28a3f5324600fbf423976fdaf65a96ac0da1e"
+    },
+    {
+      "path": "scripts/original_mo_weighted_profile_n6_compare.py",
+      "sha256": "7988a2f9504d8392e09308cc7cc900ddb894c47e08db9eb55d14ca9de8e8af28"
+    }
+  ],
+  "preserved_artifacts": [
+    {
+      "path": "evidence/original_mo_optimized_profile_gpu_result.json",
+      "sha256": "0bfe1a948a37b8e233dcf0ab62ab9386f6be860e1b71f147e768c85a98257aec",
+      "raw_path": "/tmp/original_mo_optimized_profile_gpu_result.json",
+      "raw_sha256": "c80357af6ea7c2b62df4a3c11c1bfe7cc34b64e9aade27bbf237a062b78f56e6",
+      "transformation": "jq -c .; full semantic equality verified by diff of jq -S outputs"
+    },
+    {
+      "path": "evidence/original_mo_weighted_profile_n6_exact_result.json",
+      "sha256": "f32a4f5629500967b618e5ce7287a7ad0f9fe953a6a9638ecfa9d2f3411d5a96",
+      "raw_path": "/tmp/original_mo_weighted_profile_n6_exact_result.json",
+      "raw_sha256": "3a0da100df143482260dbe840cb9b11f1e50729f8224ed65a657e226b2f5f21e",
+      "transformation": "jq -c .; full semantic equality verified by diff of jq -S outputs"
+    },
+    {
+      "path": "evidence/original_mo_weighted_profile_n6_comparison_result.json",
+      "sha256": "c563afe0226d5ffd74b889bdeeba71bba878a94097e3f94140dcb709fe74136f",
+      "raw_path": "/tmp/original_mo_weighted_profile_n6_comparison_result.json",
+      "raw_sha256": "63c53c9f0b86375c8c8ae092473c3e4fe951f449e0df4d610f0e9cbfd7e3f1f8",
+      "transformation": "jq -c .; full semantic equality verified by diff of jq -S outputs"
+    },
+    {
+      "path": "evidence/original_mo_optimized_profile_samples.npz",
+      "sha256": "4b1cdbc348c5aba16cca090c62bfde61d617838d405700f33628931e920b20b8",
+      "transformation": "byte-identical SCP of remote result.npz"
+    }
+  ],
+  "gpu": {
+    "preflight": {
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.113 'date -u; hostname; nproc; free -h; nvidia-smi --query-gpu=name,memory.used,utilization.gpu --format=csv,noheader; nvidia-smi --query-compute-apps=pid,process_name,used_memory --format=csv,noheader'",
+      "observed_utc": "2026-09-05 11:45:48 UTC",
+      "observation_type": "root-observed live summary",
+      "host": "soulkiller",
+      "logical_cpus": 88,
+      "available_memory_display": "55Gi",
+      "device": "Tesla V100-SXM2-16GB",
+      "gpu_memory_used_display": "140 MiB",
+      "gpu_utilization_percent": 0,
+      "compute_apps_seen": false
+    },
+    "staging": {
+      "path": "/tmp/original-mo-optimized-profile-gpu.oeR1bE",
+      "creation_command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.113 'mktemp -d /tmp/original-mo-optimized-profile-gpu.XXXXXX'",
+      "transfer_command": "scp /tmp/original_mo_optimized_profile_gpu.py nick@192.168.1.113:/tmp/original-mo-optimized-profile-gpu.oeR1bE/probe.py",
+      "remote_source_sha256": "4e93904031f89d179fe6316bddaf35b73a373933ac58d8bae7adf5d48290add0"
+    },
+    "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.113 'cd /tmp/original-mo-optimized-profile-gpu.oeR1bE && sha256sum probe.py && timeout --kill-after=5s 120s env CUPY_ACCELERATORS= OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 /home/nick/.venvs/mo-exact/bin/python probe.py --output result.json'",
+    "execution": {
+      "cupy": "14.2.0",
+      "device": "Tesla V100-SXM2-16GB",
+      "elapsed_seconds": 2.938005208969116,
+      "host": "soulkiller",
+      "numpy": "2.5.2",
+      "pid": 236326,
+      "python": "3.14.4",
+      "source_sha256": "4e93904031f89d179fe6316bddaf35b73a373933ac58d8bae7adf5d48290add0",
+      "started_unix_seconds": 1788609284.0841844
+    },
+    "runs": 1,
+    "exit_code": 0,
+    "scope": {
+      "n": 6,
+      "block_sizes": [
+        3,
+        3
+      ],
+      "signings": 1024,
+      "full_spin_states": 64,
+      "joint_signatures": 23,
+      "c_values": [
+        0.25,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "t_values": "k/64 for integers k=0,...,64",
+      "profiles": 455,
+      "near_minimizer_absolute_tolerance": 2e-11,
+      "exact_tie_classification": false
+    },
+    "endpoint_summary": [
+      {
+        "c": 0.25,
+        "endpoint_difference": 0.014151572377169519,
+        "f0": 0.06227550915931934,
+        "f1": 0.07642708153648886,
+        "twice_order_three_symmetric_pressure": 0.06228418417005503
+      },
+      {
+        "c": 0.5,
+        "endpoint_difference": 0.04189214689352627,
+        "f0": 0.24611150098775758,
+        "f1": 0.28800364788128385,
+        "twice_order_three_symmetric_pressure": 0.24660303758556007
+      },
+      {
+        "c": 1,
+        "endpoint_difference": 0.03571237177779785,
+        "f0": 0.9287907827223765,
+        "f1": 0.9645031545001743,
+        "twice_order_three_symmetric_pressure": 0.948931559319776
+      },
+      {
+        "c": 2,
+        "endpoint_difference": -0.2848780411866727,
+        "f0": 2.977272898268636,
+        "f1": 2.6923948570819634,
+        "twice_order_three_symmetric_pressure": 3.337474913448373
+      },
+      {
+        "c": 4,
+        "endpoint_difference": -1.0113011733798931,
+        "f0": 7.563952198456381,
+        "f1": 6.552651025076488,
+        "twice_order_three_symmetric_pressure": 9.756420983263434
+      },
+      {
+        "c": 8,
+        "endpoint_difference": -2.1428530828939696,
+        "f0": 16.801232212060754,
+        "f1": 14.658379129166784,
+        "twice_order_three_symmetric_pressure": 23.55451367195901
+      },
+      {
+        "c": 16,
+        "endpoint_difference": -4.290550457172788,
+        "f0": 35.27644079456437,
+        "f1": 30.985890337391584,
+        "twice_order_three_symmetric_pressure": 51.266742815660336
+      }
+    ],
+    "cleanup": {
+      "utc": "2026-09-05 11:55:51 UTC",
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.113 'date -u; if ps -p 236326 -o pid,ppid,etimes,args; then exit 1; fi; nvidia-smi --query-compute-apps=pid,process_name,used_memory --format=csv,noheader'",
+      "exit_code": 0,
+      "worker_pid": 236326,
+      "worker_absent": true,
+      "compute_apps_seen": false,
+      "earlier_unrelated_process_observation": "At 11:55:26, python3 PID 237084 was present; it was not this worker and was absent at the next read-only check. No process was killed.",
+      "deletions": []
+    }
+  },
+  "exact_cpu": {
+    "classification": "single_exact_fixed_order_catalog_run_and_polynomial_certificates_not_all_orders",
+    "host": "NUKA",
+    "address": "192.168.1.192",
+    "worker_budget": 1,
+    "proof_review": {
+      "root_full_source_read_approved_before_execution": true,
+      "agent_read_canonical_entry_documents": true,
+      "agent_read_relevant_audit_entries": true,
+      "agent_read_complete_relevant_proof_sections": "Sections 5, 6, 7",
+      "agent_read_complete_n4_checker": true
+    },
+    "preflight": {
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=10 nick@192.168.1.192 'hostname; date -u; uptime; getconf _NPROCESSORS_ONLN; free -h; command -v python3; ps -eo pid,ppid,stat,args --sort=-pcpu | head -12'",
+      "utc": "2026-09-05 11:47:21 UTC",
+      "hostname": "NUKA",
+      "logical_cpus": 16,
+      "load_averages": [
+        0,
+        0,
+        0
+      ],
+      "memory_available_display": "13Gi",
+      "python_executable": "/usr/bin/python3",
+      "proof_workers_seen": false,
+      "exit_code": 0,
+      "initial_diagnostic": "A prior read-only address check at 192.168.1.113 identified soulkiller. No worker was dispatched there. The correct NUKA address was then checked live as above."
+    },
+    "staging": {
+      "path": "/tmp/original-mo-weighted-profile-exact.jPZvWA",
+      "creation_command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=10 nick@192.168.1.192 'mktemp -d /tmp/original-mo-weighted-profile-exact.XXXXXX'",
+      "transfer_command": "scp -F /dev/null /tmp/original_mo_weighted_profile_n6_exact.py /home/nick/quadratic-minmax-limit/evidence/NOTE_2026-09-05_GLOBAL_OPTIMIZER_VARIATIONAL_CONTROL.md nick@192.168.1.192:/tmp/original-mo-weighted-profile-exact.jPZvWA/",
+      "hash_check_command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=10 nick@192.168.1.192 'cd /tmp/original-mo-weighted-profile-exact.jPZvWA && sha256sum original_mo_weighted_profile_n6_exact.py NOTE_2026-09-05_GLOBAL_OPTIMIZER_VARIATIONAL_CONTROL.md'",
+      "source_sha256": "de82dcda0eb7e14787b677033cd28a3f5324600fbf423976fdaf65a96ac0da1e",
+      "proof_sha256": "96d2675bd0cf1ee48e962b2974a2b8649afc487454a3912044ee1e737c53a9a5",
+      "input_hashes_matched": true
+    },
+    "execution": {
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=10 nick@192.168.1.192 'cd /tmp/original-mo-weighted-profile-exact.jPZvWA && date -u && sha256sum original_mo_weighted_profile_n6_exact.py NOTE_2026-09-05_GLOBAL_OPTIMIZER_VARIATIONAL_CONTROL.md && timeout --kill-after=5s 60s env PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 original_mo_weighted_profile_n6_exact.py --proof NOTE_2026-09-05_GLOBAL_OPTIMIZER_VARIATIONAL_CONTROL.md --expected-proof-sha256 96d2675bd0cf1ee48e962b2974a2b8649afc487454a3912044ee1e737c53a9a5 --output result.json; exact_exit=$?; printf \"exit_code=%s\\n\" \"$exact_exit\"; date -u; sha256sum result.json; exit \"$exact_exit\"'",
+      "started_utc": "2026-09-05 11:50:00 UTC",
+      "finished_utc": "2026-09-05 11:50:00 UTC",
+      "exit_code": 0,
+      "elapsed_seconds": 0.18420944304671139,
+      "python": "3.14.4",
+      "arithmetic": "stdlib exact integers and Fraction",
+      "runs": 1,
+      "scope": {
+        "n": 6,
+        "partition": [
+          3,
+          3
+        ],
+        "switching_normalized_signings": 1024,
+        "direct_spin_states_per_signing": 64,
+        "joint_signature_classes": 23,
+        "coefficientwise_undominated_classes": [
+          22
+        ],
+        "checks": 3397
+      }
+    },
+    "result": {
+      "remote_path": "/tmp/original-mo-weighted-profile-exact.jPZvWA/result.json",
+      "local_path": "/tmp/original_mo_weighted_profile_n6_exact_result.json",
+      "transfer_command": "scp -F /dev/null nick@192.168.1.192:/tmp/original-mo-weighted-profile-exact.jPZvWA/result.json /tmp/original_mo_weighted_profile_n6_exact_result.json",
+      "sha256": "3a0da100df143482260dbe840cb9b11f1e50729f8224ed65a657e226b2f5f21e",
+      "status": "PASS",
+      "minimum_polynomial": "48X^2+48Y^2+32Y-64",
+      "representative_mask": 220,
+      "normalized_winner_count": 12,
+      "strict_nonnegative_difference_certificates": 22
+    },
+    "cleanup": {
+      "utc": "2026-09-05 11:50:14 UTC",
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=10 nick@192.168.1.192 'date -u; ps -eo pid,ppid,stat,args | grep -E \"[p]ython3 original_mo_weighted_profile_n6_exact[.]py|[t]imeout --kill-after=5s 60s env PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 original_mo_weighted_profile_n6_exact[.]py\" || true; sha256sum /tmp/original-mo-weighted-profile-exact.jPZvWA/result.json'",
+      "execution_returned_normal_exit": true,
+      "matching_workers_present": false,
+      "artifacts_preserved": true,
+      "result_hash_unchanged": true,
+      "deletions": []
+    }
+  },
+  "stored_output_comparison": {
+    "classification": "exact_stored_catalog_comparison_no_enumeration_or_float_grid_replay",
+    "host": "NUKA",
+    "address": "192.168.1.192",
+    "root_full_source_read_approved_before_execution": true,
+    "preflight": {
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=10 nick@192.168.1.192 'hostname; date -u; uptime; free -h; ps -eo pid,ppid,stat,args --sort=-pcpu | head -8; mktemp -d /tmp/original-mo-weighted-profile-compare.XXXXXX'",
+      "utc": "2026-09-05 11:56:12 UTC",
+      "hostname": "NUKA",
+      "load_averages": [
+        0,
+        0,
+        0
+      ],
+      "available_memory_display": "13Gi",
+      "worker_budget": 1,
+      "proof_workers_seen": false,
+      "exit_code": 0
+    },
+    "staging": {
+      "path": "/tmp/original-mo-weighted-profile-compare.v3bwAI",
+      "transfer_command": "scp -F /dev/null /tmp/original_mo_weighted_profile_n6_compare.py /tmp/original_mo_weighted_profile_n6_exact_result.json /tmp/original_mo_optimized_profile_gpu_result.json nick@192.168.1.192:/tmp/original-mo-weighted-profile-compare.v3bwAI/",
+      "script_sha256": "7988a2f9504d8392e09308cc7cc900ddb894c47e08db9eb55d14ca9de8e8af28",
+      "cpu_result_sha256": "3a0da100df143482260dbe840cb9b11f1e50729f8224ed65a657e226b2f5f21e",
+      "gpu_result_sha256": "c80357af6ea7c2b62df4a3c11c1bfe7cc34b64e9aade27bbf237a062b78f56e6",
+      "all_input_hashes_matched": true
+    },
+    "execution": {
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=10 nick@192.168.1.192 'cd /tmp/original-mo-weighted-profile-compare.v3bwAI && date -u && sha256sum original_mo_weighted_profile_n6_compare.py original_mo_weighted_profile_n6_exact_result.json original_mo_optimized_profile_gpu_result.json && timeout --kill-after=5s 60s env PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 original_mo_weighted_profile_n6_compare.py --cpu-result original_mo_weighted_profile_n6_exact_result.json --expected-cpu-sha256 3a0da100df143482260dbe840cb9b11f1e50729f8224ed65a657e226b2f5f21e --gpu-result original_mo_optimized_profile_gpu_result.json --expected-gpu-sha256 c80357af6ea7c2b62df4a3c11c1bfe7cc34b64e9aade27bbf237a062b78f56e6 --output comparison.json; comparison_exit=$?; printf \"exit_code=%s\\n\" \"$comparison_exit\"; date -u; sha256sum comparison.json; exit \"$comparison_exit\"'",
+      "started_utc": "2026-09-05 11:56:29 UTC",
+      "finished_utc": "2026-09-05 11:56:29 UTC",
+      "exit_code": 0,
+      "runs": 1,
+      "python": "3.14.4",
+      "workers": 1,
+      "checks": 3285,
+      "signings": 1024,
+      "states_per_signing": 64,
+      "joint_signature_classes": 23,
+      "exact_integer_histogram_entries_compared": 20480,
+      "all_entries_agree": true,
+      "canonical_mask_ordered_histograms_sha256": "47ddb08685dc39abfd1e71b450cc6c6bd917e2375195bac5fff7f230cb35d3c1",
+      "catalog_enumeration_rerun": false,
+      "floating_point_grid_replayed": false
+    },
+    "result": {
+      "status": "PASS",
+      "remote_path": "/tmp/original-mo-weighted-profile-compare.v3bwAI/comparison.json",
+      "local_path": "/tmp/original_mo_weighted_profile_n6_comparison_result.json",
+      "sha256": "63c53c9f0b86375c8c8ae092473c3e4fe951f449e0df4d610f0e9cbfd7e3f1f8",
+      "transfer_command": "scp -F /dev/null nick@192.168.1.192:/tmp/original-mo-weighted-profile-compare.v3bwAI/comparison.json /tmp/original_mo_weighted_profile_n6_comparison_result.json"
+    },
+    "cleanup": {
+      "utc": "2026-09-05 11:56:40 UTC",
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=10 nick@192.168.1.192 'date -u; ps -eo pid,ppid,stat,args | grep -E \"[p]ython3 original_mo_weighted_profile_n6_compare[.]py|[t]imeout --kill-after=5s 60s env PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 original_mo_weighted_profile_n6_compare[.]py\" || true; sha256sum /tmp/original-mo-weighted-profile-compare.v3bwAI/comparison.json'",
+      "execution_returned_normal_exit": true,
+      "matching_workers_present": false,
+      "artifacts_preserved": true,
+      "result_hash_unchanged": true,
+      "deletions": []
+    }
+  },
+  "interpretation": {
+    "exact_all_temperature_claim": "Analytic proof determines the global order-six minimum; integer certificates independently regress it.",
+    "gpu_float_grid": "Finite numerical evaluation; no exact derivative or tie classification from tolerance.",
+    "comparison": "All 20,480 integer joint histogram entries agree exactly, without re-enumeration.",
+    "not_proved": [
+      "any larger-order optimizer classification",
+      "an all-orders pressure comparison",
+      "convergence or value of the original normalized optimum"
+    ]
+  },
+  "final_document_gate": {
+    "schema": "original_mo_optimized_profile_changed_docs_gate_receipt_v1",
+    "classification": "Changed-document claim scanner and retained legacy predicates only; not proof verification or a new census",
+    "host": "soulkiller",
+    "ssh_target": "nick@192.168.1.113",
+    "local_stage": "/tmp/original-mo-optimized-profile-docs-gate.i7jnggo7",
+    "remote_stage": "/tmp/original-mo-optimized-profile-docs-gate.A2dDYI",
+    "main_not_called": true,
+    "standalone_mathematical_replays": 0,
+    "scanner_runs": 1,
+    "limit": {
+      "worker_processes": 1,
+      "timeout_seconds": 60,
+      "blas_threads": 1
+    },
+    "preflight": {
+      "utc": "2026-09-05T12:07:15Z",
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=10 nick@192.168.1.113 'date -u +%Y-%m-%dT%H:%M:%SZ && hostname && uptime && nproc && free -h && ps -eo pid,ppid,pcpu,pmem,etime,args --sort=-pcpu | head -20'",
+      "exit_code": 0,
+      "hostname": "soulkiller",
+      "logical_cpus": 88,
+      "load_average": [
+        1.02,
+        3.73,
+        7.6
+      ],
+      "memory_available": "55Gi",
+      "highest_cpu_process": {
+        "pid": 593,
+        "cpu_percent": 87.7,
+        "command": "[irq/29-aerdrv]"
+      },
+      "matching_math_workers_in_top_20": [],
+      "dispatch_budget_fits_observed_host": true,
+      "read_only": true
+    },
+    "preparation": {
+      "script": "/tmp/optimized_profile_docs_gate_prepare.py",
+      "script_sha256": "6599ffa7a96fafc18e4d97243963bd6c84e2197192f5bab0686931b042659db7",
+      "expected_hashes_file": "/tmp/optimized_profile_docs_gate_expected_hashes.json",
+      "expected_hashes_file_sha256": "660751ccb397937d5cb5e2b069b1be7299ccf2f0ba00a76c6bfb97da4386cde2",
+      "source_manifest": "/tmp/original-mo-optimized-profile-docs-gate.i7jnggo7/source_manifest.sha256",
+      "input_manifest": "/tmp/original-mo-optimized-profile-docs-gate.i7jnggo7/input_manifest.sha256",
+      "file_list": "/tmp/original-mo-optimized-profile-docs-gate.i7jnggo7/file_list.txt",
+      "archive": "/tmp/original-mo-optimized-profile-docs-gate.i7jnggo7/inputs.tar.gz",
+      "scope": "Changed-document scanner only; not proof verification or a new census",
+      "local_stage": "/tmp/original-mo-optimized-profile-docs-gate.i7jnggo7",
+      "files": 880,
+      "source_files": 872,
+      "source_manifest_sha256": "f53edd56689dd392b95c48360559cc5565c3f345f162aba76291e953416a4288",
+      "input_manifest_sha256": "19e7e08f96313b10f4cbb36197d85782e6e5e0d0f91a27c90469fa24b02809e1",
+      "file_list_sha256": "bd229e44cc226b64a9a6683a1b49056685e0f47d9bb701b3818feb96d4cdc7f3",
+      "archive_sha256": "fb64323a566ab89872c5472c84aea84c764442a445a8edbacb6e525aa75a0d96",
+      "wrapper_sha256": "a19169f72fd66143f907ded22a107a8eed66f0218f6244658cacc40fb2756bd2",
+      "normalized_inner_command": "timeout 60s env PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 -c 'import json;from e1_main_chain_status import check_docs_L_status;d=check_docs_L_status();print(json.dumps(d,sort_keys=True));assert d[\"docs_ok\"];assert d[\"original_mo\"][\"status\"]==\"OPEN\"'",
+      "normalized_inner_command_sha256": "8fec15df7f3240000530c9fe7bdb5df18dcc9b6d271bb9fc61bdb1d350e688aa",
+      "expected_document_sha256": {
+        "HANDOFF.md": "506686233cd73b1d1593b32e59fad170a7650a8d362ba9ce04d7515f973e0a98",
+        "STATUS.md": "8bd3a610ae13d788859b02d85451897bca9e4c48f1ce9a1f62a298a59dbe1b80",
+        "evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md": "4c163ef523fe6c9dda2c868366a9de74f3495a744fa02b0bd6a15f39c61931de"
+      },
+      "complete_prior_880_input_union": true,
+      "audit_document_staged_but_not_scanned": true,
+      "no_source_or_predicate_changes": true,
+      "all_880_remote_input_hashes_verified_before_run": true,
+      "remote_archive_and_wrapper_hashes_match": true,
+      "wrapper_bash_syntax_check_passed": true,
+      "all_true_legacy_file_presence_predicates_preserved": true,
+      "prior_missing_dependencies_included_before_first_and_only_run": [
+        "evidence/e1_type_i_badcase_farkas_p5.json",
+        "evidence/e1_type_i_badcase_farkas_p7.json",
+        "evidence/share/A3_PROOF.md"
+      ]
+    },
+    "run": {
+      "dispatch_command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=10 nick@192.168.1.113 'cd /tmp/original-mo-optimized-profile-docs-gate.A2dDYI && bash run_gate.sh'",
+      "command_in_staging_directory": "timeout 60s env PYTHONPATH=src PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 -c 'import json;from e1_main_chain_status import check_docs_L_status;d=check_docs_L_status();print(json.dumps(d,sort_keys=True));assert d[\"docs_ok\"];assert d[\"original_mo\"][\"status\"]==\"OPEN\"'",
+      "wrapper": "/tmp/original-mo-optimized-profile-docs-gate.i7jnggo7/inputs/run_gate.sh",
+      "wrapper_sha256": "a19169f72fd66143f907ded22a107a8eed66f0218f6244658cacc40fb2756bd2",
+      "start_utc": "2026-09-05T12:08:01Z",
+      "end_utc": "2026-09-05T12:08:02Z",
+      "exit_code": 0,
+      "timeout_pid": 248220,
+      "local_result": "/tmp/original-mo-optimized-profile-docs-gate.i7jnggo7/gate_result.json",
+      "result_sha256": "b2bd06560f0b9a55b0c216d1c9f98209b14c634f3c252e03dbdbdfc5c4776f17",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "result": {
+        "HANDOFF_shows_L_OPEN": true,
+        "docs_ok": true,
+        "e1_closed_general": false,
+        "four_e1_units": {
+          "bitight_levels_2_3": true,
+          "closed": false,
+          "lemma_D": true,
+          "minimal_gap4_shell_bridge": false,
+          "residual_ii_k_ge_4p": false,
+          "type_I_multilevel": true
+        },
+        "global_claim_hits": [],
+        "gsum_disj_lb_proved_general": false,
+        "original_mo": {
+          "existence_proved": false,
+          "limit_status": "OPEN",
+          "limit_value": null,
+          "nonexistence_proved": false,
+          "problem": "MathOverflow 413935: the actual all-orders sequence alpha_n",
+          "problem_settled": false,
+          "registry_errors": [],
+          "registry_valid": true,
+          "required_optional_routes": [],
+          "reviewed_completion_proofs": [],
+          "rule": "Only explicit reviewed all-orders proof entries determine global status. Optional route diagnostics neither certify nor veto completion. Artifact hashes verify provenance, not mathematics.",
+          "status": "OPEN",
+          "value_proved": false
+        },
+        "overclaim_detected": false,
+        "overclaim_hit": null,
+        "paley_route_claim_hit": null,
+        "scanned_denseness_package_full": true,
+        "scanned_props_15167_171": true,
+        "soft_close_detected": false,
+        "soft_close_hit": null
+      }
+    },
+    "final_verification": {
+      "utc": "2026-09-05T12:08:37Z",
+      "worker_absence_command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=10 nick@192.168.1.113 'date -u +%Y-%m-%dT%H:%M:%SZ; ps -p 248220 -o pid,ppid,comm,args; ps -eo pid,ppid,comm,args | awk \"(\\$3 == \\\"python\\\" || \\$3 == \\\"python3\\\" || \\$3 == \\\"timeout\\\") && (/check_docs_L_status/ || /original-mo-optimized-profile-docs-gate.A2dDYI/)\"'",
+      "worker_absence_command_exit_code": 0,
+      "worker_absence_command_stdout": "2026-09-05T12:08:37Z\n    PID    PPID COMMAND         COMMAND\n",
+      "checked_pids_absent": [
+        248220
+      ],
+      "matching_python_timeout_workers": [],
+      "all_880_remote_input_hashes_revalidated": true,
+      "all_880_local_repository_input_hashes_revalidated": true,
+      "result_transfer_hash_verified": true,
+      "git_diff_check_exit_code": 0,
+      "true_legacy_predicates_match_prior_receipt": true,
+      "staged_inputs_and_outputs_retained": true,
+      "no_installs_config_mount_changes_or_deletions": true,
+      "diagnostic_fallback": {
+        "first_process_filter_exit_code": 127,
+        "cause": "rg was not installed on the remote host; result retrieval and input/hash verification had already succeeded",
+        "correction": "Read-only ps and awk worker-absence observation only",
+        "scanner_or_mathematics_rerun": false
+      }
+    }
+  }
+}

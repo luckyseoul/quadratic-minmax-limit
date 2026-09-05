@@ -8,7 +8,207 @@ The old ledgers are fully preserved on the two branches in `ARTIFACTS.md`.
 No local theorem is made false by parking its route; no open implication
 is made necessary for the original problem by its old status field.
 
-**Fresh route-neutral theorem (2026-09-05).**
+**Deterministically selected half restrictions (2026-09-05).**
+`NOTE_2026-09-05_SELECTED_HALF_RESTRICTION.md` uses an explicit odd
+disjointness cycle and an even-order complementary-phase exchange
+argument to prove `m_(2n+1)>=2m_n` and `m_(2n)>=2m_n-(n-1)`.
+The restriction theorem needs no optimizer hypothesis; the order bounds
+apply it to an actual larger-order minimizer without identifying its
+restrictions as smaller-order optimizers. This is stronger than the old
+fixed-partition bound `k m_n<=2m_(kn)` (solution.md Proposition 7.3),
+which at `k=2` is just monotonicity. It is not a repeat of tiny-n
+uniform sampling. The normalized factor is still `sqrt(2)`, so neither
+the sharp proportional paving statement nor convergence is established.
+Complete independent proof read passed; no computation was used.
+
+**Full-strength Gaussian boundary likelihood (2026-09-05).**
+`NOTE_2026-09-05_FULL_STRENGTH_BOUNDARY_LIKELIHOOD.md` gives the exact
+Price/finite-difference identity and its integrable singular endpoint,
+retaining the pair-dependent conditional Gaussian support and complete
+Gibbs posterior. Its analytic actual order-three minimizer refutes only
+the coordinatewise sign premise. The offending context has zero
+endpoint boundary probability; no averaged or asymptotic failure follows.
+Do not replace the conditional law by the prior or discard weighted
+cancellations. Root and a second independent complete read passed.
+The root review for this and the selected-half note is preserved in
+`original_mo_boundary_restriction_root_review.md`. No census was used.
+
+**Fixed positive weak Gaussian strength (2026-09-05).**
+`NOTE_2026-09-05_FIXED_WEAK_GAUSSIAN_CUSHION.md` excludes a nonempty
+fixed-positive-strength interval when its explicit gap is positive.
+The conditional independent-sign Lindeberg replacement is followed by
+Gaussian mean removal and coordinate-variance interpolation; it does
+not incorrectly symmetrize biased Bernoulli residuals. Its penalty is
+`c^2 t arcsin(rho)n/(2pi)`. Gaussian heat-martingale concentration and
+the universal actual latent bound `||S||_op<=4n-3` prove exponentially
+rare success, including adaptive INTERNAL-host selection and dependent
+`exp(o(n))` proposals with the stated marginals or pre-draw host mixtures.
+This is genuinely stronger than the `rho=o(n^(-1/2))` information test,
+not an entropy lower bound for mixtures. Full-strength `rho=1`, strengths
+outside the explicit gap, and unrestricted rare selection remain open.
+The entire proof passed independent review. Do not rerun weak fixed-rho
+sampling in the excluded regime or extend the theorem beyond its gap.
+
+**Actual Gaussian-sign information scale (2026-09-05).**
+`NOTE_2026-09-05_GAUSSIAN_SIGN_INFORMATION_SCALE.md` proves a general
+discrete entropy/second-moment inequality and its Gaussian-sign version,
+including singular covariance. The actual centered law at any fixed
+`rho>0` has `Omega(n)` entropy on norm-capped hosts, so it is NOT covered
+by the low-information obstruction. The singular canonical `rho=1` is
+included by the sign-law lower bound, not a Gaussian density calculation.
+For actual half-product minimizers, `rho=o(n^(-1/2))` gives `o(n)` entropy
+and fails the finite-step mean/probability comparison at the quenched
+theorem's fixed parameters. No claim settles the full-strength law,
+all intermediate scales, or arbitrary mixtures of conditional host laws.
+All proofs were read independently; no computation was used. Do not
+mistake a failed entropy hypothesis for successful pressure control, or
+retire fixed-strength dependent rounding by the weak-rounding theorem.
+
+**Quenched cross blocks and information (2026-09-05).**
+`NOTE_2026-09-05_IID_QUENCHED_CROSS_OBSTRUCTION.md` proves a host-free
+ACTUAL average-log pressure floor using an explicit admissible Parisi
+control `4/(3sqrt(pi))`, Gaussian covariance comparison, and a direct
+fixed-temperature Bernoulli replacement. For the stated positive gap,
+`exp(o(n))` iid-marginal proposals fail even with adaptive internal-host
+selection; any successful proposal law needs `Omega(n)` relative entropy
+from iid signs. This is distinct from the annealed MGF obstruction and
+does not exclude general dependent selection, singular Gaussian laws,
+or the actual Gram--Schmidt law without its missing entropy hypothesis.
+The exact planted-channel formula retains reverse KL. Do not re-run
+unchanged iid sampling, invoke a numerical SK constant as proof, or
+extend the low-information exclusion to full-strength correlated laws.
+The entire proof passed independent reads; no computation was used.
+
+**Extensive positive coefficients (2026-09-05).**
+`NOTE_2026-09-05_POSITIVE_CONE_TRUNCATION.md` excludes only the degree
+cutoff `k<=o(N)` at fixed `c>pi log2`, not sparse extensive-degree choices.
+`NOTE_2026-09-05_EXTENSIVE_COEFFICIENT_MOMENTS.md` compares the exact
+central-factorial coefficients with full high even moments uniformly
+for `k/N` in compact positive intervals, for ALL complete signings.
+`NOTE_2026-09-05_POSITIVE_DEGREE_SELECTOR.md` proves the exact selector
+and mixed-minimax bounds; it does not authorize pure min/max exchange
+at small-oh cost or moving a minimum through a sum. Scalar optimized
+coefficient-rate convergence at unbounded fixed degrees-per-vertex
+would suffice for convergence, but no cross-order transport follows
+from positivity, restriction, or zero-cross-block convolution. These
+are all-orders analytic results, not a larger finite census or the
+retired fourth-moment spectral-defect shell. Full reviews passed.
+
+**Exact optimized order-six profile (2026-09-05).**
+`NOTE_2026-09-05_EXACT_OPTIMIZED_ORDER_SIX_PROFILE.md` proves the global
+balanced-profile minimum for every `u>=v>=0`, with conference equality
+`A^2=5I` exactly when `v>0`. This is an all-temperature FIXED-ORDER theorem,
+not an all-orders or merely sampled assertion. The `p=X-Y,q=Y-1` polynomial
+cone has a quadratic minimizing candidate: the remaining quadratic excesses
+are nonnegative by odd cross-energy parity and the exact fourth-moment
+spectral defect; all higher competing coefficients are nonnegative.
+The proof does not generalize by dropping higher positive candidate
+coefficients. Optimized endpoints cross once in temperature; the interior
+excursion grows linearly in `c` at `t=2/17`, without refuting fixed-`c`
+small-oh order bounds. `original_mo_optimized_profile_mesh.json` preserves
+the distinct NUKA exact certificate and independent V100 histogram/grid
+run, with all 20,480 stored histogram entries matched exactly. No further
+unchanged signing census, temperature grid, or fourth-moment-only attack
+is justified as an all-orders extension. The original limit remains open.
+
+**Finite-step rounding and annealing (2026-09-05).**
+`NOTE_2026-09-05_FINITE_STEP_ROUNDING_ANNEALING.md` proves an actual
+integral finite-step Gram--Schmidt bound, but its quadratic MGF proxy
+has the uniform floor `c^2 t n/4` over ALL admissible matrices `G`.
+Separately, the actual canonical Gaussian-sign annealed pressure has
+floor `c^2 t n/(2pi)-o(n)` for fixed positive `c,t`, uniformly in the
+host and admissible centering. The optimized paired endpoint is at most
+`cn+o(n)`, so the two certificates fail at `c>4/t` and `c>2pi/t`.
+These are analytic, independently reviewed method-scoped obstructions;
+they do not refute a good selected outcome, average log pressure, the
+actual Gram--Schmidt law, vanishing steps, or convergence. Do not
+re-optimize this same quadratic proxy or assume annealing is sharp.
+`original_mo_finite_cross_mesh.json` records a distinct finite-step
+V100 experiment on ONE stored order-six host and independent NUKA
+full-state replays; no old host census was rerun. The sampled minimum
+is not an exhaustive optimum, and sample annealing can miss rare events.
+
+**Integral cross-block construction (2026-09-05).**
+`NOTE_2026-09-05_INTEGRAL_CROSS_BLOCK_COVARIANCE_ROUNDING.md` proves
+an actual integral cross-block saving
+`min_B qbar(B)<=n^2-8(a_A')^2/(pi ||A||_op^2)` for every complete
+signing with its actual opposite-temperature Gibbs covariances.
+The exact negative spectral edge of a centered tensor matrix makes the
+Gaussian covariance admissible; disjoint entry types give an exact
+entrywise arcsine identity. This is not the coherent choice `B=A+D`.
+General covariance-rounding bounds also retain spectral tails and fixed
+coordinate squares. The computed conference-form infima concern only
+the unshifted and scalar-shift trace certificates, not all diagonal
+shifts, all rounding, or actual global-minimizer covariances.
+The full proof passed three reads; no computation was run. The general
+radial comparison and the integrated order comparison remain open.
+Do not rederive these bounds, optimize an unchanged scalar certificate,
+or treat the unproved low-effective-rank hypothesis as automatic.
+
+**Near-minimizer opposite-phase check (2026-09-05).**
+`NOTE_2026-09-05_NEAR_MINIMIZER_OPPOSITE_PHASE_COUNTERFAMILY.md` proves an
+all-large-order actual-host counterfamily with `T=tr(A U A V)=Omega_c(N^(9/4))`
+at fixed critical temperature, despite norm excess `O_c(N^(11/8))` or,
+in a potentially different family, half-product excess `O_c(N^(7/8))`.
+The proof plants a sublinear number of vertices into an arbitrary old
+signing, uses conditional entropy and full-Gibbs filler-sign averaging,
+and preserves an exact module covariance decomposition. Full proof reads
+passed. This is stronger than a generic correct-scale counterexample:
+even leading-order near-minimality does not control this trace. The
+constructed hosts fail actual edge-local half-product optimality; neither
+exact minimizer bounds nor convergence are disproved. No computation is
+used by the theorem. Separately, the new fixed `n=6` CPU/CUDA probe of the
+opposite-phase invariant is recorded in `original_mo_opposite_phase_n6_mesh.json`.
+It is numerical finite evidence, not an asymptotic certificate; do not
+extend or repeat that census without a changed mathematical premise.
+
+**Full-row hierarchy check (2026-09-05).**
+`NOTE_2026-09-05_FULL_ROW_CAVITY_COUNTEREXAMPLE.md` gives a full-support,
+even, exchangeable arbitrary cavity with strict global sign-row optimality
+but divergent tilted second/fourth moments at critical row scale. This
+strengthens the earlier normalizer-only warning: every subset replacement
+and every averaged row-noise inequality also holds. Both full proof reads
+passed; no computation was run. Actual quadratic-host realization is NOT
+proved, so this does not refute an actual-host moment theorem or the MO
+problem. Do not repeat a moment derivation using only that row hierarchy.
+
+**Fresh adaptive-noise and switching theorems (2026-09-05).**
+`NOTE_2026-09-05_ADAPTIVE_PERTURBATION_CORRELATIONS.md` proves pointwise
+signed correlation bounds with a fixed arbitrary additive perturbation,
+including actual noise-adaptive sign minima and balanced-profile bounds.
+Its Boolean-energy refinement `L_g<=2K_g tanh u_g+Phi(E_g)` permits
+bounded Gaussian noise already for arbitrary edge-local selections.
+`NOTE_2026-09-05_OPTIMIZED_GAUSSIAN_SWITCH_MEASURE.md` proves the exact
+negative weak-Hessian switch measure and an `O_c((epsilon+epsilon^2)N)`
+Gaussian-weighted trace bound. Both full analytic proofs were independently
+reviewed; no computations were run. These are changed premises, not the
+old invalid assumption that an adaptive optimizer is Gaussian-independent.
+Neither controls the deterministic profile-amplitude derivative. Fixed-mean
+bounded covariance transport has the same deterministic endpoints as noise
+vanishes; rescaling by inverse noise powers can lose the trace smallness.
+Do not repeat those substitutions as though they proved subadditivity.
+The actual changing-mean derivative and the noiseless stochastic reset
+are explicit: the reset imbalance equals the earlier defect up to `c^4`.
+Permutation homogenization also reaches only an `O_c(N)` accumulated
+bound (order-one work per swap over order-N contrast-relaxation time),
+not the needed small-oh control. Bounded-noise diffuseness alone does
+not remove either deterministic comparison gap.
+
+**Fresh variational theorem (2026-09-05).**
+`NOTE_2026-09-05_GLOBAL_OPTIMIZER_VARIATIONAL_CONTROL.md` proves
+near-flat sparse rounding (per-edge variance `o(1)`), a common diffuse
+near-maximizing ensemble for actual global norm minimizers, and actual
+signed Gibbs diffuseness at edge-local pressure minima. The specific
+balanced two-block profile has uniform correlation control and an exact
+optimized-path defect identity. The signed integral bound needed for
+dyadic subadditivity remains unproved; the endpoint inequality already
+has the needed direction. This is distinct from the old arbitrary dense
+fractional-rounding barriers, whose per-edge variance need not vanish.
+It neither completes zero cross blocks at lower-order cost nor turns a
+signed covariance into an unsigned PSD bound. One order-four formula
+regression ran on soulkiller; no old norm census was repeated.
+
+**Fresh induced-restriction theorem (2026-09-05).**
 `NOTE_2026-09-05_INDUCED_OPTIMIZER_RESTRICTIONS.md` proves the complete
 induced-signing law estimate, all-pattern universality, and a quantitative
 greedy lower tail. For `n -> infinity`, `n^2=o(log N)`, smaller-order
