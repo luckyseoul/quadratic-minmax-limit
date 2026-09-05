@@ -52,6 +52,20 @@ uniformly as K increases. This is one-sided objective approximation,
 not uniform perturbation control. Order transport in that class remains
 unproved; the theorem does not itself imply convergence.
 
+The [same-filler pressure extension](evidence/NOTE_2026-09-05_SPECTRAL_REGULARIZATION_PRESSURE_PROFILES.md)
+preserves both actual phase pressures over an entire compact temperature
+interval. The [quartically penalized profile](evidence/NOTE_2026-09-05_QUARTIC_PENALIZED_PROFILE_IDENTITY.md)
+then permits every sign flip and approximates the original symmetric
+pressure minimum within `O_c(lambda^(1/3))` after normalization.
+Actual row optimality bounds every diagonal fourth moment; the norm
+majorizer supplies a bounded fifth moment and signed Gibbs control.
+The balanced identity has the exact penalty remainder `lambda(5-9/N)`
+and an `O_c(sqrt(N))` error uniform for `0<lambda<=1`.
+Its mixed internal/cross edge-gap integral remains unproved. Bounded gap
+row sums and vanishing individual gaps do not establish its sign.
+These are independently reviewed analytic results, not order transport
+or identification of symmetric and half-product pressure minima.
+
 The [actual-Gibbs response](evidence/NOTE_2026-09-05_NORM_CAP_FIELD_RESPONSE.md)
 and [leading half-product near-minimizer structure](evidence/NOTE_2026-09-05_HALFPRODUCT_NEARMINIMIZER_STRUCTURE.md)
 prove `||A||_op=o(N^(3/4))` and uniform `o(N^(3/2))` Boolean-energy

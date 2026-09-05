@@ -8,6 +8,25 @@ The old ledgers are fully preserved on the two branches in `ARTIFACTS.md`.
 No local theorem is made false by parking its route; no open implication
 is made necessary for the original problem by its old status field.
 
+**Quartic regularization with actual discrete variations (2026-09-05).**
+`NOTE_2026-09-05_QUARTIC_PENALIZED_PROFILE_IDENTITY.md` proves the balanced
+identity with exact penalty remainder `lambda(5-9/N)` and an
+`O_c(sqrt(N))` error uniform for `0<lambda<=1`. Its actual penalized
+minimizers admit every edge flip. Row optimality bounds each diagonal
+fourth moment; tensor rounding and the norm majorizer then yield sharp
+signed Gibbs control and a bounded fifth spectral moment. Nonnegative
+penalized gaps have bounded row sums and vanishing largest entry, but
+their mixed internal/cross integral remains unproved. A permutation
+average cannot replace the active-envelope derivative. The endpoint is
+twice the penalized half-product minimum, only bounded above by twice
+the symmetric minimum.
+`NOTE_2026-09-05_SPECTRAL_REGULARIZATION_PRESSURE_PROFILES.md` uses the
+same filler for norm, operator and both phase-pressure bounds over a
+compact temperature interval. At fixed temperature this gives normalized
+quartic-pressure approximation `O_c(lambda^(1/3))`. Neither theorem
+identifies the two pressure minima, supplies order transport or proves
+original convergence. Full independent reads passed; no computation.
+
 **Same-order original-norm spectral regularization (2026-09-05).**
 `NOTE_2026-09-05_SAME_ORDER_SPECTRAL_REGULARIZATION.md` uses the proved
 diagonal majorizer, trims its large entries, and completes only incident

@@ -44,6 +44,36 @@ not small `Phi(A'-A)`. The missing implication is a useful order
 comparison in this controlled class. Neither bounded operator norm nor
 typical restriction has been proved to supply one.
 
+The next regularized comparison is now explicit in
+`evidence/NOTE_2026-09-05_QUARTIC_PENALIZED_PROFILE_IDENTITY.md`
+(SHA-256 `ad393709abb35ed760986b102e1b86ab4d23c80261efec04f35d03104c821013`).
+For the actual minimum of `F_c(M)+lambda tr(M^4)` on the balanced
+profile, all edge flips are admissible. Every row obeys
+`E_i+8lambda(M^4)_ii+8lambda sum_j M_ij^4<=c^2 d+16lambda d^2`.
+Thus the fourth diagonal moments are uniformly bounded. Tensor rounding
+and the Boolean norm cap give `sum|Gamma_e|=O_c(N^(3/2))`, uniformly
+for `0<lambda<=1`; the diagonal SDP majorizer also bounds `tr|M|^5`.
+The exact identity is
+`G_N(1)-G_N(0)=c^2/4+lambda(5-9/N)-integral J_N^lambda+O_c(sqrt(N))`.
+The error is uniform over `0<lambda<=1`. Each actual penalized flip
+gap is nonnegative, has bounded row sums and is `O_(c,lambda)(N^(-1/2))`,
+but the mixed weighted gap integral still has no proved favorable sign.
+Do not substitute a permutation average for the selected envelope
+derivative. Its zero-cross endpoint is twice the penalized HALF-PRODUCT
+minimum and is at most twice the penalized symmetric minimum; equality
+with the latter is not needed or claimed.
+
+The pressure approximation uses one and the same recompletion in
+`evidence/NOTE_2026-09-05_SPECTRAL_REGULARIZATION_PRESSURE_PROFILES.md`
+(SHA-256 `2f9f63f603fcae42a952fbae53a2301eaa6b95bbe7bac2e35bcab8997d28d7d7`).
+It controls both actual phases for all c in a prescribed compact interval,
+with normalized cost `Gamma C c^2/(2K)+O(log(N)/N)`, while retaining
+the operator and norm bounds. At fixed c, quartic penalized minima
+therefore approximate original symmetric minima within
+`O_c(lambda^(1/3))`. Vanishing regularized oscillation would suffice;
+it has not been established. The whole-row and multi-edge variational
+constraints are the next live checks, not a repeated signing census.
+
 The actual-Gibbs structural proofs are
 `evidence/NOTE_2026-09-05_NORM_CAP_FIELD_RESPONSE.md`
 (SHA-256 `46f6465c9a889dc485b9c24dac6f7fef8849d27271cc86df11b94ab732ed52dd`),

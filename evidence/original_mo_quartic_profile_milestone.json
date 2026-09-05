@@ -1,0 +1,99 @@
+{
+  "schema": "original_mo_quartic_profile_milestone_v1",
+  "utc": "2026-09-05T16:10Z",
+  "source_head": "30f4e3f8fd9fee93f2e7b5e47f8036fd45590448",
+  "branch": "main",
+  "remote": "https://github.com/luckyseoul/quadratic-minmax-limit.git",
+  "classification": "Reviewed analytic same-order pressure preservation and regularized balanced-profile identities; original convergence remains OPEN",
+  "artifacts_sha256": {
+    "HANDOFF.md": "a61d43a0f4ff420f0f50627309c277f974141fc923040de9b6d89903b30bc2a8",
+    "STATUS.md": "9ca2dc31404701bd9bc3412a92b29d42fa72a8096823cfea49d222ab1bf08ef8",
+    "evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md": "e4428a89e3fb3fb4ddb01937e04d16762d8f30adef46b970f50a808666205032",
+    "evidence/NOTE_2026-09-05_QUARTIC_PENALIZED_PROFILE_IDENTITY.md": "ad393709abb35ed760986b102e1b86ab4d23c80261efec04f35d03104c821013",
+    "evidence/NOTE_2026-09-05_SPECTRAL_REGULARIZATION_PRESSURE_PROFILES.md": "2f9f63f603fcae42a952fbae53a2301eaa6b95bbe7bac2e35bcab8997d28d7d7",
+    "evidence/original_mo_pressure_profile_exact_review.md": "5f974df264ca19f150d7d38f100d4f9366a28c801940866870d1ddcb4b9d0ffb",
+    "evidence/original_mo_quartic_penalized_profile_exact_review.md": "9917b3b4b349bee83f53d66906d70e81a78d6560f7b19030db2bf9e65240099c",
+    "evidence/original_mo_quartic_profile_docs_gate.json": "5162ddf048e7d60a981abd08021773d11ff2b05956899cbdbd63fde49ebf48b2",
+    "evidence/original_mo_quartic_profile_root_review.md": "7873c8b7e2b88211cc3a944f591d67f628a332c5efe718fe13afd1d84e6caf04"
+  },
+  "proofs": {
+    "full_root_reads_passed": true,
+    "full_independent_reads_passed": true,
+    "canonical_proof_copies_byte_identical_to_frozen_sources": true,
+    "mathematical_computations": 0,
+    "source_changes": 0,
+    "test_changes": 0
+  },
+  "verification": {
+    "changed_document_scanner": "evidence/original_mo_quartic_profile_docs_gate.json",
+    "scanner_runs": 1,
+    "docs_ok": true,
+    "original_mo_status": "OPEN",
+    "source_manifest_sha256": "f53edd56689dd392b95c48360559cc5565c3f345f162aba76291e953416a4288",
+    "git_diff_check": "PASS"
+  },
+  "backups": [
+    {
+      "phase": "previous_clean_published_checkpoint",
+      "receipt": {
+        "schema": "codex_milestone_backup_v1",
+        "source": "/home/nick/quadratic-minmax-limit",
+        "head": "30f4e3f8fd9fee93f2e7b5e47f8036fd45590448",
+        "branch": "main",
+        "utc": "20260905T151213Z",
+        "label": "post-push-30f4e3f",
+        "destination": "/mnt/storage/backups/codex/quadratic-minmax-limit-2212b99a4c24/20260905T151213Z-30f4e3f8fd9f-post-push-30f4e3f.pkWrkC",
+        "mount_source": "/dev/sda2",
+        "git_dir": "/home/nick/quadratic-minmax-limit/.git",
+        "git_common_dir": "/home/nick/quadratic-minmax-limit/.git",
+        "scope": "Entire working tree including ignored/untracked files; complete Git dir and common-dir archives; all-ref Git bundle and staged/unstaged patches",
+        "full_archive_compared_to_source": true,
+        "bundle_verified": true,
+        "source_status_and_refs_unchanged": true,
+        "deletions": 0,
+        "complete": true
+      },
+      "manifest_sha256": "654914c3a6dfeda11ffc6b2c1a5e08ff691194c19678d40f62661d3ef1390dfa",
+      "receipt_sha256": "5b46fd0d439368331824af45132ed2d0671e1c3ecf50249235312e995d8704dc",
+      "full_archive_and_git_metadata_compared_to_source": true,
+      "all_checksums_verified": true
+    },
+    {
+      "phase": "pre_milestone_full_worktree",
+      "receipt": {
+        "schema": "codex_milestone_backup_v1",
+        "source": "/home/nick/quadratic-minmax-limit",
+        "head": "30f4e3f8fd9fee93f2e7b5e47f8036fd45590448",
+        "branch": "main",
+        "utc": "20260905T160432Z",
+        "label": "pre-milestone-quartic-profile",
+        "destination": "/mnt/storage/backups/codex/quadratic-minmax-limit-2212b99a4c24/20260905T160432Z-30f4e3f8fd9f-pre-milestone-quartic-profile.NaFtJn",
+        "mount_source": "/dev/sda2",
+        "git_dir": "/home/nick/quadratic-minmax-limit/.git",
+        "git_common_dir": "/home/nick/quadratic-minmax-limit/.git",
+        "scope": "Entire working tree including ignored/untracked files; complete Git dir and common-dir archives; all-ref Git bundle and staged/unstaged patches",
+        "full_archive_compared_to_source": true,
+        "bundle_verified": true,
+        "source_status_and_refs_unchanged": true,
+        "deletions": 0,
+        "complete": true
+      },
+      "manifest_sha256": "cfc3cc48df717ab9125827bd8bd842b5018671df2cf3aa5c40e93267c6c249b0",
+      "receipt_sha256": "1a0fbceabbf383de626e8889b71958f6b82562535a3108e19283b6f4a2082f5c",
+      "full_archive_and_git_metadata_compared_to_source": true,
+      "all_checksums_verified": true
+    }
+  ],
+  "backup_scope_note": "The current pre-milestone backup includes all nine listed artifacts. This manifest was added after the snapshot; the required post-push snapshot will cover the committed manifest as well.",
+  "unresolved": [
+    "A favorable bound for the signed internal/cross penalized gap integral",
+    "Actual cross-order transport or normalized oscillation control",
+    "The separate all-orders step if only a dyadic comparison is obtained"
+  ],
+  "excluded_claims": [
+    "Symmetric and half-product pressure optima are equal",
+    "Bounded gap row sums imply cut balance",
+    "A permutation average is the selected envelope derivative",
+    "Original convergence or a limiting value has been proved"
+  ]
+}
