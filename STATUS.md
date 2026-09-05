@@ -42,6 +42,32 @@ See `ARTIFACTS.md` for the preserved branches and terminology.
 
 ## Fresh mathematical target
 
+The new [correlated-sign Gaussian comparison](evidence/NOTE_2026-09-05_CORRELATED_SIGN_GAUSSIAN_FREE_ENERGY.md)
+proves a genuine quenched-pressure equivalence, with error
+`O(n^(17/18))=o(n)` for `n^2` cross coefficients at critical scaling.
+It retains the full Gibbs posterior, permits singular latent covariance,
+and requires only a fixed covariance-operator bound. The proof includes
+the sign-smoothing estimate, not merely covariance matching.
+For bounded-operator source signings, the
+[exact canonical covariance linearization](evidence/NOTE_2026-09-05_CANONICAL_COVARIANCE_GAUSSIAN_LINEARIZATION.md)
+then replaces the matched Gaussian by covariance
+`(2/pi)Sigma+(1-2/pi)I` at an additional `O(1)` pressure cost.
+The estimates also cover sufficiently slowly growing operator caps,
+so the same-order regularization supplies genuine ORIGINAL-norm leading
+near-minimizers to which the Gaussian reduction applies. The remaining
+Gaussian endpoint upper comparison is unproved. No cross-order theorem
+or source symmetric/half-product identification is asserted.
+
+The [expected ORIGINAL paired norm corollary](evidence/NOTE_2026-09-05_EXPECTED_PAIRED_NORM_GAUSSIAN_EQUIVALENCE.md)
+uses the explicit temperature-dependent errors, not a fixed-temperature
+limit exchange. Its normalized expected maximum-absolute-energy error
+is `O_K(n^(-1/22))`, uniformly over fixed internal energies, with constant
+`O(1+K^4)`. Same-order regularization with threshold `n^(1/99)` gives
+genuine original-norm near-minimizers for which both the normalized
+objective loss and the Gaussian-reduction error are `O(n^(-1/198))`.
+This is an expectation comparison; the doubled Gaussian norm is not yet
+bounded by the smaller-order optimum at the required leading constant.
+
 The [same-order spectral regularization](evidence/NOTE_2026-09-05_SAME_ORDER_SPECTRAL_REGULARIZATION.md)
 works directly for the ORIGINAL norm objective. Every norm-capped host
 has a complete signing at the same order with operator norm at most
@@ -65,6 +91,21 @@ Its mixed internal/cross edge-gap integral remains unproved. Bounded gap
 row sums and vanishing individual gaps do not establish its sign.
 These are independently reviewed analytic results, not order transport
 or identification of symmetric and half-product pressure minima.
+
+The [whole-row and multirow reset budgets](evidence/NOTE_2026-09-05_QUARTIC_PROFILE_ROW_RESET.md)
+now retain both the actual deleted law and the full tilted law; their
+tail and relative-entropy statements are distinct. The
+[quartic-force bounds](evidence/NOTE_2026-09-05_QUARTIC_FORCE_KERNEL_BOUNDS.md)
+give a uniform operator bound for the actual weighted SIGNED Gibbs
+kernel, not either unsigned phase covariance. The
+[weighted row-tilt identity](evidence/NOTE_2026-09-05_WEIGHTED_ROW_TILT_FOURTH_MOMENT.md)
+does not assert an endpoint fourth-moment bound. Independent
+[quenched coefficient refills](evidence/NOTE_2026-09-05_QUENCHED_BIASED_COEFFICIENT_REFILL.md)
+have `O(sqrt(N))` Bernoulli/Gaussian replacement error even over all
+edges, with the exact quartic correction retained. Separately, the
+[actual canonical full-strength law](evidence/NOTE_2026-09-05_FULL_STRENGTH_QUARTIC_PENALTY.md)
+adds only `O_C(lambda n)` to the paired quartic penalty. None of these
+finite variations bounds the remaining Gaussian endpoint pressure.
 
 The [actual-Gibbs response](evidence/NOTE_2026-09-05_NORM_CAP_FIELD_RESPONSE.md)
 and [leading half-product near-minimizer structure](evidence/NOTE_2026-09-05_HALFPRODUCT_NEARMINIMIZER_STRUCTURE.md)

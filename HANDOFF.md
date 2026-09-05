@@ -21,6 +21,44 @@ predicates. Valid local results retain their stated scope and evidence.
 
 ## Next mathematical work
 
+The new comparison is
+`evidence/NOTE_2026-09-05_CORRELATED_SIGN_GAUSSIAN_FREE_ENERGY.md`
+(SHA-256 `2e6537d0b1e2c4d8a72cc920e3fee50600d82be32417ba77c733aaedabc141c7`).
+Root and both independent complete proof reads passed. For any bounded
+Gaussian covariance operator, `n^2` correlated Gaussian signs have the
+same quenched critical pressure as their matched Gaussian, up to
+`O(n^(17/18))`. The entire posterior and singular endpoint are retained.
+The key third central moment is contracted BEFORE taking absolute
+values; Gaussian Holder and sign smoothing control the nonsmooth limit.
+Covariance matching alone was not the proof.
+
+For canonical sources with `||A||op<=K sqrt(n)`,
+`evidence/NOTE_2026-09-05_CANONICAL_COVARIANCE_GAUSSIAN_LINEARIZATION.md`
+(SHA-256 `44188dde396587f1d148e01857365b44d1bddbe83d81dc5b085ccee0cdff9854`)
+has an exact disjoint-support tensor identity. Its Gaussian covariance
+remainder has operator norm `O_K(1/n)`, hence pressure cost `O_c,K(1)`.
+The resulting simpler covariance is `(2/pi)Sigma+(1-2/pi)I`.
+The remaining live implication is an UPPER comparison of this actual
+Gaussian paired pressure against the appropriate optimized smaller-order
+endpoint. No such bound has been proved. The new reduction also applies
+to sufficiently slowly growing caps (fixed-c error
+`O(K_n^4 n^(17/18))`), hence to leading ORIGINAL norm near-minimizers
+provided by same-order regularization. It does not assert that every
+unregularized or quartic-penalized minimizer has bounded operator norm.
+
+The direct original-norm consequence is
+`evidence/NOTE_2026-09-05_EXPECTED_PAIRED_NORM_GAUSSIAN_EQUIVALENCE.md`
+(SHA-256 `bff778718c0f357598c035edba4598f2ed67b1c49359c668958afe1c39207df3`).
+It compares EXPECTED maximum absolute paired energies with normalized
+error `O_K(n^(-1/22))`, with constant `O(1+K^4)`. The auxiliary choices
+`c=n^(1/22)` and `epsilon=n^(-1/11)` use the full explicit bounds;
+the source covariance-generating temperature is held fixed separately.
+Regularizing actual original-norm minima at threshold `n^(1/99)` gives
+both objective loss and Gaussian-reduction error `O(n^(-1/198))`.
+The next target is therefore a Gaussian doubled-norm upper comparison
+on these genuine near-minimizers, not an identification of pressure
+surrogates or pointwise closeness of individual cross outcomes.
+
 Work directly with the global optima `m_n`. A genuine advance must compare
 orders or otherwise control their normalized oscillation. A construction
 checked only on a selected low-norm example need not extend to actual
@@ -72,7 +110,16 @@ the operator and norm bounds. At fixed c, quartic penalized minima
 therefore approximate original symmetric minima within
 `O_c(lambda^(1/3))`. Vanishing regularized oscillation would suffice;
 it has not been established. The whole-row and multi-edge variational
-constraints are the next live checks, not a repeated signing census.
+constraints are now proved in `NOTE_2026-09-05_QUARTIC_PROFILE_ROW_RESET.md`.
+The weighted signed force kernel is controlled in
+`NOTE_2026-09-05_QUARTIC_FORCE_KERNEL_BOUNDS.md`; the weighted row-tilt
+identity does not assert a fourth moment at its endpoint. Independent
+coefficient refills in `NOTE_2026-09-05_QUENCHED_BIASED_COEFFICIENT_REFILL.md`
+retain the full quenched posterior and exact quartic correction, with
+`O(sqrt(N))` replacement error even over all edges. The separate actual
+canonical cross law adds at most `(41+88C^2)lambda t n` to the paired
+quartic penalty. None of these same-order finite variations supplies
+the missing Gaussian endpoint inequality; no new signing census is needed.
 
 The actual-Gibbs structural proofs are
 `evidence/NOTE_2026-09-05_NORM_CAP_FIELD_RESPONSE.md`

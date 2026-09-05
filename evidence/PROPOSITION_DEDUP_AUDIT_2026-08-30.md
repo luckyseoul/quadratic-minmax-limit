@@ -8,6 +8,41 @@ The old ledgers are fully preserved on the two branches in `ARTIFACTS.md`.
 No local theorem is made false by parking its route; no open implication
 is made necessary for the original problem by its old status field.
 
+**Genuine correlated-sign Gaussian reduction (2026-09-05).**
+`NOTE_2026-09-05_CORRELATED_SIGN_GAUSSIAN_FREE_ENERGY.md` proves
+`O(n^(17/18))` quenched equivalence to the matched Gaussian for n-squared
+cross coefficients under a bounded latent covariance operator. The
+signed third-cumulant contraction, actual mixed-time Gibbs posterior,
+Gaussian Holder smoothing and singular covariance are all retained.
+This is stronger than covariance matching or independent coefficient
+replacement. `NOTE_2026-09-05_CANONICAL_COVARIANCE_GAUSSIAN_LINEARIZATION.md`
+then gives `O(1)` Gaussian pressure cost for bounded-operator sources,
+using the exact disjoint tensor supports. Slowly growing caps also
+cover leading original-norm near-minimizers from same-order regularization.
+The resulting Gaussian endpoint comparison remains open; do not claim
+that this comparison proves order transport or that every optimizer
+automatically belongs to the bounded-operator class.
+
+`NOTE_2026-09-05_EXPECTED_PAIRED_NORM_GAUSSIAN_EQUIVALENCE.md` then
+uses the explicit smoothing and growing-temperature bounds to compare
+expected ORIGINAL maximum-absolute paired energies, at normalized rate
+`O_K(n^(-1/22))`, with constant `O(1+K^4)`. Threshold `n^(1/99)` in the
+same-order norm regularization makes both its genuine near-minimum loss
+and the Gaussian-reduction error `O(n^(-1/198))`. The temperature used
+to generate the source covariance stays fixed during this auxiliary
+comparison. Expectations are not pointwise coupling or selected-outcome
+guarantees; the doubled Gaussian upper comparison remains unproved.
+
+`NOTE_2026-09-05_QUARTIC_PROFILE_ROW_RESET.md` and
+`NOTE_2026-09-05_QUARTIC_FORCE_KERNEL_BOUNDS.md` provide actual whole-row,
+multirow and weighted signed-kernel bounds. The weighted row-tilt identity
+does not give an endpoint fourth moment. Independent quenched coefficient
+refills have subextensive distribution-replacement error, not subextensive
+pressure change. `NOTE_2026-09-05_FULL_STRENGTH_QUARTIC_PENALTY.md`
+controls the ACTUAL canonical law at `O(lambda n)` quartic cost, retaining
+its pair-dependent boundary support. Full independent reads passed.
+No new computation, census or sampling supports these analytic results.
+
 **Quartic regularization with actual discrete variations (2026-09-05).**
 `NOTE_2026-09-05_QUARTIC_PENALIZED_PROFILE_IDENTITY.md` proves the balanced
 identity with exact penalty remainder `lambda(5-9/N)` and an
