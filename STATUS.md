@@ -42,6 +42,22 @@ See `ARTIFACTS.md` for the preserved branches and terminology.
 
 ## Fresh mathematical target
 
+The [actual Hadamard-template package](evidence/original_mo_hadamard_template_milestone.json)
+now realizes a flat singular bulk and finite outliers with asymptotic
+scalar SDP optimality in complete cross sign matrices. Its finite Gamma
+completion is only a Boolean UPPER certificate. Matched-frame rounding
+proves Gamma>283/200 for q>=5/2 and scalar-optimal finite templates
+tau(C)=p q, without turning that failure into an actual Boolean lower.
+A modified invariant Boolean algebra supplies a
+separate actual lower Lambda_I, identifies the actual limit exactly for
+PSD templates, and excludes the small Boolean cap for its symmetric
+positive-top-frame family at q>=5/2. Symmetric dilation preserves the
+finite-template ratio but changes the actual family. All three complete
+proofs passed independent reviews; their clipping constants share one
+28-comparison remote exact-rational certificate. General nonsymmetric
+attainability, conditional optimality and source compatibility remain
+unproved. No conclusion about original convergence follows.
+
 The [spectral rounding package](evidence/original_mo_spectral_rounding_milestone.json)
 now constrains the actual original source, cross singular moments, and
 optimal SDP diagonal. The original-phase bootstrap needs only an original

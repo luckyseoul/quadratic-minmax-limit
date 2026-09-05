@@ -21,7 +21,40 @@ predicates. Valid local results retain their stated scope and evidence.
 
 ## Next mathematical work
 
-The current evaluated frontier is
+The new actual-sign realization package is
+`evidence/original_mo_hadamard_template_milestone.json`. Its three complete
+proofs passed independent reviews:
+
+- `NOTE_2026-09-05_HADAMARD_SPARSE_FLIP_TEMPLATE.md`
+  (SHA-256 `0d2355f94734b4c1e950c1e05c6df75df38b5ce181ba7fce550a4245e11328ed`)
+  constructs actual cross sign matrices with flat singular bulk, finite
+  outliers and asymptotically scalar-optimal SDP duals. The finite-template
+  completion Gamma is an UPPER on their Boolean norm, not an attained value.
+- `NOTE_2026-09-05_SCALAR_TEMPLATE_GAMMA_BOUND.md`
+  (SHA-256 `bd5997203c52895744a078048e206241996c46ef485e8975d7955b73be41f1c6`)
+  uses matched optimal frames and exact quadratic Hermite cancellation
+  to prove Gamma>283/200>sqrt(2) when q>=5/2 AND tau(C)=p q for
+  the finite template. This excludes that upper certificate, not the
+  actual matrices' Boolean cap.
+- `NOTE_2026-09-05_HADAMARD_BOOLEAN_ALGEBRA_LOWER.md`
+  (SHA-256 `68ce3f2f2a8fa2280208a9e145f508b6c2b2520d81e83185f579aaac89838a5d`)
+  modifies the background to fix an entire Boolean algebra. Dense exact
+  block-mean grids give a genuine actual lower Lambda_I. For PSD templates
+  Lambda_I=Gamma and the actual normalized Boolean norm converges to it.
+  With a symmetric POSITIVE top frame, actual liminf>1.524049912 for
+  q>=5/2. Bipartite scalar SDP optimality alone is not that hypothesis;
+  symmetric dilation changes the template and the actual sign family.
+
+All three note paths above are under `evidence/`. The published rectangular
+Bernstein theorem is stated and applied explicitly. One bounded soulkiller
+run verified 28 exact rational comparisons for the clipping constants;
+the later actual lower reuses that result without another run. No matrices
+were sampled or enumerated. The live missing implication remains actual
+low-norm nonsymmetric attainability and source/conditional-shell compatibility,
+or a general upper using those constraints. These constructions are not
+conditional optimizers and do not establish original convergence.
+
+The preceding evaluated moment frontier is
 `evidence/NOTE_2026-09-05_SCALAR_MOMENT_FEEDBACK_DIAGNOSTIC.md`
 (SHA-256 `cc3869aa35b88ae50425c29cb78e3d4ced9b73e24731f54556fbd0b39fab1e9c`).
 At the old scalar endpoint, strongest source feedback plus rank-four

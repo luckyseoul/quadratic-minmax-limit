@@ -1,0 +1,204 @@
+{
+  "arithmetic": "fractions.Fraction only",
+  "check_count": 28,
+  "checks": [
+    {
+      "label": "Machin lower endpoint",
+      "lhs": "15707963/5000000",
+      "passed": true,
+      "relation": "<",
+      "rhs": "82897734054435918961108/26387168299946630859375"
+    },
+    {
+      "label": "Machin finite interval ordered",
+      "lhs": "82897734054435918961108/26387168299946630859375",
+      "passed": true,
+      "relation": "<",
+      "rhs": "471661273023004128472/150134446131591796875"
+    },
+    {
+      "label": "Machin upper endpoint",
+      "lhs": "471661273023004128472/150134446131591796875",
+      "passed": true,
+      "relation": "<",
+      "rhs": "31415927/10000000"
+    },
+    {
+      "label": "exponential lower endpoint",
+      "lhs": "3032653/5000000",
+      "passed": true,
+      "relation": "<",
+      "rhs": "112690097/185794560"
+    },
+    {
+      "label": "exponential finite interval ordered",
+      "lhs": "112690097/185794560",
+      "passed": true,
+      "relation": "<",
+      "rhs": "2253801941/3715891200"
+    },
+    {
+      "label": "exponential upper endpoint",
+      "lhs": "2253801941/3715891200",
+      "passed": true,
+      "relation": "<",
+      "rhs": "6065307/10000000"
+    },
+    {
+      "label": "integral lower endpoint",
+      "lhs": "8556243/10000000",
+      "passed": true,
+      "relation": "<",
+      "rhs": "394665989/461260800"
+    },
+    {
+      "label": "integral finite interval ordered",
+      "lhs": "394665989/461260800",
+      "passed": true,
+      "relation": "<",
+      "rhs": "107349149723/125462937600"
+    },
+    {
+      "label": "integral upper endpoint",
+      "lhs": "107349149723/125462937600",
+      "passed": true,
+      "relation": "<",
+      "rhs": "1711249/2000000"
+    },
+    {
+      "label": "normal density scale lower bound",
+      "lhs": "1249998261311227607/1250000000000000000",
+      "passed": true,
+      "relation": "<",
+      "rhs": "1"
+    },
+    {
+      "label": "normal density scale upper bound",
+      "lhs": "2500008976193153787/2500000000000000000",
+      "passed": true,
+      "relation": ">",
+      "rhs": "1"
+    },
+    {
+      "label": "phi lower product",
+      "lhs": "24197/100000",
+      "passed": true,
+      "relation": "<",
+      "rhs": "604926326563/2500000000000"
+    },
+    {
+      "label": "phi upper product",
+      "lhs": "2419711770501/10000000000000",
+      "passed": true,
+      "relation": "<",
+      "rhs": "12099/50000"
+    },
+    {
+      "label": "P lower product",
+      "lhs": "17067/25000",
+      "passed": true,
+      "relation": "<",
+      "rhs": "1706722347453/2500000000000"
+    },
+    {
+      "label": "P upper product",
+      "lhs": "682690809807/1000000000000",
+      "passed": true,
+      "relation": "<",
+      "rhs": "6827/10000"
+    },
+    {
+      "label": "positive lower variance factor",
+      "lhs": "12901/25000",
+      "passed": true,
+      "relation": ">",
+      "rhs": "0"
+    },
+    {
+      "label": "positive lower quadratic factor",
+      "lhs": "621/3125",
+      "passed": true,
+      "relation": ">",
+      "rhs": "0"
+    },
+    {
+      "label": "printed lower v",
+      "lhs": "12901/25000",
+      "passed": true,
+      "relation": "=",
+      "rhs": "12901/25000"
+    },
+    {
+      "label": "printed lower k",
+      "lhs": "621/3125",
+      "passed": true,
+      "relation": "=",
+      "rhs": "621/3125"
+    },
+    {
+      "label": "printed upper fourth moment",
+      "lhs": "10741/25000",
+      "passed": true,
+      "relation": "=",
+      "rhs": "10741/25000"
+    },
+    {
+      "label": "D slope positive",
+      "lhs": "130013739/312500000",
+      "passed": true,
+      "relation": ">",
+      "rhs": "0"
+    },
+    {
+      "label": "printed D lower arithmetic",
+      "lhs": "65506239/125000000",
+      "passed": true,
+      "relation": "=",
+      "rhs": "65506239/125000000"
+    },
+    {
+      "label": "D lower coarse threshold",
+      "lhs": "65506239/125000000",
+      "passed": true,
+      "relation": ">",
+      "rhs": "131/250"
+    },
+    {
+      "label": "printed R upper arithmetic",
+      "lhs": "52727151/625000000",
+      "passed": true,
+      "relation": "=",
+      "rhs": "52727151/625000000"
+    },
+    {
+      "label": "R upper coarse threshold",
+      "lhs": "52727151/625000000",
+      "passed": true,
+      "relation": "<",
+      "rhs": "211/2500"
+    },
+    {
+      "label": "sqrt2 upper endpoint squared",
+      "lhs": "80089/40000",
+      "passed": true,
+      "relation": ">",
+      "rhs": "2"
+    },
+    {
+      "label": "completion fluctuation squared",
+      "lhs": "17513/1500000",
+      "passed": true,
+      "relation": "<",
+      "rhs": "11881/1000000"
+    },
+    {
+      "label": "contradiction margin arithmetic",
+      "lhs": "83/200",
+      "passed": true,
+      "relation": "=",
+      "rhs": "83/200"
+    }
+  ],
+  "source_sha256": "d3af3d3bac9ba4d73a7589ba9ed4ff6261fde3263c64d04de36da7f36a1c65d3",
+  "status": "PASS"
+}

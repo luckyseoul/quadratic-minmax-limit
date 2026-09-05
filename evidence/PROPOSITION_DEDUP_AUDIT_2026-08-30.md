@@ -8,6 +8,26 @@ The old ledgers are fully preserved on the two branches in `ARTIFACTS.md`.
 No local theorem is made false by parking its route; no open implication
 is made necessary for the original problem by its old status field.
 
+**Actual Hadamard-template realization and Boolean attainability (2026-09-05).**
+`original_mo_hadamard_template_milestone.json` records three independently
+reviewed complete proofs. Sparse flips realize flat singular bulk, finite
+operator outliers and asymptotic scalar SDP optimality in actual cross
+sign matrices. Their finite-template Gamma completion is only an upper.
+The matched-frame/Hermite theorem proves Gamma>283/200 for q>=5/2
+AND scalar-optimal finite templates tau(C)=p q; do not treat this as
+a lower bound on the actual signing's Boolean norm.
+A different Hadamard background fixes an entire Boolean algebra, yielding
+dense exact block-mean grids and the actual lower Lambda_I. For PSD C,
+Lambda_I=Gamma and the actual normalized Boolean limit is identified.
+The positive-quadratic-top-frame case has actual liminf>1.524049912 for
+q>=5/2. That extra frame is not implied by bipartite scalar optimality
+alone. Symmetric dilation changes the actual family, so its exclusion
+does not transfer back to arbitrary nonsymmetric matrices. The single
+28-comparison rational check was offloaded and reused, not rerun. Do not
+repeat these constructions or optimize their completion without new
+attainable-coordinate/source information. Conditional optimality,
+source/joint-shell compatibility and original convergence remain OPEN.
+
 **Actual spectral constraints and evaluated feedback split (2026-09-05).**
 The six-proof package in `original_mo_spectral_rounding_milestone.json`
 adds filtered cross moments, actual SDP complementarity, original-source
