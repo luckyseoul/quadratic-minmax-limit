@@ -21,6 +21,59 @@ predicates. Valid local results retain their stated scope and evidence.
 
 ## Next mathematical work
 
+The latest quantified compatibility package is
+`evidence/original_mo_gap_compatibility_milestone.json`:
+
+- `NOTE_2026-09-05_FULL_SDP_GAP_WEIGHTED_COMPATIBILITY.md`
+  (SHA-256 `3a1367bab1fe73aa24c0edbdb1bb583546e28ae82148f4cf5af749e49b9778f0`)
+  uses the canonical primal of the LITERAL complete K and ANY attained
+  trace-optimal same-diagonal majorizer D. With S=tr D, q=N-1 and
+  g=S-tr|K|^3/q, weighted residual squares are at most 4qg. The exact
+  squared Frobenius norm of the inverse-weighted commutator is
+  `2(S tr(D^(-1))-N^2)`, giving
+  `delta<=4Sg/(qN^2)`. Uniform cube rescaling then proves
+  `Phi(K-(S/N)T)<=S sqrt(delta)` for T=D^(-1/2)KD^(-1/2).
+  The ORIGINAL source energy errors are at most 2N sqrt(delta), and
+  the cross error at most N sqrt(delta), after scaling by S/N.
+  No maximum-diagonal bound, nonsingular K, or unique optimum is needed.
+  Its original-zero-source corollary compares two individually PSD
+  Gaussian fields at O(N^(3/2)delta^(1/4)) cost. The pure-cross field
+  retains actual W_D,c_D; its width is NOT evaluated by this corollary.
+- `NOTE_2026-09-05_DIAGONAL_MAJORIZER_METRIC_STABILITY.md`
+  (SHA-256 `ab473024c6ec7f2c87377c48bdf58a159236dea954f68df30dd6a32716875c1a`)
+  applies to ANY actual majorizer D, not only an optimum. Constant field
+  diagonal and a nuclear-norm congruence estimate control both exact
+  resolvent traces and their cancellation. For 0<=delta<=1,
+  `|B_D-B_flat|<=3sqrt(w)N^(3/2)delta^(1/4)/sqrt(1-|eta|)`.
+  Its (5.1) transfers the all-ACTUAL-cell upper on each fixed compact
+  eta window, with the original drift and old bin/selection errors.
+  B_flat is a NUMERICAL reference, retaining actual PSD M_theta and
+  actual contraction L_D. The representative's weighted c_D need not
+  be constant through a bin, so this is not an exact scalar-I shell
+  constraint throughout that bin. Every representative is chosen within
+  its FINAL refined original/weighted cell.
+
+Both paths above are under `evidence/`. Complete author, root and
+independent reviews are recorded in the manifest. These two analytic
+proofs needed no mathematical execution, signing census or optimization;
+the previous arithmetic certificates were reused without rerunning them.
+No source signing, src module, test or global predicate was changed.
+
+For bounded `S/N^(3/2)`, a relative canonical gap g/S tending to zero
+gives delta tending to zero. This is a CONDITIONAL actual regime, not a
+property established for every exact original or conditional minimizer.
+Do not replace K by a purported contraction K/(S/N), remove its rare
+diagonal outliers without accounting for them, or invoke an indefinite
+scalar tensor covariance. The metric window must be fixed before its
+asymptotic limit; the error is not uniform at |eta|=1.
+
+The live next implications are an evaluated actual weighted trace upper
+in the small-gap range and a correctly normalized full-K ORIGINAL-norm
+argument for the complementary range. Rectangular beta bounds can lose
+an essential factor through beta(K)<=4Phi(K); they cannot silently be
+read as a quadratic-norm rounding gain. Neither these route-specific
+targets nor the new compatibility bounds prove original convergence.
+
 The latest same-source package is
 `evidence/original_mo_weighted_covariance_milestone.json`.
 Its four analytic results are:

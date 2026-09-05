@@ -1,0 +1,83 @@
+{
+  "schema": "original_mo_gap_compatibility_milestone_v1",
+  "date_utc": "2026-09-05",
+  "base_commit": "5bf9a7dd8fabb050194b452f2854f0e7f7ad0e44",
+  "branch": "main",
+  "remote": "https://github.com/luckyseoul/quadratic-minmax-limit.git",
+  "classification": "Two reviewed analytic compatibility and stability theorems; original all-orders convergence remains OPEN",
+  "conclusions": [
+    "For the literal full signing K, trace-optimal diagonal majorizer D, q=N-1, S=tr(D), eta=S/(N sqrt(q)) and canonical gap gamma=(S-tr(|K|^3)/q)/S, the diagonal spread obeys delta=S tr(D^-1)/N^2-1 <=4 eta^2 gamma.",
+    "Actual original and weighted internal/cross scores differ by explicit O(N sqrt(delta)) bounds without replacing K by a false scalar-normalized contraction.",
+    "In an actual original p=q=0 refined cell, the actual positive comparison field and its pure-cross field have expected nonaugmented maximum difference at most 2 sqrt(kappa log(2)) N^(3/2) delta^(1/4).",
+    "For arbitrary feasible D, conjugated actual PSD-field trace differs in nuclear norm by at most E_delta=(w N^2/2) sqrt(delta)(1+sqrt(1+delta)); this controls both metric traces uniformly on fixed |metric eta|<=1-b0.",
+    "For 0<=delta<=1, the natural D-metric upper differs from the explicitly numerical flattened reference by at most 3 sqrt(w) N^(3/2) delta^(1/4)/sqrt(1-|metric eta|). The same actual weighted contraction, drift and coupled cell are retained."
+  ],
+  "not_proved": [
+    "Small canonical full-SDP gap for actual original or conditional minimizers under a norm cap.",
+    "A sharp evaluation of the weighted all-actual-cell upper or its flattened numerical reference.",
+    "Validity of K/(S/N) as a contraction or covariance; no such replacement is made.",
+    "Exact constancy of the weighted cross score throughout a cell with fixed original cross score.",
+    "The full coupled nonzero-internal-shell estimate or complementary large-gap argument.",
+    "The sharp conditional dyadic inequality, original all-orders convergence or nonconvergence, or an identified limit value."
+  ],
+  "next_target": "Evaluate the actual weighted-cell upper in the small-gap branch and establish a complementary large-gap argument. Retain the actual weighted contraction, original/weighted coupling and active original normalization.",
+  "files": {
+    "evidence/NOTE_2026-09-05_FULL_SDP_GAP_WEIGHTED_COMPATIBILITY.md": "3a1367bab1fe73aa24c0edbdb1bb583546e28ae82148f4cf5af749e49b9778f0",
+    "evidence/NOTE_2026-09-05_DIAGONAL_MAJORIZER_METRIC_STABILITY.md": "ab473024c6ec7f2c87377c48bdf58a159236dea954f68df30dd6a32716875c1a",
+    "evidence/original_mo_full_sdp_gap_compatibility_author_review.md": "d119f7eaaeea495b2dd50285df80385be82ad257133642c7b42045f69bf4c243",
+    "evidence/original_mo_full_sdp_gap_compatibility_exact_review.md": "a2408a7ad4ea206f4ecbbf3c6c3968e09606308fa60239afd6cceb50f0439b72",
+    "evidence/original_mo_full_sdp_gap_compatibility_docs_review.md": "b4b0c49e09dd9a695cee82d10c63a908f3b1f8d3069566fae5f431ebac847282",
+    "evidence/original_mo_diagonal_majorizer_metric_stability_author_review.md": "4a33f23e2f6df2f26329be3a4db01950d1e4648e32ed6386f1f14a2f85f42f8e",
+    "evidence/original_mo_diagonal_majorizer_metric_stability_proof_review.md": "9074f0c7869d513110440acff0204612bad7294bdfeab1595b700223089a2e37",
+    "evidence/original_mo_gap_compatibility_root_review.md": "5207fbcc35cea11216f11b60bc34a59dfe95e9aaa92a9edbc933b22b377ecaa1",
+    "evidence/original_mo_gap_compatibility_docs_scope_review.md": "5f6f514ba39ccf5448860b40e4b3b25bd311660503737225659a62be2d649897",
+    "evidence/original_mo_gap_compatibility_docs_gate.json": "02da75f9d3ec6a63604315dd0a4f7a8cb518d80ca3ab0d3bbba571b9a0f0552f",
+    "HANDOFF.md": "c7049f231592c4831a7fde8eaee955f1ada6e55ec344001eb29dcd99e31bfdc9",
+    "STATUS.md": "861e51bf5735393ad8e9c7b5f1fc9d49c2567b89dee55ab9fddb4137ed2c0d15",
+    "evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md": "a19d99900751f6c8f1ecbd12c68d8dd4f25641135c86996b5fd14135609cfd8f"
+  },
+  "source_to_canonical_path": {
+    "/tmp/original_mo_full_sdp_gap_weighted_compatibility.md": "evidence/NOTE_2026-09-05_FULL_SDP_GAP_WEIGHTED_COMPATIBILITY.md",
+    "/tmp/original_mo_diagonal_majorizer_metric_stability.md": "evidence/NOTE_2026-09-05_DIAGONAL_MAJORIZER_METRIC_STABILITY.md",
+    "/tmp/original_mo_full_sdp_gap_weighted_compatibility_author_receipt.md": "evidence/original_mo_full_sdp_gap_compatibility_author_review.md",
+    "/tmp/original_mo_full_sdp_gap_weighted_compatibility_exact_review.md": "evidence/original_mo_full_sdp_gap_compatibility_exact_review.md",
+    "/tmp/original_mo_full_sdp_gap_weighted_compatibility_docs_review.md": "evidence/original_mo_full_sdp_gap_compatibility_docs_review.md",
+    "/tmp/original_mo_diagonal_majorizer_metric_stability_author_receipt.md": "evidence/original_mo_diagonal_majorizer_metric_stability_author_review.md",
+    "/tmp/original_mo_diagonal_majorizer_metric_stability_proof_review.md": "evidence/original_mo_diagonal_majorizer_metric_stability_proof_review.md",
+    "/tmp/original_mo_gap_compatibility_root_review.md": "evidence/original_mo_gap_compatibility_root_review.md",
+    "/tmp/original_mo_gap_compatibility_docs_scope_review.md": "evidence/original_mo_gap_compatibility_docs_scope_review.md",
+    "/tmp/original_mo_gap_compatibility_docs_gate.json": "evidence/original_mo_gap_compatibility_docs_gate.json"
+  },
+  "reviews": {
+    "gap": "Proof-worker author; exact worker full 303-line review with prior algebra discussion disclosed. Root full proof review. Docs worker full independent 303-line proof review and frozen-source receipt.",
+    "metric": "Exact-worker author with root scope and numerical-reference discussion disclosed. Proof worker independent complete 252-line review of this new theorem; authorship of the cited gap prerequisite disclosed. Docs worker also independently read all final 252 lines in the combined scope review.",
+    "documentation": "Root and independent docs worker reviewed all 108 new canonical lines, all complete receipts, and the final explicit delta<=1 and squared-Frobenius wording corrections before staging.",
+    "import": "All ten imports, including the documentation-gate receipt, are byte-identical to the frozen sources."
+  },
+  "computation": {
+    "mathematical_runs": 0,
+    "local_mathematical_runs": 0,
+    "signing_sampling": false,
+    "signing_enumeration": false,
+    "solver_run": false,
+    "floating_point_evaluation": false,
+    "documentation": "One completed changed-document scanner on soulkiller, 880 final hashed inputs including all 872 unchanged src modules, exit zero and original status OPEN. Proofs and review receipts are not scanner inputs; scanner result is not proof verification.",
+    "replay_rule": "Both new proofs are analytic and have no mathematical replay command. Do not rerun unchanged prior rational checks or mathematics for another receipt."
+  },
+  "src_modules_tests_and_global_predicates_changed": false,
+  "pre_commit_backup": {
+    "path": "/mnt/storage/backups/codex/quadratic-minmax-limit-2212b99a4c24/20260905T220950Z-5bf9a7dd8fab-pre-milestone-gap-compatibility.BIJOQy",
+    "covered_head": "5bf9a7dd8fabb050194b452f2854f0e7f7ad0e44",
+    "sha256sums_sha256": "0e5dc78eb1321bb32ad5a58fb1bdee1f58204b04e598b17ab72d1a760087c73f",
+    "receipt_sha256": "17d33c57996626062825613a651cd50c322d58b70ff266ee8e46c4f4e5fd2af8",
+    "full_worktree_sha256": "2f5fe522ca8e615d4932926d030d2a35063612ee107fdcf93554a427d4a183cc",
+    "git_common_and_dir_sha256": "f6fdc82ec681e014d4bd7c3c9500e3e73296fd936eeeb950c233eb200d6d36f5",
+    "repository_bundle_sha256": "356f5076a3b621d779aab9f5dfd6bcb59d1bb314d9ab2f292daeb5a2cd0e5440",
+    "complete": true,
+    "full_archives_compared_to_quiesced_source": true,
+    "all_refs_bundle_verified": true,
+    "status_and_refs_unchanged": true,
+    "coverage": "Both frozen proofs, all seven final review receipts and all three final canonical documents. Excludes the subsequently imported documentation-gate JSON and this manifest; post-push full backup covers the final commit."
+  },
+  "publication": "Normal commit and push follow the verified pre-commit snapshot. Verify origin main SHA and create a post-push full backup; its later receipt cannot self-identify inside this commit."
+}

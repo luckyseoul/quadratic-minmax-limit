@@ -42,6 +42,32 @@ See `ARTIFACTS.md` for the preserved branches and terminology.
 
 ## Fresh mathematical target
 
+The [canonical-gap compatibility package](evidence/original_mo_gap_compatibility_milestone.json)
+now controls the actual weighted/unweighted discrepancy in a quantified
+small-gap regime. For ANY trace-optimal full-signing diagonal D, with
+`S=tr D=tau(K)` and `g=S-tr|K|^3/(N-1)`, it proves
+`delta=S tr(D^(-1))/N^2-1 <=4Sg/((N-1)N^2)` and
+`Phi(K-(S/N)D^(-1/2)KD^(-1/2))<=S sqrt(delta)`.
+This gives uniform actual source/cross energy compatibility without
+a maximum-diagonal bound. On an ORIGINAL zero-internal-energy cell,
+the weighted field is within `O(N^(3/2)delta^(1/4))` of a separately
+positive pure-cross field that still uses the actual weighted cross block.
+For `0<=delta<=1`, the all-shell metric theorem also bounds the exact
+two-trace expression's change by
+`3sqrt(w)N^(3/2)delta^(1/4)/sqrt(1-|eta|)`.
+Its scalar-I reference is a compared numerical functional retaining
+the ACTUAL covariance and contraction, not a scalarized source law.
+The eta window is fixed before taking the small-gap/large-order limit.
+Both proofs passed complete independent reviews; no mathematics was rerun.
+
+A norm cap bounds the normalized diagonal trace but does NOT here prove
+the canonical gap small for original or conditional optimizers. Even in
+the small-gap range, the remaining actual weighted trace supremum has
+not been evaluated. That evaluation and a correctly normalized argument
+for the complementary gap range are live targets, not established
+conditions necessary for every convergence proof. Original convergence
+remains OPEN.
+
 The [same-source weighted covariance package](evidence/original_mo_weighted_covariance_milestone.json)
 replaces scalar tensor normalization by a diagonal majorizer of the
 literal complete block signing. Its Gaussian covariance is positive,

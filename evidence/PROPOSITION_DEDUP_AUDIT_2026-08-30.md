@@ -8,6 +8,35 @@ The old ledgers are fully preserved on the two branches in `ARTIFACTS.md`.
 No local theorem is made false by parking its route; no open implication
 is made necessary for the original problem by its old status field.
 
+**Full canonical gap and actual-diagonal metric stability (2026-09-05).**
+`original_mo_gap_compatibility_milestone.json` quantifies the previously
+missing weighted/unweighted compatibility. For trace-optimal full-K D,
+S=tr D and g=S-tr|K|^3/(N-1), the inverse-weighted commutator gives
+`delta=S tr(D^(-1))/N^2-1<=4Sg/((N-1)N^2)`. The resulting UNIFORM
+actual-cube bound controls each original source energy and cross energy,
+without d_max or an operator cap on K. The original-zero-source field
+corollary has O(N^(3/2)delta^(1/4)) Gaussian norm cost and retains the
+actual weighted pure-cross covariance, separately proved positive.
+
+The all-shell metric theorem retains that actual covariance and normalized
+contraction. Its covariance-congruence nuclear bound controls the combined
+two-trace expression at fixed eta with error at most
+`3sqrt(w)N^(3/2)delta^(1/4)/sqrt(1-|eta|)` for delta<=1.
+The scalar-I expression is only a compared NUMERICAL functional for each
+actual refined cell, not an exact weighted-energy shell constraint on its
+whole bin and not a scalarized source law. The eta window is fixed before
+the n limit. All complete proofs and review roles are recorded; no new
+mathematical computation was used.
+
+A norm cap does not in these proofs force the FULL canonical gap small
+for original or conditional minimizers. The small-gap actual width still
+needs evaluation, and the complementary gap range needs a correctly
+normalized original-norm argument; beta(K)<=4Phi(K) is not a free
+identification. Do not repeat the old d_max-weighted residual estimate
+or assume scalar D after this quantified result. These are scoped
+conditional advances, not necessary global proof architecture or an
+original convergence theorem.
+
 **Same-source diagonal covariance and weighted-shell comparison (2026-09-05).**
 `original_mo_weighted_covariance_milestone.json` records the actual full-D
 cross correlation and the exact weighted linear-field upper. The literal
