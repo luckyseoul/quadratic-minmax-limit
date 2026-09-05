@@ -8,6 +8,24 @@ The old ledgers are fully preserved on the two branches in `ARTIFACTS.md`.
 No local theorem is made false by parking its route; no open implication
 is made necessary for the original problem by its old status field.
 
+**Conditional joint-shell upper and intrinsic repair (2026-09-05).**
+`NOTE_2026-09-05_CONDITIONAL_CROSS_JOINT_SHELL_UPPER.md` retains the
+actual mixed exchange term in a PSD field comparison, proves the joint
+energy-mismatch deficit, and explicitly supplies the masked Gaussian
+floor for actual conditional cross optimizers. Its intrinsic version is
+`NOTE_2026-09-05_DIRECT_CROSS_COVARIANCE_NORMALIZATION.md`, with
+`R_mu=I+(A tensor A-S_B+I)/mu`, `mu=max(2,||A tensor A-S_B+I||)`.
+The entire threshold covariance remainder and the original-norm bound
+`||K||^2<=8 Phi(K)` give raw floor error `O(n^(16/11))` for original
+minimizer sources, without a conference-scale spectral hypothesis.
+`NOTE_2026-09-05_INTRINSIC_CROSS_JOINT_SHELL_REPAIR.md` makes the
+intrinsic comparison fields PSD using a rank-four positive correction;
+the leading joint-mismatch upper changes by only `O(n^(5/4))`, uniformly
+in the threshold. Independent complete reviews passed. A sharp upper
+evaluation against the smaller-order optimum remains unproved. Neither
+an unevaluated variational bound, conditional optimizer floor, nor
+little-o dyadic target closes original all-orders convergence.
+
 **Whole-edge actual-optimizer constraint (2026-09-05).**
 `NOTE_2026-09-05_WHOLE_EDGE_SOURCE_PRESERVING_GAUSSIAN_REDUCTION.md`
 proves the correctly normalized symmetric-edge minus-covariance law,

@@ -42,6 +42,26 @@ See `ARTIFACTS.md` for the preserved branches and terminology.
 
 ## Fresh mathematical target
 
+The [conditional joint-shell upper](evidence/NOTE_2026-09-05_CONDITIONAL_CROSS_JOINT_SHELL_UPPER.md)
+now compares the actual Gaussian cross proposal with linear fields while
+retaining the full exchange covariance and independent Gaussian cushion.
+Its joint mismatch deficit uses all three attainable energies, with no
+independence assumption on the maximizing signs. A separate masked-cross
+proof gives the correctly directed conditional-optimizer Gaussian floor.
+The [direct cross normalization](evidence/NOTE_2026-09-05_DIRECT_CROSS_COVARIANCE_NORMALIZATION.md)
+uses `mu=max(2,||A tensor A-S_B+I||)` and gives `0<=R_mu<=2I`.
+For any actual conditional cross optimizer over fixed A,-A, its Gaussian
+floor has error `O(n^(16/11))` whenever `Phi(A)=O(n^(3/2))`; in particular
+this holds for every exact original order-n minimizer. No conference-scale
+operator bound is assumed. The [intrinsic joint-shell repair](evidence/NOTE_2026-09-05_INTRINSIC_CROSS_JOINT_SHELL_REPAIR.md)
+restores positive comparison fields by an explicit rank-four PSD term
+and preserves their leading joint-mismatch upper at error `O(n^(5/4))`,
+uniformly in the threshold. All three complete proofs passed independent
+reviews. The live step is a sharp evaluation using attainable shells and
+conditional optimality; `F_A^*<=2sqrt(2) Phi(A)+o(n^(3/2))` is NOT proved.
+Neither that optional dyadic target nor these reductions alone establishes
+original all-orders convergence. The global status remains OPEN.
+
 The [whole-edge optimizer constraint](evidence/NOTE_2026-09-05_WHOLE_EDGE_SOURCE_PRESERVING_GAUSSIAN_REDUCTION.md)
 now rounds every unordered edge of the source at its ORIGINAL order.
 The correctly normalized symmetric compression of `I-K tensor K/L^2`

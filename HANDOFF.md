@@ -21,6 +21,35 @@ predicates. Valid local results retain their stated scope and evidence.
 
 ## Next mathematical work
 
+The current joint-shell package has three independently reviewed proofs:
+
+- `evidence/NOTE_2026-09-05_CONDITIONAL_CROSS_JOINT_SHELL_UPPER.md`
+  (SHA-256 `64d68bb2feaa59a8049d6bcc42f3ab94c845249c3088fa618916522412d0a68a`)
+  proves the exchange-preserving cushioned field upper and the separate
+  masked-cross conditional floor, with raw error `O(n^(16/11))`.
+- `evidence/NOTE_2026-09-05_DIRECT_CROSS_COVARIANCE_NORMALIZATION.md`
+  (SHA-256 `e4919c8e16461c35efdf2963eaf9fdc1b45c07ccfba33ae1549a07e904f7ac8a`)
+  uses the intrinsic cross operator `H=A tensor A-S_B+I`,
+  `mu=max(2,||H||)`, and `R_mu=I+H/mu`. The entire threshold covariance
+  correction is controlled; `||K||^2<=8 Phi(K)` and an elementary
+  conditional norm cap give the same `O(n^(16/11))` Gaussian floor for
+  actual cross optimizers over ANY original exact minimizer A.
+- `evidence/NOTE_2026-09-05_INTRINSIC_CROSS_JOINT_SHELL_REPAIR.md`
+  (SHA-256 `1dcd9b1e76b00887e406e505113c854b80f0661bb3bd69283f6486fb59fa2d53`)
+  repairs the intrinsic linear fields by a rank-four PSD correction.
+  It proves the genuine upper and retains the leading joint-mismatch
+  formula with error `O(n^(5/4))`, uniformly even in vanishing-noise tails.
+
+Use actual attainable `(x^TAx,y^TAy,x^TB_*y)` shells and conditional
+optimality to sharpen/evaluate this upper. Do not drop the independent
+cushion or mixed exchange term, declare the unrepaired intrinsic field
+PSD, or replace conditional optimality by full-order optimality. The
+needed leading comparison `F_A^*<=2sqrt(2) Phi(A)+o(n^(3/2))` is not proved.
+Even proving a little-o dyadic inequality would not by itself settle
+the original all-orders problem. These are optional analytic tools,
+not newly mandatory proof architecture. Provenance and backup coverage:
+`evidence/original_mo_conditional_joint_shell_milestone.json`.
+
 The new whole-source variational tool is
 `evidence/NOTE_2026-09-05_WHOLE_EDGE_SOURCE_PRESERVING_GAUSSIAN_REDUCTION.md`
 (SHA-256 `6b22fb3ab1cc878b08fe79b5b57e0e661eaaa792dfc67f850d35db9f1b68bead`).
