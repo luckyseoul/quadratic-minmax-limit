@@ -82,7 +82,7 @@ def test_frame_averaging_and_bitight_boundaries_give_exact_open_floors():
             assert row["critical_level_two_deletion_forced"]
 
 
-def test_critical_rows_enter_the_official_phase_normalized_units():
+def test_odd_critical_rows_enter_residual_but_even_rows_only_align_shells():
     phase = paley_minus_phase_normalization()
     assert phase["identity"] == "-C=D*P^T*C*P*D"
     assert phase["minus_shell_becomes_plus_shell"]
@@ -104,7 +104,18 @@ def test_critical_rows_enter_the_official_phase_normalized_units():
         assert type_i["active_edge_sign_on_every_G_level_one_row"] == 1
         assert type_i["sharp_H_size_floor"] == 2 * p + 2
         assert type_i["sharp_G_size_floor"] == 2 * p + 1
-        assert type_i["official_entry_proved"]
+        assert type_i["shell_level_entry_proved"]
+        assert type_i["official_entry_proved"] is False
+        assert type_i["restricted_Type_I_15_750_required_G_size"] == 3 * p - 2
+        assert type_i["restricted_Type_I_15_750_required_Max_plus_identity"] == (
+            "S_G=3-2*f_e on Max+"
+        )
+        assert type_i["restricted_Type_I_15_750_required_Max_minus_inequalities"] == (
+            "S_G<=-1 and S_G<=-3*f_e on Max-"
+        )
+        assert type_i["restricted_Type_I_15_750_size_forced"] is False
+        assert type_i["restricted_Type_I_15_750_affine_identity_forced"] is False
+        assert "general odd-k" in type_i["missing_global_bridge_implication"]
 
 
 def test_level_five_degree_congruence_tail_and_p7_are_empty():
@@ -180,6 +191,11 @@ def test_checked_in_evidence_and_docs_preserve_the_open_scope():
     assert observed["proved"]["parity_equivalence"]
     assert observed["proved"]["odd_H_at_most_5p_bridge"]
     assert not observed["proved"]["even_H_bridge_to_residual_ii"]
+    assert observed["proved"]["even_H_level_one_shell_alignment"]
+    assert observed["proved"]["even_H_entry_into_restricted_Type_I_15_750"] is False
+    assert observed["official_unit_entry"]["even_H_type_I"]["official_entry_proved"] is False
+    assert observed["first_open_failure_sizes"]["even_H_without_level_two"] == "|H|>=4p+2"
+    assert "even_H" not in observed["first_open_failure_sizes"]
     assert not observed["proved"]["large_odd_H_bridge"]
     assert not observed["proved"]["residual_ii_closed"]
     assert not minimal_gap4_shell_bridge_closed_general()

@@ -2,6 +2,28 @@
 
 ## Statement
 
+**Global bridge scope correction (2026-09-04).** The proved 15.750
+Type-I box assumes `k=3p-2` and `S_G=3-2*f_e on Max+`; it is not a
+general odd-k level-one theorem. Even H shell contact two does not supply
+those hypotheses. The former unconditional even-minimal-H bound is
+retracted; the r4 consequence holds without a signed level-two row.
+This missing general odd-k implication stays within the OPEN all-size
+bridge. See `evidence/NOTE_2026-09-04_GLOBAL_BRIDGE_TYPE_I_SCOPE_AUDIT.md`.
+All conclusions of Proposition 15.775 below are unchanged.
+
+**Current partial closure (15.775; 2026-09-04).** The entire residual
+layer `t=q+3,k=5p+5` is closed for every prime `p>=259201`, with
+all boundary sizes. The same argument excludes both signed shell floors
+`r=3,4,5` when `h=r mod 2` and `46656*h^3<=p^3*(p-1)`.
+See Proposition 15.775 below and
+`evidence/NOTE_2026-09-04_EVENTUAL_FIRST_LAYER_CLOSE.md`.
+The separate `evidence/NOTE_2026-09-04_AFFINE_PARITY_CUBE_FLOOR.md`
+closes both local masses' middle-boundary branches for every odd `p>=29`.
+The remaining layer frontier is `t>=q+3,k>=5p+5` for `29<=p<259201`,
+and at least `t>=q+4,k>=5p+7` for `p>=259201`, with the additional
+cubic support exclusion. These are proved exclusions, not all-size
+localization. E1 and the original limit remain OPEN.
+
 For \(n\ge 2\) set
 \[
 m_n
@@ -101,10 +123,11 @@ denseness (\(\rho=1\) on \(n=p^2+1\)) + E(1) on that family would give
 \label{eq:limit}
 L=\lim_{n\to\infty}\alpha_n=\tfrac12.
 \end{equation}
-E(1) is **not proved** for all primes \(p\ge5\); E(1) and \(L=1/2\) are not complete. Exactly one mathematical
-obligation remains on this stronger Paley route (`GOAL.md`;
+E(1) is **not proved** for all primes \(p\ge5\); E(1) and \(L=1/2\) are not complete. Two global mathematical
+obligations remain on this stronger Paley route (`GOAL.md`;
 `evidence/share/denseness_path_package.md` § Caveats): residual (ii) for
-even \(k\ge4p\). Proposition 15.720 closes the required bi-tight levels 2
+even \(k\ge4p\), and the all-size minimal-four-gap implication bridge.
+Proposition 15.720 closes the required bi-tight levels 2
 and 3, and Proposition 15.750 closes multi-level Type I for every prime.
 Thus the spectral floor, global QVAR, principal R1, and the historical
 `3A+B` Type-I mechanism are no longer acceptance gates. Propositions
@@ -236,6 +259,13 @@ the spectral maximum. It is a norm-only and Gram-only no-go, not a proof of
 the multiplier-two estimate: the exact statewise diagonal-payment inequality
 remains open. See
 `evidence/NOTE_2026-09-03_CROSS_RECTANGLE_FOURIER_STABILITY.md`.
+The actual-diagonal follow-up proves an exact all-cycle criterion only for
+the real-function payment relaxation, not quadratic skew-sign realization.
+It also proves that diagonal skew cannot lower a coherent cross baseline,
+and gives exact actual-diagonal mixed moments without inferring pointwise
+control. The multiplier-two estimate remains open; see
+`evidence/NOTE_2026-09-05_DIAGONAL_PAYMENT_COMPATIBILITY.md` and
+`evidence/NOTE_2026-09-05_ACTUAL_DIAGONAL_MIXED_MOMENTS.md`.
 
 > **Reader note.** Soft-close of \(L=\tfrac12\) via scheme-min Gsum was
 > **retracted** 2026-08-06. Aut-Schur remains false. Historical “\(L\) OPEN”
@@ -16753,9 +16783,12 @@ including \(P=9\), not a fictitious \(Q=-1\) row. Therefore
  \quad\Longrightarrow\quad\text{residual (ii) empty}.       \tag{15.774.5}
 \]
 
-Together with 15.764 and Type I closure, odd inclusion-minimal four-gap
-sets are impossible through \(5p+4\); even sets satisfy the r4 bound,
-and odd sets without a level-three row satisfy the r5 bound. These are
+Together with 15.764, odd inclusion-minimal four-gap
+sets are impossible through \(5p+4\); even sets **without a signed
+level-two row** satisfy the r4 bound, and odd sets without a level-three
+row satisfy the r5 bound. The former unconditional even claim is
+retracted: general odd-k level-one alignment does not supply the exact
+15.750 size and affine-shell hypotheses. These are
 bounded-support theorems. No all-size localization or \(o(p^3)\)
 deficit theorem follows. Eventual E1 for all sufficiently large primes
 would suffice for \(L=1/2\) by denseness, but these bounds are not
@@ -16768,6 +16801,110 @@ Source: `src/e1_gmin_m4_prop15774.py` and
 `src/e1_gmin_m4_small_mass_spectrum.py`.
 493 technical tests passed on soulkiller; the final documentation-gate result is recorded in `evidence/small_mass_two_type_regression.json`.
 The provenance record is `evidence/small_mass_two_type_regression.json`.
+
+## Proposition 15.775 — eventual first-layer closure and a superlinear support exclusion
+
+For every prime \(p\ge259201\), residual (ii) is empty at
+\[
+ t=q+3,\qquad k=5p+5,\qquad |H|=5p+6,
+ \qquad q=(p-1)/2.                                      \tag{15.775.1}
+\]
+This includes every boundary size and both phases. No equality
+classification or finite-prime census is used.
+
+The new local statement is that no nonnegative integer-valued quadratic
+\(A\) on \(J(p,(p+1)/2)\) has either mass
+\[
+ 2p\,E[A]=2p+4\quad\hbox{or}\quad2p+6                  \tag{15.775.2}
+\]
+at any odd \(p\ge259201\); primality is unnecessary for this local
+claim. Here is the quantitative proof chain. An integral cube quadratic
+has Fourier coefficients in \(\frac14\mathbb Z\). The elementary
+degree-two noise estimate and interpolation give
+\(\|f\|_4\le3\|f\|_2\) and, for nonnegative \(f\),
+\(\|f\|_2\le9E[f]\). Therefore
+\[
+ \max f\le\sum_S|\widehat f(S)|
+ \le4\sum_S\widehat f(S)^2\le324(E[f])^2.              \tag{15.775.3}
+\]
+The self-contained two-point and tensorization proof is in the linked
+note; it does not posit a dimension-dependent bound.
+
+Put \(\mu=E[A]=1+s/(2p)\), \(s=4,6\), and \(H_A=\max A\).
+The existing stabilizer and paired-cube identities give a cube through a
+maximizing point whose mean is at most
+\[
+ \frac{2p\mu}{p-1}\le\frac{16}{7}.
+\]
+Equation (15.775.3) gives \(H_A\le82944/49<1800\).
+A relevant transposition has squared influence
+\[
+ I_{ij}:=\tfrac14E[(A-A^{(ij)})^2]
+ \ge\frac{p^2-1}{32p(p-2)}>\frac1{32}.                  \tag{15.775.4}
+\]
+This uses an arbitrary nonzero integer affine derivative, not a Boolean
+derivative assumption. The Johnson degree-two energy identity gives
+\(\sum I_{ij}\le(p-1)\operatorname{Var}A\).
+Zero influence is an equivalence relation. If the largest invariant
+coordinate class has complement size \(L\), its relevance graph has
+at least \(pL/2\) edges. Thus
+\[
+ L<64H_A\mu<64\cdot1800\cdot\frac98=129600.            \tag{15.775.5}
+\]
+At the stated threshold every pattern on these \(L\) coordinates
+extends to the slice. Average a quadratic representative over the
+invariant class and substitute its coordinate sum; this gives a
+nonnegative integral quadratic on the entire retained cube.
+Let its mean be \(\nu\) and its all-zero value be \(a_0\).
+The exact degree-two monomial moments give
+\[
+ p\mu=(p+1)\nu-a_0,\qquad
+ \nu\in\tfrac14\mathbb Z,\qquad0\le a_0<1800.
+\]
+But (15.775.2) now gives
+\[
+ \nu=1+\frac{a_0+s/2-1}{p+1}\in(1,5/4),               \tag{15.775.6}
+\]
+a contradiction. Proposition 15.774's full type capacities at
+\(|H|=5p+6\) leave exactly residues \((1,2)\) or \((2,1)\).
+The first type has quotients \((3,2,\ldots,2)\), the second all twos,
+so (15.775.2) is forced. This proves the whole-layer exclusion. The
+particular scalar example \(P=5,T=1\) is not assumed to be universal.
+
+The same argument has a superlinear consequence. For \(r\in\{3,4,5\}\)
+and \(h=|H|\equiv r\pmod2\), both signed shell floors at least
+\(r\) are impossible whenever
+\[
+ \boxed{46656h^3\le p^3(p-1).}                         \tag{15.775.7}
+\]
+Frame averaging excludes \(h<rp\). Otherwise set \(B=h/(2p)\).
+The cubic hypothesis gives \(p-1\ge373248B^3\), ensures an isolated
+chart, and makes the generic bounds
+\(H_A\le2916B^2\), \(L<186624B^3\) sufficient for a full-cube
+extension of one mean-at-most-\(B\) row from each type. Write their
+cube means as \(\nu_\pm\in\frac14\mathbb Z\), all-zero values as
+\(a_\pm\in[0,2916B^2]\), and actual parallel counts as \(P_\pm\).
+Adding the two exact row identities yields
+\[
+ 4(a_++a_-+r)
+ =(p+1)\bigl(4\nu_++4\nu_--2(P_++P_-)+4r\bigr).        \tag{15.775.8}
+\]
+The bracket is integral, whereas the left side is strictly between
+zero and \(p+1\): it is at most \(23328B^2+4r\), and
+\(B\ge r/2\ge3/2\) with \(p-1\ge373248B^3\).
+This proves (15.775.7). The parity hypothesis is necessary for integral
+local rows and is not suppressed.
+
+These are actual infinite-family exclusions. They do not localize every
+possible witness, close residual (ii) globally, prove eventual E1 over
+all signings, or settle the limit. For \(29\le p<259201\), the prior
+layer frontier remains; above the threshold it is at least
+\(t\ge q+4,k\ge5p+7\), additionally subject to (15.775.7).
+
+Full proof: `evidence/NOTE_2026-09-04_EVENTUAL_FIRST_LAYER_CLOSE.md`.
+Source and tests: `src/e1_gmin_m4_prop15775.py`, `tests/test_prop15775.py`.
+Independent local companion:
+`evidence/NOTE_2026-09-04_AFFINE_PARITY_CUBE_FLOOR.md`.
 
 **All-prime branch-C odd--Radon centrality (2026-09-03).**
 Let \(p=4r+3\) be prime with \(r\ge7\). Suppose one opposite row on the

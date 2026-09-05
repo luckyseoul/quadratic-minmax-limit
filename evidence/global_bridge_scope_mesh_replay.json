@@ -1,0 +1,497 @@
+{
+  "classification": "NARROW GLOBAL-BRIDGE TYPE-I SCOPE CORRECTION: OFFLOADED REGRESSION; NO NEW THEOREM OR GLOBAL CLOSURE",
+  "scope": "Regenerate only 15.764 and 15.774 metadata; retract unrestricted even-H Type-I inference while preserving restricted 15.750 and the 15.775 proof.",
+  "capability_routing": {
+    "soulkiller": "CPU exact artifact generation and provisioned pytest",
+    "NUKA": "Fresh small JSON-audit stage populated; audit NOT RUN",
+    "jellyfin": "Fresh small JSON-audit stage populated; audit NOT RUN",
+    "orin": "Not contacted; no unique requirement",
+    "GPU_work_dispatched": false
+  },
+  "preflight": {
+    "soulkiller": {
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.113 'date -u +%Y-%m-%dT%H:%M:%SZ && uptime && free -m && nvidia-smi --query-gpu=name,memory.free,utilization.gpu --format=csv,noheader && test -x /home/nick/.venvs/mo-exact/bin/python && test -r /tmp/first-layer-15775.AeD9pK/regression/AGENTS.md'",
+      "chunk_id": "84368b",
+      "wall_time_seconds": 0.642481156,
+      "exit_code": 0,
+      "original_token_count": 84,
+      "output": "2026-09-04T23:21:16Z\n 23:21:16 up 6 days, 14:11,  4 users,  load average: 2.61, 2.92, 3.67\n               total        used        free      shared  buff/cache   available\nMem:           61935        4862       19929        1295       39308       57072\nSwap:           8191        2035        6156\nTesla V100-SXM2-16GB, 16005 MiB, 0 %\n"
+    },
+    "NUKA": {
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.192 'date -u +%Y-%m-%dT%H:%M:%SZ && uptime && free -m && test -x /home/nick/.venvs/qml-mesh/bin/python && test -r /tmp/first-layer-15775.dQjNag/first_layer_15775_mesh_verify.py'",
+      "chunk_id": "fb1afe",
+      "wall_time_seconds": 0.393077113,
+      "exit_code": 0,
+      "original_token_count": 75,
+      "output": "2026-09-04T23:21:16Z\n 18:21:16 up 6 days, 14:07,  3 users,  load average: 0.00, 0.00, 0.00\n               total        used        free      shared  buff/cache   available\nMem:           15942        1986       13868        1041        1423       13955\nSwap:           4096         189        3906\n"
+    },
+    "jellyfin": {
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.191 'date -u +%Y-%m-%dT%H:%M:%SZ && uptime && free -m && test -x /usr/bin/python3 && test -r /tmp/first-layer-15775.TmL7Vv/first_layer_15775_mesh_verify.py'",
+      "chunk_id": "f9ad54",
+      "wall_time_seconds": 0.641671836,
+      "exit_code": 0,
+      "original_token_count": 75,
+      "output": "2026-09-04T23:21:16Z\n 18:21:16 up 6 days, 14:11,  1 user,  load average: 0.00, 0.00, 0.00\n               total        used        free      shared  buff/cache   available\nMem:           14832        2302        4661         245        8446       12529\nSwap:           4095         398        3697\n"
+    }
+  },
+  "stage": {
+    "path": "/tmp/global-bridge-scope.oqzHr2/regression",
+    "mktemp": {
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.113 'mktemp -d /tmp/global-bridge-scope.XXXXXX'",
+      "chunk_id": "c229dc",
+      "wall_time_seconds": 10.001074778,
+      "session_id": 16448,
+      "original_token_count": 0,
+      "output": ""
+    },
+    "mktemp_completion": {
+      "chunk_id": "a2b9e9",
+      "wall_time_seconds": 0.000003161,
+      "exit_code": 0,
+      "original_token_count": 8,
+      "output": "/tmp/global-bridge-scope.oqzHr2\n"
+    },
+    "copy": {
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.113 'test -d /tmp/first-layer-15775.AeD9pK/regression && cp -a /tmp/first-layer-15775.AeD9pK/regression /tmp/global-bridge-scope.oqzHr2/regression'",
+      "chunk_id": "ae111b",
+      "wall_time_seconds": 0.559832691,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "output": ""
+    },
+    "sync": {
+      "command": "rsync -a --exclude=.git --exclude=__pycache__ --exclude=.pytest_cache --exclude=.mypy_cache --exclude=.ruff_cache --exclude=.venv --exclude=.venvs --exclude=venv --exclude=.tox -e 'ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8' /home/nick/quadratic-minmax-limit-residual-ii/ nick@192.168.1.113:/tmp/global-bridge-scope.oqzHr2/regression/",
+      "chunk_id": "64315f",
+      "wall_time_seconds": 0.342287496,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "output": ""
+    },
+    "source_stage_preserved": "/tmp/first-layer-15775.AeD9pK/regression",
+    "old_stages_modified": false
+  },
+  "artifact_generation": {
+    "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.113 'cd /tmp/global-bridge-scope.oqzHr2/regression && sha256sum src/e1_gmin_m4_prop15764.py src/e1_gmin_m4_prop15774.py && PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python src/e1_gmin_m4_prop15764.py && PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python src/e1_gmin_m4_prop15774.py && sha256sum evidence/e1_gmin_m4_prop15764.json evidence/e1_gmin_m4_prop15774.json'",
+    "chunk_id": "ea7377",
+    "wall_time_seconds": 3.312345778,
+    "exit_code": 0,
+    "original_token_count": 177,
+    "output": "7917016848468b7fcf3b2b5b5fa53d144e9de643b9dc218fde32ed2aa355cd22  src/e1_gmin_m4_prop15764.py\na4f7ee5d22811c3453101763af5f70c034eddff8ffaa42e794b4cbf65e17758c  src/e1_gmin_m4_prop15774.py\nProp. 15.764 minimal-gap-four shell bridge: proved partial bridge\n  odd |H|<=5p: critical level-two deletion forced\n  no-contact ranges and general even-H level-two entry: OPEN\n  residual (ii): OPEN\nwrote /tmp/global-bridge-scope.oqzHr2/regression/evidence/e1_gmin_m4_prop15764.json\n{\"prop\": \"15.774\", \"proved\": true}\n6fec2bc274a704154354ac3c52822bce1841346fb87619cb309eec2fbc0c0263  evidence/e1_gmin_m4_prop15764.json\n2a9ee12ba0837c42d146ef3822c47f59080544ff822fd5a9edc770ccce063891  evidence/e1_gmin_m4_prop15774.json\n"
+  },
+  "generated_artifacts": [
+    {
+      "path": "evidence/e1_gmin_m4_prop15764.json",
+      "sha256": "6fec2bc274a704154354ac3c52822bce1841346fb87619cb309eec2fbc0c0263",
+      "remote_retrieval_command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.113 'cat /tmp/global-bridge-scope.oqzHr2/regression/evidence/e1_gmin_m4_prop15764.json'",
+      "remote_retrieval_exit_code": 0,
+      "controller_action": "Exact byte replacement via apply_patch; no local proof execution",
+      "structural_metadata_changes": [
+        {
+          "path": ".official_unit_entry.even_H_type_I.official_class",
+          "before": "Type I: odd k, s_plus=1, freeness-fail alignment",
+          "after": "general odd-k shell alignment; 15.750 entry unproved"
+        },
+        {
+          "path": ".official_unit_entry.even_H_type_I.official_entry_proved",
+          "before": true,
+          "after": false
+        },
+        {
+          "path": ".official_unit_entry.even_H_type_I.shell_class",
+          "after": "general Type I: odd k, s_plus=1, freeness-fail alignment"
+        },
+        {
+          "path": ".official_unit_entry.even_H_type_I.shell_level_entry_proved",
+          "after": true
+        },
+        {
+          "path": ".official_unit_entry.even_H_type_I.restricted_Type_I_15_750_required_G_size",
+          "after": 13
+        },
+        {
+          "path": ".official_unit_entry.even_H_type_I.restricted_Type_I_15_750_required_Max_plus_identity",
+          "after": "S_G=3-2*f_e on Max+"
+        },
+        {
+          "path": ".official_unit_entry.even_H_type_I.restricted_Type_I_15_750_required_Max_minus_inequalities",
+          "after": "S_G<=-1 and S_G<=-3*f_e on Max-"
+        },
+        {
+          "path": ".official_unit_entry.even_H_type_I.restricted_Type_I_15_750_size_forced",
+          "after": false
+        },
+        {
+          "path": ".official_unit_entry.even_H_type_I.restricted_Type_I_15_750_affine_identity_forced",
+          "after": false
+        },
+        {
+          "path": ".official_unit_entry.even_H_type_I.missing_global_bridge_implication",
+          "after": "general odd-k Type-I no-descent, or a proof forcing the exact 15.750 cardinality and affine-shell hypotheses"
+        },
+        {
+          "path": ".first_open_failure_sizes.even_H",
+          "before": "|H|>=4p+2"
+        },
+        {
+          "path": ".first_open_failure_sizes.even_H_without_level_two",
+          "after": "|H|>=4p+2"
+        },
+        {
+          "path": ".proved.even_H_level_one_shell_alignment",
+          "after": true
+        },
+        {
+          "path": ".proved.even_H_entry_into_restricted_Type_I_15_750",
+          "after": false
+        },
+        {
+          "path": ".not_claimed.2",
+          "before": "Paley realizability of the abstract score model",
+          "after": "that even-H level-two contact supplies the exact 15.750 hypotheses"
+        },
+        {
+          "path": ".not_claimed.3",
+          "before": "closure of residual (ii), E1, L=1/2, or the MathOverflow problem",
+          "after": "Paley realizability of the abstract score model"
+        },
+        {
+          "path": ".not_claimed.4",
+          "after": "closure of residual (ii), E1, L=1/2, or the MathOverflow problem"
+        },
+        {
+          "path": ".even_level_two_branch_scope",
+          "after": "shell alignment proved; general odd-k Type-I no-descent is an unproved part of the minimal-four-gap bridge"
+        }
+      ]
+    },
+    {
+      "path": "evidence/e1_gmin_m4_prop15774.json",
+      "sha256": "2a9ee12ba0837c42d146ef3822c47f59080544ff822fd5a9edc770ccce063891",
+      "remote_retrieval_command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.113 'cat /tmp/global-bridge-scope.oqzHr2/regression/evidence/e1_gmin_m4_prop15774.json'",
+      "remote_retrieval_exit_code": 0,
+      "controller_action": "Exact byte replacement via apply_patch; no local proof execution",
+      "structural_metadata_changes": [
+        {
+          "path": ".minimal_four_gap_bounds.0.even_minimal_H_lower_bound",
+          "before": 164,
+          "after": null
+        },
+        {
+          "path": ".minimal_four_gap_bounds.0.even_level_two_branch_uses_proved_Type_I_15_750",
+          "before": true,
+          "after": false
+        },
+        {
+          "path": ".minimal_four_gap_bounds.0.even_unconditional_bound_status",
+          "after": "RETRACTED_SCOPE_MISMATCH"
+        },
+        {
+          "path": ".minimal_four_gap_bounds.0.unconditional_even_H_frame_lower_bound",
+          "after": 60
+        },
+        {
+          "path": ".minimal_four_gap_bounds.0.even_without_level_two_H_lower_bound",
+          "after": 164
+        },
+        {
+          "path": ".minimal_four_gap_bounds.0.restricted_Type_I_15_750_closed",
+          "after": true
+        },
+        {
+          "path": ".minimal_four_gap_bounds.0.restricted_Type_I_15_750_required_G_size",
+          "after": 85
+        },
+        {
+          "path": ".minimal_four_gap_bounds.0.restricted_Type_I_15_750_required_Max_plus_identity",
+          "after": "S_G=3-2*f_e on Max+"
+        },
+        {
+          "path": ".minimal_four_gap_bounds.0.even_level_two_branch_closed",
+          "after": false
+        },
+        {
+          "path": ".minimal_four_gap_bounds.0.missing_even_global_bridge_implication",
+          "after": "general odd-k Type-I no-descent, or a proof forcing the exact 15.750 cardinality and affine-shell hypotheses"
+        },
+        {
+          "path": ".minimal_four_gap_bounds.1.even_minimal_H_lower_bound",
+          "before": 176,
+          "after": null
+        },
+        {
+          "path": ".minimal_four_gap_bounds.1.even_level_two_branch_uses_proved_Type_I_15_750",
+          "before": true,
+          "after": false
+        },
+        {
+          "path": ".minimal_four_gap_bounds.1.even_unconditional_bound_status",
+          "after": "RETRACTED_SCOPE_MISMATCH"
+        },
+        {
+          "path": ".minimal_four_gap_bounds.1.unconditional_even_H_frame_lower_bound",
+          "after": 64
+        },
+        {
+          "path": ".minimal_four_gap_bounds.1.even_without_level_two_H_lower_bound",
+          "after": 176
+        },
+        {
+          "path": ".minimal_four_gap_bounds.1.restricted_Type_I_15_750_closed",
+          "after": true
+        },
+        {
+          "path": ".minimal_four_gap_bounds.1.restricted_Type_I_15_750_required_G_size",
+          "after": 91
+        },
+        {
+          "path": ".minimal_four_gap_bounds.1.restricted_Type_I_15_750_required_Max_plus_identity",
+          "after": "S_G=3-2*f_e on Max+"
+        },
+        {
+          "path": ".minimal_four_gap_bounds.1.even_level_two_branch_closed",
+          "after": false
+        },
+        {
+          "path": ".minimal_four_gap_bounds.1.missing_even_global_bridge_implication",
+          "after": "general odd-k Type-I no-descent, or a proof forcing the exact 15.750 cardinality and affine-shell hypotheses"
+        },
+        {
+          "path": ".minimal_four_gap_bounds.2.even_minimal_H_lower_bound",
+          "before": 228,
+          "after": null
+        },
+        {
+          "path": ".minimal_four_gap_bounds.2.even_level_two_branch_uses_proved_Type_I_15_750",
+          "before": true,
+          "after": false
+        },
+        {
+          "path": ".minimal_four_gap_bounds.2.even_unconditional_bound_status",
+          "after": "RETRACTED_SCOPE_MISMATCH"
+        },
+        {
+          "path": ".minimal_four_gap_bounds.2.unconditional_even_H_frame_lower_bound",
+          "after": 76
+        },
+        {
+          "path": ".minimal_four_gap_bounds.2.even_without_level_two_H_lower_bound",
+          "after": 228
+        },
+        {
+          "path": ".minimal_four_gap_bounds.2.restricted_Type_I_15_750_closed",
+          "after": true
+        },
+        {
+          "path": ".minimal_four_gap_bounds.2.restricted_Type_I_15_750_required_G_size",
+          "after": 109
+        },
+        {
+          "path": ".minimal_four_gap_bounds.2.restricted_Type_I_15_750_required_Max_plus_identity",
+          "after": "S_G=3-2*f_e on Max+"
+        },
+        {
+          "path": ".minimal_four_gap_bounds.2.even_level_two_branch_closed",
+          "after": false
+        },
+        {
+          "path": ".minimal_four_gap_bounds.2.missing_even_global_bridge_implication",
+          "after": "general odd-k Type-I no-descent, or a proof forcing the exact 15.750 cardinality and affine-shell hypotheses"
+        },
+        {
+          "path": ".minimal_four_gap_bounds.3.even_minimal_H_lower_bound",
+          "before": 264,
+          "after": null
+        },
+        {
+          "path": ".minimal_four_gap_bounds.3.even_level_two_branch_uses_proved_Type_I_15_750",
+          "before": true,
+          "after": false
+        },
+        {
+          "path": ".minimal_four_gap_bounds.3.even_unconditional_bound_status",
+          "after": "RETRACTED_SCOPE_MISMATCH"
+        },
+        {
+          "path": ".minimal_four_gap_bounds.3.unconditional_even_H_frame_lower_bound",
+          "after": 88
+        },
+        {
+          "path": ".minimal_four_gap_bounds.3.even_without_level_two_H_lower_bound",
+          "after": 264
+        },
+        {
+          "path": ".minimal_four_gap_bounds.3.restricted_Type_I_15_750_closed",
+          "after": true
+        },
+        {
+          "path": ".minimal_four_gap_bounds.3.restricted_Type_I_15_750_required_G_size",
+          "after": 127
+        },
+        {
+          "path": ".minimal_four_gap_bounds.3.restricted_Type_I_15_750_required_Max_plus_identity",
+          "after": "S_G=3-2*f_e on Max+"
+        },
+        {
+          "path": ".minimal_four_gap_bounds.3.even_level_two_branch_closed",
+          "after": false
+        },
+        {
+          "path": ".minimal_four_gap_bounds.3.missing_even_global_bridge_implication",
+          "after": "general odd-k Type-I no-descent, or a proof forcing the exact 15.750 cardinality and affine-shell hypotheses"
+        }
+      ]
+    }
+  ],
+  "focused_tests": {
+    "whole_files": [
+      "tests/test_prop15764.py",
+      "tests/test_prop15774.py",
+      "tests/test_prop15775.py",
+      "tests/test_prop15750.py",
+      "tests/test_affine_parity_cube_floor.py",
+      "tests/test_small_mass_spectrum.py",
+      "tests/test_prop15168.py"
+    ],
+    "ancillary_status_only_nodes": [
+      "tests/test_gsum_hinge_honesty.py::test_e1_and_L_open_honest",
+      "tests/test_prop15193.py::test_e1_still_open",
+      "tests/test_prop15193.py::test_global_close_names_follow_live_gate_not_bounded_history",
+      "tests/test_prop15169.py::test_legacy_e1_and_is_only_the_old_narrow_scope",
+      "tests/test_prop15169.py::test_prove_and_main_honest",
+      "tests/test_prop15586.py::test_reduction_is_proved_but_is_not_the_floor",
+      "tests/test_prop15587.py::test_does_not_flip_other_leftovers",
+      "tests/test_prop15595.py::test_scope_e1_closed_general_is_not_a_close",
+      "tests/test_global_qvar.py::test_L_status_not_baked",
+      "tests/test_qvar_k_ge_7.py::test_qvar_k_ge_7_wiring_no_handwritten_true",
+      "tests/test_leftover1_qvar_principal.py::test_other_leftovers_are_live_units_not_baked_false",
+      "tests/test_r1_principal_pge11.py::test_leftover2_and_L_untouched"
+    ],
+    "initial": {
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.113 'cd /tmp/global-bridge-scope.oqzHr2/regression && PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -q -o cache_dir=/tmp/global-bridge-scope.oqzHr2/pytest-cache-focused --junitxml=/tmp/global-bridge-scope.oqzHr2/focused.xml tests/test_prop15764.py tests/test_prop15774.py tests/test_prop15775.py tests/test_prop15750.py tests/test_affine_parity_cube_floor.py tests/test_small_mass_spectrum.py tests/test_prop15168.py tests/test_gsum_hinge_honesty.py::test_e1_and_L_open_honest tests/test_prop15193.py::test_e1_still_open tests/test_prop15193.py::test_global_close_names_follow_live_gate_not_bounded_history tests/test_prop15169.py::test_legacy_e1_and_is_only_the_old_narrow_scope tests/test_prop15169.py::test_prove_and_main_honest tests/test_prop15586.py::test_reduction_is_proved_but_is_not_the_floor tests/test_prop15587.py::test_does_not_flip_other_leftovers tests/test_prop15595.py::test_scope_e1_closed_general_is_not_a_close tests/test_global_qvar.py::test_L_status_not_baked tests/test_qvar_k_ge_7.py::test_qvar_k_ge_7_wiring_no_handwritten_true tests/test_leftover1_qvar_principal.py::test_other_leftovers_are_live_units_not_baked_false tests/test_r1_principal_pge11.py::test_leftover2_and_L_untouched'",
+      "chunk_id": "48567d",
+      "wall_time_seconds": 10.000614065,
+      "session_id": 58321,
+      "original_token_count": 0,
+      "output": ""
+    },
+    "subsequent_output_chunks": [
+      {
+        "chunk_id": "79d3ba",
+        "wall_time_seconds": 5.000970056,
+        "session_id": 58321,
+        "original_token_count": 96,
+        "output": "bringing up nodes...\nbringing up nodes...\n\n........................................................................ [ 23%]\n........................................................................ [ 46%]\n........................................................................ [ 69%]\n........................................................................ [ 92%]\n....................."
+      },
+      {
+        "chunk_id": "7ea7ab",
+        "wall_time_seconds": 0.000003027,
+        "exit_code": 0,
+        "original_token_count": 15,
+        "output": ".                                                   [100%]\n"
+      }
+    ],
+    "final_exit_code": 0,
+    "tests": 310,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 80.506,
+    "junit_path": "/tmp/global-bridge-scope.oqzHr2/focused.xml",
+    "junit_sha256": "8054edbafd3c439a10b8e1544f969d5eba50c9033b8763c8a1fa16d38ba0a461",
+    "junit_summary_provenance": "Root agent directly read the completed JUnit XML and supplied exact counts, timing, and SHA after this agent's summary call was interrupted.",
+    "full_old_QVAR_or_493_test_suite_run": false
+  },
+  "independent_json_audits": {
+    "status": "STAGED_NOT_RUN",
+    "reason": "Optional transfers completed, but the combined tool call was subsequently blocked/interrupted before summary retrieval. Root directed no further audit or test expansion.",
+    "verifier_source_sha256": "b9aea74df10605545244d00c8440db547920548702dc18d08ffb9fb4f513ed6c",
+    "verifier_is_only_json_and_literal_source_scope_audit": true,
+    "proof_modules_imported": false,
+    "nodes": [
+      {
+        "node": "NUKA",
+        "stage": {
+          "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.192 'mktemp -d /tmp/global-bridge-scope.XXXXXX'",
+          "path": "/tmp/global-bridge-scope.9evWY6",
+          "chunk_id": "c8c428",
+          "wall_time_seconds": 0.337521053,
+          "exit_code": 0,
+          "original_token_count": 8,
+          "output": "/tmp/global-bridge-scope.9evWY6\n"
+        },
+        "sync": {
+          "command": "scp -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 /tmp/global-bridge-ledger-verifier.ABjZla/verify_scope_ledger.py /home/nick/quadratic-minmax-limit-residual-ii/evidence/e1_gmin_m4_prop15764.json /home/nick/quadratic-minmax-limit-residual-ii/evidence/e1_gmin_m4_prop15774.json /home/nick/quadratic-minmax-limit-residual-ii/src/e1_gmin_m4_prop15750.py nick@192.168.1.192:/tmp/global-bridge-scope.9evWY6/",
+          "chunk_id": "931a05",
+          "wall_time_seconds": 0.127052018,
+          "exit_code": 0,
+          "original_token_count": 0,
+          "output": ""
+        },
+        "audit_run": false,
+        "audit_result": null
+      },
+      {
+        "node": "jellyfin",
+        "stage": {
+          "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.191 'mktemp -d /tmp/global-bridge-scope.XXXXXX'",
+          "path": "/tmp/global-bridge-scope.a5IhWV",
+          "chunk_id": "31b74f",
+          "wall_time_seconds": 0.646135205,
+          "exit_code": 0,
+          "original_token_count": 8,
+          "output": "/tmp/global-bridge-scope.a5IhWV\n"
+        },
+        "sync": {
+          "command": "scp -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 /tmp/global-bridge-ledger-verifier.ABjZla/verify_scope_ledger.py /home/nick/quadratic-minmax-limit-residual-ii/evidence/e1_gmin_m4_prop15764.json /home/nick/quadratic-minmax-limit-residual-ii/evidence/e1_gmin_m4_prop15774.json /home/nick/quadratic-minmax-limit-residual-ii/src/e1_gmin_m4_prop15750.py nick@192.168.1.191:/tmp/global-bridge-scope.a5IhWV/",
+          "chunk_id": "45fcdf",
+          "wall_time_seconds": 0.638830114,
+          "exit_code": 0,
+          "original_token_count": 0,
+          "output": ""
+        },
+        "audit_run": false,
+        "audit_result": null
+      }
+    ]
+  },
+  "source_and_artifact_sha256": {
+    "src/e1_gmin_m4_prop15764.py": "7917016848468b7fcf3b2b5b5fa53d144e9de643b9dc218fde32ed2aa355cd22",
+    "src/e1_gmin_m4_prop15774.py": "a4f7ee5d22811c3453101763af5f70c034eddff8ffaa42e794b4cbf65e17758c",
+    "src/e1_gmin_m4_prop15750.py": "d7c95ba98b4cd1f5b2cb21d02e9e90fc47e02487d55d8c090ca181baab451322",
+    "src/e1_gmin_m4_prop15775.py": "df04dea47059507fa0adcecfaf5edd2c8fc8c6515fd0d07538a1a8498d52ff0f",
+    "tests/test_prop15764.py": "23e44c27fd8e0a8cf2b17ceb6ac4b516df17a6546ed9ce84c8ba3998220399d7",
+    "tests/test_prop15774.py": "430b81ebc86b0aaf6726e8c50f5070aa3200a5208d1ad4d955c88e858b2e23a3",
+    "tests/test_prop15750.py": "194aabc70db0de80c221071b5579b43c5bb99d18892f6f92f526cd3075d8d6d1",
+    "tests/test_prop15775.py": "05f737fa32a7f5763aae0958c6585cc78c384235bfc136fa4ad7ec3d85fc63e1",
+    "evidence/e1_gmin_m4_prop15764.json": "6fec2bc274a704154354ac3c52822bce1841346fb87619cb309eec2fbc0c0263",
+    "evidence/e1_gmin_m4_prop15774.json": "2a9ee12ba0837c42d146ef3822c47f59080544ff822fd5a9edc770ccce063891",
+    "evidence/e1_gmin_m4_prop15775.json": "a1f7edfc1d8a3e45f49085181d0c15fa3099d70869ab7a5ff8df6b86375bdda2",
+    "evidence/first_layer_mesh_replay.json": "d1dc6225885946b3b7af694fa2f222aa96d6f905723dfbc7f6b4d352c815033e",
+    "evidence/first_layer_regression.json": "460fb76d9a00d72a43bd9351c85bf749b7992a812dd1c7c095cdb4daebf20cfe"
+  },
+  "local_hash_readback": {
+    "chunk_id": "3a2c38",
+    "wall_time_seconds": 0.000013125,
+    "exit_code": 0,
+    "original_token_count": 312,
+    "output": "7917016848468b7fcf3b2b5b5fa53d144e9de643b9dc218fde32ed2aa355cd22  src/e1_gmin_m4_prop15764.py\na4f7ee5d22811c3453101763af5f70c034eddff8ffaa42e794b4cbf65e17758c  src/e1_gmin_m4_prop15774.py\nd7c95ba98b4cd1f5b2cb21d02e9e90fc47e02487d55d8c090ca181baab451322  src/e1_gmin_m4_prop15750.py\ndf04dea47059507fa0adcecfaf5edd2c8fc8c6515fd0d07538a1a8498d52ff0f  src/e1_gmin_m4_prop15775.py\n23e44c27fd8e0a8cf2b17ceb6ac4b516df17a6546ed9ce84c8ba3998220399d7  tests/test_prop15764.py\n430b81ebc86b0aaf6726e8c50f5070aa3200a5208d1ad4d955c88e858b2e23a3  tests/test_prop15774.py\n194aabc70db0de80c221071b5579b43c5bb99d18892f6f92f526cd3075d8d6d1  tests/test_prop15750.py\n05f737fa32a7f5763aae0958c6585cc78c384235bfc136fa4ad7ec3d85fc63e1  tests/test_prop15775.py\n6fec2bc274a704154354ac3c52822bce1841346fb87619cb309eec2fbc0c0263  evidence/e1_gmin_m4_prop15764.json\n2a9ee12ba0837c42d146ef3822c47f59080544ff822fd5a9edc770ccce063891  evidence/e1_gmin_m4_prop15774.json\na1f7edfc1d8a3e45f49085181d0c15fa3099d70869ab7a5ff8df6b86375bdda2  evidence/e1_gmin_m4_prop15775.json\nd1dc6225885946b3b7af694fa2f222aa96d6f905723dfbc7f6b4d352c815033e  evidence/first_layer_mesh_replay.json\n460fb76d9a00d72a43bd9351c85bf749b7992a812dd1c7c095cdb4daebf20cfe  evidence/first_layer_regression.json\n"
+  },
+  "preservation": {
+    "prop15750_source_unchanged": true,
+    "prop15775_source_unchanged": true,
+    "prop15775_evidence_unchanged": true,
+    "earlier_first_layer_mesh_receipt_unchanged": true
+  },
+  "documentation_gate": {
+    "owner": "root",
+    "status": "NOT RUN BY THIS AGENT; ROOT OWNS THE SEPARATE FINAL 17-TEST GATE",
+    "no_duplicate_docgate_launched": true
+  },
+  "controller_mathematical_runs_or_tests": false,
+  "packages_installed": false,
+  "new_prime_graph_or_boundary_census": false,
+  "global_bridge_closed": false,
+  "residual_ii_closed": false,
+  "E1_closed": false,
+  "limit_closed": false
+}

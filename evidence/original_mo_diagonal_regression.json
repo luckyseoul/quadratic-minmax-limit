@@ -1,0 +1,157 @@
+{
+  "date_utc": "2026-09-05",
+  "classification": "Exact finite cross-checks of analytic identities plus live documentation gate; no global closure",
+  "repository": "/home/nick/quadratic-minmax-limit-residual-ii",
+  "branch": "residual/p13-u6-common-moments",
+  "base_head": "a25fe0ab81830438832ec7e581257f257dbe1c5d",
+  "worktree_dirty": true,
+  "host": "soulkiller",
+  "host_address": "192.168.1.113",
+  "remote_stage": "/tmp/original-mo-diagonal-replay.Ap9ex8",
+  "local_receipt_directory": "/tmp/original-mo-diagonal-receipt.xTvJSp",
+  "capability": "One CPU pytest worker with BLAS/OMP/MKL threads fixed to one; no accelerator workload or installation",
+  "preflight": {
+    "timestamp_utc": "2026-09-05T02:51:16Z",
+    "load_averages": [
+      2.83,
+      2.63,
+      2.53
+    ],
+    "available_memory_gib_reported": 55,
+    "interpreter": "/home/nick/.venvs/mo-exact/bin/python"
+  },
+  "scope": {
+    "original_mo_limit_closed": false,
+    "multiplier_two_closed": false,
+    "controller_test_execution": false,
+    "source_or_test_changes_after_initial_replay": false,
+    "unchanged_technical_tests_rerun": false,
+    "all_pass_single_combined_run": false,
+    "new_signing_or_orientation_census": false
+  },
+  "runs": [
+    {
+      "name": "initial_combined",
+      "timestamp_utc": "2026-09-05T02:55:19.463765+00:00",
+      "command_in_remote_stage": "env PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -o addopts= -q -n 0 --tb=short --junitxml=replay-junit.xml tests/test_original_mo_diagonal_moments.py tests/test_original_mo_diagonal_compatibility.py tests/test_original_mo_two_half_geometry.py tests/test_main_chain_docs.py",
+      "exit_code": 1,
+      "tests": 82,
+      "passed": 79,
+      "failures": 3,
+      "errors": 0,
+      "skipped": 0,
+      "junit_seconds": 2.557,
+      "pytest_reported_seconds": 2.56,
+      "per_file": {
+        "tests/test_original_mo_diagonal_moments.py": {
+          "tests": 39,
+          "passed": 39,
+          "failures": 0
+        },
+        "tests/test_original_mo_diagonal_compatibility.py": {
+          "tests": 18,
+          "passed": 18,
+          "failures": 0
+        },
+        "tests/test_original_mo_two_half_geometry.py": {
+          "tests": 8,
+          "passed": 8,
+          "failures": 0
+        },
+        "tests/test_main_chain_docs.py": {
+          "tests": 17,
+          "passed": 14,
+          "failures": 3
+        }
+      },
+      "failed_tests": [
+        "tests/test_main_chain_docs.py::test_main_chain_L_open_and_docs_ok",
+        "tests/test_main_chain_docs.py::test_prop15775_closed_tail_and_power_band_keep_global_gates_open",
+        "tests/test_main_chain_docs.py::test_global_bridge_scope_requires_literal_type_I_hypotheses"
+      ],
+      "failure_cause": "Temporary stage omitted pinned historical JSON certificates. Full traces show FileNotFoundError wrapped by ExactCertificateError or ArithmeticError; no failed mathematical assertion.",
+      "input_count": 1231,
+      "manifest": "input-initial-sha256.txt",
+      "manifest_sha256": "62cfd259f26b963f2e63d486cd0bef248a92e88d2cf3c3c3e77bb642b2bf2075",
+      "log": "replay-initial.log",
+      "log_sha256": "08627acb1b0147208f4306aeb55b948af6712054f124a3d15755fc08f08855f7",
+      "junit": "replay-initial-junit.xml",
+      "junit_sha256": "2af5ebbbe421ff19199bc0533193debe11ecb5b78385db51d9040b7175eabd1b",
+      "junit_rename_after_run": "replay-junit.xml was preserved as replay-initial-junit.xml."
+    },
+    {
+      "name": "corrected_inputs_docs_only",
+      "timestamp_utc": "2026-09-05T02:57:07.737661+00:00",
+      "command_in_remote_stage": "env PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -o addopts= -q -n 0 --tb=short --junitxml=replay-corrected-docs-junit.xml tests/test_main_chain_docs.py",
+      "exit_code": 0,
+      "tests": 17,
+      "passed": 17,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "junit_seconds": 2.918,
+      "pytest_reported_seconds": 2.92,
+      "input_count": 1234,
+      "manifest": "input-corrected-sha256.txt",
+      "manifest_sha256": "093019dee81db35a07860948a6f560697c0f2a9c20663759fda139fd2d05d57b",
+      "log": "replay-corrected-docs.log",
+      "log_sha256": "00acc3a9ad726b225801c8fdd5c0e908840109ca2a5294ecf28de8b3a80de57c",
+      "junit": "replay-corrected-docs-junit.xml",
+      "junit_sha256": "80228fe8b341a8c624cb36a2113eaea4d166449c123bf2cc4d42ad8c8f0a7453"
+    }
+  ],
+  "stage_correction": {
+    "all_1231_original_inputs_unchanged": true,
+    "all_source_test_and_markdown_inputs_unchanged": true,
+    "sha256sum_initial_manifest_check_exit": 0,
+    "sha256sum_corrected_manifest_after_replay_exit": 0,
+    "sha256sum_corrected_manifest_against_local_worktree_exit": 0,
+    "manifest_diff": "Exactly three added lines, no removed or changed lines",
+    "added_inputs": {
+      "evidence/e1_type_i_badcase_farkas_p5.json": "f3e8c8a0f85fcaf95bc5b0556eced1a3699735e3bc11b78285bb4d25abd8008a",
+      "evidence/e1_type_i_badcase_farkas_p7.json": "40a6e5156817a421dcc7debe75a55af5749ffd6cdcb12cda78ead75a3d0cc8db",
+      "evidence/e1_gmin_m4_prop15751.json": "b25b0f8896fccfb01c48c92b6266724bf484a0b14f4841655229a647bc2a61a7"
+    },
+    "excluded_generated_outputs": [
+      ".pytest_cache",
+      "replay logs and JUnit",
+      "input manifests",
+      "evidence/e1_gmin_m4_prop15168.json"
+    ]
+  },
+  "key_input_sha256": {
+    "src/original_mo_diagonal_moments.py": "e0f52f8ba0c114db4bf7c6de5eb33dd735bc2642b087cbc83f9502884ea0bdb9",
+    "src/original_mo_diagonal_compatibility.py": "543ff829aeab20a231500cad22df57294252e7407fc15b79832d4e3f9e2ff01f",
+    "tests/test_original_mo_diagonal_moments.py": "cea44360543adc26e8a4068e2f0d9cff58a564cc180f4521696ef4855bc1ec2d",
+    "tests/test_original_mo_diagonal_compatibility.py": "61af7da8697db6b5d453348c6f16a5a79ad9139b3123c7f29525b1e9ecce3a75",
+    "tests/test_original_mo_two_half_geometry.py": "9f44937e4a7fe20d0c20290b2603aa6f804014f2da3d172f371bff3649028f90",
+    "tests/test_main_chain_docs.py": "405ecfd074db953c347579f1013f7223e85281f5b95db71e1d1c615a4bf0b40c",
+    "evidence/NOTE_2026-09-05_ACTUAL_DIAGONAL_MIXED_MOMENTS.md": "0ad755fb6d965d5d2c374d5ca12b32a4a044a0a692d3e340bc58d14cf5b28629",
+    "evidence/NOTE_2026-09-05_DIAGONAL_PAYMENT_COMPATIBILITY.md": "58d96266ce423979b6af02556c0e005be0a40c019b6ff4986832a998d2ebeae6",
+    "AGENTS.md": "2d11285ad073753205909ce90079e4e33816b7c9aab237b70576a01bf142576a",
+    "STATUS.md": "cb76d520e0a93c17b79ea830bd8776c1c80e13f621f680f818f9bc584cd20bee",
+    "HANDOFF.md": "94f508394535b0bed28ea0dbdfbc6602dea84ae301534115d44182d003a385ca",
+    "README.md": "2362f01a4c8b61f33275fa6e93a57cb311536b1ad2a35f980d93899018724ef2",
+    "solution.md": "e8745d243bdea3cb474c5d092d7248361b2313726b00da2e1445961543a5f90e",
+    "evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md": "962f6f280a7a0beb72a5425d128bc8ae7ed68e6b8f1119a28fc7d3a5e6f603ed"
+  },
+  "final_verification": {
+    "distinct_tests_passed_across_scoped_runs": 82,
+    "technical_and_geometry_tests_passed": 65,
+    "documentation_tests_passed_on_corrected_replay": 17,
+    "interpretation": "The initial combined run failed only because three pinned certificate inputs were absent from its temporary snapshot. Only documentation tests were rerun after adding them; all original source, test, and Markdown bytes were unchanged."
+  },
+  "analytic_results": {
+    "conjugate_pair_cost": "c + abs(u(z) + v(w) - d0(z,w))",
+    "real_function_relaxation": "Exact maximum alternating-cycle threshold, including degenerate two-cycles; quadratic skew-sign realization is additional.",
+    "coherent_cross_result": "For R=+C or R=-C, diagonal skew cannot reduce the zero-skew-diagonal baseline.",
+    "physical_order_four_example": {
+      "real_global_minimum": 4,
+      "individual_pair_threshold": 8,
+      "additive_cycle_relaxation": 10,
+      "skew_sign_diagonal_minimum": 12,
+      "scope": "One fixed cross signing; no asymptotic obstruction or exclusion of other cross choices."
+    },
+    "mixed_moments": "Exact row/diagonal and joint-left-right covariance identities, with repeated-edge fourth-phase terms retained; no pointwise bound inferred."
+  }
+}

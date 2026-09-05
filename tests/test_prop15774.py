@@ -105,8 +105,17 @@ def test_two_residual_layers_recompute_all_budgets_and_sign(p, s):
 def test_minimal_bridge_bounds_keep_unproved_all_size_quantifier(p):
     rec = proof.minimal_four_gap_consequences(p)
     assert rec["odd_minimal_H_lower_bound"] == 5 * p + 6
-    assert rec["even_minimal_H_lower_bound"] == (6 * p + 6 if p >= 37 else 6 * p - 10)
+    assert rec["even_minimal_H_lower_bound"] is None
+    assert rec["even_unconditional_bound_status"] == "RETRACTED_SCOPE_MISMATCH"
+    assert rec["unconditional_even_H_frame_lower_bound"] == 2 * p + 2
+    assert rec["even_without_level_two_H_lower_bound"] == (6 * p + 6 if p >= 37 else 6 * p - 10)
     assert rec["odd_without_level_three_H_lower_bound"] == (7 * p + 8 if p >= 37 else 7 * p - 10)
+    assert rec["restricted_Type_I_15_750_closed"] is True
+    assert rec["restricted_Type_I_15_750_required_G_size"] == 3 * p - 2
+    assert rec["restricted_Type_I_15_750_required_Max_plus_identity"] == "S_G=3-2*f_e on Max+"
+    assert rec["even_level_two_branch_uses_proved_Type_I_15_750"] is False
+    assert rec["even_level_two_branch_closed"] is False
+    assert "general odd-k" in rec["missing_even_global_bridge_implication"]
     assert rec["all_size_localization_proved"] is False
     assert rec["eventual_E1_proved"] is False
 
@@ -182,9 +191,42 @@ def test_false_minimal_consequence_dependency_is_not_discarded(monkeypatch, depe
         proof.minimal_four_gap_consequences(37)
 
 
-def test_missing_type_I_theorem_blocks_even_minimal_bound(monkeypatch):
+def test_missing_restricted_type_I_theorem_blocks_its_scope_receipt(monkeypatch):
     monkeypatch.setattr(proof, "type_I_multilevel_bad_case_closed_all_primes", lambda: False)
     with pytest.raises(ArithmeticError, match="minimal consequence dependency"):
+        proof.minimal_four_gap_consequences(37)
+
+
+def test_true_restricted_type_I_boolean_cannot_produce_general_even_bound(monkeypatch, p):
+    monkeypatch.setattr(proof, "type_I_multilevel_bad_case_closed_all_primes", lambda: True)
+    rec = proof.minimal_four_gap_consequences(p)
+    assert rec["restricted_Type_I_15_750_closed"] is True
+    assert rec["restricted_Type_I_15_750_required_G_size"] == 3 * p - 2
+    assert rec["even_minimal_H_lower_bound"] is None
+    assert rec["unconditional_even_H_frame_lower_bound"] == 2 * p + 2
+    assert rec["even_level_two_branch_closed"] is False
+    assert rec["even_without_level_two_H_lower_bound"] > 0
+    assert rec["proved"] is True
+
+
+@pytest.mark.parametrize("field,value", [
+    ("shell_level_entry_proved", False),
+    ("official_entry_proved", True),
+    ("sharp_H_size_floor", 1),
+    ("sharp_G_size_floor", 1),
+    ("restricted_Type_I_15_750_required_G_size", 1),
+    ("restricted_Type_I_15_750_required_Max_plus_identity", "s_plus=1 only"),
+    ("restricted_Type_I_15_750_required_Max_minus_inequalities", "S_G<=-1 only"),
+    ("restricted_Type_I_15_750_size_forced", True),
+    ("restricted_Type_I_15_750_affine_identity_forced", True),
+])
+def test_even_range_and_affine_scope_guards_fail_closed(monkeypatch, field, value):
+    actual = proof.official_unit_entry_ledger
+    def changed(p, h_is_odd):
+        rec = actual(p, h_is_odd)
+        return rec if h_is_odd else {**rec, field: value}
+    monkeypatch.setattr(proof, "official_unit_entry_ledger", changed)
+    with pytest.raises(ArithmeticError, match="official bridge dependency"):
         proof.minimal_four_gap_consequences(37)
 
 

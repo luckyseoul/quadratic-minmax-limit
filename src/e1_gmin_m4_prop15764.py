@@ -38,9 +38,13 @@ is parity-impossible.  The corresponding exact statement is instead
 
     some m_eps(H\{e})<=2    <=>    some T_H^eps(y)=2,         (4)
 
-and the deletion level is one (the Type-I side of the ledger).
+and the deletion level is one (the general Type-I shell convention).
 Every deletion row at level one again has ``b_e=+1``; the same phase
-normalization places it in the plus Type-I convention.
+normalization places it in the plus Type-I convention.  This is NOT entry
+into the proved 15.750 unit: that theorem additionally assumes
+``|G|=3p-2`` and ``S_G=3-2*f_e`` on every Max+ row.  A critical even-H
+row supplies neither hypothesis.  General odd-k Type-I no-descent is a
+missing implication inside the global minimal-four-gap bridge.
 
 The signed frame identity ``E[T_H^eps]=|H|/p`` now proves a useful genuine
 bridge.  If odd ``|H|`` has no level-three row, both signed shells have score
@@ -58,9 +62,10 @@ Consequently
 
 For even ``|H|``, failure of (4) forces ``|H|>=4p``; equality is bi-tight
 level four and is excluded by Proposition 15.720, so failure requires
-``|H|>=4p+2``.  For odd ``|H|``, (5) leaves ``|H|>=5p+2``.  No theorem in the
-repository currently excludes these two ranges, so this proposition does not
-close residual (ii), E1, or the MathOverflow problem and flips no predicate.
+``|H|>=4p+2`` in the no-level-two branch.  The even level-two branch is
+not closed merely by its shell contact.  For odd ``|H|``, (5) leaves
+``|H|>=5p+2`` in the no-level-three branch.  This proposition does not
+close the global bridge, residual (ii), E1, or the MathOverflow problem.
 
 Finally, ``abstract_method_barrier()`` specifies a finite max-of-affine score
 model at ``p=5, |H|=25`` satisfying the parity, signed-frame first moments,
@@ -159,7 +164,12 @@ def paley_minus_phase_normalization() -> dict[str, object]:
 
 
 def official_unit_entry_ledger(p: int, h_is_odd: bool) -> dict[str, object]:
-    """Record what a critical row supplies beyond its numerical level."""
+    """Separate proved shell alignment from actual restricted-unit entry.
+
+    The odd-H row supplies the official residual-(ii) hypotheses.  The
+    even-H row supplies level-one alignment only: the literal 15.750
+    cardinality and full Max+ affine identity are not consequences of it.
+    """
     _validate_prime(p)
     if not isinstance(h_is_odd, bool):
         raise ValueError("h_is_odd must be Boolean")
@@ -194,8 +204,23 @@ def official_unit_entry_ledger(p: int, h_is_odd: bool) -> dict[str, object]:
         "bi_tight_level_two_excluded": level2_empty,
         "sharp_H_size_floor": 2 * p + 2,
         "sharp_G_size_floor": 2 * p + 1,
-        "official_class": "Type I: odd k, s_plus=1, freeness-fail alignment",
-        "official_entry_proved": bool(level2_empty and phase["proved"]),
+        "shell_class": "general Type I: odd k, s_plus=1, freeness-fail alignment",
+        "shell_level_entry_proved": bool(level2_empty and phase["proved"]),
+        "restricted_Type_I_15_750_required_G_size": 3 * p - 2,
+        "restricted_Type_I_15_750_required_Max_plus_identity": (
+            "S_G=3-2*f_e on Max+"
+        ),
+        "restricted_Type_I_15_750_required_Max_minus_inequalities": (
+            "S_G<=-1 and S_G<=-3*f_e on Max-"
+        ),
+        "restricted_Type_I_15_750_size_forced": False,
+        "restricted_Type_I_15_750_affine_identity_forced": False,
+        "official_class": "general odd-k shell alignment; 15.750 entry unproved",
+        "official_entry_proved": False,
+        "missing_global_bridge_implication": (
+            "general odd-k Type-I no-descent, or a proof forcing the exact "
+            "15.750 cardinality and affine-shell hypotheses"
+        ),
     }
 
 
@@ -214,9 +239,12 @@ def no_bridge_size_floor(p: int, h_is_odd: bool) -> int:
 def minimal_gap4_shell_bridge_closed_general() -> bool:
     """Global implication into the historical E1 units is still open.
 
-    Proposition 15.764 proves the odd ``|H|<=5p`` range only.  The even
-    ``|H|>=4p+2`` and odd ``|H|>=5p+2`` regimes remain outside the old
-    four-unit ledger, so this predicate must stay false.
+    Proposition 15.764 proves the odd ``|H|<=5p`` range only.  Even
+    shell contact two supplies general odd-k level-one alignment, not
+    the restricted 15.750 entry; that missing no-descent implication
+    belongs to this same bridge.  The no-contact regimes are also open.
+    Mere contact two for an even minimum-cardinality witness therefore
+    cannot make this global predicate true.
     """
     return False
 
@@ -484,14 +512,20 @@ def theorem_record() -> dict[str, object]:
         "proved_sufficient_range": "|H| odd and |H|<=5p",
         "level_five_boundary": level5,
         "first_open_failure_sizes": {
-            "even_H": "|H|>=4p+2",
+            "even_H_without_level_two": "|H|>=4p+2",
             "odd_H": "|H|>=5p+2",
         },
+        "even_level_two_branch_scope": (
+            "shell alignment proved; general odd-k Type-I no-descent is "
+            "an unproved part of the minimal-four-gap bridge"
+        ),
         "abstract_method_barrier": abstract_method_barrier(),
         "proved": {
             "parity_equivalence": True,
             "odd_H_at_most_5p_bridge": level5["deeper_case_excluded_all_primes"],
             "even_H_bridge_to_residual_ii": False,
+            "even_H_level_one_shell_alignment": True,
+            "even_H_entry_into_restricted_Type_I_15_750": False,
             "large_odd_H_bridge": False,
             "minimal_gap4_shell_bridge_closed_general": (
                 minimal_gap4_shell_bridge_closed_general()
@@ -509,6 +543,7 @@ def theorem_record() -> dict[str, object]:
         "not_claimed": [
             "that every minimal four-gap H is odd",
             "that every odd minimal four-gap H has size at most 5p",
+            "that even-H level-two contact supplies the exact 15.750 hypotheses",
             "Paley realizability of the abstract score model",
             "closure of residual (ii), E1, L=1/2, or the MathOverflow problem",
         ],
@@ -521,7 +556,7 @@ def main() -> dict[str, object]:
     EV.write_text(json.dumps(out, indent=2) + "\n")
     print("Prop. 15.764 minimal-gap-four shell bridge: proved partial bridge")
     print("  odd |H|<=5p: critical level-two deletion forced")
-    print("  even |H|>=4p+2 and odd |H|>=5p+2: OPEN")
+    print("  no-contact ranges and general even-H level-two entry: OPEN")
     print("  residual (ii): OPEN")
     print("wrote", EV)
     return out

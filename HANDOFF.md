@@ -2,6 +2,127 @@
 
 **Current mathematical status: L OPEN.**
 
+## Active global target and scope correction (2026-09-04)
+
+The user selected a global obligation, not a further support layer.
+The active target is the **global minimal-four-gap bridge**. Choose H
+of minimum cardinality among all signings with norm at most `Phi(C)-4`;
+then H has gap four and every deletion has gap two. A successful proof
+must put such a witness into an actually proved/classified unit for
+every support size, or exclude it directly.
+
+An audited missing hypothesis changes the even branch: contact at signed
+shell level two supplies only a general odd-k deletion with minimum one.
+Proposition 15.750 requires `k=3p-2` and `S_G=3-2*f_e on Max+`;
+neither follows from that contact or the current minimum-cardinality
+argument. The general odd-k implication is therefore explicitly inside
+the open bridge. The old unconditional even-minimal-H bound in 15.774
+is retracted; its bound is valid **without a signed level-two row**.
+The exact scope audit is
+`evidence/NOTE_2026-09-04_GLOBAL_BRIDGE_TYPE_I_SCOPE_AUDIT.md`.
+The restricted 15.750 theorem and every 15.775 conclusion are unchanged.
+
+The attack plan is to use full cardinality-minimal deletion/insertion
+exchanges, while retaining every signed Boolean state's slack; test a
+global contact/entry argument; and independently audit the forcing step.
+Switching-minimal cuts alone and a larger bounded-quadratic support band
+do not satisfy this target. The old 321-test record below remains a
+historical byte-specific receipt, not validation of this scope correction.
+Correction verification: **310 focused tests passed**, with zero failures,
+errors, or skips, in 80.506 seconds on soulkiller in the new stage
+`/tmp/global-bridge-scope.oqzHr2/regression`. The regenerated 15.764
+and 15.774 JSON ledgers contain only the audited scope changes; the
+15.775 proof, source, tests, and artifact retain their preceding hashes.
+The final documentation replay, exact commands, and byte-specific receipts
+are recorded separately in `evidence/global_bridge_scope_mesh_replay.json`
+and `evidence/global_bridge_scope_regression.json`. This work is uncommitted;
+no new global closure or numbered proposition is claimed.
+
+This global attack did not supply the forcing step. For a signed state z,
+put `a_z(e)=epsilon*C_e*x_i*x_j` and
+`Delta_z=Phi(A)-epsilon*q_A(x)`. A cardinality-improving exchange
+`D subset H`, `F subset H^c`, `|D|>|F|` would need
+`2*(sum_D a_z-sum_F a_z)<=Delta_z` for **every** signed state.
+Neither the neutral-exchange containment conditions nor switching-distance
+minimality force such an exchange with the current hypotheses.
+
+The independently checked alternate reduction is conditional: if a
+gap-two B with a dangerous edge has a signed Boolean state of energy
+`Phi(C)-4`, switching that state onto a same-phase C-eigenvector with
+positive distinguished edge gives a genuine residual-(ii) entry.
+Existence of that energy level is unproved; parity alone does not give it.
+Do not repeat this as an unconditional bridge, or count either conditional
+reduction as a new closure. Both global obligations remain OPEN.
+
+## Current proved advance: Proposition 15.775 (2026-09-04)
+
+The formerly open layer `t=q+3,k=5p+5`, `q=(p-1)/2`, is now
+**closed for every prime `p>=259201`**, with all boundary sizes and
+both direction types. This work follows the pushed checkpoint below;
+it is not yet committed or pushed.
+
+The proof in
+`evidence/NOTE_2026-09-04_EVENTUAL_FIRST_LAYER_CLOSE.md` excludes the
+two forced local masses `2p+4,2p+6` without an equality classification.
+For a nonnegative integral cube quadratic, quarter-integral Fourier
+coefficients and the elementary degree-two hypercontractive estimate give
+`max f<=324(E f)^2`. The existing stabilizer and paired-cube identities
+give slice height `<1800`. Integer transposition differences and the
+Johnson energy identity leave fewer than `129600` relevant coordinates.
+At `p>=259201`, every retained bit pattern extends to the middle slice,
+so the function extends to a nonnegative integral quadratic on a full
+cube. Its mean `nu` is quarter-integral, but the exact identity
+`p E[A]=(p+1)nu-A(0)` forces `1<nu<5/4`, a contradiction.
+
+The same bounded-variable argument closes the whole superlinear support
+band `46656*h^3<=p^3*(p-1)` for both signed shell floors `r=3,4,5`,
+where `h=|H|` and `h=r mod 2`. Retain that parity hypothesis.
+The positive interval `h<rp` is excluded by frame averaging; for
+`h>=rp`, the two actual row identities contradict quarter-integral
+cube means. This is not a bound placing *every* possible witness in the
+excluded band, so no global closure predicate changes.
+
+The local companion
+`evidence/NOTE_2026-09-04_AFFINE_PARITY_CUBE_FLOOR.md` independently
+closes every middle-boundary cell `6<=b<=p-5` at masses `2p+4,2p+6`
+for every odd `p>=29`. The boundary is its **even representative**;
+odd supports must first be complemented with the corresponding phase
+adjustment. This result is not needed for the complete eventual layer proof.
+
+Current generic remainder: `29<=p<259201` retains `t>=q+3,k>=5p+5`;
+`p>=259201` retains at least `t>=q+4,k>=5p+7`, with the additional
+cubic support exclusion above. All small-prime ranges are unchanged.
+The all-size residual/minimal-four-gap gates, E1, and the limit remain OPEN.
+Do not repeat the failed uniform-marginal repair route, or treat the
+particular scalar example `P=5,T=1` as a forced normalization.
+
+Verification: **305 focused tests and 16 documentation tests passed**
+on soulkiller, in the separate staged checkout
+`/tmp/first-layer-15775.AeD9pK/regression`. The 305-test run took
+16.964 seconds; its JUnit file `/tmp/first-layer-15775.AeD9pK/focused.xml`
+has SHA-256
+`2e8c2fbe738d4154153e58a093488bddcd53b8a2608f333bea07010dacb86e24`.
+All sixteen independent exact checks passed on each of soulkiller,
+NUKA, and Jellyfin. No tests or mathematical computations ran on the
+controller, no packages were installed, and no new prime or graph
+census was performed. The final documentation rerun, commands, byte
+hashes, and audit scope are pinned in
+`evidence/first_layer_mesh_replay.json` and
+`evidence/first_layer_regression.json`. These are 321 distinct tests,
+not a rerun of the historical 64-test or 507-test packages below.
+
+Replay the focused suite from the stage or a provisioned checkout:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -o addopts= -q -n 0 tests/test_prop15775.py tests/test_affine_parity_cube_floor.py tests/test_prop15774.py tests/test_small_mass_spectrum.py tests/test_prop15773.py tests/test_prop15688.py
+```
+
+Replay the documentation gate:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -o addopts= -q -n 0 tests/test_main_chain_docs.py
+```
+
 ## Committed proof checkpoint (2026-09-04)
 
 The complete 15.773/15.774 package is committed as
@@ -13,7 +134,108 @@ obstruction, not a repetition of the closed layers. Exact replay commands,
 evidence hashes, and open predicates are recorded below and in
 `evidence/small_mass_two_type_regression.json`.
 
-## Current theorem checkpoint: Proposition 15.774 (2026-09-04; technical regression verified)
+## Post-push all-size attack (2026-09-04)
+
+The checkpoint above and its receipt were pushed on
+`residual/p13-u6-common-moments`; remote HEAD was verified as
+`a25fe0ab81830438832ec7e581257f257dbe1c5d`. The following research is
+new work after that push. No new numbered proposition, closed support
+layer, or global predicate is claimed.
+
+The one live gate is the all-size threshold-minimal four-gap obstruction,
+retaining **every signed Boolean state** and the full all-subsets
+restoration condition. It is not another scalar mass layer. The exact
+unresolved step is a nonempty `D subset H` with
+`2 sum_D eps*C_ij*x_i*x_j <= Delta_(eps,x)` for every signed state,
+where `Delta_(eps,x)=Phi(C)-4-eps*q_A(x)` and `A=C triangle H`.
+One-deletion identities alone do not supply full threshold minimality.
+The all-subsets hierarchy itself was already recorded on 2026-08-29.
+
+Two independently hostile-audited notes give new deductions:
+
+- `evidence/NOTE_2026-09-04_THRESHOLD_VALLEY_ACTIVE_GEOMETRY.md` proves
+  a conditional fractional valley with `lambda=(r-2)/(p+r-2)` and
+  margin `2(p-2)*lambda`, for signed shell floors `r=3,4,5`.
+  At the universal odd floor `r=3`, Parseval blocks uniform norm-error
+  rounding for every nonempty restoration, at every support size.
+  State-dependent rounding remains open. Even active witnesses cannot
+  lie in the first defect shell; odd no-level-three first-shell states
+  have same-phase antipodal separation at least `p-1`, including
+  nonaffine bad anchors. Higher-defect active states remain allowed.
+- `evidence/NOTE_2026-09-04_CONFERENCE_REFERENCE_DISTANCE.md` proves
+  distinct conference signings at `n=p^2+1`, odd `p>=3`, differ on at
+  least `n/2+1` edges. Consequently `h<(n+2)/4` has a unique nearest
+  conference reference across every class and gauge. The first open
+  supports at `p>=37` lie inside this radius. This prevents regauging
+  them into a smaller closed range; it does not localize a witness.
+
+Exact algebra is in `src/e1_gmin_m4_threshold_valley.py` and
+`tests/test_threshold_valley_geometry.py`. Both proof notes and this
+source/test pair passed independent mathematical audits. Offloaded
+test/replay provenance is in `evidence/threshold_valley_probe.json` and
+`evidence/threshold_valley_regression.json`.
+
+The V100 probe examined its fixed 128 deterministic references at `n=6`.
+Many candidates passed the active-row and all-single-restoration filters;
+none passed the full all-subsets condition. This is inconclusive, not a
+generic theorem. Its signed-C-maximizer filter `M-4` is stronger than
+the universal odd-floor consequence `M-2`. Only one recorded reference
+was authorized for a follow-on minimum-repair extraction; no new
+reference, prime, or eigenshell census was authorized. No conjectured
+countermodel is accepted without checking both energy signs.
+
+That one-reference replay produced a useful exact repair, not a
+counterexample: `A=2393,C=7810,|H|=10` has `Phi(A)=5,Phi(C)=9`
+and interpolated norm four at `lambda=1/4`. All ten single-edge and
+45 two-edge restorations fail. The minimum repair has three edges,
+`D={(0,4),(1,5),(2,3)}`, and restored mask `2641` has norm five.
+All 1023 nonempty subsets were checked; exactly eleven repair the norm.
+Both A and its repair square to `5I`, while D is neither a cut nor a
+complemented cut. The exact integer/Fraction repair was replayed on
+soulkiller, NUKA, and Jellyfin. This proves that singles or pairs cannot
+replace the full minimality condition even for actual complete signings.
+It supplies no Paley counterexample or all-size theorem. Order six also
+shows the general conference-distance baseline `n/2` can be attained,
+without affecting the odd-square `n/2+1` theorem.
+
+Verification: the final two-file focused suite passed **49 tests in
+0.61 seconds** on soulkiller at `/tmp/threshold-valley.zzykRu`, with
+JUnit `threshold_valley_final_focused.xml` and SHA-256
+`d6680b29c8f86f076eb01ff76265bd1060195b0435683502ea2c6f3c787737be`.
+The documentation gate passed **15 tests** in the full staged checkout
+`/tmp/threshold-valley-docs.ucHxh5/regression`. The final commands,
+byte hashes, and measured receipts are pinned in
+`evidence/threshold_valley_regression.json`. These are 64 tests in this
+attack, not a rerun of the earlier 507-test proof package, whose 15.773
+and 15.774 source/test/evidence files remain unchanged. No tests or
+mathematical score computations ran on the controller.
+
+Replay the new focused tests from the stage or a fully provisioned
+checkout:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -o addopts= -q -n 0 tests/test_threshold_valley_probe.py tests/test_threshold_valley_geometry.py
+```
+
+Replay the canonical documentation gate from the full stage:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -o addopts= -q -n 0 tests/test_main_chain_docs.py
+```
+
+The original GPU probe used process-local `CUPY_ACCELERATORS=` to avoid
+an optional CUB/NVRTC header mismatch; no environment was installed or
+persistently changed. Do not rerun the bounded search as ordinary
+verification. The saved repair has a separate exact replay:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 /home/nick/.venvs/mo-exact/bin/python scripts/threshold_valley_probe.py verify-repair evidence/threshold_valley_probe.json
+```
+
+The generic frontier remains `t>=q+3,k>=5p+5`. Residual (ii), the
+all-size minimal-four-gap bridge, E1, and the original limit remain OPEN.
+
+## Historical completed verified checkpoint: Proposition 15.774 (2026-09-04)
 
 The active checkout remains `/home/nick/quadratic-minmax-limit-residual-ii`,
 branch `residual/p13-u6-common-moments`, based at
@@ -504,6 +726,24 @@ gate; all newly added source and script files also compile. The pending
   close multiplier two: the exact statewise diagonal-payment inequality is
   still open. See
   `evidence/NOTE_2026-09-03_CROSS_RECTANGLE_FOURIER_STABILITY.md`.
+- The 2026-09-05 continuation proves the exact conjugate-pair transfer
+  identity and all-alternating-cycle real-function relaxation criterion.
+  Four-cycles alone do not suffice for generic intervals. Actual quadratic
+  skew-sign realization is still required; relaxed feasibility is not a
+  completion. Diagonal skew cannot rescue an already-bad coherent
+  `R=+C` or `R=-C` baseline. The companion exact mixed moments retain both
+  actual diagonal blocks, but no averaged identity is promoted to a
+  pointwise bound. See
+  `evidence/NOTE_2026-09-05_DIAGONAL_PAYMENT_COMPATIBILITY.md` and
+  `evidence/NOTE_2026-09-05_ACTUAL_DIAGONAL_MIXED_MOMENTS.md`.
+  The live task is still to SELECT a globally minimizing real signing and
+  ONE compatible skew completion meeting (33) at every phase state with
+  Dini-admissible error. Neither multiplier two nor the MO limit is closed.
+  The note's physical order-four example has a globally minimizing real
+  signing with `M=4` and, for one fixed cross choice, pair threshold 8,
+  cycle-relaxed optimum 10, and skew-sign diagonal optimum 12. It proves
+  that both compatibility and sign realization can cost strictly more;
+  it is not an asymptotic obstruction or an exclusion of other cross choices.
 - A new exact direct equivalence is
   `m_n=n mu_(n-1)/K_n`, where `mu_k` is the mean absolute length-`k`
   Rademacher sum and `K_n` is the sharp total-`L^1`-influence constant for

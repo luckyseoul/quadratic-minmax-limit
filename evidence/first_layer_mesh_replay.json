@@ -1,0 +1,1806 @@
+{
+  "final_documentation_gate": {
+    "classification": "FINAL DOCUMENTATION FREEZE VALIDATED; NO PROOF TESTS RERUN",
+    "sync": {
+      "command": "rsync -a --relative -e 'ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8' AGENTS.md GOAL.md HANDOFF.md LONG_HORIZON_GOAL.md README.md STATUS.md solution.md evidence/P0_ENGINEERING_GRAPH.md evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md evidence/share/denseness_path_package.md evidence/NOTE_2026-09-04_EVENTUAL_FIRST_LAYER_CLOSE.md tests/test_main_chain_docs.py nick@192.168.1.113:/tmp/first-layer-15775.AeD9pK/regression/",
+      "workdir": "/home/nick/quadratic-minmax-limit-residual-ii",
+      "chunk_id": "c029fb",
+      "wall_time_seconds": 0.680076661,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "output": ""
+    },
+    "initial": {
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.113 'cd /tmp/first-layer-15775.AeD9pK/regression && sha256sum AGENTS.md GOAL.md HANDOFF.md LONG_HORIZON_GOAL.md README.md STATUS.md solution.md evidence/P0_ENGINEERING_GRAPH.md evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md evidence/share/denseness_path_package.md evidence/NOTE_2026-09-04_EVENTUAL_FIRST_LAYER_CLOSE.md tests/test_main_chain_docs.py && PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -q -o cache_dir=/tmp/first-layer-15775.AeD9pK/pytest-cache-final-docgate --junitxml=/tmp/first-layer-15775.AeD9pK/final_docgate.xml tests/test_main_chain_docs.py'",
+      "chunk_id": "c2179d",
+      "wall_time_seconds": 10.001574607,
+      "session_id": 92222,
+      "original_token_count": 285,
+      "output": "ac47328ff8ceab8b09581416cead98680988fa75ff24d0520f6bd2731828ea4d  AGENTS.md\nbc6d7f0a1e1491f866d95478cc1cdcf5a89de1e05456bea20b843e60bd3840e1  GOAL.md\n16753eebf714964de56d4eba0e8590f9a2cde56dc749024c5f7a52aa0b917dd8  HANDOFF.md\n1df8fe4a33544e27a41ee160481d971299184954abae1e9b0f294c25ee9956d3  LONG_HORIZON_GOAL.md\n697379b8fb318d4c3bd5802fd53b63504d96770940df866c014ae5c57e27f458  README.md\n2055ef453ff9ced2062c35fa5d18727a74582b21658b32150f6e1eeff652f777  STATUS.md\nb11c96a17158d289b32bab491ee18bf13d43684952f54d281e993e42d2da2594  solution.md\nb86cdfc7bd32c41771fbf6aec9ce720ef09f2ab70c7dbe99184a0544842032fd  evidence/P0_ENGINEERING_GRAPH.md\nd00fed904fc410e7b500653cf2a724a63586255360673e011fcce81fe880a763  evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md\nf333ab9c74da30b1821feee5a2e9579ac94a71decc036a1c9a707ec20bcb996f  evidence/share/denseness_path_package.md\n4a869a250bdc86c8a3d46e63c09d4b66a998cb26e9889b6a35495da8a054e3e7  evidence/NOTE_2026-09-04_EVENTUAL_FIRST_LAYER_CLOSE.md\n8f44d9250c00e9edb3df0626dbb4e8c33566bc50e571adebfdfebd76b37b87b4  tests/test_main_chain_docs.py\nbringing up nodes...\nbringing up nodes...\n\n..............."
+    },
+    "completion": {
+      "chunk_id": "eb7ec4",
+      "wall_time_seconds": 0.00000321,
+      "exit_code": 0,
+      "original_token_count": 17,
+      "output": ".                                                         [100%]\n"
+    },
+    "summary": {
+      "case_count": 16,
+      "suites": [
+        {
+          "errors": "0",
+          "failures": "0",
+          "hostname": "soulkiller",
+          "name": "pytest",
+          "skipped": "0",
+          "tests": "16",
+          "time": "11.075",
+          "timestamp": "2026-09-04T23:08:00.633254+00:00"
+        }
+      ]
+    },
+    "tests": 16,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 11.075,
+    "junit_path": "/tmp/first-layer-15775.AeD9pK/final_docgate.xml",
+    "junit_sha256": "947d1fa6a82300446ff0562eb8890cec553f26320de676275463311f2a66bc8b",
+    "summary_raw": {
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.113 'sha256sum /tmp/first-layer-15775.AeD9pK/final_docgate.xml && /home/nick/.venvs/mo-exact/bin/python -c '\\''import json,xml.etree.ElementTree as ET; p='\\''\\'\\'''\\''/tmp/first-layer-15775.AeD9pK/final_docgate.xml'\\''\\'\\'''\\''; root=ET.parse(p).getroot(); print(json.dumps({'\\''\\'\\'''\\''suites'\\''\\'\\'''\\'':[s.attrib for s in root.iter('\\''\\'\\'''\\''testsuite'\\''\\'\\'''\\'')],'\\''\\'\\'''\\''case_count'\\''\\'\\'''\\'':sum(1 for t in root.iter('\\''\\'\\'''\\''testcase'\\''\\'\\'''\\''))},sort_keys=True))'\\'''",
+      "chunk_id": "25a7ec",
+      "wall_time_seconds": 0.749794591,
+      "exit_code": 0,
+      "original_token_count": 81,
+      "output": "947d1fa6a82300446ff0562eb8890cec553f26320de676275463311f2a66bc8b  /tmp/first-layer-15775.AeD9pK/final_docgate.xml\n{\"case_count\": 16, \"suites\": [{\"errors\": \"0\", \"failures\": \"0\", \"hostname\": \"soulkiller\", \"name\": \"pytest\", \"skipped\": \"0\", \"tests\": \"16\", \"time\": \"11.075\", \"timestamp\": \"2026-09-04T23:08:00.633254+00:00\"}]}\n"
+    },
+    "final_payload_sha256": {
+      "AGENTS.md": "ac47328ff8ceab8b09581416cead98680988fa75ff24d0520f6bd2731828ea4d",
+      "GOAL.md": "bc6d7f0a1e1491f866d95478cc1cdcf5a89de1e05456bea20b843e60bd3840e1",
+      "HANDOFF.md": "16753eebf714964de56d4eba0e8590f9a2cde56dc749024c5f7a52aa0b917dd8",
+      "LONG_HORIZON_GOAL.md": "1df8fe4a33544e27a41ee160481d971299184954abae1e9b0f294c25ee9956d3",
+      "README.md": "697379b8fb318d4c3bd5802fd53b63504d96770940df866c014ae5c57e27f458",
+      "STATUS.md": "2055ef453ff9ced2062c35fa5d18727a74582b21658b32150f6e1eeff652f777",
+      "solution.md": "b11c96a17158d289b32bab491ee18bf13d43684952f54d281e993e42d2da2594",
+      "evidence/P0_ENGINEERING_GRAPH.md": "b86cdfc7bd32c41771fbf6aec9ce720ef09f2ab70c7dbe99184a0544842032fd",
+      "evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md": "d00fed904fc410e7b500653cf2a724a63586255360673e011fcce81fe880a763",
+      "evidence/share/denseness_path_package.md": "f333ab9c74da30b1821feee5a2e9579ac94a71decc036a1c9a707ec20bcb996f",
+      "evidence/NOTE_2026-09-04_EVENTUAL_FIRST_LAYER_CLOSE.md": "4a869a250bdc86c8a3d46e63c09d4b66a998cb26e9889b6a35495da8a054e3e7",
+      "tests/test_main_chain_docs.py": "8f44d9250c00e9edb3df0626dbb4e8c33566bc50e571adebfdfebd76b37b87b4"
+    },
+    "controller_and_remote_payload_sha256_equal": true,
+    "earlier_focused_and_documentation_receipts_preserved": true,
+    "unique_test_count_including_focused": 321
+  },
+  "classification": "EXACT ARITHMETIC CROSS-CHECK OF THE AUDITED EVENTUAL FIRST-LAYER AND SUPERLINEAR SUPPORT-BAND PROOFS; NOT A CENSUS",
+  "scope": "Prop. 15.775: first layer for prime p>=259201; signed floors r in {3,4,5} with h=r mod 2 excluded below rp or under 46656*h^3<=p^3*(p-1)",
+  "source": "scripts/first_layer_15775_mesh_verify.py",
+  "source_sha256": "53fa6f5e1cc74d66d5beed68f6adcfbd87d9e9ae1857ac7e48d6ce516a9fcf7d",
+  "method": "Standalone stdlib Fraction and fixed formal monomial arithmetic; does not import the proof module.",
+  "capability_routing": {
+    "soulkiller": "CPU exact arithmetic and provisioned pytest for subsequent focused tests",
+    "NUKA": "Independent Python integer/Fraction replay",
+    "jellyfin": "Independent Python integer/Fraction replay",
+    "orin": "Not contacted; no V100-incompatible requirement",
+    "GPU_work_dispatched": false
+  },
+  "preflight": {
+    "soulkiller": {
+      "initial": {
+        "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.113 'date -u +%Y-%m-%dT%H:%M:%SZ && uptime && nproc && free -m && df -h /tmp && nvidia-smi --query-gpu=name,memory.free,utilization.gpu --format=csv,noheader && test -d /tmp/threshold-valley-docs.ucHxh5/regression && test -r /tmp/threshold-valley-docs.ucHxh5/regression/pyproject.toml && /home/nick/.venvs/mo-exact/bin/python -c \"import sys, importlib.util; print(sys.version); print({m: bool(importlib.util.find_spec(m)) for m in ('\\''pytest'\\'','\\''sympy'\\'','\\''numpy'\\'','\\''cupy'\\'')})\"'",
+        "chunk_id": "86687f",
+        "wall_time_seconds": 12.118290661,
+        "session_id": 54278,
+        "original_token_count": 0,
+        "output": ""
+      },
+      "completion": {
+        "chunk_id": "50b348",
+        "wall_time_seconds": 0.00000408,
+        "exit_code": 1,
+        "original_token_count": 108,
+        "output": "2026-09-04T22:31:08Z\n 22:31:08 up 6 days, 13:21,  4 users,  load average: 2.87, 2.58, 2.50\n88\n               total        used        free      shared  buff/cache   available\nMem:           61935        4655       20193        1154       39110       57279\nSwap:           8191        2035        6156\nFilesystem      Size  Used Avail Use% Mounted on\ntmpfs            31G  3.0G   28G  10% /tmp\nTesla V100-SXM2-16GB, 16005 MiB, 0 %\n"
+      },
+      "stage_confirmation": {
+        "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.113 '/home/nick/.venvs/mo-exact/bin/python -c \"import sys,os,importlib.util; p=\\\"/tmp/threshold-valley-docs.ucHxh5/regression\\\"; print(sys.version); print({m:bool(importlib.util.find_spec(m)) for m in (\\\"pytest\\\",\\\"sympy\\\",\\\"numpy\\\",\\\"cupy\\\")}); print({q:os.path.exists(p+q) for q in (\\\"\\\",\\\"/AGENTS.md\\\",\\\"/src\\\",\\\"/tests/test_main_chain_docs.py\\\",\\\"/pytest.ini\\\",\\\"/pyproject.toml\\\")}); print(\\\"stage_readable\\\",os.access(p,os.R_OK))\"'",
+        "chunk_id": "f4a707",
+        "wall_time_seconds": 0.265467281,
+        "exit_code": 0,
+        "original_token_count": 66,
+        "output": "3.14.4 (main, Jun 18 2026, 14:25:02) [GCC 15.2.0]\n{'pytest': True, 'sympy': True, 'numpy': True, 'cupy': True}\n{'': True, '/AGENTS.md': True, '/src': True, '/tests/test_main_chain_docs.py': True, '/pytest.ini': True, '/pyproject.toml': False}\nstage_readable True\n"
+      }
+    },
+    "NUKA": {
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.192 'date -u +%Y-%m-%dT%H:%M:%SZ && uptime && nproc && free -m && df -h /tmp && /home/nick/.venvs/qml-mesh/bin/python -c \"import sys, importlib.util; print(sys.version); print({m: bool(importlib.util.find_spec(m)) for m in ('\\''sympy'\\'','\\''numpy'\\'','\\''pyopencl'\\'','\\''pytest'\\'')}); import pyopencl as cl; print([(p.name, [(d.name, d.max_compute_units, d.global_mem_size) for d in p.get_devices()]) for p in cl.get_platforms()])\"'",
+      "chunk_id": "e47238",
+      "wall_time_seconds": 1.266510717,
+      "exit_code": 0,
+      "original_token_count": 146,
+      "output": "2026-09-04T22:30:56Z\n 17:30:56 up 6 days, 13:16,  3 users,  load average: 0.00, 0.00, 0.00\n16\n               total        used        free      shared  buff/cache   available\nMem:           15942        1968       13887        1041        1423       13973\nSwap:           4096         189        3906\nFilesystem      Size  Used Avail Use% Mounted on\ntmpfs           7.8G  1.2G  6.7G  15% /tmp\n3.14.4 (main, Jun 18 2026, 14:25:02) [GCC 15.2.0]\n{'sympy': True, 'numpy': True, 'pyopencl': True, 'pytest': False}\n[('AMD Accelerated Parallel Processing', [('gfx1201', 32, 16974905344)])]\n"
+    },
+    "jellyfin": {
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.191 'date -u +%Y-%m-%dT%H:%M:%SZ && uptime && nproc && free -m && df -h /tmp && /usr/bin/python3 -c \"import sys, importlib.util; print(sys.version); print({m: bool(importlib.util.find_spec(m)) for m in ('\\''sympy'\\'','\\''numpy'\\'','\\''pyopencl'\\'','\\''pytest'\\'')}); import pyopencl as cl; print([(p.name, [(d.name, d.max_compute_units, d.global_mem_size) for d in p.get_devices()]) for p in cl.get_platforms()])\"'",
+      "chunk_id": "3f3f6c",
+      "wall_time_seconds": 4.117250174,
+      "exit_code": 0,
+      "original_token_count": 253,
+      "output": "2026-09-04T22:30:58Z\n 17:30:58 up 6 days, 13:21,  1 user,  load average: 0.00, 0.00, 0.00\n16\n               total        used        free      shared  buff/cache   available\nMem:           14832        2298        4667         245        8445       12533\nSwap:           4095         398        3697\nFilesystem      Size  Used Avail Use% Mounted on\ntmpfs           7.3G  434M  6.9G   6% /tmp\n/usr/lib/python3/dist-packages/pytools/persistent_dict.py:52: RecommendedHashNotFoundWarning: Unable to import recommended hash 'siphash24.siphash13', falling back to 'hashlib.sha256'. Run 'python3 -m pip install siphash24' to install the recommended hash.\n  warn(\"Unable to import recommended hash 'siphash24.siphash13', \"\n3.14.4 (main, Jun 18 2026, 14:25:02) [GCC 15.2.0]\n{'sympy': True, 'numpy': True, 'pyopencl': True, 'pytest': False}\n[('Intel(R) OpenCL Graphics', [('Intel(R) Arc(TM) A380 Graphics', 128, 6064541696)]), ('Intel(R) OpenCL', [('AMD Ryzen 7 5700G with Radeon Graphics         ', 16, 15552933888)])]\n"
+    }
+  },
+  "stage_provenance": {
+    "soulkiller": {
+      "new_temporary_root": "/tmp/first-layer-15775.AeD9pK",
+      "copy": {
+        "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.113 'du -sh /tmp/threshold-valley-docs.ucHxh5/regression && cp -a /tmp/threshold-valley-docs.ucHxh5/regression /tmp/first-layer-15775.AeD9pK/regression'",
+        "chunk_id": "1a13eb",
+        "wall_time_seconds": 0.828068141,
+        "exit_code": 0,
+        "original_token_count": 13,
+        "output": "139M\t/tmp/threshold-valley-docs.ucHxh5/regression\n"
+      },
+      "initial_sync": {
+        "command": "rsync -a --exclude=.git --exclude=__pycache__ --exclude=.pytest_cache --exclude=.mypy_cache --exclude=.ruff_cache --exclude=.venv --exclude=.venvs --exclude=venv --exclude=.tox -e 'ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8' /home/nick/quadratic-minmax-limit-residual-ii/ nick@192.168.1.113:/tmp/first-layer-15775.AeD9pK/regression/",
+        "chunk_id": "68384b",
+        "wall_time_seconds": 0.346281014,
+        "exit_code": 0,
+        "original_token_count": 0,
+        "output": ""
+      },
+      "old_receipted_stage_preserved": true
+    }
+  },
+  "node_replays": [
+    {
+      "node": "soulkiller",
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.113 'cd /tmp/first-layer-15775.AeD9pK/regression && sha256sum scripts/first_layer_15775_mesh_verify.py && PYTHONDONTWRITEBYTECODE=1 /home/nick/.venvs/mo-exact/bin/python scripts/first_layer_15775_mesh_verify.py'",
+      "stage": "/tmp/first-layer-15775.AeD9pK/regression",
+      "chunk_id": "37340e",
+      "wall_time_seconds": 0.324355394,
+      "exit_code": 0,
+      "original_token_count": 1459,
+      "output": "53fa6f5e1cc74d66d5beed68f6adcfbd87d9e9ae1857ac7e48d6ce516a9fcf7d  scripts/first_layer_15775_mesh_verify.py\n{\"E1_closed\": false, \"P_MIN\": 259201, \"analytic_inputs_not_replaced_by_this_replay\": [\"degree-two Bonami ||f||_4 <=3||f||_2 and interpolation ||f||_2<=9 E[f]\", \"integer cube quadratics have Fourier coefficients in (1/4)Z\", \"proved maximizing paired-cube and stabilizer identities on the middle slice\", \"Johnson transposition Laplacian level-d eigenvalue d*(p+1-d)\", \"zero-transposition-influence classes and degree-two symmetrization\", \"Proposition 15.774 strict small-mass quotient floors\"], \"architecture\": \"x86_64\", \"checks\": {\"all_target_quarter_lattice_intervals_empty\": true, \"bonami_fourier_constant_is_324\": true, \"both_slice_sides_exceed_kept_coordinate_bound\": true, \"derivative_probability_product_identity\": true, \"first_layer_has_an_isolated_vertex\": true, \"formal_swap_derivative_verified\": true, \"height_cap_exact\": true, \"integer_height_cap_1692\": true, \"junta_cap_product\": true, \"loose_height_cap_1800_is_strict\": true, \"power_band_both_types_and_parity_retained\": true, \"power_band_constants_verified\": true, \"power_band_formal_T_elimination\": true, \"power_band_quarter_integral_bracket\": true, \"relevant_influence_strictly_above_one_over_32\": true, \"threshold_matches_twice_junta_cap_plus_one\": true}, \"classification\": \"INDEPENDENT EXACT ARITHMETIC REPLAY; NOT A FINITE CENSUS\", \"derivative_identity\": {\"all_degree_zero_one_two_index_patterns_covered\": true, \"formal_monomials_checked\": [[], [0], [1], [2], [3], [0, 1], [0, 2], [0, 3], [1, 2], [1, 3], [2, 3]], \"identity\": \"f-f^(ij)=(x_i-x_j)*(a_i-a_j+sum_k(b_ik-b_jk)x_k)\", \"verified\": true}, \"global_residual_ii_closed\": false, \"height_cap_exact\": \"82944/49\", \"host\": \"soulkiller\", \"influence_floor_at_P_MIN\": \"2099536200/67184639999\", \"influence_floor_formula\": \"(p^2-1)/(32*p*(p-2)) > 1/32\", \"integer_height_cap\": 1692, \"limit_closed\": false, \"power_band_certificate\": {\"B\": \"h/(2*p)\", \"below_frame_case\": \"h<r*p contradicts the signed frame mean\", \"both_signed_types_required\": true, \"divisibility_identity\": \"4*(alpha_plus+alpha_minus+r)=(p+1)*(4*nu_plus+4*nu_minus-2*(P_plus+P_minus)+4*r)\", \"domain\": \"prime p>=29; r in {3,4,5}; h>=0; h=r mod 2\", \"extension\": \"L<186624*B^3<=(p-1)/2\", \"extension_coefficient\": 373248, \"formal_T_elimination_verified\": true, \"formal_variables\": [\"M=p+1\", \"nu_plus\", \"nu_minus\", \"P_plus\", \"P_minus\", \"T\", \"r\"], \"height_coefficient\": 2916, \"isolation_factor_margin_at_min_B\": \"839804\", \"isolation_implication\": \"4*B<373248*B^3<=p-1 implies p^2+1-2*h>0\", \"junta_coefficient\": 186624, \"minimum_B\": \"3/2\", \"pairing_factor_margin\": \"3-2p/(p-1)=(p-3)/(p-1)>0 for p>=29\", \"parity_required\": true, \"quarter_integrality_makes_bracket_integral\": true, \"remaining_case\": \"h>=r*p and 46656*h^3<=p^3*(p-1)\", \"shell_upper_bound_margins\": [{\"8B_squared_minus_4r_coefficients_in_t\": [6, 24, 8], \"B_parameterization\": \"r/2+t, t>=0\", \"r\": 3}, {\"8B_squared_minus_4r_coefficients_in_t\": [16, 32, 8], \"B_parameterization\": \"r/2+t, t>=0\", \"r\": 4}, {\"8B_squared_minus_4r_coefficients_in_t\": [30, 40, 8], \"B_parameterization\": \"r/2+t, t>=0\", \"r\": 5}], \"strict_modulus_chain\": \"0<4*r<=4*(alpha_plus+alpha_minus+r)<=4*(5832*B^2+r)<=23336*B^2<=23336*B^3<373248*B^3<=p-1<p+1\", \"support_condition_coefficient\": 46656, \"type_selection\": \"each signed type has mean A=(h-r*p)/(2*p)<=B\", \"verified\": true}, \"proved_layer_scope\": \"conditional on the audited analytic proof: prime p>=259201, k=5p+5, |H|=5p+6\", \"proved_power_band_scope\": \"conditional on the audited analytic proof: prime p>=29,r in {3,4,5},h=r mod 2; both signed floors r excluded if h<r*p or 46656*h^3<=p^3*(p-1)\", \"python\": \"3.14.4\", \"residue_interval_certificate\": {\"actual_parallel_count_five_assumed\": false, \"allowed_residue_intervals\": [\"[0,2]\", \"[m-6,m-1]\"], \"forced_low_masses\": [\"2p+4\", \"2p+6\"], \"high_high_sum_mod_m\": [\"[m-12,m-2]\"], \"low_high_sum_mod_m\": [\"[0,1]\", \"[m-6,m-1]\"], \"only_ordered_pairs\": [[1, 2], [2, 1]], \"parameter\": \"m=(p+1)/2; t=2m+2\", \"required_sum_mod_m\": 3, \"signed_total_plus_or_minus_one_assumed\": false, \"u_one_high_mass\": \"3p+5\", \"u_one_total_excess_above_quotient_two\": 1, \"u_two_total_excess_above_quotient_two\": 0, \"verified\": true}, \"slice_cube_mean_identity\": \"p*mu=(p+1)*nu-f(0)\", \"slice_cube_mean_monomials\": [{\"cube_mean\": \"1\", \"degree\": 0, \"slice_mean_at_P_MIN\": \"1\", \"value_at_zero\": 1}, {\"cube_mean\": \"1/2\", \"degree\": 1, \"slice_mean_at_P_MIN\": \"129601/259201\", \"value_at_zero\": 0}, {\"cube_mean\": \"1/4\", \"degree\": 2, \"slice_mean_at_P_MIN\": \"129601/518402\", \"value_at_zero\": 0}], \"source_sha256\": \"53fa6f5e1cc74d66d5beed68f6adcfbd87d9e9ae1857ac7e48d6ce516a9fcf7d\", \"strict_junta_coordinate_cap\": 129600, \"strict_loose_height_cap\": 1800, \"tail_margins\": {\"isolated_vertex_margin\": {\"factors_at_P_MIN\": [259202, 259190], \"positive_factorization\": \"p^2+1-2*(5p+6)=(p+1)*(p-11)\"}, \"mu_below_9_over_8\": {\"denominator\": \"8*p\", \"numerator_coefficients_in_p_minus_P_MIN\": [259177, 1]}, \"paired_mean_below_or_equal_16_over_7\": {\"denominator\": \"7*(p-1)\", \"numerator_coefficients_in_p_minus_P_MIN\": [518344, 2]}, \"relevant_influence_above_1_over_32\": {\"denominator\": \"32*p*(p-2)\", \"numerator_coefficients_in_p_minus_P_MIN\": [518401, 2]}, \"uniform_cube_mean_below_5_over_4\": {\"denominator\": \"4*(p+1)\", \"numerator_coefficients_in_p_minus_P_MIN\": [251998, 1]}}, \"target_masses\": [{\"a\": 2, \"quarter_integral_value_exists\": false, \"scaled_mass_2p_E_A\": \"2p+4\", \"slice_mean\": \"1+2/p\", \"uniform_cube_mean_formula\": \"1+(a-1+f(0))/(p+1)\", \"uniform_cube_mean_interval_at_P_MIN\": [\"259203/259202\", \"130501/129601\"]}, {\"a\": 3, \"quarter_integral_value_exists\": false, \"scaled_mass_2p_E_A\": \"2p+6\", \"slice_mean\": \"1+3/p\", \"uniform_cube_mean_formula\": \"1+(a-1+f(0))/(p+1)\", \"uniform_cube_mean_interval_at_P_MIN\": [\"129602/129601\", \"261003/259202\"]}], \"verified\": true}\n",
+      "verifier_source_sha256": "53fa6f5e1cc74d66d5beed68f6adcfbd87d9e9ae1857ac7e48d6ce516a9fcf7d",
+      "result": {
+        "E1_closed": false,
+        "P_MIN": 259201,
+        "analytic_inputs_not_replaced_by_this_replay": [
+          "degree-two Bonami ||f||_4 <=3||f||_2 and interpolation ||f||_2<=9 E[f]",
+          "integer cube quadratics have Fourier coefficients in (1/4)Z",
+          "proved maximizing paired-cube and stabilizer identities on the middle slice",
+          "Johnson transposition Laplacian level-d eigenvalue d*(p+1-d)",
+          "zero-transposition-influence classes and degree-two symmetrization",
+          "Proposition 15.774 strict small-mass quotient floors"
+        ],
+        "architecture": "x86_64",
+        "checks": {
+          "all_target_quarter_lattice_intervals_empty": true,
+          "bonami_fourier_constant_is_324": true,
+          "both_slice_sides_exceed_kept_coordinate_bound": true,
+          "derivative_probability_product_identity": true,
+          "first_layer_has_an_isolated_vertex": true,
+          "formal_swap_derivative_verified": true,
+          "height_cap_exact": true,
+          "integer_height_cap_1692": true,
+          "junta_cap_product": true,
+          "loose_height_cap_1800_is_strict": true,
+          "power_band_both_types_and_parity_retained": true,
+          "power_band_constants_verified": true,
+          "power_band_formal_T_elimination": true,
+          "power_band_quarter_integral_bracket": true,
+          "relevant_influence_strictly_above_one_over_32": true,
+          "threshold_matches_twice_junta_cap_plus_one": true
+        },
+        "classification": "INDEPENDENT EXACT ARITHMETIC REPLAY; NOT A FINITE CENSUS",
+        "derivative_identity": {
+          "all_degree_zero_one_two_index_patterns_covered": true,
+          "formal_monomials_checked": [
+            [],
+            [
+              0
+            ],
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "identity": "f-f^(ij)=(x_i-x_j)*(a_i-a_j+sum_k(b_ik-b_jk)x_k)",
+          "verified": true
+        },
+        "global_residual_ii_closed": false,
+        "height_cap_exact": "82944/49",
+        "host": "soulkiller",
+        "influence_floor_at_P_MIN": "2099536200/67184639999",
+        "influence_floor_formula": "(p^2-1)/(32*p*(p-2)) > 1/32",
+        "integer_height_cap": 1692,
+        "limit_closed": false,
+        "power_band_certificate": {
+          "B": "h/(2*p)",
+          "below_frame_case": "h<r*p contradicts the signed frame mean",
+          "both_signed_types_required": true,
+          "divisibility_identity": "4*(alpha_plus+alpha_minus+r)=(p+1)*(4*nu_plus+4*nu_minus-2*(P_plus+P_minus)+4*r)",
+          "domain": "prime p>=29; r in {3,4,5}; h>=0; h=r mod 2",
+          "extension": "L<186624*B^3<=(p-1)/2",
+          "extension_coefficient": 373248,
+          "formal_T_elimination_verified": true,
+          "formal_variables": [
+            "M=p+1",
+            "nu_plus",
+            "nu_minus",
+            "P_plus",
+            "P_minus",
+            "T",
+            "r"
+          ],
+          "height_coefficient": 2916,
+          "isolation_factor_margin_at_min_B": "839804",
+          "isolation_implication": "4*B<373248*B^3<=p-1 implies p^2+1-2*h>0",
+          "junta_coefficient": 186624,
+          "minimum_B": "3/2",
+          "pairing_factor_margin": "3-2p/(p-1)=(p-3)/(p-1)>0 for p>=29",
+          "parity_required": true,
+          "quarter_integrality_makes_bracket_integral": true,
+          "remaining_case": "h>=r*p and 46656*h^3<=p^3*(p-1)",
+          "shell_upper_bound_margins": [
+            {
+              "8B_squared_minus_4r_coefficients_in_t": [
+                6,
+                24,
+                8
+              ],
+              "B_parameterization": "r/2+t, t>=0",
+              "r": 3
+            },
+            {
+              "8B_squared_minus_4r_coefficients_in_t": [
+                16,
+                32,
+                8
+              ],
+              "B_parameterization": "r/2+t, t>=0",
+              "r": 4
+            },
+            {
+              "8B_squared_minus_4r_coefficients_in_t": [
+                30,
+                40,
+                8
+              ],
+              "B_parameterization": "r/2+t, t>=0",
+              "r": 5
+            }
+          ],
+          "strict_modulus_chain": "0<4*r<=4*(alpha_plus+alpha_minus+r)<=4*(5832*B^2+r)<=23336*B^2<=23336*B^3<373248*B^3<=p-1<p+1",
+          "support_condition_coefficient": 46656,
+          "type_selection": "each signed type has mean A=(h-r*p)/(2*p)<=B",
+          "verified": true
+        },
+        "proved_layer_scope": "conditional on the audited analytic proof: prime p>=259201, k=5p+5, |H|=5p+6",
+        "proved_power_band_scope": "conditional on the audited analytic proof: prime p>=29,r in {3,4,5},h=r mod 2; both signed floors r excluded if h<r*p or 46656*h^3<=p^3*(p-1)",
+        "python": "3.14.4",
+        "residue_interval_certificate": {
+          "actual_parallel_count_five_assumed": false,
+          "allowed_residue_intervals": [
+            "[0,2]",
+            "[m-6,m-1]"
+          ],
+          "forced_low_masses": [
+            "2p+4",
+            "2p+6"
+          ],
+          "high_high_sum_mod_m": [
+            "[m-12,m-2]"
+          ],
+          "low_high_sum_mod_m": [
+            "[0,1]",
+            "[m-6,m-1]"
+          ],
+          "only_ordered_pairs": [
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "parameter": "m=(p+1)/2; t=2m+2",
+          "required_sum_mod_m": 3,
+          "signed_total_plus_or_minus_one_assumed": false,
+          "u_one_high_mass": "3p+5",
+          "u_one_total_excess_above_quotient_two": 1,
+          "u_two_total_excess_above_quotient_two": 0,
+          "verified": true
+        },
+        "slice_cube_mean_identity": "p*mu=(p+1)*nu-f(0)",
+        "slice_cube_mean_monomials": [
+          {
+            "cube_mean": "1",
+            "degree": 0,
+            "slice_mean_at_P_MIN": "1",
+            "value_at_zero": 1
+          },
+          {
+            "cube_mean": "1/2",
+            "degree": 1,
+            "slice_mean_at_P_MIN": "129601/259201",
+            "value_at_zero": 0
+          },
+          {
+            "cube_mean": "1/4",
+            "degree": 2,
+            "slice_mean_at_P_MIN": "129601/518402",
+            "value_at_zero": 0
+          }
+        ],
+        "source_sha256": "53fa6f5e1cc74d66d5beed68f6adcfbd87d9e9ae1857ac7e48d6ce516a9fcf7d",
+        "strict_junta_coordinate_cap": 129600,
+        "strict_loose_height_cap": 1800,
+        "tail_margins": {
+          "isolated_vertex_margin": {
+            "factors_at_P_MIN": [
+              259202,
+              259190
+            ],
+            "positive_factorization": "p^2+1-2*(5p+6)=(p+1)*(p-11)"
+          },
+          "mu_below_9_over_8": {
+            "denominator": "8*p",
+            "numerator_coefficients_in_p_minus_P_MIN": [
+              259177,
+              1
+            ]
+          },
+          "paired_mean_below_or_equal_16_over_7": {
+            "denominator": "7*(p-1)",
+            "numerator_coefficients_in_p_minus_P_MIN": [
+              518344,
+              2
+            ]
+          },
+          "relevant_influence_above_1_over_32": {
+            "denominator": "32*p*(p-2)",
+            "numerator_coefficients_in_p_minus_P_MIN": [
+              518401,
+              2
+            ]
+          },
+          "uniform_cube_mean_below_5_over_4": {
+            "denominator": "4*(p+1)",
+            "numerator_coefficients_in_p_minus_P_MIN": [
+              251998,
+              1
+            ]
+          }
+        },
+        "target_masses": [
+          {
+            "a": 2,
+            "quarter_integral_value_exists": false,
+            "scaled_mass_2p_E_A": "2p+4",
+            "slice_mean": "1+2/p",
+            "uniform_cube_mean_formula": "1+(a-1+f(0))/(p+1)",
+            "uniform_cube_mean_interval_at_P_MIN": [
+              "259203/259202",
+              "130501/129601"
+            ]
+          },
+          {
+            "a": 3,
+            "quarter_integral_value_exists": false,
+            "scaled_mass_2p_E_A": "2p+6",
+            "slice_mean": "1+3/p",
+            "uniform_cube_mean_formula": "1+(a-1+f(0))/(p+1)",
+            "uniform_cube_mean_interval_at_P_MIN": [
+              "129602/129601",
+              "261003/259202"
+            ]
+          }
+        ],
+        "verified": true
+      }
+    },
+    {
+      "node": "NUKA",
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.192 'cd /tmp/first-layer-15775.dQjNag && sha256sum first_layer_15775_mesh_verify.py && PYTHONDONTWRITEBYTECODE=1 /home/nick/.venvs/qml-mesh/bin/python first_layer_15775_mesh_verify.py'",
+      "stage": "/tmp/first-layer-15775.dQjNag",
+      "chunk_id": "c053a0",
+      "wall_time_seconds": 0.12455033,
+      "exit_code": 0,
+      "original_token_count": 1456,
+      "output": "53fa6f5e1cc74d66d5beed68f6adcfbd87d9e9ae1857ac7e48d6ce516a9fcf7d  first_layer_15775_mesh_verify.py\n{\"E1_closed\": false, \"P_MIN\": 259201, \"analytic_inputs_not_replaced_by_this_replay\": [\"degree-two Bonami ||f||_4 <=3||f||_2 and interpolation ||f||_2<=9 E[f]\", \"integer cube quadratics have Fourier coefficients in (1/4)Z\", \"proved maximizing paired-cube and stabilizer identities on the middle slice\", \"Johnson transposition Laplacian level-d eigenvalue d*(p+1-d)\", \"zero-transposition-influence classes and degree-two symmetrization\", \"Proposition 15.774 strict small-mass quotient floors\"], \"architecture\": \"x86_64\", \"checks\": {\"all_target_quarter_lattice_intervals_empty\": true, \"bonami_fourier_constant_is_324\": true, \"both_slice_sides_exceed_kept_coordinate_bound\": true, \"derivative_probability_product_identity\": true, \"first_layer_has_an_isolated_vertex\": true, \"formal_swap_derivative_verified\": true, \"height_cap_exact\": true, \"integer_height_cap_1692\": true, \"junta_cap_product\": true, \"loose_height_cap_1800_is_strict\": true, \"power_band_both_types_and_parity_retained\": true, \"power_band_constants_verified\": true, \"power_band_formal_T_elimination\": true, \"power_band_quarter_integral_bracket\": true, \"relevant_influence_strictly_above_one_over_32\": true, \"threshold_matches_twice_junta_cap_plus_one\": true}, \"classification\": \"INDEPENDENT EXACT ARITHMETIC REPLAY; NOT A FINITE CENSUS\", \"derivative_identity\": {\"all_degree_zero_one_two_index_patterns_covered\": true, \"formal_monomials_checked\": [[], [0], [1], [2], [3], [0, 1], [0, 2], [0, 3], [1, 2], [1, 3], [2, 3]], \"identity\": \"f-f^(ij)=(x_i-x_j)*(a_i-a_j+sum_k(b_ik-b_jk)x_k)\", \"verified\": true}, \"global_residual_ii_closed\": false, \"height_cap_exact\": \"82944/49\", \"host\": \"NUKA\", \"influence_floor_at_P_MIN\": \"2099536200/67184639999\", \"influence_floor_formula\": \"(p^2-1)/(32*p*(p-2)) > 1/32\", \"integer_height_cap\": 1692, \"limit_closed\": false, \"power_band_certificate\": {\"B\": \"h/(2*p)\", \"below_frame_case\": \"h<r*p contradicts the signed frame mean\", \"both_signed_types_required\": true, \"divisibility_identity\": \"4*(alpha_plus+alpha_minus+r)=(p+1)*(4*nu_plus+4*nu_minus-2*(P_plus+P_minus)+4*r)\", \"domain\": \"prime p>=29; r in {3,4,5}; h>=0; h=r mod 2\", \"extension\": \"L<186624*B^3<=(p-1)/2\", \"extension_coefficient\": 373248, \"formal_T_elimination_verified\": true, \"formal_variables\": [\"M=p+1\", \"nu_plus\", \"nu_minus\", \"P_plus\", \"P_minus\", \"T\", \"r\"], \"height_coefficient\": 2916, \"isolation_factor_margin_at_min_B\": \"839804\", \"isolation_implication\": \"4*B<373248*B^3<=p-1 implies p^2+1-2*h>0\", \"junta_coefficient\": 186624, \"minimum_B\": \"3/2\", \"pairing_factor_margin\": \"3-2p/(p-1)=(p-3)/(p-1)>0 for p>=29\", \"parity_required\": true, \"quarter_integrality_makes_bracket_integral\": true, \"remaining_case\": \"h>=r*p and 46656*h^3<=p^3*(p-1)\", \"shell_upper_bound_margins\": [{\"8B_squared_minus_4r_coefficients_in_t\": [6, 24, 8], \"B_parameterization\": \"r/2+t, t>=0\", \"r\": 3}, {\"8B_squared_minus_4r_coefficients_in_t\": [16, 32, 8], \"B_parameterization\": \"r/2+t, t>=0\", \"r\": 4}, {\"8B_squared_minus_4r_coefficients_in_t\": [30, 40, 8], \"B_parameterization\": \"r/2+t, t>=0\", \"r\": 5}], \"strict_modulus_chain\": \"0<4*r<=4*(alpha_plus+alpha_minus+r)<=4*(5832*B^2+r)<=23336*B^2<=23336*B^3<373248*B^3<=p-1<p+1\", \"support_condition_coefficient\": 46656, \"type_selection\": \"each signed type has mean A=(h-r*p)/(2*p)<=B\", \"verified\": true}, \"proved_layer_scope\": \"conditional on the audited analytic proof: prime p>=259201, k=5p+5, |H|=5p+6\", \"proved_power_band_scope\": \"conditional on the audited analytic proof: prime p>=29,r in {3,4,5},h=r mod 2; both signed floors r excluded if h<r*p or 46656*h^3<=p^3*(p-1)\", \"python\": \"3.14.4\", \"residue_interval_certificate\": {\"actual_parallel_count_five_assumed\": false, \"allowed_residue_intervals\": [\"[0,2]\", \"[m-6,m-1]\"], \"forced_low_masses\": [\"2p+4\", \"2p+6\"], \"high_high_sum_mod_m\": [\"[m-12,m-2]\"], \"low_high_sum_mod_m\": [\"[0,1]\", \"[m-6,m-1]\"], \"only_ordered_pairs\": [[1, 2], [2, 1]], \"parameter\": \"m=(p+1)/2; t=2m+2\", \"required_sum_mod_m\": 3, \"signed_total_plus_or_minus_one_assumed\": false, \"u_one_high_mass\": \"3p+5\", \"u_one_total_excess_above_quotient_two\": 1, \"u_two_total_excess_above_quotient_two\": 0, \"verified\": true}, \"slice_cube_mean_identity\": \"p*mu=(p+1)*nu-f(0)\", \"slice_cube_mean_monomials\": [{\"cube_mean\": \"1\", \"degree\": 0, \"slice_mean_at_P_MIN\": \"1\", \"value_at_zero\": 1}, {\"cube_mean\": \"1/2\", \"degree\": 1, \"slice_mean_at_P_MIN\": \"129601/259201\", \"value_at_zero\": 0}, {\"cube_mean\": \"1/4\", \"degree\": 2, \"slice_mean_at_P_MIN\": \"129601/518402\", \"value_at_zero\": 0}], \"source_sha256\": \"53fa6f5e1cc74d66d5beed68f6adcfbd87d9e9ae1857ac7e48d6ce516a9fcf7d\", \"strict_junta_coordinate_cap\": 129600, \"strict_loose_height_cap\": 1800, \"tail_margins\": {\"isolated_vertex_margin\": {\"factors_at_P_MIN\": [259202, 259190], \"positive_factorization\": \"p^2+1-2*(5p+6)=(p+1)*(p-11)\"}, \"mu_below_9_over_8\": {\"denominator\": \"8*p\", \"numerator_coefficients_in_p_minus_P_MIN\": [259177, 1]}, \"paired_mean_below_or_equal_16_over_7\": {\"denominator\": \"7*(p-1)\", \"numerator_coefficients_in_p_minus_P_MIN\": [518344, 2]}, \"relevant_influence_above_1_over_32\": {\"denominator\": \"32*p*(p-2)\", \"numerator_coefficients_in_p_minus_P_MIN\": [518401, 2]}, \"uniform_cube_mean_below_5_over_4\": {\"denominator\": \"4*(p+1)\", \"numerator_coefficients_in_p_minus_P_MIN\": [251998, 1]}}, \"target_masses\": [{\"a\": 2, \"quarter_integral_value_exists\": false, \"scaled_mass_2p_E_A\": \"2p+4\", \"slice_mean\": \"1+2/p\", \"uniform_cube_mean_formula\": \"1+(a-1+f(0))/(p+1)\", \"uniform_cube_mean_interval_at_P_MIN\": [\"259203/259202\", \"130501/129601\"]}, {\"a\": 3, \"quarter_integral_value_exists\": false, \"scaled_mass_2p_E_A\": \"2p+6\", \"slice_mean\": \"1+3/p\", \"uniform_cube_mean_formula\": \"1+(a-1+f(0))/(p+1)\", \"uniform_cube_mean_interval_at_P_MIN\": [\"129602/129601\", \"261003/259202\"]}], \"verified\": true}\n",
+      "verifier_source_sha256": "53fa6f5e1cc74d66d5beed68f6adcfbd87d9e9ae1857ac7e48d6ce516a9fcf7d",
+      "result": {
+        "E1_closed": false,
+        "P_MIN": 259201,
+        "analytic_inputs_not_replaced_by_this_replay": [
+          "degree-two Bonami ||f||_4 <=3||f||_2 and interpolation ||f||_2<=9 E[f]",
+          "integer cube quadratics have Fourier coefficients in (1/4)Z",
+          "proved maximizing paired-cube and stabilizer identities on the middle slice",
+          "Johnson transposition Laplacian level-d eigenvalue d*(p+1-d)",
+          "zero-transposition-influence classes and degree-two symmetrization",
+          "Proposition 15.774 strict small-mass quotient floors"
+        ],
+        "architecture": "x86_64",
+        "checks": {
+          "all_target_quarter_lattice_intervals_empty": true,
+          "bonami_fourier_constant_is_324": true,
+          "both_slice_sides_exceed_kept_coordinate_bound": true,
+          "derivative_probability_product_identity": true,
+          "first_layer_has_an_isolated_vertex": true,
+          "formal_swap_derivative_verified": true,
+          "height_cap_exact": true,
+          "integer_height_cap_1692": true,
+          "junta_cap_product": true,
+          "loose_height_cap_1800_is_strict": true,
+          "power_band_both_types_and_parity_retained": true,
+          "power_band_constants_verified": true,
+          "power_band_formal_T_elimination": true,
+          "power_band_quarter_integral_bracket": true,
+          "relevant_influence_strictly_above_one_over_32": true,
+          "threshold_matches_twice_junta_cap_plus_one": true
+        },
+        "classification": "INDEPENDENT EXACT ARITHMETIC REPLAY; NOT A FINITE CENSUS",
+        "derivative_identity": {
+          "all_degree_zero_one_two_index_patterns_covered": true,
+          "formal_monomials_checked": [
+            [],
+            [
+              0
+            ],
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "identity": "f-f^(ij)=(x_i-x_j)*(a_i-a_j+sum_k(b_ik-b_jk)x_k)",
+          "verified": true
+        },
+        "global_residual_ii_closed": false,
+        "height_cap_exact": "82944/49",
+        "host": "NUKA",
+        "influence_floor_at_P_MIN": "2099536200/67184639999",
+        "influence_floor_formula": "(p^2-1)/(32*p*(p-2)) > 1/32",
+        "integer_height_cap": 1692,
+        "limit_closed": false,
+        "power_band_certificate": {
+          "B": "h/(2*p)",
+          "below_frame_case": "h<r*p contradicts the signed frame mean",
+          "both_signed_types_required": true,
+          "divisibility_identity": "4*(alpha_plus+alpha_minus+r)=(p+1)*(4*nu_plus+4*nu_minus-2*(P_plus+P_minus)+4*r)",
+          "domain": "prime p>=29; r in {3,4,5}; h>=0; h=r mod 2",
+          "extension": "L<186624*B^3<=(p-1)/2",
+          "extension_coefficient": 373248,
+          "formal_T_elimination_verified": true,
+          "formal_variables": [
+            "M=p+1",
+            "nu_plus",
+            "nu_minus",
+            "P_plus",
+            "P_minus",
+            "T",
+            "r"
+          ],
+          "height_coefficient": 2916,
+          "isolation_factor_margin_at_min_B": "839804",
+          "isolation_implication": "4*B<373248*B^3<=p-1 implies p^2+1-2*h>0",
+          "junta_coefficient": 186624,
+          "minimum_B": "3/2",
+          "pairing_factor_margin": "3-2p/(p-1)=(p-3)/(p-1)>0 for p>=29",
+          "parity_required": true,
+          "quarter_integrality_makes_bracket_integral": true,
+          "remaining_case": "h>=r*p and 46656*h^3<=p^3*(p-1)",
+          "shell_upper_bound_margins": [
+            {
+              "8B_squared_minus_4r_coefficients_in_t": [
+                6,
+                24,
+                8
+              ],
+              "B_parameterization": "r/2+t, t>=0",
+              "r": 3
+            },
+            {
+              "8B_squared_minus_4r_coefficients_in_t": [
+                16,
+                32,
+                8
+              ],
+              "B_parameterization": "r/2+t, t>=0",
+              "r": 4
+            },
+            {
+              "8B_squared_minus_4r_coefficients_in_t": [
+                30,
+                40,
+                8
+              ],
+              "B_parameterization": "r/2+t, t>=0",
+              "r": 5
+            }
+          ],
+          "strict_modulus_chain": "0<4*r<=4*(alpha_plus+alpha_minus+r)<=4*(5832*B^2+r)<=23336*B^2<=23336*B^3<373248*B^3<=p-1<p+1",
+          "support_condition_coefficient": 46656,
+          "type_selection": "each signed type has mean A=(h-r*p)/(2*p)<=B",
+          "verified": true
+        },
+        "proved_layer_scope": "conditional on the audited analytic proof: prime p>=259201, k=5p+5, |H|=5p+6",
+        "proved_power_band_scope": "conditional on the audited analytic proof: prime p>=29,r in {3,4,5},h=r mod 2; both signed floors r excluded if h<r*p or 46656*h^3<=p^3*(p-1)",
+        "python": "3.14.4",
+        "residue_interval_certificate": {
+          "actual_parallel_count_five_assumed": false,
+          "allowed_residue_intervals": [
+            "[0,2]",
+            "[m-6,m-1]"
+          ],
+          "forced_low_masses": [
+            "2p+4",
+            "2p+6"
+          ],
+          "high_high_sum_mod_m": [
+            "[m-12,m-2]"
+          ],
+          "low_high_sum_mod_m": [
+            "[0,1]",
+            "[m-6,m-1]"
+          ],
+          "only_ordered_pairs": [
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "parameter": "m=(p+1)/2; t=2m+2",
+          "required_sum_mod_m": 3,
+          "signed_total_plus_or_minus_one_assumed": false,
+          "u_one_high_mass": "3p+5",
+          "u_one_total_excess_above_quotient_two": 1,
+          "u_two_total_excess_above_quotient_two": 0,
+          "verified": true
+        },
+        "slice_cube_mean_identity": "p*mu=(p+1)*nu-f(0)",
+        "slice_cube_mean_monomials": [
+          {
+            "cube_mean": "1",
+            "degree": 0,
+            "slice_mean_at_P_MIN": "1",
+            "value_at_zero": 1
+          },
+          {
+            "cube_mean": "1/2",
+            "degree": 1,
+            "slice_mean_at_P_MIN": "129601/259201",
+            "value_at_zero": 0
+          },
+          {
+            "cube_mean": "1/4",
+            "degree": 2,
+            "slice_mean_at_P_MIN": "129601/518402",
+            "value_at_zero": 0
+          }
+        ],
+        "source_sha256": "53fa6f5e1cc74d66d5beed68f6adcfbd87d9e9ae1857ac7e48d6ce516a9fcf7d",
+        "strict_junta_coordinate_cap": 129600,
+        "strict_loose_height_cap": 1800,
+        "tail_margins": {
+          "isolated_vertex_margin": {
+            "factors_at_P_MIN": [
+              259202,
+              259190
+            ],
+            "positive_factorization": "p^2+1-2*(5p+6)=(p+1)*(p-11)"
+          },
+          "mu_below_9_over_8": {
+            "denominator": "8*p",
+            "numerator_coefficients_in_p_minus_P_MIN": [
+              259177,
+              1
+            ]
+          },
+          "paired_mean_below_or_equal_16_over_7": {
+            "denominator": "7*(p-1)",
+            "numerator_coefficients_in_p_minus_P_MIN": [
+              518344,
+              2
+            ]
+          },
+          "relevant_influence_above_1_over_32": {
+            "denominator": "32*p*(p-2)",
+            "numerator_coefficients_in_p_minus_P_MIN": [
+              518401,
+              2
+            ]
+          },
+          "uniform_cube_mean_below_5_over_4": {
+            "denominator": "4*(p+1)",
+            "numerator_coefficients_in_p_minus_P_MIN": [
+              251998,
+              1
+            ]
+          }
+        },
+        "target_masses": [
+          {
+            "a": 2,
+            "quarter_integral_value_exists": false,
+            "scaled_mass_2p_E_A": "2p+4",
+            "slice_mean": "1+2/p",
+            "uniform_cube_mean_formula": "1+(a-1+f(0))/(p+1)",
+            "uniform_cube_mean_interval_at_P_MIN": [
+              "259203/259202",
+              "130501/129601"
+            ]
+          },
+          {
+            "a": 3,
+            "quarter_integral_value_exists": false,
+            "scaled_mass_2p_E_A": "2p+6",
+            "slice_mean": "1+3/p",
+            "uniform_cube_mean_formula": "1+(a-1+f(0))/(p+1)",
+            "uniform_cube_mean_interval_at_P_MIN": [
+              "129602/129601",
+              "261003/259202"
+            ]
+          }
+        ],
+        "verified": true
+      }
+    },
+    {
+      "node": "jellyfin",
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.191 'cd /tmp/first-layer-15775.TmL7Vv && sha256sum first_layer_15775_mesh_verify.py && PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 first_layer_15775_mesh_verify.py'",
+      "stage": "/tmp/first-layer-15775.TmL7Vv",
+      "chunk_id": "d13527",
+      "wall_time_seconds": 0.584428801,
+      "exit_code": 0,
+      "original_token_count": 1457,
+      "output": "53fa6f5e1cc74d66d5beed68f6adcfbd87d9e9ae1857ac7e48d6ce516a9fcf7d  first_layer_15775_mesh_verify.py\n{\"E1_closed\": false, \"P_MIN\": 259201, \"analytic_inputs_not_replaced_by_this_replay\": [\"degree-two Bonami ||f||_4 <=3||f||_2 and interpolation ||f||_2<=9 E[f]\", \"integer cube quadratics have Fourier coefficients in (1/4)Z\", \"proved maximizing paired-cube and stabilizer identities on the middle slice\", \"Johnson transposition Laplacian level-d eigenvalue d*(p+1-d)\", \"zero-transposition-influence classes and degree-two symmetrization\", \"Proposition 15.774 strict small-mass quotient floors\"], \"architecture\": \"x86_64\", \"checks\": {\"all_target_quarter_lattice_intervals_empty\": true, \"bonami_fourier_constant_is_324\": true, \"both_slice_sides_exceed_kept_coordinate_bound\": true, \"derivative_probability_product_identity\": true, \"first_layer_has_an_isolated_vertex\": true, \"formal_swap_derivative_verified\": true, \"height_cap_exact\": true, \"integer_height_cap_1692\": true, \"junta_cap_product\": true, \"loose_height_cap_1800_is_strict\": true, \"power_band_both_types_and_parity_retained\": true, \"power_band_constants_verified\": true, \"power_band_formal_T_elimination\": true, \"power_band_quarter_integral_bracket\": true, \"relevant_influence_strictly_above_one_over_32\": true, \"threshold_matches_twice_junta_cap_plus_one\": true}, \"classification\": \"INDEPENDENT EXACT ARITHMETIC REPLAY; NOT A FINITE CENSUS\", \"derivative_identity\": {\"all_degree_zero_one_two_index_patterns_covered\": true, \"formal_monomials_checked\": [[], [0], [1], [2], [3], [0, 1], [0, 2], [0, 3], [1, 2], [1, 3], [2, 3]], \"identity\": \"f-f^(ij)=(x_i-x_j)*(a_i-a_j+sum_k(b_ik-b_jk)x_k)\", \"verified\": true}, \"global_residual_ii_closed\": false, \"height_cap_exact\": \"82944/49\", \"host\": \"jellyfin\", \"influence_floor_at_P_MIN\": \"2099536200/67184639999\", \"influence_floor_formula\": \"(p^2-1)/(32*p*(p-2)) > 1/32\", \"integer_height_cap\": 1692, \"limit_closed\": false, \"power_band_certificate\": {\"B\": \"h/(2*p)\", \"below_frame_case\": \"h<r*p contradicts the signed frame mean\", \"both_signed_types_required\": true, \"divisibility_identity\": \"4*(alpha_plus+alpha_minus+r)=(p+1)*(4*nu_plus+4*nu_minus-2*(P_plus+P_minus)+4*r)\", \"domain\": \"prime p>=29; r in {3,4,5}; h>=0; h=r mod 2\", \"extension\": \"L<186624*B^3<=(p-1)/2\", \"extension_coefficient\": 373248, \"formal_T_elimination_verified\": true, \"formal_variables\": [\"M=p+1\", \"nu_plus\", \"nu_minus\", \"P_plus\", \"P_minus\", \"T\", \"r\"], \"height_coefficient\": 2916, \"isolation_factor_margin_at_min_B\": \"839804\", \"isolation_implication\": \"4*B<373248*B^3<=p-1 implies p^2+1-2*h>0\", \"junta_coefficient\": 186624, \"minimum_B\": \"3/2\", \"pairing_factor_margin\": \"3-2p/(p-1)=(p-3)/(p-1)>0 for p>=29\", \"parity_required\": true, \"quarter_integrality_makes_bracket_integral\": true, \"remaining_case\": \"h>=r*p and 46656*h^3<=p^3*(p-1)\", \"shell_upper_bound_margins\": [{\"8B_squared_minus_4r_coefficients_in_t\": [6, 24, 8], \"B_parameterization\": \"r/2+t, t>=0\", \"r\": 3}, {\"8B_squared_minus_4r_coefficients_in_t\": [16, 32, 8], \"B_parameterization\": \"r/2+t, t>=0\", \"r\": 4}, {\"8B_squared_minus_4r_coefficients_in_t\": [30, 40, 8], \"B_parameterization\": \"r/2+t, t>=0\", \"r\": 5}], \"strict_modulus_chain\": \"0<4*r<=4*(alpha_plus+alpha_minus+r)<=4*(5832*B^2+r)<=23336*B^2<=23336*B^3<373248*B^3<=p-1<p+1\", \"support_condition_coefficient\": 46656, \"type_selection\": \"each signed type has mean A=(h-r*p)/(2*p)<=B\", \"verified\": true}, \"proved_layer_scope\": \"conditional on the audited analytic proof: prime p>=259201, k=5p+5, |H|=5p+6\", \"proved_power_band_scope\": \"conditional on the audited analytic proof: prime p>=29,r in {3,4,5},h=r mod 2; both signed floors r excluded if h<r*p or 46656*h^3<=p^3*(p-1)\", \"python\": \"3.14.4\", \"residue_interval_certificate\": {\"actual_parallel_count_five_assumed\": false, \"allowed_residue_intervals\": [\"[0,2]\", \"[m-6,m-1]\"], \"forced_low_masses\": [\"2p+4\", \"2p+6\"], \"high_high_sum_mod_m\": [\"[m-12,m-2]\"], \"low_high_sum_mod_m\": [\"[0,1]\", \"[m-6,m-1]\"], \"only_ordered_pairs\": [[1, 2], [2, 1]], \"parameter\": \"m=(p+1)/2; t=2m+2\", \"required_sum_mod_m\": 3, \"signed_total_plus_or_minus_one_assumed\": false, \"u_one_high_mass\": \"3p+5\", \"u_one_total_excess_above_quotient_two\": 1, \"u_two_total_excess_above_quotient_two\": 0, \"verified\": true}, \"slice_cube_mean_identity\": \"p*mu=(p+1)*nu-f(0)\", \"slice_cube_mean_monomials\": [{\"cube_mean\": \"1\", \"degree\": 0, \"slice_mean_at_P_MIN\": \"1\", \"value_at_zero\": 1}, {\"cube_mean\": \"1/2\", \"degree\": 1, \"slice_mean_at_P_MIN\": \"129601/259201\", \"value_at_zero\": 0}, {\"cube_mean\": \"1/4\", \"degree\": 2, \"slice_mean_at_P_MIN\": \"129601/518402\", \"value_at_zero\": 0}], \"source_sha256\": \"53fa6f5e1cc74d66d5beed68f6adcfbd87d9e9ae1857ac7e48d6ce516a9fcf7d\", \"strict_junta_coordinate_cap\": 129600, \"strict_loose_height_cap\": 1800, \"tail_margins\": {\"isolated_vertex_margin\": {\"factors_at_P_MIN\": [259202, 259190], \"positive_factorization\": \"p^2+1-2*(5p+6)=(p+1)*(p-11)\"}, \"mu_below_9_over_8\": {\"denominator\": \"8*p\", \"numerator_coefficients_in_p_minus_P_MIN\": [259177, 1]}, \"paired_mean_below_or_equal_16_over_7\": {\"denominator\": \"7*(p-1)\", \"numerator_coefficients_in_p_minus_P_MIN\": [518344, 2]}, \"relevant_influence_above_1_over_32\": {\"denominator\": \"32*p*(p-2)\", \"numerator_coefficients_in_p_minus_P_MIN\": [518401, 2]}, \"uniform_cube_mean_below_5_over_4\": {\"denominator\": \"4*(p+1)\", \"numerator_coefficients_in_p_minus_P_MIN\": [251998, 1]}}, \"target_masses\": [{\"a\": 2, \"quarter_integral_value_exists\": false, \"scaled_mass_2p_E_A\": \"2p+4\", \"slice_mean\": \"1+2/p\", \"uniform_cube_mean_formula\": \"1+(a-1+f(0))/(p+1)\", \"uniform_cube_mean_interval_at_P_MIN\": [\"259203/259202\", \"130501/129601\"]}, {\"a\": 3, \"quarter_integral_value_exists\": false, \"scaled_mass_2p_E_A\": \"2p+6\", \"slice_mean\": \"1+3/p\", \"uniform_cube_mean_formula\": \"1+(a-1+f(0))/(p+1)\", \"uniform_cube_mean_interval_at_P_MIN\": [\"129602/129601\", \"261003/259202\"]}], \"verified\": true}\n",
+      "verifier_source_sha256": "53fa6f5e1cc74d66d5beed68f6adcfbd87d9e9ae1857ac7e48d6ce516a9fcf7d",
+      "result": {
+        "E1_closed": false,
+        "P_MIN": 259201,
+        "analytic_inputs_not_replaced_by_this_replay": [
+          "degree-two Bonami ||f||_4 <=3||f||_2 and interpolation ||f||_2<=9 E[f]",
+          "integer cube quadratics have Fourier coefficients in (1/4)Z",
+          "proved maximizing paired-cube and stabilizer identities on the middle slice",
+          "Johnson transposition Laplacian level-d eigenvalue d*(p+1-d)",
+          "zero-transposition-influence classes and degree-two symmetrization",
+          "Proposition 15.774 strict small-mass quotient floors"
+        ],
+        "architecture": "x86_64",
+        "checks": {
+          "all_target_quarter_lattice_intervals_empty": true,
+          "bonami_fourier_constant_is_324": true,
+          "both_slice_sides_exceed_kept_coordinate_bound": true,
+          "derivative_probability_product_identity": true,
+          "first_layer_has_an_isolated_vertex": true,
+          "formal_swap_derivative_verified": true,
+          "height_cap_exact": true,
+          "integer_height_cap_1692": true,
+          "junta_cap_product": true,
+          "loose_height_cap_1800_is_strict": true,
+          "power_band_both_types_and_parity_retained": true,
+          "power_band_constants_verified": true,
+          "power_band_formal_T_elimination": true,
+          "power_band_quarter_integral_bracket": true,
+          "relevant_influence_strictly_above_one_over_32": true,
+          "threshold_matches_twice_junta_cap_plus_one": true
+        },
+        "classification": "INDEPENDENT EXACT ARITHMETIC REPLAY; NOT A FINITE CENSUS",
+        "derivative_identity": {
+          "all_degree_zero_one_two_index_patterns_covered": true,
+          "formal_monomials_checked": [
+            [],
+            [
+              0
+            ],
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "identity": "f-f^(ij)=(x_i-x_j)*(a_i-a_j+sum_k(b_ik-b_jk)x_k)",
+          "verified": true
+        },
+        "global_residual_ii_closed": false,
+        "height_cap_exact": "82944/49",
+        "host": "jellyfin",
+        "influence_floor_at_P_MIN": "2099536200/67184639999",
+        "influence_floor_formula": "(p^2-1)/(32*p*(p-2)) > 1/32",
+        "integer_height_cap": 1692,
+        "limit_closed": false,
+        "power_band_certificate": {
+          "B": "h/(2*p)",
+          "below_frame_case": "h<r*p contradicts the signed frame mean",
+          "both_signed_types_required": true,
+          "divisibility_identity": "4*(alpha_plus+alpha_minus+r)=(p+1)*(4*nu_plus+4*nu_minus-2*(P_plus+P_minus)+4*r)",
+          "domain": "prime p>=29; r in {3,4,5}; h>=0; h=r mod 2",
+          "extension": "L<186624*B^3<=(p-1)/2",
+          "extension_coefficient": 373248,
+          "formal_T_elimination_verified": true,
+          "formal_variables": [
+            "M=p+1",
+            "nu_plus",
+            "nu_minus",
+            "P_plus",
+            "P_minus",
+            "T",
+            "r"
+          ],
+          "height_coefficient": 2916,
+          "isolation_factor_margin_at_min_B": "839804",
+          "isolation_implication": "4*B<373248*B^3<=p-1 implies p^2+1-2*h>0",
+          "junta_coefficient": 186624,
+          "minimum_B": "3/2",
+          "pairing_factor_margin": "3-2p/(p-1)=(p-3)/(p-1)>0 for p>=29",
+          "parity_required": true,
+          "quarter_integrality_makes_bracket_integral": true,
+          "remaining_case": "h>=r*p and 46656*h^3<=p^3*(p-1)",
+          "shell_upper_bound_margins": [
+            {
+              "8B_squared_minus_4r_coefficients_in_t": [
+                6,
+                24,
+                8
+              ],
+              "B_parameterization": "r/2+t, t>=0",
+              "r": 3
+            },
+            {
+              "8B_squared_minus_4r_coefficients_in_t": [
+                16,
+                32,
+                8
+              ],
+              "B_parameterization": "r/2+t, t>=0",
+              "r": 4
+            },
+            {
+              "8B_squared_minus_4r_coefficients_in_t": [
+                30,
+                40,
+                8
+              ],
+              "B_parameterization": "r/2+t, t>=0",
+              "r": 5
+            }
+          ],
+          "strict_modulus_chain": "0<4*r<=4*(alpha_plus+alpha_minus+r)<=4*(5832*B^2+r)<=23336*B^2<=23336*B^3<373248*B^3<=p-1<p+1",
+          "support_condition_coefficient": 46656,
+          "type_selection": "each signed type has mean A=(h-r*p)/(2*p)<=B",
+          "verified": true
+        },
+        "proved_layer_scope": "conditional on the audited analytic proof: prime p>=259201, k=5p+5, |H|=5p+6",
+        "proved_power_band_scope": "conditional on the audited analytic proof: prime p>=29,r in {3,4,5},h=r mod 2; both signed floors r excluded if h<r*p or 46656*h^3<=p^3*(p-1)",
+        "python": "3.14.4",
+        "residue_interval_certificate": {
+          "actual_parallel_count_five_assumed": false,
+          "allowed_residue_intervals": [
+            "[0,2]",
+            "[m-6,m-1]"
+          ],
+          "forced_low_masses": [
+            "2p+4",
+            "2p+6"
+          ],
+          "high_high_sum_mod_m": [
+            "[m-12,m-2]"
+          ],
+          "low_high_sum_mod_m": [
+            "[0,1]",
+            "[m-6,m-1]"
+          ],
+          "only_ordered_pairs": [
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "parameter": "m=(p+1)/2; t=2m+2",
+          "required_sum_mod_m": 3,
+          "signed_total_plus_or_minus_one_assumed": false,
+          "u_one_high_mass": "3p+5",
+          "u_one_total_excess_above_quotient_two": 1,
+          "u_two_total_excess_above_quotient_two": 0,
+          "verified": true
+        },
+        "slice_cube_mean_identity": "p*mu=(p+1)*nu-f(0)",
+        "slice_cube_mean_monomials": [
+          {
+            "cube_mean": "1",
+            "degree": 0,
+            "slice_mean_at_P_MIN": "1",
+            "value_at_zero": 1
+          },
+          {
+            "cube_mean": "1/2",
+            "degree": 1,
+            "slice_mean_at_P_MIN": "129601/259201",
+            "value_at_zero": 0
+          },
+          {
+            "cube_mean": "1/4",
+            "degree": 2,
+            "slice_mean_at_P_MIN": "129601/518402",
+            "value_at_zero": 0
+          }
+        ],
+        "source_sha256": "53fa6f5e1cc74d66d5beed68f6adcfbd87d9e9ae1857ac7e48d6ce516a9fcf7d",
+        "strict_junta_coordinate_cap": 129600,
+        "strict_loose_height_cap": 1800,
+        "tail_margins": {
+          "isolated_vertex_margin": {
+            "factors_at_P_MIN": [
+              259202,
+              259190
+            ],
+            "positive_factorization": "p^2+1-2*(5p+6)=(p+1)*(p-11)"
+          },
+          "mu_below_9_over_8": {
+            "denominator": "8*p",
+            "numerator_coefficients_in_p_minus_P_MIN": [
+              259177,
+              1
+            ]
+          },
+          "paired_mean_below_or_equal_16_over_7": {
+            "denominator": "7*(p-1)",
+            "numerator_coefficients_in_p_minus_P_MIN": [
+              518344,
+              2
+            ]
+          },
+          "relevant_influence_above_1_over_32": {
+            "denominator": "32*p*(p-2)",
+            "numerator_coefficients_in_p_minus_P_MIN": [
+              518401,
+              2
+            ]
+          },
+          "uniform_cube_mean_below_5_over_4": {
+            "denominator": "4*(p+1)",
+            "numerator_coefficients_in_p_minus_P_MIN": [
+              251998,
+              1
+            ]
+          }
+        },
+        "target_masses": [
+          {
+            "a": 2,
+            "quarter_integral_value_exists": false,
+            "scaled_mass_2p_E_A": "2p+4",
+            "slice_mean": "1+2/p",
+            "uniform_cube_mean_formula": "1+(a-1+f(0))/(p+1)",
+            "uniform_cube_mean_interval_at_P_MIN": [
+              "259203/259202",
+              "130501/129601"
+            ]
+          },
+          {
+            "a": 3,
+            "quarter_integral_value_exists": false,
+            "scaled_mass_2p_E_A": "2p+6",
+            "slice_mean": "1+3/p",
+            "uniform_cube_mean_formula": "1+(a-1+f(0))/(p+1)",
+            "uniform_cube_mean_interval_at_P_MIN": [
+              "129602/129601",
+              "261003/259202"
+            ]
+          }
+        ],
+        "verified": true
+      }
+    }
+  ],
+  "all_node_exit_codes_zero": true,
+  "all_node_checks_passed": true,
+  "node_records_equal_except_host": true,
+  "proof_module_summary_comparison": {
+    "administrative_only": true,
+    "checks": {
+      "theorem_threshold": true,
+      "height_bound": true,
+      "junta_bound": true,
+      "power_height_constant": true,
+      "power_junta_constant": true,
+      "power_divisibility_identity": true,
+      "power_condition": true,
+      "forced_two_type_residues": true,
+      "no_global_claim": true
+    },
+    "verified": true
+  },
+  "controller_mathematical_score_or_test_computation": false,
+  "new_prime_graph_cell_or_boundary_census": false,
+  "packages_installed": false,
+  "global_residual_ii_closed": false,
+  "E1_closed": false,
+  "limit_closed": false,
+  "previous_first_layer_only_payload": {
+    "scope": "Initial first-layer arithmetic only; does not cover the later power-band corollary.",
+    "source_sha256": "e1a456e6f2c07ade7444ce5554a496402d742189cd4c6adf408cc5146832d63f",
+    "checks_per_node": 12,
+    "node_replays": [
+      {
+        "node": "soulkiller",
+        "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.113 'cd /tmp/first-layer-15775.AeD9pK/regression && sha256sum scripts/first_layer_15775_mesh_verify.py && PYTHONDONTWRITEBYTECODE=1 /home/nick/.venvs/mo-exact/bin/python scripts/first_layer_15775_mesh_verify.py'",
+        "stage": "/tmp/first-layer-15775.AeD9pK/regression",
+        "chunk_id": "934973",
+        "wall_time_seconds": 0.358848961,
+        "exit_code": 0,
+        "original_token_count": 1006,
+        "output": "e1a456e6f2c07ade7444ce5554a496402d742189cd4c6adf408cc5146832d63f  scripts/first_layer_15775_mesh_verify.py\n{\"E1_closed\": false, \"P_MIN\": 259201, \"analytic_inputs_not_replaced_by_this_replay\": [\"degree-two Bonami ||f||_4 <=3||f||_2 and interpolation ||f||_2<=9 E[f]\", \"integer cube quadratics have Fourier coefficients in (1/4)Z\", \"proved maximizing paired-cube and stabilizer identities on the middle slice\", \"Johnson transposition Laplacian level-d eigenvalue d*(p+1-d)\", \"zero-transposition-influence classes and degree-two symmetrization\", \"Proposition 15.774 strict small-mass quotient floors\"], \"architecture\": \"x86_64\", \"checks\": {\"all_target_quarter_lattice_intervals_empty\": true, \"bonami_fourier_constant_is_324\": true, \"both_slice_sides_exceed_kept_coordinate_bound\": true, \"derivative_probability_product_identity\": true, \"first_layer_has_an_isolated_vertex\": true, \"formal_swap_derivative_verified\": true, \"height_cap_exact\": true, \"integer_height_cap_1692\": true, \"junta_cap_product\": true, \"loose_height_cap_1800_is_strict\": true, \"relevant_influence_strictly_above_one_over_32\": true, \"threshold_matches_twice_junta_cap_plus_one\": true}, \"classification\": \"INDEPENDENT EXACT ARITHMETIC REPLAY; NOT A FINITE CENSUS\", \"derivative_identity\": {\"all_degree_zero_one_two_index_patterns_covered\": true, \"formal_monomials_checked\": [[], [0], [1], [2], [3], [0, 1], [0, 2], [0, 3], [1, 2], [1, 3], [2, 3]], \"identity\": \"f-f^(ij)=(x_i-x_j)*(a_i-a_j+sum_k(b_ik-b_jk)x_k)\", \"verified\": true}, \"global_residual_ii_closed\": false, \"height_cap_exact\": \"82944/49\", \"host\": \"soulkiller\", \"influence_floor_at_P_MIN\": \"2099536200/67184639999\", \"influence_floor_formula\": \"(p^2-1)/(32*p*(p-2)) > 1/32\", \"integer_height_cap\": 1692, \"limit_closed\": false, \"proved_layer_scope\": \"conditional on the audited analytic proof: prime p>=259201, k=5p+5, |H|=5p+6\", \"python\": \"3.14.4\", \"residue_interval_certificate\": {\"actual_parallel_count_five_assumed\": false, \"allowed_residue_intervals\": [\"[0,2]\", \"[m-6,m-1]\"], \"forced_low_masses\": [\"2p+4\", \"2p+6\"], \"high_high_sum_mod_m\": [\"[m-12,m-2]\"], \"low_high_sum_mod_m\": [\"[0,1]\", \"[m-6,m-1]\"], \"only_ordered_pairs\": [[1, 2], [2, 1]], \"parameter\": \"m=(p+1)/2; t=2m+2\", \"required_sum_mod_m\": 3, \"signed_total_plus_or_minus_one_assumed\": false, \"u_one_high_mass\": \"3p+5\", \"u_one_total_excess_above_quotient_two\": 1, \"u_two_total_excess_above_quotient_two\": 0, \"verified\": true}, \"slice_cube_mean_identity\": \"p*mu=(p+1)*nu-f(0)\", \"slice_cube_mean_monomials\": [{\"cube_mean\": \"1\", \"degree\": 0, \"slice_mean_at_P_MIN\": \"1\", \"value_at_zero\": 1}, {\"cube_mean\": \"1/2\", \"degree\": 1, \"slice_mean_at_P_MIN\": \"129601/259201\", \"value_at_zero\": 0}, {\"cube_mean\": \"1/4\", \"degree\": 2, \"slice_mean_at_P_MIN\": \"129601/518402\", \"value_at_zero\": 0}], \"source_sha256\": \"e1a456e6f2c07ade7444ce5554a496402d742189cd4c6adf408cc5146832d63f\", \"strict_junta_coordinate_cap\": 129600, \"strict_loose_height_cap\": 1800, \"tail_margins\": {\"isolated_vertex_margin\": {\"factors_at_P_MIN\": [259202, 259190], \"positive_factorization\": \"p^2+1-2*(5p+6)=(p+1)*(p-11)\"}, \"mu_below_9_over_8\": {\"denominator\": \"8*p\", \"numerator_coefficients_in_p_minus_P_MIN\": [259177, 1]}, \"paired_mean_below_or_equal_16_over_7\": {\"denominator\": \"7*(p-1)\", \"numerator_coefficients_in_p_minus_P_MIN\": [518344, 2]}, \"relevant_influence_above_1_over_32\": {\"denominator\": \"32*p*(p-2)\", \"numerator_coefficients_in_p_minus_P_MIN\": [518401, 2]}, \"uniform_cube_mean_below_5_over_4\": {\"denominator\": \"4*(p+1)\", \"numerator_coefficients_in_p_minus_P_MIN\": [251998, 1]}}, \"target_masses\": [{\"a\": 2, \"quarter_integral_value_exists\": false, \"scaled_mass_2p_E_A\": \"2p+4\", \"slice_mean\": \"1+2/p\", \"uniform_cube_mean_formula\": \"1+(a-1+f(0))/(p+1)\", \"uniform_cube_mean_interval_at_P_MIN\": [\"259203/259202\", \"130501/129601\"]}, {\"a\": 3, \"quarter_integral_value_exists\": false, \"scaled_mass_2p_E_A\": \"2p+6\", \"slice_mean\": \"1+3/p\", \"uniform_cube_mean_formula\": \"1+(a-1+f(0))/(p+1)\", \"uniform_cube_mean_interval_at_P_MIN\": [\"129602/129601\", \"261003/259202\"]}], \"verified\": true}\n",
+        "result": {
+          "E1_closed": false,
+          "P_MIN": 259201,
+          "analytic_inputs_not_replaced_by_this_replay": [
+            "degree-two Bonami ||f||_4 <=3||f||_2 and interpolation ||f||_2<=9 E[f]",
+            "integer cube quadratics have Fourier coefficients in (1/4)Z",
+            "proved maximizing paired-cube and stabilizer identities on the middle slice",
+            "Johnson transposition Laplacian level-d eigenvalue d*(p+1-d)",
+            "zero-transposition-influence classes and degree-two symmetrization",
+            "Proposition 15.774 strict small-mass quotient floors"
+          ],
+          "architecture": "x86_64",
+          "checks": {
+            "all_target_quarter_lattice_intervals_empty": true,
+            "bonami_fourier_constant_is_324": true,
+            "both_slice_sides_exceed_kept_coordinate_bound": true,
+            "derivative_probability_product_identity": true,
+            "first_layer_has_an_isolated_vertex": true,
+            "formal_swap_derivative_verified": true,
+            "height_cap_exact": true,
+            "integer_height_cap_1692": true,
+            "junta_cap_product": true,
+            "loose_height_cap_1800_is_strict": true,
+            "relevant_influence_strictly_above_one_over_32": true,
+            "threshold_matches_twice_junta_cap_plus_one": true
+          },
+          "classification": "INDEPENDENT EXACT ARITHMETIC REPLAY; NOT A FINITE CENSUS",
+          "derivative_identity": {
+            "all_degree_zero_one_two_index_patterns_covered": true,
+            "formal_monomials_checked": [
+              [],
+              [
+                0
+              ],
+              [
+                1
+              ],
+              [
+                2
+              ],
+              [
+                3
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                2,
+                3
+              ]
+            ],
+            "identity": "f-f^(ij)=(x_i-x_j)*(a_i-a_j+sum_k(b_ik-b_jk)x_k)",
+            "verified": true
+          },
+          "global_residual_ii_closed": false,
+          "height_cap_exact": "82944/49",
+          "host": "soulkiller",
+          "influence_floor_at_P_MIN": "2099536200/67184639999",
+          "influence_floor_formula": "(p^2-1)/(32*p*(p-2)) > 1/32",
+          "integer_height_cap": 1692,
+          "limit_closed": false,
+          "proved_layer_scope": "conditional on the audited analytic proof: prime p>=259201, k=5p+5, |H|=5p+6",
+          "python": "3.14.4",
+          "residue_interval_certificate": {
+            "actual_parallel_count_five_assumed": false,
+            "allowed_residue_intervals": [
+              "[0,2]",
+              "[m-6,m-1]"
+            ],
+            "forced_low_masses": [
+              "2p+4",
+              "2p+6"
+            ],
+            "high_high_sum_mod_m": [
+              "[m-12,m-2]"
+            ],
+            "low_high_sum_mod_m": [
+              "[0,1]",
+              "[m-6,m-1]"
+            ],
+            "only_ordered_pairs": [
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "parameter": "m=(p+1)/2; t=2m+2",
+            "required_sum_mod_m": 3,
+            "signed_total_plus_or_minus_one_assumed": false,
+            "u_one_high_mass": "3p+5",
+            "u_one_total_excess_above_quotient_two": 1,
+            "u_two_total_excess_above_quotient_two": 0,
+            "verified": true
+          },
+          "slice_cube_mean_identity": "p*mu=(p+1)*nu-f(0)",
+          "slice_cube_mean_monomials": [
+            {
+              "cube_mean": "1",
+              "degree": 0,
+              "slice_mean_at_P_MIN": "1",
+              "value_at_zero": 1
+            },
+            {
+              "cube_mean": "1/2",
+              "degree": 1,
+              "slice_mean_at_P_MIN": "129601/259201",
+              "value_at_zero": 0
+            },
+            {
+              "cube_mean": "1/4",
+              "degree": 2,
+              "slice_mean_at_P_MIN": "129601/518402",
+              "value_at_zero": 0
+            }
+          ],
+          "source_sha256": "e1a456e6f2c07ade7444ce5554a496402d742189cd4c6adf408cc5146832d63f",
+          "strict_junta_coordinate_cap": 129600,
+          "strict_loose_height_cap": 1800,
+          "tail_margins": {
+            "isolated_vertex_margin": {
+              "factors_at_P_MIN": [
+                259202,
+                259190
+              ],
+              "positive_factorization": "p^2+1-2*(5p+6)=(p+1)*(p-11)"
+            },
+            "mu_below_9_over_8": {
+              "denominator": "8*p",
+              "numerator_coefficients_in_p_minus_P_MIN": [
+                259177,
+                1
+              ]
+            },
+            "paired_mean_below_or_equal_16_over_7": {
+              "denominator": "7*(p-1)",
+              "numerator_coefficients_in_p_minus_P_MIN": [
+                518344,
+                2
+              ]
+            },
+            "relevant_influence_above_1_over_32": {
+              "denominator": "32*p*(p-2)",
+              "numerator_coefficients_in_p_minus_P_MIN": [
+                518401,
+                2
+              ]
+            },
+            "uniform_cube_mean_below_5_over_4": {
+              "denominator": "4*(p+1)",
+              "numerator_coefficients_in_p_minus_P_MIN": [
+                251998,
+                1
+              ]
+            }
+          },
+          "target_masses": [
+            {
+              "a": 2,
+              "quarter_integral_value_exists": false,
+              "scaled_mass_2p_E_A": "2p+4",
+              "slice_mean": "1+2/p",
+              "uniform_cube_mean_formula": "1+(a-1+f(0))/(p+1)",
+              "uniform_cube_mean_interval_at_P_MIN": [
+                "259203/259202",
+                "130501/129601"
+              ]
+            },
+            {
+              "a": 3,
+              "quarter_integral_value_exists": false,
+              "scaled_mass_2p_E_A": "2p+6",
+              "slice_mean": "1+3/p",
+              "uniform_cube_mean_formula": "1+(a-1+f(0))/(p+1)",
+              "uniform_cube_mean_interval_at_P_MIN": [
+                "129602/129601",
+                "261003/259202"
+              ]
+            }
+          ],
+          "verified": true
+        }
+      },
+      {
+        "node": "NUKA",
+        "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.192 'cd /tmp/first-layer-15775.dQjNag && sha256sum first_layer_15775_mesh_verify.py && PYTHONDONTWRITEBYTECODE=1 /home/nick/.venvs/qml-mesh/bin/python first_layer_15775_mesh_verify.py'",
+        "stage": "/tmp/first-layer-15775.dQjNag",
+        "chunk_id": "f3fe2a",
+        "wall_time_seconds": 0.179661648,
+        "exit_code": 0,
+        "original_token_count": 1003,
+        "output": "e1a456e6f2c07ade7444ce5554a496402d742189cd4c6adf408cc5146832d63f  first_layer_15775_mesh_verify.py\n{\"E1_closed\": false, \"P_MIN\": 259201, \"analytic_inputs_not_replaced_by_this_replay\": [\"degree-two Bonami ||f||_4 <=3||f||_2 and interpolation ||f||_2<=9 E[f]\", \"integer cube quadratics have Fourier coefficients in (1/4)Z\", \"proved maximizing paired-cube and stabilizer identities on the middle slice\", \"Johnson transposition Laplacian level-d eigenvalue d*(p+1-d)\", \"zero-transposition-influence classes and degree-two symmetrization\", \"Proposition 15.774 strict small-mass quotient floors\"], \"architecture\": \"x86_64\", \"checks\": {\"all_target_quarter_lattice_intervals_empty\": true, \"bonami_fourier_constant_is_324\": true, \"both_slice_sides_exceed_kept_coordinate_bound\": true, \"derivative_probability_product_identity\": true, \"first_layer_has_an_isolated_vertex\": true, \"formal_swap_derivative_verified\": true, \"height_cap_exact\": true, \"integer_height_cap_1692\": true, \"junta_cap_product\": true, \"loose_height_cap_1800_is_strict\": true, \"relevant_influence_strictly_above_one_over_32\": true, \"threshold_matches_twice_junta_cap_plus_one\": true}, \"classification\": \"INDEPENDENT EXACT ARITHMETIC REPLAY; NOT A FINITE CENSUS\", \"derivative_identity\": {\"all_degree_zero_one_two_index_patterns_covered\": true, \"formal_monomials_checked\": [[], [0], [1], [2], [3], [0, 1], [0, 2], [0, 3], [1, 2], [1, 3], [2, 3]], \"identity\": \"f-f^(ij)=(x_i-x_j)*(a_i-a_j+sum_k(b_ik-b_jk)x_k)\", \"verified\": true}, \"global_residual_ii_closed\": false, \"height_cap_exact\": \"82944/49\", \"host\": \"NUKA\", \"influence_floor_at_P_MIN\": \"2099536200/67184639999\", \"influence_floor_formula\": \"(p^2-1)/(32*p*(p-2)) > 1/32\", \"integer_height_cap\": 1692, \"limit_closed\": false, \"proved_layer_scope\": \"conditional on the audited analytic proof: prime p>=259201, k=5p+5, |H|=5p+6\", \"python\": \"3.14.4\", \"residue_interval_certificate\": {\"actual_parallel_count_five_assumed\": false, \"allowed_residue_intervals\": [\"[0,2]\", \"[m-6,m-1]\"], \"forced_low_masses\": [\"2p+4\", \"2p+6\"], \"high_high_sum_mod_m\": [\"[m-12,m-2]\"], \"low_high_sum_mod_m\": [\"[0,1]\", \"[m-6,m-1]\"], \"only_ordered_pairs\": [[1, 2], [2, 1]], \"parameter\": \"m=(p+1)/2; t=2m+2\", \"required_sum_mod_m\": 3, \"signed_total_plus_or_minus_one_assumed\": false, \"u_one_high_mass\": \"3p+5\", \"u_one_total_excess_above_quotient_two\": 1, \"u_two_total_excess_above_quotient_two\": 0, \"verified\": true}, \"slice_cube_mean_identity\": \"p*mu=(p+1)*nu-f(0)\", \"slice_cube_mean_monomials\": [{\"cube_mean\": \"1\", \"degree\": 0, \"slice_mean_at_P_MIN\": \"1\", \"value_at_zero\": 1}, {\"cube_mean\": \"1/2\", \"degree\": 1, \"slice_mean_at_P_MIN\": \"129601/259201\", \"value_at_zero\": 0}, {\"cube_mean\": \"1/4\", \"degree\": 2, \"slice_mean_at_P_MIN\": \"129601/518402\", \"value_at_zero\": 0}], \"source_sha256\": \"e1a456e6f2c07ade7444ce5554a496402d742189cd4c6adf408cc5146832d63f\", \"strict_junta_coordinate_cap\": 129600, \"strict_loose_height_cap\": 1800, \"tail_margins\": {\"isolated_vertex_margin\": {\"factors_at_P_MIN\": [259202, 259190], \"positive_factorization\": \"p^2+1-2*(5p+6)=(p+1)*(p-11)\"}, \"mu_below_9_over_8\": {\"denominator\": \"8*p\", \"numerator_coefficients_in_p_minus_P_MIN\": [259177, 1]}, \"paired_mean_below_or_equal_16_over_7\": {\"denominator\": \"7*(p-1)\", \"numerator_coefficients_in_p_minus_P_MIN\": [518344, 2]}, \"relevant_influence_above_1_over_32\": {\"denominator\": \"32*p*(p-2)\", \"numerator_coefficients_in_p_minus_P_MIN\": [518401, 2]}, \"uniform_cube_mean_below_5_over_4\": {\"denominator\": \"4*(p+1)\", \"numerator_coefficients_in_p_minus_P_MIN\": [251998, 1]}}, \"target_masses\": [{\"a\": 2, \"quarter_integral_value_exists\": false, \"scaled_mass_2p_E_A\": \"2p+4\", \"slice_mean\": \"1+2/p\", \"uniform_cube_mean_formula\": \"1+(a-1+f(0))/(p+1)\", \"uniform_cube_mean_interval_at_P_MIN\": [\"259203/259202\", \"130501/129601\"]}, {\"a\": 3, \"quarter_integral_value_exists\": false, \"scaled_mass_2p_E_A\": \"2p+6\", \"slice_mean\": \"1+3/p\", \"uniform_cube_mean_formula\": \"1+(a-1+f(0))/(p+1)\", \"uniform_cube_mean_interval_at_P_MIN\": [\"129602/129601\", \"261003/259202\"]}], \"verified\": true}\n",
+        "result": {
+          "E1_closed": false,
+          "P_MIN": 259201,
+          "analytic_inputs_not_replaced_by_this_replay": [
+            "degree-two Bonami ||f||_4 <=3||f||_2 and interpolation ||f||_2<=9 E[f]",
+            "integer cube quadratics have Fourier coefficients in (1/4)Z",
+            "proved maximizing paired-cube and stabilizer identities on the middle slice",
+            "Johnson transposition Laplacian level-d eigenvalue d*(p+1-d)",
+            "zero-transposition-influence classes and degree-two symmetrization",
+            "Proposition 15.774 strict small-mass quotient floors"
+          ],
+          "architecture": "x86_64",
+          "checks": {
+            "all_target_quarter_lattice_intervals_empty": true,
+            "bonami_fourier_constant_is_324": true,
+            "both_slice_sides_exceed_kept_coordinate_bound": true,
+            "derivative_probability_product_identity": true,
+            "first_layer_has_an_isolated_vertex": true,
+            "formal_swap_derivative_verified": true,
+            "height_cap_exact": true,
+            "integer_height_cap_1692": true,
+            "junta_cap_product": true,
+            "loose_height_cap_1800_is_strict": true,
+            "relevant_influence_strictly_above_one_over_32": true,
+            "threshold_matches_twice_junta_cap_plus_one": true
+          },
+          "classification": "INDEPENDENT EXACT ARITHMETIC REPLAY; NOT A FINITE CENSUS",
+          "derivative_identity": {
+            "all_degree_zero_one_two_index_patterns_covered": true,
+            "formal_monomials_checked": [
+              [],
+              [
+                0
+              ],
+              [
+                1
+              ],
+              [
+                2
+              ],
+              [
+                3
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                2,
+                3
+              ]
+            ],
+            "identity": "f-f^(ij)=(x_i-x_j)*(a_i-a_j+sum_k(b_ik-b_jk)x_k)",
+            "verified": true
+          },
+          "global_residual_ii_closed": false,
+          "height_cap_exact": "82944/49",
+          "host": "NUKA",
+          "influence_floor_at_P_MIN": "2099536200/67184639999",
+          "influence_floor_formula": "(p^2-1)/(32*p*(p-2)) > 1/32",
+          "integer_height_cap": 1692,
+          "limit_closed": false,
+          "proved_layer_scope": "conditional on the audited analytic proof: prime p>=259201, k=5p+5, |H|=5p+6",
+          "python": "3.14.4",
+          "residue_interval_certificate": {
+            "actual_parallel_count_five_assumed": false,
+            "allowed_residue_intervals": [
+              "[0,2]",
+              "[m-6,m-1]"
+            ],
+            "forced_low_masses": [
+              "2p+4",
+              "2p+6"
+            ],
+            "high_high_sum_mod_m": [
+              "[m-12,m-2]"
+            ],
+            "low_high_sum_mod_m": [
+              "[0,1]",
+              "[m-6,m-1]"
+            ],
+            "only_ordered_pairs": [
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "parameter": "m=(p+1)/2; t=2m+2",
+            "required_sum_mod_m": 3,
+            "signed_total_plus_or_minus_one_assumed": false,
+            "u_one_high_mass": "3p+5",
+            "u_one_total_excess_above_quotient_two": 1,
+            "u_two_total_excess_above_quotient_two": 0,
+            "verified": true
+          },
+          "slice_cube_mean_identity": "p*mu=(p+1)*nu-f(0)",
+          "slice_cube_mean_monomials": [
+            {
+              "cube_mean": "1",
+              "degree": 0,
+              "slice_mean_at_P_MIN": "1",
+              "value_at_zero": 1
+            },
+            {
+              "cube_mean": "1/2",
+              "degree": 1,
+              "slice_mean_at_P_MIN": "129601/259201",
+              "value_at_zero": 0
+            },
+            {
+              "cube_mean": "1/4",
+              "degree": 2,
+              "slice_mean_at_P_MIN": "129601/518402",
+              "value_at_zero": 0
+            }
+          ],
+          "source_sha256": "e1a456e6f2c07ade7444ce5554a496402d742189cd4c6adf408cc5146832d63f",
+          "strict_junta_coordinate_cap": 129600,
+          "strict_loose_height_cap": 1800,
+          "tail_margins": {
+            "isolated_vertex_margin": {
+              "factors_at_P_MIN": [
+                259202,
+                259190
+              ],
+              "positive_factorization": "p^2+1-2*(5p+6)=(p+1)*(p-11)"
+            },
+            "mu_below_9_over_8": {
+              "denominator": "8*p",
+              "numerator_coefficients_in_p_minus_P_MIN": [
+                259177,
+                1
+              ]
+            },
+            "paired_mean_below_or_equal_16_over_7": {
+              "denominator": "7*(p-1)",
+              "numerator_coefficients_in_p_minus_P_MIN": [
+                518344,
+                2
+              ]
+            },
+            "relevant_influence_above_1_over_32": {
+              "denominator": "32*p*(p-2)",
+              "numerator_coefficients_in_p_minus_P_MIN": [
+                518401,
+                2
+              ]
+            },
+            "uniform_cube_mean_below_5_over_4": {
+              "denominator": "4*(p+1)",
+              "numerator_coefficients_in_p_minus_P_MIN": [
+                251998,
+                1
+              ]
+            }
+          },
+          "target_masses": [
+            {
+              "a": 2,
+              "quarter_integral_value_exists": false,
+              "scaled_mass_2p_E_A": "2p+4",
+              "slice_mean": "1+2/p",
+              "uniform_cube_mean_formula": "1+(a-1+f(0))/(p+1)",
+              "uniform_cube_mean_interval_at_P_MIN": [
+                "259203/259202",
+                "130501/129601"
+              ]
+            },
+            {
+              "a": 3,
+              "quarter_integral_value_exists": false,
+              "scaled_mass_2p_E_A": "2p+6",
+              "slice_mean": "1+3/p",
+              "uniform_cube_mean_formula": "1+(a-1+f(0))/(p+1)",
+              "uniform_cube_mean_interval_at_P_MIN": [
+                "129602/129601",
+                "261003/259202"
+              ]
+            }
+          ],
+          "verified": true
+        }
+      },
+      {
+        "node": "jellyfin",
+        "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.191 'cd /tmp/first-layer-15775.TmL7Vv && sha256sum first_layer_15775_mesh_verify.py && PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 first_layer_15775_mesh_verify.py'",
+        "stage": "/tmp/first-layer-15775.TmL7Vv",
+        "chunk_id": "f82fb1",
+        "wall_time_seconds": 0.375613846,
+        "exit_code": 0,
+        "original_token_count": 1004,
+        "output": "e1a456e6f2c07ade7444ce5554a496402d742189cd4c6adf408cc5146832d63f  first_layer_15775_mesh_verify.py\n{\"E1_closed\": false, \"P_MIN\": 259201, \"analytic_inputs_not_replaced_by_this_replay\": [\"degree-two Bonami ||f||_4 <=3||f||_2 and interpolation ||f||_2<=9 E[f]\", \"integer cube quadratics have Fourier coefficients in (1/4)Z\", \"proved maximizing paired-cube and stabilizer identities on the middle slice\", \"Johnson transposition Laplacian level-d eigenvalue d*(p+1-d)\", \"zero-transposition-influence classes and degree-two symmetrization\", \"Proposition 15.774 strict small-mass quotient floors\"], \"architecture\": \"x86_64\", \"checks\": {\"all_target_quarter_lattice_intervals_empty\": true, \"bonami_fourier_constant_is_324\": true, \"both_slice_sides_exceed_kept_coordinate_bound\": true, \"derivative_probability_product_identity\": true, \"first_layer_has_an_isolated_vertex\": true, \"formal_swap_derivative_verified\": true, \"height_cap_exact\": true, \"integer_height_cap_1692\": true, \"junta_cap_product\": true, \"loose_height_cap_1800_is_strict\": true, \"relevant_influence_strictly_above_one_over_32\": true, \"threshold_matches_twice_junta_cap_plus_one\": true}, \"classification\": \"INDEPENDENT EXACT ARITHMETIC REPLAY; NOT A FINITE CENSUS\", \"derivative_identity\": {\"all_degree_zero_one_two_index_patterns_covered\": true, \"formal_monomials_checked\": [[], [0], [1], [2], [3], [0, 1], [0, 2], [0, 3], [1, 2], [1, 3], [2, 3]], \"identity\": \"f-f^(ij)=(x_i-x_j)*(a_i-a_j+sum_k(b_ik-b_jk)x_k)\", \"verified\": true}, \"global_residual_ii_closed\": false, \"height_cap_exact\": \"82944/49\", \"host\": \"jellyfin\", \"influence_floor_at_P_MIN\": \"2099536200/67184639999\", \"influence_floor_formula\": \"(p^2-1)/(32*p*(p-2)) > 1/32\", \"integer_height_cap\": 1692, \"limit_closed\": false, \"proved_layer_scope\": \"conditional on the audited analytic proof: prime p>=259201, k=5p+5, |H|=5p+6\", \"python\": \"3.14.4\", \"residue_interval_certificate\": {\"actual_parallel_count_five_assumed\": false, \"allowed_residue_intervals\": [\"[0,2]\", \"[m-6,m-1]\"], \"forced_low_masses\": [\"2p+4\", \"2p+6\"], \"high_high_sum_mod_m\": [\"[m-12,m-2]\"], \"low_high_sum_mod_m\": [\"[0,1]\", \"[m-6,m-1]\"], \"only_ordered_pairs\": [[1, 2], [2, 1]], \"parameter\": \"m=(p+1)/2; t=2m+2\", \"required_sum_mod_m\": 3, \"signed_total_plus_or_minus_one_assumed\": false, \"u_one_high_mass\": \"3p+5\", \"u_one_total_excess_above_quotient_two\": 1, \"u_two_total_excess_above_quotient_two\": 0, \"verified\": true}, \"slice_cube_mean_identity\": \"p*mu=(p+1)*nu-f(0)\", \"slice_cube_mean_monomials\": [{\"cube_mean\": \"1\", \"degree\": 0, \"slice_mean_at_P_MIN\": \"1\", \"value_at_zero\": 1}, {\"cube_mean\": \"1/2\", \"degree\": 1, \"slice_mean_at_P_MIN\": \"129601/259201\", \"value_at_zero\": 0}, {\"cube_mean\": \"1/4\", \"degree\": 2, \"slice_mean_at_P_MIN\": \"129601/518402\", \"value_at_zero\": 0}], \"source_sha256\": \"e1a456e6f2c07ade7444ce5554a496402d742189cd4c6adf408cc5146832d63f\", \"strict_junta_coordinate_cap\": 129600, \"strict_loose_height_cap\": 1800, \"tail_margins\": {\"isolated_vertex_margin\": {\"factors_at_P_MIN\": [259202, 259190], \"positive_factorization\": \"p^2+1-2*(5p+6)=(p+1)*(p-11)\"}, \"mu_below_9_over_8\": {\"denominator\": \"8*p\", \"numerator_coefficients_in_p_minus_P_MIN\": [259177, 1]}, \"paired_mean_below_or_equal_16_over_7\": {\"denominator\": \"7*(p-1)\", \"numerator_coefficients_in_p_minus_P_MIN\": [518344, 2]}, \"relevant_influence_above_1_over_32\": {\"denominator\": \"32*p*(p-2)\", \"numerator_coefficients_in_p_minus_P_MIN\": [518401, 2]}, \"uniform_cube_mean_below_5_over_4\": {\"denominator\": \"4*(p+1)\", \"numerator_coefficients_in_p_minus_P_MIN\": [251998, 1]}}, \"target_masses\": [{\"a\": 2, \"quarter_integral_value_exists\": false, \"scaled_mass_2p_E_A\": \"2p+4\", \"slice_mean\": \"1+2/p\", \"uniform_cube_mean_formula\": \"1+(a-1+f(0))/(p+1)\", \"uniform_cube_mean_interval_at_P_MIN\": [\"259203/259202\", \"130501/129601\"]}, {\"a\": 3, \"quarter_integral_value_exists\": false, \"scaled_mass_2p_E_A\": \"2p+6\", \"slice_mean\": \"1+3/p\", \"uniform_cube_mean_formula\": \"1+(a-1+f(0))/(p+1)\", \"uniform_cube_mean_interval_at_P_MIN\": [\"129602/129601\", \"261003/259202\"]}], \"verified\": true}\n",
+        "result": {
+          "E1_closed": false,
+          "P_MIN": 259201,
+          "analytic_inputs_not_replaced_by_this_replay": [
+            "degree-two Bonami ||f||_4 <=3||f||_2 and interpolation ||f||_2<=9 E[f]",
+            "integer cube quadratics have Fourier coefficients in (1/4)Z",
+            "proved maximizing paired-cube and stabilizer identities on the middle slice",
+            "Johnson transposition Laplacian level-d eigenvalue d*(p+1-d)",
+            "zero-transposition-influence classes and degree-two symmetrization",
+            "Proposition 15.774 strict small-mass quotient floors"
+          ],
+          "architecture": "x86_64",
+          "checks": {
+            "all_target_quarter_lattice_intervals_empty": true,
+            "bonami_fourier_constant_is_324": true,
+            "both_slice_sides_exceed_kept_coordinate_bound": true,
+            "derivative_probability_product_identity": true,
+            "first_layer_has_an_isolated_vertex": true,
+            "formal_swap_derivative_verified": true,
+            "height_cap_exact": true,
+            "integer_height_cap_1692": true,
+            "junta_cap_product": true,
+            "loose_height_cap_1800_is_strict": true,
+            "relevant_influence_strictly_above_one_over_32": true,
+            "threshold_matches_twice_junta_cap_plus_one": true
+          },
+          "classification": "INDEPENDENT EXACT ARITHMETIC REPLAY; NOT A FINITE CENSUS",
+          "derivative_identity": {
+            "all_degree_zero_one_two_index_patterns_covered": true,
+            "formal_monomials_checked": [
+              [],
+              [
+                0
+              ],
+              [
+                1
+              ],
+              [
+                2
+              ],
+              [
+                3
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                2,
+                3
+              ]
+            ],
+            "identity": "f-f^(ij)=(x_i-x_j)*(a_i-a_j+sum_k(b_ik-b_jk)x_k)",
+            "verified": true
+          },
+          "global_residual_ii_closed": false,
+          "height_cap_exact": "82944/49",
+          "host": "jellyfin",
+          "influence_floor_at_P_MIN": "2099536200/67184639999",
+          "influence_floor_formula": "(p^2-1)/(32*p*(p-2)) > 1/32",
+          "integer_height_cap": 1692,
+          "limit_closed": false,
+          "proved_layer_scope": "conditional on the audited analytic proof: prime p>=259201, k=5p+5, |H|=5p+6",
+          "python": "3.14.4",
+          "residue_interval_certificate": {
+            "actual_parallel_count_five_assumed": false,
+            "allowed_residue_intervals": [
+              "[0,2]",
+              "[m-6,m-1]"
+            ],
+            "forced_low_masses": [
+              "2p+4",
+              "2p+6"
+            ],
+            "high_high_sum_mod_m": [
+              "[m-12,m-2]"
+            ],
+            "low_high_sum_mod_m": [
+              "[0,1]",
+              "[m-6,m-1]"
+            ],
+            "only_ordered_pairs": [
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "parameter": "m=(p+1)/2; t=2m+2",
+            "required_sum_mod_m": 3,
+            "signed_total_plus_or_minus_one_assumed": false,
+            "u_one_high_mass": "3p+5",
+            "u_one_total_excess_above_quotient_two": 1,
+            "u_two_total_excess_above_quotient_two": 0,
+            "verified": true
+          },
+          "slice_cube_mean_identity": "p*mu=(p+1)*nu-f(0)",
+          "slice_cube_mean_monomials": [
+            {
+              "cube_mean": "1",
+              "degree": 0,
+              "slice_mean_at_P_MIN": "1",
+              "value_at_zero": 1
+            },
+            {
+              "cube_mean": "1/2",
+              "degree": 1,
+              "slice_mean_at_P_MIN": "129601/259201",
+              "value_at_zero": 0
+            },
+            {
+              "cube_mean": "1/4",
+              "degree": 2,
+              "slice_mean_at_P_MIN": "129601/518402",
+              "value_at_zero": 0
+            }
+          ],
+          "source_sha256": "e1a456e6f2c07ade7444ce5554a496402d742189cd4c6adf408cc5146832d63f",
+          "strict_junta_coordinate_cap": 129600,
+          "strict_loose_height_cap": 1800,
+          "tail_margins": {
+            "isolated_vertex_margin": {
+              "factors_at_P_MIN": [
+                259202,
+                259190
+              ],
+              "positive_factorization": "p^2+1-2*(5p+6)=(p+1)*(p-11)"
+            },
+            "mu_below_9_over_8": {
+              "denominator": "8*p",
+              "numerator_coefficients_in_p_minus_P_MIN": [
+                259177,
+                1
+              ]
+            },
+            "paired_mean_below_or_equal_16_over_7": {
+              "denominator": "7*(p-1)",
+              "numerator_coefficients_in_p_minus_P_MIN": [
+                518344,
+                2
+              ]
+            },
+            "relevant_influence_above_1_over_32": {
+              "denominator": "32*p*(p-2)",
+              "numerator_coefficients_in_p_minus_P_MIN": [
+                518401,
+                2
+              ]
+            },
+            "uniform_cube_mean_below_5_over_4": {
+              "denominator": "4*(p+1)",
+              "numerator_coefficients_in_p_minus_P_MIN": [
+                251998,
+                1
+              ]
+            }
+          },
+          "target_masses": [
+            {
+              "a": 2,
+              "quarter_integral_value_exists": false,
+              "scaled_mass_2p_E_A": "2p+4",
+              "slice_mean": "1+2/p",
+              "uniform_cube_mean_formula": "1+(a-1+f(0))/(p+1)",
+              "uniform_cube_mean_interval_at_P_MIN": [
+                "259203/259202",
+                "130501/129601"
+              ]
+            },
+            {
+              "a": 3,
+              "quarter_integral_value_exists": false,
+              "scaled_mass_2p_E_A": "2p+6",
+              "slice_mean": "1+3/p",
+              "uniform_cube_mean_formula": "1+(a-1+f(0))/(p+1)",
+              "uniform_cube_mean_interval_at_P_MIN": [
+                "129602/129601",
+                "261003/259202"
+              ]
+            }
+          ],
+          "verified": true
+        }
+      }
+    ]
+  },
+  "power_payload_sync": [
+    {
+      "node": "soulkiller",
+      "command": "rsync -a --exclude=.git --exclude=__pycache__ --exclude=.pytest_cache --exclude=.mypy_cache --exclude=.ruff_cache --exclude=.venv --exclude=.venvs --exclude=venv --exclude=.tox -e 'ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8' /home/nick/quadratic-minmax-limit-residual-ii/ nick@192.168.1.113:/tmp/first-layer-15775.AeD9pK/regression/",
+      "chunk_id": "b2040a",
+      "wall_time_seconds": 0.682628136,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "output": ""
+    },
+    {
+      "node": "NUKA",
+      "command": "scp -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 /home/nick/quadratic-minmax-limit-residual-ii/scripts/first_layer_15775_mesh_verify.py nick@192.168.1.192:/tmp/first-layer-15775.dQjNag/first_layer_15775_mesh_verify.py",
+      "stage": "/tmp/first-layer-15775.dQjNag",
+      "chunk_id": "5f5dfe",
+      "wall_time_seconds": 0.449454309,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "output": ""
+    },
+    {
+      "node": "jellyfin",
+      "command": "scp -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 /home/nick/quadratic-minmax-limit-residual-ii/scripts/first_layer_15775_mesh_verify.py nick@192.168.1.191:/tmp/first-layer-15775.TmL7Vv/first_layer_15775_mesh_verify.py",
+      "stage": "/tmp/first-layer-15775.TmL7Vv",
+      "chunk_id": "7ceea7",
+      "wall_time_seconds": 0.817178959,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "output": ""
+    }
+  ],
+  "checks_per_node": 16,
+  "independently_replayed_records_identical_except_hostname": true,
+  "proof_artifact_generation": {
+    "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.113 'cd /tmp/first-layer-15775.AeD9pK/regression && sha256sum src/e1_gmin_m4_prop15775.py src/e1_gmin_m4_affine_parity_cube_floor.py && PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python src/e1_gmin_m4_prop15775.py && sha256sum evidence/e1_gmin_m4_prop15775.json'",
+    "chunk_id": "5b1d06",
+    "wall_time_seconds": 0.544260693,
+    "exit_code": 0,
+    "original_token_count": 91,
+    "output": "df04dea47059507fa0adcecfaf5edd2c8fc8c6515fd0d07538a1a8498d52ff0f  src/e1_gmin_m4_prop15775.py\nb7baaa6010ef84b898203d1361adc45cc4c1029bff2ac2c3b3ba8b59ca8924b1  src/e1_gmin_m4_affine_parity_cube_floor.py\n{\"minimum_prime\": 259201, \"prop\": \"15.775\", \"proved\": true}\na1f7edfc1d8a3e45f49085181d0c15fa3099d70869ab7a5ff8df6b86375bdda2  evidence/e1_gmin_m4_prop15775.json\n"
+  },
+  "focused_tests": {
+    "initial": {
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.113 'cd /tmp/first-layer-15775.AeD9pK/regression && sha256sum src/e1_gmin_m4_prop15775.py tests/test_prop15775.py evidence/e1_gmin_m4_prop15775.json && PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -q -o cache_dir=/tmp/first-layer-15775.AeD9pK/pytest-cache-focused --junitxml=/tmp/first-layer-15775.AeD9pK/focused.xml tests/test_prop15775.py tests/test_affine_parity_cube_floor.py tests/test_prop15774.py tests/test_small_mass_spectrum.py tests/test_prop15773.py tests/test_prop15688.py'",
+      "chunk_id": "53d567",
+      "wall_time_seconds": 10.0004089,
+      "session_id": 85913,
+      "original_token_count": 72,
+      "output": "df04dea47059507fa0adcecfaf5edd2c8fc8c6515fd0d07538a1a8498d52ff0f  src/e1_gmin_m4_prop15775.py\n05f737fa32a7f5763aae0958c6585cc78c384235bfc136fa4ad7ec3d85fc63e1  tests/test_prop15775.py\na1f7edfc1d8a3e45f49085181d0c15fa3099d70869ab7a5ff8df6b86375bdda2  evidence/e1_gmin_m4_prop15775.json\n"
+    },
+    "completion": {
+      "chunk_id": "452016",
+      "wall_time_seconds": 0.000002779,
+      "exit_code": 0,
+      "original_token_count": 111,
+      "output": "bringing up nodes...\nbringing up nodes...\n\n........................................................................ [ 23%]\n........................................................................ [ 47%]\n........................................................................ [ 70%]\n........................................................................ [ 94%]\n.................                                                        [100%]\n"
+    },
+    "summary": {
+      "suites": [
+        {
+          "errors": "0",
+          "failures": "0",
+          "hostname": "soulkiller",
+          "name": "pytest",
+          "skipped": "0",
+          "tests": "305",
+          "time": "16.964",
+          "timestamp": "2026-09-04T23:02:42.430573+00:00"
+        }
+      ],
+      "testcases_by_class": {
+        "tests.test_affine_parity_cube_floor": 46,
+        "tests.test_prop15688": 4,
+        "tests.test_prop15773": 47,
+        "tests.test_prop15774": 57,
+        "tests.test_prop15775": 106,
+        "tests.test_small_mass_spectrum": 45
+      }
+    },
+    "junit_path": "/tmp/first-layer-15775.AeD9pK/focused.xml",
+    "junit_sha256": "2e8c2fbe738d4154153e58a093488bddcd53b8a2608f333bea07010dacb86e24",
+    "tests": 305,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 16.964
+  },
+  "documentation_gate": {
+    "classification": "INITIAL ROOT-DOC FREEZE; SUPERSEDED BY final_documentation_gate",
+    "initial": {
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.113 'cd /tmp/first-layer-15775.AeD9pK/regression && sha256sum tests/test_main_chain_docs.py && PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -q -o cache_dir=/tmp/first-layer-15775.AeD9pK/pytest-cache-docgate --junitxml=/tmp/first-layer-15775.AeD9pK/docgate.xml tests/test_main_chain_docs.py'",
+      "chunk_id": "ab5462",
+      "wall_time_seconds": 10.002944523,
+      "session_id": 15865,
+      "original_token_count": 24,
+      "output": "8f44d9250c00e9edb3df0626dbb4e8c33566bc50e571adebfdfebd76b37b87b4  tests/test_main_chain_docs.py\n"
+    },
+    "completion": {
+      "chunk_id": "32e961",
+      "wall_time_seconds": 0.000004176,
+      "exit_code": 0,
+      "original_token_count": 31,
+      "output": "bringing up nodes...\nbringing up nodes...\n\n................                                                         [100%]\n"
+    },
+    "summary": {
+      "suites": [
+        {
+          "errors": "0",
+          "failures": "0",
+          "hostname": "soulkiller",
+          "name": "pytest",
+          "skipped": "0",
+          "tests": "16",
+          "time": "14.549",
+          "timestamp": "2026-09-04T23:02:42.456734+00:00"
+        }
+      ],
+      "testcases_by_class": {
+        "tests.test_main_chain_docs": 16
+      }
+    },
+    "junit_path": "/tmp/first-layer-15775.AeD9pK/docgate.xml",
+    "junit_sha256": "c1c46b252b3c34e1f78c6ccb52375c074646eda1d3237b71e43936bcbc9a0265",
+    "tests": 16,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 14.549,
+    "initial_proof_note_sha256": "e6c7cd23b1ad4a36d2637c500fcf3380d31dd64fd78cc41268fc91cfb7c5d2f4",
+    "later_zero_function_wording_refinement_known": true
+  },
+  "test_payload_sync": {
+    "command": "rsync -a --exclude=.git --exclude=__pycache__ --exclude=.pytest_cache --exclude=.mypy_cache --exclude=.ruff_cache --exclude=.venv --exclude=.venvs --exclude=venv --exclude=.tox -e 'ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8' /home/nick/quadratic-minmax-limit-residual-ii/ nick@192.168.1.113:/tmp/first-layer-15775.AeD9pK/regression/",
+    "chunk_id": "583fcd",
+    "wall_time_seconds": 0.680993817,
+    "exit_code": 0,
+    "original_token_count": 0,
+    "output": ""
+  },
+  "test_hashes_and_junit_summary_raw": {
+    "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.113 'cd /tmp/first-layer-15775.AeD9pK/regression && sha256sum /tmp/first-layer-15775.AeD9pK/focused.xml /tmp/first-layer-15775.AeD9pK/docgate.xml src/e1_gmin_m4_prop15775.py tests/test_prop15775.py src/e1_gmin_m4_affine_parity_cube_floor.py tests/test_affine_parity_cube_floor.py evidence/e1_gmin_m4_prop15775.json evidence/NOTE_2026-09-04_EVENTUAL_FIRST_LAYER_CLOSE.md tests/test_main_chain_docs.py AGENTS.md GOAL.md HANDOFF.md LONG_HORIZON_GOAL.md README.md STATUS.md evidence/P0_ENGINEERING_GRAPH.md evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md evidence/share/denseness_path_package.md && /home/nick/.venvs/mo-exact/bin/python -c '\\''import collections,json,xml.etree.ElementTree as ET; from pathlib import Path; base=Path('\\''\\'\\'''\\''/tmp/first-layer-15775.AeD9pK'\\''\\'\\'''\\''); result={};\nfor name in ('\\''\\'\\'''\\''focused'\\''\\'\\'''\\'','\\''\\'\\'''\\''docgate'\\''\\'\\'''\\''):\n root=ET.parse(base/(name+'\\''\\'\\'''\\''.xml'\\''\\'\\'''\\'')).getroot(); result[name]={'\\''\\'\\'''\\''suites'\\''\\'\\'''\\'':[s.attrib for s in root.iter('\\''\\'\\'''\\''testsuite'\\''\\'\\'''\\'')], '\\''\\'\\'''\\''testcases_by_class'\\''\\'\\'''\\'':dict(sorted(collections.Counter(t.attrib.get('\\''\\'\\'''\\''classname'\\''\\'\\'''\\'','\\''\\'\\'''\\'''\\''\\'\\'''\\'') for t in root.iter('\\''\\'\\'''\\''testcase'\\''\\'\\'''\\'')).items()))}\nprint(json.dumps(result,sort_keys=True))'\\'''",
+    "chunk_id": "12f782",
+    "wall_time_seconds": 0.684506235,
+    "exit_code": 0,
+    "original_token_count": 599,
+    "output": "2e8c2fbe738d4154153e58a093488bddcd53b8a2608f333bea07010dacb86e24  /tmp/first-layer-15775.AeD9pK/focused.xml\nc1c46b252b3c34e1f78c6ccb52375c074646eda1d3237b71e43936bcbc9a0265  /tmp/first-layer-15775.AeD9pK/docgate.xml\ndf04dea47059507fa0adcecfaf5edd2c8fc8c6515fd0d07538a1a8498d52ff0f  src/e1_gmin_m4_prop15775.py\n05f737fa32a7f5763aae0958c6585cc78c384235bfc136fa4ad7ec3d85fc63e1  tests/test_prop15775.py\nb7baaa6010ef84b898203d1361adc45cc4c1029bff2ac2c3b3ba8b59ca8924b1  src/e1_gmin_m4_affine_parity_cube_floor.py\nbc27eeabe2f7ddfb23e52728ba13450fe85eacf3716d61f52cb7c748ffa628c1  tests/test_affine_parity_cube_floor.py\na1f7edfc1d8a3e45f49085181d0c15fa3099d70869ab7a5ff8df6b86375bdda2  evidence/e1_gmin_m4_prop15775.json\ne6c7cd23b1ad4a36d2637c500fcf3380d31dd64fd78cc41268fc91cfb7c5d2f4  evidence/NOTE_2026-09-04_EVENTUAL_FIRST_LAYER_CLOSE.md\n8f44d9250c00e9edb3df0626dbb4e8c33566bc50e571adebfdfebd76b37b87b4  tests/test_main_chain_docs.py\nac47328ff8ceab8b09581416cead98680988fa75ff24d0520f6bd2731828ea4d  AGENTS.md\nbc6d7f0a1e1491f866d95478cc1cdcf5a89de1e05456bea20b843e60bd3840e1  GOAL.md\ndbd7d353d5fcdb781ad0ad35eb9140c7fb7e4f2b51b9478ab507948ad5b718b4  HANDOFF.md\n1df8fe4a33544e27a41ee160481d971299184954abae1e9b0f294c25ee9956d3  LONG_HORIZON_GOAL.md\n697379b8fb318d4c3bd5802fd53b63504d96770940df866c014ae5c57e27f458  README.md\ned14847b38dd32bc4f5abaecc2148a2c6db2cc0faa1e5ee7c68b44ca29fec929  STATUS.md\nb86cdfc7bd32c41771fbf6aec9ce720ef09f2ab70c7dbe99184a0544842032fd  evidence/P0_ENGINEERING_GRAPH.md\nd00fed904fc410e7b500653cf2a724a63586255360673e011fcce81fe880a763  evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md\nf333ab9c74da30b1821feee5a2e9579ac94a71decc036a1c9a707ec20bcb996f  evidence/share/denseness_path_package.md\n{\"docgate\": {\"suites\": [{\"errors\": \"0\", \"failures\": \"0\", \"hostname\": \"soulkiller\", \"name\": \"pytest\", \"skipped\": \"0\", \"tests\": \"16\", \"time\": \"14.549\", \"timestamp\": \"2026-09-04T23:02:42.456734+00:00\"}], \"testcases_by_class\": {\"tests.test_main_chain_docs\": 16}}, \"focused\": {\"suites\": [{\"errors\": \"0\", \"failures\": \"0\", \"hostname\": \"soulkiller\", \"name\": \"pytest\", \"skipped\": \"0\", \"tests\": \"305\", \"time\": \"16.964\", \"timestamp\": \"2026-09-04T23:02:42.430573+00:00\"}], \"testcases_by_class\": {\"tests.test_affine_parity_cube_floor\": 46, \"tests.test_prop15688\": 4, \"tests.test_prop15773\": 47, \"tests.test_prop15774\": 57, \"tests.test_prop15775\": 106, \"tests.test_small_mass_spectrum\": 45}}}\n"
+  }
+}

@@ -6,6 +6,14 @@
 
 ## Verdict
 
+**Global bridge scope correction:** 15.750 requires `k=3p-2` and
+`S_G=3-2*f_e on Max+`. General odd-k level-one alignment remains
+open within the minimal-four-gap bridge. Even H contact at two does
+not supply those hypotheses. The former unconditional even-minimal-H
+bound is retracted; its r4 consequence holds without a signed level-two row.
+See `NOTE_2026-09-04_GLOBAL_BRIDGE_TYPE_I_SCOPE_AUDIT.md` in `evidence/`.
+All 15.775 conclusions remain intact.
+
 **15.272** writes a Max+-free spanning argument that \(k=1\cup k=3\) fills \(\mathcal W_{++}^0\) (Lemmas B–G), hence \(G_+\succ0\), hence dual-eq is empty on \(\mathrm{sc}\) (H–I). Aut-Schur is **false**. Gsum is unused.
 
 Independent review found two remaining load-bearing predicates **outside**
@@ -16,6 +24,17 @@ by the 15.720 degree congruence, and the Type-I multi-level hole is closed by
 15.750. The live remainder is listed under **Caveats**. The live and
 legacy-named expanded acceptance gates now test the same predicates.
 
+**Current additional closure (15.775).** The complete residual layer
+`t=q+3,k=5p+5` is empty for every prime `p>=259201`, all boundaries
+and phases. The [bounded-variable proof](../NOTE_2026-09-04_EVENTUAL_FIRST_LAYER_CLOSE.md)
+excludes both forced local masses using their full-cube mean lattice.
+It also excludes both signed shell floors `r=3,4,5` when `h=r mod 2`
+and `46656*h^3<=p^3*(p-1)`. The separate
+[affine-parity theorem](../NOTE_2026-09-04_AFFINE_PARITY_CUBE_FLOOR.md)
+closes the middle-boundary cells for every odd `p>=29`.
+These are closed infinite families, not all-size witness localization.
+The global acceptance predicates remain false.
+
 | Piece | Status |
 |-------|--------|
 | Sandwich \(1/\pi\le\liminf\le\limsup\le\tfrac12\) | **Proved** (`solution.md` §4–5) |
@@ -24,9 +43,9 @@ legacy-named expanded acceptance gates now test the same predicates.
 | Required bi-tight levels 2 and 3, all \(p\ge5\) | **Proved** (15.720; degree congruence + 15.272/15.207 kernel) |
 | Residual (ii), affine + even \(k\le4p-2\) | **Proved** (15.179+236+237) |
 | Residual (ii), even \(k\ge4p\) | **Open** — 15.734--15.754 close the first five shells and a higher band; 15.768--15.770 close the next two generic layers and `p=23,t=9,10`; 15.771 closes `p=23,t=11,k=114`; see Caveat 2 for the exact remainder |
-| Minimal-four-gap implication bridge | **Open** — 15.764 proves odd `|H|<=5p`; failure ranges start at even `|H|>=4p+2` and odd `|H|>=5p+2` |
+| Minimal-four-gap implication bridge | **Open** — odd contact enters residual (ii); even contact still needs general odd-k no-descent or the literal hypotheses of a proved unit; no-contact branches also remain open |
 | Residual (i) Type I, two-level Max− | **Proved** (15.272 → 15.207 → 15.249 → 15.216) |
-| Residual (i) Type I, multi-level Max− | **Proved** (15.750) |
+| Residual (i) Type I, multi-level Max−, `k=3p-2` and full affine Max+ identity | **Proved** (15.750); not general odd-k Type I |
 | Aut-Schur / Jacquet | **False** (\(p=5\) \(k=3\) rank \(61/65\); unused) |
 | Gsum disj LB | **False** / unused |
 | Pairing \(1^\top K^{-1}v\) | **Open** / unused |
@@ -317,8 +336,12 @@ A hostile review for public scrutiny found the following. **None of these is Aut
    couples `u_++u_-=r mod m` with the full type quota. It excludes
    shell floors `r=3,4,5` through `5p+4,6p+4,7p+6` for `p>=37`,
    or `5p-12,6p-12,7p-12` for every prime `p>=29`; the two
-   residual carries cover p29/p31. The next unclaimed generic layer
-   is `t=q+3,k=5p+5`, so the open frontier is `t>=q+3,k>=5p+5`.
+   residual carries cover p29/p31. At that checkpoint the next unclaimed
+   generic layer was `t=q+3,k=5p+5`. Proposition 15.775 now closes it
+   for every prime `p>=259201`, all boundaries and phases. Thus
+   `29<=p<259201` retains `t>=q+3,k>=5p+5`, while `p>=259201`
+   retains at least `t>=q+4,k>=5p+7`, additionally subject to the new
+   cubic support exclusion stated above.
    493 technical tests passed on soulkiller; the final documentation-gate result is recorded in `evidence/small_mass_two_type_regression.json`.
    Provenance is recorded in `evidence/small_mass_two_type_regression.json`.
    The global residual predicate remains false.
@@ -327,10 +350,14 @@ A hostile review for public scrutiny found the following. **None of these is Aut
    all-deletions minimal four-gap set enters the official residual-(ii) unit
    when `|H|` is odd and at most `5p`. Those historical bridge ranges
    are now sharpened by 15.774: odd minimal four-gap sets are excluded
-   through `5p+4`; even and odd-no-level-three sets obey the r4/r5
-   bounds above. There is still no all-size localization theorem.
-   The first uncovered eventual layer admits exact scalar quota
-   survivors, not graph witnesses. This bridge remains a separate
+   through `5p+4`; even-no-level-two and odd-no-level-three sets obey
+   the r4/r5 bounds above. The stronger unconditional even bound is
+   retracted. Even contact at two supplies neither `k=3p-2` nor
+   `S_G=3-2*f_e on Max+`, so the general odd-k implication remains
+   part of this bridge. There is still no all-size localization theorem.
+   The former first uncovered eventual layer admits exact scalar quota
+   survivors, not graph witnesses; 15.775 now excludes its actual local
+   cells above the explicit prime threshold. This bridge remains a separate
    acceptance predicate; closing residual (ii) alone cannot close E(1).
    Eventual E1 for all sufficiently large primes would suffice for
    `L=1/2` by denseness, but these bounded-size theorems are not

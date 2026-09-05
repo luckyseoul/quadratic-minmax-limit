@@ -266,8 +266,13 @@ through separator size `|H|=5p+4`, equivalently even deletion size
 
 For an inclusion-minimal four-gap H, all deletions have gap two.
 Proposition 15.764 gives the exact parity alternatives. An even H that
-hits signed level two enters the already closed Type-I unit; otherwise
-both signed shells have floor four. An odd H with no signed level-three
+does not hit signed level two has floor four in both signed shells.
+Contact at level two supplies only a general odd-cardinality deletion
+with level-one shell alignment. It does not supply the exact
+`|G|=3p-2` and `S_G=3-2f_e` hypotheses of the proved 15.750 unit.
+The former unconditional even-minimal-H bound is therefore **retracted
+for a scope mismatch**; the r4 shell-floor theorem itself is unchanged.
+An odd H with no signed level-three
 row has floor five in both shells; a level-three row supplies all
 official residual-(ii) hypotheses, including the frozen distinguished
 edge and the phase normalization.
@@ -277,8 +282,11 @@ The present theorems therefore imply:
 - Odd minimal four-gap `H` is impossible through `5p+4` for `p>=29`.
   In this range the no-bridge alternative is excluded by (7)/(10),
   while the critical-row alternative is excluded by the residual result.
-- Even minimal four-gap `H` is impossible through `6p-12` for all
-  `p>=29`, and through `6p+4` for `p>=37`.
+- Even minimal four-gap `H` **without a signed level-two row** is
+  impossible through `6p-12` for all `p>=29`, and through `6p+4`
+  for `p>=37`. No unconditional even-minimal-H bound of this strength
+  follows from the present chain. The basic frame/bi-tight bound
+  `|H|>=2p+2` remains valid without the no-contact hypothesis.
 - The odd no-bridge branch is impossible through `7p-12` for all
   `p>=29`, and through `7p+6` for `p>=37`. This last statement alone
   does not exclude an odd witness that does have a critical row beyond
@@ -286,8 +294,12 @@ The present theorems therefore imply:
 
 The global acceptance functions must remain false. A minimal witness
 can in principle have more edges than these bands, and no theorem here
-bounds every minimal witness by a covered size. That missing all-size
-quantifier is the remaining obstacle to deriving E1 from this work.
+bounds every minimal witness by a covered size. Moreover, even
+level-two contact still needs the general odd-cardinality Type-I
+implication inside the global minimal-four-gap bridge; the restricted
+all-prime Boolean from 15.750 cannot supply it. Both omissions are
+explicit in the [scope audit](NOTE_2026-09-04_GLOBAL_BRIDGE_TYPE_I_SCOPE_AUDIT.md).
+All odd, capacity, and residual-layer theorems above remain proved.
 
 For the limit, finite small-prime bases are not intrinsically necessary:
 eventual E1 for every sufficiently large prime would already give

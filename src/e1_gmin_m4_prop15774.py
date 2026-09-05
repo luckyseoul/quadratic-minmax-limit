@@ -203,9 +203,26 @@ def residual_two_layer_exclusion(p: int, s: int) -> dict[str, object]:
 
 
 def minimal_four_gap_consequences(p: int, layers: list[dict[str, object]] | None = None) -> dict[str, object]:
+    """Retain proved odd/no-contact bounds, not unrestricted Type-I entry.
+
+    The 15.750 Boolean certifies its literal k=3p-2 affine-shell box.
+    Its truth is recorded, but cannot close general odd-k level-one
+    deletions or produce an unconditional even-H lower bound.
+    """
     _check(p)
     odd, even = official_unit_entry_ledger(p, True), official_unit_entry_ledger(p, False)
-    _require(odd["official_entry_proved"] and even["official_entry_proved"]
+    _require(odd.get("official_entry_proved") is True
+             and even.get("shell_level_entry_proved") is True
+             and even.get("official_entry_proved") is False
+             and even.get("sharp_H_size_floor") == 2 * p + 2
+             and even.get("sharp_G_size_floor") == 2 * p + 1
+             and even.get("restricted_Type_I_15_750_required_G_size") == 3 * p - 2
+             and even.get("restricted_Type_I_15_750_required_Max_plus_identity")
+             == "S_G=3-2*f_e on Max+"
+             and even.get("restricted_Type_I_15_750_required_Max_minus_inequalities")
+             == "S_G<=-1 and S_G<=-3*f_e on Max-"
+             and even.get("restricted_Type_I_15_750_size_forced") is False
+             and even.get("restricted_Type_I_15_750_affine_identity_forced") is False
              and parity_bridge_ledger(5 * p)["proved"]
              and parity_bridge_ledger(4 * p)["proved"], "official bridge dependency failed")
     even_cap, no_bridge = capacity_exclusion(p, 4), capacity_exclusion(p, 5)
@@ -217,9 +234,19 @@ def minimal_four_gap_consequences(p: int, layers: list[dict[str, object]] | None
              and all(row["proved"] and row["p"] == p and row["s"] == s
                      for s, row in zip((1, 2), layers)), "minimal consequence dependency failed")
     return {"p": p, "odd_minimal_H_lower_bound": 5 * p + 6,
-            "even_minimal_H_lower_bound": even_cap["maximum_H"] + 2,
+            "even_minimal_H_lower_bound": None,
+            "even_unconditional_bound_status": "RETRACTED_SCOPE_MISMATCH",
+            "unconditional_even_H_frame_lower_bound": even["sharp_H_size_floor"],
+            "even_without_level_two_H_lower_bound": even_cap["maximum_H"] + 2,
             "odd_without_level_three_H_lower_bound": no_bridge["maximum_H"] + 2,
-            "even_level_two_branch_uses_proved_Type_I_15_750": True,
+            "restricted_Type_I_15_750_closed": True,
+            "restricted_Type_I_15_750_required_G_size": 3 * p - 2,
+            "restricted_Type_I_15_750_required_Max_plus_identity": (
+                "S_G=3-2*f_e on Max+"
+            ),
+            "even_level_two_branch_uses_proved_Type_I_15_750": False,
+            "even_level_two_branch_closed": False,
+            "missing_even_global_bridge_implication": even["missing_global_bridge_implication"],
             "odd_bound_uses_the_whole_preexisting_residual_band_and_two_new_layers": True,
             "all_size_localization_proved": False, "eventual_E1_proved": False,
             "global_conclusions_remain_conditional_on_missing_all_size_bridge": True,

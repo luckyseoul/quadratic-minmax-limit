@@ -22,12 +22,22 @@ Do not attach a `--budget` flag. Do not `/goal clear` to start fresh.
 code-change
 
 ## Acceptance criteria
+
+Current partial advance (15.775): the complete layer `t=q+3,k=5p+5`
+is closed for every prime `p>=259201`, with all boundary sizes, and the
+same argument excludes both signed shell floors `r=3,4,5` on
+`46656*h^3<=p^3*(p-1)` when `h=r mod 2`. See
+`evidence/NOTE_2026-09-04_EVENTUAL_FIRST_LAYER_CLOSE.md`.
+These are proved infinite-family exclusions, not all-size localization:
+the global residual-(ii) and minimal-four-gap bridge criteria below remain
+open. No acceptance Boolean is changed by the bounded support theorem.
+
 1. For every prime \(p\ge5\), E(1) is proved Max+-free on Paley \(n=p^2+1\). The corrected gate is:
    - **Required bi-tight levels 2 and 3:** **satisfied by 15.720.** From 15.272/15.207, a centered bi-tight indicator lies in `scheme+cross`; 15.720 forces all degrees into one residue class modulo \((p^2-1)/2\), and the handshake identity excludes both levels. It also excludes *bi-tight* level 4. Generic one-sided level-4 covers exist (15.402), while the known four-line family is outside residual by a 15.272/15.588 Max+ witness; only joint residual compatibility remains open. Proposition 15.167's spectral implication is retracted. Global QVAR, principal R1, and the spectral floor are no longer acceptance units.
    - **Residual (ii)** ND (or another Max+-free kill) for **even \(k\ge4p\)**, not only \(k\in[3p+1,4p-2]\). Affine two-level at \(k\ge3p\) is already dead (15.179).
-   - **Type I when Max− is not two-level \(\{-1,-3\}\): satisfied by 15.750.** Isolated-chart rigidity and parity halving close \(p\ge11\); exact integer Farkas identities close \(p=5,7\).
+   - **Restricted Type I when Max− is not two-level \(\{-1,-3\}\): satisfied by 15.750 for `k=3p-2` and `S_G=3-2*f_e on Max+`.** Isolated-chart rigidity and parity halving close \(p\ge11\); exact integer Farkas identities close \(p=5,7\). General odd-k level-one no-descent is not implied.
    - **Lemma D** fully written and checkable: every triple of good lines is a \(k=3\) Max+ (pointwise \(z\), three-line Fourier support, \(\hat z(0)=p\)), and each locked triple spans the 2-plane \(\{x+y+z=0\}\) on its edges (amplitudes must reconcile Fejer characters with convolution). **Satisfied by 15.276 and `A3_PROOF.md`;** census rank-2 at \(p=5,7,11\) is a check, not the general proof.
-   - **Minimal-four-gap implication bridge:** **OPEN.** Proposition 15.764 proves only odd `|H|<=5p`; even `|H|>=4p+2` and odd `|H|>=5p+2` remain outside the historical four-unit classification. Closing residual (ii) alone is not sufficient to assert E(1).
+   - **Minimal-four-gap implication bridge:** **OPEN.** Proposition 15.764 proves only odd `|H|<=5p`. The no-contact ranges begin at even `|H|>=4p+2` and odd `|H|>=5p+2`; even contact at two also needs a general odd-k no-descent theorem or the actual hypotheses of a proved unit. Contact alone does not enter 15.750. The former 15.774 unconditional even bound is retracted; its r4 bound holds without a signed level-two row. See `evidence/NOTE_2026-09-04_GLOBAL_BRIDGE_TYPE_I_SCOPE_AUDIT.md`. Closing residual (ii) alone is not sufficient to assert E(1).
 2. The legacy-named `four_e1_units_closed()` is True **only** by importing the valid bi-tight, residual-(ii), Type-I, Lemma-D, **and minimal-four-gap bridge** units (no handwritten `return True`). `e1_closed_general()` must agree with this expanded acceptance gate. Aut-Schur **False**, Gsum **False**, pairing **False**, and the open spectral floor stay as they are but are not acceptance gates.
 3. `solution.md` Main Theorem (limit) states \(L=\lim\alpha_n=1/2\) **only after** 1–2, and `evidence/share/denseness_path_package.md` § Caveats is empty or records them as closed. Soft-close (sandwich + denseness without E(1)) fails.
 
@@ -61,8 +71,8 @@ finite Paley residue.
 ## Task checklist
 - [x] Replace the invalid 15.167 bi-tight arrow with a valid all-prime obstruction for required levels 2 and 3 (15.720; bi-tight level 4 is a non-load-bearing corollary).
 - [ ] Close residual (ii) for even \(k\ge4p\)
-- [ ] Close the minimal-four-gap bridge for even `|H|>=4p+2` and odd `|H|>=5p+2`
-- [x] Close Type I bad case when Max− is multi-level (15.750)
+- [ ] Close the all-size minimal-four-gap bridge, including even contact and general odd-k Type-I entry
+- [x] Close the restricted `k=3p-2`, full-affine Type I bad case when Max− is multi-level (15.750)
 - [x] Write Lemma D: every triple + 2-plane (15.276; `A3_PROOF.md`)
 - [ ] Import those units so `four_e1_units_closed()` is True for the right reasons
 - [ ] Package caveats cleared; `solution.md` states \(L=1/2\) only then

@@ -404,3 +404,13 @@ No finite-order census, small-prime computation, storage scan, or
 self-gluing lift is used.  The still-open step is to construct, for a
 globally minimal real signing, compatible skew blocks satisfying (33), or
 to derive (33) from a new global-minimality coupling theorem.
+
+The 2026-09-05 follow-up retains the actual diagonal blocks:
+`NOTE_2026-09-05_DIAGONAL_PAYMENT_COMPATIBILITY.md` proves the exact
+conjugate-pair transfer identity and all-alternating-cycle criterion for
+arbitrary real payment functions, with a separate quadratic/sign
+realization requirement. It also proves that diagonal skew cannot lower a
+coherent `R=+C` or `R=-C` baseline. The exact mixed moments in
+`NOTE_2026-09-05_ACTUAL_DIAGONAL_MIXED_MOMENTS.md` include the surviving
+left/right interaction even at perfect Gram geometry. Neither follow-up
+establishes (33).

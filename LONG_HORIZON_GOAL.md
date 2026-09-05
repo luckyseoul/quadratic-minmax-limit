@@ -27,6 +27,28 @@ Anything else — including “honest OPEN,” “structure shipped,” “censu
 
 ## What is already proved (do not re-derive)
 
+Scope correction for the optional Paley route: 15.750 has the literal
+`k=3p-2`, `S_G=3-2*f_e on Max+` hypotheses. General odd-k level-one
+alignment remains part of the open minimal-four-gap bridge. The former
+unconditional even-minimal-H bound is retracted; the r4 consequence
+holds without a signed level-two row. See
+`evidence/NOTE_2026-09-04_GLOBAL_BRIDGE_TYPE_I_SCOPE_AUDIT.md`.
+This correction does not change any 15.775 conclusion.
+
+- **New Paley advance, Proposition 15.775 (2026-09-04):** the entire
+  residual layer `t=q+3,k=5p+5` is closed for every prime `p>=259201`,
+  all boundary sizes. Bounded height and bounded-variable reduction force
+  a full-cube mean-lattice contradiction at both required local masses.
+  The same proof excludes both signed shell floors `r=3,4,5` whenever
+  `h=r mod 2` and `46656*h^3<=p^3*(p-1)`.
+  See [the proof](evidence/NOTE_2026-09-04_EVENTUAL_FIRST_LAYER_CLOSE.md).
+  The [affine-parity companion](evidence/NOTE_2026-09-04_AFFINE_PARITY_CUBE_FLOOR.md)
+  closes both local masses' middle-boundary cases for every odd `p>=29`.
+  The layer remainder is `t>=q+3,k>=5p+5` for `29<=p<259201`, and
+  at least `t>=q+4,k>=5p+7` for `p>=259201`, with the additional
+  cubic support exclusion. Later historical frontiers below are superseded
+  only in those stated ranges. This is not all-size localization or goal
+  completion; residual (ii), the minimal-four-gap bridge, E1, and L stay OPEN.
 - Sandwich \(1/\pi\le\liminf\alpha_n\le\limsup\alpha_n\le 1/2\).
 - Denseness: the limit exists globally iff it exists along Paley orders \(n_k=p_k^2+1\).
 - Two-ray convergence reduction (Prop 6.3): Dini-summable normalized defects
@@ -173,7 +195,8 @@ reads:
    endpoint/profile artifacts are not live gates; only the lemmas and
    certificates explicitly retained by the dedup audit remain valid evidence.
    Read `evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md` before reopening one.
-3. **Type I, multi-level Max−:** TRUE by Proposition 15.750. Isolated-chart
+3. **Restricted Type I, multi-level Max−:** TRUE by Proposition 15.750
+   for `k=3p-2` and `S_G=3-2*f_e on Max+`. Isolated-chart
    square rigidity and parity halving close `p>=11`; tracked exact integer
    Farkas identities close `p=5,7`. The old `3A+B` route remains incomplete
    but is no longer a global gate.
@@ -188,9 +211,10 @@ authoritative open function is `residual_ii_k_ge_4p_ND_closed()`;
 
 Path-C / 16N / 15.193 exhaustiveness is **not** required.
 
-Closing the sole open residual-(ii) unit completes the remaining E1 ledger,
-but it is not necessary for a different proof of convergence and is not goal
-completion. The direct convergence front is to close the multiplier-two
+Closing residual (ii) alone does not complete the E1 ledger: the all-size
+minimal-four-gap bridge, including general odd-k Type-I entry, remains
+separate. Neither unit is necessary for a different proof of convergence.
+The direct convergence front is to close the multiplier-two
 diamond on the exact residue (6.20), then close Proposition 6.7's unshielded
 tetrahedral diamond or close Proposition 6.8's two-state residual
 (6.42)--(6.43). Endpoint

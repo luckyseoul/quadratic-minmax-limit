@@ -66,8 +66,16 @@
       "bi_tight_level_two_excluded": true,
       "sharp_H_size_floor": 12,
       "sharp_G_size_floor": 11,
-      "official_class": "Type I: odd k, s_plus=1, freeness-fail alignment",
-      "official_entry_proved": true
+      "shell_class": "general Type I: odd k, s_plus=1, freeness-fail alignment",
+      "shell_level_entry_proved": true,
+      "restricted_Type_I_15_750_required_G_size": 13,
+      "restricted_Type_I_15_750_required_Max_plus_identity": "S_G=3-2*f_e on Max+",
+      "restricted_Type_I_15_750_required_Max_minus_inequalities": "S_G<=-1 and S_G<=-3*f_e on Max-",
+      "restricted_Type_I_15_750_size_forced": false,
+      "restricted_Type_I_15_750_affine_identity_forced": false,
+      "official_class": "general odd-k shell alignment; 15.750 entry unproved",
+      "official_entry_proved": false,
+      "missing_global_bridge_implication": "general odd-k Type-I no-descent, or a proof forcing the exact 15.750 cardinality and affine-shell hypotheses"
     }
   },
   "proved_sufficient_range": "|H| odd and |H|<=5p",
@@ -209,9 +217,10 @@
     "deeper_case_excluded_all_primes": true
   },
   "first_open_failure_sizes": {
-    "even_H": "|H|>=4p+2",
+    "even_H_without_level_two": "|H|>=4p+2",
     "odd_H": "|H|>=5p+2"
   },
+  "even_level_two_branch_scope": "shell alignment proved; general odd-k Type-I no-descent is an unproved part of the minimal-four-gap bridge",
   "abstract_method_barrier": {
     "kind": "finite max-of-affine scalar/frame model",
     "paley_realizable_claimed": false,
@@ -391,6 +400,8 @@
     "parity_equivalence": true,
     "odd_H_at_most_5p_bridge": true,
     "even_H_bridge_to_residual_ii": false,
+    "even_H_level_one_shell_alignment": true,
+    "even_H_entry_into_restricted_Type_I_15_750": false,
     "large_odd_H_bridge": false,
     "minimal_gap4_shell_bridge_closed_general": false,
     "abstract_model_is_Paley_realizable": false,
@@ -406,6 +417,7 @@
   "not_claimed": [
     "that every minimal four-gap H is odd",
     "that every odd minimal four-gap H has size at most 5p",
+    "that even-H level-two contact supplies the exact 15.750 hypotheses",
     "Paley realizability of the abstract score model",
     "closure of residual (ii), E1, L=1/2, or the MathOverflow problem"
   ],

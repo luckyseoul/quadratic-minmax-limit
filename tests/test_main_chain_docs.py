@@ -25,6 +25,26 @@ def test_main_chain_L_open_and_docs_ok():
     assert units["closed"] is False
 
 
+def test_threshold_valley_keeps_integral_restoration_open():
+    from pathlib import Path
+    from e1_gmin_m4_threshold_valley import SCOPE
+
+    root = Path(__file__).resolve().parents[1]
+    assert SCOPE["conditional_fractional_valley"] is True
+    for key in (
+        "integral_restoration_theorem", "all_size_minimal_witness_exclusion",
+        "residual_ii_closed", "e1_closed_general", "L",
+    ):
+        assert SCOPE[key] is False
+    for name in ("AGENTS.md", "STATUS.md", "README.md", "HANDOFF.md"):
+        content = (root / name).read_text(encoding="utf-8")
+        assert "NOTE_2026-09-04_THRESHOLD_VALLEY_ACTIVE_GEOMETRY.md" in content
+        assert "NOTE_2026-09-04_CONFERENCE_REFERENCE_DISTANCE.md" in content
+    agents = (root / "AGENTS.md").read_text(encoding="utf-8")
+    assert "filter is stronger" in agents
+    assert "null result is\ninconclusive" in agents
+
+
 def test_live_and_expanded_gates_agree_under_each_counterfactual(monkeypatch):
     """No individual acceptance unit may be bypassed by the live E1 gate."""
     import e1_gmin_m4_prop15168 as live
@@ -86,7 +106,7 @@ def test_solution_does_not_assert_limit_theorem():
     paley_goal = (
         Path(__file__).resolve().parents[1] / "GOAL.md"
     ).read_text(encoding="utf-8", errors="replace")
-    assert "[x] Close Type I bad case when Max− is multi-level (15.750)" in paley_goal
+    assert "[x] Close the restricted `k=3p-2`, full-affine Type I bad case when Max− is multi-level (15.750)" in paley_goal
     assert "attack only the two\nopen units" not in paley_goal
 
     assert "**Proposition 6.3 (two-ray convergence criterion).**" in text
@@ -595,7 +615,8 @@ def test_denseness_package_does_not_soft_close_the_theorem():
     ).read_text(encoding="utf-8", errors="replace")
     assert "does **not** prove E(1)" in package
     assert "## Lemma K (required bi-tight levels)." in package
-    assert "| Residual (i) Type I, multi-level Max− | **Proved** (15.750) |" in package
+    assert "| Residual (i) Type I, multi-level Max−, `k=3p-2` and full affine Max+ identity |" in package
+    assert "**Proved** (15.750); not general odd-k Type I" in package
     assert "type_I_multilevel_bad_case_ND_closed` stays False" not in package
     assert "Hence E(1) on the whole Paley family" not in package
     assert "Historical remarks “\\(L\\) OPEN”" not in package
@@ -679,3 +700,84 @@ def test_prop15772_15774_canonical_frontier_and_repaired_premise():
     assert "layer is `t=q+3,k=5p+5`" in " ".join(handoff.split())
     assert "first uncovered" in solution
     assert "not graph realizations" in handoff
+
+
+def test_prop15775_closed_tail_and_power_band_keep_global_gates_open():
+    """A whole eventual layer and a growing band are not all-size closure."""
+    from pathlib import Path
+
+    from e1_gmin_m4_prop15775 import proposition_15775
+
+    root = Path(__file__).resolve().parents[1]
+    names = (
+        "AGENTS.md", "STATUS.md", "HANDOFF.md", "LONG_HORIZON_GOAL.md",
+        "README.md", "solution.md", "GOAL.md",
+        "evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md",
+        "evidence/share/denseness_path_package.md",
+        "evidence/P0_ENGINEERING_GRAPH.md",
+    )
+    for name in names:
+        text = (root / name).read_text(encoding="utf-8")
+        flat = " ".join(text.split())
+        assert "15.775" in text, name
+        assert "259201" in text, name
+        assert "t=q+3,k=5p+5" in flat, name
+        assert "46656*h^3<=p^3*(p-1)" in flat, name
+        assert "h=r mod 2" in flat or "h=r mod2" in flat, name
+        assert "all-size" in text, name
+        assert "NOTE_2026-09-04_EVENTUAL_FIRST_LAYER_CLOSE.md" in text, name
+        if name != "GOAL.md":
+            assert "t>=q+4,k>=5p+7" in flat, name
+            assert "NOTE_2026-09-04_AFFINE_PARITY_CUBE_FLOOR.md" in text, name
+
+    result = proposition_15775()
+    assert result["proved"] and result["minimum_prime"] == 259201
+    assert all(row["whole_layer_excluded"] for row in result["records"])
+    assert all(row["excluded"] for row in result["superlinear_support_records"])
+    for flag in ("residual_ii_closed_general", "minimal_four_gap_bridge_closed_general",
+                 "eventual_E1_proved", "e1_closed_general", "original_MO_limit_closed"):
+        assert result[flag] is False
+    dedup = (root / "evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md").read_text()
+    modules = [root / "src" / f"e1_gmin_m4_prop15{label}.py"
+               for label in range(83, 776)]
+    assert sum(path.exists() for path in modules) == 689
+    assert "689 source-backed proposition modules from 15.83 through 15.775" in dedup
+    assert "## Proposition 15.775" in (root / "solution.md").read_text()
+
+
+def test_global_bridge_scope_requires_literal_type_I_hypotheses():
+    """Shell contact cannot silently replace the restricted Type-I box."""
+    from pathlib import Path
+
+    from e1_gmin_m4_prop15764 import official_unit_entry_ledger
+    from e1_gmin_m4_prop15774 import minimal_four_gap_consequences
+
+    root = Path(__file__).resolve().parents[1]
+    names = (
+        "AGENTS.md", "STATUS.md", "HANDOFF.md", "LONG_HORIZON_GOAL.md",
+        "README.md", "solution.md", "GOAL.md",
+        "evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md",
+        "evidence/share/denseness_path_package.md",
+        "evidence/P0_ENGINEERING_GRAPH.md",
+    )
+    for name in names:
+        text = (root / name).read_text(encoding="utf-8")
+        flat = " ".join(text.replace("**", "").split())
+        assert "k=3p-2" in flat, name
+        assert "S_G=3-2*f_e on Max+" in flat, name
+        assert "general odd-k" in flat.lower(), name
+        assert "without a signed level-two row" in flat, name
+        assert "NOTE_2026-09-04_GLOBAL_BRIDGE_TYPE_I_SCOPE_AUDIT.md" in flat, name
+
+    assert official_unit_entry_ledger(37, True)["official_entry_proved"] is True
+    even = official_unit_entry_ledger(37, False)
+    assert even["shell_level_entry_proved"] is True
+    assert even["official_entry_proved"] is False
+    result = minimal_four_gap_consequences(37)
+    assert result["even_minimal_H_lower_bound"] is None
+    assert result["even_unconditional_bound_status"] == "RETRACTED_SCOPE_MISMATCH"
+    assert result["unconditional_even_H_frame_lower_bound"] == 76
+    assert result["even_without_level_two_H_lower_bound"] == 228
+    assert result["even_level_two_branch_closed"] is False
+    assert result["all_size_localization_proved"] is False
+    assert result["eventual_E1_proved"] is False

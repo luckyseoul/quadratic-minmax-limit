@@ -3,7 +3,7 @@
 **Date:** 2026-09-04
 
 **Scope:** Propositions 6.3--6.10a, every assigned proposition through
-Proposition 15.774 (with protected 15.766--15.767 work left in its existing
+Proposition 15.775 (with protected 15.766--15.767 work left in its existing
 scope), the audited post-15.761 support/conic/Boolean reductions,
 the live predicate wiring, and the attack scripts present during the audit
 
@@ -11,6 +11,78 @@ the live predicate wiring, and the attack scripts present during the audit
 or finite-prime rerun from being mistaken for a new mathematical attack
 
 ## Verdict
+
+### Global bridge: restricted Type-I scope, not a closure
+
+The active task is the global minimal-four-gap implication. The proved
+15.750 box assumes `k=3p-2` and `S_G=3-2*f_e on Max+`; even H
+contact at two gives only general odd-k level-one alignment. The latter
+does not enter that box without a new theorem. The 15.774 unconditional
+even-minimal-H bound is **RETRACTED_SCOPE_MISMATCH**; the unchanged r4
+bound applies without a signed level-two row. All odd residual/capacity
+results and 15.775 remain proved. No proposition number is added.
+Read `NOTE_2026-09-04_GLOBAL_BRIDGE_TYPE_I_SCOPE_AUDIT.md` before using
+the Type-I predicate, even shell contact, or the old unconditional bound.
+The full general odd-k entry remains inside the existing OPEN bridge.
+
+### Proposition 15.775: an eventual whole-layer close and a superlinear band
+
+**PROVED INFINITE-FAMILY THEOREM.** The complete residual layer
+`t=q+3,k=5p+5` is empty for every prime `p>=259201`, all boundaries
+and phases. The new argument excludes both forced local masses
+`2p+4,2p+6` for arbitrary nonnegative integral middle-slice quadratics.
+It combines a self-contained cube height bound, the exact integer
+transposition influence lower bound, bounded-variable reduction, and
+the quarter-integral full-cube mean. No equality catalog or scalar-only
+capacity rerun is substituted for the new local theorem.
+
+The same proof excludes `46656*h^3<=p^3*(p-1)` for both signed
+shell floors `r=3,4,5`, with **`h=r mod 2`**. This is a superlinear
+support exclusion, not all-size witness localization. The layer remainder
+is `t>=q+3,k>=5p+5` for `29<=p<259201`, and at least
+`t>=q+4,k>=5p+7` for `p>=259201`, additionally subject to the cubic
+bound. The small-prime and global gates remain open. Read
+`NOTE_2026-09-04_EVENTUAL_FIRST_LAYER_CLOSE.md` before reopening either
+closed result.
+
+The separate `NOTE_2026-09-04_AFFINE_PARITY_CUBE_FLOOR.md` proves
+the sharp cube mean floor `ceil(d/2)/2` and excludes all middle
+boundaries `6<=b<=p-5` at the two local masses for every odd `p>=29`.
+Its support representative must be even; the unmatched vertex's odd
+degree cannot be dropped. This companion is an actual closed local
+branch, but is not needed for the whole eventual-layer argument.
+
+### Post-15.774 all-size reductions, not a new closure
+
+The [threshold-valley note](NOTE_2026-09-04_THRESHOLD_VALLEY_ACTIVE_GEOMETRY.md)
+proves conditional full-signed-state interpolation and actual first-shell
+geometry, without assuming affine classification of bad anchors. Its
+all-subsets restoration hierarchy is credited to the 2026-08-29 note;
+only the subsequent deductions are new. The `r=3` uniform norm-error
+rounding method is blocked by Parseval at every support size. Statewise
+rounding remains open. One-deletion identities are not full threshold
+inclusion-minimality.
+
+The [conference-distance note](NOTE_2026-09-04_CONFERENCE_REFERENCE_DISTANCE.md)
+proves distance `>=n/2+1` at odd square order `n=p^2+1` and the strict
+unique-reference radius `h<(n+2)/4`. It neither attains the bound nor
+localizes a minimal witness. The generic support frontier remains
+`t>=q+3,k>=5p+5`; all global predicates stay open.
+
+The fixed `n=6`, 128-reference probe is a bounded **inconclusive** check,
+not an exhaustive nonexistence result. Its full all-subsets filter is
+essential; passing every single restoration is insufficient. Its signed
+C-maximizer drop `M-4` is stronger than the universal odd-floor drop
+`M-2`. A specifically authorized one-reference replay extracts a
+multi-edge repair from a rejected candidate; it adds no reference or
+Paley claim. Its exact order-six example has norm `5`, reference norm
+`9`, and fractional norm `4`, but requires three restorations before
+the norm returns to `5`; every single and pair fails. The repairing
+matching joins two conference signings and is not a labelled signed
+switch. Thus even pair minimality is insufficient; the full hierarchy
+remains essential. No further census is the next target.
+
+### Numbered frontier
 
 Proposition 15.774 is a **PROVED INFINITE-FAMILY THEOREM**: the local
 strict spectrum `0<4p E[C]<2p-10` for nonnegative integral quadratics
@@ -587,6 +659,26 @@ Gram rigidity, and an infinite Gram-perfect family attains the spectral
 maximum. This retires norm-only and Gram-only closure attempts, not the
 multiplier-two gate itself. The exact statewise diagonal-payment inequality
 remains open; see `NOTE_2026-09-03_CROSS_RECTANGLE_FOURIER_STABILITY.md`.
+
+Changed premise on 2026-09-05: retain the actual real and skew diagonal
+energies, rather than only the cross-row norm or Gram matrix. The new
+conjugate-pair identity is `cost=c+|u(z)+v(w)-d0(z,w)|`; arbitrary real odd
+payments exist exactly at the maximum alternating-cycle threshold, but
+actual skew signings still need their pair-character Fourier coefficients.
+This is an exact relaxation theorem, not a multiplier-two closure.
+Coherent `R=+C` and `R=-C` cannot be improved by any diagonal skew filling.
+The new Lee-weight-four coefficient and two exact mixed-moment identities
+retain repeated-edge terms and actual left/right alignment; averaged
+identities do not close a statewise inequality. See
+`NOTE_2026-09-05_DIAGONAL_PAYMENT_COMPATIBILITY.md` and
+`NOTE_2026-09-05_ACTUAL_DIAGONAL_MIXED_MOMENTS.md`. Do not rederive these
+identities or rerun their finite checks absent a defect or changed premise.
+The same note's explicitly physical order-four example already proves
+`max c=8 < T_rel=10 < min_skew_sign_diagonals nu_4=12` at a globally
+minimizing real signing and one fixed noncoherent cross choice. Do not
+claim global minimality collapses the cycle threshold to `max c`, or that
+cycle-feasible real payments automatically admit sign realization. The
+example does not exclude other cross choices or the asymptotic error.
 
 Proposition 6.5c is a separate exact calculator consequence, not a renaming
 of Proposition 6.5a.  The opposite-diagonal block `[[A,C],[C^T,-A]]` has
@@ -1336,11 +1428,12 @@ name until this file is checked first.
 
 - Propositions 15.1--15.82 are written directly in `solution.md` and related
   early modules.
-- There are 688 source-backed proposition modules from 15.83 through 15.774.
+- There are 689 source-backed proposition modules from 15.83 through 15.775.
+  The preceding checkpoint contained 688 source-backed proposition modules from 15.83 through 15.774.
 - The labels 15.537, 15.583, 15.584, and 15.767 have no proposition module.
   The first three are unassigned labels, not unreviewed propositions; 15.767
   has protected note-only work and is not reclassified by this sync.
-- Every source-backed proposition through 15.774 is included in this audit.
+- Every source-backed proposition through 15.775 is included in this audit.
   The grouped ledger below is by shared mathematical route rather than a
   full row-by-row restatement of the source-backed propositions.
 
@@ -1351,11 +1444,11 @@ The public theorem is gated consistently by the corrected global
 currently `False`. The historical bounded `True` is available only through
 `e1_bounded_residual_split_closed()` and is not a global theorem predicate.
 
-| unit | exact live content | status after audit through 15.774 |
+| unit | exact live content | status through 15.774; the 15.775 frontier overlay is above |
 |---|---|---|
 | required bi-tight levels 2 and 3 | 15.720 degree congruence using 15.272/15.207 | **TRUE** |
 | residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — 15.734--15.754 close the first five shells and 15.752's explicit contiguous band. Propositions 15.768--15.770 close the next two generic layers and `p=23,t=9,10`; 15.771 closes `p=23,t=11,k=114`. Proposition 15.772 additionally closes `p=1 mod 4,p>=29,t=q-1,k=5p-3`. Proposition 15.773 closes `p>=29,t=q,k=5p-1` in both classes. Proposition 15.774 closes `p>=29,t=q+1,q+2,k=5p+1,5p+3`. With `q=(p-1)/2`, the exact frontier is critical `p=5,7`; `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`; `p=23,t>=12` (`k>=116`); `p=1 mod 4,p>=29,t>=q+3`; `p=3 mod 4,p>=31,t>=q+3`; and positive `p=7,z=7`. The global predicate stays false. |
-| Type I | the multi-level `3A+B>0` bad case | **TRUE** (15.750) — isolated-chart rigidity and parity halving close every prime `p>=11`; exact integer Farkas identities close `p=5,7` |
+| Type I | the multi-level `3A+B>0` bad case with `k=3p-2` and full affine Max+ identity | **TRUE** (15.750) for this restricted box — isolated-chart rigidity and parity halving close every prime `p>=11`; exact integer Farkas identities close `p=5,7`; general odd-k entry remains inside the open bridge |
 | Lemma D | every good-line triple and its Fejer two-plane amplitudes | **TRUE** (15.276) |
 
 The spectral floor remains an interesting optional problem, but it has no
@@ -1368,7 +1461,7 @@ Proposition 15.764 makes one part of that final implication audit explicit:
 an arbitrary all-deletions minimal four-gap path is not automatically an
 even-cardinality residual-(ii) instance. The bridge is proved for odd
 `|H|<=5p`. Proposition 15.774 now excludes every odd minimal witness
-through `5p+4`, and the even and odd-no-critical-row branches through
+through `5p+4`, and the even-no-level-two and odd-no-level-three branches through
 the r4/r5 bands above. Those are bounded-support exclusions, not an
 all-size localization; the global implication bridge remains open.
 
@@ -1434,7 +1527,7 @@ top-level front.
 | **15.761** | complete real edge--Radon Gram spectrum and Moore--Penrose norm | **PROVED FULL-SPECTRUM THEOREM AND STRONGER METHOD BARRIER.** Both compact rays pass the full-midpoint norm test with strict room for all `r>=7`; no simple graph follows. |
 | **15.762** | switched degree parity and integral Boolean eigenshell norm | **PROVED UNIVERSAL CONFERENCE CUBE GAP.** At square order `p^2+1`, `p>=5`, every non-eigen Boolean point is at least eight below the spherical ceiling. No nonregularizable conference class, residual counterexample, or closure is supplied. |
 | **15.763** | signed affine-alias cut incidence and exact active-state H-score | **PROVED CONDITIONAL AFFINE-FAMILY THEOREM.** For admissible odd `r`, `|H|>=oddceil((pr^2+1)m(m-1)/(2r(m-r))-pr^2+2)`; at `r=1` this is `(p^2+11)/4`. Either a noncrossing alias reaches deletion eigenshell level two or `pr^2+1` strengthens to `pr^2+3`. The nonaffine minimum shell and cross-deletion coordinate alignment remain open, so no global predicate changes. |
-| **15.764** | exact parity shell bridge for an all-deletions minimal four-gap H | **PROVED PARTIAL BRIDGE AND METHOD BARRIER.** Odd H has a level-two deletion iff it hits signed shell level three; frame averaging plus a level-five degree/anticommutator exclusion forces this for `|H|<=5p`. The H-floor freezes the active edge, `-C` normalizes the phase by switching/permutation, and `k>=3p+1`, so the full official residual-(ii) entry follows. Even H has the wrong deletion parity. Failure remains possible only from even `|H|>=4p+2` or odd `|H|>=5p+2`; a non-Paley affine-score model shows the scalar identities alone cannot close those ranges. No global predicate changes. |
+| **15.764** | exact parity shell bridge for an all-deletions minimal four-gap H | **PROVED PARTIAL BRIDGE AND METHOD BARRIER; EVEN OFFICIAL-ENTRY CLAIM RETRACTED.** Odd H has a level-two deletion iff it hits signed shell level three; frame averaging plus a level-five degree/anticommutator exclusion forces this for `|H|<=5p`. The H-floor freezes the active edge, `-C` normalizes the phase by switching/permutation, and `k>=3p+1`, so the full official residual-(ii) entry follows. Even H contact two gives general odd-k level-one alignment, not the literal 15.750 box; unconditional even H has only the frame/bi-tight floor `2p+2`. No-contact branches start at even `4p+2` or odd `5p+2`; a non-Paley affine-score model shows the scalar identities alone cannot close those ranges. No global predicate changes. |
 | **15.765** | published four-special-direction set adapted to the one-coordinate-three Paley shell | **PROVED EXACT COUNTEREXAMPLE TO AN AFFINE-SHELL CLASSIFICATION.** At `p=11`, the Kiss--Somlai construction gives `D` of size 77 with `Q1_D=11 1_D-7 1`; hence `(3,2 1_D-1)` is an integral `+11` conference eigenvector and its Boolean shadow has defect `22=2p`. Four nonconstant line profiles rule out a union of parallel affine lines. This is not a common all-deletions H, residual counterexample, or closure; do not rerun an affine-shell classification as though it covered the full shell. |
 | **15.768** | first `p=1 mod 4` post-band residue, pointwise complement-triple equality, and local mass `p+15` exclusion | **PROVED INFINITE-FAMILY THEOREM WITH THE FIXED FOUR-BIT CERTIFICATE.** For every prime `p=1 mod 4,p>=29`, it closes `t=q-3`, equivalently `k=5p-7`. The `p=29` height endpoint uses the dimension-free cube theorem `E[g]=3/4 => max(g)<=6`; no prime, graph, orbit, slice, or residual-cell census is used. |
 | **15.769** | first `p=3 mod 4` post-band residue, sharp `p-3` lift classification, common-row offsets, and exceptional p23 moment close | **PROVED INFINITE-FAMILY AND ENDPOINT THEOREM.** For every prime `p=3 mod 4,p>=31`, it closes `t=q-2`, equivalently `k=5p-5`. It also closes `p=23,t=9,k=110`: half-mean equality globalizes to `F_4/F_5`, offsets leave `F_5`, twelve roots annihilate the quartic/octic forms, and the exact 33,649-five-set counts `(33649,1518,2024,0)` have no joint zero. |
@@ -1443,6 +1536,7 @@ top-level front.
 | **15.772** | third generic p1 post-band layer, punctured complement-triple gap and equality theorem, common-row ledger, and local mass `p+11` exclusion | **PROVED INFINITE-FAMILY THEOREM.** It closes `p=1 mod 4,p>=29,t=q-1,k=5p-3` for every boundary. Positive quadrature and the neighboring-slice/kernel argument repair gap two in 15.770 and classify gap four as exactly three offset-four equalities, without asserting a nonnegative punctured difference. All residues force forbidden opposite local masses. The p1 frontier is `t>=q`; all other frontiers and global predicates are unchanged. No new catalog or prime census is used. |
 | **15.773** | joint generic H=5p layer, two-unit p3 sharp carry, quotient-zero endpoints, and classification-free flat row identity | **PROVED INFINITE-FAMILY THEOREM.** It closes `p>=29,t=q,k=5p-1` in both congruence classes. Earlier low-row classifications retain positive forcing counts; the p3 sharp branch gives `hard edges=mP+2` without assuming a unique high row. The new all-mean-`2p` branch has common actual `P<=9`, and `a_opp(Q)=(p+1)(P+Q)-8p` forces five mass-`p+9` rows. No local mean-`2p` equality classification or new census is used. Both generic frontiers then moved to `t>=q+1`; all other frontiers and global predicates are unchanged. |
 | **15.774** | strict small-mass spectrum, full two-type capacities, two residual carries, and exact minimal-four-gap consequences | **PROVED INFINITE-FAMILY THEOREM.** It closes `p>=29,t=q+1,q+2,k=5p+1,5p+3`. At `p>=37`, shell floors r3/r4/r5 are excluded through `5p+4,6p+4,7p+6`; the uniform bounds at `p>=29` are `5p-12,6p-12,7p-12`. Exact first-uncovered scalar survivors forbid claiming a stronger scalar-capacity close; they are not graph witnesses. The live generic frontier is `t>=q+3,k>=5p+5`. No all-size localization, eventual E1, or limit theorem follows. No new prime, graph, or equality catalog is introduced. |
+| **15.775** | bounded-height integer middle-slice quadratics, bounded-variable extension, quarter-integral mean, eventual first-layer and superlinear support exclusions | **PROVED INFINITE-FAMILY THEOREM.** The complete layer `t=q+3,k=5p+5` is empty for every prime `p>=259201`, all boundaries and phases. Both signed shell floors `r=3,4,5` are also excluded when `h=r mod 2` and `46656*h^3<=p^3*(p-1)`. The new proof uses actual local nonnegativity/integrality, not only scalar quotas. The frontier is at least `t>=q+4,k>=5p+7` above the threshold; smaller primes retain the preceding frontier. Neither an all-size localization nor E1 or a limit theorem follows. |
 | **all-prime odd--Radon gate** | support/line isolation for `b` compact plus `r-1` all-equal branch-C rows under zero odd global forms | **PROVED STRUCTURAL REDUCTION.** For every prime `p=4r+3`, `r>=7`, the chain is central when `3b<=r+2`; balanced branch C is covered through `delta=(2r+2)floor((r+2)/3)`. Nonzero forms, unbalanced allocations, and even moments remain open. |
 | **p31 local gate** | arbitrary compact plus six all-equal atoms, all odd rows and joint degree six/eight with zero global forms | **EXHAUSTIVE LOCAL CERTIFICATE AND BALANCED COROLLARY.** All 450 scaling orbits are covered (449 noncentered `UNSAT`, one independently excluded centered orbit, zero `SAT`), excluding every balanced `69<=t<=99` zero-form profile because each contains that row. Unbalanced/nonzero-form cases and the Boolean box remain open. |
 | **seven-channel dominance** | exact degree-six/eight Jacobian minors for four compact and four all-equal atoms | **PROVED ALGEBRAIC METHOD BARRIER.** Both maps are dominant over the algebraic closure in characteristic at least 11, so no universal seven-channel identity can close the gate. Extension-valued points are not `F_p` or Boolean lifts. |

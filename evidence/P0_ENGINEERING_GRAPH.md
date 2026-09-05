@@ -1,6 +1,15 @@
 # P0 Engineering Graph (persistent — update every turn)
 
-> **AUTHORITATIVE LIVE OVERLAY (2026-09-04; through Proposition 15.774).** Sections 1--8 below are an
+**Global bridge scope correction:** the live all-size minimal-four-gap
+bridge includes general odd-k Type-I no-descent. The proved 15.750 box
+requires `k=3p-2` and `S_G=3-2*f_e on Max+`; even H contact does not
+supply them. The old unconditional even bound is retracted; the r4 bound
+holds without a signed level-two row. See
+`NOTE_2026-09-04_GLOBAL_BRIDGE_TYPE_I_SCOPE_AUDIT.md`.
+All 15.775 conclusions below remain intact. The active work targets this
+global bridge, not a further support band.
+
+> **AUTHORITATIVE LIVE OVERLAY (2026-09-04; through Proposition 15.775).** Sections 1--8 below are an
 > archived Path-C graph from 2026-08-13 and are not a routing authority. The
 > live graph is:
 >
@@ -13,6 +22,8 @@
 >  |    |    `-- fixed/mildly-growing anchor spectral close [KILLED]
 >  |    `-- tetrahedral alternative [OPEN]
 >  `-- Paley E(1), stronger value route
+>       +-- global minimal-four-gap classification bridge [OPEN]
+>       |    `-- general odd-k Type-I entry and both no-contact branches [OPEN]
 >       `-- residual_ii_k_ge_4p_ND_closed [OPEN]
 >            +-- first five shells and 15.752 higher band [CLOSED]
 >            +-- next two generic layers; p23 t=9,10 (15.768--15.770) [CLOSED]
@@ -20,8 +31,11 @@
 >            +-- p1 p>=29: t=q-1,k=5p-3; punctured gap + mass p+11 (15.772) [CLOSED]
 >            +-- both classes p>=29: t=q,k=5p-1; flat-row ledger (15.773) [CLOSED]
 >            +-- both classes p>=29: t=q+1,q+2,k=5p+1,5p+3 (15.774) [CLOSED]
+>            +-- p>=259201: t=q+3,k=5p+5, all boundaries (15.775) [CLOSED]
+>            +-- r=3,4,5; h=r mod2; 46656*h^3<=p^3*(p-1) (15.775) [CLOSED]
 >            `-- p5,7; p11 t>=3; p13,17,19 t>=5; p23 t>=12,k>=116;
->                p=1 mod4,p>=29: t>=q+3; p=3 mod4,p>=31: t>=q+3;
+>                29<=p<259201: t>=q+3,k>=5p+5;
+>                p>=259201: at least t>=q+4,k>=5p+7, outside the cubic band;
 >                positive p7,z7 [OPEN], where q=(p-1)/2
 > ```
 >
@@ -32,6 +46,13 @@
 > norms, fixed-temperature lower targets, common-`beta` Fekete centering,
 > geometry-only (6.20), or further anchor refinement. `AGENTS.md`,
 > `STATUS.md`, and `HANDOFF.md` are authoritative.
+>
+> The new proof is `NOTE_2026-09-04_EVENTUAL_FIRST_LAYER_CLOSE.md`.
+> Its bounded-height/integer-junta argument excludes actual local cells,
+> not just scalar quotas. The independent
+> `NOTE_2026-09-04_AFFINE_PARITY_CUBE_FLOOR.md` closes middle-boundary
+> cells at the same two masses for every odd p>=29. Neither result
+> supplies all-size localization or closes the limit.
 >
 > The [15.771 endpoint proof](NOTE_2026-09-04_P23_THIRD_POST_BAND_CLOSE.md)
 > supplies the small-boundary globalization, covering swap cubes, and

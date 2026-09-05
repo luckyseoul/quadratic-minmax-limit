@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "recorded_utc": "2026-09-04T21:55:46Z",
+  "classification": "CONDITIONAL ALL-SIZE REDUCTION AND EXACT FINITE REPAIR; NOT CLOSURE",
+  "repository": "https://github.com/luckyseoul/quadratic-minmax-limit",
+  "checkout": "/home/nick/quadratic-minmax-limit-residual-ii",
+  "branch": "residual/p13-u6-common-moments",
+  "pushed_proof_checkpoint": "1ad44bcfa1235868310e0511922ace68565f9d32",
+  "pushed_receipt_and_remote_HEAD": "a25fe0ab81830438832ec7e581257f257dbe1c5d",
+  "remote_HEAD_readback_command": "git ls-remote origin refs/heads/residual/p13-u6-common-moments",
+  "post_push_research_committed": false,
+  "scope": {
+    "one_gate": "All-size threshold-minimal four-gap obstruction with every signed Boolean state and full all-subsets restoration",
+    "conditional_fractional_valley_proved": true,
+    "r3_uniform_triangle_rounding_blocked_at_every_support_size": true,
+    "first_shell_geometry_includes_nonaffine_bad_anchors": true,
+    "distinct_odd_square_conference_distance_at_least_n_over_2_plus_1": true,
+    "integral_restoration_theorem_proved": false,
+    "all_size_localization_proved": false,
+    "new_numbered_proposition": false,
+    "generic_frontier": "t>=q+3,k>=5p+5",
+    "residual_ii_closed": false,
+    "e1_closed_general": false,
+    "L_closed": false,
+    "L_status": "OPEN"
+  },
+  "mathematical_audits": {
+    "threshold_geometry": "Independent hostile audit passed; no correction required",
+    "conference_distance": "Independent hostile audit passed; no correction required",
+    "finite_repair": "Independent read-only audit checked masks, all 32 score rows, signed interpolation, and exact repair identity",
+    "retracted_exploratory_models_used_as_evidence": false
+  },
+  "tests": {
+    "unique_test_files": [
+      "tests/test_threshold_valley_probe.py",
+      "tests/test_threshold_valley_geometry.py",
+      "tests/test_main_chain_docs.py"
+    ],
+    "unique_final_tests_passed": 64,
+    "controller_tests_or_score_computations": false,
+    "prior_507_test_package_reexecuted": false,
+    "focused": {
+      "host": "soulkiller",
+      "stage": "/tmp/threshold-valley.zzykRu",
+      "command": "cd /tmp/threshold-valley.zzykRu && PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -o addopts= -q -n 0 tests/test_threshold_valley_probe.py tests/test_threshold_valley_geometry.py --junitxml=/tmp/threshold-valley.zzykRu/threshold_valley_final_focused.xml",
+      "passed": 49,
+      "failed": 0,
+      "exit_code": 0,
+      "pytest_elapsed_seconds": 0.61,
+      "junit_path": "/tmp/threshold-valley.zzykRu/threshold_valley_final_focused.xml",
+      "junit_sha256": "d6680b29c8f86f076eb01ff76265bd1060195b0435683502ea2c6f3c787737be",
+      "receipt_metadata_append_after_test": true,
+      "receipt_metadata_append_changes_mathematical_data": false
+    },
+    "documentation": {
+      "host": "soulkiller",
+      "stage": "/tmp/threshold-valley-docs.ucHxh5/regression",
+      "command": "cd /tmp/threshold-valley-docs.ucHxh5/regression && PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -o addopts= -q -n 0 tests/test_main_chain_docs.py --junitxml=/tmp/threshold-valley-docs.ucHxh5/final_docs.junit.xml",
+      "passed": 15,
+      "failed": 0,
+      "exit_code": 0,
+      "pytest_elapsed_seconds": 2.47,
+      "output": "...............                                                          [100%]\n15 passed in 2.47s\n",
+      "junit_path": "/tmp/threshold-valley-docs.ucHxh5/final_docs.junit.xml",
+      "junit_sha256": "ddd6b0a5cdad76a142a7024fae70122295c11eda431d7798eba0fa4c830b1571",
+      "earlier_pass_before_final_handoff": {
+        "passed": 15,
+        "pytest_elapsed_seconds": 2.5,
+        "junit_sha256": "a574f8a6f73d9c909b9a558aac0af56c21358a70fa774b81cc078ad3682a3b11"
+      },
+      "final_canonical_docs_and_new_geometry_source_remote_hashes_match_local": true
+    }
+  },
+  "mesh": {
+    "original_probe_record": "evidence/threshold_valley_probe.json",
+    "original_probe_classification": "BOUNDED INCONCLUSIVE PROBE",
+    "references": 128,
+    "n": 6,
+    "original_C_active_filter": "signed A score <= M-4; stronger than universal odd-shell implication M-2",
+    "gpu_host": "soulkiller",
+    "gpu": "Tesla V100-SXM2-16GB",
+    "initial_environment_failure": "Optional CuPy CUB/NVRTC CUDA header mismatch before any reference was examined",
+    "workaround": "CUPY_ACCELERATORS= for the process only",
+    "persistent_environment_change": false,
+    "one_reference_reconstruction": {
+      "C_mask": 7810,
+      "new_references": 0,
+      "changed_output": "Minimum-cardinality multi-edge repair of a previously rejected candidate"
+    },
+    "repair": {
+      "A_mask": 2393,
+      "C_mask": 7810,
+      "H_mask": 6107,
+      "H_size": 10,
+      "M": 5,
+      "Phi_C": 9,
+      "lambda": "1/4",
+      "interior_norm": "4",
+      "D_mask": 776,
+      "D_edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "restored_A_mask": 2641,
+      "restored_norm": 5,
+      "minimum_repair_size": 3,
+      "nonempty_restorations_checked": 1023,
+      "low_restorations": 11,
+      "minimum_size_repairs": 2,
+      "both_A_and_restored_A_square_to_5I": true,
+      "repair_is_labelled_signed_switch": false,
+      "vertex_permutations_checked": false,
+      "all_subsets_minimal": false,
+      "Paley_counterexample": false
+    },
+    "independent_integer_fraction_replay_hosts": [
+      "soulkiller",
+      "NUKA",
+      "jellyfin"
+    ],
+    "independent_replays_share_same_CPU_verifier": true,
+    "CPU_verifier_uses_GPU_table": false,
+    "nuka_stage": "/tmp/threshold-valley-repair.qa793Y",
+    "jellyfin_stage": "/tmp/threshold-valley-repair.eBbm9m",
+    "orin": "Preflight available; not dispatched because no V100-incompatible capability was needed",
+    "no_further_search_authorized": true
+  },
+  "preservation": {
+    "protected_15766_source_test_evidence_unchanged": true,
+    "protected_even_and_odd_minimal_gap4_notes_unchanged": true,
+    "prop15773_source_test_evidence_unchanged": true,
+    "prop15774_source_test_evidence_unchanged": true,
+    "git_diff_check_passed": true,
+    "git_staging_performed_after_initial_push": false
+  },
+  "sha256": {
+    "src/e1_gmin_m4_threshold_valley.py": "d13c2fe3d39f0f863fb3ab34caf1973a0d2420f660f701dd198a7b11cdc21b1e",
+    "tests/test_threshold_valley_geometry.py": "bb1f11497126bb358a634abef3fbdc3ba194c43e1f89469aeeeae3a5c954da4b",
+    "scripts/threshold_valley_probe.py": "e9b094cbd50117a77c3384bc40d24ca93610c14c720c9fb6c684ed4315b732c7",
+    "tests/test_threshold_valley_probe.py": "02757669f83c2679f67a4f4b36941783be6e81a443667274334d62609bc02d0e",
+    "evidence/threshold_valley_probe.json": "c0eaa46a7646cd8bbac43bb7bd4b6c1db99e17abb2afb03ebecf6d4e0eb6fa16",
+    "evidence/NOTE_2026-09-04_THRESHOLD_VALLEY_ACTIVE_GEOMETRY.md": "30c83450bf91a2aa909e2fee8ed8834ad34b3f81bdf2bdd1ff2e23373efa321f",
+    "evidence/NOTE_2026-09-04_CONFERENCE_REFERENCE_DISTANCE.md": "8b77fbd968d028cf872fdf7e917c2137e75bdab4ca207401809ab7599d84f333",
+    "AGENTS.md": "03b726a7c4e82aca9243e2f284c235f7f9a714f72b444e7d2aec6e89c6d7d24a",
+    "STATUS.md": "2b154036ddc604dd9bc70fb2d382c9013c153ea6add52adade7ff2d54a7fc0aa",
+    "README.md": "89cbf7f19c6b4be87cde79016e77f16b81e81110eb89b5cd70f941d35bb91440",
+    "HANDOFF.md": "134e9256f771a0fa18fb87b8ada2458b6e38c6fc1935efde6cfe6ec5a6074354",
+    "evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md": "fb58188370c642d83043ec1edd33e7eef1971049b92e9042a8549f13b45cd9d1",
+    "tests/test_main_chain_docs.py": "5763f9c8917e166a5f920a9b83a2d24e2f5f849419357ef9f293d4b3c9641ff8"
+  }
+}

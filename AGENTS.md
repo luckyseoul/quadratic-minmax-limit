@@ -200,6 +200,14 @@ rigidity theorem and exhibits an infinite Gram-perfect family at the spectral
 maximum.  It therefore retires norm-only and Gram-only closures, but it does
 **not** prove multiplier two: the statewise diagonal-payment inequality remains
 open.  See `evidence/NOTE_2026-09-03_CROSS_RECTANGLE_FOURIER_STABILITY.md`.
+The 2026-09-05 actual-diagonal continuation proves the all-cycle
+real-payment compatibility criterion and exact mixed moments. Do not
+replace all cycles by four-cycles in a generic interval theorem, equate
+arbitrary odd payments with skew-sign quadratic energies, or infer a
+pointwise maximum bound from a covariance identity. Diagonal skew cannot
+improve a coherent `R=+C` or `R=-C` baseline. The live (33) gate remains open;
+see `evidence/NOTE_2026-09-05_DIAGONAL_PAYMENT_COMPATIBILITY.md` and
+`evidence/NOTE_2026-09-05_ACTUAL_DIAGONAL_MIXED_MOMENTS.md`.
 
 ## Before starting an attack
 
@@ -225,9 +233,56 @@ open.  See `evidence/NOTE_2026-09-03_CROSS_RECTANGLE_FOURIER_STABILITY.md`.
 - Prefer an argument that closes an infinite family over a wider finite
   census unless the finite census is the explicitly recorded gate.
 
-## Type-I closure at Proposition 15.750
+### Post-15.774 all-size active-witness audit
 
-`type_I_multilevel_bad_case_ND_closed()` is True. For `p>=11`, the proof
+The current all-size reduction is recorded in
+`evidence/NOTE_2026-09-04_THRESHOLD_VALLEY_ACTIVE_GEOMETRY.md`.
+Full threshold inclusion-minimality supplies the all-subsets restoration
+hierarchy; the one-deletion identities alone do not. The hierarchy itself
+was already recorded on 2026-08-29. New conditional interpolation gives
+`lambda=(r-2)/(p+r-2)` and margin `2(p-2)*lambda` for `r=3,4,5`.
+At `r=3`, Parseval blocks a uniform norm-error rounding certificate for
+every nonempty restoration, at every size. Do not retry that triangle
+inequality; the unresolved target retains each signed state's own slack.
+Even active witnesses cannot lie in the first defect shell. Odd
+no-level-three first-shell witnesses have same-phase antipodal distance
+at least `p-1`; this includes nonaffine bad anchors and gives no all-size
+packing contradiction. Both energy signs must always be retained.
+
+`evidence/NOTE_2026-09-04_CONFERENCE_REFERENCE_DISTANCE.md` proves
+distance at least `n/2+1` between distinct symmetric conference signings
+at `n=p^2+1`, odd `p>=3`. Thus `h<(n+2)/4` has a unique conference
+reference across every class, switching, and relabeling. This is an
+obstruction to shrinking the first open supports by regauging, not a
+witness-localization theorem. No additional proposition number or global
+closure flag is assigned to these conditional reductions.
+
+The bounded `n=6` threshold-valley probe searches only its saved 128
+references. Its `M-4` signed-C-maximizer filter is stronger than the
+universal odd-shell `r=3` consequence `M-2`; its null result is
+inconclusive. Do not expand or repeat that probe without a changed
+mathematical premise or a specifically identified new output.
+
+## Global bridge scope correction (2026-09-04)
+
+The active task is the **global minimal-four-gap bridge**, not another
+bounded support layer. Read
+`evidence/NOTE_2026-09-04_GLOBAL_BRIDGE_TYPE_I_SCOPE_AUDIT.md`.
+Even H contact at signed level two yields general odd-k level-one shell
+alignment only. It does not imply the exact `k=3p-2` and
+`S_G=3-2*f_e on Max+` hypotheses of 15.750. This missing general odd-k
+implication is part of the still-open global bridge. The former 15.774
+unconditional even-minimal-H bound is retracted; its r4 bound remains
+proved **without a signed level-two row**. All odd residual layers,
+shell-capacity theorems, and 15.775 remain intact.
+Do not convert the true restricted Type-I predicate into an unrestricted
+even-H conclusion. Cardinality minimum, switching alignment, and shell
+contact must each retain their distinct quantifiers.
+
+## Restricted Type-I closure at Proposition 15.750
+
+`type_I_multilevel_bad_case_ND_closed()` is True for its stated
+`k=3p-2`, `S_G=3-2*f_e on Max+` bad-case box. For `p>=11`, the proof
 uses isolated signed-PSL transport, square-direction Johnson rigidity,
 central-Krawtchouk parity halving, and the sharp 15.688 lift floor. The
 `p=5,7` bases are tracked exact integer Farkas identities verified without
@@ -236,7 +291,34 @@ distinguished edge. Do not reopen the `3A+B`, Aut_e, finite-LP, or small-prime
 census routes as Type-I work. They remain incomplete historical mechanisms,
 not live global gates. Residual (ii), E1, and the limit remain open.
 
-## Current residual-(ii) gate after Proposition 15.774 and the post-15.761 exact reductions
+## Current advance at Proposition 15.775
+
+The complete layer `t=q+3,k=5p+5` is CLOSED for every prime
+`p>=259201`, all boundary sizes and phases. See
+`evidence/NOTE_2026-09-04_EVENTUAL_FIRST_LAYER_CLOSE.md` and
+`src/e1_gmin_m4_prop15775.py`. The new input is a bounded-height,
+bounded-variable theorem for arbitrary nonnegative integral quadratics
+on the middle slice, followed by the exact full-cube mean lattice.
+It excludes the two required masses `2p+4,2p+6`; no low-row coefficient
+offset, endpoint equality classification, or finite-prime census is needed.
+
+The same theorem excludes both signed floors `r=3,4,5` throughout
+`46656*h^3<=p^3*(p-1)`, with `h=|H|` and **`h=r mod 2`**.
+This superlinear support band is not all-size witness localization.
+The retained generic frontier is `t>=q+3,k>=5p+5` for
+`29<=p<259201`, and at least `t>=q+4,k>=5p+7` for `p>=259201`,
+subject also to that cubic exclusion. Small-prime and global gates stay open.
+
+The independent local affine-parity theorem in
+`evidence/NOTE_2026-09-04_AFFINE_PARITY_CUBE_FLOOR.md` excludes
+`6<=b<=p-5` at the same two masses for every odd `p>=29`.
+Keep the homogenizing odd-degree vertex in its cube floor, and complement
+an odd boundary support before applying the even-representative formula.
+Do not reopen these closed branches with a cube, prime, or graph census.
+The scalar residue survivors at the first layer force neither `T=1`
+nor `P=5`; the complete eventual proof deliberately needs neither claim.
+
+## Historical residual-(ii) gate after Proposition 15.774 and the post-15.761 exact reductions
 
 Proposition 15.774 closes `p>=29,t=q+1,q+2,k=5p+1,5p+3` and advances
 the generic frontier to `t>=q+3,k>=5p+5`, where `q=(p-1)/2`.
@@ -861,7 +943,9 @@ Focused replay for these post-15.761 records:
 Residual (ii), E1, `L=1/2`, and the original MO limit remain OPEN.
 
 Consequently the fifth shell `k=4p+8` is closed for every prime `p>=13`.
-With `q=(p-1)/2` and `k=4p+2t`, the exact residual-(ii) frontier is now:
+With `q=(p-1)/2` and `k=4p+2t`, the historical residual-(ii) frontier
+through 15.774 was the following; the 15.775 overlay above now supersedes
+it for `p>=259201` and inside the new cubic support band:
 critical `p=5,7`; `p=11,t>=3` (`k>=50`); `p=13,17,19,t>=5`;
 `p=23,t>=12`; `p=1 mod 4,p>=29,t>=q+3`; and
 `p=3 mod 4,p>=31,t>=q+3`.  The separate positive `p=7,z=7` branch also

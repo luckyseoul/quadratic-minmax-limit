@@ -1,9 +1,12 @@
 # Proposition 15.764: the exact minimal-gap-four shell bridge
 
 **Status:** proved parity equivalence and a genuine bridge for odd
-`|H|<=5p`. The first unclosed failure ranges are even `|H|>=4p+2` and odd
-`|H|>=5p+2`. This does not close residual (ii), E1, `L=1/2`, or the original
-MathOverflow problem, and no global predicate changes.
+`|H|<=5p`. The no-contact failure ranges begin at even `|H|>=4p+2`
+and odd `|H|>=5p+2`. Even contact at level two proves only general
+odd-cardinality level-one shell alignment, not entry into the restricted
+15.750 Type-I theorem. That additional implication remains inside the
+open global bridge. This does not close residual (ii), E1, `L=1/2`, or
+the original MathOverflow problem, and no global predicate changes.
 
 ## 1. Exact setup
 
@@ -122,13 +125,23 @@ signed shell minimum two. The audited parity statement is instead
  \exists\epsilon,y\in E_\epsilon:\ T_H^\epsilon(y)=2,}    \tag{7}
 \]
 
-and the deletion score in (7) is exactly one. This is the Type-I parity,
-not residual (ii). Every level-one deletion row similarly has `b_e=+1`, and
-the same switch/permutation normalization puts it in the plus Type-I
-convention. Here the level-two frame mean gives `|H|>=2p`; equality is the
-forbidden bi-tight level two, so `|H|>=2p+2` and `|G|>=2p+1`. Thus an argument
-that sends every deletion directly into
-the even-`k`, `s_+=2` ledger without first proving `|H|` odd has a real gap.
+and the deletion score in (7) is exactly one. This is the general Type-I
+parity, not residual (ii). Every level-one deletion row similarly has
+`b_e=+1`, and the same switch/permutation normalization puts it in the
+plus Type-I shell convention. Here the level-two frame mean gives
+`|H|>=2p`; equality is the forbidden bi-tight level two, so
+`|H|>=2p+2` and `|G|>=2p+1`.
+
+**Scope correction.** These are lower bounds, not the exact cardinality
+`|G|=3p-2` required by 15.750. Nor does level-one freezing give its
+identity `S_G=3-2f_e` on every Max+ row. Proposition 15.750 proves the
+bad-case box with those hypotheses and its stated Max- inequalities,
+for every prime; it is not a theorem for every odd `|G|` with minimum
+one. Consequently the even row of `official_unit_entry_ledger` records
+`shell_level_entry_proved=True` but `official_entry_proved=False`.
+Neither sending every deletion into the even-`k`, level-two residual
+unit, nor sending arbitrary odd-`k` level-one alignment into 15.750,
+is justified. See the [scope audit](NOTE_2026-09-04_GLOBAL_BRIDGE_TYPE_I_SCOPE_AUDIT.md).
 
 ## 3. Frame averaging forces a size dichotomy
 
@@ -309,18 +322,27 @@ common-graph structure.
 
 ## 6. Exact remaining bridge
 
-To place an arbitrary minimal four-gap path into the existing official units,
-one must still prove at least one of the following structural assertions:
+For the strongest available minimality, choose `H` of minimum cardinality
+among all four-gap-or-better signings relative to `C`. Score parity and
+the single-edge Lipschitz bound give exactly gap four for `H` and gap
+two for every deletion. Global cardinality minimum also permits comparing
+arbitrary edge exchanges; it does not itself supply a full-shell affine
+identity for one of those deletions.
 
-1. `H` is odd and `|H|<=5p`; or
-2. directly, some signed H-eigenshell row has level three; or
-3. separately exclude the two failure regimes
-   `even |H|>=4p+2` and `odd |H|>=5p+2`.
+An odd `H` with a signed level-three row supplies the complete official
+residual-(ii) entry. The proved `|H|<=5p` theorem forces this row in
+its range. A general odd no-contact witness remains an open branch.
+Proposition 15.763's affine-alias alternative supplies the row for some
+particular deletions, not for every off-shell spike.
 
-Proposition 15.763's affine-alias alternative can produce the row in item 2
-for a particular deletion, but it does not classify every off-shell spike or
-align the coordinate systems of different deletions. No such global theorem
-is currently proved.
+For even `H`, excluding the no-level-two regime is insufficient. If
+there is contact at level two, one must still exclude the resulting
+general odd-`k` level-one dangerous-edge class, or prove the exact
+cardinality and full-shell hypotheses of an applicable existing unit.
+The restricted 15.750 theorem supplies no such implication on its own.
+This is an explicit unresolved part of
+`minimal_gap4_shell_bridge_closed_general()`, which remains false;
+it is not a new numbered proposition or a new claimed closure gate.
 
 Exact replay:
 

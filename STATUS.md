@@ -1,4 +1,70 @@
-# Status (2026-09-04; through Proposition 15.774 and the post-15.761 geometry, conic, and Boolean reductions)
+# Status (2026-09-04; through Proposition 15.775 and the post-15.761 geometry, conic, and Boolean reductions)
+
+**Global bridge scope correction.** Proposition 15.750 proves the
+restricted `k=3p-2`, `S_G=3-2*f_e on Max+` Type-I box, not general
+odd-k no-descent. Even H shell contact at two does not supply that
+entry. The unconditional even-minimal-H bound attributed to 15.774
+is retracted; the same r4 bound remains valid **without a signed
+level-two row**. The general odd-k implication remains inside the
+OPEN minimal-four-gap bridge. All 15.775 conclusions and the odd
+residual/capacity proofs are unchanged. See
+`evidence/NOTE_2026-09-04_GLOBAL_BRIDGE_TYPE_I_SCOPE_AUDIT.md`.
+The correction passed **310 focused tests** on soulkiller (80.506 seconds,
+zero failures/errors/skips); its final documentation replay and exact
+hashes are recorded separately in `evidence/global_bridge_scope_mesh_replay.json`
+and `evidence/global_bridge_scope_regression.json`. The older 321-test
+receipt below applies to its original checkpoint bytes, not this correction.
+
+**Proposition 15.775 closes the entire residual layer `t=q+3,k=5p+5`
+for every prime `p>=259201`, with every boundary size and both phases.**
+The new local theorem excludes both required masses `2p+4,2p+6` for
+arbitrary nonnegative integral quadratics on `J(p,(p+1)/2)` in that range.
+A dimension-free cube height bound, the Johnson influence identity, and
+integer-valued bounded-variable reduction give a full cube extension;
+its quarter-integral mean contradicts the exact slice-to-cube mean identity.
+No parallel-count normalization, equality catalog, or prime census is used.
+
+The same argument gives a superlinear support exclusion: for
+`r in {3,4,5}`, `h=|H|` with `h=r mod 2`, both signed shell floors
+`T_H^epsilon>=r` are impossible whenever
+`46656*h^3<=p^3*(p-1)`. The case `h<rp` is already excluded by frame
+averaging; the new case is `h>=rp`. This is a proved growing support
+band, not an all-size localization theorem.
+
+The remaining generic layer frontier is `t>=q+3,k>=5p+5` for
+`29<=p<259201`, and at least `t>=q+4,k>=5p+7` for `p>=259201`,
+with the additional cubic support exclusion just stated. Small-prime
+frontiers are unchanged. Residual (ii), the all-size minimal-four-gap
+bridge, E1, and the original limit remain **OPEN**.
+See the [proof](evidence/NOTE_2026-09-04_EVENTUAL_FIRST_LAYER_CLOSE.md).
+An independent, stronger small-prime local result excludes the middle
+boundaries `6<=b<=p-5` at both masses for every odd `p>=29`; see the
+[affine-parity proof](evidence/NOTE_2026-09-04_AFFINE_PARITY_CUBE_FLOOR.md).
+Verification: **305 focused tests and 16 documentation tests passed**
+on soulkiller; sixteen independent exact checks also passed on each of
+soulkiller, NUKA, and Jellyfin. Final replay commands, byte hashes,
+and the documentation refresh are recorded in
+`evidence/first_layer_mesh_replay.json` and
+`evidence/first_layer_regression.json`. This 321-test receipt is separate
+from the older results below. The new work is not yet committed or pushed.
+
+## Historical checkpoint through 15.774
+
+The post-push all-size attack gives a **conditional fractional valley**, not
+an integral restoration theorem. For signed shell floor `r=3,4,5`,
+`lambda=(r-2)/(p+r-2)` lowers the full Boolean norm below `Phi(C)-4`
+by at least `2(p-2)*lambda`. Parseval proves that uniform norm-error
+rounding cannot exploit the `r=3` margin for any nonempty restoration,
+at any support size. Actual state-dependent slack remains essential.
+The accompanying first-shell geometry includes bad/nonaffine integral
+anchors; it does not classify them as affine. See the
+[active-geometry proof](evidence/NOTE_2026-09-04_THRESHOLD_VALLEY_ACTIVE_GEOMETRY.md).
+Independently, distinct symmetric conference signings of order
+`n=p^2+1`, odd `p>=3`, differ on at least `n/2+1` edges. The resulting
+unique-reference radius `h<(n+2)/4` obstructs regauging the first open
+support sizes; it does not localize a witness. See the
+[distance proof](evidence/NOTE_2026-09-04_CONFERENCE_REFERENCE_DISTANCE.md).
+No numbered frontier or global closure predicate changes.
 
 Proposition 15.774 proves the strict small-mass spectrum and a two-type
 capacity theorem. For every prime `p>=29`, a nonzero nonnegative integral
@@ -15,7 +81,7 @@ The complete `s=1,2` continuation also covers p29/p31 and closes
 `t=q+1,q+2`, equivalently `k=5p+1,5p+3`, for every prime `p>=29`.
 The live generic frontier is `t>=q+3,k>=5p+5`; all small-prime frontiers
 are unchanged. Odd minimal four-gap sets are excluded through `5p+4`.
-Even and odd-no-level-three minimal sets obey the separate `r=4,5`
+Even-no-level-two and odd-no-level-three minimal sets obey the separate `r=4,5`
 bounds above. The first uncovered layer already admits exact scalar quota
 survivors, not graph witnesses. An all-size minimal-witness localization
 theorem or an adequate asymptotic deficit bound is still missing;
@@ -331,6 +397,19 @@ Gram data alone can attain the spectral maximum.  This is a norm-only and
 Gram-only no-go, not multiplier-two closure: the exact statewise
 diagonal-payment inequality remains open.  See
 `evidence/NOTE_2026-09-03_CROSS_RECTANGLE_FOURIER_STABILITY.md`.
+The 2026-09-05 continuation proves an exact all-alternating-cycle criterion
+for the real-function diagonal-payment relaxation and proves that diagonal
+skew cannot improve a coherent `R=+C` or `R=-C` baseline. Actual skew-sign
+realization remains additional. Exact mixed moments now retain both actual
+diagonal blocks, including their surviving interaction at Gram perfection;
+they do not imply the needed pointwise bound. See
+`evidence/NOTE_2026-09-05_DIAGONAL_PAYMENT_COMPATIBILITY.md` and
+`evidence/NOTE_2026-09-05_ACTUAL_DIAGONAL_MIXED_MOMENTS.md`.
+Multiplier two and the original MO limit remain **OPEN**.
+The new physical order-four example separates individual pair cost 8,
+cycle-relaxed optimum 10, and skew-sign diagonal optimum 12 for a fixed
+cross choice and a globally minimizing real signing. This is a fixed-order
+realization gap, not an asymptotic counterexample.
 Proposition 6.7 gives an exact order-`3n` tetrahedral frame with all
 four endpoint signings equal to `A` and only a `3n` internal-edge error. Its
 single-skew specialization reduces the second ray to
@@ -1037,6 +1116,8 @@ later layers; residual II globally, E1, `L=1/2`, and the original problem
 remain OPEN.
 
 **15.750 CLOSES the multi-level Type-I bad case for every prime `p>=5`.**
+Here the bad-case hypotheses include `k=3p-2` and
+`S_G=3-2*f_e on Max+`; general odd-k level-one alignment is not covered.
 For `p>=11`, transport an isolated vertex of `H=G union {e}` to infinity and
 apply the Max+ identity to the multiset `W=G+2e`. Johnson-slice rigidity and
 the exact `l1` budget force three parallel units in every square direction.

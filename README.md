@@ -14,7 +14,7 @@ m_n = min_{a_ij = ±1}  max_{x_j = ±1}  | Σ_{1≤i<j≤n} a_ij · x_i · x_j |
 Machine-assisted attack on a 2022 MathOverflow problem: whether the normalized
 min-max ±1 quadratic form converges. The limit **L is OPEN**. This repo is a
 proof ledger with source-backed computational proposition modules through
-15.774, audited post-15.761 support/conic/Boolean reductions, and reviewed
+15.775, audited post-15.761 support/conic/Boolean reductions, and reviewed
 analytic arguments in `solution.md`. Machine gates use
 explicit `True`/`False` predicates, and soft-closing is banned by test
 (`tests/test_main_chain_docs.py`); Propositions 6.3--6.10a are proved in prose,
@@ -26,7 +26,41 @@ not represented as computational predicates.
 
 **Main claim:** L = lim_n α_n is **OPEN** (2026-09-04).
 
-### Current audit (2026-09-04; through Proposition 15.774, the post-15.761 exact reductions, and Propositions 6.3--6.10a)
+### Current audit (2026-09-04; through Proposition 15.775, the post-15.761 exact reductions, and Propositions 6.3--6.10a)
+
+- **Global bridge scope correction.** The proved Type-I box requires
+  `k=3p-2` and `S_G=3-2*f_e on Max+`; general odd-k level-one alignment
+  is not closed. Even H contact at two therefore does not finish the
+  bridge. The former unconditional even-minimal-H bound is retracted;
+  the r4 bound remains valid **without a signed level-two row**.
+  See the [scope audit](evidence/NOTE_2026-09-04_GLOBAL_BRIDGE_TYPE_I_SCOPE_AUDIT.md).
+  All 15.775 and odd residual/capacity results remain intact.
+
+- **An entire new eventual layer is closed (15.775).** For every prime
+  `p>=259201`, residual `t=q+3,k=5p+5` is impossible for every boundary
+  size. The two required local masses are excluded by a bounded-height,
+  bounded-variable theorem and an exact quarter-integral cube mean.
+  The same proof excludes the growing support band
+  `46656*h^3<=p^3*(p-1)` for both signed shell floors `r=3,4,5`,
+  with `h=r mod 2`. The remaining layer frontier is
+  `t>=q+3,k>=5p+5` for `29<=p<259201`, and at least
+  `t>=q+4,k>=5p+7` for `p>=259201`, subject also to that cubic bound.
+  See the [proof](evidence/NOTE_2026-09-04_EVENTUAL_FIRST_LAYER_CLOSE.md).
+  Separately, the [affine-parity theorem](evidence/NOTE_2026-09-04_AFFINE_PARITY_CUBE_FLOOR.md)
+  closes the two masses' middle-boundary cells for every odd `p>=29`.
+  Neither theorem closes the all-size gates or the limit.
+
+- **All-size active-witness reduction, still open.** A conditional fractional
+  interpolation lowers the full Boolean norm, but Parseval blocks uniform
+  norm-error rounding at the universal odd shell floor for every support
+  size. The remaining restoration inequality needs each signed state's
+  own slack. New first-shell separation includes nonaffine bad anchors;
+  a separate conference-distance theorem obstructs a nearby-reference
+  shortcut without localizing a witness. See the
+  [active-geometry note](evidence/NOTE_2026-09-04_THRESHOLD_VALLEY_ACTIVE_GEOMETRY.md)
+  and [reference-distance note](evidence/NOTE_2026-09-04_CONFERENCE_REFERENCE_DISTANCE.md).
+  Neither result advances the numbered frontier or closes residual (ii),
+  E1, or the limit.
 
 - **Small-mass spectrum and two-type capacity (15.774).** For every
   prime `p>=29`, `0<4p E[C]<2p-10` forces a nonnegative integral
@@ -37,7 +71,8 @@ not represented as computational predicates.
   at `p>=37`; the uniform bounds are `5p-12,6p-12,7p-12` for
   every `p>=29`. Two residual carries complete the p29/p31 endpoints:
   `t=q+1,q+2,k=5p+1,5p+3` are closed for every `p>=29`, so the
-  generic frontier is `t>=q+3,k>=5p+5`. Odd minimal four-gap sets
+  generic frontier at that checkpoint was `t>=q+3,k>=5p+5`.
+  The 15.775 overlay above now supersedes its stated tail. Odd minimal four-gap sets
   are excluded through `5p+4`, but an all-size localization theorem
   remains missing. Exact first-layer scalar survivors are not graph
   witnesses; residual (ii), E1, and the limit remain open. See the
@@ -97,6 +132,12 @@ not represented as computational predicates.
   maximum. It is therefore a norm-only/Gram-only no-go, not multiplier-two
   closure; its statewise diagonal-payment inequality remains open. See
   `evidence/NOTE_2026-09-03_CROSS_RECTANGLE_FOURIER_STABILITY.md`.
+  The actual-diagonal continuation proves an all-cycle real-payment
+  compatibility criterion and exact mixed moments, while preserving the
+  unresolved skew-sign realization and pointwise bounds. Diagonal skew
+  cannot improve a coherent `R=+C` or `R=-C` baseline. See
+  `evidence/NOTE_2026-09-05_DIAGONAL_PAYMENT_COMPATIBILITY.md` and
+  `evidence/NOTE_2026-09-05_ACTUAL_DIAGONAL_MIXED_MOMENTS.md`.
   The general cross block
   has an exact four-label weighted-slice expansion.  Its all-directed case is
   the sharp identity

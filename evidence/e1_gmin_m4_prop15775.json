@@ -1,0 +1,1330 @@
+{
+  "prop": "15.775",
+  "status": "PROVED_INFINITE_FAMILY",
+  "proof_note": "evidence/NOTE_2026-09-04_EVENTUAL_FIRST_LAYER_CLOSE.md",
+  "minimum_prime": 259201,
+  "theorem": "p>=259201 prime: signed shell floor 3 is impossible at |H|=5p+6",
+  "residual_layer": "k=5p+5, t=(p-1)/2+3",
+  "eventual_next_residual_frontier": "p>=259201: k>=5p+7",
+  "smaller_prime_frontiers_changed": false,
+  "uniform_height_bound": 1800,
+  "junta_size_strict_upper": 129600,
+  "records": [
+    {
+      "p": 524287,
+      "k": 2621440,
+      "H": 2621441,
+      "t_residual": 262146,
+      "isolation_margin": 274871615488,
+      "both_signed_shell_floors": 3,
+      "all_boundary_sizes_excluded": true,
+      "whole_layer_excluded": true,
+      "quota_dependency": {
+        "p": 524287,
+        "m": 262144,
+        "t_shell": 524290,
+        "H": 2621441,
+        "allowed_residue_intervals": [
+          [
+            0,
+            2
+          ],
+          [
+            262138,
+            262143
+          ]
+        ],
+        "only_ordered_residue_pairs": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "u1_quotient_histogram": {
+          "2": 262143,
+          "3": 1
+        },
+        "u2_quotient_histogram": {
+          "2": 262144
+        },
+        "forced_low_masses": [
+          1048578,
+          1048580
+        ],
+        "P_and_Q_sum": 10,
+        "signed_T_formula": "sigma*T=(p+1)*(P-5)+1, sigma is the u1 type",
+        "P_equals_5_or_T_equals_pm1_assumed": false,
+        "large_residue_or_boundary_scan_used": false,
+        "spectrum_dependency": {
+          "all_prime_theorem_minimum": 29,
+          "fixed_receipt_prime": 37,
+          "strict_upper_mass_formula": "2p-10",
+          "union_mass_formula": "{0,p-3,p-1,p+1}",
+          "new_catalog_or_prime_census_used": false,
+          "proved": true
+        },
+        "proved": true
+      },
+      "local_dependencies": [
+        {
+          "p": 524287,
+          "s": 4,
+          "scaled_mass": 1048578,
+          "hypotheses": "A>=0 integer-valued degree<=2 on J(p,(p+1)/2)",
+          "affine_parity_hypothesis_needed": false,
+          "cube_nu_minus_one_interval": [
+            "1/524288",
+            "1801/524288"
+          ],
+          "contradiction": "1<nu<5/4 but nu is quarter-integral",
+          "junta_dependency": {
+            "p": 524287,
+            "s": 4,
+            "height_dependency": {
+              "p": 524287,
+              "s": 4,
+              "scaled_mass": 1048578,
+              "mean": "524289/524287",
+              "paired_cube_mean_upper": "174763/87381",
+              "height_upper_exact": "122168424676/94264681",
+              "uniform_height_bound": 1800,
+              "maximizing_point_belongs_to_every_selected_cube": true,
+              "cube_dependency": {
+                "domain": "nonnegative integer-valued cube quadratics, every dimension",
+                "rho_squared": "1/3",
+                "two_point_coefficients_a4_a2b2_b4": [
+                  "1",
+                  "2",
+                  "1/9"
+                ],
+                "two_point_nonnegative_remainder": [
+                  "0",
+                  "0",
+                  "8/9"
+                ],
+                "tensorization_uses_Cauchy_Schwarz": true,
+                "degree_two_L4_over_L2": "3",
+                "interpolation_exponents": [
+                  "1/3",
+                  "2/3"
+                ],
+                "L2_over_L1": "9",
+                "Fourier_coefficient_lattice": "(1/4) Z",
+                "height_over_mean_squared": 324,
+                "proof_is_dimension_free": true,
+                "proved": true
+              },
+              "paired_dependency": {
+                "p": 524287,
+                "identity": "T f(X)=(f(X)+p E[f])/(p+1)",
+                "monomial_orbits": [
+                  {
+                    "orbit": "constant",
+                    "at_X": 1,
+                    "slice_mean": "1",
+                    "paired_mean": "1"
+                  },
+                  {
+                    "orbit": "coordinate_in_X",
+                    "at_X": 1,
+                    "slice_mean": "262144/524287",
+                    "paired_mean": "262145/524288"
+                  },
+                  {
+                    "orbit": "coordinate_outside_X",
+                    "at_X": 0,
+                    "slice_mean": "262144/524287",
+                    "paired_mean": "1/2"
+                  },
+                  {
+                    "orbit": "pair_inside_X",
+                    "at_X": 1,
+                    "slice_mean": "131072/524287",
+                    "paired_mean": "131073/524288"
+                  },
+                  {
+                    "orbit": "pair_outside_X",
+                    "at_X": 0,
+                    "slice_mean": "131072/524287",
+                    "paired_mean": "1/4"
+                  },
+                  {
+                    "orbit": "pair_crossing_X",
+                    "at_X": 0,
+                    "slice_mean": "131072/524287",
+                    "paired_mean": "1/4"
+                  }
+                ],
+                "proved": true
+              },
+              "stabilizer_dependency": {
+                "p": 524287,
+                "endpoint_coefficient": "1/524287",
+                "nodes": [
+                  131071,
+                  131072,
+                  262144
+                ],
+                "weights": [
+                  "0",
+                  "524286/524287",
+                  "1/524287"
+                ],
+                "moments": [
+                  "1",
+                  "68719476736/524287",
+                  "9007233614479360/524287"
+                ],
+                "uniform_height_bound": "H<=p*mu*(p+3)/(p-1)",
+                "proved": true
+              },
+              "proved": true
+            },
+            "derivative_dependency": {
+              "p": 524287,
+              "conditional_slice": [
+                524285,
+                262143
+              ],
+              "exactly_one_of_unequal_coefficient_pair": "262143/524285",
+              "conditional_nonzero_support_lower": "262143/1048570",
+              "transposition_conditioning_probability": "262144/524287",
+              "squared_influence_definition": "I_ij=(1/4)E[(A-A^(ij))^2]",
+              "relevant_pair_influence_lower": "8589901824/274875809795",
+              "uniform_strict_influence_lower": "1/32",
+              "Johnson_degree_two_eigenvalue": 1048572,
+              "total_influence_variance_factor": 524286,
+              "constant_nonzero_affine_difference_has_full_support": true,
+              "integer_nonzero_difference_has_square_at_least_one": true,
+              "proved": true
+            },
+            "relevant_pair_count_lower": "p*L/2",
+            "largest_invariant_class_complement_upper": "61847293132125/536869888",
+            "junta_size_strict_upper": 129600,
+            "junta_coordinates_at_most": 129599,
+            "q": 262143,
+            "all_kept_patterns_extend": true,
+            "zero_influence_is_an_equivalence_relation": true,
+            "symmetrization_then_sK_equals_m_minus_sJ_preserves_degree_two": true,
+            "proved": true
+          },
+          "mean_dependency": {
+            "p": 524287,
+            "monomials": [
+              "1",
+              "x_i",
+              "x_i*x_j"
+            ],
+            "slice_moments": [
+              "1",
+              "262144/524287",
+              "131072/524287"
+            ],
+            "cube_moments": [
+              "1",
+              "1/2",
+              "1/4"
+            ],
+            "at_zero": [
+              1,
+              0,
+              0
+            ],
+            "identity": "p*mu=(p+1)*nu-f(0)",
+            "full_cube_mean_lattice": "(1/4) Z",
+            "proved": true
+          },
+          "excluded": true,
+          "proved": true
+        },
+        {
+          "p": 524287,
+          "s": 6,
+          "scaled_mass": 1048580,
+          "hypotheses": "A>=0 integer-valued degree<=2 on J(p,(p+1)/2)",
+          "affine_parity_hypothesis_needed": false,
+          "cube_nu_minus_one_interval": [
+            "1/262144",
+            "901/262144"
+          ],
+          "contradiction": "1<nu<5/4 but nu is quarter-integral",
+          "junta_dependency": {
+            "p": 524287,
+            "s": 6,
+            "height_dependency": {
+              "p": 524287,
+              "s": 6,
+              "scaled_mass": 1048580,
+              "mean": "524290/524287",
+              "paired_cube_mean_upper": "524290/262143",
+              "height_upper_exact": "1099520016400/848382129",
+              "uniform_height_bound": 1800,
+              "maximizing_point_belongs_to_every_selected_cube": true,
+              "cube_dependency": {
+                "domain": "nonnegative integer-valued cube quadratics, every dimension",
+                "rho_squared": "1/3",
+                "two_point_coefficients_a4_a2b2_b4": [
+                  "1",
+                  "2",
+                  "1/9"
+                ],
+                "two_point_nonnegative_remainder": [
+                  "0",
+                  "0",
+                  "8/9"
+                ],
+                "tensorization_uses_Cauchy_Schwarz": true,
+                "degree_two_L4_over_L2": "3",
+                "interpolation_exponents": [
+                  "1/3",
+                  "2/3"
+                ],
+                "L2_over_L1": "9",
+                "Fourier_coefficient_lattice": "(1/4) Z",
+                "height_over_mean_squared": 324,
+                "proof_is_dimension_free": true,
+                "proved": true
+              },
+              "paired_dependency": {
+                "p": 524287,
+                "identity": "T f(X)=(f(X)+p E[f])/(p+1)",
+                "monomial_orbits": [
+                  {
+                    "orbit": "constant",
+                    "at_X": 1,
+                    "slice_mean": "1",
+                    "paired_mean": "1"
+                  },
+                  {
+                    "orbit": "coordinate_in_X",
+                    "at_X": 1,
+                    "slice_mean": "262144/524287",
+                    "paired_mean": "262145/524288"
+                  },
+                  {
+                    "orbit": "coordinate_outside_X",
+                    "at_X": 0,
+                    "slice_mean": "262144/524287",
+                    "paired_mean": "1/2"
+                  },
+                  {
+                    "orbit": "pair_inside_X",
+                    "at_X": 1,
+                    "slice_mean": "131072/524287",
+                    "paired_mean": "131073/524288"
+                  },
+                  {
+                    "orbit": "pair_outside_X",
+                    "at_X": 0,
+                    "slice_mean": "131072/524287",
+                    "paired_mean": "1/4"
+                  },
+                  {
+                    "orbit": "pair_crossing_X",
+                    "at_X": 0,
+                    "slice_mean": "131072/524287",
+                    "paired_mean": "1/4"
+                  }
+                ],
+                "proved": true
+              },
+              "stabilizer_dependency": {
+                "p": 524287,
+                "endpoint_coefficient": "1/524287",
+                "nodes": [
+                  131071,
+                  131072,
+                  262144
+                ],
+                "weights": [
+                  "0",
+                  "524286/524287",
+                  "1/524287"
+                ],
+                "moments": [
+                  "1",
+                  "68719476736/524287",
+                  "9007233614479360/524287"
+                ],
+                "uniform_height_bound": "H<=p*mu*(p+3)/(p-1)",
+                "proved": true
+              },
+              "proved": true
+            },
+            "derivative_dependency": {
+              "p": 524287,
+              "conditional_slice": [
+                524285,
+                262143
+              ],
+              "exactly_one_of_unequal_coefficient_pair": "262143/524285",
+              "conditional_nonzero_support_lower": "262143/1048570",
+              "transposition_conditioning_probability": "262144/524287",
+              "squared_influence_definition": "I_ij=(1/4)E[(A-A^(ij))^2]",
+              "relevant_pair_influence_lower": "8589901824/274875809795",
+              "uniform_strict_influence_lower": "1/32",
+              "Johnson_degree_two_eigenvalue": 1048572,
+              "total_influence_variance_factor": 524286,
+              "constant_nonzero_affine_difference_has_full_support": true,
+              "integer_nonzero_difference_has_square_at_least_one": true,
+              "proved": true
+            },
+            "relevant_pair_count_lower": "p*L/2",
+            "largest_invariant_class_complement_upper": "30923705548125/268434944",
+            "junta_size_strict_upper": 129600,
+            "junta_coordinates_at_most": 129599,
+            "q": 262143,
+            "all_kept_patterns_extend": true,
+            "zero_influence_is_an_equivalence_relation": true,
+            "symmetrization_then_sK_equals_m_minus_sJ_preserves_degree_two": true,
+            "proved": true
+          },
+          "mean_dependency": {
+            "p": 524287,
+            "monomials": [
+              "1",
+              "x_i",
+              "x_i*x_j"
+            ],
+            "slice_moments": [
+              "1",
+              "262144/524287",
+              "131072/524287"
+            ],
+            "cube_moments": [
+              "1",
+              "1/2",
+              "1/4"
+            ],
+            "at_zero": [
+              1,
+              0,
+              0
+            ],
+            "identity": "p*mu=(p+1)*nu-f(0)",
+            "full_cube_mean_lattice": "(1/4) Z",
+            "proved": true
+          },
+          "excluded": true,
+          "proved": true
+        }
+      ],
+      "proved": true
+    },
+    {
+      "p": 6700417,
+      "k": 33502090,
+      "H": 33502091,
+      "t_residual": 3350211,
+      "isolation_margin": 44895520969708,
+      "both_signed_shell_floors": 3,
+      "all_boundary_sizes_excluded": true,
+      "whole_layer_excluded": true,
+      "quota_dependency": {
+        "p": 6700417,
+        "m": 3350209,
+        "t_shell": 6700420,
+        "H": 33502091,
+        "allowed_residue_intervals": [
+          [
+            0,
+            2
+          ],
+          [
+            3350203,
+            3350208
+          ]
+        ],
+        "only_ordered_residue_pairs": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "u1_quotient_histogram": {
+          "2": 3350208,
+          "3": 1
+        },
+        "u2_quotient_histogram": {
+          "2": 3350209
+        },
+        "forced_low_masses": [
+          13400838,
+          13400840
+        ],
+        "P_and_Q_sum": 10,
+        "signed_T_formula": "sigma*T=(p+1)*(P-5)+1, sigma is the u1 type",
+        "P_equals_5_or_T_equals_pm1_assumed": false,
+        "large_residue_or_boundary_scan_used": false,
+        "spectrum_dependency": {
+          "all_prime_theorem_minimum": 29,
+          "fixed_receipt_prime": 37,
+          "strict_upper_mass_formula": "2p-10",
+          "union_mass_formula": "{0,p-3,p-1,p+1}",
+          "new_catalog_or_prime_census_used": false,
+          "proved": true
+        },
+        "proved": true
+      },
+      "local_dependencies": [
+        {
+          "p": 6700417,
+          "s": 4,
+          "scaled_mass": 13400838,
+          "hypotheses": "A>=0 integer-valued degree<=2 on J(p,(p+1)/2)",
+          "affine_parity_hypothesis_needed": false,
+          "cube_nu_minus_one_interval": [
+            "1/6700418",
+            "1801/6700418"
+          ],
+          "contradiction": "1<nu<5/4 but nu is quarter-integral",
+          "junta_dependency": {
+            "p": 6700417,
+            "s": 4,
+            "height_dependency": {
+              "p": 6700417,
+              "s": 4,
+              "scaled_mass": 13400838,
+              "mean": "6700419/6700417",
+              "paired_cube_mean_upper": "2233473/1116736",
+              "height_upper_exact": "404060532980049/311774823424",
+              "uniform_height_bound": 1800,
+              "maximizing_point_belongs_to_every_selected_cube": true,
+              "cube_dependency": {
+                "domain": "nonnegative integer-valued cube quadratics, every dimension",
+                "rho_squared": "1/3",
+                "two_point_coefficients_a4_a2b2_b4": [
+                  "1",
+                  "2",
+                  "1/9"
+                ],
+                "two_point_nonnegative_remainder": [
+                  "0",
+                  "0",
+                  "8/9"
+                ],
+                "tensorization_uses_Cauchy_Schwarz": true,
+                "degree_two_L4_over_L2": "3",
+                "interpolation_exponents": [
+                  "1/3",
+                  "2/3"
+                ],
+                "L2_over_L1": "9",
+                "Fourier_coefficient_lattice": "(1/4) Z",
+                "height_over_mean_squared": 324,
+                "proof_is_dimension_free": true,
+                "proved": true
+              },
+              "paired_dependency": {
+                "p": 6700417,
+                "identity": "T f(X)=(f(X)+p E[f])/(p+1)",
+                "monomial_orbits": [
+                  {
+                    "orbit": "constant",
+                    "at_X": 1,
+                    "slice_mean": "1",
+                    "paired_mean": "1"
+                  },
+                  {
+                    "orbit": "coordinate_in_X",
+                    "at_X": 1,
+                    "slice_mean": "3350209/6700417",
+                    "paired_mean": "1675105/3350209"
+                  },
+                  {
+                    "orbit": "coordinate_outside_X",
+                    "at_X": 0,
+                    "slice_mean": "3350209/6700417",
+                    "paired_mean": "1/2"
+                  },
+                  {
+                    "orbit": "pair_inside_X",
+                    "at_X": 1,
+                    "slice_mean": "3350209/13400834",
+                    "paired_mean": "3350211/13400836"
+                  },
+                  {
+                    "orbit": "pair_outside_X",
+                    "at_X": 0,
+                    "slice_mean": "3350209/13400834",
+                    "paired_mean": "1/4"
+                  },
+                  {
+                    "orbit": "pair_crossing_X",
+                    "at_X": 0,
+                    "slice_mean": "3350209/13400834",
+                    "paired_mean": "1/4"
+                  }
+                ],
+                "proved": true
+              },
+              "stabilizer_dependency": {
+                "p": 6700417,
+                "endpoint_coefficient": "1675104/11223902018785",
+                "nodes": [
+                  1675104,
+                  1675105,
+                  3350209
+                ],
+                "weights": [
+                  "5611948496736/11223902018785",
+                  "3350209/6700417",
+                  "1675104/11223902018785"
+                ],
+                "moments": [
+                  "1",
+                  "11223900343681/6700417",
+                  "18801211585201761505/6700417"
+                ],
+                "uniform_height_bound": "H<=p*mu*(p+3)/(p-1)",
+                "proved": true
+              },
+              "proved": true
+            },
+            "derivative_dependency": {
+              "p": 6700417,
+              "conditional_slice": [
+                6700415,
+                3350208
+              ],
+              "exactly_one_of_unequal_coefficient_pair": "3350208/6700415",
+              "conditional_nonzero_support_lower": "1675104/6700415",
+              "transposition_conditioning_probability": "3350209/6700417",
+              "squared_influence_definition": "I_ij=(1/4)E[(A-A^(ij))^2]",
+              "relevant_pair_influence_lower": "1402987124184/44895574573055",
+              "uniform_strict_influence_lower": "1/32",
+              "Johnson_degree_two_eigenvalue": 13400832,
+              "total_influence_variance_factor": 6700416,
+              "constant_nonzero_affine_difference_has_full_support": true,
+              "integer_nonzero_difference_has_square_at_least_one": true,
+              "proved": true
+            },
+            "relevant_pair_count_lower": "p*L/2",
+            "largest_invariant_class_complement_upper": "2585985867295776000/22447797337153",
+            "junta_size_strict_upper": 129600,
+            "junta_coordinates_at_most": 129599,
+            "q": 3350208,
+            "all_kept_patterns_extend": true,
+            "zero_influence_is_an_equivalence_relation": true,
+            "symmetrization_then_sK_equals_m_minus_sJ_preserves_degree_two": true,
+            "proved": true
+          },
+          "mean_dependency": {
+            "p": 6700417,
+            "monomials": [
+              "1",
+              "x_i",
+              "x_i*x_j"
+            ],
+            "slice_moments": [
+              "1",
+              "3350209/6700417",
+              "3350209/13400834"
+            ],
+            "cube_moments": [
+              "1",
+              "1/2",
+              "1/4"
+            ],
+            "at_zero": [
+              1,
+              0,
+              0
+            ],
+            "identity": "p*mu=(p+1)*nu-f(0)",
+            "full_cube_mean_lattice": "(1/4) Z",
+            "proved": true
+          },
+          "excluded": true,
+          "proved": true
+        },
+        {
+          "p": 6700417,
+          "s": 6,
+          "scaled_mass": 13400840,
+          "hypotheses": "A>=0 integer-valued degree<=2 on J(p,(p+1)/2)",
+          "affine_parity_hypothesis_needed": false,
+          "cube_nu_minus_one_interval": [
+            "1/3350209",
+            "901/3350209"
+          ],
+          "contradiction": "1<nu<5/4 but nu is quarter-integral",
+          "junta_dependency": {
+            "p": 6700417,
+            "s": 6,
+            "height_dependency": {
+              "p": 6700417,
+              "s": 6,
+              "scaled_mass": 13400840,
+              "mean": "6700420/6700417",
+              "paired_cube_mean_upper": "1675105/837552",
+              "height_upper_exact": "25253790849225/19485926464",
+              "uniform_height_bound": 1800,
+              "maximizing_point_belongs_to_every_selected_cube": true,
+              "cube_dependency": {
+                "domain": "nonnegative integer-valued cube quadratics, every dimension",
+                "rho_squared": "1/3",
+                "two_point_coefficients_a4_a2b2_b4": [
+                  "1",
+                  "2",
+                  "1/9"
+                ],
+                "two_point_nonnegative_remainder": [
+                  "0",
+                  "0",
+                  "8/9"
+                ],
+                "tensorization_uses_Cauchy_Schwarz": true,
+                "degree_two_L4_over_L2": "3",
+                "interpolation_exponents": [
+                  "1/3",
+                  "2/3"
+                ],
+                "L2_over_L1": "9",
+                "Fourier_coefficient_lattice": "(1/4) Z",
+                "height_over_mean_squared": 324,
+                "proof_is_dimension_free": true,
+                "proved": true
+              },
+              "paired_dependency": {
+                "p": 6700417,
+                "identity": "T f(X)=(f(X)+p E[f])/(p+1)",
+                "monomial_orbits": [
+                  {
+                    "orbit": "constant",
+                    "at_X": 1,
+                    "slice_mean": "1",
+                    "paired_mean": "1"
+                  },
+                  {
+                    "orbit": "coordinate_in_X",
+                    "at_X": 1,
+                    "slice_mean": "3350209/6700417",
+                    "paired_mean": "1675105/3350209"
+                  },
+                  {
+                    "orbit": "coordinate_outside_X",
+                    "at_X": 0,
+                    "slice_mean": "3350209/6700417",
+                    "paired_mean": "1/2"
+                  },
+                  {
+                    "orbit": "pair_inside_X",
+                    "at_X": 1,
+                    "slice_mean": "3350209/13400834",
+                    "paired_mean": "3350211/13400836"
+                  },
+                  {
+                    "orbit": "pair_outside_X",
+                    "at_X": 0,
+                    "slice_mean": "3350209/13400834",
+                    "paired_mean": "1/4"
+                  },
+                  {
+                    "orbit": "pair_crossing_X",
+                    "at_X": 0,
+                    "slice_mean": "3350209/13400834",
+                    "paired_mean": "1/4"
+                  }
+                ],
+                "proved": true
+              },
+              "stabilizer_dependency": {
+                "p": 6700417,
+                "endpoint_coefficient": "1675104/11223902018785",
+                "nodes": [
+                  1675104,
+                  1675105,
+                  3350209
+                ],
+                "weights": [
+                  "5611948496736/11223902018785",
+                  "3350209/6700417",
+                  "1675104/11223902018785"
+                ],
+                "moments": [
+                  "1",
+                  "11223900343681/6700417",
+                  "18801211585201761505/6700417"
+                ],
+                "uniform_height_bound": "H<=p*mu*(p+3)/(p-1)",
+                "proved": true
+              },
+              "proved": true
+            },
+            "derivative_dependency": {
+              "p": 6700417,
+              "conditional_slice": [
+                6700415,
+                3350208
+              ],
+              "exactly_one_of_unequal_coefficient_pair": "3350208/6700415",
+              "conditional_nonzero_support_lower": "1675104/6700415",
+              "transposition_conditioning_probability": "3350209/6700417",
+              "squared_influence_definition": "I_ij=(1/4)E[(A-A^(ij))^2]",
+              "relevant_pair_influence_lower": "1402987124184/44895574573055",
+              "uniform_strict_influence_lower": "1/32",
+              "Johnson_degree_two_eigenvalue": 13400832,
+              "total_influence_variance_factor": 6700416,
+              "constant_nonzero_affine_difference_has_full_support": true,
+              "integer_nonzero_difference_has_square_at_least_one": true,
+              "proved": true
+            },
+            "relevant_pair_count_lower": "p*L/2",
+            "largest_invariant_class_complement_upper": "2585986253239680000/22447797337153",
+            "junta_size_strict_upper": 129600,
+            "junta_coordinates_at_most": 129599,
+            "q": 3350208,
+            "all_kept_patterns_extend": true,
+            "zero_influence_is_an_equivalence_relation": true,
+            "symmetrization_then_sK_equals_m_minus_sJ_preserves_degree_two": true,
+            "proved": true
+          },
+          "mean_dependency": {
+            "p": 6700417,
+            "monomials": [
+              "1",
+              "x_i",
+              "x_i*x_j"
+            ],
+            "slice_moments": [
+              "1",
+              "3350209/6700417",
+              "3350209/13400834"
+            ],
+            "cube_moments": [
+              "1",
+              "1/2",
+              "1/4"
+            ],
+            "at_zero": [
+              1,
+              0,
+              0
+            ],
+            "identity": "p*mu=(p+1)*nu-f(0)",
+            "full_cube_mean_lattice": "(1/4) Z",
+            "proved": true
+          },
+          "excluded": true,
+          "proved": true
+        }
+      ],
+      "proved": true
+    }
+  ],
+  "records_are_identity_replays_not_a_prime_census": true,
+  "superlinear_support_theorem": "p>=29 prime,r in {3,4,5},h=r mod2: both signed floors r are impossible below rp or when 46656*h^3<=p^3*(p-1)",
+  "superlinear_support_records": [
+    {
+      "p": 6700417,
+      "r": 3,
+      "H": 20101253,
+      "case": "quarter-grid divisibility",
+      "parity_required": "h=r mod 2",
+      "both_signed_shell_floors_required": true,
+      "support_condition": "46656*h^3<=p^3*(p-1)",
+      "type_average_A": "1/6700417",
+      "selected_mean_cap": "20101253/13400834",
+      "select_one_low_row_in_each_type": true,
+      "isolation_margin": 44895547771384,
+      "junta_strict_upper": "189472809954051159443549856/300819160885241411713",
+      "q": 3350208,
+      "full_cube_extensions_exist": true,
+      "positive_multiple_lower": 12,
+      "positive_multiple_upper": "2357018837551179156/44895587973889",
+      "modulus": 6700418,
+      "divisibility_identity": "4*(alpha_plus+alpha_minus+r)=(p+1)*(4*nu_plus+4*nu_minus-2*(P_plus+P_minus)+4*r)",
+      "neither_phase_omitted": true,
+      "bounded_mean_dependency": {
+        "p": 6700417,
+        "mean_cap": "20101253/13400834",
+        "height_upper": "294560011311936561/44895587973889",
+        "junta_size_strict_upper": "189472809954051159443549856/300819160885241411713",
+        "height_coefficient": 2916,
+        "junta_coefficient": 186624,
+        "cube_dependency": {
+          "domain": "nonnegative integer-valued cube quadratics, every dimension",
+          "rho_squared": "1/3",
+          "two_point_coefficients_a4_a2b2_b4": [
+            "1",
+            "2",
+            "1/9"
+          ],
+          "two_point_nonnegative_remainder": [
+            "0",
+            "0",
+            "8/9"
+          ],
+          "tensorization_uses_Cauchy_Schwarz": true,
+          "degree_two_L4_over_L2": "3",
+          "interpolation_exponents": [
+            "1/3",
+            "2/3"
+          ],
+          "L2_over_L1": "9",
+          "Fourier_coefficient_lattice": "(1/4) Z",
+          "height_over_mean_squared": 324,
+          "proof_is_dimension_free": true,
+          "proved": true
+        },
+        "paired_dependency": {
+          "p": 6700417,
+          "identity": "T f(X)=(f(X)+p E[f])/(p+1)",
+          "monomial_orbits": [
+            {
+              "orbit": "constant",
+              "at_X": 1,
+              "slice_mean": "1",
+              "paired_mean": "1"
+            },
+            {
+              "orbit": "coordinate_in_X",
+              "at_X": 1,
+              "slice_mean": "3350209/6700417",
+              "paired_mean": "1675105/3350209"
+            },
+            {
+              "orbit": "coordinate_outside_X",
+              "at_X": 0,
+              "slice_mean": "3350209/6700417",
+              "paired_mean": "1/2"
+            },
+            {
+              "orbit": "pair_inside_X",
+              "at_X": 1,
+              "slice_mean": "3350209/13400834",
+              "paired_mean": "3350211/13400836"
+            },
+            {
+              "orbit": "pair_outside_X",
+              "at_X": 0,
+              "slice_mean": "3350209/13400834",
+              "paired_mean": "1/4"
+            },
+            {
+              "orbit": "pair_crossing_X",
+              "at_X": 0,
+              "slice_mean": "3350209/13400834",
+              "paired_mean": "1/4"
+            }
+          ],
+          "proved": true
+        },
+        "stabilizer_dependency": {
+          "p": 6700417,
+          "endpoint_coefficient": "1675104/11223902018785",
+          "nodes": [
+            1675104,
+            1675105,
+            3350209
+          ],
+          "weights": [
+            "5611948496736/11223902018785",
+            "3350209/6700417",
+            "1675104/11223902018785"
+          ],
+          "moments": [
+            "1",
+            "11223900343681/6700417",
+            "18801211585201761505/6700417"
+          ],
+          "uniform_height_bound": "H<=p*mu*(p+3)/(p-1)",
+          "proved": true
+        },
+        "derivative_dependency": {
+          "p": 6700417,
+          "conditional_slice": [
+            6700415,
+            3350208
+          ],
+          "exactly_one_of_unequal_coefficient_pair": "3350208/6700415",
+          "conditional_nonzero_support_lower": "1675104/6700415",
+          "transposition_conditioning_probability": "3350209/6700417",
+          "squared_influence_definition": "I_ij=(1/4)E[(A-A^(ij))^2]",
+          "relevant_pair_influence_lower": "1402987124184/44895574573055",
+          "uniform_strict_influence_lower": "1/32",
+          "Johnson_degree_two_eigenvalue": 13400832,
+          "total_influence_variance_factor": 6700416,
+          "constant_nonzero_affine_difference_has_full_support": true,
+          "integer_nonzero_difference_has_square_at_least_one": true,
+          "proved": true
+        },
+        "mean_dependency": {
+          "p": 6700417,
+          "monomials": [
+            "1",
+            "x_i",
+            "x_i*x_j"
+          ],
+          "slice_moments": [
+            "1",
+            "3350209/6700417",
+            "3350209/13400834"
+          ],
+          "cube_moments": [
+            "1",
+            "1/2",
+            "1/4"
+          ],
+          "at_zero": [
+            1,
+            0,
+            0
+          ],
+          "identity": "p*mu=(p+1)*nu-f(0)",
+          "full_cube_mean_lattice": "(1/4) Z",
+          "proved": true
+        },
+        "proved": true
+      },
+      "excluded": true,
+      "proved": true
+    },
+    {
+      "p": 6700417,
+      "r": 4,
+      "H": 26801670,
+      "case": "quarter-grid divisibility",
+      "parity_required": "h=r mod 2",
+      "both_signed_shell_floors_required": true,
+      "support_condition": "46656*h^3<=p^3*(p-1)",
+      "type_average_A": "1/6700417",
+      "selected_mean_cap": "13400835/6700417",
+      "select_one_low_row_in_each_type": true,
+      "isolation_margin": 44895534370550,
+      "junta_strict_upper": "449120701191516368976864000/300819160885241411713",
+      "q": 3350208,
+      "full_cube_extensions_exist": true,
+      "positive_multiple_lower": 16,
+      "positive_multiple_upper": "4190016059656447024/44895587973889",
+      "modulus": 6700418,
+      "divisibility_identity": "4*(alpha_plus+alpha_minus+r)=(p+1)*(4*nu_plus+4*nu_minus-2*(P_plus+P_minus)+4*r)",
+      "neither_phase_omitted": true,
+      "bounded_mean_dependency": {
+        "p": 6700417,
+        "mean_cap": "13400835/6700417",
+        "height_upper": "523662216281108100/44895587973889",
+        "junta_size_strict_upper": "449120701191516368976864000/300819160885241411713",
+        "height_coefficient": 2916,
+        "junta_coefficient": 186624,
+        "cube_dependency": {
+          "domain": "nonnegative integer-valued cube quadratics, every dimension",
+          "rho_squared": "1/3",
+          "two_point_coefficients_a4_a2b2_b4": [
+            "1",
+            "2",
+            "1/9"
+          ],
+          "two_point_nonnegative_remainder": [
+            "0",
+            "0",
+            "8/9"
+          ],
+          "tensorization_uses_Cauchy_Schwarz": true,
+          "degree_two_L4_over_L2": "3",
+          "interpolation_exponents": [
+            "1/3",
+            "2/3"
+          ],
+          "L2_over_L1": "9",
+          "Fourier_coefficient_lattice": "(1/4) Z",
+          "height_over_mean_squared": 324,
+          "proof_is_dimension_free": true,
+          "proved": true
+        },
+        "paired_dependency": {
+          "p": 6700417,
+          "identity": "T f(X)=(f(X)+p E[f])/(p+1)",
+          "monomial_orbits": [
+            {
+              "orbit": "constant",
+              "at_X": 1,
+              "slice_mean": "1",
+              "paired_mean": "1"
+            },
+            {
+              "orbit": "coordinate_in_X",
+              "at_X": 1,
+              "slice_mean": "3350209/6700417",
+              "paired_mean": "1675105/3350209"
+            },
+            {
+              "orbit": "coordinate_outside_X",
+              "at_X": 0,
+              "slice_mean": "3350209/6700417",
+              "paired_mean": "1/2"
+            },
+            {
+              "orbit": "pair_inside_X",
+              "at_X": 1,
+              "slice_mean": "3350209/13400834",
+              "paired_mean": "3350211/13400836"
+            },
+            {
+              "orbit": "pair_outside_X",
+              "at_X": 0,
+              "slice_mean": "3350209/13400834",
+              "paired_mean": "1/4"
+            },
+            {
+              "orbit": "pair_crossing_X",
+              "at_X": 0,
+              "slice_mean": "3350209/13400834",
+              "paired_mean": "1/4"
+            }
+          ],
+          "proved": true
+        },
+        "stabilizer_dependency": {
+          "p": 6700417,
+          "endpoint_coefficient": "1675104/11223902018785",
+          "nodes": [
+            1675104,
+            1675105,
+            3350209
+          ],
+          "weights": [
+            "5611948496736/11223902018785",
+            "3350209/6700417",
+            "1675104/11223902018785"
+          ],
+          "moments": [
+            "1",
+            "11223900343681/6700417",
+            "18801211585201761505/6700417"
+          ],
+          "uniform_height_bound": "H<=p*mu*(p+3)/(p-1)",
+          "proved": true
+        },
+        "derivative_dependency": {
+          "p": 6700417,
+          "conditional_slice": [
+            6700415,
+            3350208
+          ],
+          "exactly_one_of_unequal_coefficient_pair": "3350208/6700415",
+          "conditional_nonzero_support_lower": "1675104/6700415",
+          "transposition_conditioning_probability": "3350209/6700417",
+          "squared_influence_definition": "I_ij=(1/4)E[(A-A^(ij))^2]",
+          "relevant_pair_influence_lower": "1402987124184/44895574573055",
+          "uniform_strict_influence_lower": "1/32",
+          "Johnson_degree_two_eigenvalue": 13400832,
+          "total_influence_variance_factor": 6700416,
+          "constant_nonzero_affine_difference_has_full_support": true,
+          "integer_nonzero_difference_has_square_at_least_one": true,
+          "proved": true
+        },
+        "mean_dependency": {
+          "p": 6700417,
+          "monomials": [
+            "1",
+            "x_i",
+            "x_i*x_j"
+          ],
+          "slice_moments": [
+            "1",
+            "3350209/6700417",
+            "3350209/13400834"
+          ],
+          "cube_moments": [
+            "1",
+            "1/2",
+            "1/4"
+          ],
+          "at_zero": [
+            1,
+            0,
+            0
+          ],
+          "identity": "p*mu=(p+1)*nu-f(0)",
+          "full_cube_mean_lattice": "(1/4) Z",
+          "proved": true
+        },
+        "proved": true
+      },
+      "excluded": true,
+      "proved": true
+    },
+    {
+      "p": 6700417,
+      "r": 5,
+      "H": 33502087,
+      "case": "quarter-grid divisibility",
+      "parity_required": "h=r mod 2",
+      "both_signed_shell_floors_required": true,
+      "support_condition": "46656*h^3<=p^3*(p-1)",
+      "type_average_A": "1/6700417",
+      "selected_mean_cap": "33502087/13400834",
+      "select_one_low_row_in_each_type": true,
+      "isolation_margin": 44895520969716,
+      "junta_strict_upper": "877188830240014773227349984/300819160885241411713",
+      "q": 3350208,
+      "full_cube_extensions_exist": true,
+      "positive_multiple_lower": 20,
+      "positive_multiple_upper": "6546675419889156188/44895587973889",
+      "modulus": 6700418,
+      "divisibility_identity": "4*(alpha_plus+alpha_minus+r)=(p+1)*(4*nu_plus+4*nu_minus-2*(P_plus+P_minus)+4*r)",
+      "neither_phase_omitted": true,
+      "bounded_mean_dependency": {
+        "p": 6700417,
+        "mean_cap": "33502087/13400834",
+        "height_upper": "818222188516209801/44895587973889",
+        "junta_size_strict_upper": "877188830240014773227349984/300819160885241411713",
+        "height_coefficient": 2916,
+        "junta_coefficient": 186624,
+        "cube_dependency": {
+          "domain": "nonnegative integer-valued cube quadratics, every dimension",
+          "rho_squared": "1/3",
+          "two_point_coefficients_a4_a2b2_b4": [
+            "1",
+            "2",
+            "1/9"
+          ],
+          "two_point_nonnegative_remainder": [
+            "0",
+            "0",
+            "8/9"
+          ],
+          "tensorization_uses_Cauchy_Schwarz": true,
+          "degree_two_L4_over_L2": "3",
+          "interpolation_exponents": [
+            "1/3",
+            "2/3"
+          ],
+          "L2_over_L1": "9",
+          "Fourier_coefficient_lattice": "(1/4) Z",
+          "height_over_mean_squared": 324,
+          "proof_is_dimension_free": true,
+          "proved": true
+        },
+        "paired_dependency": {
+          "p": 6700417,
+          "identity": "T f(X)=(f(X)+p E[f])/(p+1)",
+          "monomial_orbits": [
+            {
+              "orbit": "constant",
+              "at_X": 1,
+              "slice_mean": "1",
+              "paired_mean": "1"
+            },
+            {
+              "orbit": "coordinate_in_X",
+              "at_X": 1,
+              "slice_mean": "3350209/6700417",
+              "paired_mean": "1675105/3350209"
+            },
+            {
+              "orbit": "coordinate_outside_X",
+              "at_X": 0,
+              "slice_mean": "3350209/6700417",
+              "paired_mean": "1/2"
+            },
+            {
+              "orbit": "pair_inside_X",
+              "at_X": 1,
+              "slice_mean": "3350209/13400834",
+              "paired_mean": "3350211/13400836"
+            },
+            {
+              "orbit": "pair_outside_X",
+              "at_X": 0,
+              "slice_mean": "3350209/13400834",
+              "paired_mean": "1/4"
+            },
+            {
+              "orbit": "pair_crossing_X",
+              "at_X": 0,
+              "slice_mean": "3350209/13400834",
+              "paired_mean": "1/4"
+            }
+          ],
+          "proved": true
+        },
+        "stabilizer_dependency": {
+          "p": 6700417,
+          "endpoint_coefficient": "1675104/11223902018785",
+          "nodes": [
+            1675104,
+            1675105,
+            3350209
+          ],
+          "weights": [
+            "5611948496736/11223902018785",
+            "3350209/6700417",
+            "1675104/11223902018785"
+          ],
+          "moments": [
+            "1",
+            "11223900343681/6700417",
+            "18801211585201761505/6700417"
+          ],
+          "uniform_height_bound": "H<=p*mu*(p+3)/(p-1)",
+          "proved": true
+        },
+        "derivative_dependency": {
+          "p": 6700417,
+          "conditional_slice": [
+            6700415,
+            3350208
+          ],
+          "exactly_one_of_unequal_coefficient_pair": "3350208/6700415",
+          "conditional_nonzero_support_lower": "1675104/6700415",
+          "transposition_conditioning_probability": "3350209/6700417",
+          "squared_influence_definition": "I_ij=(1/4)E[(A-A^(ij))^2]",
+          "relevant_pair_influence_lower": "1402987124184/44895574573055",
+          "uniform_strict_influence_lower": "1/32",
+          "Johnson_degree_two_eigenvalue": 13400832,
+          "total_influence_variance_factor": 6700416,
+          "constant_nonzero_affine_difference_has_full_support": true,
+          "integer_nonzero_difference_has_square_at_least_one": true,
+          "proved": true
+        },
+        "mean_dependency": {
+          "p": 6700417,
+          "monomials": [
+            "1",
+            "x_i",
+            "x_i*x_j"
+          ],
+          "slice_moments": [
+            "1",
+            "3350209/6700417",
+            "3350209/13400834"
+          ],
+          "cube_moments": [
+            "1",
+            "1/2",
+            "1/4"
+          ],
+          "at_zero": [
+            1,
+            0,
+            0
+          ],
+          "identity": "p*mu=(p+1)*nu-f(0)",
+          "full_cube_mean_lattice": "(1/4) Z",
+          "proved": true
+        },
+        "proved": true
+      },
+      "excluded": true,
+      "proved": true
+    }
+  ],
+  "new_equality_catalog_used": false,
+  "proved": true,
+  "residual_ii_closed_general": false,
+  "minimal_four_gap_bridge_closed_general": false,
+  "eventual_E1_proved": false,
+  "e1_closed_general": false,
+  "original_MO_limit_closed": false
+}

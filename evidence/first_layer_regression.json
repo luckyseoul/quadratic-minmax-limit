@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "recorded_utc": "2026-09-04 23:11:37 UTC",
+  "classification": "PROVED INFINITE-FAMILY FIRST-LAYER CLOSURE AND SUPERLINEAR SUPPORT EXCLUSION; GLOBAL GATES OPEN",
+  "checkout": "/home/nick/quadratic-minmax-limit-residual-ii",
+  "branch": "residual/p13-u6-common-moments",
+  "HEAD": "a25fe0ab81830438832ec7e581257f257dbe1c5d",
+  "new_work_committed": false,
+  "new_work_pushed": false,
+  "scope": {
+    "proposition": "15.775",
+    "local_theorem": "For every odd integer p>=259201, no nonnegative integer-valued degree-at-most-two function on J(p,(p+1)/2) has mass 2p E[A] equal to 2p+4 or 2p+6.",
+    "residual_layer_closed": "For every prime p>=259201, t=(p-1)/2+3 and k=5p+5; all boundary sizes and both direction types.",
+    "superlinear_support_theorem": "For prime p>=29, r in {3,4,5}, h>=0 and h=r mod 2, both signed shell floors r are impossible if h<rp or 46656*h^3<=p^3*(p-1).",
+    "affine_parity_local_companion": "For every odd p>=29, both masses 2p+4 and 2p+6 are excluded at even boundary representatives 6<=b<=p-5, in both parity phases.",
+    "proof_mechanism": "Dimension-free integer cube height, integral transposition influence, bounded-variable middle-slice extension, and quarter-integral cube mean.",
+    "finite_prime_graph_boundary_or_coefficient_census_used": false,
+    "small_prime_ranges_unchanged": true,
+    "remaining_tail_baseline": "p>=259201 retains at least t>=q+4,k>=5p+7, additionally subject to the cubic support exclusion; 29<=p<259201 retains t>=q+3,k>=5p+5.",
+    "all_size_localization_proved": false,
+    "residual_ii_closed": false,
+    "minimal_four_gap_bridge_closed": false,
+    "E1_closed": false,
+    "L_status": "OPEN",
+    "limit_closed": false
+  },
+  "mathematical_audits": {
+    "root": "Read and checked the complete first-layer and support-band proof, local parity proof, source and tests.",
+    "status_endpoint_audit": "Authored the bounded-integral-quadratic proof and source; reviewed the parity companion and source dependency guards.",
+    "middle_boundary_proof": "Independently audited the first-layer and support-band arguments; supplied the affine-parity proof and finalized the 106-case core suite.",
+    "mesh_preflight": "Independent algebraic proof audit and separately implemented exact integer/Fraction identities on three workers.",
+    "numerical_replays_not_substitutes_for_universal_proofs": true
+  },
+  "tests": {
+    "unique_tests_passed": 321,
+    "focused": {
+      "tests": 305,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "elapsed_seconds": 16.964,
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.113 'cd /tmp/first-layer-15775.AeD9pK/regression && sha256sum src/e1_gmin_m4_prop15775.py tests/test_prop15775.py evidence/e1_gmin_m4_prop15775.json && PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -q -o cache_dir=/tmp/first-layer-15775.AeD9pK/pytest-cache-focused --junitxml=/tmp/first-layer-15775.AeD9pK/focused.xml tests/test_prop15775.py tests/test_affine_parity_cube_floor.py tests/test_prop15774.py tests/test_small_mass_spectrum.py tests/test_prop15773.py tests/test_prop15688.py'",
+      "junit_path": "/tmp/first-layer-15775.AeD9pK/focused.xml",
+      "junit_sha256": "2e8c2fbe738d4154153e58a093488bddcd53b8a2608f333bea07010dacb86e24",
+      "summary": {
+        "suites": [
+          {
+            "errors": "0",
+            "failures": "0",
+            "hostname": "soulkiller",
+            "name": "pytest",
+            "skipped": "0",
+            "tests": "305",
+            "time": "16.964",
+            "timestamp": "2026-09-04T23:02:42.430573+00:00"
+          }
+        ],
+        "testcases_by_class": {
+          "tests.test_affine_parity_cube_floor": 46,
+          "tests.test_prop15688": 4,
+          "tests.test_prop15773": 47,
+          "tests.test_prop15774": 57,
+          "tests.test_prop15775": 106,
+          "tests.test_small_mass_spectrum": 45
+        }
+      }
+    },
+    "final_documentation_gate": {
+      "tests": 16,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "elapsed_seconds": 11.075,
+      "command": "ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=8 nick@192.168.1.113 'cd /tmp/first-layer-15775.AeD9pK/regression && sha256sum AGENTS.md GOAL.md HANDOFF.md LONG_HORIZON_GOAL.md README.md STATUS.md solution.md evidence/P0_ENGINEERING_GRAPH.md evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md evidence/share/denseness_path_package.md evidence/NOTE_2026-09-04_EVENTUAL_FIRST_LAYER_CLOSE.md tests/test_main_chain_docs.py && PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -q -o cache_dir=/tmp/first-layer-15775.AeD9pK/pytest-cache-final-docgate --junitxml=/tmp/first-layer-15775.AeD9pK/final_docgate.xml tests/test_main_chain_docs.py'",
+      "junit_path": "/tmp/first-layer-15775.AeD9pK/final_docgate.xml",
+      "junit_sha256": "947d1fa6a82300446ff0562eb8890cec553f26320de676275463311f2a66bc8b",
+      "summary": {
+        "case_count": 16,
+        "suites": [
+          {
+            "errors": "0",
+            "failures": "0",
+            "hostname": "soulkiller",
+            "name": "pytest",
+            "skipped": "0",
+            "tests": "16",
+            "time": "11.075",
+            "timestamp": "2026-09-04T23:08:00.633254+00:00"
+          }
+        ]
+      }
+    },
+    "prior_305_focused_and_initial_16_doc_receipts_preserved": true,
+    "historical_64_and_507_test_packages_not_rerun": true,
+    "final_doc_stage_matches_local": true,
+    "final_doc_test_and_source_bytes_pinned": true
+  },
+  "replay": {
+    "provisioned_stage": "/tmp/first-layer-15775.AeD9pK/regression",
+    "worker": "soulkiller (192.168.1.113)",
+    "focused": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -o addopts= -q -n 0 tests/test_prop15775.py tests/test_affine_parity_cube_floor.py tests/test_prop15774.py tests/test_small_mass_spectrum.py tests/test_prop15773.py tests/test_prop15688.py",
+    "documentation": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:. /home/nick/.venvs/mo-exact/bin/python -m pytest -o addopts= -q -n 0 tests/test_main_chain_docs.py",
+    "exact_standalone": "/home/nick/.venvs/mo-exact/bin/python scripts/first_layer_15775_mesh_verify.py",
+    "artifact_generation": "PYTHONPATH=src /home/nick/.venvs/mo-exact/bin/python src/e1_gmin_m4_prop15775.py",
+    "run_mathematics_only_on_authorized_workers": true
+  },
+  "mesh": {
+    "raw_receipt": "evidence/first_layer_mesh_replay.json",
+    "checks_per_node": 16,
+    "all_node_checks_passed": true,
+    "nodes": [
+      "soulkiller",
+      "NUKA",
+      "Jellyfin"
+    ],
+    "capability_routing": {
+      "soulkiller": "CPU exact arithmetic and provisioned pytest for subsequent focused tests",
+      "NUKA": "Independent Python integer/Fraction replay",
+      "jellyfin": "Independent Python integer/Fraction replay",
+      "orin": "Not contacted; no V100-incompatible requirement",
+      "GPU_work_dispatched": false
+    },
+    "packages_installed": false,
+    "controller_mathematical_score_or_test_computation": false
+  },
+  "preservation": {
+    "protected_15766_15773_15774_source_test_and_evidence_unchanged_from_HEAD": true,
+    "protected_even_and_odd_minimal_gap4_notes_unchanged_from_HEAD": true,
+    "previous_threshold_valley_source_tests_proof_notes_probe_and_regression_bytes_unchanged": true,
+    "previous_threshold_valley_regression_sha256": "6fe1c4c8952134228b31adc08d935a26b0ebba91faf9aafd670734c3a7d24f85",
+    "prior_canonical_document_content_preserved_with_narrow_frontier_updates": true,
+    "git_diff_check_passed": true,
+    "git_staging_commits_or_pushes_this_turn": false
+  },
+  "sha256": {
+    "AGENTS.md": "ac47328ff8ceab8b09581416cead98680988fa75ff24d0520f6bd2731828ea4d",
+    "GOAL.md": "bc6d7f0a1e1491f866d95478cc1cdcf5a89de1e05456bea20b843e60bd3840e1",
+    "HANDOFF.md": "16753eebf714964de56d4eba0e8590f9a2cde56dc749024c5f7a52aa0b917dd8",
+    "LONG_HORIZON_GOAL.md": "1df8fe4a33544e27a41ee160481d971299184954abae1e9b0f294c25ee9956d3",
+    "README.md": "697379b8fb318d4c3bd5802fd53b63504d96770940df866c014ae5c57e27f458",
+    "STATUS.md": "2055ef453ff9ced2062c35fa5d18727a74582b21658b32150f6e1eeff652f777",
+    "solution.md": "b11c96a17158d289b32bab491ee18bf13d43684952f54d281e993e42d2da2594",
+    "evidence/P0_ENGINEERING_GRAPH.md": "b86cdfc7bd32c41771fbf6aec9ce720ef09f2ab70c7dbe99184a0544842032fd",
+    "evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md": "d00fed904fc410e7b500653cf2a724a63586255360673e011fcce81fe880a763",
+    "evidence/share/denseness_path_package.md": "f333ab9c74da30b1821feee5a2e9579ac94a71decc036a1c9a707ec20bcb996f",
+    "tests/test_main_chain_docs.py": "8f44d9250c00e9edb3df0626dbb4e8c33566bc50e571adebfdfebd76b37b87b4",
+    "src/e1_gmin_m4_prop15775.py": "df04dea47059507fa0adcecfaf5edd2c8fc8c6515fd0d07538a1a8498d52ff0f",
+    "src/e1_gmin_m4_affine_parity_cube_floor.py": "b7baaa6010ef84b898203d1361adc45cc4c1029bff2ac2c3b3ba8b59ca8924b1",
+    "tests/test_prop15775.py": "05f737fa32a7f5763aae0958c6585cc78c384235bfc136fa4ad7ec3d85fc63e1",
+    "tests/test_affine_parity_cube_floor.py": "bc27eeabe2f7ddfb23e52728ba13450fe85eacf3716d61f52cb7c748ffa628c1",
+    "evidence/e1_gmin_m4_prop15775.json": "a1f7edfc1d8a3e45f49085181d0c15fa3099d70869ab7a5ff8df6b86375bdda2",
+    "evidence/NOTE_2026-09-04_EVENTUAL_FIRST_LAYER_CLOSE.md": "4a869a250bdc86c8a3d46e63c09d4b66a998cb26e9889b6a35495da8a054e3e7",
+    "evidence/NOTE_2026-09-04_AFFINE_PARITY_CUBE_FLOOR.md": "03bac32edfd6a228f40fc11d4c3abb61baa69ca858c950a772ba3661ad0b3591",
+    "scripts/first_layer_15775_mesh_verify.py": "53fa6f5e1cc74d66d5beed68f6adcfbd87d9e9ae1857ac7e48d6ce516a9fcf7d",
+    "evidence/first_layer_mesh_replay.json": "d1dc6225885946b3b7af694fa2f222aa96d6f905723dfbc7f6b4d352c815033e"
+  }
+}
