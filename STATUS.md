@@ -42,6 +42,35 @@ See `ARTIFACTS.md` for the preserved branches and terminology.
 
 ## Fresh mathematical target
 
+The [same-order spectral regularization](evidence/NOTE_2026-09-05_SAME_ORDER_SPECTRAL_REGULARIZATION.md)
+works directly for the ORIGINAL norm objective. Every norm-capped host
+has a complete signing at the same order with operator norm at most
+`(K+8)sqrt(N)` and normalized norm increase at most
+`2sqrt(Gamma C/K)`, where `Gamma=4pi/log(1+sqrt(2))`.
+Operator-constrained optima thus approximate the actual norm minimum
+uniformly as K increases. This is one-sided objective approximation,
+not uniform perturbation control. Order transport in that class remains
+unproved; the theorem does not itself imply convergence.
+
+The [actual-Gibbs response](evidence/NOTE_2026-09-05_NORM_CAP_FIELD_RESPONSE.md)
+and [leading half-product near-minimizer structure](evidence/NOTE_2026-09-05_HALFPRODUCT_NEARMINIMIZER_STRUCTURE.md)
+prove `||A||_op=o(N^(3/4))` and uniform `o(N^(3/2))` Boolean-energy
+change on deletion of ANY `o(N)` vertices. The actual complement phases,
+unrestricted outside fields and all near-minimizer errors are retained.
+These are independently reviewed all-orders theorems. The objective is
+half-product pressure, whose zero-temperature slope is half the energy
+width, not necessarily the absolute norm. No fixed-fraction comparison
+or original-norm identification is supplied.
+
+The [full-strength near-minimizer example](evidence/NOTE_2026-09-05_FULL_STRENGTH_HALFPRODUCT_NEARMINIMIZERS.md)
+has actual leading half-product near-minimality and exact spectral
+deficit `2(1-r)`. Its canonical singular cross law fails in mean and has
+vanishing success probability, not an asserted exponential tail. This
+does not settle the law on exact minima, on original-norm near-minima,
+or for unrestricted selected outcomes. The [nuclear budget](evidence/NOTE_2026-09-05_NUCLEAR_SPECTRAL_BUDGET.md)
+separately forces a linear-size spectral bulk, not operator flatness.
+No new numerical experiment was used.
+
 The [full-strength boundary identity](evidence/NOTE_2026-09-05_FULL_STRENGTH_BOUNDARY_LIKELIHOOD.md)
 retains the exact pair-dependent Gaussian boundary law and the entire
 posterior covariance integral, including its singular endpoint limit.

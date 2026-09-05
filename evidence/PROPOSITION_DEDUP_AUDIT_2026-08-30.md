@@ -8,6 +8,41 @@ The old ledgers are fully preserved on the two branches in `ARTIFACTS.md`.
 No local theorem is made false by parking its route; no open implication
 is made necessary for the original problem by its old status field.
 
+**Same-order original-norm spectral regularization (2026-09-05).**
+`NOTE_2026-09-05_SAME_ORDER_SPECTRAL_REGULARIZATION.md` uses the proved
+diagonal majorizer, trims its large entries, and completes only incident
+edges with one realization satisfying both operator and Boolean bounds.
+It preserves order: `||A'||<=(K+8)sqrt(N)`, with normalized objective
+increase `2sqrt(Gamma C/K)`. This is unconditional for norm-capped hosts
+and directly covers ORIGINAL norm minima. It does not assert that every
+minimizer is flat or that `Phi(A'-A)` is small. Its uniformly accurate
+bounded-operator reduction still needs an order comparison.
+
+**Actual-Gibbs response and near-minimizer rigidity (2026-09-05).**
+`NOTE_2026-09-05_NORM_CAP_FIELD_RESPONSE.md` retains the actual posterior
+weighted Gaussian moment, including moderate fields with unrestricted
+outside coordinates. `NOTE_2026-09-05_HALFPRODUCT_NEARMINIMIZER_STRUCTURE.md`
+strengthens the exact spectral proof: ALL leading half-product near-minima
+satisfy `||A||=o(N^(3/4))` and uniform `o(N^(3/2))` energy deletion on
+every sublinear vertex family. The additive gap is handled by l1
+truncation, not an amplified fractional-rounding estimate. No fixed-
+fraction rate, upper susceptibility, `O(sqrt(N))` bound or original-norm
+identification follows. Half energy width and absolute norm remain
+different objectives. Independent complete reads passed; no computation.
+
+**Full-strength spectral repair and actual near-minimum failure (2026-09-05).**
+`NOTE_2026-09-05_FULL_STRENGTH_SPECTRAL_DEFICIT.md` gives the singular
+canonical criterion `tr[-rI-H/mu]_+=o(N)`, with mean failure and vanishing,
+not exponentially bounded, original-law success probability. The earlier
+construction-cap application was not a near-minimum theorem.
+`NOTE_2026-09-05_FULL_STRENGTH_HALFPRODUCT_NEARMINIMIZERS.md` uses the
+new subcritical base and one reused twin module to prove actual leading
+half-product near-minimality and exact deficit `2(1-r)`. It does not settle
+the law on exact minima or all selected outcomes. The nuclear budget
+`Phi(A)>=N^2(N-1)/(pi tr|A|)` forces a bulk, not spectral flatness.
+These changed premises justify analytic extensions, not repeated module
+censuses or Gaussian simulations. Full proof reads passed.
+
 **Deterministically selected half restrictions (2026-09-05).**
 `NOTE_2026-09-05_SELECTED_HALF_RESTRICTION.md` uses an explicit odd
 disjointness cycle and an even-order complementary-phase exchange

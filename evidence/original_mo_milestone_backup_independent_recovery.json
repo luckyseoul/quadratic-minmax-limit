@@ -1,0 +1,131 @@
+{
+  "schema": "codex_milestone_backup_independent_recovery_v1",
+  "status": "PASS",
+  "classification": "Operational backup and recovery verification, not mathematical replay",
+  "helper": {
+    "path": "/home/nick/.local/bin/codex-milestone-backup",
+    "sha256": "da3b567bb5188aea365b3999da77f0477987ea94801f4c1ef0d2b963baac9570"
+  },
+  "policy": {
+    "path": "/home/nick/.codex/AGENTS.md",
+    "sha256": "34b7725a720a15913cf2927c4d8174570ee7254eb97b755dd4a98eb6b1be462f"
+  },
+  "fixture_root": "/tmp/codex-backup-recovery-check.XueikVUX",
+  "restore_root": "/tmp/codex-backup-restored-check.YQV8q9yc",
+  "fixture_head": "06793f16a59af9282677bb4a3a7266e06daed562",
+  "source_states": [
+    "staged and unstaged changes in same tracked file",
+    "staged new file",
+    "untracked file",
+    "ignored file",
+    "executable tracked file",
+    "common Git configuration and hook",
+    "actual per-worktree index and HEAD reflog",
+    "unreachable blob 55fde5a4506fa8809336fe5ca337a2d45c0befa6"
+  ],
+  "backup_runs": [
+    {
+      "kind": "normal",
+      "command": "/home/nick/.local/bin/codex-milestone-backup /tmp/codex-backup-recovery-check.XueikVUX/repo fixture-normal",
+      "exit_code": 0,
+      "path": "/mnt/storage/backups/codex/repo-236592c26a94/20260905T134936Z-06793f16a59a-fixture-normal.sgAoXD",
+      "receipt_sha256": "19179e3cc3f5664d162974abfc85c92575c4cabc9b60f8f36d4d64126ba73fed",
+      "sha256sums_sha256": "ee1272ba1a99aa1a43f5ef93fa7b7abce310510ad3795b7893e3b07d782afd08"
+    },
+    {
+      "kind": "linked",
+      "command": "/home/nick/.local/bin/codex-milestone-backup /tmp/codex-backup-recovery-check.XueikVUX/linked fixture-linked",
+      "exit_code": 0,
+      "path": "/mnt/storage/backups/codex/linked-63ff83f46ade/20260905T134945Z-06793f16a59a-fixture-linked.3vxKwi",
+      "receipt_sha256": "8985aad39155090acd2cb55b1226440b534fb5d8d1e254b9a320cb8016cee750",
+      "sha256sums_sha256": "a1e07dc3d23562c625e327ae0e9d331d84fb0c417153498435401becc1548d05"
+    }
+  ],
+  "restore_commands": [
+    "tar -I zstd -xf /mnt/storage/backups/codex/repo-236592c26a94/20260905T134936Z-06793f16a59a-fixture-normal.sgAoXD/full-worktree.tar.zst -C /tmp/codex-backup-restored-check.YQV8q9yc/normal",
+    "tar -I zstd -xf /mnt/storage/backups/codex/repo-236592c26a94/20260905T134936Z-06793f16a59a-fixture-normal.sgAoXD/git-common-dir.tar.zst -C /tmp/codex-backup-restored-check.YQV8q9yc/normal-common",
+    "tar -I zstd -xf /mnt/storage/backups/codex/repo-236592c26a94/20260905T134936Z-06793f16a59a-fixture-normal.sgAoXD/git-dir.tar.zst -C /tmp/codex-backup-restored-check.YQV8q9yc/normal-git",
+    "git -c core.hooksPath=/dev/null clone --bare /mnt/storage/backups/codex/repo-236592c26a94/20260905T134936Z-06793f16a59a-fixture-normal.sgAoXD/repository.bundle /tmp/codex-backup-restored-check.YQV8q9yc/normal-bundle.git",
+    "tar -I zstd -xf /mnt/storage/backups/codex/linked-63ff83f46ade/20260905T134945Z-06793f16a59a-fixture-linked.3vxKwi/full-worktree.tar.zst -C /tmp/codex-backup-restored-check.YQV8q9yc/linked",
+    "tar -I zstd -xf /mnt/storage/backups/codex/linked-63ff83f46ade/20260905T134945Z-06793f16a59a-fixture-linked.3vxKwi/git-common-dir.tar.zst -C /tmp/codex-backup-restored-check.YQV8q9yc/linked-common",
+    "tar -I zstd -xf /mnt/storage/backups/codex/linked-63ff83f46ade/20260905T134945Z-06793f16a59a-fixture-linked.3vxKwi/git-dir.tar.zst -C /tmp/codex-backup-restored-check.YQV8q9yc/linked-git",
+    "git -c core.hooksPath=/dev/null clone --bare /mnt/storage/backups/codex/linked-63ff83f46ade/20260905T134945Z-06793f16a59a-fixture-linked.3vxKwi/repository.bundle /tmp/codex-backup-restored-check.YQV8q9yc/linked-bundle.git"
+  ],
+  "verification": {
+    "raw_full_tree_byte_comparisons_before_relocation": 6,
+    "raw_comparison_exit_code": 0,
+    "assertion_command": "bash /tmp/codex-backup-recovery-check.XueikVUX/check-restores.sh",
+    "assertion_script_sha256": "98fb8f156d5d7b4eb3ea84c756760466cc58942b71a85e1e6c96e58256726120",
+    "assertions_passed": 68,
+    "assertion_exit_code": 0,
+    "all_backup_checksums_reverified": true,
+    "bundles_independently_cloned_and_fsck_passed": true,
+    "source_status_and_refs_unchanged": true,
+    "linked_relocation": "Only restored linked/.git and linked-common/worktrees/linked/gitdir were relocated with apply_patch; commondir remains the correct relative ../..; original fixture and retained raw git-dir extraction were untouched.",
+    "harness_correction": "Initial post-inspection operational-index byte assertion failed because Git refreshed index stat-cache bytes. Six complete raw tree comparisons had already passed. Corrected assertion compares untouched git-dir extraction byte-for-byte; operational staged blobs and patches are checked separately. This was not a backup-helper failure.",
+    "helper_runs": 2,
+    "helper_retries": 0,
+    "assertion_runs": 2
+  },
+  "artifact_sha256": [
+    {
+      "path": "/mnt/storage/backups/codex/repo-236592c26a94/20260905T134936Z-06793f16a59a-fixture-normal.sgAoXD/full-worktree.tar.zst",
+      "sha256": "0672feddc711f2d80285b177fb4b3e1b749f9fc3b92657716308a5208e848aed"
+    },
+    {
+      "path": "/mnt/storage/backups/codex/repo-236592c26a94/20260905T134936Z-06793f16a59a-fixture-normal.sgAoXD/git-common-dir.tar.zst",
+      "sha256": "2317c842825796ba79e0035c1f9c9d77ee89af4fef619e04ea6b046f9d347d35"
+    },
+    {
+      "path": "/mnt/storage/backups/codex/repo-236592c26a94/20260905T134936Z-06793f16a59a-fixture-normal.sgAoXD/git-dir.tar.zst",
+      "sha256": "2317c842825796ba79e0035c1f9c9d77ee89af4fef619e04ea6b046f9d347d35"
+    },
+    {
+      "path": "/mnt/storage/backups/codex/linked-63ff83f46ade/20260905T134945Z-06793f16a59a-fixture-linked.3vxKwi/full-worktree.tar.zst",
+      "sha256": "e249b71ba1c1cdf93e467fa9e5a03aeaf51921239aaa062b57c96cc130de356b"
+    },
+    {
+      "path": "/mnt/storage/backups/codex/linked-63ff83f46ade/20260905T134945Z-06793f16a59a-fixture-linked.3vxKwi/git-common-dir.tar.zst",
+      "sha256": "37c037739563929cb1673fba7fa73045f5fc7c34aa28cb7c41e2f27ea36cda0a"
+    },
+    {
+      "path": "/mnt/storage/backups/codex/linked-63ff83f46ade/20260905T134945Z-06793f16a59a-fixture-linked.3vxKwi/git-dir.tar.zst",
+      "sha256": "1033cafdf17428f8b63fb9f11378f8f88b1eaaa9dd15113d959d10677aaa97b9"
+    },
+    {
+      "path": "/tmp/codex-backup-recovery-check.XueikVUX/repo/.git/index",
+      "sha256": "31d5be1eb0f907474c2f25be266b99d33668bdcfdec6ae56561f20255ac05801"
+    },
+    {
+      "path": "/tmp/codex-backup-recovery-check.XueikVUX/repo/.git/worktrees/linked/index",
+      "sha256": "d63a92f27edd391726ee5e11d3453225c3984695d7760b5b4b643a179f3e388b"
+    }
+  ],
+  "logs": [
+    {
+      "path": "/tmp/codex-backup-recovery-check.XueikVUX/normal-backup.stdout",
+      "sha256": "ae37b8525235caf643c00609ba2b962737627c24abda04ba04ddc90e31187858"
+    },
+    {
+      "path": "/tmp/codex-backup-recovery-check.XueikVUX/linked-backup.stdout",
+      "sha256": "2e147d64f57aeec387f7879142feef2ef986ae2dc7966ddf2d8eac755c764913"
+    },
+    {
+      "path": "/tmp/codex-backup-recovery-check.XueikVUX/raw-restore.stdout",
+      "sha256": "1be8816b63debd6f5b709ac8df6a3376a3ec8207264e4db8c2ac17e993ce59a5"
+    },
+    {
+      "path": "/tmp/codex-backup-recovery-check.XueikVUX/initial-assertion.stdout",
+      "sha256": "c846c79f9ebcd407d721e1a656fab5d4730e0be0a95e12f0b25f2a856caee251"
+    },
+    {
+      "path": "/tmp/codex-backup-recovery-check.XueikVUX/recovery-assertions.stdout",
+      "sha256": "d9e5ce55f6f6e888f5fc1be7d006cc6ad1a2919de030c804042d62d9b44cfc6b"
+    }
+  ],
+  "existing_repositories_modified": false,
+  "external_remotes_contacted": false,
+  "root_research_backup_run_by_this_agent": false,
+  "fixture_and_backup_deletions": 0,
+  "fixtures_and_backups_retained": true
+}

@@ -1,0 +1,123 @@
+{
+  "schema": "original_mo_spectral_structural_milestone_v1",
+  "date_utc": "2026-09-05",
+  "classification": "Reviewed all-orders analytic theorems and conditional reductions, with a changed-document scanner; not original-limit closure",
+  "parent_head": "da97a07bb8d685c31f8ed49e2df55ae6b38dfa00",
+  "branch": "main",
+  "original_goal": {
+    "problem": "MathOverflow 413935: convergence of alpha_N=m_N/N^(3/2)",
+    "status": "OPEN",
+    "convergence_proved": false,
+    "nonconvergence_proved": false,
+    "limit_value_proved": false
+  },
+  "main_progress": {
+    "proof": "evidence/NOTE_2026-09-05_SAME_ORDER_SPECTRAL_REGULARIZATION.md",
+    "objective": "Original maximum absolute Boolean energy, not a pressure surrogate",
+    "theorem": "For every N>=2 and K>0, 0<=alpha_N^(K+8)-alpha_N<=2 sqrt(2 Gamma/K), Gamma=4pi/log(1+sqrt(2))",
+    "method": "Attained diagonal SDP majorizer, exceptional-vertex trimming and a single jointly good incident-edge recompletion at the SAME order",
+    "remaining_implication": "Vanishing fixed-operator-class order oscillation as K tends to infinity; no selected fixed-fraction order comparison is yet proved",
+    "uniform_energy_distance_asserted": false,
+    "full_proof_reads": [
+      "root",
+      "optimized_profile_exact",
+      "optimized_profile_docs_gate"
+    ],
+    "read_outcome": "PASS"
+  },
+  "other_progress": [
+    {
+      "proof": "evidence/NOTE_2026-09-05_NORM_CAP_FIELD_RESPONSE.md",
+      "scope": "Actual Gibbs lower response to positive-density moderate fields, including arbitrary outside coordinates"
+    },
+    {
+      "proof": "evidence/NOTE_2026-09-05_HALFPRODUCT_NEARMINIMIZER_STRUCTURE.md",
+      "scope": "All leading HALF-PRODUCT near-minimizers have op=o(N^(3/4)) and uniform o(N^(3/2)) Boolean-energy change under deletion of any o(N) vertices; not an original-norm identification"
+    },
+    {
+      "proof": "evidence/NOTE_2026-09-05_NUCLEAR_SPECTRAL_BUDGET.md",
+      "scope": "All-signing nuclear norm lower bound and objective-capped effective-rank consequences; no flatness"
+    },
+    {
+      "proof": "evidence/NOTE_2026-09-05_FULL_STRENGTH_SPECTRAL_DEFICIT.md",
+      "scope": "Conditional singular Gaussian-law failure criterion, preserving the exact spectral deficit and only vanishing-probability transfer"
+    },
+    {
+      "proof": "evidence/NOTE_2026-09-05_FULL_STRENGTH_HALFPRODUCT_NEARMINIMIZERS.md",
+      "scope": "Actual leading half-product near-minimum canonical-law failure using one reused sparse module; not exact-minimum or original-norm near-minimum failure"
+    },
+    {
+      "proof": "evidence/NOTE_2026-09-05_ACTUAL_GIBBS_COVARIANCE_FLOOR.md",
+      "scope": "Actual phase covariance diagonal component and quadratic cross floor; no radial upper comparison"
+    }
+  ],
+  "source_to_canonical_reference_only_changes": [
+    {
+      "source_sha256": "36ae5852e60d2df2a92ca2b47702b0c431f915e3d61c8fef249a5d21a655d541",
+      "canonical": "evidence/NOTE_2026-09-05_EXACT_HALFPRODUCT_SUBCRITICAL_SPECTRAL.md",
+      "change": "One temporary prerequisite path replaced by its canonical path"
+    },
+    {
+      "source_sha256": "349e20c8d57df46256989f13725965c14641cff60102a2299fb9882a0a374dfc",
+      "canonical": "evidence/NOTE_2026-09-05_FULL_STRENGTH_HALFPRODUCT_NEARMINIMIZERS.md",
+      "change": "One temporary prerequisite path replaced by its canonical path"
+    },
+    {
+      "source_sha256": "0b283e677e16b42dae158b085040e9b651f89d49e8a608a0f4cf1fbb24d67b7d",
+      "canonical": "evidence/NOTE_2026-09-05_ACTUAL_GIBBS_COVARIANCE_FLOOR.md",
+      "change": "One temporary prerequisite path replaced by its canonical path"
+    }
+  ],
+  "artifacts_sha256": {
+    "evidence/NOTE_2026-09-05_SAME_ORDER_SPECTRAL_REGULARIZATION.md": "8a52b7e4f171cc2089a00a6fd288e041d52605f820e49ace419ddd5fe850bec8",
+    "evidence/NOTE_2026-09-05_NORM_CAP_FIELD_RESPONSE.md": "46f6465c9a889dc485b9c24dac6f7fef8849d27271cc86df11b94ab732ed52dd",
+    "evidence/NOTE_2026-09-05_EXACT_HALFPRODUCT_SUBCRITICAL_SPECTRAL.md": "10dfe02b63aa3c4aa987ce48d4a3e660e90509b43e6a50a1a002ba9ecc1cc522",
+    "evidence/NOTE_2026-09-05_HALFPRODUCT_NEARMINIMIZER_STRUCTURE.md": "dccc256d3b7119c666102e54cffe3a2026d31edc1bcd0c4366a15ce92c762f0f",
+    "evidence/NOTE_2026-09-05_NUCLEAR_SPECTRAL_BUDGET.md": "ee8ad5ff3dbf9aa9e251c4190e98ee1671c9a2140c759ba6f768f8c9c03ef13d",
+    "evidence/NOTE_2026-09-05_FULL_STRENGTH_SPECTRAL_DEFICIT.md": "c37123564ec9bba8c8f16048a3ce0d1a40348990cd82d87070f223ce7aa51ad6",
+    "evidence/NOTE_2026-09-05_FULL_STRENGTH_CONSTRUCTION_CAP_HOSTS.md": "add44c2a7a33d68cf18d06abf699f82c02c4850b35154681f6dd26b7b92de83b",
+    "evidence/NOTE_2026-09-05_FULL_STRENGTH_HALFPRODUCT_NEARMINIMIZERS.md": "ad83095163cf8e969e542a6626382dabaa5adb5e2ffce4bfffea274c813b53e4",
+    "evidence/NOTE_2026-09-05_ACTUAL_GIBBS_COVARIANCE_FLOOR.md": "98727eabf74902a45ef429a94c65729a783175a9474d9f21dad9e0523a673d51",
+    "evidence/original_mo_spectral_structural_root_review.md": "22473046ec484a72286b953d7dfe217c6233195738c19370d1598fcc401583fc",
+    "evidence/original_mo_bounded_operator_norm_regularization_exact_review.md": "1bdfe6cceaf574cc2d27de3d0893710efdad7d459606ba2623f6b99858ab0256",
+    "evidence/original_mo_bounded_operator_norm_regularization_review.md": "6e04f3ac5e713e90dd7165d0f58c577983b1f0e9d96aac4fdf2c75b72f2ac0b4",
+    "evidence/original_mo_field_response_subcritical_spectral_review.md": "e2c2e832b916b50171d236137924beb883a0fb7351d880b852270a33c46fe364",
+    "evidence/original_mo_exact_halfproduct_subcritical_spectral_exact_review.md": "81b8d05dab68cc85896cc0923ded9a1256a9748533706dabb07234e43bee8f84",
+    "evidence/original_mo_halfproduct_nearminimizer_structural_review.md": "8d101829c1290b25e5ba62dd2a44ead84b0ef20f3bacab4f4f2ea06d71c41c9b",
+    "evidence/original_mo_full_strength_spectral_deficit_exact_review.md": "ef2d30632b22725623a97f95493c515053c8abe687b111ff6eec7b423ddc945e",
+    "evidence/original_mo_post_push_backup_da97a07.json": "b2e21ace9769cb93f0040ce34e963e85686100454d92fd2a15f272a96bd6ceb9",
+    "evidence/original_mo_milestone_backup_independent_recovery.json": "9c32496f894e6a98d91869a8dc6b4f217c156cc9e611a4703e3e1f0abe37d4d5",
+    "evidence/original_mo_milestone_backup_20260905T145229Z.json": "3325b160cf453c504bd2af5a832269e272c8fb38cd294e741a2e7380f22e4a55",
+    "evidence/original_mo_spectral_regularization_docs_gate.json": "949778d5be28cbb358eb93cef114b97904559c2e87fe353d8115a84ba9e3b2ac",
+    "HANDOFF.md": "9f288662bac76fd319f6b2bccac48fbd47dfe0d4786c3efbcfcb950837c6743c",
+    "STATUS.md": "6c8c02d34ba71eba72a5909887a18806d1130e390ed55d849f455101d45218f6",
+    "evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md": "667b81df80da3aade694c76919c08102a71c214c1b13143debbaccfd697bff9f"
+  },
+  "validation": {
+    "complete_root_proof_reads": true,
+    "independent_reviews": "Preserved proof-specific reviews plus root's complete source/canonical audit",
+    "mathematical_computations": 0,
+    "new_signing_censuses": 0,
+    "new_simulations": 0,
+    "source_code_changes": 0,
+    "documentation_gate": "evidence/original_mo_spectral_regularization_docs_gate.json",
+    "documentation_gate_scope": "Bounded claim scanner and retained legacy predicates, not a mathematical proof checker",
+    "docs_ok": true,
+    "original_mo_status": "OPEN",
+    "git_diff_check_exit_code": 0
+  },
+  "pre_milestone_backup": {
+    "path": "/mnt/storage/backups/codex/quadratic-minmax-limit-2212b99a4c24/20260905T145229Z-da97a07bb8d6-pre-milestone-spectral-regularization.mvk8Hx",
+    "covered_head": "da97a07bb8d685c31f8ed49e2df55ae6b38dfa00",
+    "helper_exit_code": 0,
+    "receipt_sha256": "3325b160cf453c504bd2af5a832269e272c8fb38cd294e741a2e7380f22e4a55",
+    "manifest_sha256": "7dfd8c30c50e5fbd379c6a6cf9d6b621de56ba3b69044d3a79ec037be73e2365",
+    "full_tree_sha256": "51681dadd95c7159a52d60db992450d7408576cd5623e50d22f83c1edd7d8f76",
+    "bundle_sha256": "5fdf20a08a1225fe273ba10f892c5c81acb5efdb89df7d85353cbcc007997c9e",
+    "full_tree_and_both_git_metadata_archives_compared": true,
+    "all_ref_bundle_verified": true,
+    "all_checksums_verified": true,
+    "source_status_and_refs_unchanged": true,
+    "scope_note": "All mathematical proof inputs and current entry documents were present; final review/receipt metadata added afterward is preserved in the post-publication backup."
+  }
+}

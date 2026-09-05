@@ -27,6 +27,71 @@ checked only on a selected low-norm example need not extend to actual
 minimizers. A theorem for every signing under a proved norm cap does apply
 to minimizers; neither distinction may be hidden in a hypothesis.
 
+The new same-order reduction is
+`evidence/NOTE_2026-09-05_SAME_ORDER_SPECTRAL_REGULARIZATION.md`.
+Its SHA-256 is `8a52b7e4f171cc2089a00a6fd288e041d52605f820e49ace419ddd5fe850bec8`;
+root and both independent complete proof reads passed.
+For every complete signing with `Phi(A)<=C N^(3/2)`, a diagonal SDP
+majorizer, vertex trimming and one jointly good random recompletion
+give a complete signing at the SAME order with
+`||A'||_op<=(K+8)sqrt(N)` and normalized norm increase at most
+`2sqrt(Gamma C/K)`, where `Gamma=4pi/log(1+sqrt(2))`.
+This applies directly to ORIGINAL norm minima. Bounded-operator
+constrained minima therefore approximate the actual normalized minimum
+uniformly as the bound increases; an arbitrarily slowly diverging bound
+admits leading norm near-minimizers. This is one-sided objective control,
+not small `Phi(A'-A)`. The missing implication is a useful order
+comparison in this controlled class. Neither bounded operator norm nor
+typical restriction has been proved to supply one.
+
+The actual-Gibbs structural proofs are
+`evidence/NOTE_2026-09-05_NORM_CAP_FIELD_RESPONSE.md`
+(SHA-256 `46f6465c9a889dc485b9c24dac6f7fef8849d27271cc86df11b94ab732ed52dd`),
+`evidence/NOTE_2026-09-05_EXACT_HALFPRODUCT_SUBCRITICAL_SPECTRAL.md`
+(SHA-256 `10dfe02b63aa3c4aa987ce48d4a3e660e90509b43e6a50a1a002ba9ecc1cc522`),
+and its strengthening
+`evidence/NOTE_2026-09-05_HALFPRODUCT_NEARMINIMIZER_STRUCTURE.md`
+(SHA-256 `dccc256d3b7119c666102e54cffe3a2026d31edc1bcd0c4366a15ce92c762f0f`).
+A Boolean energy cap gives a positive extensive response to any field
+with a positive density of moderate nonzero coordinates, even with
+unbounded outside coordinates; the ACTUAL Gaussian posterior is retained.
+For EVERY leading half-product near-minimizer at fixed `c/sqrt(N)`,
+approximate optimality, eigenvector truncation and sparse pinning prove
+`||A||_op=o(N^(3/4))`. Deleting ANY `o(N)` vertices also changes the
+full Boolean energy uniformly by `o(N^(3/2))`. Every gap is retained.
+These are not exact-minimizer-only properties. Half-product pressure
+approaches half the energy WIDTH, not necessarily the absolute norm;
+no original-norm transfer or fixed-fraction comparison is inferred.
+Complete root and independent reads passed; see
+`evidence/original_mo_spectral_structural_root_review.md`.
+
+The singular full-strength criterion is
+`evidence/NOTE_2026-09-05_FULL_STRENGTH_SPECTRAL_DEFICIT.md`:
+`V_r=tr[-rI-H/mu]_+=o(N)` implies the stated quenched mean failure
+and vanishing success probability, not an exponential original-law tail.
+The construction-cap example is
+`evidence/NOTE_2026-09-05_FULL_STRENGTH_CONSTRUCTION_CAP_HOSTS.md`.
+The new subcritical base strengthens this to actual leading HALF-PRODUCT
+near-minimizers in
+`evidence/NOTE_2026-09-05_FULL_STRENGTH_HALFPRODUCT_NEARMINIMIZERS.md`
+(SHA-256 `ad83095163cf8e969e542a6626382dabaa5adb5e2ffce4bfffea274c813b53e4`).
+One reused sparse module costs `o(N)` pressure and gives exactly
+`V_r=2(1-r)` eventually. This is not an exact-minimum, original-norm
+near-minimum or unrestricted selected-outcome exclusion. The separate
+`evidence/NOTE_2026-09-05_NUCLEAR_SPECTRAL_BUDGET.md` gives
+`Phi(A)>=N^2(N-1)/(pi tr|A|)` and a linear nuclear effective rank under
+the relevant objective caps, not spectral flatness. No new mathematical
+computation was used in these results.
+
+The actual covariance corollary
+`evidence/NOTE_2026-09-05_ACTUAL_GIBBS_COVARIANCE_FLOOR.md` gives a
+positive diagonal component of trace at least `chi_c N` in each actual
+phase covariance. Thus rank-`o(N)` truncations cannot have `o(N)` tails,
+and every integral full cross block has `qbar>=chi_c^2 N^2` under a
+fixed Boolean cap. This retires the conditional sublinear-rank/tail
+escape at fixed c, not the radial upper comparison, which can be
+quadratic as well. The constant is not uniform at zero temperature.
+
 The new unconditional selected-restriction theorem is
 `evidence/NOTE_2026-09-05_SELECTED_HALF_RESTRICTION.md`
 (SHA-256 `c8a9aa0b8c44fb14f444955fbe3eec8cba8e7f19c01fb8eeb2596418d3416c02`).
