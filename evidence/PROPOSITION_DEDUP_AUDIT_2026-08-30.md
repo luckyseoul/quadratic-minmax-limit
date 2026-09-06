@@ -8,6 +8,34 @@ The old ledgers are fully preserved on the two branches in `ARTIFACTS.md`.
 No local theorem is made false by parking its route; no open implication
 is made necessary for the original problem by its old status field.
 
+**Actual complete-cross Gaussianization and flatness gain (2026-09-05).**
+`original_mo_complete_cross_flat_spectral_gain_milestone.json` records the
+uniform bound for ACTUAL complete n by n sign matrices B with the
+SEPARATE d>=||B||op and m=n/d^2>=m_0>0 hypotheses. With kappa=2/pi
+and epsilon=1-tr[(B^T B)^2]/(n^2 d^2), it proves
+`beta(B)/(nd)>=kappa+(sqrt(kappa)-kappa)m-kappa epsilon-o_(m_0)(1)`.
+The error is uniform but has no claimed finite-n rate. Exact flatness
+of the nonzero singular values at d is equivalent to epsilon=0; fixed
+positive lower m then gives a strict gain over the cubic floor kappa.
+
+The new step is not another trace-only relaxation or a variance-only
+lower bound. Actual complete entries retain a higher-Hermite variance
+term, and a self-contained scalar Gaussianization proof supplies the
+absolute-moment bridge. Its mixed contractions include first/higher-chaos
+interactions; Gamma fluctuations and the characteristic-function equation
+handle degenerating variances, followed by uniform integrability and
+an L2 tail limit. No growing-dimensional joint CLT or mathematical run
+is used. Do not repeat a flat spectral-law scan to obtain this entry gain.
+
+At the separately ACTUAL p=q_A=0, c=Phi(K) face, c=beta(B) and
+u=c/(nd). The old formal flat u=kappa endpoint is therefore excluded
+only in the actual scalar, bounded-operator setting of this theorem.
+Small dispersion or diagonal trace control is not an unweighted operator
+cap. Transfer to actual weighted cross laws remains a separate unpublished
+implication, and no all-cell upper or original convergence proof follows.
+Keep the prior formal certificate obstruction at its stated relaxation
+scope; it was never an actual signing or a norm counterexample.
+
 **Actual nuclear coupling and formal all-threshold boundary (2026-09-05).**
 `original_mo_source_cross_trace_boundary_milestone.json` records the finite
 cap-free source/cross inequality for ANY feasible positive D. The actual

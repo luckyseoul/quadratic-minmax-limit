@@ -21,6 +21,42 @@ predicates. Valid local results retain their stated scope and evidence.
 
 ## Next mathematical work
 
+The latest actual-entry restriction is
+`evidence/original_mo_complete_cross_flat_spectral_gain_milestone.json`
+and `evidence/NOTE_2026-09-05_COMPLETE_CROSS_FLAT_SPECTRAL_GAIN.md`
+(SHA-256 `b30903b22c0b602464a864b78b59be6827bb0c110e6cc382c753f3ea0a16fb20`).
+For an ACTUAL n by n complete sign matrix B, choose the SEPARATE
+unweighted operator bound d>=||B||op and put
+`m=n/d^2>=m_0>0`, `epsilon=1-tr[(B^T B)^2]/(n^2 d^2)`.
+Uniformly in these data as n tends to infinity, with kappa=2/pi,
+
+`beta(B)/(nd)>=kappa+(sqrt(kappa)-kappa)m-kappa epsilon-o_(m_0)(1)`.
+
+Here 0<=epsilon<=1-m. Exact flatness of all nonzero singular values
+at d is equivalent to epsilon=0; exact or asymptotic flatness therefore
+forces a strictly positive leading-order gain over kappa for fixed m_0.
+The proof retains the actual complete-entry higher-Hermite variance gain
+and supplies its necessary Gaussianization bridge: mixed contractions,
+a Gamma fluctuation bound and a characteristic-function equation prove
+a uniform scalar absolute-moment lemma. Uniform second moments and an
+L2 Hermite-tail estimate justify the limit passage. This is not an
+absolute-moment inference from variance alone or a growing-dimensional
+joint column CLT. No finite-n error rate or mathematical run is claimed.
+
+For the SEPARATE actual active conditions p=q_A=0 and c=Phi(K),
+one has c=beta(B); at scalar scale d the same lower applies to u=c/(nd).
+Consequently the earlier FORMAL flat cross endpoint with u=kappa is
+excluded in this actual scalar, bounded-operator setting. The formal
+trace-relaxation certificate obstruction remains valid on its own stated
+relaxation; it is not an actual-signing counterexample.
+
+The unweighted d>=||B||op and m>=m_0 hypotheses are NOT obtained here
+from small dispersion delta or trace control of a diagonal majorizer.
+Transfer to the actual near-scalar weighted cross law is the next
+unpublished implication, being treated separately. This note neither
+replaces W_D nor evaluates every active cell, and original convergence
+remains OPEN. Preserve the older scoped proofs and their exact premises.
+
 The latest actual coupling and formal certificate boundary are recorded in
 `evidence/original_mo_source_cross_trace_boundary_milestone.json` and
 `evidence/NOTE_2026-09-05_SOURCE_CROSS_NUCLEAR_TRACE_BOUNDARY.md`

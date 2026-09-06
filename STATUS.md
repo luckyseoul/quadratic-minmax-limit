@@ -42,6 +42,29 @@ See `ARTIFACTS.md` for the preserved branches and terminology.
 
 ## Fresh mathematical target
 
+The [actual complete-cross gain](evidence/original_mo_complete_cross_flat_spectral_gain_milestone.json)
+adds an actual-entry restriction beyond the retained cubic cross bound.
+For an ACTUAL complete n by n sign matrix B and a SEPARATELY given
+d>=||B||op, let m=n/d^2>=m_0>0 and
+epsilon=1-tr[(B^T B)^2]/(n^2 d^2). Uniformly as n tends to infinity,
+`beta(B)/(nd)>=kappa+(sqrt(kappa)-kappa)m-kappa epsilon-o_(m_0)(1)`.
+Here kappa=2/pi, and epsilon=0 is exactly flatness of the nonzero
+singular values at d. Exact or asymptotic flatness forces a strict
+leading-order gain over kappa when m stays bounded below.
+A self-contained uniform marginal Gaussianization argument, including
+all mixed contractions and the absolute-moment/tail passage, converts
+the actual higher-Hermite variance gain into this norm bound. It does
+not use variance alone, a joint limit of all columns, or a mathematical run.
+
+On an ACTUAL pure-cross active state p=q_A=0, c=Phi(K)=beta(B),
+the scalar ratio u=c/(nd) has the same bound. Thus the earlier formal
+flat endpoint u=kappa is excluded only in this actual scalar,
+bounded-operator context. Neither small diagonal dispersion nor a trace
+cap is assumed to supply the required unweighted operator bound.
+The weighted transfer is a separate next implication, not a published
+consequence here; the all-cell comparison and original convergence
+remain OPEN. The earlier formal-relaxation obstruction is preserved.
+
 The [actual source/cross coupling](evidence/original_mo_source_cross_trace_boundary_milestone.json)
 proves a finite cap-free inequality for every positive feasible D and the
 ACTUAL cross law nu. With alpha=Phi(A)/n^(3/2) and m=integral y dnu,

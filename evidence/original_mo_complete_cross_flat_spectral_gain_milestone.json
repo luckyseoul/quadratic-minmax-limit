@@ -1,0 +1,69 @@
+{
+  "schema": "original_mo_complete_cross_flat_spectral_gain_milestone_v1",
+  "date_utc": "2026-09-05",
+  "base_commit": "63210b9eae3fc568ea682ae4f33cd093198a4688",
+  "branch": "main",
+  "remote": "https://github.com/luckyseoul/quadratic-minmax-limit.git",
+  "classification": "Reviewed actual complete-entry Gaussianization theorem and robust cross-norm gain; original all-orders convergence remains OPEN",
+  "conclusions": [
+    "For actual complete sign B, d>=||B||op, m=n/d^2>=m_0>0 and epsilon=1-tr((B^T B)^2)/(n^2 d^2), beta(B)/(nd)>=kappa+(sqrt(kappa)-kappa)m-kappa epsilon-o_(m_0)(1), uniformly in B and d.",
+    "Exact flat nonzero singular values at d are equivalent to epsilon=0. Flat or asymptotically flat actual cross matrices with m bounded below have a strictly positive leading-order gain over kappa.",
+    "A self-contained uniform absolute-moment Gaussianization lemma handles delocalized sign coefficients and bounded Gaussian correlation operators. Mixed Hermite contractions, a characteristic-function equation, uniform integrability and an L2 tail argument supply the required bridge; variance alone is not used as an absolute-moment lower bound.",
+    "The actual pure-cross substitution requires p=q_A=0, c=Phi(K)=beta(B), and the separately given actual unweighted operator bound. No such operator bound follows here from diagonal dispersion or a diagonal trace cap.",
+    "The formal kappa-floor endpoint is excluded only in this actual scalar, bounded-operator setting. Weighted transfer, all-cell upper evaluation and original convergence are not concluded."
+  ],
+  "proof_source": "evidence/NOTE_2026-09-05_COMPLETE_CROSS_FLAT_SPECTRAL_GAIN.md",
+  "proof_source_lines": 411,
+  "review_provenance": {
+    "proof_worker": "Originated actual variance/chord gain and Gaussianization bridge; authored complete proof and author checkpoint.",
+    "exact_worker": "Contributed mixed-contraction/characteristic-equation proof and robust epsilon extension; complete contributing-author audit.",
+    "root": "Checked those derivations before integration and read complete final source; contributing reviewer, not independent theorem reviewer.",
+    "docs_worker": "No role in this derivation; independent complete final-source mathematical review. Separately authored and checked scoped summary additions."
+  },
+  "new_mathematical_computation": false,
+  "finite_n_rate_claimed": false,
+  "optional_primary_crosschecks": [
+    {
+      "url": "https://arxiv.org/pdf/math/0503598",
+      "pdf_sha256": "b8c80cb9b03b016da921316239d0acaed6594fc9303a6176c860fe25db173ea9",
+      "scope": "Author/exact/independent-review theorem-statement corroboration only; not a logical dependency of the self-contained proof."
+    },
+    {
+      "url": "https://arxiv.org/pdf/1009.1310",
+      "pdf_sha256": "bb07986ac769c63ae02596b470903ba3c4f89c5d83d494c4d3eff2c98d6cb259",
+      "scope": "Author/exact/independent-review theorem-statement corroboration only; not a logical dependency of the self-contained proof."
+    }
+  ],
+  "documentation_gate": "evidence/original_mo_complete_cross_flat_spectral_gain_docs_gate.json",
+  "pre_milestone_backup": {
+    "path": "/mnt/storage/backups/codex/quadratic-minmax-limit-2212b99a4c24/20260905T233301Z-63210b9eae3f-pre-milestone-complete-cross-gain.YSzelM",
+    "covered_head": "63210b9eae3fc568ea682ae4f33cd093198a4688",
+    "sha256sums_sha256": "4e3de6cc34b64860fb4037a5017eec93d232c5b8967c04c1855d4220c64c75d5",
+    "receipt_sha256": "fc502553db9100c6483185aa9dba33a786887dab1760cf837f41dcec091378ad",
+    "source_archive_comparison_and_bundle_verified": true,
+    "scope": "Entire worktree and history including proof, five reviews and three summaries; gate receipt and this manifest were added after snapshot verification."
+  },
+  "no_src_test_or_global_predicate_changes": true,
+  "global_status": "OPEN",
+  "next_implication": "Transfer this actual complete-entry gain to the full weighted cross spectrum under near-scalar diagonal dispersion without assuming a global unweighted operator cap; then address the remaining actual-cell upper comparison.",
+  "import_aliases": {
+    "/tmp/original_mo_complete_cross_flat_spectral_gain.md": "evidence/NOTE_2026-09-05_COMPLETE_CROSS_FLAT_SPECTRAL_GAIN.md",
+    "/tmp/original_mo_complete_cross_flat_spectral_gain_author_receipt.md": "evidence/original_mo_complete_cross_flat_spectral_gain_author_review.md",
+    "/tmp/original_mo_complete_cross_flat_spectral_gain_exact_review.md": "evidence/original_mo_complete_cross_flat_spectral_gain_exact_review.md",
+    "/tmp/original_mo_complete_cross_flat_spectral_gain_docs_review.md": "evidence/original_mo_complete_cross_flat_spectral_gain_docs_review.md",
+    "/tmp/original_mo_complete_cross_flat_spectral_gain_root_review.md": "evidence/original_mo_complete_cross_flat_spectral_gain_root_review.md",
+    "/tmp/original_mo_complete_cross_flat_spectral_gain_docs_scope_review.md": "evidence/original_mo_complete_cross_flat_spectral_gain_docs_scope_review.md"
+  },
+  "sha256": {
+    "evidence/NOTE_2026-09-05_COMPLETE_CROSS_FLAT_SPECTRAL_GAIN.md": "b30903b22c0b602464a864b78b59be6827bb0c110e6cc382c753f3ea0a16fb20",
+    "evidence/original_mo_complete_cross_flat_spectral_gain_author_review.md": "f2b83fdce6f8591da4cb5971d108e5002d91d727b128636c1b09e3b96859d683",
+    "evidence/original_mo_complete_cross_flat_spectral_gain_exact_review.md": "6f60cd947f1b4736dc994016cd66db30fcf16431c53f633bf42d747431b486a0",
+    "evidence/original_mo_complete_cross_flat_spectral_gain_docs_review.md": "01dacaf0e4d01edaef3f3b85651748ca5475b2a0b0c83b84b73fb4307e721a3f",
+    "evidence/original_mo_complete_cross_flat_spectral_gain_root_review.md": "1db23906ecc49764f0a08a11d4cd0d3b8b94e332a53daf8a032e70df2fd6474d",
+    "evidence/original_mo_complete_cross_flat_spectral_gain_docs_scope_review.md": "d21221d181b5808bc2fb7959fd5adb971930898d6bba1caf5f84355632fdaad5",
+    "HANDOFF.md": "e00c5755077d11c9b3738586ccd44925d86060dafdae05859aafe8cbbb85dd65",
+    "STATUS.md": "374fa06da39c9a047b3cddd61313be9d94ff319d3f749432a2b8ef84d7ebc83b",
+    "evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md": "7684d71fa994b5f9ecf85e320af2fe7785fa31236d68a19367965fc011d2a90a",
+    "evidence/original_mo_complete_cross_flat_spectral_gain_docs_gate.json": "99f26e12f19ed3f85de3ef11d783708589625bd53178a378106c3cf9f1f4edbd"
+  }
+}
