@@ -42,6 +42,42 @@ See `ARTIFACTS.md` for the preserved branches and terminology.
 
 ## Fresh mathematical target
 
+The [cross-spike/bulk milestone](evidence/original_mo_cross_spike_bulk_upper_milestone.json)
+and [whole-profile proof](evidence/NOTE_2026-09-06_WHOLE_PROFILE_CROSS_BULK_UPPER.md)
+give a strict ORIGINAL-target upper for an entire actual pure-cross class.
+Take K=[[A,B],[B^T,-A]], positive diagonal D with D+/-K>=0,
+S=tr D=O(n^(3/2)), and `delta=S tr(D^(-1))/(2n)^2-1->0`.
+The evaluated final cells have ORIGINAL p=q_A=0 and common c=x^TBy.
+Set W=D_L^(-1/2) B D_R^(-1/2), u_n=2c/S, m_n=tr(W^TW)/n.
+If liminf u_n>=7/8 and every fixed R>9/10 has only o(n) singular
+values of W above R, then
+`limsup [E max_cell X_z-2sqrt(2)Phi(A)]/n^(3/2)`
+`<=2/sqrt(5)-2sqrt(2)/pi<0`, for the centered-sign base Gaussian process.
+The proof uses the completeness bound limsup m_n<=1/2 and CORE's actual 1/pi
+source lower, not alpha=2/5. No full spectral-law limit, trace optimality,
+or convergence of the largest singular value is needed.
+The [actual-radius metric](evidence/NOTE_2026-09-06_ACTUAL_CROSS_RADIUS_SHELL_UPPER.md)
+and [low-rank spike allocation](evidence/NOTE_2026-09-06_LOW_RANK_CROSS_SPIKE_MASS_UPPER.md)
+retain the original source, covariance, and cell radius. The latter pays
+for Gaussian projection and conditioning while retaining Boolean spike mass;
+its general weighted-field theorem is not restricted to zero-source cells.
+Its zero-source weak-middle-law corollary gives
+limsup E max_cell X_z/(2n^(3/2))<=14/25 at x^TWy/n->4/5 without radius convergence.
+The wider bulk<=9/10, liminf u_n>=4/5, limsup m_n<=2/5 region is diagnostic at alpha=2/5.
+Evaluated corollaries retain the fixed trace cap, delta->0, and ORIGINAL
+p=q_A=0; existing cell/padding errors are controlled, not discarded.
+The bulk/high-u/dispersion premises are not established for all conditional
+optimizers. Other cells and original convergence remain OPEN.
+
+The [actual central-cell companion](evidence/NOTE_2026-09-06_ACTUAL_CENTRAL_CELL_LINEAR_WIDTH_BOUNDARY.md)
+proves that the maximum of actual linear-field cell widths, divided by
+2n^(3/2), tends to sqrt(kappa*w). No trace cap, dispersion, or optimality
+is needed. Thus the CENTERED linear-field upper cannot reach the target
+at alpha<=1/2; a shifted-sign version necessarily needs w<=2alpha^2/kappa.
+This is an architecture boundary, NOT a lower on the Gaussian cross
+process or an obstruction to other proofs. The next upper work concerns
+biased central/active-cell competition or a sharper cross-process comparison.
+
 The [all-law source-gain milestone](evidence/original_mo_all_law_source_gain_milestone.json)
 and [adaptive proof](evidence/NOTE_2026-09-06_ALL_LAW_ADAPTIVE_NUCLEAR_GAIN.md)
 prove for ACTUAL complete symmetric zero-diagonal A that

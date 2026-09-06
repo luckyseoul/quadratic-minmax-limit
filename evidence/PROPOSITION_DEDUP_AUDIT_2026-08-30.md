@@ -8,6 +8,46 @@ The old ledgers are fully preserved on the two branches in `ARTIFACTS.md`.
 No local theorem is made false by parking its route; no open implication
 is made necessary for the original problem by its old status field.
 
+**Cross-spike mass and whole-profile upper (2026-09-06).**
+`original_mo_cross_spike_bulk_upper_milestone.json` groups
+`NOTE_2026-09-06_ACTUAL_CROSS_RADIUS_SHELL_UPPER.md`,
+`NOTE_2026-09-06_LOW_RANK_CROSS_SPIKE_MASS_UPPER.md`, and
+`NOTE_2026-09-06_WHOLE_PROFILE_CROSS_BULK_UPPER.md`.
+The finite actual-radius metric applies to every original cell; the
+low-rank extension pays for Gaussian projection/weighted conditioning
+but keeps Boolean state mass inside the remainder. Its general allocation
+upper does not require zero internal energies; the evaluated corollaries do.
+For ACTUAL K=[[A,B],[B^T,-A]], positive diagonal D with D+/-K>=0,
+retain S=tr D=O(n^(3/2)), delta=S tr(D^(-1))/(2n)^2-1->0, and final
+cells with ORIGINAL p=q_A=0. Set W=D_L^(-1/2) B D_R^(-1/2),
+u_n=2c/S and m_n=tr(W^TW)/n. A bulk edge <=9/10 means only o(n)
+singular values exceed any fixed R>9/10, not a full operator cap.
+With liminf u_n>=7/8, completeness supplies limsup m_n<=1/2 and the
+whole-profile upper for E max_cell X_z/(2n^(3/2)) has square <1/5<2/pi^2.
+CORE's Phi(A)>=n sqrt(n-1)/pi therefore gives a strict upper below
+the ORIGINAL 2sqrt(2)Phi(A) target, without assuming alpha=2/5,
+a full limiting law, trace optimality, or absence of low-rank outliers.
+The weak-middle-law normalized upper <=14/25 at x^TWy/n->4/5 also permits outliers.
+The separate liminf u_n>=4/5,limsup m_n<=2/5,bulk<=9/10 region is diagnostic at alpha=2/5;
+do not promote it to the original target at every smaller source norm.
+The new object is a mass-sensitive Boolean remainder and matched convex
+resolvent chord, not a repeated profile scan or an altered Gaussian source.
+Preserve earlier analytic results and their scopes. The trace/dispersion,
+bulk/high-u, and zero-original-source hypotheses are not universal facts;
+all-cell control, the conditional paired theorem, and convergence remain OPEN.
+
+The classified companion
+`NOTE_2026-09-06_ACTUAL_CENTRAL_CELL_LINEAR_WIDTH_BOUNDARY.md` proves
+ACTUAL central-cell linear widths saturate 2sqrt(kappa*w)n^(3/2), using
+Chebyshev, sign/magnitude independence, polynomial cell selection, and
+positive covariance coupling. No trace cap or near-scalar assumption is
+required. This rules out another CENTERED all-cell linear-field metric
+as a solution at alpha<=1/2; shifted-sign arguments require w<=2alpha^2/kappa.
+It is NOT a Gaussian cross-process lower or a no-go for other comparisons.
+Preserve the conditional upper results, but pursue biased central/active
+competition or sharpen the cross-process comparison instead of repeating
+centered-field evaluations as a prospective all-cell closure.
+
 **All-law gain and two-cross-moment transfer (2026-09-06).**
 `original_mo_all_law_source_gain_milestone.json` records the adaptive
 source gain, the retained endpoint transfer, and its stronger two-moment

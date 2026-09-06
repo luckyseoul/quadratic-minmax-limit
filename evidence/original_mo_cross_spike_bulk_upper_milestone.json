@@ -1,0 +1,81 @@
+{
+  "schema": "original_mo_cross_spike_bulk_upper_milestone_v1",
+  "date_utc": "2026-09-06",
+  "base_commit": "b9e30857e50a08129704e7348ec2d4b85d1e4747",
+  "branch": "main",
+  "remote": "https://github.com/luckyseoul/quadratic-minmax-limit.git",
+  "classification": "Reviewed conditional actual-radius/spike/bulk upper theorems and separately classified ACTUAL central-cell linear-field boundary; original convergence OPEN",
+  "conclusions": [
+    "Actual cross radius enlarges the valid ellipsoid metric window and positive diagonal remainder for every original/weighted cell. Its original-radius compatibility bound is uniform even when the actual radius tends to zero.",
+    "The low-rank spike theorem projects only the Gaussian field and pays the rank/dispersion error. It retains each weighted Boolean state's spike mass inside both the original radius and the constrained Boolean remainder. Weighted conditioning, direction nets and finite mass bins justify the allocation maximum.",
+    "For actual zero-original-internal-energy cells with fixed S=O(n^(3/2)), delta->0, u_D->4/5 and weak cross squared law (delta_0+delta_(4/5))/2, the normalized base Gaussian width has limsup<=14/25, with no actual top-radius convergence premise.",
+    "For arbitrary bulk profiles the matched metric gives Gamma_r(m,u) from only first moment and a bulk edge r<1. No full spectral-law limit is required, and vanishing-relative-rank outliers are permitted.",
+    "At bulk edge<=9/10 and liminf original u_n=2c/S>=7/8, actual completeness supplies limsup m_n<=1/2. The squared normalized field upper is below 1/5, whereas the ORIGINAL source target has limiting square at least 2/pi^2>1/5. Consequently limsup [E max_cell X_z-2sqrt(2)Phi(A)]/n^(3/2)<=2/sqrt(5)-2sqrt(2)/pi<0 without an alpha=2/5 hypothesis.",
+    "The wider bulk<=9/10, liminf u_n>=4/5, limsup m_n<=2/5 region gives a separate alpha=2/5 diagnostic comparison, not an original-target statement for every smaller source norm.",
+    "The actual central-cell companion proves maximum actual linear-field widths/(2n^(3/2))->sqrt(kappa*w), for any feasible D, without trace-cap, dispersion or optimizer hypotheses. Thus the CENTERED all-cell linear-field upper cannot reach the original target at alpha<=1/2. A shifted-sign version necessarily needs w<=2alpha^2/kappa."
+  ],
+  "proof_sources": [
+    {
+      "path": "evidence/NOTE_2026-09-06_ACTUAL_CROSS_RADIUS_SHELL_UPPER.md",
+      "lines": 279
+    },
+    {
+      "path": "evidence/NOTE_2026-09-06_LOW_RANK_CROSS_SPIKE_MASS_UPPER.md",
+      "lines": 347
+    },
+    {
+      "path": "evidence/NOTE_2026-09-06_WHOLE_PROFILE_CROSS_BULK_UPPER.md",
+      "lines": 258
+    }
+  ],
+  "companion": {
+    "path": "evidence/NOTE_2026-09-06_ACTUAL_CENTRAL_CELL_LINEAR_WIDTH_BOUNDARY.md",
+    "lines": 149,
+    "classification": "Actual linear-field architecture boundary, NOT a Gaussian cross-process lower and NOT a no-go for other comparisons or original convergence"
+  },
+  "review_provenance": {
+    "root": "Fully read all three frozen primary sources, the companion, four independent review receipts and the spike author receipt, plus final 114 added summary lines. Contributed actual-radius/spike ideas and the central observation; independently reviewed the new whole-profile derivation.",
+    "actual_radius": "Proof worker authored; docs independently fully reviewed.",
+    "spike": "Exact worker authored from root's mass-inside-remainder insight, with proofer contributing checks. Docs supplied an independent complete frozen-source review.",
+    "whole_profile": "Proof worker authored; exact checked new algebra before freeze. Docs supplied an independent complete frozen-source review.",
+    "central_companion": "Proof worker authored after root's central-cell observation/request. Exact supplied an independent complete frozen-source review; root's review is contributing.",
+    "documentation": "Grouped docs proposal plus root companion additions preserve all older text. Ten imported artifacts are byte-identical to frozen /tmp sources, including the combined root review."
+  },
+  "new_mathematical_computation": false,
+  "no_src_test_or_global_predicate_changes": true,
+  "documentation_gate": "evidence/original_mo_cross_spike_bulk_upper_docs_gate.json",
+  "backup_policy": {
+    "new_backup_taken": false,
+    "reason": "Supporting grouped publication under Nick's 2026-09-06 major-only clarification; no destructive action or routine pre/post snapshot."
+  },
+  "global_status": "OPEN",
+  "next_implication": "For the upper, control biased central/active-cell competition or sharpen the original Gaussian cross-process comparison; further centered linear-field metrics cannot finish the all-cell target at alpha<=1/2. Separate source-outlier and active-cell investigations remain unpublished and outside this bundle. The evaluated upper hypotheses are not established for arbitrary conditional optimizers.",
+  "import_aliases": {
+    "/tmp/original_mo_actual_cross_radius_shell_upper.md": "evidence/NOTE_2026-09-06_ACTUAL_CROSS_RADIUS_SHELL_UPPER.md",
+    "/tmp/original_mo_actual_cross_radius_shell_upper_docs_review.md": "evidence/original_mo_actual_cross_radius_shell_upper_docs_review.md",
+    "/tmp/original_mo_low_rank_cross_spike_mass_upper.md": "evidence/NOTE_2026-09-06_LOW_RANK_CROSS_SPIKE_MASS_UPPER.md",
+    "/tmp/original_mo_low_rank_cross_spike_mass_upper_author_receipt.md": "evidence/original_mo_low_rank_cross_spike_mass_upper_author_review.md",
+    "/tmp/original_mo_low_rank_cross_spike_mass_upper_docs_review.md": "evidence/original_mo_low_rank_cross_spike_mass_upper_docs_review.md",
+    "/tmp/original_mo_whole_profile_cross_bulk_upper.md": "evidence/NOTE_2026-09-06_WHOLE_PROFILE_CROSS_BULK_UPPER.md",
+    "/tmp/original_mo_whole_profile_cross_bulk_upper_docs_review.md": "evidence/original_mo_whole_profile_cross_bulk_upper_docs_review.md",
+    "/tmp/original_mo_cross_spike_bulk_upper_root_review.md": "evidence/original_mo_cross_spike_bulk_upper_root_review.md",
+    "/tmp/original_mo_actual_central_cell_linear_width_boundary.md": "evidence/NOTE_2026-09-06_ACTUAL_CENTRAL_CELL_LINEAR_WIDTH_BOUNDARY.md",
+    "/tmp/original_mo_actual_central_cell_linear_width_boundary_exact_review.md": "evidence/original_mo_actual_central_cell_linear_width_boundary_exact_review.md"
+  },
+  "sha256": {
+    "evidence/NOTE_2026-09-06_ACTUAL_CROSS_RADIUS_SHELL_UPPER.md": "44fa3e7361e2142b20dce58d2dde727458db786529690f15e752390b8081725f",
+    "evidence/original_mo_actual_cross_radius_shell_upper_docs_review.md": "54b5951c7a443e34259e36fdd4b28b11c0259a1e27c2fca0fa81e21026628c22",
+    "evidence/NOTE_2026-09-06_LOW_RANK_CROSS_SPIKE_MASS_UPPER.md": "30347140ecf9fb2458444fb152490c601fe81d8a1733e90f31be692126ecdf1c",
+    "evidence/original_mo_low_rank_cross_spike_mass_upper_author_review.md": "e7c5cb7d680ec77c08af4c83b012f1e4ad7470f42abffa6c5bbe4347ab8966de",
+    "evidence/original_mo_low_rank_cross_spike_mass_upper_docs_review.md": "932784d816730e7b768c64f2f52cae2968c5b85abee833653c60695ad62d130b",
+    "evidence/NOTE_2026-09-06_WHOLE_PROFILE_CROSS_BULK_UPPER.md": "4c5a3534600b2cf17b7dc35be333c3976f8819cfd2af79aa07b3a151ed603346",
+    "evidence/original_mo_whole_profile_cross_bulk_upper_docs_review.md": "21d110756324afa80fc81a7529be8f29f5bb95b6902552214df45e948d3fd8d2",
+    "evidence/original_mo_cross_spike_bulk_upper_root_review.md": "1ece30c2524ccb8278dad0a93807b1289729911de6c7338eb9fecc3c84215f6c",
+    "evidence/NOTE_2026-09-06_ACTUAL_CENTRAL_CELL_LINEAR_WIDTH_BOUNDARY.md": "361f3d83de482ec2fac898c615f6277607873a15c64ffa6d6de101d20f41937e",
+    "evidence/original_mo_actual_central_cell_linear_width_boundary_exact_review.md": "7631eb829e794975488e6d835832cf9de9f9f26ae4fe01cb40d6e8643f9fc461",
+    "HANDOFF.md": "d7e010a56d68bcb170ec6291307c3de3b44a1cf730a362a45d099d9ae79294e8",
+    "STATUS.md": "369725cd782bd226fe5a9eaa212bc85d7076f886a360a01a0f72ae161ecd56ec",
+    "evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md": "359365ce2a2937ccc779ddc1bf42371b251d707d17485b346af0efabb3c5c7aa",
+    "evidence/original_mo_cross_spike_bulk_upper_docs_gate.json": "2a8a0f30097e9c347b509460d58f19ce2b1055c14471bba672acb8cf1838b494"
+  }
+}

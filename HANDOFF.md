@@ -21,6 +21,44 @@ predicates. Valid local results retain their stated scope and evidence.
 
 ## Next mathematical work
 
+The new [cross-spike/bulk upper milestone](evidence/original_mo_cross_spike_bulk_upper_milestone.json)
+contains an [arbitrary-profile ORIGINAL-target region](evidence/NOTE_2026-09-06_WHOLE_PROFILE_CROSS_BULK_UPPER.md).
+Use ACTUAL K=[[A,B],[B^T,-A]], positive diagonal D with D+/-K>=0,
+S=tr D=O(n^(3/2)), and `delta=S tr(D^(-1))/(2n)^2-1->0`.
+Evaluated cells have ORIGINAL internal energies p=q_A=0, common cross
+energy c, and representatives chosen within the final refined cells.
+Put W=D_L^(-1/2) B D_R^(-1/2), u_n=2c/S, m_n=tr(W^TW)/n.
+If `liminf u_n>=7/8` and, for every fixed R in (9/10,1), only o(n)
+singular values of W exceed R, then the centered-sign base process obeys
+`limsup [E max_cell X_z-2sqrt(2)Phi(A)]/n^(3/2)`
+`<=2/sqrt(5)-2sqrt(2)/pi<0`.
+Completeness supplies limsup m_n<=1/2; CORE's actual lower
+`Phi(A)>=n sqrt(n-1)/pi` supplies the ORIGINAL target. No alpha=2/5 premise,
+full limiting spectral law, diagonal optimality, or top-radius convergence
+is assumed. This is a bulk condition: low-rank operator outliers remain.
+The [actual-radius metric](evidence/NOTE_2026-09-06_ACTUAL_CROSS_RADIUS_SHELL_UPPER.md)
+is valid for every actual cell. The [spike-mass extension](evidence/NOTE_2026-09-06_LOW_RANK_CROSS_SPIKE_MASS_UPPER.md)
+retains the state's spike mass inside the Boolean remainder and pays for
+Gaussian projection and weighted conditioning; its allocation theorem
+also applies to general weighted fields under its low-rank/dispersion premises.
+For the zero-source weak middle law (delta_0+delta_(4/5))/2 and x^TWy/n->4/5,
+it gives limsup E max_cell X_z/(2n^(3/2))<=14/25 without top-radius control.
+The wider liminf u_n>=4/5, limsup m_n<=2/5, bulk<=9/10 region is an alpha=2/5
+diagnostic comparison, not a uniform ORIGINAL-target result below that scale.
+All recorded cell/padding errors remain. The trace cap, dispersion, bulk,
+and high-u premises are not derived for arbitrary conditional optimizers;
+other internal-energy cells and original convergence remain OPEN.
+
+The separately classified [actual central-cell boundary](evidence/NOTE_2026-09-06_ACTUAL_CENTRAL_CELL_LINEAR_WIDTH_BOUNDARY.md)
+now shows why improving the CENTERED all-cell linear-field bound cannot
+finish this route: actual central cells saturate normalized field width
+sqrt(kappa*w), for any feasible D, without dispersion or trace-cap premises.
+This is NOT a lower on the Gaussian cross process. At source scale alpha,
+a shifted-sign field-upper argument necessarily needs w<=2alpha^2/kappa;
+centered w=1 fails for alpha<=1/2. Next address biased central/active-cell
+competition or sharpen the cross-process comparison, not another centered
+linear-field metric. The scoped upper corollaries above remain valid.
+
 The newer [all-law source-gain milestone](evidence/original_mo_all_law_source_gain_milestone.json)
 contains the [uniform adaptive gain](evidence/NOTE_2026-09-06_ALL_LAW_ADAPTIVE_NUCLEAR_GAIN.md).
 For ACTUAL complete symmetric zero-diagonal A, the two caps
