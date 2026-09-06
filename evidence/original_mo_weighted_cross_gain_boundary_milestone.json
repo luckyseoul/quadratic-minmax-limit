@@ -1,0 +1,87 @@
+{
+  "schema": "original_mo_weighted_cross_gain_boundary_milestone_v1",
+  "date_utc": "2026-09-06",
+  "base_commit": "1aa7f329882d133bf8688edaa23ef9bdd2ed9876",
+  "branch": "main",
+  "remote": "https://github.com/luckyseoul/quadratic-minmax-limit.git",
+  "classification": "Reviewed actual near-scalar full-weighted cross-norm transfer and separate strengthened formal certificate boundary; original convergence remains OPEN",
+  "conclusions": [
+    "For any actual paired complete signing K and any feasible positive diagonal D, with the separate fixed cap S<=C N^(3/2) and 0<=delta<=1/512, the full actual cross law has beta(B)/(n dbar)>=kappa v_2/m+(sqrt(kappa)-kappa)m-[25kappa C^2+6(sqrt(kappa)-kappa)]delta^(1/3)-R_C(n), uniformly R_C(n)->0.",
+    "The balanced complete submatrix is only an original-norm lower bound; interlacing and congruence return its moments to the FULL actual weighted cross law. No original unweighted operator cap, trace optimality or small canonical-primal gap is assumed.",
+    "The actual original active conditions p=q_A=0 and c=Phi(K)=beta(B) separately transfer that lower to u_D=c_D/n with an additional error 2sqrt(delta). Near-flat actual full cross laws exclude u_D=kappa+o(1) in the fixed-cap, small-dispersion branch.",
+    "The changed FORMAL alpha=2/5, f=4/3, u=4/5, m=9/25 endpoint profile passes the explicitly listed strengthened full/source/cross constraints, including the new gain.",
+    "Nevertheless its SAME formal drift-plus-ellipsoid reference certificate exceeds the original target for every signed metric and shifted Gaussian sign threshold, including endpoints. A global analytic supporting line gives U_s(t)>71/125 and squared target margin 41/15625; the full original drift is retained.",
+    "The formal profile is not realized by complete signings or actual active Boolean states. A lower bound on this upper certificate is not a lower bound on actual Gaussian width or an original norm. Neither actual gain theorem is retracted; the global inequality and convergence remain OPEN."
+  ],
+  "proof_sources": [
+    {
+      "path": "evidence/NOTE_2026-09-05_NEAR_SCALAR_CROSS_SPECTRAL_GAIN.md",
+      "lines": 364,
+      "classification": "Actual-entry conditional theorem"
+    },
+    {
+      "path": "evidence/NOTE_2026-09-05_STRENGTHENED_TRACE_PROFILE_BOUNDARY.md",
+      "lines": 227,
+      "classification": "Formal limitation of precisely the listed relaxation and reference certificate"
+    }
+  ],
+  "review_provenance": {
+    "weighted_transfer": {
+      "root": "Proposed balanced good-coordinate trimming and full moment return; complete contributing review.",
+      "proof_worker": "Derived and authored the transfer and its finite coefficients; complete author self-review.",
+      "exact_worker": "Checked candidate formulas and complete final source; earlier prerequisite contributions disclosed.",
+      "docs_worker": "Independent complete review of the new transfer; no derivation role."
+    },
+    "formal_boundary": {
+      "root": "Supplied the fixed changed profile and checked complete supporting-line argument; contributing review.",
+      "exact_worker": "Checked retained conditions and authored supporting-line proof; complete author self-review.",
+      "proof_worker": "Independent complete new-profile review; earlier prerequisite authorship disclosed.",
+      "docs_worker": "Independent complete new-profile review; earlier nuclear-coupling AM-GM contribution disclosed."
+    },
+    "documentation": "Docs worker authored and checked scoped insertions; root independently read complete proposal and actual 122 added lines. Ten source/review imports were byte-identical, with a separate applied-scope receipt."
+  },
+  "new_mathematical_computation": false,
+  "finite_n_rate_claimed": false,
+  "documentation_gate": "evidence/original_mo_weighted_cross_gain_boundary_docs_gate.json",
+  "pre_milestone_backup": {
+    "path": "/mnt/storage/backups/codex/quadratic-minmax-limit-2212b99a4c24/20260906T002059Z-1aa7f329882d-pre-milestone-weighted-cross-boundary.XzIBt0",
+    "covered_head": "1aa7f329882d133bf8688edaa23ef9bdd2ed9876",
+    "sha256sums_sha256": "ec862f4a8e906fa6e5cd5f0e5e7c5352199bee5dcb044cfa363d4c92427a55d1",
+    "receipt_sha256": "3b75a2db4d8bf999336f3a318db3274a01bd71f7539ff0c4015da6745ad2a382",
+    "source_archive_comparison_and_bundle_verified": true,
+    "scope": "Entire worktree and history including both proofs, eight author/reviewer receipts, documentation scope receipt, three summaries and completed gate receipt. Only this manifest is added after snapshot verification."
+  },
+  "no_src_test_or_global_predicate_changes": true,
+  "global_status": "OPEN",
+  "next_implication": "Add a consequential actual source-entry or Boolean-active-state restriction beyond the listed strengthened moments, or change the upper argument. In particular the formal profile's source norm and active-state realizability are not established. Small dispersion for optimizers and the full all-cell comparison remain open.",
+  "import_aliases": {
+    "/tmp/original_mo_near_scalar_cross_spectral_gain.md": "evidence/NOTE_2026-09-05_NEAR_SCALAR_CROSS_SPECTRAL_GAIN.md",
+    "/tmp/original_mo_near_scalar_cross_spectral_gain_author_receipt.md": "evidence/original_mo_near_scalar_cross_spectral_gain_author_review.md",
+    "/tmp/original_mo_near_scalar_cross_spectral_gain_exact_review.md": "evidence/original_mo_near_scalar_cross_spectral_gain_exact_review.md",
+    "/tmp/original_mo_near_scalar_cross_spectral_gain_docs_review.md": "evidence/original_mo_near_scalar_cross_spectral_gain_docs_review.md",
+    "/tmp/original_mo_near_scalar_cross_spectral_gain_root_review.md": "evidence/original_mo_near_scalar_cross_spectral_gain_root_review.md",
+    "/tmp/original_mo_strengthened_trace_profile_all_threshold_boundary.md": "evidence/NOTE_2026-09-05_STRENGTHENED_TRACE_PROFILE_BOUNDARY.md",
+    "/tmp/original_mo_strengthened_trace_profile_all_threshold_boundary_author_receipt.md": "evidence/original_mo_strengthened_trace_profile_boundary_author_review.md",
+    "/tmp/original_mo_strengthened_trace_profile_all_threshold_proof_review.md": "evidence/original_mo_strengthened_trace_profile_boundary_proof_review.md",
+    "/tmp/original_mo_strengthened_trace_profile_all_threshold_boundary_docs_review.md": "evidence/original_mo_strengthened_trace_profile_boundary_docs_review.md",
+    "/tmp/original_mo_strengthened_trace_profile_all_threshold_boundary_root_review.md": "evidence/original_mo_strengthened_trace_profile_boundary_root_review.md",
+    "/tmp/original_mo_weighted_cross_gain_boundary_docs_scope_review.md": "evidence/original_mo_weighted_cross_gain_boundary_docs_scope_review.md"
+  },
+  "sha256": {
+    "evidence/NOTE_2026-09-05_NEAR_SCALAR_CROSS_SPECTRAL_GAIN.md": "ec911854e59788fabbb4e189d47849acedff15a1c80dbd9225a373a49e62d1f9",
+    "evidence/original_mo_near_scalar_cross_spectral_gain_author_review.md": "44d8d3c5a9fb27f8e2fcb18c5e3af07ec8296dc9a92b7e5ea5ac02fd551df790",
+    "evidence/original_mo_near_scalar_cross_spectral_gain_exact_review.md": "fb686f6d7bbdca4839d97c3ae2902844f0e230e2808d26f21eade341ada3aa35",
+    "evidence/original_mo_near_scalar_cross_spectral_gain_docs_review.md": "c74ca051421336eabd5380bbfc4537b24f495d3a7459a8ba0638c03f0055b6b0",
+    "evidence/original_mo_near_scalar_cross_spectral_gain_root_review.md": "21069224da3154b728a4e30dbd7cde7e07177de352c7863f3968a75a421849e2",
+    "evidence/NOTE_2026-09-05_STRENGTHENED_TRACE_PROFILE_BOUNDARY.md": "903ac72c78c60706fbcfef09e50abeda0a18fe05976e3efab89d65becdbfccf1",
+    "evidence/original_mo_strengthened_trace_profile_boundary_author_review.md": "9dc2dfcd94e137b1c36a542d3d04cd400b5b99e6b893e253d9fc20e1e9c71c8e",
+    "evidence/original_mo_strengthened_trace_profile_boundary_proof_review.md": "d79b5d5aebc4cb72f08ba3e0c581a31b1b185706ab837b10843ea0ef3f739d6a",
+    "evidence/original_mo_strengthened_trace_profile_boundary_docs_review.md": "0d672bffba022b8dbb87b3f58ee5ff31c218e5975e528a276b48206357fafb0f",
+    "evidence/original_mo_strengthened_trace_profile_boundary_root_review.md": "85c71620e37ee7760e41a11118e8c06ce35a9dea10a50579276d5c3f03caa00c",
+    "evidence/original_mo_weighted_cross_gain_boundary_docs_scope_review.md": "7cdf0b2e463313fc035a3627f7303be5dce6593e905b955c0194fe7b1f6bced7",
+    "HANDOFF.md": "0eb02708dd8812ad4d0c604fdf3a1cdefdd47d9bb2332519984e39211b3cfb48",
+    "STATUS.md": "6258cb6f613f4c9ea3934ebfd97a7b48d451c0671449c89d0016e19f3299970a",
+    "evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md": "81874e9fc11a9e10a746e6f90ecec6cf01ea822d4a10a468c630f5671980053c",
+    "evidence/original_mo_weighted_cross_gain_boundary_docs_gate.json": "b8ee9f504aaebbe4b868cf151c20554d0415872e9f89340ccc68001696df15ff"
+  }
+}

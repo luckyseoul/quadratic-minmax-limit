@@ -8,6 +8,45 @@ The old ledgers are fully preserved on the two branches in `ARTIFACTS.md`.
 No local theorem is made false by parking its route; no open implication
 is made necessary for the original problem by its old status field.
 
+**Full weighted cross gain and strengthened formal boundary (2026-09-06).**
+`original_mo_weighted_cross_gain_boundary_milestone.json` completes the
+transfer left unpublished at the older scalar-gain checkpoint below.
+ANY feasible positive D for the ACTUAL paired signing is allowed under
+the separate S=tr D<=C N^(3/2) cap, N=2n. With dbar=S/N,
+delta=S tr(D^(-1))/N^2-1 and m,v_2 the first two moments of the
+FULL actual squared-singular-value law, the precise transferred bound is
+`beta(B)/(n dbar)>=kappa v_2/m+g_kappa m`
+`-[25kappa C^2+6g_kappa]delta^(1/3)-R_C(n)`, for delta<=1/512,
+where g_kappa=sqrt(kappa)-kappa, kappa=2/pi and R_C(n)->0 uniformly.
+The exact directional means give m>=1/(2C^2). Balanced good coordinates,
+a positive-part coefficient comparison and a uniform CLT tail envelope
+remove the original unweighted operator hypothesis in this near-scalar
+branch. The auxiliary complete block never replaces the actual source,
+cross measure, covariance or cell. The separate active p=q_A=0,
+c=Phi(K) substitution to u_D has error at most 2sqrt(delta).
+No trace optimality, small canonical gap or inferred global rigidity
+is used. Do not restate this transfer as still unpublished or repeat
+the older operator-capped theorem as if it were the remaining bridge.
+
+The accompanying changed FORMAL endpoint profile has alpha=2/5,
+f=4/3, u=4/5, m=9/25 and nu=(16/25)delta_0+(9/25)delta_1.
+It passes the explicitly retained full/source/cross inequalities,
+INCLUDING the transferred entry gain. A single analytic supporting line
+proves its same reference functional exceeds 71/125; the full original
+drift then keeps the certificate above sqrt(2)alpha for ALL signed
+metrics and shifted Gaussian sign thresholds, including endpoints.
+The squared strict target margin is 41/15625. The old kappa enclosure
+was reused; no checker, signing search or threshold/metric scan was run.
+
+The changed profile is not supplied by an actual signing or Boolean
+active state. A lower bound on the formal UPPER certificate is not an
+actual-width or norm lower, and neither actual gain theorem is retracted.
+Unchanged use of these strengthened trace constraints cannot alone
+certify the target. Add further source-entry/active-state/frame/optimality
+information or change the upper argument. This is a scoped relaxation
+boundary, not an impossibility theorem for all methods. Small delta
+for optimizers, the all-cell inequality and original convergence remain open.
+
 **Actual complete-cross Gaussianization and flatness gain (2026-09-05).**
 `original_mo_complete_cross_flat_spectral_gain_milestone.json` records the
 uniform bound for ACTUAL complete n by n sign matrices B with the

@@ -21,6 +21,58 @@ predicates. Valid local results retain their stated scope and evidence.
 
 ## Next mathematical work
 
+The latest paired milestone is
+`evidence/original_mo_weighted_cross_gain_boundary_milestone.json`.
+It completes the weighted transfer previously marked unpublished in
+the older scalar-gain checkpoint below, which is retained as history.
+Its two proof sources are
+`evidence/NOTE_2026-09-05_NEAR_SCALAR_CROSS_SPECTRAL_GAIN.md`
+(SHA-256 `ec911854e59788fabbb4e189d47849acedff15a1c80dbd9225a373a49e62d1f9`)
+and `evidence/NOTE_2026-09-05_STRENGTHENED_TRACE_PROFILE_BOUNDARY.md`
+(SHA-256 `903ac72c78c60706fbcfef09e50abeda0a18fe05976e3efab89d65becdbfccf1`).
+
+For the ACTUAL paired signing K, ANY positive feasible D is allowed
+with the SEPARATE cap S=tr D<=C N^(3/2), N=2n. Put dbar=S/N,
+delta=S tr(D^(-1))/N^2-1, and let nu be the FULL actual squared-
+singular-value law of W_D, including zeros. With m=integral y dnu,
+v_2=integral y^2 dnu and g_kappa=sqrt(kappa)-kappa, kappa=2/pi,
+uniformly for 0<=delta<=1/512 the actual original cross norm satisfies
+
+`beta(B)/(n dbar)>=kappa v_2/m+g_kappa m`
+`-[25kappa C^2+6g_kappa]delta^(1/3)-R_C(n)`, R_C(n)->0.
+
+Here m>=1/(2C^2). No trace optimality, small canonical gap, maximum
+diagonal bound or global unweighted operator cap on B is assumed.
+A balanced complete submatrix is only an auxiliary ORIGINAL-norm
+lower bound; interlacing and congruence return its second and fourth
+singular powers to the full original nu. It never replaces W_D,
+the covariance, source, or active cell. The uniform marginal CLT
+prerequisite and its tail envelope are retained; no finite-n rate is claimed.
+For the SEPARATE actual active conditions p=q_A=0 and c=Phi(K),
+the same lower holds for u_D=c_D/n with an additional 2sqrt(delta)
+loss. Thus near-flat full weighted laws exclude u_D=kappa+o(1)
+in this fixed-cap, delta-to-zero branch, without the earlier operator cap.
+
+The paired FORMAL diagnostic then tests a changed profile:
+alpha=2/5, f=4/3, u=4/5, m=9/25 and
+nu=(16/25)delta_0+(9/25)delta_1. Its specified full/source/cross
+conditions, INCLUDING the new entry gain, all pass. Nevertheless the
+same reference functional has U_s(t)>71/125>2sqrt(2)/5.
+Adding the full ORIGINAL drift z f/2 keeps the certificate above
+the target for EVERY signed metric and shifted Gaussian threshold,
+including endpoints. One global supporting-line inequality supplies
+the squared target margin 41/15625; the kappa enclosure was reused.
+
+This is a lower bound on the FORMAL UPPER certificate, not on actual
+Gaussian width or a Boolean norm. No complete signing or actual active
+optimizer realizing the profile is supplied. The transfer theorem is
+not retracted, and the earlier formal obstruction retains its scope.
+A next attempt must add source-entry, Boolean-active-state, frame or
+conditional-optimality information, or change the upper argument;
+unchanged trace-only threshold/metric scans do not supply that step.
+Small delta for optimizers and the all-cell original upper remain open.
+No new mathematical run was used. Original convergence remains OPEN.
+
 The latest actual-entry restriction is
 `evidence/original_mo_complete_cross_flat_spectral_gain_milestone.json`
 and `evidence/NOTE_2026-09-05_COMPLETE_CROSS_FLAT_SPECTRAL_GAIN.md`

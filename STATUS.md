@@ -42,6 +42,37 @@ See `ARTIFACTS.md` for the preserved branches and terminology.
 
 ## Fresh mathematical target
 
+The [weighted cross gain and strengthened formal boundary](evidence/original_mo_weighted_cross_gain_boundary_milestone.json)
+complete the weighted transfer marked unpublished in the historical
+scalar-gain checkpoint below. For ANY positive feasible D of the ACTUAL
+paired K, with N=2n and the SEPARATE cap S=tr D<=C N^(3/2), let
+dbar=S/N, delta=S tr(D^(-1))/N^2-1 and m,v_2 be the first two
+moments of the FULL actual squared-singular-value law of W_D.
+With kappa=2/pi and g_kappa=sqrt(kappa)-kappa, for delta<=1/512,
+`beta(B)/(n dbar)>=kappa v_2/m+g_kappa m`
+`-[25kappa C^2+6g_kappa]delta^(1/3)-R_C(n)`, uniformly R_C(n)->0.
+No trace optimality, small canonical gap or global unweighted operator
+bound on B is needed. The balanced complete block is only an auxiliary
+norm lower; the original full measure and covariance remain unchanged.
+On the SEPARATE actual p=q_A=0, c=Phi(K) face, u_D=c_D/n has
+the same bound with another 2sqrt(delta) loss. Since m>=1/(2C^2),
+near-flat full weighted laws force a positive leading gain above kappa
+when delta tends to zero; small delta is still a hypothesis.
+
+The accompanying FORMAL profile alpha=2/5, f=4/3, u=4/5,
+m=9/25 and nu=(16/25)delta_0+(9/25)delta_1 passes the specified
+strengthened full/source/cross inequalities, including the new gain.
+Its SAME drift-plus-ellipsoid reference certificate nevertheless exceeds
+71/125>sqrt(2)alpha for every signed metric and shifted threshold,
+including endpoints; the full original drift is kept. The supporting-
+line proof has squared target margin 41/15625 and uses no new run.
+These are formal trace data, not a complete signing, a Boolean norm,
+an actual active optimizer or a lower bound on actual Gaussian width.
+Thus the gain alone does not close this strengthened relaxation.
+Additional actual source/active/frame information or another upper
+argument is still needed, along with the remaining all-cell work.
+The older proofs are preserved; original convergence remains OPEN.
+
 The [actual complete-cross gain](evidence/original_mo_complete_cross_flat_spectral_gain_milestone.json)
 adds an actual-entry restriction beyond the retained cubic cross bound.
 For an ACTUAL complete n by n sign matrix B and a SEPARATELY given
