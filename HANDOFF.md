@@ -21,6 +21,33 @@ predicates. Valid local results retain their stated scope and evidence.
 
 ## Next mathematical work
 
+The newer [all-law source-gain milestone](evidence/original_mo_all_law_source_gain_milestone.json)
+contains the [uniform adaptive gain](evidence/NOTE_2026-09-06_ALL_LAW_ADAPTIVE_NUCLEAR_GAIN.md).
+For ACTUAL complete symmetric zero-diagonal A, the two caps
+`limsup ||A||op/sqrt(n)<=5/3`, `limsup tr|A|/n^(3/2)<=4/5` imply
+`liminf Phi(A)/n^(3/2)>=35/88+3/1250=2/5+7/55000`.
+No limiting spectral law or diagonal homogeneity is assumed; the update
+probabilities adapt to actual local fields on the same Boolean source.
+The [two-moment transfer](evidence/NOTE_2026-09-06_TWO_CROSS_MOMENT_SOURCE_NUCLEAR_TRANSFER.md)
+uses ACTUAL K=[[A,B],[B^T,-A]], positive diagonal D=diag(D_L,D_R)
+with D+/-K>=0, and `delta=tr(D)tr(D^(-1))/(2n)^2-1->0`.
+Put W=D_L^(-1/2) B D_R^(-1/2), Y=WW^T, and retain the FULL moments
+`m_D=tr(Y)/n`, `Delta_D=tr[Y(I-Y)]/n`.
+If EVERY accumulation point (m,Delta) belongs to
+`R={9/25<=m<=1/2, 0<=Delta<=m[4sqrt(m)-3sqrt(1-m)]^2/25}`,
+a common large original principal source supplies both caps above;
+its norm comparison transfers the same strict lower back to A.
+No full cross or internal law, extra trace cap, optimal diagonal, or
+active-face premise is required. A simple sufficient condition is
+`liminf m_D>=2/5`, `limsup Delta_D<=1/1600`, with delta->0 retained.
+The [endpoint-law transfer](evidence/NOTE_2026-09-06_CROSS_ENDPOINT_SOURCE_NUCLEAR_TRANSFER.md)
+is preserved as the Delta=0 special case. The older near-flat theorem
+below keeps its larger gap under its narrower law hypothesis.
+The ACTUAL source operator cap and paired diagonal-dispersion/moment
+premises are not established for arbitrary optimizers; the paired field
+is not replaced. No mathematical run was used. Other source regions,
+the all-cell implication, and original convergence remain OPEN.
+
 The latest reviewed actual-source milestone (2026-09-06) is
 `evidence/original_mo_original_source_strict_gain_milestone.json`.
 Its full proof is

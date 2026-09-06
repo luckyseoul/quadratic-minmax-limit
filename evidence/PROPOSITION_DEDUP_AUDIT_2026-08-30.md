@@ -8,6 +8,33 @@ The old ledgers are fully preserved on the two branches in `ARTIFACTS.md`.
 No local theorem is made false by parking its route; no open implication
 is made necessary for the original problem by its old status field.
 
+**All-law gain and two-cross-moment transfer (2026-09-06).**
+`original_mo_all_law_source_gain_milestone.json` records the adaptive
+source gain, the retained endpoint transfer, and its stronger two-moment
+form `NOTE_2026-09-06_TWO_CROSS_MOMENT_SOURCE_NUCLEAR_TRANSFER.md`.
+For ACTUAL complete symmetric zero-diagonal A, operator limsup at most
+5/3 and nuclear limsup at most 4/5, normalized respectively by sqrt(n)
+and n^(3/2), force `liminf Phi(A)/n^(3/2)>=2/5+7/55000`.
+The gain uses adaptive Boolean clipping and joint convexity without
+spectral-law or diagonal-homogeneity assumptions. For ACTUAL paired
+K=[[A,B],[B^T,-A]], take positive diagonal D=diag(D_L,D_R), D+/-K>=0,
+and `delta=tr(D)tr(D^(-1))/(2n)^2-1->0`.
+Set W=D_L^(-1/2) B D_R^(-1/2), Y=WW^T and retain FULL moments
+`m_D=tr(Y)/n`, `Delta_D=tr[Y(I-Y)]/n`.
+Every accumulation point in `9/25<=m<=1/2`,
+`0<=Delta<=m[4sqrt(m)-3sqrt(1-m)]^2/25` gives the same source gap.
+The simpler bounds `liminf m_D>=2/5`, `limsup Delta_D<=1/1600` suffice.
+A finite noncommuting Schatten bound and common original principal
+source supply the caps; no full cross/internal law, extra trace cap,
+diagonal optimality, or active-state hypothesis is used. Exactness of
+the curve concerns certified caps, not necessity for source exclusion.
+The endpoint-law theorem remains the Delta=0 case, and the older
+near-flat theorem retains its larger gap at its narrower law. The
+actual source operator cap and paired dispersion/moment premises are
+not proved for arbitrary optimizers; no paired field is replaced.
+Preserve prior formal-relaxation scope. No mathematical run was used;
+complementary regions, all-cell control, and original convergence remain OPEN.
+
 **Actual original-source near-flat strict gain (2026-09-06).**
 `original_mo_original_source_strict_gain_milestone.json` records three
 reviewed analytic sources: the full original-source strict gain, its

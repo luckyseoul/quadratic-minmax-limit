@@ -53,12 +53,15 @@ Do not rerun unchanged mathematics merely to obtain a cleaner receipt.
 
 ## Mandatory backups and milestone publication
 
-Nick explicitly requires large-drive backups across Codex sessions and a
-commit and normal push after every reviewed research milestone (2026-09-05).
+Nick requires large-drive backups for MAJOR milestones across sessions
+(clarified 2026-09-06: "work more, backup less"). Commit and normally push
+reviewed research milestones; those commits do not each require a backup.
 
-- Before risky changes and at every reviewed milestone, create a fresh,
-  verified backup on the actual large drive at `/mnt/storage`. During a
-  long run, also back up material uncommitted progress at least hourly.
+- Take one fresh verified backup on the actual large drive at `/mnt/storage`
+  for a MAJOR research or structural milestone. Do not back up each
+  supporting lemma, review, documentation edit, or routine commit; no
+  hourly timers or routine pre/post pairs. Preserve a recoverable state
+  before genuinely destructive changes, not every ordinary scoped edit.
 - Read and use `scripts/milestone_backup.sh` (also installed as
   `/home/nick/.local/bin/codex-milestone-backup`). It preserves the entire
   working tree, all-ref history bundle, dirty patches and checksums.
@@ -68,7 +71,7 @@ commit and normal push after every reviewed research milestone (2026-09-05).
 - Quiesce source edits while taking the snapshot. Record its exact path,
   checksum and covered HEAD. Failed/partial snapshots are not completed
   backups and must not be silently removed.
-- After verification, commit only reviewed in-scope work, update status
+- Commit only reviewed in-scope work, update status
   and provenance, then push to the verified intended remote/branch. Preserve
   unfinished agent work and unrelated dirty files. Never force-push.
   Verify the remote SHA and record the checkpoint and next unresolved target.

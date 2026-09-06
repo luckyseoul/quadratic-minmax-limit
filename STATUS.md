@@ -42,6 +42,30 @@ See `ARTIFACTS.md` for the preserved branches and terminology.
 
 ## Fresh mathematical target
 
+The [all-law source-gain milestone](evidence/original_mo_all_law_source_gain_milestone.json)
+and [adaptive proof](evidence/NOTE_2026-09-06_ALL_LAW_ADAPTIVE_NUCLEAR_GAIN.md)
+prove for ACTUAL complete symmetric zero-diagonal A that
+`limsup ||A||op/sqrt(n)<=5/3` and `limsup tr|A|/n^(3/2)<=4/5` imply
+`liminf Phi(A)/n^(3/2)>=2/5+7/55000`, without a limiting spectral law.
+The [two-moment transfer](evidence/NOTE_2026-09-06_TWO_CROSS_MOMENT_SOURCE_NUCLEAR_TRANSFER.md)
+needs ACTUAL paired K=[[A,B],[B^T,-A]], positive diagonal
+D=diag(D_L,D_R) with D+/-K>=0, and
+`delta=tr(D)tr(D^(-1))/(2n)^2-1->0`.
+For W=D_L^(-1/2) B D_R^(-1/2), Y=WW^T, retain the FULL actual
+moments `m_D=tr(Y)/n` and `Delta_D=tr[Y(I-Y)]/n`.
+If every accumulation point satisfies `9/25<=m<=1/2` and
+`0<=Delta<=m[4sqrt(m)-3sqrt(1-m)]^2/25`, the same original-source
+gap follows via a common large principal source. In particular
+`liminf m_D>=2/5`, `limsup Delta_D<=1/1600` suffice with delta->0.
+No full cross/internal law, separate trace cap, diagonal optimality,
+or active state is assumed. The [endpoint transfer](evidence/NOTE_2026-09-06_CROSS_ENDPOINT_SOURCE_NUCLEAR_TRANSFER.md)
+remains the Delta=0 case; the older near-flat theorem keeps its larger
+gap at its narrower law. The source operator cap and paired dispersion/
+moment premises remain conditional, and the paired field is unchanged.
+The region is sufficient for exclusion, not necessary; prior formal
+certificates retain their listed scope. No mathematical run was used.
+Other regions, the all-cell implication, and original convergence remain OPEN.
+
 The [original-source strict-gain milestone](evidence/original_mo_original_source_strict_gain_milestone.json)
 adds a reviewed ACTUAL source-entry restriction beyond the older formal
 relaxation below. For complete symmetric zero-diagonal A with

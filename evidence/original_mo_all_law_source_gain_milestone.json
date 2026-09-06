@@ -1,0 +1,81 @@
+{
+  "schema": "original_mo_all_law_source_gain_milestone_v1",
+  "date_utc": "2026-09-06",
+  "base_commit": "1d11fc357b01377158ecf43c0456db1643adb90b",
+  "branch": "main",
+  "remote": "https://github.com/luckyseoul/quadratic-minmax-limit.git",
+  "classification": "Reviewed conditional actual-source adaptive gain without a spectral-law hypothesis, and two-cross-moment transfer; original convergence OPEN",
+  "conclusions": [
+    "Actual complete symmetric zero-diagonal A with limsup ||A||op/sqrt(n)<=5/3 and limsup tr|A|/n^(3/2)<=4/5 satisfies liminf Phi(A)/n^(3/2)>=35/88+3/1250=2/5+7/55000. No full spectral-law or diagonal-homogeneity hypothesis.",
+    "Adaptive clipped Boolean updates operate on the SAME actual nuclear-baseline phase. Uniform higher-chaos pairing and joint two-variable Gaussianization justify the heterogeneous convex-perspective gain; no all-field joint CLT or unproved square-payoff uniform integrability is used.",
+    "For ACTUAL K=[[A,B],[B^T,-A]] and any positive DIAGONAL D=diag(D_L,D_R) with D+/-K>=0, retain delta=tr(D)tr(D^(-1))/(2n)^2-1->0. With W=D_L^(-1/2) B D_R^(-1/2), Y=WW^T, the full moments are m_D=tr(Y)/n and Delta_D=tr[Y(I-Y)]/n.",
+    "If every accumulation point (m,Delta) lies in 9/25<=m<=1/2, 0<=Delta<=m[4sqrt(m)-3sqrt(1-m)]^2/25, a common large original principal source gives both certified caps and transfers the same strict lower to Phi(A)/n^(3/2). A sufficient rectangle is liminf m_D>=2/5 and limsup Delta_D<=1/1600, retaining delta->0.",
+    "The transfer uses a finite noncommuting Schatten bound and completeness to recover scale. No full cross or internal law, separate trace cap, diagonal optimality or active-state condition is assumed. The endpoint-law theorem is retained as the zero-defect case.",
+    "The region is sufficient, not necessary for exclusion. The older near-flat theorem retains its stronger gap under narrower hypotheses. Earlier formal certificates retain their listed relaxation scope; no actual counterexample was supplied there."
+  ],
+  "proof_sources": [
+    {
+      "path": "evidence/NOTE_2026-09-06_ALL_LAW_ADAPTIVE_NUCLEAR_GAIN.md",
+      "lines": 553
+    },
+    {
+      "path": "evidence/NOTE_2026-09-06_CROSS_ENDPOINT_SOURCE_NUCLEAR_TRANSFER.md",
+      "lines": 230
+    },
+    {
+      "path": "evidence/NOTE_2026-09-06_TWO_CROSS_MOMENT_SOURCE_NUCLEAR_TRANSFER.md",
+      "lines": 255
+    }
+  ],
+  "review_provenance": {
+    "root": "Fully read all three frozen sources, all seven complete author/reviewer receipts, and the full documentation proposal and actual additions. Contributed all-law extension/UI and finite two-moment Schatten bound; independently reviewed endpoint transfer.",
+    "all_law": "Proofer author and exact contributor/reviewer; docs independently reviewed the new all-law core, with older prerequisite contributions disclosed.",
+    "endpoint_transfer": "Exact author; independent full docs review, with earlier prerequisite roles disclosed.",
+    "two_moment_transfer": "Exact author using root's finite Schatten inequality; independent complete docs review. Root checked the threshold and composition.",
+    "documentation": "Full 96-line proposal and all 78 added summary lines read by root; eleven imports are byte-identical to frozen /tmp files. Older documentation is preserved."
+  },
+  "new_mathematical_computation": false,
+  "no_src_test_or_global_predicate_changes": true,
+  "documentation_gate": "evidence/original_mo_all_law_source_gain_docs_gate.json",
+  "backup_policy": {
+    "user_clarification": "2026-09-06: work more, backup less; backups are for major milestones",
+    "new_backup_taken": false,
+    "reason": "This supporting extension and routine publication do not trigger a fresh major-milestone checkpoint. No destructive action.",
+    "persistent_rule": "/home/nick/.codex/AGENTS.md",
+    "persistent_rule_sha256": "6a57c0fb230bc348d7539160ef7eafb9cd525c75597680010987271bc924a564",
+    "repository_rule": "AGENTS.md"
+  },
+  "global_status": "OPEN",
+  "next_implication": "Handle consequential remaining actual-source profiles or strengthen the Boolean all-cell upper. Actual operator caps and paired small-dispersion/moment hypotheses are not established for arbitrary original minimizers. New outlier-aware upper work remains unpublished and outside this bundle.",
+  "import_aliases": {
+    "/tmp/original_mo_all_law_adaptive_nuclear_gain.md": "evidence/NOTE_2026-09-06_ALL_LAW_ADAPTIVE_NUCLEAR_GAIN.md",
+    "/tmp/original_mo_all_law_adaptive_nuclear_gain_author_receipt.md": "evidence/original_mo_all_law_adaptive_nuclear_gain_author_review.md",
+    "/tmp/original_mo_all_law_adaptive_nuclear_gain_exact_review.md": "evidence/original_mo_all_law_adaptive_nuclear_gain_exact_review.md",
+    "/tmp/original_mo_all_law_adaptive_nuclear_gain_docs_review.md": "evidence/original_mo_all_law_adaptive_nuclear_gain_docs_review.md",
+    "/tmp/original_mo_near_scalar_cross_endpoint_source_nuclear_transfer.md": "evidence/NOTE_2026-09-06_CROSS_ENDPOINT_SOURCE_NUCLEAR_TRANSFER.md",
+    "/tmp/original_mo_near_scalar_cross_endpoint_source_nuclear_transfer_author_receipt.md": "evidence/original_mo_cross_endpoint_source_nuclear_transfer_author_review.md",
+    "/tmp/original_mo_near_scalar_cross_endpoint_source_nuclear_transfer_docs_review.md": "evidence/original_mo_cross_endpoint_source_nuclear_transfer_docs_review.md",
+    "/tmp/original_mo_near_scalar_two_cross_moment_source_nuclear_transfer.md": "evidence/NOTE_2026-09-06_TWO_CROSS_MOMENT_SOURCE_NUCLEAR_TRANSFER.md",
+    "/tmp/original_mo_near_scalar_two_cross_moment_source_nuclear_transfer_author_receipt.md": "evidence/original_mo_two_cross_moment_source_nuclear_transfer_author_review.md",
+    "/tmp/original_mo_near_scalar_two_cross_moment_source_nuclear_transfer_docs_review.md": "evidence/original_mo_two_cross_moment_source_nuclear_transfer_docs_review.md",
+    "/tmp/original_mo_all_law_source_gain_root_review.md": "evidence/original_mo_all_law_source_gain_root_review.md"
+  },
+  "sha256": {
+    "evidence/NOTE_2026-09-06_ALL_LAW_ADAPTIVE_NUCLEAR_GAIN.md": "0a7c553e29d4e3ac1572edb0e3fc795bc4d252d090061181365f01764c500a51",
+    "evidence/original_mo_all_law_adaptive_nuclear_gain_author_review.md": "cc47e39b7eead99cbec74d6c684e5046d9217e350b8b7cc7f36a36ba3c097983",
+    "evidence/original_mo_all_law_adaptive_nuclear_gain_exact_review.md": "4cd6d5059cb75f76766864777778f4366449aa72fb7fdfc959d8037b95dc8055",
+    "evidence/original_mo_all_law_adaptive_nuclear_gain_docs_review.md": "ac30760bb60d1fa007f584c2b885a6a92f62c6ae51a796dd28b0ad6f5b993ea3",
+    "evidence/NOTE_2026-09-06_CROSS_ENDPOINT_SOURCE_NUCLEAR_TRANSFER.md": "6a486df0fd46aa76259e3f02e3734eb2529162500f98f89af58e90562e6a2187",
+    "evidence/original_mo_cross_endpoint_source_nuclear_transfer_author_review.md": "345c96871c15a798d23803af4c00bb618607e6a770fe65823a2fde7ab3ed11c9",
+    "evidence/original_mo_cross_endpoint_source_nuclear_transfer_docs_review.md": "e7ff6d10d2ebde43320ea89995352c0c5cb9af4eaef6b77b996b18cf751af2d0",
+    "evidence/NOTE_2026-09-06_TWO_CROSS_MOMENT_SOURCE_NUCLEAR_TRANSFER.md": "32c1e47608c1dc06037ababb6c3c34934fdea5546df17527e94f6509562e6525",
+    "evidence/original_mo_two_cross_moment_source_nuclear_transfer_author_review.md": "435a409ff60e3e523bd4e4c88dbefe8de0b623d1f17ad07b4527b31d564bdd93",
+    "evidence/original_mo_two_cross_moment_source_nuclear_transfer_docs_review.md": "4adae2d3650ec6ffb2f91c02e95b767e1b023857f22f8756fe72bfa70e725985",
+    "evidence/original_mo_all_law_source_gain_root_review.md": "fb68bbd4de13f446debeaff77fbb000fc2e34ec93a0b9ead56c18af43b080c72",
+    "AGENTS.md": "06ccf213b91b7a3c298ef4b780a7a26026c0e877813ee4b73bf41ad47aeec1ae",
+    "HANDOFF.md": "e8f179521b2d39b4cb55b1e0850da2dfb83bfa6754cec409bb6e2f00d419852c",
+    "STATUS.md": "da0c8de1e198a2c5cacd111bda5f019d181d646d1545197462f0597ceab8094c",
+    "evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md": "7d863328f7b9bbd0b85bbad043316ea2622c99c839378962fc944159b48d1330",
+    "evidence/original_mo_all_law_source_gain_docs_gate.json": "11aa96b591ac2d227fa3bed878ffa5e587523761a2f7536cf651685f7b220e38"
+  }
+}
