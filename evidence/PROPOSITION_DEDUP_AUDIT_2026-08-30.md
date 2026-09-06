@@ -8,6 +8,54 @@ The old ledgers are fully preserved on the two branches in `ARTIFACTS.md`.
 No local theorem is made false by parking its route; no open implication
 is made necessary for the original problem by its old status field.
 
+**Actual original-source near-flat strict gain (2026-09-06).**
+`original_mo_original_source_strict_gain_milestone.json` records three
+reviewed analytic sources: the full original-source strict gain, its
+distribution-free fixed-update scalar support, and the cap-free
+common-principal internal-law transfer. The actual complete symmetric
+zero-diagonal source theorem assumes limsup ||A||op/sqrt(n)<=5/3
+and the FULL empirical law
+`(9/25)delta_0+(8/25)(delta_(5/4)+delta_(-5/4))` for A/sqrt(n).
+It proves, with kappa=2/pi,
+`liminf Phi(A)/n^(3/2)>=5kappa/8+16/3125>2/5+3/1100`.
+
+This is a same-source ORIGINAL quadratic-norm result, not another
+cross-norm transfer or trace-only profile check. Good-coordinate
+normalization of the positive projector supplies a genuine full
+correlation. Uniform Schur-power trace pairing gives higher-chaos
+mean at least 1-kappa-o(1); a trace of (A-lambda I)^2 R gives the
+first-chaos variance alignment. The new distinguished-coordinate
+contractions justify both local absolute moments and disagreement
+probabilities, including degenerate Gaussian endpoints. This is a
+uniform two-variable marginal limit, not a joint CLT for n fields.
+The actual independent Boolean update uses FIXED epsilon=1/10 and
+retains the 5/3 operator penalty, not the weak-law atom 5/4. Neither
+exact finite-order flatness nor absence of outliers is inferred.
+
+For an ACTUAL paired K and ANY positive diagonal D=diag(D_L,D_R)
+with D+/-K>=0, the separate transfer assumes delta->0 and the FULL
+actual H_L=D_L^(-1/2) A D_L^(-1/2) law tending to
+`chi_*=(9/25)delta_0+(8/25)(delta_(3/4)+delta_(-3/4))`, where
+`delta=tr(D)tr(D^(-1))/(2n)^2-1`.
+One common original principal A_J has q/n->1, the required law at
+5/4 and limsup operator cap 5/3. Literal complete sign squares and
+the nonzero full internal second moment force dbar/sqrt(q)->5/3,
+where dbar=tr(D)/(2n).
+No extra trace cap, trace optimality, cross-law condition, or active
+Boolean state is needed. Phi(A_J)<=Phi(A) transfers the strict lower;
+the paired covariance, cross block and active field are not replaced.
+
+The specified ACTUAL near-scalar chi_* regime at normalized objective
+2/5 is therefore excluded. The older strengthened FORMAL boundary
+below remains true at its explicitly listed relaxation: that list
+did not include this new original-source restriction, and its assigned
+norms were never realized by complete signings. Preserve that result
+and its exact scope; do not relabel it a signing counterexample or
+repeat the same trace-only scan as a new actual-entry argument.
+No mathematical job was run. Arbitrary optimizers are not proved
+near-scalar or to have chi_*; the remaining actual profiles, all-cell
+implication, and original convergence remain OPEN.
+
 **Full weighted cross gain and strengthened formal boundary (2026-09-06).**
 `original_mo_weighted_cross_gain_boundary_milestone.json` completes the
 transfer left unpublished at the older scalar-gain checkpoint below.

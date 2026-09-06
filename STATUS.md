@@ -42,6 +42,41 @@ See `ARTIFACTS.md` for the preserved branches and terminology.
 
 ## Fresh mathematical target
 
+The [original-source strict-gain milestone](evidence/original_mo_original_source_strict_gain_milestone.json)
+adds a reviewed ACTUAL source-entry restriction beyond the older formal
+relaxation below. For complete symmetric zero-diagonal A with
+`limsup ||A||op/sqrt(n)<=5/3` and FULL empirical law of A/sqrt(n)
+tending to `(9/25)delta_0+(8/25)(delta_(5/4)+delta_(-5/4))`, it proves
+`liminf Phi(A)/n^(3/2)>=5kappa/8+16/3125>2/5+3/1100`, kappa=2/pi.
+The proof improves an actual positive Gaussian phase by a FIXED 10%
+independent-coordinate Boolean update on the original source. Its
+uniform Gaussianization is joint only for one local field and one
+distinguished input coordinate, not all fields simultaneously. The
+stronger higher-chaos mean and trace-of-square alignment are retained.
+The update penalty uses the actual 5/3 operator cap; the weak-law atom
+5/4 is not an operator bound or an exact finite-order flatness claim.
+
+The separately reviewed internal-law transfer needs only an ACTUAL
+paired K=[[A,B],[B^T,-A]], ANY feasible positive diagonal
+D=diag(D_L,D_R) with D+/-K>=0, dispersion
+`delta=tr(D)tr(D^(-1))/(2n)^2-1->0`, and FULL actual H_L law tending to
+`chi_*=(9/25)delta_0+(8/25)(delta_(3/4)+delta_(-3/4))`, where
+H_L=D_L^(-1/2) A D_L^(-1/2). A common original principal source
+supplies the 5/3 cap and the law at 5/4; completeness determines the
+scale without a separate trace cap, trace optimality, cross law, or
+active-state premise. Its norm comparison transfers the same strict
+lower to the original Phi(A)/n^(3/2). No paired covariance, cross
+block, or active field is replaced.
+
+Thus the specified ACTUAL near-scalar internal-law regime at objective
+2/5 is excluded. The older strengthened FORMAL certificate calculation
+is still valid for its explicitly retained relaxation, which omitted
+this new source-entry information; it was never an actual-signing
+counterexample. Its checkpoint below is preserved as history. Small
+dispersion and this internal law are not established for arbitrary
+extremizers; other profiles and the all-cell implication remain open.
+No mathematical run was used, and original convergence remains OPEN.
+
 The [weighted cross gain and strengthened formal boundary](evidence/original_mo_weighted_cross_gain_boundary_milestone.json)
 complete the weighted transfer marked unpublished in the historical
 scalar-gain checkpoint below. For ANY positive feasible D of the ACTUAL

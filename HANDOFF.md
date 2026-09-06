@@ -21,6 +21,61 @@ predicates. Valid local results retain their stated scope and evidence.
 
 ## Next mathematical work
 
+The latest reviewed actual-source milestone (2026-09-06) is
+`evidence/original_mo_original_source_strict_gain_milestone.json`.
+Its full proof is
+`evidence/NOTE_2026-09-06_ORIGINAL_SOURCE_NEAR_FLAT_STRICT_GAIN.md`
+(SHA-256 `7726b89e1c39429cde75ff887b981cbd3cf831adb17b04f20193a3c6dbb35298`).
+For ACTUAL complete symmetric zero-diagonal signings A, assume
+`limsup ||A||op/sqrt(n)<=5/3` and the FULL empirical eigenvalue law
+of A/sqrt(n) tends to
+`(9/25)delta_0+(8/25)(delta_(5/4)+delta_(-5/4))`. Then, kappa=2/pi,
+
+`liminf Phi(A)/n^(3/2)>=5kappa/8+16/3125>2/5+3/1100`.
+
+This is an ORIGINAL same-order quadratic-norm lower bound. It uses a
+robustly normalized positive spectral projector, uniform higher-chaos
+mean variance at least 1-kappa-o(1), and trace-of-square first-chaos
+alignment. The Gaussianization extension proves a joint limit of ONE
+local field and ONE distinguished Gaussian input coordinate, uniformly
+over rows; it does not claim a growing-dimensional joint field limit.
+An actual independent-coordinate Boolean update with FIXED probability
+1/10 improves the positive phase. Its penalty retains the actual 5/3
+operator cap, not the limiting nonzero atom 5/4. Weak empirical flatness
+does not imply exact finite-order flatness, a large exact kernel, or
+absence of spectral outliers. The distribution-free scalar support is
+`evidence/NOTE_2026-09-06_ORIGINAL_SOURCE_LOCAL_UPDATE_SCALAR_GAIN.md`
+(SHA-256 `7de99c4bbf997fc25eafa2742cb55c220dc13fdf29d0b1ae535358ea8c73f155`).
+
+The separate cap-free transfer is
+`evidence/NOTE_2026-09-06_NEAR_SCALAR_INTERNAL_FLAT_LAW_TRANSFER.md`
+(SHA-256 `f65ce2200fd926ba969c9bc5bbaf8ecec8a79b8d228e0f17865fc56c9d9775a8`).
+For the ACTUAL paired K=[[A,B],[B^T,-A]], take ANY positive diagonal
+D=diag(D_L,D_R) with D+/-K>=0. If
+`delta=tr(D)tr(D^(-1))/(2n)^2-1->0` and the FULL actual law of
+H_L=D_L^(-1/2) A D_L^(-1/2) tends to
+`chi_*=(9/25)delta_0+(8/25)(delta_(3/4)+delta_(-3/4))`,
+one common original principal A_J, q=|J| with q/n->1, has the
+law at 0 and plus or minus 5/4 for A_J/sqrt(q),
+limsup ||A_J||op/sqrt(q)<=5/3, and satisfies
+`Phi(A_J)/q^(3/2)<=Phi(A)/n^(3/2)+o(1)`.
+Completeness and the full second moment force dbar/sqrt(q)->5/3,
+dbar=tr(D)/(2n); no separate trace cap or trace optimality is needed.
+No cross-law or active-state condition is required. The auxiliary
+source only lower-bounds the original norm and never replaces the
+paired covariance, cross block, or active field.
+
+Composition excludes the specified ACTUAL near-scalar internal-law
+regime with Phi(A)/n^(3/2)->2/5 underlying the strengthened formal
+profile below. The older formal certificate boundary remains correct
+for its explicitly listed relaxation, which did not include this new
+original-source entry constraint; no actual signing was supplied there.
+The following older checkpoints are retained as history. Neither small
+delta nor chi_* is proved for arbitrary candidate extremizers. Other
+actual profiles and the remaining all-cell implication still require
+work; unchanged trace-only scans do not establish those implications.
+No mathematical run was used. Original convergence remains OPEN.
+
 The latest paired milestone is
 `evidence/original_mo_weighted_cross_gain_boundary_milestone.json`.
 It completes the weighted transfer previously marked unpublished in

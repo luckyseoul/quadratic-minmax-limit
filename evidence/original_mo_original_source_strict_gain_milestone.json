@@ -1,0 +1,101 @@
+{
+  "schema": "original_mo_original_source_strict_gain_milestone_v1",
+  "date_utc": "2026-09-06",
+  "base_commit": "c61ce254dbf6a967e5722b84ef6b77f7ec62f4e7",
+  "branch": "main",
+  "remote": "https://github.com/luckyseoul/quadratic-minmax-limit.git",
+  "classification": "Reviewed actual original-source strict gain and cap-free near-scalar internal-law transfer; original convergence remains OPEN",
+  "conclusions": [
+    "For actual complete symmetric zero-diagonal signings A with limsup ||A||op/sqrt(n)<=5/3 and FULL empirical law of A/sqrt(n) tending to (9/25)delta_0+(8/25)(delta_(5/4)+delta_(-5/4)), liminf Phi(A)/n^(3/2)>=5kappa/8+16/3125>2/5+3/1100, kappa=2/pi.",
+    "The proof uses a genuine positive Gaussian correlation frame, a uniform higher-chaos mean variance at least 1-kappa-o(1), trace-of-square first-chaos alignment, and joint Gaussianization of ONE local field with ONE distinguished Gaussian input coordinate. No joint limit of all fields or variance-only absolute-moment inference is used.",
+    "A fixed admissible 10% independent-coordinate Boolean update improves the original same-order quadratic norm. Its penalty uses the ACTUAL operator cap 5/3, not the limiting nonzero atom 5/4.",
+    "For actual paired K=[[A,B],[B^T,-A]], ANY positive DIAGONAL D=diag(D_L,D_R) feasible for D+/-K>=0, dispersion delta=tr(D)tr(D^(-1))/(2n)^2-1 tending to zero and FULL actual H_L law tending to chi_*=(9/25)delta_0+(8/25)(delta_(3/4)+delta_(-3/4)) suffice to recover one common principal original source with the required 5/3 operator limsup and full law at 0 and +/-5/4.",
+    "Completeness recovers the scale without an extra trace cap, trace optimality, cross-law or active-state premise. Original-norm comparison transfers the same strict lower to Phi(A)/n^(3/2). No paired covariance, cross block or active field is replaced.",
+    "This excludes the specified ACTUAL near-scalar internal-law regime at normalized objective 2/5. The earlier strengthened FORMAL certificate boundary is preserved and remains correct for its explicitly retained relaxation, which omitted the new source-entry constraint. No actual signing counterexample was previously supplied.",
+    "The separately classified replicated-row companion refutes only a generic exact-endpoint parity/rank stability upgrade. Its actual original objective tends to 1/sqrt(2), not 2/5; it is neither a theorem premise nor a separate claimed milestone."
+  ],
+  "proof_sources": [
+    {
+      "path": "evidence/NOTE_2026-09-06_ORIGINAL_SOURCE_NEAR_FLAT_STRICT_GAIN.md",
+      "lines": 612,
+      "classification": "Actual-source conditional strict-gain theorem"
+    },
+    {
+      "path": "evidence/NOTE_2026-09-06_ORIGINAL_SOURCE_LOCAL_UPDATE_SCALAR_GAIN.md",
+      "lines": 209,
+      "classification": "Distribution-free scalar lower for fixed admissible local updates"
+    },
+    {
+      "path": "evidence/NOTE_2026-09-06_NEAR_SCALAR_INTERNAL_FLAT_LAW_TRANSFER.md",
+      "lines": 141,
+      "classification": "Cap-free actual near-scalar internal-law transfer"
+    }
+  ],
+  "companion": {
+    "path": "evidence/NOTE_2026-09-06_EXACT_ENDPOINT_RANK_STABILITY_BARRIER.md",
+    "lines": 108,
+    "classification": "Scoped counterexample to generic exact-rank stability, not a main theorem dependency"
+  },
+  "review_provenance": {
+    "main_theorem": {
+      "root": "Contributing complete review of initial 611-line source followed by its sole final explicit-diagonal-D clarification; all complete final author/reviewer receipts read. No claim of a second complete 612-line root reread.",
+      "proof_worker": "Main author; full final source and prerequisite self-review.",
+      "exact_worker": "Independent review of new Sections 1-9, with earlier Gaussian prerequisite, phase and trace contributions and transfer authorship disclosed.",
+      "docs_worker": "Scalar-support and earlier AM-GM contributions disclosed; independently checked the other new proof links and complete final source."
+    },
+    "scalar_support": "Docs worker authored the scalar argument; exact worker independently reviewed its final complete 209-line source. Root and proofer read and checked the support.",
+    "internal_transfer": "Exact worker authored the complete 141-line transfer. Docs worker independently reviewed it; root read the complete source and final author/docs receipts.",
+    "companion": "Docs worker authored the rank-stability diagnostic; exact worker independently reviewed the full source. Root read source and final review.",
+    "documentation": "Root read complete proposal and actual 138 added lines; docs author supplied a separate complete applied-scope audit. Fourteen final imports, including that scope audit, are byte-identical to frozen /tmp sources."
+  },
+  "new_mathematical_computation": false,
+  "finite_n_rate_claimed": false,
+  "documentation_gate": "evidence/original_mo_original_source_strict_gain_docs_gate.json",
+  "pre_milestone_backup": {
+    "path": "/mnt/storage/backups/codex/quadratic-minmax-limit-2212b99a4c24/20260906T005530Z-c61ce254dbf6-pre-milestone-original-source-gain.G98Hzq",
+    "covered_head": "c61ce254dbf6a967e5722b84ef6b77f7ec62f4e7",
+    "sha256sums_sha256": "8cd0d7fae64c1d84e096408af9317ce4e17a6372f7bd723f32d1178ee5959499",
+    "receipt_sha256": "8d584970f23f24ec830baa549bb852c21afc4de69adf17a3a7b3c22c67e0e55d",
+    "source_archive_comparison_and_bundle_verified": true,
+    "scope": "Entire worktree and history, including the three primary proofs, companion diagnostic, nine author/review receipts, scope receipt, three canonical summaries and completed gate receipt. Only this manifest is added after snapshot verification."
+  },
+  "no_src_test_or_global_predicate_changes": true,
+  "global_status": "OPEN",
+  "next_implication": "Establish a consequential actual-source or Boolean-active restriction for the remaining spectral profiles, or change the upper argument. Small dispersion and the specified internal law are not established for arbitrary extremizers; the remaining all-cell upper implication and original convergence remain open.",
+  "import_aliases": {
+    "/tmp/original_mo_original_source_near_flat_strict_gain.md": "evidence/NOTE_2026-09-06_ORIGINAL_SOURCE_NEAR_FLAT_STRICT_GAIN.md",
+    "/tmp/original_mo_original_source_near_flat_strict_gain_author_receipt.md": "evidence/original_mo_original_source_near_flat_strict_gain_author_review.md",
+    "/tmp/original_mo_original_source_near_flat_strict_gain_exact_review.md": "evidence/original_mo_original_source_near_flat_strict_gain_exact_review.md",
+    "/tmp/original_mo_original_source_near_flat_strict_gain_docs_review.md": "evidence/original_mo_original_source_near_flat_strict_gain_docs_review.md",
+    "/tmp/original_mo_original_source_local_update_scalar_gain.md": "evidence/NOTE_2026-09-06_ORIGINAL_SOURCE_LOCAL_UPDATE_SCALAR_GAIN.md",
+    "/tmp/original_mo_original_source_local_update_scalar_gain_author_receipt.md": "evidence/original_mo_original_source_local_update_scalar_gain_author_review.md",
+    "/tmp/original_mo_original_source_local_update_scalar_gain_exact_review.md": "evidence/original_mo_original_source_local_update_scalar_gain_exact_review.md",
+    "/tmp/original_mo_near_scalar_internal_flat_law_transfer.md": "evidence/NOTE_2026-09-06_NEAR_SCALAR_INTERNAL_FLAT_LAW_TRANSFER.md",
+    "/tmp/original_mo_near_scalar_internal_flat_law_transfer_author_receipt.md": "evidence/original_mo_near_scalar_internal_flat_law_transfer_author_review.md",
+    "/tmp/original_mo_near_scalar_internal_flat_law_transfer_docs_review.md": "evidence/original_mo_near_scalar_internal_flat_law_transfer_docs_review.md",
+    "/tmp/original_mo_exact_endpoint_rank_stability_barrier.md": "evidence/NOTE_2026-09-06_EXACT_ENDPOINT_RANK_STABILITY_BARRIER.md",
+    "/tmp/original_mo_exact_endpoint_rank_stability_barrier_exact_review.md": "evidence/original_mo_exact_endpoint_rank_stability_barrier_exact_review.md",
+    "/tmp/original_mo_original_source_strict_gain_root_review.md": "evidence/original_mo_original_source_strict_gain_root_review.md",
+    "/tmp/original_mo_original_source_strict_gain_docs_scope_review.md": "evidence/original_mo_original_source_strict_gain_docs_scope_review.md"
+  },
+  "sha256": {
+    "evidence/NOTE_2026-09-06_ORIGINAL_SOURCE_NEAR_FLAT_STRICT_GAIN.md": "7726b89e1c39429cde75ff887b981cbd3cf831adb17b04f20193a3c6dbb35298",
+    "evidence/original_mo_original_source_near_flat_strict_gain_author_review.md": "dc9fd2ef2b174c8c994a6475d26787e902aa7ca67e3ab8617eabbdc461f03f9f",
+    "evidence/original_mo_original_source_near_flat_strict_gain_exact_review.md": "e5a0bc4a37558dfdb02e68ba600f86f309f5f490af652ef61e89ee4065e08fa4",
+    "evidence/original_mo_original_source_near_flat_strict_gain_docs_review.md": "cb9f8861e51c59040f6d84f3e1e4f0161b57e7f85b2627b06170650715bb0da4",
+    "evidence/NOTE_2026-09-06_ORIGINAL_SOURCE_LOCAL_UPDATE_SCALAR_GAIN.md": "7de99c4bbf997fc25eafa2742cb55c220dc13fdf29d0b1ae535358ea8c73f155",
+    "evidence/original_mo_original_source_local_update_scalar_gain_author_review.md": "74693d17bc646355a5fdac4be9aace460c8f85fd3f983bf22d45491fd2939fb1",
+    "evidence/original_mo_original_source_local_update_scalar_gain_exact_review.md": "8f01834cc576419c61f51ac790426e95b3ce1f4997bc390658f1bd42381f56e0",
+    "evidence/NOTE_2026-09-06_NEAR_SCALAR_INTERNAL_FLAT_LAW_TRANSFER.md": "f65ce2200fd926ba969c9bc5bbaf8ecec8a79b8d228e0f17865fc56c9d9775a8",
+    "evidence/original_mo_near_scalar_internal_flat_law_transfer_author_review.md": "3cd3e469d7669c72922746f8238fd9f819fd8964a2792d8bc5e28e73af112631",
+    "evidence/original_mo_near_scalar_internal_flat_law_transfer_docs_review.md": "bbade6ad8cd6539970f8e73075a22fe460d3e4b06fb7ceb13b5d24417f500465",
+    "evidence/NOTE_2026-09-06_EXACT_ENDPOINT_RANK_STABILITY_BARRIER.md": "c32b3d0aac5dd1551e91cc70c1c5755134222118fc5081d2092032cb77414dd4",
+    "evidence/original_mo_exact_endpoint_rank_stability_barrier_exact_review.md": "7d9980108c101c7cdfaa53ac9b04b902ee84ffc7b8e593a095fa3eff4410da3a",
+    "evidence/original_mo_original_source_strict_gain_root_review.md": "acf9e46b9dbce45c5b7e9a30e0c1d1016542531c79399b11481fcaa6f31ae5b8",
+    "evidence/original_mo_original_source_strict_gain_docs_scope_review.md": "0e4becde0a1999a8ea43c5aab38199e4b3cfe5b27a72a5eb1f39eac8cbdfab5b",
+    "HANDOFF.md": "5b209f7d2d9b7b9fd5e6882e4f5ae22233c9b060729ec2701be9ae51eaf94684",
+    "STATUS.md": "b3658787acbd2fdd421f170ac07c8e3a3b769d71e899cd661a3bab2692a6d739",
+    "evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md": "bf717be9dd911196cc97835d6c23136cbb3b1276f61ddc888d68a22d17838136",
+    "evidence/original_mo_original_source_strict_gain_docs_gate.json": "bd431eaf8f7f3378f9291756fc2ffc64d147e3b97891ab68f88ef9fe468562eb"
+  }
+}
