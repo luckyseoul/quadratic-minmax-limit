@@ -4,7 +4,31 @@ Updated 2026-09-06. Start with `CORE.md` and `STATUS.md`.
 The original MO limit is OPEN; `L=1/2` is also OPEN.
 The reviewed bounds now satisfy `1/pi < liminf alpha_n <= limsup alpha_n <= 1/2`.
 
+## Low-quota stop, 2026-09-06 09:17 UTC
+
+The user reported only 3% quota remaining. New hunts were stopped; preserve
+the [growth checkpoint](evidence/original_mo_growth_checkpoint_20260906/README.md)
+and its archive before resuming. It records the exact two-extension method,
+finite source-dependent traps, the exact Phi64=248 matrix certificate,
+reverse-entry exclusions, and the final exact two-old-edge repair witness.
+The proposed delayed-repair path DP was NOT launched. No global convergence
+argument was obtained. Do not restart a broad maze or treat finite progress
+as a demonstrated route to solving the original problem.
+
 ## Latest checkpoint: broad compute campaign
+
+Research commit `902539250598fd21e78a1d9a1f6dbf0233ed0f16` was pushed to
+`origin/main` and verified remotely. The one major large-drive backup is
+`/mnt/storage/backups/codex/quadratic-minmax-limit-2212b99a4c24/20260906T053702Z-902539250598-strict-floor-broad-campaign.bzktfR`.
+It covers that exact research HEAD, the strict-1/pi theorem, all four raw
+campaign packages, and the full repository/history. Archive comparison,
+bundle verification, checksums, and unchanged-source checks passed.
+The backup receipt SHA-256 is
+`30d03c8dfaeb295218ee5ef1f603c21d801e21ac0ca9b4829d7d20accb265ede`;
+see [publication.json](evidence/original_mo_broad_campaign_20260906/publication.json)
+for complete provenance. This navigation/receipt update is later metadata,
+not an additional research result. The research snapshot's focused status
+and documentation gate passed 38 tests in 2.11 seconds.
 
 The [campaign handoff](evidence/original_mo_broad_campaign_20260906/README.md)
 and its [hash/count manifest](evidence/original_mo_broad_campaign_20260906/manifest.json)

@@ -1,0 +1,18 @@
+{
+  "schema": "codex_milestone_backup_v1",
+  "source": "/home/nick/quadratic-minmax-limit",
+  "head": "902539250598fd21e78a1d9a1f6dbf0233ed0f16",
+  "branch": "main",
+  "utc": "20260906T053702Z",
+  "label": "strict-floor-broad-campaign",
+  "destination": "/mnt/storage/backups/codex/quadratic-minmax-limit-2212b99a4c24/20260906T053702Z-902539250598-strict-floor-broad-campaign.bzktfR",
+  "mount_source": "/dev/sda2",
+  "git_dir": "/home/nick/quadratic-minmax-limit/.git",
+  "git_common_dir": "/home/nick/quadratic-minmax-limit/.git",
+  "scope": "Entire working tree including ignored/untracked files; complete Git dir and common-dir archives; all-ref Git bundle and staged/unstaged patches",
+  "full_archive_compared_to_source": true,
+  "bundle_verified": true,
+  "source_status_and_refs_unchanged": true,
+  "deletions": 0,
+  "complete": true
+}

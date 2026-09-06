@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-09-06T09:18:13Z",
+  "time_scope": "Historical archive-creation state; commit/push flags below predate subsequent user-requested Git publication.",
+  "classification": "LOW_QUOTA_LOCAL_PRESERVATION_CHECKPOINT_NOT_THEOREM_CLOSURE",
+  "archive": "checkpoint.tar.gz",
+  "archive_sha256": "f18159b14045fe5d64542cad749ada4a1ea76e66f578d5f88dfb4e04970d5ecd",
+  "archive_bytes": 14564137,
+  "archive_entries_including_directories": 828,
+  "source_comparison_command": "tar -dzf evidence/original_mo_growth_checkpoint_20260906/checkpoint.tar.gz -C /tmp",
+  "source_comparison_exit_code": 0,
+  "git_diff_check_exit_code": 0,
+  "head": "902539250598fd21e78a1d9a1f6dbf0233ed0f16",
+  "branch": "main",
+  "previously_staged_metadata_paths_preserved": 7,
+  "new_checkpoint_committed": false,
+  "new_push_performed": false,
+  "new_large_drive_backup_performed": false,
+  "new_regression_or_proof_computation_performed_for_checkpoint": false,
+  "delayed_repair_path_search_launched": false,
+  "original_convergence_proved": false,
+  "original_nonconvergence_proved": false,
+  "scope": "Reviewed proof notes and retained finite evidence plus identified V100 scratch; not all historical raw logs. See README.md for provenance limitations and remaining temporary directories."
+}

@@ -88,6 +88,8 @@ these record counts are not the number of all heuristic scoring passes.
 
 Full counts, archive checksums, and extraction roots are pinned in
 [manifest.json](manifest.json). All owned search jobs finished naturally.
+The research commit, verified large-drive backup and exact backup coverage
+are recorded in [publication.json](publication.json).
 
 ## Preserved packages and replays
 
@@ -116,6 +118,13 @@ fresh directory, enter its extraction root, then run on a compute host:
 g++ -O3 -march=native -std=c++17 original_mo_broad_independent_verify32.cpp -o verify
 ./verify independent_winners/v100_n26_61.txt
 ./verify independent_winners/rx_n32_0.txt
+```
+
+The research snapshot's focused registry/documentation check passed 38 tests.
+From a compatible repository environment, its portable replay is:
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m pytest -q -n 14 tests/test_original_mo_status.py tests/test_main_chain_docs.py::test_main_chain_L_open_and_docs_ok
 ```
 
 Replaying an adaptive trajectory is scheduling/time dependent. Replaying

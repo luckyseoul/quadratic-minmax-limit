@@ -1,0 +1,29 @@
+{
+  "schema": "original_mo_campaign_publication_v1",
+  "research_commit": "902539250598fd21e78a1d9a1f6dbf0233ed0f16",
+  "remote": "https://github.com/luckyseoul/quadratic-minmax-limit",
+  "branch": "main",
+  "research_commit_pushed_and_remote_verified": true,
+  "backup": {
+    "path": "/mnt/storage/backups/codex/quadratic-minmax-limit-2212b99a4c24/20260906T053702Z-902539250598-strict-floor-broad-campaign.bzktfR",
+    "covered_head": "902539250598fd21e78a1d9a1f6dbf0233ed0f16",
+    "mount": "/mnt/storage",
+    "mount_source": "/dev/sda2",
+    "receipt_sha256": "30d03c8dfaeb295218ee5ef1f603c21d801e21ac0ca9b4829d7d20accb265ede",
+    "sha256sums_sha256": "18b19007ea9e70a9e72eea049ca6cbeab63270758fe3e9c93ecf20e02087ea36",
+    "full_worktree_compared": true,
+    "all_ref_bundle_verified": true,
+    "git_metadata_archives_verified": true,
+    "source_status_and_refs_unchanged": true,
+    "complete": true,
+    "scope": "Complete working tree, Git metadata, all-ref history, patches, global AGENTS and backup implementation. Includes strict-floor theorem and all four campaign packages."
+  },
+  "verification": {
+    "file": "verification.json",
+    "passed": 38,
+    "seconds": 2.11,
+    "scope": "Research snapshot before the later publication receipt; registry and documentation, not a global mathematical proof."
+  },
+  "global_problem_status": "OPEN",
+  "note": "This publication receipt and its navigation update are later metadata, not part of the covered research commit; no new research result is asserted."
+}
