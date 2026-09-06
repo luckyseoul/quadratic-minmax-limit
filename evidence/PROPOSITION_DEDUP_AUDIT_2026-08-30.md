@@ -8,6 +8,27 @@ The old ledgers are fully preserved on the two branches in `ARTIFACTS.md`.
 No local theorem is made false by parking its route; no open implication
 is made necessary for the original problem by its old status field.
 
+**Cap-free source gain and universal strict lower (2026-09-06).**
+`original_mo_cap_free_source_global_gap_milestone.json` groups
+`NOTE_2026-09-06_ALL_LAW_SECOND_MOMENT_TAIL_GAIN.md` and
+`NOTE_2026-09-06_ORIGINAL_SOURCE_NEAR_FLAT_CAP_FREE_GAIN.md`.
+For ACTUAL complete symmetric zero-diagonal signings, the first extends
+the unchanged F_C gain to vanishing second-moment tails beyond fixed C.
+Its saturation contradiction proves `liminf alpha_n>1/pi`, hence an
+unspecified eventual uniform positive gap, NOT a universal F_1(1) bound.
+Its stronger bulk-rank corollary gives `liminf alpha(A)>=2/5+7/55000`
+from o(n) eigenvalues beyond EVERY fixed C'>5/3 and nuclear limsup<=4/5
+for A/sqrt(n). The existing cubic bootstrap controls the tail on a
+hypothetical violating bounded-objective subsequence; rank alone is not
+a general second-moment estimate. The second note keeps the larger
+`5kappa/8+16/3125>2/5+3/1100` gain from the full near-flat law alone.
+Both retain the full original objective through smoothed bulk means and
+Boolean rounding. No actual source cap, new CLT, fourth-moment claim,
+uniform tail rate, or covariance bound on unsmoothed updates is inserted.
+Preserve capped predecessors and earlier scoped upper/boundary records.
+Convergence, its value, and the original all-cell comparison remain OPEN;
+the completion-only global registry remains unchanged.
+
 **Cross-spike mass and whole-profile upper (2026-09-06).**
 `original_mo_cross_spike_bulk_upper_milestone.json` groups
 `NOTE_2026-09-06_ACTUAL_CROSS_RADIUS_SHELL_UPPER.md`,

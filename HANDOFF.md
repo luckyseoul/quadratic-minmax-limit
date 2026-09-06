@@ -1,7 +1,8 @@
 # Handoff: original convergence problem
 
-Updated 2026-09-05. Start with `CORE.md` and `STATUS.md`.
+Updated 2026-09-06. Start with `CORE.md` and `STATUS.md`.
 The original MO limit is OPEN; `L=1/2` is also OPEN.
+The reviewed bounds now satisfy `1/pi < liminf alpha_n <= limsup alpha_n <= 1/2`.
 
 ## Preservation and reset
 
@@ -20,6 +21,23 @@ construction. The original-problem status is separate from route-local
 predicates. Valid local results retain their stated scope and evidence.
 
 ## Next mathematical work
+
+The [cap-free source milestone](evidence/original_mo_cap_free_source_global_gap_milestone.json)
+preserves two reviewed original-source extensions. Section 8 of the
+[all-law tail theorem](evidence/NOTE_2026-09-06_ALL_LAW_SECOND_MOMENT_TAIL_GAIN.md)
+proves an unspecified eventual uniform gap above 1/pi for ALL complete
+symmetric zero-diagonal signings. It proves neither convergence nor a
+numeric gap; F_1(1) bounds only the excluded saturation sequence.
+For M=A/sqrt(n), the same note gives `liminf alpha(A)>=2/5+7/55000`
+if EVERY fixed C'>5/3 has only o(n) eigenvalues with |lambda(M)|>C'
+and `limsup tr|M|/n<=4/5`. No operator cap or full limiting law is needed.
+The [cap-free near-flat theorem](evidence/NOTE_2026-09-06_ORIGINAL_SOURCE_NEAR_FLAT_CAP_FREE_GAIN.md)
+retains `5kappa/8+16/3125>2/5+3/1100` from the FULL law
+`(9/25)delta_0+(8/25)(delta_(5/4)+delta_(-5/4))` alone, kappa=2/pi.
+The gain uses the full original source and Boolean rounding, with fixed
+smoothing first and n->infinity before smoothing is removed. Do not infer
+a fourth-moment bound, a uniform tail rate, or covariance control for the
+unsmoothed update. Preserve prior records; global order comparison remains OPEN.
 
 The new [cross-spike/bulk upper milestone](evidence/original_mo_cross_spike_bulk_upper_milestone.json)
 contains an [arbitrary-profile ORIGINAL-target region](evidence/NOTE_2026-09-06_WHOLE_PROFILE_CROSS_BULK_UPPER.md).

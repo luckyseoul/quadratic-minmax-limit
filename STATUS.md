@@ -1,6 +1,6 @@
 # Current mathematical status
 
-Updated 2026-09-05. The original MO limit is OPEN.
+Updated 2026-09-06. The original MO limit is OPEN.
 
 There is no reviewed proof of convergence or nonconvergence. The value
 `1/2` is unproved. These statements are independent of the status of the
@@ -12,7 +12,11 @@ optional Paley research program.
 `m_n` is nondecreasing, consecutive `alpha_n` differences tend to zero,
 the limit-point set is an interval, and
 
-`1/pi <= liminf alpha_n <= limsup alpha_n <= 1/2`.
+`1/pi < liminf alpha_n <= limsup alpha_n <= 1/2`.
+
+The strict lower is the reviewed source-gain corollary below: there is
+an unspecified eventual uniform positive gap above 1/pi, not a numerical
+gap or a proof of convergence. CORE's finite 1/pi proof is unchanged.
 
 The upper bound uses conference constructions, not their optimality.
 Ratio-dense transfer and two-multiplier Dini amplification are valid
@@ -41,6 +45,24 @@ available; unproved bridges have not been promoted or declared false.
 See `ARTIFACTS.md` for the preserved branches and terminology.
 
 ## Fresh mathematical target
+
+The [cap-free source milestone](evidence/original_mo_cap_free_source_global_gap_milestone.json)
+contains the [all-law tail theorem](evidence/NOTE_2026-09-06_ALL_LAW_SECOND_MOMENT_TAIL_GAIN.md).
+For ACTUAL complete symmetric zero-diagonal A, put M=A/sqrt(n).
+At any fixed C>=1, `tr[M^2 1_(|M|>C)]/n->0` gives the original
+gain `liminf[Phi(A)/n^(3/2)-F_C(tr|M|/n)]>=0`, with no actual operator cap.
+Its bulk-rank corollary needs only o(n) eigenvalues beyond EVERY fixed
+C'>5/3 and `limsup tr|M|/n<=4/5`, and gives `liminf alpha(A)>=2/5+7/55000`.
+The existing cubic bootstrap supplies tail control on any violating
+bounded-objective subsequence; no full spectral-law limit is required.
+The [cap-free near-flat theorem](evidence/NOTE_2026-09-06_ORIGINAL_SOURCE_NEAR_FLAT_CAP_FREE_GAIN.md)
+needs only the FULL M-law `(9/25)delta_0+(8/25)(delta_(5/4)+delta_(-5/4))`
+and retains `liminf alpha(A)>=5kappa/8+16/3125>2/5+3/1100`, kappa=2/pi.
+Full-source smoothed means pay the outlier energy before original
+Boolean rounding. The universal strict 1/pi corollary excludes saturation;
+F_1(1) is not a universal floor. The source regions above remain sufficient,
+not necessary; no all-cell comparison or convergence theorem follows.
+Earlier capped statements and historical records below retain their scope.
 
 The [cross-spike/bulk milestone](evidence/original_mo_cross_spike_bulk_upper_milestone.json)
 and [whole-profile proof](evidence/NOTE_2026-09-06_WHOLE_PROFILE_CROSS_BULK_UPPER.md)

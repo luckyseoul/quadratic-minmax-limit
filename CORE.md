@@ -126,6 +126,19 @@ m_n\ge\frac{n\sqrt{n-1}}\pi,\qquad
 In particular \(m_n=\Theta(n^{3/2})\), without assuming that any particular
 family is optimal.
 
+**Later strict asymptotic corollary (2026-09-06).** The reviewed
+[second-moment-tail source theorem](evidence/NOTE_2026-09-06_ALL_LAW_SECOND_MOMENT_TAIL_GAIN.md),
+Section 8, strengthens the asymptotic lower to
+\[
+\liminf_{n\to\infty}\alpha_n>\frac1\pi.
+\]
+Equivalently, some unspecified \(\varepsilon_0>0\) and \(n_0\) give
+\(\Phi(A)/n^{3/2}\ge1/\pi+\varepsilon_0\) for every complete signing
+of order \(n\ge n_0\). The proof excludes hypothetical saturation of
+the exact nuclear lower via full-source spectral-tail control and gain.
+It supplies neither a numerical \(\varepsilon_0\), convergence, nor a
+limit value; its \(F_1(1)\) is not an unconditional lower bound.
+
 ## 5. Transfer along ratio-dense subsequences
 
 Let \(2\le n_1<n_2<\cdots\) be an unbounded sequence of integers with
@@ -181,9 +194,11 @@ m_r\le\Phi(C)\le\tfrac12 r\|C\|_{\rm op}
 \]
 Apply Section 5 to the increasing orders \(r_k=q_k+1\). It follows that
 \[
-\frac1\pi\le\liminf_n\alpha_n
+\frac1\pi<\liminf_n\alpha_n
 \le\limsup_n\alpha_n\le\frac12.
 \]
+The strict lower is the later corollary in Section 4; the conference
+construction and ratio-dense transfer supply only the upper bound here.
 This uses conference matrices only as admissible constructions for an
 upper bound. It does not assert that they minimize \(\Phi\), or that the
 two ends of the sandwich coincide.

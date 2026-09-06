@@ -1,0 +1,72 @@
+{
+  "schema": "original_mo_cap_free_source_global_gap_milestone_v1",
+  "date": "2026-09-06",
+  "parent_head": "ef7e73dfd322353ddf06929dc28edc4295c61f6c",
+  "classification": "Reviewed analytic all-orders source lower theorems, including an unconditional strict asymptotic lower; NOT a convergence theorem",
+  "global_conclusion": "1/pi < liminf_n m_n/n^(3/2) <= limsup_n m_n/n^(3/2) <= 1/2",
+  "global_gap_scope": "There exist unspecified epsilon0>0 and n0 such that every actual complete symmetric zero-diagonal signing of order n>=n0 has Phi(A)/n^(3/2)>=1/pi+epsilon0. No numerical epsilon0, no unconditional F_1(1) floor, no convergence or limit value is asserted.",
+  "conditional_conclusions": [
+    "For M=A/sqrt(n), fixed C>=1 and tr[M^2 1(|M|>C)]/n->0, liminf[Phi(A)/n^(3/2)-F_C(tr|M|/n)]>=0. No actual operator cap, full law or diagonal homogeneity.",
+    "If every fixed C'>5/3 has o(n) eigenvalues of M beyond absolute cutoff C' and limsup tr|M|/n<=4/5, then liminf Phi(A)/n^(3/2)>=2/5+7/55000. Existing cubic bootstrap supplies tail control only on a hypothetical bounded-objective violating subsequence.",
+    "The FULL weak law (9/25)delta0+(8/25)(delta(5/4)+delta(-5/4)) alone yields liminf Phi(A)/n^(3/2)>=5kappa/8+16/3125>2/5+3/1100, kappa=2/pi, without an actual operator cap."
+  ],
+  "proof_mechanism": "Actual complete-source moments and own-diagonal bulk Gaussian phases retain the same nuclear baseline and higher-chaos noise. Odd smoothed adaptive means pay full-source outlier energy before independent Boolean rounding. Nuclear saturation forces spectral second-tail control and contradicts the new gain.",
+  "frozen_imports": [
+    {
+      "temporary_path": "/tmp/original_mo_original_source_near_flat_cap_free_gain.md",
+      "canonical_path": "evidence/NOTE_2026-09-06_ORIGINAL_SOURCE_NEAR_FLAT_CAP_FREE_GAIN.md",
+      "sha256": "0dfa5f62baaa57850a661bbc98d33d32440c783cccb11eaf5446feffbd81f7d4"
+    },
+    {
+      "temporary_path": "/tmp/original_mo_original_source_near_flat_cap_free_gain_author_receipt.md",
+      "canonical_path": "evidence/original_mo_original_source_near_flat_cap_free_gain_author_receipt.md",
+      "sha256": "6c37407a6058031a66e07115e859a1eddc876f17b6304468b1ff076eee584f4a"
+    },
+    {
+      "temporary_path": "/tmp/original_mo_original_source_near_flat_cap_free_gain_proof_review.md",
+      "canonical_path": "evidence/original_mo_original_source_near_flat_cap_free_gain_proof_review.md",
+      "sha256": "fa4fe402f5c2198941f1efd7049bf970bd6348b7915bb1bdeb093413ab6fb114"
+    },
+    {
+      "temporary_path": "/tmp/original_mo_all_law_second_moment_tail_gain.md",
+      "canonical_path": "evidence/NOTE_2026-09-06_ALL_LAW_SECOND_MOMENT_TAIL_GAIN.md",
+      "sha256": "c1288ded09bcfef09b6ae9e123b0816e159c10f1fa3745991177814b9bef77e2"
+    },
+    {
+      "temporary_path": "/tmp/original_mo_all_law_second_moment_tail_gain_proof_review.md",
+      "canonical_path": "evidence/original_mo_all_law_second_moment_tail_gain_proof_review.md",
+      "sha256": "30906bb945aaebf9165268d6ac5d5f8f35a9e9cf5bbe882ef68317f60f0d5b85"
+    }
+  ],
+  "reviews": {
+    "author": "Exact worker authored both complete sources; the near-flat author receipt and the general source's embedded full self-read are retained.",
+    "independent_new_source_reviewer": "Proof worker fully reviewed the new 325-line and 440-line sources without contributing their new proofs before review. Older prerequisite authorship is disclosed in both independent receipts.",
+    "root": "Contributing mathematical reviewer: directly read complete 325-line source, 61-line author receipt, 103-line independent review, 440-line source and 98-line independent review; all PASS without correction. Full required predecessor proofs were read. Root fully read the final four-document diff and the complete 121-line documentation-gate receipt.",
+    "docs_worker": "Contributed specified source links; directly read both complete frozen sources and independent reviews, drafted and fully read the concise four-document patch, and ran the single metadata gate. Not an independent whole-source mathematical reviewer."
+  },
+  "verification": {
+    "mathematical_computation": "None; no new checker, solver, spectral scan, integral evaluation or census",
+    "documentation_gate": "evidence/original_mo_cap_free_source_global_gap_docs_gate.json",
+    "runs": 1,
+    "result": "PASS; docs_ok=true; original completion registry remains valid, empty and OPEN",
+    "input_count": 880,
+    "unchanged_source_modules": 872,
+    "controller_manifest_recheck": "Root independently rechecked all 880 staged-input hashes against the final checkout and byte-compared all five imports with frozen sources.",
+    "core_scope": "CORE.md separately hashed and fully read; it and proof notes are not scanner inputs.",
+    "no_source_or_global_completion_registry_changes": true
+  },
+  "scope_and_next_target": "Convergence, nonconvergence, the limit value, and the all-cell order comparison remain OPEN. Current work attacks the direct paired Gaussian comparison and exact minimizing-source/optimized-pressure variations; neither follows from the strict floor. Earlier finite proof, conditional theorems and architecture boundaries are preserved.",
+  "preservation": "No new backup in this publication; the user's work-more, backup-less directive and major-checkpoint cadence remain in force. No earlier backup is claimed to cover these new files.",
+  "sha256": {
+    "evidence/NOTE_2026-09-06_ALL_LAW_SECOND_MOMENT_TAIL_GAIN.md": "c1288ded09bcfef09b6ae9e123b0816e159c10f1fa3745991177814b9bef77e2",
+    "evidence/NOTE_2026-09-06_ORIGINAL_SOURCE_NEAR_FLAT_CAP_FREE_GAIN.md": "0dfa5f62baaa57850a661bbc98d33d32440c783cccb11eaf5446feffbd81f7d4",
+    "evidence/original_mo_all_law_second_moment_tail_gain_proof_review.md": "30906bb945aaebf9165268d6ac5d5f8f35a9e9cf5bbe882ef68317f60f0d5b85",
+    "evidence/original_mo_original_source_near_flat_cap_free_gain_author_receipt.md": "6c37407a6058031a66e07115e859a1eddc876f17b6304468b1ff076eee584f4a",
+    "evidence/original_mo_original_source_near_flat_cap_free_gain_proof_review.md": "fa4fe402f5c2198941f1efd7049bf970bd6348b7915bb1bdeb093413ab6fb114",
+    "HANDOFF.md": "d65ab9c2dd174d182cb5a04836e28dd340fa61a044dfd8afde310fdbf03b6d10",
+    "STATUS.md": "9f1b4d81aea98d43d9e3f76a0aecbf642f5baf481facd2e8bbe2407c3189e79d",
+    "evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md": "22e4c31489f8d8e45f67f9483cb4cc230942135a58da7a2914e7298b91c1f9b0",
+    "CORE.md": "5d208fd3ee3bd3c8b6460e5550aebb6ce6f1731cda06f4aa82bc16793b55af5e",
+    "evidence/original_mo_cap_free_source_global_gap_docs_gate.json": "965f3d99f4906ce2196ba7ad31778c25123407ae673ab37aef2e6462fe3e3d39"
+  }
+}
