@@ -1,0 +1,145 @@
+{
+  "schema": "original_mo_broad_campaign_v1",
+  "created_utc": "2026-09-06T05:15:00Z",
+  "classification": "FINITE_CERTIFICATES_AND_NONEXHAUSTIVE_SEARCH",
+  "original_problem_status": "OPEN",
+  "convergence_proved": false,
+  "global_optimality_of_winners_proved": false,
+  "baseline_commit": "6bcd7d46f307d0e55141244daa3e58044f32cf55",
+  "repository": "https://github.com/luckyseoul/quadratic-minmax-limit",
+  "branch": "main",
+  "hardware": {
+    "cpu_workers": {
+      "soulkiller": 76,
+      "jellyfin": 12,
+      "nuka": 12
+    },
+    "gpus": [
+      "soulkiller Tesla V100",
+      "NUKA RX 9070 XT"
+    ],
+    "independent_integer_verification_host": "Jellyfin",
+    "owned_search_jobs_remaining": 0
+  },
+  "counts": {
+    "cpu_exhaustive_score_calls_lower_bound": 9633741,
+    "cpu_initial": 57216,
+    "cpu_recoverable_v1_lower_bound": 2223428,
+    "cpu_completed_v2": 7344521,
+    "cpu_principal_sidecars": 8576,
+    "v100_exhaustive_score_calls": 18509509,
+    "v100_source_calls": 5351808,
+    "v100_arbitrary_cross_calls": 836933,
+    "v100_diagonal_calls": 12320768,
+    "nuka_exhaustive_integer_score_calls": 411764,
+    "nuka_all_candidate_records": 514356,
+    "nuka_additional_heuristic_only_candidate_records": 102592,
+    "combined_exhaustive_score_calls_lower_bound": 28555014,
+    "uniqueness_scope": "Counts are evaluations, not globally distinct matrices or switching/permutation classes; archive-specific uniqueness is separately qualified.",
+    "excluded": "Validation replays; CPU initial seed preparation and selftests; fixed-source heuristic Walsh starts. Some heuristic pre-screens precede counted exact records."
+  },
+  "winner_upper_bounds_on_m_n": {
+    "11": 17,
+    "12": 18,
+    "13": 20,
+    "14": 21,
+    "15": 29,
+    "16": 32,
+    "17": 32,
+    "18": 33,
+    "19": 41,
+    "20": 42,
+    "21": 44,
+    "22": 49,
+    "23": 53,
+    "24": 56,
+    "25": 60,
+    "26": 61,
+    "27": 67,
+    "28": 70,
+    "29": 72,
+    "30": 75,
+    "31": 79,
+    "32": 80
+  },
+  "independent_key_certificates": {
+    "order26": {
+      "phi": 61,
+      "projective_states": 33554432,
+      "source_text_sha256": "0f6524ac46754ef4c16b17e464031cfb2942978a2ae42275faefe3fd1423de5d",
+      "verifier_sha256": "e0ad9af90e321a1afde81724fc588e901f2ad8052863404bd3bd853b97abff6e",
+      "seconds": 1.227344402
+    },
+    "order32": {
+      "phi": 80,
+      "projective_states": 2147483648,
+      "source_text_sha256": "f43ed997ff6a6911bd7662321cdcbc39c1062d357d349e42774655bbd610346d",
+      "verifier_sha256": "384cc06d03ddcb18579df9b5cff4ba356c85737a23e9cc3dffdaa28a3224539c",
+      "seconds": 93.221410214,
+      "positive_peaks": 2240,
+      "negative_peaks": 2240
+    },
+    "odd_orders": {
+      "orders": [
+        27,
+        29,
+        31
+      ],
+      "norms": [
+        67,
+        72,
+        79
+      ],
+      "independent_field_replay": "PASS; receipts in CPU archive"
+    },
+    "eigenvector_screen": {
+      "order": 64,
+      "shortlisted_matrices": 16,
+      "exact_norm_each": 256,
+      "classification": "integer eigensign witnesses plus exact spectral upper; no infeasibility claim"
+    }
+  },
+  "archives": [
+    {
+      "path": "cpu_campaign.tar.gz",
+      "bytes": 8229363,
+      "sha256": "db48a0be980929fe7947daf400044724dca1229d6061c6dd3ec3f2c3f1ed60b4",
+      "extraction_root": "original-mo-cpu-structured.Z49T3i",
+      "internal_manifest": "FINAL_MANIFEST.json",
+      "internal_manifest_sha256": "3e2962f753e7be5e9aa9dfd7cc0af960bfd55b38fae7359c50cb88e8d7dddf10"
+    },
+    {
+      "path": "v100_campaign.tar.gz",
+      "bytes": 37486261,
+      "sha256": "caa848a8893d3e217cf4a01da7b969f89aa25ca5cf872c17feaad267a7063776",
+      "extraction_root": ".",
+      "extraction_warning": "Extract this archive into its own fresh directory.",
+      "internal_manifest": "manifest.json",
+      "internal_manifest_sha256": "77b7463f4caf25d727a6c51cbf06a5193f9b312367add3700b8b47631edb4218"
+    },
+    {
+      "path": "nuka_campaign.tar.gz",
+      "bytes": 12900429,
+      "sha256": "d3cfbbda952514f2496a1aba01b577cba36e19395f01c35dd50c6a5be17e0e96",
+      "extraction_root": "mo-nuka-source-20260906-C3PMKY",
+      "integrity_report": "INTEGRITY_REPORT.md",
+      "integrity_report_sha256": "9424f98981988bfe7b962ed87c181e508c4dfe5559c030bdec0116747e8157e4"
+    },
+    {
+      "path": "independent_and_hadamard.tar.gz",
+      "bytes": 11793016,
+      "sha256": "d33897d1ae3321f054021be7705efccc08c61672e6c388f5cc57aec9c8cf3e28",
+      "extraction_root": "original-mo-campaign-root.Z0Um0rAh",
+      "checksum_file": "FILES.sha256"
+    }
+  ],
+  "caveats": [
+    "CPU v1 raw logs partly overwritten during v2 staging. Only valid matching-host recoverable records support v1 lower-bound counts. Raw snapshots and damage are retained.",
+    "V100 wave1 source-search evaluations were not all archived; six selected sources, code, seed, and counters are retained. Later source/cross/diagonal data are retained.",
+    "V100 wave7 used older input sources; a separate final hot-source19 pass used Phi41 and gave exact coherent order38 family minimum121.",
+    "The rejected unsigned-abs kick-kernel diagnostics contributed no accepted Nuka scores. Earlier kernels were unaffected.",
+    "Heuristic maxima are lower bounds. Order128 and512 Walsh energies676 and5418 are witnesses, not exhaustive maxima.",
+    "Finite coherent additive-n audit does not establish a universal or near-minimizer amplification theorem. The older large-constant coherent counterfamily remains valid.",
+    "Unpublished analytic scratch is retained but is not a reviewed theorem artifact or global completion proof."
+  ]
+}

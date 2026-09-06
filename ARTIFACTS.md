@@ -1,5 +1,20 @@
 # Preserved research artifacts
 
+## 2026-09-06 broad CPU/GPU checkpoint
+
+The [campaign package](evidence/original_mo_broad_campaign_20260906/README.md)
+contains four compressed archives with full scripts, retained inputs/raw
+data, profiles, witnesses and replay instructions. Its
+[manifest](evidence/original_mo_broad_campaign_20260906/manifest.json)
+pins every archive hash, size, extraction root and count scope. The CPU-v1
+log-loss caveat, older V100 input bank, rejected OpenCL diagnostics, and
+heuristic/exhaustive distinction are explicit. The archives are inside the
+repository, so the full-worktree milestone backup includes them along with
+the preceding reviewed strict-1/pi result and the rest of the research.
+
+These finite certificates and nonexhaustive searches do not close the
+original convergence problem or identify its limit value.
+
 ## 2026-09-05 route-neutral reset
 
 The user requested that faulty bookkeeping and unsupported assumptions be

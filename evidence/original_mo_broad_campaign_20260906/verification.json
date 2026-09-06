@@ -1,0 +1,27 @@
+{
+  "classification": "NARROW_STATUS_AND_DOCS_GATE_PASS_NOT_MATHEMATICAL_COMPLETION",
+  "completed_utc": "2026-09-06T05:20:08Z",
+  "host": "jellyfin",
+  "address": "192.168.1.191",
+  "stage": "/tmp/original-mo-final-docs-gate.uCXyc4/repo",
+  "archive_sha256": "4c2377bfcf270e2f0efab68309295c782680c1e38df60f0d4992bca4c6cce0ce",
+  "source_hash_manifest": "source.sha256",
+  "tests": [
+    "tests/test_original_mo_status.py",
+    "tests/test_main_chain_docs.py::test_main_chain_L_open_and_docs_ok"
+  ],
+  "workers": 14,
+  "python": ".venv/bin/python",
+  "passed": 38,
+  "seconds": 2.11,
+  "exit_code": 0,
+  "source_hashes_verified_before_tests": 11,
+  "replay": "ssh -F /dev/null nick@192.168.1.191 bash /tmp/original-mo-final-docs-gate.uCXyc4/run_verified_gate.sh",
+  "environment_note": "Initial assumed mo-exact path absent; mo-intel lacks pytest. Neither launch ran tests. Final successful run used repository environment included in the verified transfer; no environment installations or mutations.",
+  "scope": "Original reviewed-completion registry remains empty and global status OPEN. No full suite run.",
+  "artifact_hashes": [
+    "cf926e2e69c99da7304f7a461ec7bb0f41f86c6642202ed408417b624ba727e4  /tmp/original-mo-final-docs-gate.uCXyc4/pytest_verified.log",
+    "9ceb14af4964c88fd905bbe3d688af28743e54b5fb48f7f26c6d21a5c8b1445e  /tmp/original-mo-final-docs-gate.uCXyc4/source.sha256",
+    "2304dd6669da83218995fb4c08a3c4f234881f7683b0b7ac213e006bfe70886f  /tmp/original-mo-final-docs-gate.uCXyc4/run_verified_gate.sh"
+  ]
+}

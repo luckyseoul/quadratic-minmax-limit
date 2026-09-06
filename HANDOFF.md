@@ -4,6 +4,32 @@ Updated 2026-09-06. Start with `CORE.md` and `STATUS.md`.
 The original MO limit is OPEN; `L=1/2` is also OPEN.
 The reviewed bounds now satisfy `1/pi < liminf alpha_n <= limsup alpha_n <= 1/2`.
 
+## Latest checkpoint: broad compute campaign
+
+The [campaign handoff](evidence/original_mo_broad_campaign_20260906/README.md)
+and its [hash/count manifest](evidence/original_mo_broad_campaign_20260906/manifest.json)
+preserve the final two-GPU/100-worker run, started from
+`6bcd7d46f307d0e55141244daa3e58044f32cf55`. At least 28,555,014 exhaustive
+candidate-score evaluations were recorded; these are calls, not globally
+distinct signings. All owned search jobs completed naturally.
+
+Four self-contained archives include sources, seed snapshots, retained raw
+candidate data, profiles, witnesses, exact replays, and explicit provenance
+limitations. In particular, recoverable CPU-v1 counts are lower bounds,
+heuristic spin maxima are not upper bounds, and rejected kernel diagnostics
+are not accepted results. Independent field-update enumeration verified
+norms 61 at order 26 and 80 at order 32. The campaign README gives the exact
+replay command and explains why the new finite data do not imply convergence.
+Unpublished analytic scratch in the independent archive is not a reviewed
+theorem artifact; the last reviewed global strengthening remains the strict
+1/pi lower at the starting commit. Do not restart unchanged censuses.
+
+The next target is still an all-orders convergence or nonconvergence
+argument, through any valid route. In the optional amplification route,
+sampled lifting performance and an additive-n finite audit supply no uniform
+near-minimizer comparison or Dini error. The existing coherent counterfamily
+already excludes an all-source version based only on order-scale bounds.
+
 ## Preservation and reset
 
 The previous residual worktree, including all 48 uncommitted files, is

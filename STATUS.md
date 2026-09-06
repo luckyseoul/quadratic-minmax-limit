@@ -6,6 +6,17 @@ There is no reviewed proof of convergence or nonconvergence. The value
 `1/2` is unproved. These statements are independent of the status of the
 optional Paley research program.
 
+## Latest finite compute checkpoint
+
+The [2026-09-06 broad CPU/GPU campaign](evidence/original_mo_broad_campaign_20260906/README.md)
+preserves at least 28,555,014 exhaustive candidate-score evaluations using
+two GPUs and 100 CPU workers. Explicit order-26 and order-32 matrices have
+independently verified norms 61 and 80. Counts are calls, not globally unique
+matrices or equivalence classes; larger-order heuristic bounds and corrected
+diagnostics are separately labelled. All owned campaign jobs finished.
+This is a finite evidence checkpoint, not an asymptotic theorem. The global
+status and reviewed bounds below are unchanged.
+
 ## What is established
 
 `CORE.md` gives the route-neutral definitions and proofs. In particular,
