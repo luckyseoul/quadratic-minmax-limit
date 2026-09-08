@@ -1,0 +1,32 @@
+{
+  "schema": "quadratic_minmax_autopilot_v1",
+  "state_dir": "autopilot_state",
+  "artifact_dir": "autopilot_state/runs",
+  "poll_seconds": 20,
+  "max_parallel": 100,
+  "task_timeout_seconds": 86400,
+  "retry_limit": 2,
+  "exploration_fraction": 0.08,
+  "milestone_every_results": 250,
+  "milestone_backup_command": "scripts/milestone_backup.sh",
+  "hosts": [
+    {"name": "soulkiller", "slots": 76, "tags": ["cuda", "v100", "cpu"]},
+    {"name": "jellyfin", "slots": 12, "tags": ["cpu"]},
+    {"name": "nuka", "slots": 12, "tags": ["rocm", "rdna4", "cpu"]}
+  ],
+  "portfolio": {
+    "scaling": 0.22,
+    "restriction_lifting": 0.18,
+    "structure_mining": 0.16,
+    "spectral_rounding": 0.14,
+    "counterexample": 0.10,
+    "proof_synthesis": 0.10,
+    "adversarial": 0.07,
+    "exploration": 0.03
+  },
+  "worker_env": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  }
+}
