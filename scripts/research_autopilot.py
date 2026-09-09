@@ -39,7 +39,7 @@ def init(db):
 
 def add(db,route,prompt,parent=None,priority=1.0):
     raw=json.dumps([route,prompt,parent],sort_keys=True); tid=hashlib.sha256(raw.encode()).hexdigest()[:20]
-    db.execute("INSERT OR IGNORE INTO tasks VALUES(?,?,?,?,?,?,0,?,NULL,NULL,NULL,NULL,NULL)",(tid,route,prompt,parent,"queued",priority,time.time())); return tid
+    db.execute("INSERT OR IGNORE INTO tasks VALUES(?,?,?,?,?,?,0,?,NULL,NULL,NULL,NULL)",(tid,route,prompt,parent,"queued",priority,time.time())); return tid
 
 def seed(db):
     for route,ps in ROUTES.items():
