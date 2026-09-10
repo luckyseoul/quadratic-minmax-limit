@@ -21,3 +21,11 @@ ledgers are optional research routes, not global acceptance criteria.
 
 Global status is tracked in `src/original_mo_status.py`; the old E1 status
 interface is retained only with separate route-local diagnostics.
+
+A `ReviewedCompletionProof` entry may optionally pin a machine-checked
+formalization (`formal_proof_path`/`formal_proof_sha256`, plus a free-text
+`formal_verification_note`) alongside its theorem/review pair, following the
+provenance pattern of a human-reviewed writeup plus a hash-pinned, ideally
+independently-re-kernel-checked formal proof. This is additive schema only:
+it does not change how an entry is admitted, and the production registry
+remains empty (`OPEN`) regardless.

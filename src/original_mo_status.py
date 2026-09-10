@@ -32,7 +32,25 @@ class Conclusion(str, Enum):
 
 @dataclass(frozen=True)
 class ReviewedCompletionProof:
-    """A source-admitted theorem/review pair, not a computational proof flag."""
+    """A source-admitted theorem/review pair, not a computational proof flag.
+
+    ``formal_proof_path``/``formal_proof_sha256`` are an optional third
+    pinned artifact for a machine-checked formalization (e.g. Lean 4 +
+    Mathlib) of ``theorem``, following the provenance pattern OpenAI used
+    for its Navier-Stokes/Euler blowup proofs: a human-reviewed writeup
+    plus a hash-pinned formal proof file, independently re-checkable by a
+    second kernel (their "Comparator" tool against an alternate trusted
+    kernel, not just the primary Lean elaborator). Supplying a formal proof
+    here is optional and does not by itself change how an entry is
+    admitted; the theorem/review pair remains the required core, and a
+    stale or unhashed formal-proof artifact still fails the whole entry
+    closed, exactly like a stale theorem or review artifact.
+
+    ``formal_verification_note`` is free text recording how the formal
+    artifact was checked (toolchain, axioms it depends on, whether an
+    independent kernel re-verified it) -- provenance only, not a
+    machine-parsed correctness flag.
+    """
 
     proof_id: str
     conclusion: Conclusion
@@ -43,6 +61,9 @@ class ReviewedCompletionProof:
     review_sha256: str
     limit_value: str | None = None
     problem: str = PROBLEM
+    formal_proof_path: str | None = None
+    formal_proof_sha256: str | None = None
+    formal_verification_note: str | None = None
 
 
 # Add an entry only after review of a complete proof for the original problem.
@@ -100,6 +121,24 @@ def _validated_completion_entries() -> tuple[ReviewedCompletionProof, ...]:
         review_path = _pinned_artifact(entry.review_path, entry.review_sha256)
         if theorem_path == review_path:
             raise ValueError("the proof and its review must be separate artifacts")
+        has_formal_path = entry.formal_proof_path is not None
+        has_formal_hash = entry.formal_proof_sha256 is not None
+        if has_formal_path != has_formal_hash:
+            raise ValueError(
+                "a formal proof artifact needs both a path and a matching SHA-256; "
+                "supply both formal_proof_path and formal_proof_sha256, or neither"
+            )
+        if has_formal_path:
+            formal_path = _pinned_artifact(entry.formal_proof_path, entry.formal_proof_sha256)
+            if formal_path in (theorem_path, review_path):
+                raise ValueError(
+                    "the formal proof artifact must be separate from the theorem and review"
+                )
+        elif entry.formal_verification_note is not None:
+            raise ValueError(
+                "a formal_verification_note requires a pinned formal_proof_path/sha256; "
+                "provenance notes may not stand in for a hashed artifact"
+            )
 
     conclusions = {entry.conclusion for entry in entries}
     if Conclusion.NONEXISTENCE in conclusions and conclusions.intersection(
