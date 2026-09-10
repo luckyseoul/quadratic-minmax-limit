@@ -151,6 +151,76 @@ def test_review_must_be_separate_pinned_artifact(monkeypatch, tmp_path):
     assert registry.original_mo_status()["registry_valid"] is False
 
 
+def _write(tmp_path, relative, text):
+    path = tmp_path / relative
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(text, encoding="utf-8")
+    return relative, sha256(text.encode()).hexdigest()
+
+
+def test_formal_proof_artifact_is_optional_and_pinned(monkeypatch, tmp_path):
+    entry = _synthetic_entry(tmp_path, Conclusion.EXISTENCE)
+    formal_path, formal_hash = _write(
+        tmp_path, "evidence/synthetic-one.lean", "-- SYNTHETIC TEST ONLY: not a real formalization\n"
+    )
+    entry = replace(
+        entry,
+        formal_proof_path=formal_path,
+        formal_proof_sha256=formal_hash,
+        formal_verification_note="synthetic: not independently kernel-checked",
+    )
+    _install_entries(monkeypatch, tmp_path, entry)
+    status = registry.original_mo_status()
+    assert status["registry_valid"] is True
+    recorded = status["reviewed_completion_proofs"][0]
+    assert recorded["formal_proof_path"] == formal_path
+    assert recorded["formal_proof_sha256"] == formal_hash
+
+
+def test_missing_formal_proof_fields_are_fine():
+    # The production registry never sets these fields; confirm the default
+    # (no formal artifact at all) stays valid, matching the empty registry.
+    status = registry.original_mo_status()
+    assert status["registry_valid"] is True
+    assert status["reviewed_completion_proofs"] == []
+
+
+@pytest.mark.parametrize(
+    "changes",
+    [
+        {"formal_proof_sha256": None},  # path without a matching hash
+        {"formal_verification_note": "orphaned note, no pinned artifact"},
+    ],
+)
+def test_formal_proof_path_without_hash_fails_closed(monkeypatch, tmp_path, changes):
+    entry = _synthetic_entry(tmp_path, Conclusion.EXISTENCE)
+    if "formal_proof_sha256" in changes:
+        formal_path, _ = _write(tmp_path, "evidence/synthetic-one.lean", "-- SYNTHETIC\n")
+        entry = replace(entry, formal_proof_path=formal_path, **changes)
+    else:
+        entry = replace(entry, **changes)
+    _install_entries(monkeypatch, tmp_path, entry)
+    status = registry.original_mo_status()
+    assert status["registry_valid"] is False
+
+
+def test_stale_formal_proof_hash_fails_closed(monkeypatch, tmp_path):
+    entry = _synthetic_entry(tmp_path, Conclusion.EXISTENCE)
+    formal_path, _formal_hash = _write(tmp_path, "evidence/synthetic-one.lean", "-- SYNTHETIC\n")
+    entry = replace(entry, formal_proof_path=formal_path, formal_proof_sha256="0" * 64)
+    _install_entries(monkeypatch, tmp_path, entry)
+    assert registry.original_mo_status()["registry_valid"] is False
+
+
+def test_formal_proof_artifact_must_differ_from_theorem_and_review(monkeypatch, tmp_path):
+    entry = _synthetic_entry(tmp_path, Conclusion.EXISTENCE)
+    entry = replace(
+        entry, formal_proof_path=entry.theorem_path, formal_proof_sha256=entry.theorem_sha256
+    )
+    _install_entries(monkeypatch, tmp_path, entry)
+    assert registry.original_mo_status()["registry_valid"] is False
+
+
 @pytest.mark.parametrize("case", ["duplicate_id", "existence_conflict", "value_conflict"])
 def test_conflicting_registry_fails_closed(monkeypatch, tmp_path, case):
     if case == "value_conflict":
