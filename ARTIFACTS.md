@@ -1,5 +1,20 @@
 # Preserved research artifacts
 
+## Retired research autopilot
+
+The self-steering `research_autopilot.py` controller and its task/dispatch
+variants are retired as a dead-end orchestration path. They caused stale
+worker state, duplicated finite searches, and did not establish a new
+mathematical implication. The controller is absent from the active checkout;
+its historical commits remain reachable only for provenance.
+
+Do not restart or recreate that controller, its Ollama/task-row state, or its
+detached linked worktree. New computation must use an explicit implication,
+host-sized worker budget, scoped evidence directory, and reviewed handoff.
+The reusable `src/workers.py` module is retained: it enforces CPU fan-out and
+oversubscription checks for independently scoped scripts, but it is not an
+autopilot and does not select research goals.
+
 ## 2026-09-06 broad CPU/GPU checkpoint
 
 The [campaign package](evidence/original_mo_broad_campaign_20260906/README.md)
