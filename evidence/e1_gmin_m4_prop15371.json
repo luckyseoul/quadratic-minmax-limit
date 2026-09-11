@@ -4,8 +4,8 @@
   "series": "15.x leftover campaign (OPEN)",
   "proved": {
     "D_form_p5_p7": true,
-    "N4_split_is_two_k2": true,
-    "D3_not_named": true,
+    "N4_split_is_two_k2": false,
+    "D3_not_named": false,
     "Q_tau_named_in_p": false,
     "D_named_in_p": false,
     "phi_F_ge_6_proved_general": false
@@ -45,16 +45,16 @@
       "theorem": "D=2A\u22123(p+1)/2+C(p,m) at p=5,7. Drop binom or evaluate at p=3 fails."
     },
     "B": {
-      "proved": true,
+      "proved": false,
       "diff": 882,
       "two_k2": 882,
-      "p5_N4": 20,
-      "p5_N4_constant": true,
+      "p5_N4": null,
+      "p5_N4_constant": false,
       "theorem": "N4(H)\u2212N4(O)=2k\u00b2 at p=7; one 4-net type at p=5 with N4=20."
     },
     "C": {
-      "proved": true,
-      "n_hits_D3": 0,
+      "proved": false,
+      "n_hits_D3": -1,
       "theorem": "No tested form hits D3=(13,22157).  22157 unnamed."
     },
     "D": {

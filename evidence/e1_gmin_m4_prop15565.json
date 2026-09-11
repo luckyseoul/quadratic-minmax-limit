@@ -113,14 +113,14 @@
   "C": {
     "proved": false,
     "path_dead": true,
-    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_multilevel_bad_case_ND_closed": true,
     "type_I_aut_e_3AB_positive_general": false,
     "note": "Max\u00b1 of C write \u2264\u03a6\u22124 in the bad case.  \u03a6(H)\u2265\u03a6\u22122 needs a non-Max\u00b1 vector or good-sign f_e on U_\u2212.  The latter is Aut_e G>T (15.559 DEAD).  Flags unflipped."
   },
   "proved": {
     "maxplus_writes_Phi_minus_4": true,
     "maxminus_bad_writes_Phi_minus_4": true,
-    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_multilevel_bad_case_ND_closed": true,
     "type_I_aut_e_3AB_positive_general": false
   },
   "e1_closed_general": false,

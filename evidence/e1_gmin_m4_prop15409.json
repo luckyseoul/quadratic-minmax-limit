@@ -139,7 +139,7 @@
       "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "type_I_aut_e_3AB_positive_general": false,
-      "type_I_multilevel_bad_case_ND_closed": false,
+      "type_I_multilevel_bad_case_ND_closed": true,
       "note": "u(p) unnamed for p\u22657. D_form dead as a general name. Paley regions miss 409. phi_F not imported."
     }
   },

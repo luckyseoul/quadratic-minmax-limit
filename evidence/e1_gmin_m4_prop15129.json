@@ -6,7 +6,7 @@
   "proved": {
     "jensen_coherent_mass": true,
     "residual_dictionary_census": true,
-    "hoffman_geometry_p5": true,
+    "hoffman_geometry_p5": false,
     "average_replication": true,
     "p7_hoffman_not_1_design": true,
     "census_residual_p3_p5_p7": true,
@@ -262,26 +262,8 @@
   },
   "cert": {
     "hoffman_geometry_p5": {
-      "p": 5,
-      "W_hoffman": 13,
-      "intersection_counts": {
-        "0": 30,
-        "1": 18,
-        "2": 30
-      },
-      "disjoint_pairs": 30,
-      "W_12": 60,
-      "W_12_hoffman_content": {
-        "0": 30,
-        "2": 30
-      },
-      "disjoint_pairs_eq_W12_half": true,
-      "W_16": 36,
-      "W_16_hoffman_content": {
-        "2": 36
-      },
-      "all_W16_have_exactly_2_hoffman": true,
-      "match": true
+      "skipped": true,
+      "reason": "no maxplus_p5"
     }
   },
   "status": {

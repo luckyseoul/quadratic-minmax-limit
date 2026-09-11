@@ -6,7 +6,7 @@
     "eta_room_algebra": true,
     "T_counts_census": true,
     "eta_room_usage_census": true,
-    "H_split_1_plus_d_minus_1": true,
+    "H_split_1_plus_d_minus_1": false,
     "mult_ge_d_all_p": false,
     "eta_bound_all_p": false,
     "sixteen_N_all_p": false,
@@ -230,29 +230,9 @@
       }
     },
     "H_split": {
-      "certified": true,
-      "by_p": {
-        "5": {
-          "d": 13,
-          "mult_top": 13,
-          "H_split_mults": {
-            "0.0333": 12,
-            "0.6": 1
-          },
-          "is_1_plus_d_minus_1": true,
-          "mult_eq_d": true
-        },
-        "7": {
-          "d": 25,
-          "mult_top": 25,
-          "H_split_mults": {
-            "-0.0": 24,
-            "1.0": 1
-          },
-          "is_1_plus_d_minus_1": true,
-          "mult_eq_d": true
-        }
-      }
+      "certified": false,
+      "by_p": {},
+      "skipped": "Max+ cache"
     }
   },
   "open_attack": "mult\u2265d: prove H_C split 1+(d\u22121) on V_max for all p, or Aut\u2080 embedding V\u208a\u21aaV_max.  \u03ba\u2084/m\u2084: prove \u2211\u03b7\u00b2\u2264n(19p\u00b2\u22123)/(6p\u00b2) by Weil.",

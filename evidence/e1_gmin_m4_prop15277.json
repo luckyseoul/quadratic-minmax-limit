@@ -270,24 +270,13 @@
     },
     "pointwise_p5": {
       "p": 5,
-      "rel_err": 2.7000623958883807e-13,
-      "identity_ok": true,
-      "E_q2": 9.23262407178798,
-      "E_By2": 2.0,
-      "E_four": 0.40407800897349755,
-      "pointwise_q2_ge_3By2": false,
-      "frac_neg_q2_minus_3By2": 0.5461538461538461
+      "skipped": true,
+      "reason": "Max+ cache missing"
     },
     "one_edge_p5": {
       "p": 5,
-      "norm2": 0.39999999999999947,
-      "norm2_formula": 0.4,
-      "Eq2": 3.8399999999999928,
-      "Eq2_formula": 3.84,
-      "rayleigh": 9.599999999999994,
-      "mu_bar": 9.6,
-      "q_pred_err": 8.881784197001252e-15,
-      "ok": true
+      "skipped": true,
+      "reason": "Max+ cache missing"
     },
     "wrong_one_edge_formula": {
       "bad_equals_mu_bar_any": false,

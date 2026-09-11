@@ -91,25 +91,11 @@
       },
       "7": {
         "p": 7,
-        "success": true,
-        "max_kappa_e": 0.5934766118836863,
-        "alpha_n_minus_2": 0.8228571428571428,
-        "need": 1.9828571428571429,
-        "max_le_alpha_n_minus_2": true,
-        "blocks_dual_eq": true,
-        "ratio_max_over_scheme": 1.442477876106182,
-        "proved_general": false
+        "skipped": true
       }
     },
     "mu_p7": {
-      "p": 7,
-      "max_abs_mu": "109/2863",
-      "max_abs_mu_float": 0.03807195249738037,
-      "two_over_n": "1/25",
-      "mu_le_two_over_n": true,
-      "known_exact": "109/2863",
-      "match_known": true,
-      "proved_general": false
+      "skipped": true
     }
   },
   "hinge": {

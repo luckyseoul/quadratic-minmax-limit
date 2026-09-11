@@ -128,11 +128,14 @@
     }
   },
   "L_wire": {
+    "scope": "optional_paley_route",
+    "sufficient_not_necessary": true,
+    "paley_route_closed": false,
     "bi_tight": true,
     "E1": false,
     "L_closed": false,
     "L_status": "OPEN",
-    "rule": "L closed iff bi-tight \u2227 E(1); denseness Prop 6.2"
+    "rule": "bi-tight and the full E(1) hypothesis suffice for L=1/2; not a necessity claim"
   },
   "open_residual": [
     "non-Walsh residual (ii), even k\u22654p",

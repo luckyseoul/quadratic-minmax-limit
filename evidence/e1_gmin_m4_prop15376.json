@@ -3,7 +3,7 @@
   "title": "1D is the Q--=0 slice; Q_N*(y_*)=24/p at p=7,11",
   "series": "15.x leftover campaign (OPEN)",
   "proved": {
-    "Qmm_zero_is_1d": true,
+    "Qmm_zero_is_1d": false,
     "QN_ystar_24_over_p": true,
     "Q_tau_named_in_p": false,
     "D_named_in_p": false,
@@ -12,11 +12,11 @@
   },
   "algebra": {
     "A": {
-      "proved": true,
-      "nzero": 140,
-      "mean_Qpp_zero": "104/15",
-      "AP": 84,
-      "QR0": 56,
+      "proved": false,
+      "nzero": -1,
+      "mean_Qpp_zero": null,
+      "AP": null,
+      "QR0": null,
       "Q_1d_pp": "104/15",
       "theorem": "Q--=0 iff 1D (n_1d=140); AP 84 at Q++=40/9, QR0 56 at Q++=32/3; mean 104/15."
     },

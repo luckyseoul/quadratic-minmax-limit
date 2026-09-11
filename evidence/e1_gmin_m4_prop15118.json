@@ -333,23 +333,7 @@
     },
     "5": {
       "p": 5,
-      "N": 260,
-      "bgf_max_abs": 1.9895196601282805e-13,
-      "bgf_pointwise_zero": true,
-      "T2kappa_f_max_err": 0.0,
-      "T2kappa_f_constant_target": true,
-      "rho_min_f_max_err": 6.394884621840902e-14,
-      "rho_min_f_closed": true,
-      "kappa_gf_max_err": 0.0,
-      "kappa_gf_closed": true,
-      "b_f_max_err": 1.4210854715202004e-13,
-      "b_f_closed": true,
-      "delta2": 23.630769230769253,
-      "room_hyp_24": 23.630769230769232,
-      "delta2_le_hyp": true,
-      "target_T2": 124800.0,
-      "pred_rmf": 41.6,
-      "pred_kgf": 16380.0
+      "skipped": true
     }
   },
   "general_status": {

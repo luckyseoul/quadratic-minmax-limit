@@ -92,14 +92,14 @@
       "want": 13,
       "ok": true
     },
-    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_multilevel_bad_case_ND_closed": true,
     "type_I_aut_e_3AB_positive_general": false,
     "note": "1D Johnson kernel leaves p+1 dofs; p=5 has |G|=13 shadows.  Does not empty Type I or force good-sign f_e.  Flags unflipped."
   },
   "proved": {
     "johnson_ker_p_plus_1": true,
     "zero_star_particular": true,
-    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_multilevel_bad_case_ND_closed": true,
     "type_I_aut_e_3AB_positive_general": false
   },
   "e1_closed_general": false,

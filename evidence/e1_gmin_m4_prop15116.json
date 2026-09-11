@@ -436,7 +436,17 @@
     },
     "7": {
       "p": 7,
-      "skipped": true
+      "N": 11452,
+      "ED4": "5218435600/167281",
+      "sum_m4_sq": "64093900/167281",
+      "delta2_from_ED4": "19180800/1840091",
+      "delta2_from_pythag": "19180800/1840091",
+      "delta2_match": true,
+      "rho_min2": "26000/539",
+      "delta2_le_rho_min2": true,
+      "ED4_le_suf": true,
+      "kappa_dot_rho_min": "1200",
+      "coherent_mass_eq_delta2": true
     }
   },
   "general_status": {

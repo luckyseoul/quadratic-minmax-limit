@@ -7,7 +7,7 @@
     "geometric_hoffman_seed": true,
     "one_design_algebra": true,
     "hoffman_eq_d_cert_p3": true,
-    "hoffman_eq_d_cert_p5": true,
+    "hoffman_eq_d_cert_p5": false,
     "simplex_bound": true,
     "hoffman_ed4_contrib": true,
     "W_hoffman_eq_d_for_all_p": false,
@@ -442,39 +442,7 @@
     },
     "5": {
       "p": 5,
-      "N": 260,
-      "W_hoffman": 13,
-      "d": 13,
-      "W_eq_d": true,
-      "rank_chi": 13,
-      "rank_eq_d": true,
-      "basis_of_Vplus": true,
-      "r_unique": [
-        3
-      ],
-      "r_constant": true,
-      "r": 3,
-      "r_eq_half_p_plus_1": true,
-      "flag_identity_ok": true,
-      "intersection_counts": {
-        "0": 30,
-        "1": 18,
-        "2": 30
-      },
-      "constant_intersection": false,
-      "weight_dist": {
-        "0": 1,
-        "6": 13,
-        "8": 20,
-        "10": 36,
-        "12": 60,
-        "14": 60,
-        "16": 36,
-        "18": 20,
-        "20": 13,
-        "26": 1
-      },
-      "match": true
+      "skipped": true
     }
   },
   "status": {

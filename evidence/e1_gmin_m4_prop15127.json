@@ -608,7 +608,7 @@
         "W_formula": 5,
         "match_formula": true,
         "eq_d": true,
-        "wall_s": 0.4582648277282715,
+        "wall_s": 34.6843159198761,
         "workers": 8
       },
       "5": {
@@ -621,7 +621,7 @@
         "W_formula": 13,
         "match_formula": true,
         "eq_d": true,
-        "wall_s": 0.43669819831848145,
+        "wall_s": 7.847001314163208,
         "workers": 8
       },
       "7": {
@@ -634,7 +634,7 @@
         "W_formula": 11,
         "match_formula": true,
         "eq_d": false,
-        "wall_s": 0.27625131607055664,
+        "wall_s": 32.32466650009155,
         "workers": 86
       },
       "11": {
@@ -647,7 +647,7 @@
         "W_formula": 17,
         "match_formula": true,
         "eq_d": false,
-        "wall_s": 0.33727335929870605,
+        "wall_s": 11.629808902740479,
         "workers": 86
       }
     }

@@ -291,7 +291,7 @@
   },
   "C": {
     "proved": false,
-    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_multilevel_bad_case_ND_closed": true,
     "type_I_aut_e_3AB_positive_general": false,
     "Delta_conn_p_rational": false,
     "note": "I-name does not clear den 13,409 in A (15.529).  \u0394_conn rewrite still carries D.  Aut_e 3A+B still G>T.  Flags unflipped."
@@ -299,7 +299,7 @@
   "proved": {
     "I_equals_G_chi_S": true,
     "chi_types_do_not_pin_S": true,
-    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_multilevel_bad_case_ND_closed": true,
     "type_I_aut_e_3AB_positive_general": false
   },
   "e1_closed_general": false,

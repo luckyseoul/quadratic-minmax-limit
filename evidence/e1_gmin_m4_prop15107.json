@@ -342,23 +342,7 @@
     },
     "5": {
       "p": 5,
-      "N": 260,
-      "ED4": 9261.538461538461,
-      "kappa2": 2397.538461538461,
-      "proj": 1830.4,
-      "orth": 567.1384615384609,
-      "room": 665.6,
-      "room_hyp": 567.1384615384616,
-      "orth_le_room_hyp": true,
-      "orth_le_room": true,
-      "kappa2_le_hyp": true,
-      "kappa2_le_96n": true,
-      "lambda_max_Phi": 13.538461538461545,
-      "lambda_max_le_16": true,
-      "L_bound_thmA": 15.807763797129104,
-      "thmA_le_16": true,
-      "kurtosis": 3.4251251706873007,
-      "kurtosis_thr": 3.4615384615384617
+      "skipped": true
     },
     "7": {
       "p": 7,
@@ -373,7 +357,7 @@
       "orth_le_room": true,
       "kappa2_le_hyp": true,
       "kappa2_le_96n": true,
-      "lambda_max_Phi": 10.562347188264061,
+      "lambda_max_Phi": 10.562347188264063,
       "lambda_max_le_16": true,
       "L_bound_thmA": 15.867298423455392,
       "thmA_le_16": true,

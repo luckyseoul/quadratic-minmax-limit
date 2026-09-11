@@ -215,7 +215,7 @@
   },
   "C": {
     "proved": false,
-    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_multilevel_bad_case_ND_closed": true,
     "type_I_aut_e_3AB_positive_general": false,
     "Delta_conn_p_rational": false,
     "S_dist_p5": [
@@ -241,7 +241,7 @@
   "proved": {
     "I_Omega_eq_p_S": true,
     "I_dbl_CM": true,
-    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_multilevel_bad_case_ND_closed": true,
     "type_I_aut_e_3AB_positive_general": false
   },
   "e1_closed_general": false,

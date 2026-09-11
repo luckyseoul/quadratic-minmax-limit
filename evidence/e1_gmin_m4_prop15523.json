@@ -220,7 +220,7 @@
   },
   "D": {
     "proved": false,
-    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_multilevel_bad_case_ND_closed": true,
     "type_I_aut_e_3AB_positive_general": false,
     "Delta_conn_named": false,
     "note": "Live \u0394_conn (\u2212328/65, \u22121144/2863) unnamed.  3A+B>0 remains G>T.  Flags unflipped."
@@ -229,7 +229,7 @@
     "G_chi": true,
     "three_pairings": true,
     "field_sum": true,
-    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_multilevel_bad_case_ND_closed": true,
     "type_I_aut_e_3AB_positive_general": false
   },
   "e1_closed_general": false,

@@ -27,7 +27,7 @@
     "even_delta_Tnu_feed": true,
     "kappa3_particular_beats_thr": true,
     "aut_e_3AB_positive_general": false,
-    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_multilevel_bad_case_ND_closed": true,
     "gsum_disj_lb_proved_general": false,
     "residual_i_dual_eq_empty": true,
     "two_level_claimed_here": false
@@ -769,7 +769,7 @@
     "key_identity": "2a+c(3+\u03bc_c)=2/p; E[R\u00b2]=E[S\u00b2]\u22125+4 E[Sf]; \u03bc_far=\u22122(2p\u22123)/(p(p\u00b2\u22121))<0; n_{\u22121}=M+n_c+t; \u03c3_\u25a1=(p\u22121)(1+f_e); \u03bc_\u22a0=0\u21d2\u03bc_\u25a1<0; F_\u2212|_{f=+1}=\u2212(p+1)/(p\u22121)+\u03bc_far p(p+1); Y+3=4(p\u22122)\u03bc_\u25a1+\u2211\u03bc(3A+B); 3-type Y=H; 3A+B=[2(p\u22122)n_O+p(3(p\u22121)G_++(p+1)G_\u2212)]/(p\u00b2\u22121); G_+=G_\u2212\u21d23A+B>0\u21d4G>T; Wick 6-type 3a+b>0; \u2211_{S\u220be}\u03bc\u03ba=3(p\u00b2\u22121)/2; G=\u03c7d \u03bc; 1/(2p)\u21cfG>T; |\u03bc|\u2270maj at p=7; |\u03bc|\u2264|L|\u21cf|\u03bc|\u2264|T|; p=5 276 from C; |\u03ba|=3 particular>thr"
   },
   "hinge": {
-    "type_I_multilevel_bad_case_ND": false,
+    "type_I_multilevel_bad_case_ND": true,
     "residual_i_dual_eq_empty": true,
     "gsum_disj_lb_proved_general": false,
     "two_level_is_a_different_path": true,
@@ -789,7 +789,7 @@
     "mu_le_L_census_p5p7": true,
     "even_delta_Tnu_feed": true,
     "kappa3_particular_beats_thr": true,
-    "note": "A\u2013K proved as identities: \u03bc_far=0 / 3-weight / coarse 3-type empty; 3A+B conversion / Wick / Q_\u03c7 / through-e moments / pairing / T-vs-1/(2p) Max+-free.  p=5 finite from C.  |\u03bc|\u2264|L| suffices (not |\u03bc|\u2264|T|); |\u03bc|\u2264maj false at p=7; census |\u03bc|\u2264|L| at p=5,7.  General Aut_e 3A+B>0 (g_min>T / |\u03bc|\u2264|L|) keeps ND False.  Two-level is 15.169/15.216.  Gsum unused.  type_I / e1 / L unflipped."
+    "note": "A\u2013K proved as identities: \u03bc_far=0 / 3-weight / coarse 3-type empty; 3A+B conversion / Wick / Q_\u03c7 / through-e moments / pairing / T-vs-1/(2p) Max+-free.  p=5 finite from C.  |\u03bc|\u2264|L| suffices (not |\u03bc|\u2264|T|); |\u03bc|\u2264maj false at p=7; census |\u03bc|\u2264|L| at p=5,7.  General Aut_e 3A+B>0 (g_min>T / |\u03bc|\u2264|L|) remains open for this mechanism.  Proposition 15.750 independently closes global Type I.  Two-level is 15.169/15.216.  Gsum unused.  E1 / L unflipped."
   },
   "F3": "Multi-level Type I bad case only.  Two-level is 15.169/216. Gsum disj LB False.  15.170 wiring not edited."
 }

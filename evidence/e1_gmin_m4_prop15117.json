@@ -544,7 +544,16 @@
     },
     "7": {
       "p": 7,
-      "skipped": true
+      "N": 11452,
+      "ED4": "5218435600/167281",
+      "delta2": "19180800/1840091",
+      "room_hyp_24": "3072/55",
+      "rho_min2": "26000/539",
+      "delta2_le_hyp": true,
+      "delta2_le_rho_min2": true,
+      "ED4_le_bud": true,
+      "ED4_le_suf": true,
+      "equality_hyp": false
     }
   },
   "general_status": {

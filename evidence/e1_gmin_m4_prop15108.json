@@ -609,18 +609,7 @@
     },
     "5": {
       "p": 5,
-      "N": 260,
-      "ED4": "120400/13",
-      "kappa2": "31168/13",
-      "orth": "36864/65",
-      "delta2": "1536/65",
-      "rho2": "17144/325",
-      "T_rho": "17144/325",
-      "rho2_le_T": true,
-      "orth_le_room_hyp": true,
-      "ratio_rho2_over_T": "1",
-      "ratio_orth_over_room_hyp": "1",
-      "lambda_max_Phi_via_popp": null
+      "skipped": true
     },
     "7": {
       "p": 7,
@@ -651,13 +640,7 @@
     },
     "5": {
       "p": 5,
-      "N": 260,
-      "lambda2_PopP": 0.01301775147895599,
-      "four_N_lambda2": 13.53846153811423,
-      "four_over_N": 0.015384615384615385,
-      "lambda2_le_4_over_N": true,
-      "L_phi_le_16": true,
-      "conversion": "lambda_max(Phi)=4*N*lambda2(PopP)"
+      "skipped": true
     },
     "7": {
       "p": 7,

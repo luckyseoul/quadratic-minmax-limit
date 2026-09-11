@@ -5,7 +5,7 @@
   "proved": {
     "affine_S_is_T": true,
     "deg2_constancy_dies_p7": true,
-    "D_not_3term_named": true,
+    "D_not_3term_named": false,
     "Q_tau_named_in_p": false,
     "D_named_in_p": false,
     "phi_F_ge_6_proved_general": false
@@ -26,8 +26,8 @@
       "theorem": "S(x\u00b2)=S(x\u00b2+x)=40 at p=5; occupancies split at p=7."
     },
     "C": {
-      "proved": true,
-      "n_hits": 0,
+      "proved": false,
+      "n_hits": -1,
       "dimVp7": 25,
       "theorem": "No 3-term named linear form hits D=13 and 409; dim V+ dies."
     },

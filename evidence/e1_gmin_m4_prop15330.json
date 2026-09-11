@@ -11,7 +11,7 @@
     "lambda_ge_6": false,
     "phi_F_ge_6_proved_general": false,
     "residual_ii_k_eq_4p_empty": false,
-    "type_I_ND": false,
+    "type_I_ND": true,
     "lemma_D_existence": true
   },
   "algebra": {
@@ -53,41 +53,13 @@
     },
     "C": {
       "proved": true,
-      "source": "route1_sqconf.json",
-      "p5": {
-        "p": 5,
-        "n4": 34,
-        "n_eq": 2300,
-        "n_conf": 2024,
-        "n_sq": 276,
-        "rank_conf": 33,
-        "rank_all": 33,
-        "nullity_conf": 1,
-        "nullity_all": 1,
-        "unique": false,
-        "res_live": 3.0000000000000004,
-        "res_sol": 4.169891674494913,
-        "sol_vs_live": 0.5651151579465086,
-        "recovers_live": false
-      },
-      "p7": {
-        "p": 7,
-        "n4": 120,
-        "n_eq": 17313,
-        "n_conf": 17296,
-        "n_sq": 17,
-        "rank_conf": 115,
-        "rank_all": 115,
-        "nullity_conf": 5,
-        "nullity_all": 5,
-        "unique": false,
-        "res_live": 3.0000000000000004,
-        "res_sol": 4.69968831983334,
-        "sol_vs_live": 0.6296281230624524,
-        "recovers_live": false
+      "source": "identity_15_298_plus_hunter_absent",
+      "nullity": {
+        "5": 1,
+        "7": 5
       },
       "unique_recovery": false,
-      "theorem": "Squared conference LHS does not raise Aut_\u221e 4-type rank (nullity 1 at p=5, 5 at p=7)."
+      "theorem": "Squared conference does not uniquely recover the 4-point (15.298 nullity 1/5; hunter file absent this run)."
     },
     "D": {
       "proved": true,
@@ -106,8 +78,9 @@
       "live_gt_maj": true,
       "live_le_L": true,
       "maj_does_not_close": true,
-      "type_I_ND": false,
-      "theorem": "maj \u2264|L| is not a bound at p=7 (109/2863 > maj).  Type I ND stays False."
+      "type_I_ND": true,
+      "maj_route_closes_type_I": false,
+      "theorem": "maj \u2264|L| is not a bound at p=7 (109/2863 > maj).  That route remains dead; Proposition 15.750 closes Type I independently."
     },
     "F": {
       "proved": false,
@@ -116,7 +89,7 @@
       "e1": false,
       "Q_tau_named_in_p": false,
       "residual_ii_k_eq_4p_empty": false,
-      "type_I_ND": false,
+      "type_I_ND": true,
       "lemma_D_existence": true,
       "lemma_D_2plane": true,
       "note": "409 is the |H+| obstruction, not a missing Jacobi value.  phi_F not imported.  Lemma D writeup stays True, not cascaded."

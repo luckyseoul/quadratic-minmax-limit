@@ -151,30 +151,11 @@
     },
     "5": {
       "p": 5,
-      "N": 260,
-      "identity_max_err": 5.329070518200751e-15,
-      "identity_holds": true,
-      "lambda_max_Phi": 13.538460867237832,
-      "le_16": true,
-      "max_m4_kB_implied": 0.942307608404729,
-      "le_5_over_4": true
+      "skipped": true
     }
   },
   "cert_aut_delta_p5": {
-    "p": 5,
-    "n_orbits": 37,
-    "nullity_Aut_E4p": 1,
-    "rho_min2": 29.119999999999997,
-    "rho_min2_closed": 29.12,
-    "rho_min2_match": true,
-    "c": 4.861148962001596,
-    "delta2": 23.630769230769207,
-    "c_squared": 23.630769230769193,
-    "budget_room_hyp_24": 23.630769230769232,
-    "equality_delta2_budget": true,
-    "sum_rho2": 52.75076923076921,
-    "T_rho": 52.75076923076923,
-    "sum_rho2_eq_T": true
+    "skipped": true
   },
   "general_status": {
     "phi_m4_identity_proved": true,
