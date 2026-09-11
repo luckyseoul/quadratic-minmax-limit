@@ -50,3 +50,24 @@ bounds are unchanged.
 
 `~/scratch/ext_scan.py --a ORDER|file:PATH --bank NEXT` (session scratch);
 witness JSONs `~/scratch/ext_scan_{15..20}.json`.
+
+## Two-vertex scans (checkpoint ternary engine, V100)
+
+The archived reviewed engine (`two_vertex_ternary_cuda.py`,
+`original_mo_path_v100_20260906_Q86jOz/`, verifier SHA `384cc06d…`) computes
+the exact complete two-vertex endpoint optimum in `O(3^n)` on the GPU. Runs
+(GPU time 0.03–0.30 s each):
+
+```
+source / [source, best intermediate, endpoint] : next order : comparison
+K16 (30)   [30, 36, 37] -> 18 : 37   (bank 33)
+17 bank    [32, 33, 39] -> 19 : 39   (the one-vertex 39, corroborated)
+18 bank    [33, 43, 46] -> 20 : 46   (bank 42)
+19 bank    [41, 44, 44] -> 21 : 44   (bank 44)  matches
+K19 new    [39, 48, 48] -> 21 : 48
+```
+
+No two-vertex growth improves the bank bounds at 20/21. The `m_19 <= 39`
+record is reproduced independently from the order-17 winner via the
+two-vertex route. Every run carries the engine's built-in integer field
+verifier receipts (`result.json` in `~/scratch/tvwork/out_*/`).
