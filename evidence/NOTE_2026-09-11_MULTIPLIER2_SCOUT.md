@@ -34,8 +34,30 @@ the family composites `[[A5,B5],[B5^T,-A5]]`, `[[A6,B6],[B6^T,-A6]]` with
 **Reading.** `R_Z` stays in `[1.4, 1.7]` for `n >= 5` with no downward trend
 over a factor-`7` range of `n`. If the ratio persists asymptotically, the
 midpoint law alone will not meet the target (shortfall ~50% at measured
-orders); the constructive completion route (§2) is the live path, and sharper
-law variants (shifted thresholds) remain untested here.
+orders); the shifted-threshold sweep (§1.1) shows this ceiling is intrinsic to
+the one-sided Gaussian family, and the constructive completion route (§2) is
+the live path.
+
+### 1.1 Shifted-threshold sweep (same session)
+
+The same proved reduction admits a deterministic threshold `h`:
+`Z_h = s_h A + 2 phi(h) G + sqrt(1 - s_h^2 - 4 phi(h)^2) W`,
+`s_h = erf(h/sqrt(2))`; at `h = 0` this is exactly the midpoint law. Sweeping
+`h in [-2, 4]` plus the `h -> inf` limit (`Z = A`), with the same minimizers:
+
+n  | h=0 (R_Z) | best finite h | best R | h=inf, Z=A (R)
+---|-----------|---------------|--------|----------------
+7  | 1.268     | +4.00         | 1.180  | 1.179
+8  | 1.411     | +1.00         | 1.369  | 1.414
+10 | 1.532     | +4.00         | 1.362  | 1.360
+
+Tuning `h` recovers part of the overshoot (`n = 10`: `1.53 -> 1.36`) but the
+family plateaus at `>= ~1.2` across the tested orders; no threshold reaches the
+target. The `h -> inf` limit is the deterministic signing `H (x) A`
+(`H = [[1,1],[1,-1]]`), within ~1% of the best finite-`h` value — the ceiling
+is intrinsic, not a tuning artifact. Cheap signing bounds from that limit:
+`m_20 <= 50`, `m_16 <= 40`, `m_14 <= 30` (all dominated by constructive
+values in §2).
 
 ## 2. Completion-family data
 
@@ -46,7 +68,9 @@ law variants (shifted thresholds) remain untested here.
   `Phi = 9 = m_7` and `Phi(C14) = 21 = m_14` — exists-A exactness, proved.
 - `n = 8`: basin-hopping over 64 free signs finds `Phi = 32`, hence
   `m_16 <= 32` (target `28.28`, ratio `1.131`); search-based, witness in
-  scratch.
+  scratch. Extended runs (structured starts: Sylvester `H16 - I` = 40.0,
+  locally improved to 36; random starts 46-50) do not improve 32; with
+  `m_15 = 27`, `m_16` lies in `[27, 32]`.
 - `n = 9`: the `C18` decomposition (block `12 = m_9`) gives
   `m_18 <= 33 <= 2 sqrt(2) m_9 = 33.94`.
 - Weak explicit bounds from rounded midpoint samples: `m_20 <= 52`,
@@ -55,7 +79,8 @@ law variants (shifted thresholds) remain untested here.
 ## 3. Repro
 
 Session scratch certifiers (promotion pending):
-`~/scratch/scout_v1.py`, `~/scratch/scout_v2.py`, `~/scratch/scout_v2b.py`;
-merged outputs in `evidence/mo_multiplier2_scout_results_20260911.json`
-(deterministic seeds `12345+n` / `777+n` / `100+s`; MC standard errors
-<= 0.4%). `n = 14` chunking: `2^27` doubled states, 128 chunks.
+`~/scratch/scout_v1.py`, `~/scratch/scout_v2.py`, `~/scratch/scout_v2b.py`,
+`~/scratch/scout_v3.py` (threshold sweep), `~/scratch/scout_v3b.py` (order-16
+search); merged outputs in `evidence/mo_multiplier2_scout_results_20260911.json`
+(deterministic seeds `12345+n` / `777+n` / `100+s` / `200-403`; MC standard
+errors <= 0.4%). `n = 14` chunking: `2^27` doubled states, 128 chunks.
