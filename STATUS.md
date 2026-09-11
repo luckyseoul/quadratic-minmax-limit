@@ -23,6 +23,9 @@ give `Phi=108` at order 36, hence `m_36<=108`. These are three finite points
 (`q=5,13,17`) of one explicit family; they do not yield a formula, an
 asymptotic bound, or convergence. See
 `evidence/paley_structural_lift_20260911/`.
+The same multi-active cone repair, started directly from the order-28
+structural block, found no lowering one-, two-, or three-entry move among its
+696 ranked exact candidates. This is a finite local-neighborhood result only.
 
 There is no reviewed proof of convergence or nonconvergence. The value
 `1/2` is unproved. These statements are independent of the status of the

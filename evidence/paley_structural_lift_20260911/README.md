@@ -27,6 +27,20 @@ The generic CPU and HIP scorers have SHA-256
 `b1b6c95f582e86f807b181aa9b56599f8a56cb331f1f6be8edc28a86659d8b3c`
 and `15e81fdeabfd4bab1de1b2620b242845ff1cd1aa80cf792dacc90af346dcc763`.
 
+## Cone-repair neighborhood at q=13
+
+The multi-active Navier cone driver was started from the exact `q=13`
+structural block, rather than a random block. Its 16 ranked coordinates were
+drawn from the exact tied-maximizer band. No single or pair flip lowered 70.
+The expanded one-stage test then exhaustively scored all 696 ranked one-,
+two-, and three-entry proposals, again with no strict improvement. This is a
+finite local-basin observation only; it neither proves a cross-block optimum
+nor excludes a larger or differently ranked repair. The retained result is
+`cone_triple_result.json` (SHA-256
+`4dd38233e2561d4470ccc0bc98119bf5f617046320a62c858b83fc696e4dc004`),
+and the driver SHA-256 is
+`94046b35ea4009e4889a1d79363b601845838f9ea791a61e9c17e59b34ed3b66`.
+
 ## Interpretation boundary
 
 Three finite orders do not prove a formula for this family, establish an

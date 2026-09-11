@@ -8,6 +8,7 @@ nor an asymptotic assertion.
 from __future__ import annotations
 
 import argparse
+import itertools
 import json
 import os
 from pathlib import Path
@@ -56,11 +57,19 @@ def main() -> None:
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--seed", type=int, default=731)
     parser.add_argument("--stages", type=int, default=8)
+    parser.add_argument("--max-flip-size", type=int, choices=(2, 3), default=2)
+    parser.add_argument("--input-block", type=Path,
+                        help="optional 14-by-14 whitespace-separated starting cross block")
     args = parser.parse_args()
     if args.output.exists():
         raise ValueError("refusing to overwrite evidence")
     rng = np.random.default_rng(args.seed)
-    block = rng.choice(np.array([-1, 1], dtype=np.int8), size=(N, N))
+    if args.input_block is None:
+        block = rng.choice(np.array([-1, 1], dtype=np.int8), size=(N, N))
+    else:
+        block = np.loadtxt(args.input_block, dtype=np.int8)
+        if block.shape != (N, N) or not np.isin(block, (-1, 1)).all():
+            raise ValueError("input block must be a 14-by-14 sign matrix")
     records: list[dict] = []
     with tempfile.TemporaryDirectory(prefix="paley-cross-repair.") as raw:
         directory = Path(raw)
@@ -83,6 +92,8 @@ def main() -> None:
                 cone = "fallback descent ranking"
             candidates = [(int(e),) for e in ranked]
             candidates += [(int(a), int(b)) for k, a in enumerate(ranked) for b in ranked[k + 1 :]]
+            if args.max_flip_size == 3:
+                candidates += [tuple(map(int, edges)) for edges in itertools.combinations(ranked, 3)]
             best, selected = current, None
             for edges in candidates:
                 trial = block.copy()
@@ -102,6 +113,7 @@ def main() -> None:
     args.output.write_text(json.dumps({
         "classification": "finite exact two-block cone-repair diagnostic; no all-orders claim",
         "seed": args.seed, "stages": records, "final": current,
+        "input_block": None if args.input_block is None else str(args.input_block),
         "final_block": block.astype(int).tolist(),
     }, indent=2) + "\n")
     print(json.dumps({"initial_phi": records[0]["before"]["phi"], "final_phi": current["phi"], "stages": len(records)}))
