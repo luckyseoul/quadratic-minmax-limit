@@ -1,6 +1,18 @@
 # Current mathematical status
 
-Updated 2026-09-06. The original MO limit is OPEN.
+Updated 2026-09-11. The original MO limit is OPEN.
+
+Focused follow-up, 2026-09-11: the exact order-14 Paley one-vertex scan
+found its best extension value 27; this matches the separately certified
+`m_15=27` table but is source-specific.  The new exact order-28 Paley
+two-block cone-repair diagnostic used the imported stress-cone ranking on a
+seeded cross block. Soulkiller exhausted its 136 one/pair proposals over the
+full `2^27` projective cube at every trial; NUKA independently replayed the
+retained result. It stalled at norm 94. This is a finite rejection of that
+seeded local repair neighborhood, not a cross-block optimum, a general
+construction, or an all-orders implication. See
+`evidence/paley_one_vertex_extension_20260911/` and
+`evidence/paley_two_block_cone_repair_20260911/`.
 
 There is no reviewed proof of convergence or nonconvergence. The value
 `1/2` is unproved. These statements are independent of the status of the
