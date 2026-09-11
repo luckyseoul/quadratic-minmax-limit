@@ -34,6 +34,45 @@ records two escaped single-edge stalls among ten prescribed inputs, with
 matched proposal controls and independent integer replay. This is finite
 evidence of local usefulness, with no all-orders convergence claim.
 
+## Where the patterns already enter the all-orders work
+
+The finite repair utilities are not the only relevant transfer.  The active
+original-source lower-bound argument already has the structurally faithful
+analogues, with their exact scope recorded in
+`evidence/NOTE_2026-09-06_ALL_LAW_ADAPTIVE_NUCLEAR_GAIN.md`:
+
+* Its two Gaussian sign phases arise from the positive covariance cone
+  `|M|+M >= 0` and `|M|-M >= 0`, for `M=A/sqrt(n)`.  They are the actual
+  source-side analogue of the two positive stress directions.
+* Its coordinate-adaptive Boolean update is an exact one-step nonlinear
+  residual correction on the original signing.  The quadratic self-action is
+  retained and bounded; it is not a toy forcing term.
+* Its clipping estimate is evaluated by an exact radial Gaussian integral,
+  rather than numerical quadrature.
+
+This proves a uniform strict lower gain only under the stated source
+conditions; it does not compare different orders and therefore does not
+settle convergence.  Iterating that update is **not** currently justified:
+after one update the law is no longer either Gaussian sign phase, so the
+Gaussianization and higher-chaos controls cannot simply be applied again.
+Any genuine correction-cycle extension must supply a closed post-update
+state with a Dini-summable error.
+
+The related relative-gauge composition route has a different residual: the
+uncontrolled higher connected Eulerian layers beyond the mixed four-cycle.
+The exact factorization and the remaining all-orders targets are in
+`evidence/NOTE_2026-09-02_UPSTREAM_RELATIVE_GAUGE_BRIDGE.md`.  Numerical
+generalized Laguerre quadrature is not an accelerator there, because the
+relevant shell and Walsh quantities are finite exact sums.  A formal Lean
+artifact would verify a completed theorem, not create the missing
+composition estimate.
+
+The finite PSD majorizer scout in
+`evidence/navier_covariance_cone_probe_20260911/` tested the obvious
+weighted extension of the source covariance cone.  Its 88 independent
+order-10 instances found no improvement over `P=|M|`; this is a finite
+negative screen, not an optimality theorem.
+
 | Directory | What it is | Fidelity |
 |---|---|---|
 | `stress_cone/` | Positive-cone representation `T = c1 v1 + c2 v2`, `c1,c2 > 0` (§3.2, Prop 7.5, Fig 4) | Faithful algorithm, generic inputs |
