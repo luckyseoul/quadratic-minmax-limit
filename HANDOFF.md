@@ -19,6 +19,17 @@ completion for an exact source minimizer: observed minimum relative gap is
 1/42 across all 65,536 blocks. It is an SDP numerical diagnostic, with raw
 primal residuals and independent exact structural replay, not a theorem.
 
+The imported cone/correction pattern was then applied directly to that
+same finite numerical majorizer residual, not merely to a Boolean-norm toy.
+Across all 65,536 cross blocks, cone-ranked integral repairs improved the
+relative gap at 65,046 starts (mean reduction 0.0772162), ahead of the
+index-pair (64,754; 0.0712843) and seeded random-pair (64,776; 0.0725753)
+controls. Soulkiller used 88 workers and NUKA independently replayed all
+262,144 reported endpoints and aggregates. The complete compressed output
+and exact scope are in `evidence/fixed_repair_path_20260911/majorizer_gap_repair_README.md`.
+This is finite floating-SDP method evidence only: no zero-gap block, exact
+certificate, optimizer premise, or all-orders implication follows.
+
 Updated 2026-09-06. Start with `CORE.md` and `STATUS.md`.
 The original MO limit is OPEN; `L=1/2` is also OPEN.
 The reviewed bounds now satisfy `1/pi < liminf alpha_n <= limsup alpha_n <= 1/2`.
