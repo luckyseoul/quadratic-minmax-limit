@@ -1,0 +1,20 @@
+{
+  "note": "Scout Phi kernel bench, doubling objects with fixed seed-999 Z; identical scripts on both nodes.",
+  "kernel": "Phi(K) = max over 2^(2n-1) projective states S of |sum((S @ K) * S)/2|, float32, chunk 2^21",
+  "objects": {
+    "K15_minimizer": {"source_order": 15, "source_phi": 27, "doubled_order": 30, "states": 536870912, "phi_doubled": 105.97763061523438},
+    "K16_phi30": {"source_order": 16, "source_phi": 30, "doubled_order": 32, "states": 2147483648, "phi_doubled": 118.06329345703125},
+    "K17_phi34": {"source_order": 17, "source_phi": 34, "doubled_order": 34, "states": 8589934592, "phi_doubled": 129.4598388671875}
+  },
+  "runs": [
+    {"node": "soulkiller", "device": "Tesla V100-SXM2-16GB", "runtime": "cupy 14.2.0 CUDA", "object": "K15", "times": [4.069, 3.677, 3.675], "best": 3.675, "phi": 105.97763061523438},
+    {"node": "soulkiller", "device": "Tesla V100-SXM2-16GB", "runtime": "cupy 14.2.0 CUDA", "object": "K16", "times": [16.159, 15.769, 15.782], "best": 15.769, "phi": 118.06329345703125},
+    {"node": "soulkiller", "device": "Tesla V100-SXM2-16GB", "runtime": "cupy 14.2.0 CUDA", "object": "K17", "times": [69.637, 69.278], "best": 69.278, "phi": 129.4598388671875},
+    {"node": "nuka", "device": "AMD Radeon RX 9070 XT", "runtime": "cupy 13.5.1 ROCm 10.0", "object": "K15", "times": [5.463, 3.494, 3.477], "best": 3.477, "phi": 105.97763061523438},
+    {"node": "nuka", "device": "AMD Radeon RX 9070 XT", "runtime": "cupy 13.5.1 ROCm 10.0", "object": "K16", "times": [16.383, 14.83, 14.808], "best": 14.808, "phi": 118.06329345703125},
+    {"node": "nuka", "device": "AMD Radeon RX 9070 XT", "runtime": "cupy 13.5.1 ROCm 10.0", "object": "K17", "times": [68.042, 66.544], "best": 66.544, "phi": 129.4598388671875},
+    {"node": "soulkiller-cpu", "device": "88-thread CPU", "runtime": "numpy 2.5.2", "object": "K15", "times": [230.307], "best": 230.307, "phi": 105.97763061523438}
+  ],
+  "conclusion": "9070 XT at parity with V100 (4-6% faster) on the enumeration kernel; both GPUs cross-verify K15/K16/K17 doubled readings to float32 print precision.",
+  "date": "2026-09-11"
+}
