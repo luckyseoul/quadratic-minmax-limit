@@ -1,0 +1,481 @@
+{
+  "classification": "finite exact two-block cone-repair diagnostic; no all-orders claim",
+  "seed": 742,
+  "stages": [
+    {
+      "stage": 0,
+      "before": {
+        "n": 28,
+        "source_phi": 21,
+        "phi": 92,
+        "energy": -92,
+        "xmask": 4178,
+        "ymask": 9433,
+        "workers": 4,
+        "active": [
+          {
+            "value": 92,
+            "energy": -92,
+            "xmask": 4178,
+            "ymask": 9433
+          },
+          {
+            "value": 92,
+            "energy": 92,
+            "xmask": 7430,
+            "ymask": 2906
+          }
+        ]
+      },
+      "after": {
+        "n": 28,
+        "source_phi": 21,
+        "phi": 90,
+        "energy": 90,
+        "xmask": 4415,
+        "ymask": 6866,
+        "workers": 4,
+        "active": [
+          {
+            "value": 90,
+            "energy": 90,
+            "xmask": 4415,
+            "ymask": 6866
+          },
+          {
+            "value": 90,
+            "energy": 90,
+            "xmask": 4127,
+            "ymask": 6896
+          },
+          {
+            "value": 90,
+            "energy": -90,
+            "xmask": 4178,
+            "ymask": 9433
+          },
+          {
+            "value": 90,
+            "energy": 90,
+            "xmask": 6182,
+            "ymask": 2587
+          },
+          {
+            "value": 90,
+            "energy": 90,
+            "xmask": 6950,
+            "ymask": 2587
+          },
+          {
+            "value": 90,
+            "energy": 90,
+            "xmask": 6438,
+            "ymask": 2651
+          },
+          {
+            "value": 90,
+            "energy": 90,
+            "xmask": 7430,
+            "ymask": 2906
+          }
+        ]
+      },
+      "selected_edges": [
+        8
+      ],
+      "cone": "fractional ranking only",
+      "evaluated_candidates": 136
+    },
+    {
+      "stage": 1,
+      "before": {
+        "n": 28,
+        "source_phi": 21,
+        "phi": 90,
+        "energy": 90,
+        "xmask": 4415,
+        "ymask": 6866,
+        "workers": 4,
+        "active": [
+          {
+            "value": 90,
+            "energy": 90,
+            "xmask": 4415,
+            "ymask": 6866
+          },
+          {
+            "value": 90,
+            "energy": 90,
+            "xmask": 4127,
+            "ymask": 6896
+          },
+          {
+            "value": 90,
+            "energy": -90,
+            "xmask": 4178,
+            "ymask": 9433
+          },
+          {
+            "value": 90,
+            "energy": 90,
+            "xmask": 6182,
+            "ymask": 2587
+          },
+          {
+            "value": 90,
+            "energy": 90,
+            "xmask": 6950,
+            "ymask": 2587
+          },
+          {
+            "value": 90,
+            "energy": 90,
+            "xmask": 6438,
+            "ymask": 2651
+          },
+          {
+            "value": 90,
+            "energy": 90,
+            "xmask": 7430,
+            "ymask": 2906
+          }
+        ]
+      },
+      "after": {
+        "n": 28,
+        "source_phi": 21,
+        "phi": 90,
+        "energy": 90,
+        "xmask": 4415,
+        "ymask": 6866,
+        "workers": 4,
+        "active": [
+          {
+            "value": 90,
+            "energy": 90,
+            "xmask": 4415,
+            "ymask": 6866
+          },
+          {
+            "value": 90,
+            "energy": 90,
+            "xmask": 4127,
+            "ymask": 6896
+          },
+          {
+            "value": 90,
+            "energy": -90,
+            "xmask": 4178,
+            "ymask": 9433
+          },
+          {
+            "value": 90,
+            "energy": 90,
+            "xmask": 6182,
+            "ymask": 2587
+          },
+          {
+            "value": 90,
+            "energy": 90,
+            "xmask": 6950,
+            "ymask": 2587
+          },
+          {
+            "value": 90,
+            "energy": 90,
+            "xmask": 6438,
+            "ymask": 2651
+          },
+          {
+            "value": 90,
+            "energy": 90,
+            "xmask": 7430,
+            "ymask": 2906
+          }
+        ]
+      },
+      "selected_edges": null,
+      "cone": "fractional ranking only",
+      "evaluated_candidates": 136
+    }
+  ],
+  "final": {
+    "n": 28,
+    "source_phi": 21,
+    "phi": 90,
+    "energy": 90,
+    "xmask": 4415,
+    "ymask": 6866,
+    "workers": 4,
+    "active": [
+      {
+        "value": 90,
+        "energy": 90,
+        "xmask": 4415,
+        "ymask": 6866
+      },
+      {
+        "value": 90,
+        "energy": 90,
+        "xmask": 4127,
+        "ymask": 6896
+      },
+      {
+        "value": 90,
+        "energy": -90,
+        "xmask": 4178,
+        "ymask": 9433
+      },
+      {
+        "value": 90,
+        "energy": 90,
+        "xmask": 6182,
+        "ymask": 2587
+      },
+      {
+        "value": 90,
+        "energy": 90,
+        "xmask": 6950,
+        "ymask": 2587
+      },
+      {
+        "value": 90,
+        "energy": 90,
+        "xmask": 6438,
+        "ymask": 2651
+      },
+      {
+        "value": 90,
+        "energy": 90,
+        "xmask": 7430,
+        "ymask": 2906
+      }
+    ]
+  },
+  "final_block": [
+    [
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      -1
+    ],
+    [
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      -1
+    ],
+    [
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1
+    ],
+    [
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      1
+    ],
+    [
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1
+    ],
+    [
+      1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      1
+    ],
+    [
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      1
+    ],
+    [
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      1
+    ],
+    [
+      1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      1
+    ],
+    [
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1
+    ]
+  ]
+}

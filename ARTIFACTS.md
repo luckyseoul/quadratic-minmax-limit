@@ -30,6 +30,17 @@ the preceding reviewed strict-1/pi result and the rest of the research.
 These finite certificates and nonexhaustive searches do not close the
 original convergence problem or identify its limit value.
 
+## NUKA ROCm capability, 2026-09-11
+
+NUKA now has a ROCm 10.0 runtime with a dispatchable Radeon RX 9070 XT
+(`gfx1201`), verified by `rocminfo` and a compiled HIP full-cube parity
+scorer.  `rocm-smi` can still report no initialized driver under its WSL
+environment; do not use that warning alone to classify the GPU unavailable.
+For the current order-28 exact scorer, the 16-thread CPU implementation
+(0.11 seconds) beat HIP (0.14 seconds), with both returning `Phi=90` for the
+same retained block.  Allocate NUKA's GPU only to a larger compatible kernel
+that benchmarks faster; use its CPU threads for current exact replays.
+
 ## 2026-09-05 route-neutral reset
 
 The user requested that faulty bookkeeping and unsupported assumptions be

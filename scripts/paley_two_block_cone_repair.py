@@ -40,6 +40,16 @@ def spins(row: dict) -> tuple[np.ndarray, np.ndarray]:
     return x, y
 
 
+def active_constraints(row: dict) -> tuple[np.ndarray, np.ndarray]:
+    directions = []
+    defect = []
+    for state in row["active"]:
+        x, y = spins(state)
+        directions.append((x, y, int(state["energy"])))
+        defect.append(int(state["value"]) - (int(row["phi"]) - 2))
+    return np.asarray(defect, dtype=float), directions
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--scorer", type=Path, required=True)
@@ -56,19 +66,20 @@ def main() -> None:
         directory = Path(raw)
         current = score(args.scorer, block, directory)
         for stage in range(args.stages):
-            x, y = spins(current)
-            # For the current exact maximizer, changing B_ij changes its
-            # signed energy by -2 B_ij x_i y_j.  The one-row cone uses that
-            # true descent direction only to rank integral proposals.
-            delta = -2 * block.reshape(-1) * np.outer(x, y).reshape(-1)
-            defect = np.array([current["phi"]], dtype=float)
-            directions = (-np.sign(current["energy"]) * delta).reshape(-1, 1)
+            # Each active state gives an exact flip derivative.  The cone
+            # representation asks whether those simultaneous linearized
+            # deficits can be covered; it only ranks integral proposals.
+            defect, states = active_constraints(current)
+            directions = np.empty((N * N, len(states)), dtype=float)
+            for column, (x, y, energy) in enumerate(states):
+                delta = -2 * block.reshape(-1) * np.outer(x, y).reshape(-1)
+                directions[:, column] = -np.sign(energy) * delta
             try:
                 rep = general_cone_representation(directions, defect)
                 ranked = np.argsort(-rep.coefficients, kind="stable")[:16]
                 cone = "fractional ranking only"
             except NotInConeError:
-                ranked = np.argsort(-directions[:, 0], kind="stable")[:16]
+                ranked = np.argsort(-directions.sum(axis=1), kind="stable")[:16]
                 cone = "fallback descent ranking"
             candidates = [(int(e),) for e in ranked]
             candidates += [(int(a), int(b)) for k, a in enumerate(ranked) for b in ranked[k + 1 :]]

@@ -1,0 +1,464 @@
+{
+  "classification": "finite exact two-block cone-repair diagnostic; no all-orders claim",
+  "seed": 732,
+  "stages": [
+    {
+      "stage": 0,
+      "before": {
+        "n": 28,
+        "source_phi": 21,
+        "phi": 96,
+        "energy": 96,
+        "xmask": 2041,
+        "ymask": 10794,
+        "workers": 4,
+        "active": [
+          {
+            "value": 96,
+            "energy": 96,
+            "xmask": 2041,
+            "ymask": 10794
+          },
+          {
+            "value": 96,
+            "energy": 96,
+            "xmask": 2041,
+            "ymask": 6698
+          },
+          {
+            "value": 96,
+            "energy": 96,
+            "xmask": 2033,
+            "ymask": 7722
+          }
+        ]
+      },
+      "after": {
+        "n": 28,
+        "source_phi": 21,
+        "phi": 92,
+        "energy": 92,
+        "xmask": 6422,
+        "ymask": 5461,
+        "workers": 4,
+        "active": [
+          {
+            "value": 92,
+            "energy": 92,
+            "xmask": 2041,
+            "ymask": 10794
+          },
+          {
+            "value": 92,
+            "energy": 92,
+            "xmask": 6430,
+            "ymask": 13653
+          },
+          {
+            "value": 92,
+            "energy": 92,
+            "xmask": 6422,
+            "ymask": 5461
+          },
+          {
+            "value": 92,
+            "energy": -92,
+            "xmask": 3604,
+            "ymask": 6540
+          },
+          {
+            "value": 92,
+            "energy": 92,
+            "xmask": 2041,
+            "ymask": 6698
+          },
+          {
+            "value": 92,
+            "energy": 92,
+            "xmask": 2033,
+            "ymask": 7722
+          }
+        ]
+      },
+      "selected_edges": [
+        0,
+        5
+      ],
+      "cone": "fractional ranking only",
+      "evaluated_candidates": 136
+    },
+    {
+      "stage": 1,
+      "before": {
+        "n": 28,
+        "source_phi": 21,
+        "phi": 92,
+        "energy": 92,
+        "xmask": 6422,
+        "ymask": 5461,
+        "workers": 4,
+        "active": [
+          {
+            "value": 92,
+            "energy": 92,
+            "xmask": 2041,
+            "ymask": 10794
+          },
+          {
+            "value": 92,
+            "energy": 92,
+            "xmask": 6430,
+            "ymask": 13653
+          },
+          {
+            "value": 92,
+            "energy": 92,
+            "xmask": 6422,
+            "ymask": 5461
+          },
+          {
+            "value": 92,
+            "energy": -92,
+            "xmask": 3604,
+            "ymask": 6540
+          },
+          {
+            "value": 92,
+            "energy": 92,
+            "xmask": 2041,
+            "ymask": 6698
+          },
+          {
+            "value": 92,
+            "energy": 92,
+            "xmask": 2033,
+            "ymask": 7722
+          }
+        ]
+      },
+      "after": {
+        "n": 28,
+        "source_phi": 21,
+        "phi": 92,
+        "energy": 92,
+        "xmask": 6422,
+        "ymask": 5461,
+        "workers": 4,
+        "active": [
+          {
+            "value": 92,
+            "energy": 92,
+            "xmask": 2041,
+            "ymask": 10794
+          },
+          {
+            "value": 92,
+            "energy": 92,
+            "xmask": 6430,
+            "ymask": 13653
+          },
+          {
+            "value": 92,
+            "energy": 92,
+            "xmask": 6422,
+            "ymask": 5461
+          },
+          {
+            "value": 92,
+            "energy": -92,
+            "xmask": 3604,
+            "ymask": 6540
+          },
+          {
+            "value": 92,
+            "energy": 92,
+            "xmask": 2041,
+            "ymask": 6698
+          },
+          {
+            "value": 92,
+            "energy": 92,
+            "xmask": 2033,
+            "ymask": 7722
+          }
+        ]
+      },
+      "selected_edges": null,
+      "cone": "fractional ranking only",
+      "evaluated_candidates": 136
+    }
+  ],
+  "final": {
+    "n": 28,
+    "source_phi": 21,
+    "phi": 92,
+    "energy": 92,
+    "xmask": 6422,
+    "ymask": 5461,
+    "workers": 4,
+    "active": [
+      {
+        "value": 92,
+        "energy": 92,
+        "xmask": 2041,
+        "ymask": 10794
+      },
+      {
+        "value": 92,
+        "energy": 92,
+        "xmask": 6430,
+        "ymask": 13653
+      },
+      {
+        "value": 92,
+        "energy": 92,
+        "xmask": 6422,
+        "ymask": 5461
+      },
+      {
+        "value": 92,
+        "energy": -92,
+        "xmask": 3604,
+        "ymask": 6540
+      },
+      {
+        "value": 92,
+        "energy": 92,
+        "xmask": 2041,
+        "ymask": 6698
+      },
+      {
+        "value": 92,
+        "energy": 92,
+        "xmask": 2033,
+        "ymask": 7722
+      }
+    ]
+  },
+  "final_block": [
+    [
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      -1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      1
+    ],
+    [
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      1
+    ],
+    [
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      -1
+    ],
+    [
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1
+    ],
+    [
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      -1
+    ],
+    [
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      1
+    ],
+    [
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1
+    ],
+    [
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1
+    ],
+    [
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      1
+    ],
+    [
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      1
+    ],
+    [
+      1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      -1
+    ]
+  ]
+}

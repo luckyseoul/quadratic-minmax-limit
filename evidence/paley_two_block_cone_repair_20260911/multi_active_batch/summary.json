@@ -1,0 +1,26 @@
+{
+  "classification": "finite exact multi-active cone-repair batch; no all-orders claim",
+  "host": "soulkiller",
+  "seeds": [731, 732, 733, 734, 735, 736, 737, 738, 739, 740, 741, 742, 743, 744, 745, 746, 747, 748, 749, 750, 751, 752],
+  "concurrent_starts": 22,
+  "workers_per_start": 4,
+  "total_worker_cap": 88,
+  "exact_projective_states_per_score": 134217728,
+  "best_initial_phi": 92,
+  "best_final_phi": 90,
+  "strictly_improved_starts": 19,
+  "best_seeds": [741, 742],
+  "nuka_cpu_replay": {
+    "seed": 741,
+    "workers": 16,
+    "phi": 90,
+    "energy": 90
+  },
+  "nuka_hip_parity": {
+    "seed": 741,
+    "phi": 90,
+    "seconds": 0.14,
+    "cpu_seconds": 0.11,
+    "hip_device": "AMD Radeon RX 9070 XT gfx1201"
+  }
+}

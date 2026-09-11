@@ -1,0 +1,470 @@
+{
+  "classification": "finite exact two-block cone-repair diagnostic; no all-orders claim",
+  "seed": 741,
+  "stages": [
+    {
+      "stage": 0,
+      "before": {
+        "n": 28,
+        "source_phi": 21,
+        "phi": 92,
+        "energy": 92,
+        "xmask": 3506,
+        "ymask": 5173,
+        "workers": 4,
+        "active": [
+          {
+            "value": 92,
+            "energy": -92,
+            "xmask": 5456,
+            "ymask": 16383
+          },
+          {
+            "value": 92,
+            "energy": -92,
+            "xmask": 4306,
+            "ymask": 10227
+          },
+          {
+            "value": 92,
+            "energy": -92,
+            "xmask": 5456,
+            "ymask": 10239
+          },
+          {
+            "value": 92,
+            "energy": 92,
+            "xmask": 3506,
+            "ymask": 5173
+          }
+        ]
+      },
+      "after": {
+        "n": 28,
+        "source_phi": 21,
+        "phi": 90,
+        "energy": 90,
+        "xmask": 4127,
+        "ymask": 3932,
+        "workers": 4,
+        "active": [
+          {
+            "value": 90,
+            "energy": 90,
+            "xmask": 4127,
+            "ymask": 3932
+          },
+          {
+            "value": 90,
+            "energy": 90,
+            "xmask": 8160,
+            "ymask": 12451
+          },
+          {
+            "value": 90,
+            "energy": -90,
+            "xmask": 1293,
+            "ymask": 15515
+          },
+          {
+            "value": 90,
+            "energy": -90,
+            "xmask": 1285,
+            "ymask": 15519
+          },
+          {
+            "value": 90,
+            "energy": -90,
+            "xmask": 1293,
+            "ymask": 15551
+          },
+          {
+            "value": 90,
+            "energy": 90,
+            "xmask": 5837,
+            "ymask": 10570
+          }
+        ]
+      },
+      "selected_edges": [
+        8,
+        15
+      ],
+      "cone": "fractional ranking only",
+      "evaluated_candidates": 136
+    },
+    {
+      "stage": 1,
+      "before": {
+        "n": 28,
+        "source_phi": 21,
+        "phi": 90,
+        "energy": 90,
+        "xmask": 4127,
+        "ymask": 3932,
+        "workers": 4,
+        "active": [
+          {
+            "value": 90,
+            "energy": 90,
+            "xmask": 4127,
+            "ymask": 3932
+          },
+          {
+            "value": 90,
+            "energy": 90,
+            "xmask": 8160,
+            "ymask": 12451
+          },
+          {
+            "value": 90,
+            "energy": -90,
+            "xmask": 1293,
+            "ymask": 15515
+          },
+          {
+            "value": 90,
+            "energy": -90,
+            "xmask": 1285,
+            "ymask": 15519
+          },
+          {
+            "value": 90,
+            "energy": -90,
+            "xmask": 1293,
+            "ymask": 15551
+          },
+          {
+            "value": 90,
+            "energy": 90,
+            "xmask": 5837,
+            "ymask": 10570
+          }
+        ]
+      },
+      "after": {
+        "n": 28,
+        "source_phi": 21,
+        "phi": 90,
+        "energy": 90,
+        "xmask": 4127,
+        "ymask": 3932,
+        "workers": 4,
+        "active": [
+          {
+            "value": 90,
+            "energy": 90,
+            "xmask": 4127,
+            "ymask": 3932
+          },
+          {
+            "value": 90,
+            "energy": 90,
+            "xmask": 8160,
+            "ymask": 12451
+          },
+          {
+            "value": 90,
+            "energy": -90,
+            "xmask": 1293,
+            "ymask": 15515
+          },
+          {
+            "value": 90,
+            "energy": -90,
+            "xmask": 1285,
+            "ymask": 15519
+          },
+          {
+            "value": 90,
+            "energy": -90,
+            "xmask": 1293,
+            "ymask": 15551
+          },
+          {
+            "value": 90,
+            "energy": 90,
+            "xmask": 5837,
+            "ymask": 10570
+          }
+        ]
+      },
+      "selected_edges": null,
+      "cone": "fractional ranking only",
+      "evaluated_candidates": 136
+    }
+  ],
+  "final": {
+    "n": 28,
+    "source_phi": 21,
+    "phi": 90,
+    "energy": 90,
+    "xmask": 4127,
+    "ymask": 3932,
+    "workers": 4,
+    "active": [
+      {
+        "value": 90,
+        "energy": 90,
+        "xmask": 4127,
+        "ymask": 3932
+      },
+      {
+        "value": 90,
+        "energy": 90,
+        "xmask": 8160,
+        "ymask": 12451
+      },
+      {
+        "value": 90,
+        "energy": -90,
+        "xmask": 1293,
+        "ymask": 15515
+      },
+      {
+        "value": 90,
+        "energy": -90,
+        "xmask": 1285,
+        "ymask": 15519
+      },
+      {
+        "value": 90,
+        "energy": -90,
+        "xmask": 1293,
+        "ymask": 15551
+      },
+      {
+        "value": 90,
+        "energy": 90,
+        "xmask": 5837,
+        "ymask": 10570
+      }
+    ]
+  },
+  "final_block": [
+    [
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      1
+    ],
+    [
+      1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      -1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      1
+    ],
+    [
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1
+    ],
+    [
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      -1
+    ],
+    [
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      1
+    ],
+    [
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      -1
+    ],
+    [
+      1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1
+    ],
+    [
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      1
+    ],
+    [
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      -1
+    ]
+  ]
+}
