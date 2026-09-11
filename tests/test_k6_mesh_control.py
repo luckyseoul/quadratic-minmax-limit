@@ -50,7 +50,8 @@ def test_prepare_start_does_not_unstop_others(tmp_path):
     assert should_stop("nuka", root) is True
     assert should_stop("orin", root) is True
     assert should_stop("a380", root) is True
-    assert should_stop("cpu44", root) is True
+    # cpu44 retired 2026-09-11: ALL no longer flags it.
+    assert should_stop("cpu44", root) is False
     prepare_start("nuka", root)
     assert should_stop("nuka", root) is False
     assert should_stop("v100", root) is False
@@ -109,7 +110,7 @@ def test_a380_sycl_tester_not_host_numpy():
     py = (TOOL / "gpu_gen_sycl.py").read_text()
     assert "def sycl_test_batch" in py
     mesh = (TOOL / "k6_mesh.sh").read_text()
-    a380 = mesh.split("start_a380()")[1].split("start_cpu44()")[0]
+    a380 = mesh.split("start_a380()")[1].split("start_dash()")[0]
     assert "ONEAPI_DEVICE_SELECTOR=level_zero:gpu" in a380
     assert "K6_BACKEND=sycl" in a380
     # soulkiller has no Arc; constructor only (load_outer is jellyfin)
@@ -164,12 +165,8 @@ def test_dashboard_html_is_mobile():
     assert "&lt;script&gt;" in page
     assert "<script>x</script>" not in page.split("<script>")[0]
     mesh = (TOOL / "k6_mesh.sh").read_text()
-    cpu = mesh.split("start_cpu44()")[1].split("start_dash()")[0]
-    assert "run_kgauged.py 6 44" in cpu
-    assert "GPU_WORKERS=44" in cpu
-    assert "OMP_NUM_THREADS=1" in cpu
-    assert "NUMBA_NUM_THREADS=1" in cpu
-    assert "NUMBA_NUM_THREADS=44" not in cpu
+    # cpu44 retired 2026-09-11; the launcher must not mention it.
+    assert "cpu44" not in mesh
     # Start/stop POST must spawn the mesh script next to the dashboard,
     # never the main-tree path that no longer has k6_mesh.sh.
     assert "if (!busy) location.reload()" in page
