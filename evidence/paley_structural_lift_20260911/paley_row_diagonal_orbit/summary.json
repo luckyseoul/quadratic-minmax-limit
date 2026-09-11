@@ -1,0 +1,12 @@
+{
+  "classification": "finite exact diagonal-completion orbit; no all-orders claim",
+  "source": "q=13 Paley conference C",
+  "cross_blocks": "B=C+diag(d_a), with d_a equal to row a of C and d_a[a]=1",
+  "members": 14,
+  "hip_results": [70, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74, 74],
+  "minimum_phi": 70,
+  "minimum_member": 0,
+  "nonconstant_member_phi": 74,
+  "cpu_replay": {"member": 1, "workers": 16, "phi": 74},
+  "input_manifest_sha256": "ecf37fd9a0ae74ea6e7c18f199981426cadd1e41049567c28f225dc38ea7f0fd"
+}

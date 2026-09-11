@@ -41,6 +41,18 @@ nor excludes a larger or differently ranked repair. The retained result is
 and the driver SHA-256 is
 `94046b35ea4009e4889a1d79363b601845838f9ea791a61e9c17e59b34ed3b66`.
 
+## Paley-row diagonal orbit
+
+To test a defined nonconstant completion family, for each row `a` of `C` set
+`d_a` to that row with its diagonal zero replaced by `+1`, then score
+`B=C+diag(d_a)`. NUKA HIP exhaustively evaluated all fourteen members. The
+constant member `a=0` is the retained `B=C+I` block at 70; each of the other
+thirteen members has exact norm 74. NUKA's 16-thread CPU scorer independently
+replayed member 1 at 74. Inputs and the result summary are in
+`paley_row_diagonal_orbit/`. This compares one finite algebraic orbit only;
+it does not establish uniqueness among diagonal completions or all cross
+blocks.
+
 ## Interpretation boundary
 
 Three finite orders do not prove a formula for this family, establish an
