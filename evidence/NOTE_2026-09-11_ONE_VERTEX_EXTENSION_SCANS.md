@@ -71,3 +71,11 @@ No two-vertex growth improves the bank bounds at 20/21. The `m_19 <= 39`
 record is reproduced independently from the order-17 winner via the
 two-vertex route. Every run carries the engine's built-in integer field
 verifier receipts (`result.json` in `~/scratch/tvwork/out_*/`).
+
+Follow-up scans: the two-vertex order-19 endpoint (`second.txt`, a second
+`Phi=39` witness) extends one-vertex to exactly 46 at order 20 (all-ones);
+the order-18 intermediate (`first.txt`, `Phi=33`) extends two-vertex with
+`[33, 43, 46]` -> 46 at order 20. Every current best source saturates at 46
+for order 20: the bank's 42 (n=20) and 44 (n=21) are not reachable by this
+growth family, which now also rules out the natural extension attack for
+20/21.
