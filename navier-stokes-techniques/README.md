@@ -26,6 +26,14 @@ leftover residual to be flat at the singular time.
 
 ## Contents
 
+`quadratic_repair.py` applies the cone and correction-cycle primitives to
+actual complete signings: fractional cone coefficients rank integral edge
+repairs, and exact full Boolean norms decide every accepted correction.
+The [mesh experiment](../evidence/fixed_repair_path_20260911/README.md)
+records two escaped single-edge stalls among ten prescribed inputs, with
+matched proposal controls and independent integer replay. This is finite
+evidence of local usefulness, with no all-orders convergence claim.
+
 | Directory | What it is | Fidelity |
 |---|---|---|
 | `stress_cone/` | Positive-cone representation `T = c1 v1 + c2 v2`, `c1,c2 > 0` (§3.2, Prop 7.5, Fig 4) | Faithful algorithm, generic inputs |

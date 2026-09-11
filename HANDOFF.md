@@ -1,5 +1,18 @@
 # Handoff: original convergence problem
 
+## 2026-09-11: cone/correction integration on actual signings
+
+The [finite mesh experiment](evidence/fixed_repair_path_20260911/README.md)
+integrates the imported cone solver and correction-cycle driver with exact
+Boolean norm acceptance. Cone-ranked integral pairs escape two of ten
+single-edge stalls (22 to 20), outperforming two fixed proposal controls;
+only one input reaches 18 under every method. Separately, exhaustive
+repair scheduling excludes a no-overshoot bridge for the archived fixed
+two-repair witness: optimum normalized peak is 17/32. Soulkiller did the
+parallel work; NUKA independently replayed the paths and corrections.
+No all-orders comparison follows. Do not rerun these same inputs as a new
+search; the missing implication is uniform defect/repair control with order.
+
 Updated 2026-09-06. Start with `CORE.md` and `STATUS.md`.
 The original MO limit is OPEN; `L=1/2` is also OPEN.
 The reviewed bounds now satisfy `1/pi < liminf alpha_n <= limsup alpha_n <= 1/2`.
