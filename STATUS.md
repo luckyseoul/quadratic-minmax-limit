@@ -2,17 +2,6 @@
 
 Updated 2026-09-11. The original MO limit is OPEN.
 
-Focused composition calibration, 2026-09-11: the exact labeled
-relative-gauge transform for the balanced `9+9` Paley `C18` split has exactly
-one empty fiber at energy 35 among 131,072 gauges. Soulkiller (88 CPU
-threads) and NUKA (16 CPU threads) independently obtained the same integer
-occupancy law: 85,986,322 subthreshold triples, positive occupancies from 140
-through 1,203. The principal blocks have maxima `(14,14)`, so they are not
-asserted to be optimal order-9 blocks. This is a finite calibration of the
-active good-fiber mechanism: it reproduces sparse vacancy rather than an
-abundance theorem and supplies no multiplier-two inequality. See
-`evidence/relative_gauge_paley18_20260911/`.
-
 Focused follow-up, 2026-09-11: the exact order-14 Paley one-vertex scan
 found its best extension value 27; this matches the separately certified
 `m_15=27` table but is source-specific.  The new exact order-28 Paley
