@@ -35,7 +35,6 @@ HORSE = {
     "nuka": "RX 9070 XT HIP · 1 worker · GEN_CAP 40e6",
     "orin": "Orin Ampere sm_87 · 1 CUDA worker · GEN_CAP 8e6 · 6c / 7.5 GiB",
     "a380": "jellyfin Arc A380 SYCL emit+test · GEN_CAP 20e6",
-    "cpu44": "soulkiller 44 orbit processes · OMP=1 · no CUDA · GEN_CAP 8e6",
     "dash": "HTTP UI :8765",
 }
 LOGS = {
@@ -43,7 +42,6 @@ LOGS = {
     "nuka": ROOT / "enum_p13_k6_nuka.log",
     "orin": ROOT / "enum_p13_k6_orin.log",
     "a380": ROOT / "enum_p13_k6_a380.log",
-    "cpu44": ROOT / "enum_p13_k6_cpu44.log",
 }
 REMOTE = {"nuka": "nuka", "orin": "orin", "a380": "jellyfin"}
 
@@ -79,15 +77,6 @@ def _pgrep_local(pattern: str) -> bool:
 def _alive(name: str) -> bool:
     if name == "v100":
         return _pgrep_local("run_kgauged.py 6 2")
-    if name == "cpu44":
-        pid = _pid("cpu44")
-        if pid:
-            try:
-                os.kill(int(pid), 0)
-                return True
-            except (OSError, ValueError):
-                pass
-        return False
     if name == "dash":
         pid = _pid("dash")
         if not pid:

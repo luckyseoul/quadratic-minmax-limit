@@ -11,8 +11,8 @@ import time
 from pathlib import Path
 
 DEFAULT_ROOT = Path(os.environ.get("K6_ROOT", "/mnt/storage/e1work/maxplus_p13"))
-WORKERS = ("v100", "nuka", "orin", "a380", "cpu44", "dash")
-COMPUTE_WORKERS = ("v100", "nuka", "orin", "a380", "cpu44")
+WORKERS = ("v100", "nuka", "orin", "a380", "dash")
+COMPUTE_WORKERS = ("v100", "nuka", "orin", "a380")
 STOP_ALL = "ALL"
 STARVE_MARK = "STARVE"
 N_TASKS_DEFAULT = 17805

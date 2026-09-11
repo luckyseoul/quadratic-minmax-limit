@@ -16,7 +16,7 @@ NUKA_MNT=/home/nick/mnt/maxplus_p13
 NUKA_PY=/home/nick/.venvs/rocm72/bin/python
 ORIN_MNT=/home/nick/mnt/maxplus_p13
 JF_MNT=/home/nick/mnt/maxplus_p13
-WORKERS=(v100 nuka orin a380 cpu44 dash)
+WORKERS=(v100 nuka orin a380 dash)
 export PYTHONPATH="$CODE${PYTHONPATH:+:$PYTHONPATH}"
 
 usage() {
@@ -46,9 +46,6 @@ alive() {
   case "$name" in
     v100)
       pgrep -f 'run_kgauged.py 6 2' >/dev/null
-      ;;
-    cpu44)
-      [[ -n "$pid" ]] && kill -0 "$pid" 2>/dev/null
       ;;
     dash)
       [[ -n "$pid" ]] && kill -0 "$pid" 2>/dev/null
@@ -109,7 +106,13 @@ start_v100() {
     export PALEY_P=13 GAUGE_OUT="$GAUGE" LOAD_TASKS="$PICKLE"
     export RESUME_JSON="$ROOT/k6_resume.json" K6_ROOT="$ROOT" K6_STOP_DIR="$STOP"
     export GPU_WORKERS=2 GPU_MEM_FRAC=0.70 GEN_CAP=40000000
-    export ENUM_SHARD_MOD=1 OMP_NUM_THREADS=1 PYTHONUNBUFFERED=1
+    # soulkiller has no second CPU role reserving cores, so this worker gets the
+    # whole host: 2 GPU workers x 44 inner threads = all 88 cores. Emit is numba
+    # prange; BLAS stays single-threaded so the two workers do not oversubscribe.
+    export ENUM_SHARD_MOD=1 PYTHONUNBUFFERED=1
+    export NUMBA_NUM_THREADS=44 OMP_NUM_THREADS=44
+    export NUMBA_THREADING_LAYER=workqueue
+    export OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
     export K6_HOST=v100 K6_BACKEND=cuda PYTHONPATH="$CODE${PYTHONPATH:+:$PYTHONPATH}"
     echo "===== mesh V100 $(date -Is) =====" >> "$ROOT/enum_p13_k6.log"
     nohup python3 -u run_kgauged.py 6 2 >> "$ROOT/enum_p13_k6.log" 2>&1 &
@@ -220,31 +223,6 @@ EOF
   echo "a380 started pid $jpid"
 }
 
-start_cpu44() {
-  alive cpu44 && { echo "cpu44 already running pid $(cat "$(pidfile cpu44)")"; return 0; }
-  prepare_start cpu44
-  mkdir -p "$PIDS" "$GAUGE"
-  [[ -f "$PICKLE" ]] || { echo "missing $PICKLE" >&2; return 1; }
-  (
-    cd "$CODE"
-    export PALEY_P=13 GAUGE_OUT="$GAUGE" LOAD_TASKS="$PICKLE"
-    export RESUME_JSON="$ROOT/k6_resume.json" K6_ROOT="$ROOT" K6_STOP_DIR="$STOP"
-    # 44 independent orbit processes. Inner OpenMP/numba stays 1: NumpyTester
-    # is serial numpy, so one process × 44 OMP threads pegs ~1 core.
-    export GPU_WORKERS=44 GEN_CAP=8000000
-    export ENUM_SHARD_MOD=1 PYTHONUNBUFFERED=1
-    export K6_HOST=cpu44 K6_BACKEND=cpu PYTHONPATH="$CODE${PYTHONPATH:+:$PYTHONPATH}"
-    export NUMBA_NUM_THREADS=1 OMP_NUM_THREADS=1
-    export NUMBA_THREADING_LAYER=workqueue
-    export OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
-    export CUDA_VISIBLE_DEVICES=
-    echo "===== mesh cpu44 $(date -Is) =====" >> "$ROOT/enum_p13_k6_cpu44.log"
-    nohup python3 -u run_kgauged.py 6 44 >> "$ROOT/enum_p13_k6_cpu44.log" 2>&1 &
-    echo $! > "$(pidfile cpu44)"
-  )
-  echo "cpu44 started pid $(cat "$(pidfile cpu44)") (44 orbit processes, OMP=1, no CUDA)"
-}
-
 start_dash() {
   if alive dash; then
     echo "dash already running pid $(cat "$(pidfile dash)")"
@@ -282,7 +260,6 @@ start_one() {
     nuka) start_nuka ;;
     orin) start_orin ;;
     a380) start_a380 ;;
-    cpu44) start_cpu44 ;;
     dash) start_dash ;;
     all)
       start_dash
@@ -290,7 +267,6 @@ start_one() {
       start_nuka
       start_orin
       start_a380
-      start_cpu44
       ;;
     *) echo "unknown worker $1" >&2; return 2 ;;
   esac
@@ -336,7 +312,7 @@ stop_one() {
     # Old workers ignore the flag; starve new orbs so current locks still finish.
     # New workers also honour the flag and will not mkdir.
     soft_stop_legacy_starve
-    for w in v100 nuka orin a380 cpu44; do
+    for w in v100 nuka orin a380; do
       wait_pid_gone "$w" 3600 || true
     done
     drop_dummy_locks
@@ -379,17 +355,6 @@ hard_kill() {
       pgrep -f 'run_kgauged.py 6 2' | xargs -r kill -TERM 2>/dev/null || true
       sleep 2
       pgrep -f 'run_kgauged.py 6 2' | xargs -r kill -KILL 2>/dev/null || true
-      ;;
-    cpu44)
-      # Kill the Pool parent and descendants by PID tree (never pkill -f:
-      # that matches this wrapper). Also reap leftover 6 1 / 6 44 workers.
-      kill_tree_by_pid "$pid" TERM
-      sleep 2
-      kill_tree_by_pid "$pid" KILL
-      for wp in $(pgrep -f '[r]un_kgauged.py 6 (1|44)' || true); do
-        # v100 is '6 2'; only reap cpu44 argv shapes.
-        kill -KILL "$wp" 2>/dev/null || true
-      done
       ;;
     dash)
       [[ -n "$pid" ]] && kill -TERM "$pid" 2>/dev/null || true
