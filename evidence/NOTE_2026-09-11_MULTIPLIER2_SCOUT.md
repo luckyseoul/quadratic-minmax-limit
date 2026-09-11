@@ -53,11 +53,15 @@ n  | h=0 (R_Z) | best finite h | best R | h=inf, Z=A (R)
 
 Tuning `h` recovers part of the overshoot (`n = 10`: `1.53 -> 1.36`) but the
 family plateaus at `>= ~1.2` across the tested orders; no threshold reaches the
-target. The `h -> inf` limit is the deterministic signing `H (x) A`
-(`H = [[1,1],[1,-1]]`), within ~1% of the best finite-`h` value — the ceiling
-is intrinsic, not a tuning artifact. Cheap signing bounds from that limit:
-`m_20 <= 50`, `m_16 <= 40`, `m_14 <= 30` (all dominated by constructive
-values in §2).
+target. The `h -> inf` limit is the deterministic object `H (x) A`
+(`H = [[1,1],[1,-1]]`) — **not a signing**: its `n` matching entries `(i, n+i)`
+are zero. Charging those zeros at `+n` gives only the weak bounds
+`m_20 <= 60`, `m_16 <= 48`, `m_14 <= 37`, all dominated by §2; do not infer a
+`2 sqrt(2) Phi(A) + n` repair from this limit
+(`NOTE_2026-09-02_COHERENT_CLIQUE_OPTIMAL_SCALE_COUNTERFAMILY.md` disproves any
+`o(n^{3/2})` repair on the whole class `Phi(A) = O(n^{3/2})`). The limit value
+is within ~1% of the best finite-`h` value — the ceiling is intrinsic, not a
+tuning artifact.
 
 ## 2. Completion-family data
 
