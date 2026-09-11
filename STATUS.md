@@ -15,6 +15,15 @@ construction, or an all-orders implication. See
 `evidence/paley_one_vertex_extension_20260911/` and
 `evidence/paley_two_block_cone_repair_20260911/`.
 
+The separate structural Paley lift `B=C+I` is much stronger at the tested
+order: exact complete-cube evaluation gives `Phi=70` at order 28 and
+therefore `m_28<=70`.  NUKA HIP/CPU replay agrees. At the next available
+Paley order, NUKA HIP and an independent Soulkiller 88-thread CPU enumeration
+give `Phi=108` at order 36, hence `m_36<=108`. These are three finite points
+(`q=5,13,17`) of one explicit family; they do not yield a formula, an
+asymptotic bound, or convergence. See
+`evidence/paley_structural_lift_20260911/`.
+
 There is no reviewed proof of convergence or nonconvergence. The value
 `1/2` is unproved. These statements are independent of the status of the
 optional Paley research program.

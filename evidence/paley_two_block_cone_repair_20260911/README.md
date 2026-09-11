@@ -31,9 +31,9 @@ block with 16 workers, obtaining norm 90:
 | item | SHA-256 |
 | --- | --- |
 | Soulkiller result | `ef85e6dcd636bd586f736b98ad6355c811a14b461f980bbc9887644c4d90383d` |
-| exact scorer | `f384420bd4c74c1e796467f6a53d0b2ca9da650a9d3cfa3a753b6ce8aa8859e5` |
+| exact scorer | `b1b6c95f582e86f807b181aa9b56599f8a56cb331f1f6be8edc28a86659d8b3c` |
 | multi-active cone repair driver | `04bba6cc9b6c7b92372b87ffedf7e921fcecec21d53b9a0f037163722c6aa7bc` |
-| HIP parity scorer | `7e46111ab14e9b3ac0e6982506dbb57b00c5d8ac982dc2add386d1dc1440c72a` |
+| HIP parity scorer | `15e81fdeabfd4bab1de1b2620b242845ff1cd1aa80cf792dacc90af346dcc763` |
 
 The 22 raw batch files are in `multi_active_batch/`; seed 741 has SHA-256
 `1af0205684c9b3f02815a8a4bf963c0f2e0e32328c7b1ff293716312f935d2b8`.

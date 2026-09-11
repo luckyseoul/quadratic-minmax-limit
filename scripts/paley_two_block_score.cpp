@@ -1,6 +1,6 @@
-// Exact scorer for K(B)=[[C,B],[B^T,-C]], where C is q=13 Paley.
-// B is read as 196 whitespace-separated signs.  The global cube symmetry
-// fixes the first left spin, leaving 2^27 states, all evaluated exactly.
+// Exact scorer for K(B)=[[C,B],[B^T,-C]], where C is a Paley conference
+// signing of order ORDER. B is read as ORDER^2 signs. The global cube
+// symmetry fixes the first left spin, leaving 2^(2*ORDER-1) states.
 #include <algorithm>
 #include <atomic>
 #include <cstdint>
@@ -12,9 +12,13 @@
 
 struct Witness { int value; int energy; int xmask; int ymask; };
 
+#ifndef ORDER
+#define ORDER 14
+#endif
+
 int main(int argc, char** argv) {
   if (argc != 2) { std::cerr << "usage: scorer B.txt\n"; return 2; }
-  constexpr int q=13, n=14, xs=1<<(n-1), ys=1<<n;
+  constexpr int n=ORDER, q=n-1, xs=1<<(n-1), ys=1<<n;
   int chi[q]={};
   for (int a=1;a<q;++a) chi[(a*a)%q]=1;
   for (int a=1;a<q;++a) if (!chi[a]) chi[a]=-1;
@@ -79,7 +83,7 @@ int main(int argc, char** argv) {
   }
   std::sort(active.begin(),active.end(),[](const Witness&a,const Witness&b){return a.value>b.value;});
   if (active.size()>512) active.resize(512);
-  std::cout << "{\"n\":28,\"source_phi\":"<<source<<",\"phi\":"<<best.load()
+  std::cout << "{\"n\":"<<2*n<<",\"source_phi\":"<<source<<",\"phi\":"<<best.load()
             <<",\"energy\":"<<witness.energy<<",\"xmask\":"<<witness.xmask<<",\"ymask\":"<<witness.ymask
             <<",\"workers\":"<<omp_get_max_threads()<<",\"active\":[";
   for (size_t k=0;k<active.size();++k) { if(k) std::cout<<','; const auto&a=active[k];
