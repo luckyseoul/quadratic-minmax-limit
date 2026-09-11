@@ -7,8 +7,10 @@ m_n=\Phi+o(n^{3/2})=\tfrac12 n\sqrt{n-1}-o(n^{3/2}).
 \]
 In fact \(m_n\ge\Phi(C)-2\).
 
-**Status: CLOSED** (Props 15.167 bi-tight; 15.170–15.171 freeness-fail ND).  
-**Consequence:** Prop 6.1–6.2 \(\Rightarrow\lim\alpha_n=\tfrac12\).
+**Status: OPEN.** The cited bi-tight/freeness material does not establish the
+required all-prime Paley rigidity or a uniform lower bound for every signing.
+It therefore does not imply \(\lim\alpha_n=\tfrac12\).  The precise
+unresolved alternatives are stated below under “What would finish E(1)”.
 
 Historical numerics (2026-07-27): N10-C6; `phi_mitm`; n=26 MITM-SA.
 
