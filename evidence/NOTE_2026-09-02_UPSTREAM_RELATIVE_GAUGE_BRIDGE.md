@@ -178,6 +178,40 @@ the unique empty order-14 fiber. Any successful use of the lemma needs new
 asymptotic algebraic concentration, not extrapolation from that finite
 example.
 
+### Mod-two Walsh collapse
+
+There is also a precise boundary on the proposed ``parity'' version of the
+character-sum route.  It prevents a useless finite census of factored Walsh
+coefficients modulo two, but does not rule out a direct shell-specific
+pairing or an odd-prime congruence.
+
+Let `G` be any nontrivial elementary abelian two-group and let
+`b:G -> Z`.  Write `W_b(chi)=sum_g b(g)chi(g)` for the *unnormalized*
+Walsh numerator (the normalized coefficient `hat b=W_b/|G|` is not defined
+modulo two).  For every Walsh character `chi:G -> {+1,-1}`, reduction modulo
+two gives
+
+```text
+W_b(chi) = sum_g b(g) chi(g) = sum_g b(g)  (mod 2).         (8)
+```
+
+Thus every factored coefficient in the labeled formula has the same
+mod-two residue: the Walsh transform matrix itself reduces to the all-ones
+matrix.  Fourier inversion supplies no recovery of individual fiber
+residues in characteristic two, because its normalizing factor `1/|G|` is
+not defined there.  In particular, transform-level parity alone cannot
+distinguish an everywhere-odd occupancy from a pattern containing empty
+fibers.
+
+For example, the two integer occupancies `b(g)=1` for every `g`, and any
+occupancy obtained by replacing two values `1,1` by `0,2`, have the same
+total parity and hence identical mod-two Walsh-transform data by (8), while
+only the latter has a vacancy.  This is an algebraic obstruction to a proof
+that uses only the existing factored transforms reduced modulo two.  It does
+not say that an actual signing shell realizes the example, nor does it
+exclude a direct involution on its product triples, a congruence modulo an
+odd prime, or an exact sign identity before reduction.
+
 ## 4. The only relative-gauge estimates needed for convergence
 
 Let `m_n` be the optimal Boolean maximum and put `H(n)=m_n^(2/3)`. Let
