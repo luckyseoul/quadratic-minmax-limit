@@ -41,6 +41,19 @@ For the current order-28 exact scorer, the 16-thread CPU implementation
 same retained block.  Allocate NUKA's GPU only to a larger compatible kernel
 that benchmarks faster; use its CPU threads for current exact replays.
 
+## Relative-gauge `C18` calibration, 2026-09-11
+
+`scripts/relative_gauge_paley18.cpp` is an exact integer/Walsh transform
+scorer for the balanced `9+9` Paley conference `C18` relative-gauge shell at
+the first parity-admissible balanced target, energy 35. It is specifically a
+finite test of labeled good-fiber abundance, not a norm optimizer. The
+preserved [result package](evidence/relative_gauge_paley18_20260911/README.md)
+has one empty fiber among 131,072 and exact independent Soulkiller/NUKA CPU
+replays. Since the split's principal blocks have maxima 14 rather than the
+known `m_9=12`, it has no direct multiplier-two implication. The isolated
+vacancy is evidence of the existing precision wall, not an asymptotic
+counterexample to abundance.
+
 ## 2026-09-05 route-neutral reset
 
 The user requested that faulty bookkeeping and unsupported assumptions be

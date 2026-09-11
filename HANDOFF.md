@@ -1,5 +1,22 @@
 # Handoff: original convergence problem
 
+## 2026-09-11: relative-gauge `C18` sparse-vacancy calibration
+
+The active labeled relative-gauge route was evaluated exactly at the next
+Paley conference size without turning it into another norm search. For the
+consecutive balanced `9+9` split of `C18`, the first odd target above
+`2^(3/2)m_9` is 35. Exact integer shell Fourier multiplication and Walsh
+inversion find exactly one empty gauge fiber out of 131,072; nonempty
+occupancies range from 140 to 1,203. Soulkiller used all 88 CPU threads and
+NUKA independently replayed on 16 CPU threads. The local block maxima are
+`(14,14,33)`, so this does not use optimal order-9 blocks and cannot imply a
+multiplier-two theorem. It is a direct finite test of good-fiber abundance,
+and instead confirms the sparse-vacancy precision wall already visible at
+`C14`. Do not extrapolate this to an asymptotic obstruction or restart it as a
+broader Paley census; the retained data and exact scorer are
+`evidence/relative_gauge_paley18_20260911/` and
+`scripts/relative_gauge_paley18.cpp`.
+
 ## 2026-09-11: cone/correction integration on actual signings
 
 The [finite mesh experiment](evidence/fixed_repair_path_20260911/README.md)

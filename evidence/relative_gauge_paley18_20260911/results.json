@@ -1,0 +1,21 @@
+{
+  "classification": "exact_fixed_order_relative_gauge_diagnostic_not_all_orders",
+  "cross_split": "consecutive 9+9 vertices of Paley symmetric conference C18 (prime 17)",
+  "deficit_cutoff": 26,
+  "empty_fibers": 1,
+  "group_size": 131072,
+  "included_shell_triples": 168,
+  "independent_ceiling": 61,
+  "integral_inverse": true,
+  "maximum_occupancy": 1203,
+  "maxima": [14, 14, 33],
+  "minimum_positive_occupancy": 140,
+  "order": 18,
+  "replays": [{"host": "soulkiller", "workers": 88}, {"host": "NUKA", "workers": 16}],
+  "scalar_subthreshold_product_triples": 85986322,
+  "source_sha256": "21442fc9e021e9df0c59c1ed9ea3fb719a3ea86069ed1338c3999b613a6d9280",
+  "split": [9, 9],
+  "status": "PASS",
+  "target_energy": 35,
+  "target_interpretation": "first odd integer strictly above 2^(3/2)*m_9=24*sqrt(2); principal blocks are not claimed optimal"
+}
