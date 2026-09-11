@@ -1,5 +1,26 @@
 # Handoff: original convergence problem
 
+## 2026-09-11: structural Paley lift family closed as an asymptotic route
+
+The [family study](evidence/paley_structural_lift_family_20260911/README.md)
+answers the two questions the earlier structural-lift artifact left open.
+A field-generic `GF(q)` construction reaches the fourth and last enumerable
+order `q=9` (order 20, exact `Phi=40`), and all four exact points fit
+`Phi=N(N+12)/16` exactly. The fit is false: `K^2=(2q+1)I+2(C(+)C)` gives the
+exact all-orders bound `Phi(K)<=(q+1)sqrt(2q+1+2 sqrt q)`, violated by the
+fit at `q=25` — the first order past the four it was read off. Normalized,
+that bound decreases to `1/2` from above, so the family never certifies below
+`1/2`; mesh witnesses for every prime power `q=1 mod 4` up to `q=197`
+(order 396) give `Phi>=0.468 N^(3/2)` with no downward trend, so it cannot
+certify below about `0.47` either. Six independent deep shards agree on
+`Phi=222` at order 60 against the fit's 270.
+
+Do not re-run this family for a better constant, and do not restore the
+"scalable mechanism" framing: the ceiling and the floor are now both known.
+The useful transferable object is the `K^2` identity, which applies to any
+`B=C+I` cross block over a conference `C`. Soulkiller, jellyfin, NUKA and
+orin all ran; no GPU was needed.
+
 ## 2026-09-11: cone/correction integration on actual signings
 
 The [finite mesh experiment](evidence/fixed_repair_path_20260911/README.md)

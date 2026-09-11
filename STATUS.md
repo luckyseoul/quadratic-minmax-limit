@@ -27,6 +27,22 @@ The same multi-active cone repair, started directly from the order-28
 structural block, found no lowering one-, two-, or three-entry move among its
 696 ranked exact candidates. This is a finite local-neighborhood result only.
 
+That structural lift family is now closed as an asymptotic route. A fourth
+exact order `q=9` (a non-prime prime power, order 20, `Phi=40`) was reached
+with a field-generic construction, and all four exact points `18,40,70,108`
+satisfy `Phi=N(N+12)/16`. That formula is false. The identity
+`K^2=(2q+1)I+2(C(+)C)` gives `||K||=sqrt(2q+1+2 sqrt q)` and hence the exact
+all-orders bound `Phi(K)<=(q+1) sqrt(2q+1+2 sqrt q)`, which the formula
+already violates at `q=25`, the first order past the enumerable range. The
+family grows like `N^(3/2)`, not `N^2`, and its normalized spectral bound
+decreases to `1/2` from above, so it never certifies a constant below `1/2`.
+Explicit witnesses computed on the four-node mesh for every prime power
+`q=1 mod 4` up to `q=197` (order 396) give `Phi(K)>=0.468 N^(3/2)` at every
+tested order with no downward trend, so the family cannot supply an upper
+bound constant below about `0.47`. See
+`evidence/paley_structural_lift_family_20260911/`. This bounds one algebraic
+family; it does not bound `m_N` below or bear on the value of the limit.
+
 There is no reviewed proof of convergence or nonconvergence. The value
 `1/2` is unproved. These statements are independent of the status of the
 optional Paley research program.
