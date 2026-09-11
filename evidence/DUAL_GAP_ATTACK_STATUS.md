@@ -20,7 +20,7 @@ G=\frac{d}{32}(16I-\Phi|_Z)\succeq I
 | G eigs {1,2,4} at p=5 | **Certified** (structure clue) |
 | H for general \(p\ge5\) | **OPEN** (optional Path-C / 16N) |
 | residual δ²≤room_hyp/24 general | **OPEN** (optional) |
-| L = lim α_n | **CLOSED** \(=\tfrac12\) via bi-tight 15.167 + freeness ND 15.170–171 (not via H) |
+| L = lim α_n | **OPEN.** The former 15.167/15.170–171 closure chain was retracted; see `src/e1_gmin_m4_prop15167.py` and `STATUS.md`. |
 
 ## Attacks tried this arc (not closing)
 

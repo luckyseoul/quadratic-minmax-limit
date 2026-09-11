@@ -40,7 +40,13 @@ Not an applied target; Seidel / Paley / conference machinery is the method, not 
 
 ---
 
-## 3. Claim chain (load-bearing)
+## 3. Retracted historical claim chain — not load-bearing
+
+The table and lemma summaries in this section preserve the rejected
+2026-08-05 closure attempt.  They are not current claims: the spectral
+implication attributed to 15.167 was retracted, the Gsum premise used by
+15.170–171 remains unproved, and E(1) and the original limit are OPEN.
+Use `STATUS.md` and `HANDOFF.md` for current status.
 
 Write \(\alpha_n=m_n/n^{3/2}\) with
 \[
@@ -52,11 +58,11 @@ m_n=\min_{a_{ij}=\pm1}\max_{x=\pm1}\Bigl|\sum_{i<j}a_{ij}x_ix_j\Bigr|.
 | Sandwich \(1/\pi\le\liminf\le\limsup\le1/2\) | CLOSED | `solution.md` Main Theorem |
 | \(\rho=1\) on Paley \(n=p^2+1\) | CLOSED | `evidence/PROOF_rho_eq_1.md` |
 | Denseness (Prop 6.1–6.2): existence along dense family ⇒ global lim | CLOSED | `solution.md` |
-| **Bi-tight empty** all primes \(p\ge5\) | **CLOSED** | Prop **15.167** |
-| Type I freeness-fail \(k=3p-2\), \(s_-\le-1\) impossible | **CLOSED** | Prop **15.170** |
-| Deep freeness-fail \(k\ge3p\) ND | **CLOSED** | Prop **15.171** |
-| E(1): \(m_n\ge\Phi(C)-2\) on \(\rho=1\) family | **CLOSED** | 15.167 ∧ 15.170 ∧ 15.171 |
-| \(\Rightarrow L=\tfrac12\) | **CLOSED** | denseness + sandwich limsup |
+| **Bi-tight empty** all primes \(p\ge5\) | **RETRACTED / OPEN** | Former Prop **15.167** implication was invalid |
+| Type I freeness-fail \(k=3p-2\), \(s_-\le-1\) impossible | **OPEN** | The cited general Gsum premise is unproved |
+| Deep freeness-fail \(k\ge3p\) ND | **OPEN** | The cited general Gsum premise is unproved |
+| E(1): \(m_n\ge\Phi(C)-2\) on \(\rho=1\) family | **OPEN** | No valid general chain |
+| \(\Rightarrow L=\tfrac12\) | **OPEN** | No all-orders proof |
 
 ### Lemma summaries (for verification)
 
