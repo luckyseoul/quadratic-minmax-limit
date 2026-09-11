@@ -25,11 +25,22 @@ n  | m_n | target | EPhi_Z | R_Z   | EPhi_B | R_B
 10 | 13  | 36.77  | 56.86  | 1.546 | 57.53  | 1.565
 12 | 18  | 50.91  | 73.39  | 1.442 | 74.24  | 1.458
 14 | 21  | 59.40  | 90.22  | 1.519 | 91.65  | 1.543
+15 | 27  | 76.37  | 105.89 | 1.387 | —      | —
+16 | 32* | 90.51  | 116.26 | 1.284 | —      | —
+17 | 32* | 90.51  | 122.91 | 1.358 | —      | —
 
-Minimizers used: exact class-scan minimizers for `n <= 8`; for `n = 10, 12`
-the family composites `[[A5,B5],[B5^T,-A5]]`, `[[A6,B6],[B6^T,-A6]]` with
-`Phi = 13 = m_10`, `18 = m_12`; for `n = 14` the Paley `C14`
-(`Phi = 21 = m_14`). `rho = 1` (midpoint); `rho = 0.5` is slightly worse.
+Rows `n >= 15` computed on the V100 (CuPy 14.2, the campaign's
+`Q = sum((S @ K) * S, axis=1)/2` scoring pattern); the GPU path reproduces
+the `n = 10` CPU reading per-sample to `1e-6`. Minimizers used: exact
+class-scan minimizers for `n <= 8`; for `n = 10, 12` the family composites
+`[[A5,B5],[B5^T,-A5]]`, `[[A6,B6],[B6^T,-A6]]` with `Phi = 13 = m_10`,
+`18 = m_12`; `n = 14` Paley `C14` (`Phi = 21 = m_14`); `n = 15` the exact
+minimizer `K15 = [[C14, 1],[1^T, 0]]` — the all-ones one-vertex extension,
+`Phi = 27 = m_15` (rebuilt and verified this session,
+`evidence/K15_exact_minimizer_20260911.json`); `n = 16, 17` campaign winner
+matrices (`Phi = 32` each; `m_16 in [27, 32]` and `m_17 <= 32` unknown —
+marked `*`: targets/R for those rows are stated against `Phi(A)`).
+`rho = 1` (midpoint); `rho = 0.5` is slightly worse.
 
 **Reading.** `R_Z` stays in `[1.4, 1.7]` for `n >= 5` with no downward trend
 over a factor-`7` range of `n`. If the ratio persists asymptotically, the
@@ -85,6 +96,9 @@ tuning artifact.
 Session scratch certifiers (promotion pending):
 `~/scratch/scout_v1.py`, `~/scratch/scout_v2.py`, `~/scratch/scout_v2b.py`,
 `~/scratch/scout_v3.py` (threshold sweep), `~/scratch/scout_v3b.py` (order-16
-search); merged outputs in `evidence/mo_multiplier2_scout_results_20260911.json`
-(deterministic seeds `12345+n` / `777+n` / `100+s` / `200-403`; MC standard
-errors <= 0.4%). `n = 14` chunking: `2^27` doubled states, 128 chunks.
+search), `~/scratch/scout_v5.py` (GPU, run with
+`~/.venvs/mo-exact/bin/python`) and `~/scratch/prep_k15.py`; merged outputs in
+`evidence/mo_multiplier2_scout_results_20260911.json` (deterministic seeds
+`12345+n` / `777+n` / `100+s` / `200-403` / `777+n` (v5); MC standard errors
+<= 0.9%). `n = 14` chunking: `2^27` doubled states, 128 chunks; v5 chunking
+`2^21` states per chunk.
