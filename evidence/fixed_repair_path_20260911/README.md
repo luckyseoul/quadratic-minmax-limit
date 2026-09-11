@@ -106,3 +106,36 @@ the saved outputs. These are finite tools, without autonomous goal selection.
 The next unresolved implication is a construction with repair cost and
 normalized defect controlled uniformly over increasing orders. This
 experiment supplies neither the requisite family nor its uniform bound.
+
+## Numerical canonical-gap diagnostic
+
+The weighted-shell route requires a cross block whose trace-optimal
+two-sided diagonal-majorizer has small relative canonical gap. The script
+`scripts/diagonal_majorizer_gap_scan.py` scans a fixed source and every
+cross block, solving its SDP numerically with Clarabel. It is a diagnostic,
+not a certificate of an SDP optimum or an asymptotic statement.
+
+Soulkiller scanned all 65,536 order-4 cross blocks for the exact
+order-4 minimizer (Phi=4), using 88 independent solver processes. The
+best numerical result has tau=24, `tr|K|^3/7=164/7`, and hence canonical
+gap 4/7 with relative gap 1/42. No result has numerical relative gap below
+1e-6; the worst is about 1/4. The solver's least reconstructed primal
+eigenvalue over every `D-K` and `D+K` is at least -1.58e-9.
+
+The first winner (mask 23527) has a scalar diagonal approximately `3I`.
+Its complete order-8 matrix has exact polynomial
+`(K^2-I)(K^2-9I)=0`, trace `K^2=56`, and therefore eigenvalue magnitudes
+three with multiplicity six and one with multiplicity two. It explains
+the displayed `tr|K|^3=164`. There are 104 solver ties within 1e-7 of the
+best score. NUKA independently enumerated every order-4 source signing,
+checked Phi>=4, and verified these exact matrix identities and all stored
+numeric residual/count invariants.
+
+The preceding order-3 full scan has conference completions and numerical
+zero gap; it is merely the expected sanity case. At order 4 the scan does
+not justify assuming that a cross block automatically supplies the live
+small-gap premise. It does not rule out another all-orders mechanism,
+larger-order behavior, or an exact optimum below the observed numerical
+value. The compressed raw result is `gap_n4.json.gz` and retains every
+solver diagonal and residual. Replay its structural checks with
+`python3 scripts/verify_diagonal_majorizer_gap_scan.py evidence/fixed_repair_path_20260911/gap_n4.json.gz`.

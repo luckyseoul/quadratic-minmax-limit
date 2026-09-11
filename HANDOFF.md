@@ -13,6 +13,12 @@ parallel work; NUKA independently replayed the paths and corrections.
 No all-orders comparison follows. Do not rerun these same inputs as a new
 search; the missing implication is uniform defect/repair control with order.
 
+The separate full order-4 canonical-gap diagnostic in
+`evidence/fixed_repair_path_20260911/` finds no numerical zero-gap cross
+completion for an exact source minimizer: observed minimum relative gap is
+1/42 across all 65,536 blocks. It is an SDP numerical diagnostic, with raw
+primal residuals and independent exact structural replay, not a theorem.
+
 Updated 2026-09-06. Start with `CORE.md` and `STATUS.md`.
 The original MO limit is OPEN; `L=1/2` is also OPEN.
 The reviewed bounds now satisfy `1/pi < liminf alpha_n <= limsup alpha_n <= 1/2`.
