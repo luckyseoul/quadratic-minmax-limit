@@ -84,8 +84,10 @@ tuning artifact.
 - `n = 8`: basin-hopping over 64 free signs finds `Phi = 32`, hence
   `m_16 <= 32` (target `28.28`, ratio `1.131`); search-based, witness in
   scratch. Extended runs (structured starts: Sylvester `H16 - I` = 40.0,
-  locally improved to 36; random starts 46-50) do not improve 32; with
-  `m_15 = 27`, `m_16` lies in `[27, 32]`.
+  locally improved to 36; random starts 46-50) do not improve 32.
+  **Update (same session):** the archived growth-checkpoint tie intermediate
+  gives `m_16 <= 30` (verified CPU+GPU; `NOTE_2026-09-11_GROWTH_CHAIN_M16.md`),
+  so with `m_15 = 27`, `m_16` lies in `[27, 30]`.
 - `n = 9`: the `C18` decomposition (block `12 = m_9`) gives
   `m_18 <= 33 <= 2 sqrt(2) m_9 = 33.94`.
 - Weak explicit bounds from rounded midpoint samples: `m_20 <= 52`,
