@@ -45,3 +45,36 @@ def test_pair_cover_defect_identity_on_all_signings_through_order_four() -> None
                     assert int(values[x_index] + values[y_index]) == 2 * (
                         a - 2 * agreement_negative
                     )
+
+
+def test_homogeneous_three_witness_energy_bound_through_order_four() -> None:
+    for n in (3, 4):
+        states = _states(n)
+        edges = list(itertools.combinations(range(n), 2))
+        edge_total = len(edges)
+        for matrix in _signings(n):
+            values = np.einsum("bi,ij,bj->b", states, matrix, states) // 2
+            maximum = int(np.max(np.abs(values)))
+            for x_index, x in enumerate(states):
+                for z_index, z in enumerate(states):
+                    for w_index, w in enumerate(states):
+                        r, s = x * z, x * w
+                        common = [
+                            (i, j) for i, j in edges
+                            if r[i] == r[j] and s[i] == s[j]
+                        ]
+                        forced_positive_cover = all(
+                            matrix[i, j] * x[i] * x[j] == -1 for i, j in common
+                        )
+                        if forced_positive_cover:
+                            error_sum = 3 * maximum - int(
+                                values[x_index] + values[z_index] + values[w_index]
+                            )
+                            assert error_sum >= 3 * maximum - 3 * n / 2
+                        weighted = sum(
+                            int(matrix[i, j] * x[i] * x[j])
+                            * (1 + int(r[i] * r[j]) + int(s[i] * s[j]))
+                            for i, j in edges
+                        )
+                        assert weighted == int(values[x_index] + values[z_index] + values[w_index])
+                        assert edge_total - 4 * len(common) <= 3 * n / 2

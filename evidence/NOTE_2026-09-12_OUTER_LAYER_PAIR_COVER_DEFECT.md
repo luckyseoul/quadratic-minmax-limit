@@ -89,6 +89,54 @@ same-sign pair.  Pairwise defects alone do not rule out a cover by three or
 more witnesses, so this remains a boundary lemma rather than a multiplicity
 theorem.
 
+## Homogeneous three-witness obstruction
+
+There is a first genuinely multi-state consequence.  Let `x,z,w` be three
+positive states with respective errors `eps_x,eps_z,eps_w`.  Gauge by `x` and
+put `r=x circ z`, `s=x circ w`.  The vertices split into four signature cells
+according to `(r_i,s_i)`.  Let
+
+```
+N = sum_cells binom(|cell|, 2).
+```
+
+Thus `N` is the number of edges on which all three state-products agree.  On
+such an edge write `C_ij=A_ij x_i x_j`.  If the three positive witness sets
+cover every edge, then necessarily `C_ij=-1` on this whole common-agreement
+region.  Indeed `C_ij=+1` makes all three positive witness conditions fail.
+
+The exact signed-energy expansion is
+
+```
+Q_A(x)+Q_A(z)+Q_A(w) = sum_{i<j} C_ij (1+r_i r_j+s_i s_j).  (8)
+```
+
+The coefficient has magnitude three on the common-agreement region and
+magnitude one elsewhere.  Its sign is forced against the positive maximum
+there, so edgewise maximization in (8) gives
+
+```
+Q_A(x)+Q_A(z)+Q_A(w) <= binom(n,2)-4N.                     (9)
+```
+
+Convexity of `binom(t,2)` gives
+
+```
+N >= n^2/8-n/2,     hence     binom(n,2)-4N <= 3n/2.        (10)
+```
+
+Combining (9) with the three outer-layer lower bounds proves
+
+```
+eps_x+eps_z+eps_w >= 3M-3n/2.                              (11)
+```
+
+The same proof after changing all signs applies to three negative states.
+Consequently, three outer-two witnesses of one sign cannot cover every edge
+as soon as `M>n/2+2`.  This is an all-orders obstruction to homogeneous
+three-state covers.  Mixed-sign triples remain possible, so (11) still does
+not provide the growing witness-family theorem needed for RG2.
+
 ## Exact sign regression
 
 `tests/test_outer_layer_pair_cover_defect.py` exhausts every signing through

@@ -1457,3 +1457,19 @@ This is a structural strengthening of the edge-flip witness statement, not
 the required outer-layer multiplicity theorem: a larger diffuse family may
 still cover all edges.  It does not supply the Banaszczyk cover condition,
 the RG2 residual diamond, multiplier three, or convergence.
+
+## 2026-09-12 late: homogeneous three-witness extension
+
+The same outer-layer note now gives a genuine multi-state obstruction.  If
+three positive states cover every edge by their one-edge witness sets, then
+their errors obey
+`eps_x+eps_z+eps_w >= 3M-3n/2`; the identical assertion holds for three
+negative states.  Hence three same-sign outer-two witnesses cannot cover
+every edge once `M>n/2+2`.  The proof is an exact three-energy expansion on
+the four signature cells of the two relative sign vectors, followed by the
+convex lower bound on the common-agreement edges.  Controller exhaustive
+tests through order four and an independent NUKA replay passed.
+
+This rules out only homogeneous triples.  Mixed-sign triples and larger
+families are still viable, so the RG2 witness-family / rounding gap remains
+open.
