@@ -1,5 +1,22 @@
 # The completion-discrepancy framework for the doubling estimate
 
+**Prior-art notice (added 2026-09-12 after the user's audit request).** This
+note's framework largely duplicates pre-existing material. Verified against
+the repository: `NOTE_2026-09-01_RG2_EQUAL_ENDPOINT_PALEY_SHIELD.md` already
+contains, in strictly stronger form, (i) the cross-term floor — its eq. (3):
+`max|x^T R y| = max_x ||Rx||_1 >= (sqrt(2/pi)+o(1)) n^{3/2}` for skew `R`;
+(ii) the independent-budget obstruction (its §2); (iii) the exact residual
+reduction to a band-style condition (its eq. (14)); plus the equal-endpoint
+doubling frame, the balanced near-conference skew construction with a
+**proved** Dini-summable error, and three geometric shields. The two-block
+frame used here (`[[A,B],[B^T,-A]]`, `D = Q(x)-Q(y)`) is a weaker parallel of
+that machinery; Propositions 1–2 below are special/weaker cases of results
+already on record. The incremental content of this note is limited to: the
+corrected order-8 completion-floor data (breadth/depth negative), the
+partition observation on the known `Phi=30` objects, and the session
+correction record. **Work from the RG2 note and its successors, not from
+this one.**
+
 **Status:** working framework note (2026-09-12). Contains two elementary
 propositions (proved here), an exact reformulation, empirical ingredients from
 this session, three named open lemmas, and the algorithm the reformulation

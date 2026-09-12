@@ -1383,3 +1383,19 @@ inputs were supplied. It is not a verification of the present reset.
 
 No convergence claim may be accepted merely by toggling a Boolean or by
 closing optional-route checkboxes. A complete reviewed proof is required.
+
+## 2026-09-12 late: duplication audit (user-flagged) and the live route
+
+The user flagged that the day's completion-discrepancy work duplicated
+existing material. Audit confirms it: `NOTE_2026-09-01_RG2_EQUAL_ENDPOINT_
+PALEY_SHIELD.md` (and its successors on the multiplier-two ray) already
+contains the cross-term floor, the independent-budget obstruction, the exact
+residual reduction (its eq. (14)), an equal-endpoint doubling frame, a
+balanced near-conference skew construction with a PROVED Dini-summable error,
+and three geometric shields. The 2026-09-12 framework note now carries a
+prior-art notice marking its weaker status. The live route per the program's
+own documents is the RG2 equal-endpoint diamond on the residual (14) at
+multiplier two (multiplier three remains necessary beyond), with the
+Paley principal embedding and degree-balancing reversals as the degrees of
+freedom to choose. Read `ARTIFACTS.md`, the RG2 note, and the multiplier-ray
+notes BEFORE any new computation on this problem.
