@@ -17,6 +17,12 @@ For the order-six `Phi=5` source, the complete 36-bit, 4,096-pair
 88-worker CP-SAT model proves conditional value 18; its returned witness has
 `beta(B)=14` and `||B||op=1+sqrt(5)`, independently replayed on controller.
 Again this is one finite witness only; see `evidence/conditional_spectral_bridge_n6_20260912/`.
+For the order-seven `Phi=9` source, the complete 49-bit, 16,384-pair
+88-worker CP-SAT model proves conditional value 21; its returned witness has
+`beta(B)=21` and `||B||op=2 sqrt(3)`, independently replayed on controller.
+The n=5--7 normalized one-witness operator ratios are 1.508, 1.321, and
+1.309; descriptive only, not an asymptotic bridge. See
+`evidence/conditional_spectral_bridge_n7_20260912/`.
 
 **New finite records and closures since 2026-09-11:**
 

@@ -16,7 +16,7 @@ from ortools.sat.python import cp_model
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--n", type=int, choices=(5, 6), default=5)
+    parser.add_argument("--n", type=int, choices=(5, 6, 7), default=5)
     parser.add_argument("--workers", type=int, default=88)
     parser.add_argument("--seconds", type=float, default=600)
     args = parser.parse_args()
@@ -26,11 +26,19 @@ def main() -> None:
         np.fill_diagonal(a, 0)
         for i in range(n):
             a[i, (i + 1) % n] = a[(i + 1) % n, i] = -1
-    else:
+    elif n == 6:
         a = np.array(
             [[0, 1, 1, 1, 1, 1], [1, 0, 1, -1, -1, 1],
              [1, 1, 0, 1, -1, -1], [1, -1, 1, 0, 1, -1],
              [1, -1, -1, 1, 0, 1], [1, 1, -1, -1, 1, 0]],
+            dtype=np.int8,
+        )
+    else:
+        a = np.array(
+            [[0, 1, 1, 1, 1, 1, 1], [1, 0, -1, 1, 1, 1, 1],
+             [1, -1, 0, 1, 1, -1, -1], [1, 1, 1, 0, -1, -1, 1],
+             [1, 1, 1, -1, 0, 1, -1], [1, 1, -1, -1, 1, 0, -1],
+             [1, 1, -1, 1, -1, -1, 0]],
             dtype=np.int8,
         )
     x = np.array(list(itertools.product((-1, 1), repeat=n)), dtype=np.int8)
