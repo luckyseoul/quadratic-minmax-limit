@@ -1,5 +1,56 @@
 # Handoff: original convergence problem
 
+## 2026-09-12: session summary — closures, m_38 <= 109, nuka ops
+
+**New finite records and closures since 2026-09-11:**
+
+- `m_16 <= 30` (tie intermediate; `m_16 in [27,30]`). The order-16 completion
+  "witnesses" claiming 30 were RETRACTED (zero off-diagonal entries; not
+  signings); clean-seed completion floor is 32. Two distinct valid `Phi=30`
+  order-16 objects exist (tie intermediate; nuka16 source). The S15
+  one-vertex gap is closed: exact optimum 30, reproducing the tie
+  intermediate entrywise via a different code path.
+- `m_19 <= 39` (one-vertex extension of the 18-winner; witness landed and
+  cross-verified on both GPUs).
+- **`m_38 <= 109`** — explicit Paley conference evaluation `Phi(C38)=109`,
+  improving the spectral bound 115.58 and the coherent-lift 121; verified on
+  V100 and RX 9070 XT. Conferences: C14=21, C18=33, C26=65 (record 61
+  stands), C30=75 (=record), C38=109. Two-block theorem verified at q=25, 37;
+  the `block = m_k` pattern breaks beyond k=9 (blocks 30>20, 47>39).
+- **Exhaustive diagonal-lift closures**: order 16 min 32 over all 256
+  diagonals (12 attain), order 18 min 39 over 512 (46), order 20 min 40 over
+  1024 (2 attain — family exactly closed at its record). Orders 28/30/32/36/38
+  sampled: `D=I` optimal-so-far everywhere (order-38 anchor 121 = the archived
+  coherent-lift value, cross-validated).
+- **One-vertex scans 20->24**: 46, 44, 49, 53, 56 — records 21-24 matched
+  EXACTLY by extensions of the 20/21/22/23 winners ("tight chain"
+  42->44->49->53->56; the better order-20 object (40) extends to 46 —
+  extension quality is not monotone in source value). Bank winners are
+  DISTINCT objects from the scanned extensions (same values). The 24->25 scan
+  (bank 60) is the open shot.
+- ILS floors at ALL records 16-21 under the linear-response machinery; the
+  wide-GEMM reformulation gives 100x-class passes (order-36 pass: 2-5 s).
+  Tools landed: `scripts/hunt.py`, `scripts/lift_opt.py`,
+  `scripts/exhaustive_lift.py`, `scripts/comp_sweep.py`,
+  `scripts/paley_conference_eval.py`.
+
+**Nuka ops (important):** the `amd_cupy` wheel is ROCm 7.2.4-soname-locked
+(cannot use the installed ROCm 10.0 at `/opt/rocm/core-10.0`; no ROCm-10
+cupy wheels are published). Full-array cupy reductions (max/sum/argmax) are
+100-450x slow on gfx1201 under the 7.2 stack — use two-stage row reductions
+(`av.reshape(-1,4096).max(axis=1).max()`) or hipcc/hipBLAS (ROCm 10: wide
+sgemm 0.766 ms/call). The V100 remains ~2x faster than the 9070 XT on these
+GEMM shapes. Turn wall-clock budget raised to 7200 s in
+`~/.codewhale/config.toml` (backup `config.toml.bak-20260912`).
+
+**Status:** the convergence question is OPEN as before (bracket unchanged);
+the finite frontier is saturated under all current methods. Best known:
+16:30, 17:32, 18:33, 19:39, 20:40, 21:44, 22:49, 23:53, 24:56, 25:60,
+26:61, 28:70, 30:75, 32:80, 36:108, 38:109.
+
+**Repo state:** `main` is ahead of `origin/main` (NOT pushed; the push has
+been offered repeatedly and waits on the user's word).
+
 ## 2026-09-11: structural Paley lift family closed as an asymptotic route
 
 The [family study](evidence/paley_structural_lift_family_20260911/README.md)
