@@ -13,7 +13,7 @@ The returned minimizer independently replays on the controller with
 
 The deterministic remote witness JSON has SHA-256
 `e6a48f8bcd9d861e1fd62a0252afa2f1194d57942db9802f71c7b9d06eac1723`.
-The solver script SHA-256 is
+The original order-five run used the pre-generalization script SHA-256
 `e651eaf58c5c12291387fa26735471d0d2f363bd89207e3d673396c8ea3e1174`.
 
 This point neither proves nor refutes the desired asymptotic

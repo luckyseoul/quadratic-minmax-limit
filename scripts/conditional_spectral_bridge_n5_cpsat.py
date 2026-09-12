@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact n=5 conditional-cross minimax probe for the spectral bridge.
+"""Exact small-order conditional-cross minimax probe for the spectral bridge.
 
 One conditional minimizer is obtained with CP-SAT.  It is finite evidence
 only and does not classify all minimizers or prove an asymptotic bridge.
@@ -16,14 +16,23 @@ from ortools.sat.python import cp_model
 
 def main() -> None:
     parser = argparse.ArgumentParser()
+    parser.add_argument("--n", type=int, choices=(5, 6), default=5)
     parser.add_argument("--workers", type=int, default=88)
     parser.add_argument("--seconds", type=float, default=600)
     args = parser.parse_args()
-    n = 5
-    a = np.ones((n, n), dtype=np.int8)
-    np.fill_diagonal(a, 0)
-    for i in range(n):
-        a[i, (i + 1) % n] = a[(i + 1) % n, i] = -1
+    n = args.n
+    if n == 5:
+        a = np.ones((n, n), dtype=np.int8)
+        np.fill_diagonal(a, 0)
+        for i in range(n):
+            a[i, (i + 1) % n] = a[(i + 1) % n, i] = -1
+    else:
+        a = np.array(
+            [[0, 1, 1, 1, 1, 1], [1, 0, 1, -1, -1, 1],
+             [1, 1, 0, 1, -1, -1], [1, -1, 1, 0, 1, -1],
+             [1, -1, -1, 1, 0, 1], [1, 1, -1, -1, 1, 0]],
+            dtype=np.int8,
+        )
     x = np.array(list(itertools.product((-1, 1), repeat=n)), dtype=np.int8)
     q = np.einsum("pi,ij,pj->p", x, a, x, optimize=True) // 2
     model = cp_model.CpModel()

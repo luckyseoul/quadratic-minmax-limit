@@ -13,6 +13,10 @@ For the `Phi=4` order-five negative-cycle source, an 88-worker Soulkiller
 CP-SAT solve proves conditional value 13; one returned minimizer has
 `||B||op=3.3722813232690143` and independently replays on the controller.
 This is one finite witness only; see `evidence/conditional_spectral_bridge_n5_20260912/`.
+For the order-six `Phi=5` source, the complete 36-bit, 4,096-pair
+88-worker CP-SAT model proves conditional value 18; its returned witness has
+`beta(B)=14` and `||B||op=1+sqrt(5)`, independently replayed on controller.
+Again this is one finite witness only; see `evidence/conditional_spectral_bridge_n6_20260912/`.
 
 **New finite records and closures since 2026-09-11:**
 
