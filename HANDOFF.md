@@ -2,6 +2,14 @@
 
 ## 2026-09-12: session summary — closures, m_38 <= 109, nuka ops
 
+**Conditional spectral bridge diagnostic (finite only):** for the fixed
+order-four `Phi=4` source, exhaustive enumeration of all 65,536 cross
+signings gives conditional value 10 and 184 conditional minimizers, all with
+`||B||op <= 2 sqrt(2)`.  The controller and Soulkiller JSON receipts agree
+(SHA-256 `0b23ae0975aa6063282f097b0221fb95a9feb876703f18d910b7d47ba22e354f`).
+This is evidence for, not a proof of, the unproved asymptotic conditional
+spectral bridge; see `evidence/conditional_spectral_bridge_probe_20260912/`.
+
 **New finite records and closures since 2026-09-11:**
 
 - `m_16 <= 30` (tie intermediate; `m_16 in [27,30]`). The order-16 completion
