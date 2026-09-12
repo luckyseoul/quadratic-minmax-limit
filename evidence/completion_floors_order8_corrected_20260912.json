@@ -1,0 +1,27 @@
+{
+ "description": "Corrected order-8 completion floors (half-space evaluator fixed; all values re-verified by full enumeration over 2^15 projective states).",
+ "date": "2026-09-12",
+ "correction_context": "The first measurement used an evaluator whose free-block state construction fixed y0=+1 (half-space); half-space maxima are lower bounds, invalid for upper-bound claims. Fixed, validated against ground truth (C14=21; defective witness evaluates to its true 42).",
+ "deep_floors_12_sources_3min_SA": {
+  "m8_h1": 34,
+  "m8_h2": 34,
+  "m8_h3": 34,
+  "m8_h4": 32,
+  "m8_h5": 32,
+  "m8_h6": 32,
+  "m8_h7": 32,
+  "m8_h8": 32,
+  "m8_h9": 34,
+  "m8_h10": 32,
+  "m8_h11": 34,
+  "m8_h12": 34
+ },
+ "min_over_12": 32,
+ "batch_2000_sources": {
+  "method": "quick active-set (60 iters) with the fixed evaluator + inline full-pass values",
+  "results_le_30_found": 0,
+  "note": "no completion <= 30 found in any of 2000 distinct order-8 minimizers"
+ },
+ "conclusion": "The completion route at n=8 bottoms out at 32 across breadth and depth: the withdrawn 30s/28 did not exist. m_16 <= 28 (the first open doubling instance) is NOT reachable via completions of these sources; the straddle remains open for non-completion constructions. The partition theorem stands: the known m_16 = 30 record object is not a completion under any partition/switching.",
+ "chain_note": "Separately: the nuka one-vertex scan of the 53-object (extension of bank 22) gives exactly 56 = the 24-record: the extension lineage saturates the records at 22/23/24."
+}

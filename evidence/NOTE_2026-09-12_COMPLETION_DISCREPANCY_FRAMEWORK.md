@@ -111,9 +111,12 @@ precise directional audit of everything measured with the defect:
   and the claim "completion-type `Phi = 30` objects exist". The "`Phi = 28`"
   candidates never landed: independent full enumeration (correct space)
   evaluated them at 42 before any commit — the verification pipeline
-  worked as intended. A corrected 12-source deep sweep with the fixed
-  evaluator (validated: C14 = 21; the defective witness re-evaluates to
-  its true 42) is in progress.
+  worked as intended. Corrected measurements (fixed evaluator, all values
+  re-verified by full enumeration): **12-source deep sweep floors: 32 (6
+  sources) / 34 (6 sources), min 32; 2,000-source quick scan: zero
+  completions <= 30 found.** The completion route at `n = 8` therefore
+  bottoms out at 32 > 28.28 across breadth and depth: it does not settle
+  the m_16 straddle, which remains open for non-completion constructions.
 - The reformulation and the two propositions are unaffected (they concern
   the exact state space).
 - At `n = 16`, a Hadamard-aligned diagonal completion gives `80 <=
