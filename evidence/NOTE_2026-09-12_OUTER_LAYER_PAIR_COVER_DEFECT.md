@@ -131,6 +131,17 @@ Combining (9) with the three outer-layer lower bounds proves
 eps_x+eps_z+eps_w >= 3M-3n/2.                              (11)
 ```
 
+More generally, let `W_+` count the common-agreement edges with `C_ij=+1`.
+They are precisely the edges jointly uncovered by the three positive
+witnesses.  Keeping their actual sign in the edgewise estimate gives
+
+```
+W_+ >= (3M-(eps_x+eps_z+eps_w)-3n/2)/6.                   (11a)
+```
+
+For outer-two states this is `W_+ >= M/2-n/4-1`.  The identical statement
+holds for three negative states after reversing signs.
+
 The same proof after changing all signs applies to three negative states.
 Consequently, three outer-two witnesses of one sign cannot cover every edge
 as soon as `M>n/2+2`.  This is an all-orders obstruction to homogeneous
@@ -158,13 +169,26 @@ The three outer inequalities and `Q_A(w)>=-M` consequently give
 eps_x+eps_y+eps_z >= 2M+4N_{--}.                          (13)
 ```
 
+Without assuming a cover, let `W_mix` count the double-negative edges with
+`C_ij=+1`.  These are jointly uncovered by the mixed triple.  The left side
+of (12) is then `-4N_{--}+8W_mix`, so `Q_A(w)>=-M` gives
+
+```
+W_mix >= M/4 + N_{--}/2 - (eps_x+eps_y+eps_z)/8.           (13a)
+```
+
+Thus every mixed outer-two triple leaves at least `M/4-3/4` jointly
+uncovered edges (and more when the double-negative region is large).
+
 The same statement, with signs reversed, holds for two positive and one
 negative state.  In particular a mixed-sign triple of outer-two witnesses
 cannot cover every edge whenever `M>3`.  Together with (11), **no triple of
 outer-two one-edge witnesses covers every edge once `M>n/2+2`**.  This is a
 uniform all-orders cardinality lower bound of four on a putative witness
-cover.  It remains far short of the growing-family bound required by the
-RG2/Banaszczyk route.
+cover.  Equations (11a) and (13a) also give linear-in-`M` triple-defect mass
+bounds.  They remain far short of the growing-family bound required by the
+RG2/Banaszczyk route: a fourth witness can in principle cover a set of this
+size.
 
 ## Exact sign regression
 

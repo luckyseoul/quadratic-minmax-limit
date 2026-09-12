@@ -71,6 +71,13 @@ def test_homogeneous_three_witness_energy_bound_through_order_four() -> None:
                                 values[x_index] + values[z_index] + values[w_index]
                             )
                             assert error_sum >= 3 * maximum - 3 * n / 2
+                        uncovered = sum(
+                            matrix[i, j] * x[i] * x[j] == 1 for i, j in common
+                        )
+                        error_sum = 3 * maximum - int(
+                            values[x_index] + values[z_index] + values[w_index]
+                        )
+                        assert 6 * uncovered >= 3 * maximum - error_sum - 3 * n / 2
                         weighted = sum(
                             int(matrix[i, j] * x[i] * x[j])
                             * (1 + int(r[i] * r[j]) + int(s[i] * s[j]))
@@ -123,3 +130,18 @@ def test_mixed_three_witness_walsh_identity_through_order_four() -> None:
                                 + int(values[z_index])
                             )
                             assert error_sum >= 2 * maximum + 4 * len(double_negative)
+                        uncovered = sum(
+                            matrix[i, j] * x[i] * x[j] == 1
+                            for i, j in double_negative
+                        )
+                        error_sum = (
+                            maximum
+                            - int(values[x_index])
+                            + maximum
+                            + int(values[y_index])
+                            + maximum
+                            + int(values[z_index])
+                        )
+                        assert 8 * uncovered >= (
+                            2 * maximum + 4 * len(double_negative) - error_sum
+                        )

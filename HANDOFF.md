@@ -1489,3 +1489,10 @@ Controller exhaustive algebraic regression through order four and an
 independent NUKA replay passed.  This is a cardinality-four lower bound for
 any such cover, not the required growing-family theorem; arbitrary larger
 mixed families remain the live gap.
+
+The identities retain quantitative mass: a homogeneous outer-two triple
+leaves at least `M/2-n/4-1` jointly uncovered edges, and a mixed outer-two
+triple at least `M/4-3/4` (with an additional positive term from its
+double-negative signature region).  This is the first route toward a
+growing-cover lower bound, but no capacity theorem prevents a fourth witness
+from covering those sets.
