@@ -1442,15 +1442,16 @@ status change).
 
 ## 2026-09-12 late: outer-layer pair-cover defect
 
-`NOTE_2026-09-12_OUTER_LAYER_PAIR_COVER_DEFECT.md` adds an all-orders
-identity for the actual one-edge witness layers.  If `x` is positive within
-`eps_plus` of `M=Phi(A)` and `y` is negative within `eps_minus`, their
-edge-flip witness sets leave at least
-`b/2+M/2-(eps_plus+eps_minus)/4` edges uncovered, where
-`b=d_H(x,y)(n-d_H(x,y))`.  In particular outer-two witnesses have
-cut size at least `M-2`, and no one positive/one negative pair covers every
-edge when `M>2`.  The exact sign identity was exhaustively regressed through
-order four on the controller and independently replayed on NUKA.
+`NOTE_2026-09-12_OUTER_LAYER_PAIR_COVER_DEFECT.md` adds all-orders
+identities for the actual one-edge witness layers.  An opposite-sign outer
+pair leaves at least `b/2+M/2-(eps_plus+eps_minus)/4` edges uncovered on its
+Hamming cut, where `b=d_H(x,y)(n-d_H(x,y))`; in particular outer-two
+witnesses have cut size at least `M-2`.  A same-sign pair leaves the analogous
+defect `a/2+M/2-(eps_x+eps_z)/4` on its agreement side, where
+`a=binom(n,2)-b`.  Thus every pair type has a certified uncovered set, and
+no one positive/one negative pair covers every edge when `M>2`.  The exact
+sign identities were exhaustively regressed through order four on the
+controller and independently replayed on NUKA.
 
 This is a structural strengthening of the edge-flip witness statement, not
 the required outer-layer multiplicity theorem: a larger diffuse family may

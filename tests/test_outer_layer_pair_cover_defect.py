@@ -32,3 +32,16 @@ def test_pair_cover_defect_identity_on_all_signings_through_order_four() -> None
                     b = len(cut)
                     uncovered = sum(matrix[i, j] * x[i] * x[j] == 1 for i, j in cut)
                     assert int(values[y_index] - values[x_index]) == 2 * b - 4 * uncovered
+
+                    agreement = [(i, j) for i, j in edges if r[i] == r[j]]
+                    a = len(agreement)
+                    agreement_positive = sum(
+                        matrix[i, j] * x[i] * x[j] == 1 for i, j in agreement
+                    )
+                    agreement_negative = a - agreement_positive
+                    assert int(values[x_index] + values[y_index]) == 2 * (
+                        -a + 2 * agreement_positive
+                    )
+                    assert int(values[x_index] + values[y_index]) == 2 * (
+                        a - 2 * agreement_negative
+                    )

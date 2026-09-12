@@ -56,6 +56,39 @@ witnesses rather than mass: the two opposite outer layers cannot collapse to
 one mutually covering pair.  It still permits a larger, diffuse witness
 family to cover all edges, so no anchor-capacity or RG2 conclusion follows.
 
+## Same-sign pair defect
+
+The defect is not peculiar to opposite signs.  Let `x,z` both be positive
+outer states, with errors `eps_x,eps_z`, and use the same notation
+`r=x circ z`, `b=d(n-d)`, and `a=binom(n,2)-b`.  On the `a` edges where
+`r_i r_j=+1`, put `C_ij=A_ij x_i x_j` and let `u_+` count those with
+`C_ij=+1`.  Such edges are uncovered by both positive witnesses.  The exact
+identity is
+
+```
+Q_A(x)+Q_A(z) = 2(-a+2u_+),                                (4)
+```
+
+and therefore
+
+```
+u_+ >= a/2 + M/2 - (eps_x+eps_z)/4.                         (5)
+```
+
+For two negative outer states, define `u_-` to count the `a` agreement-side
+edges with `C_ij=-1`.  Those are uncovered by both negative witnesses, and
+
+```
+Q_A(x)+Q_A(z) = 2(a-2u_-),                                  (6)
+u_- >= a/2 + M/2 - (eps_x+eps_z)/4.                         (7)
+```
+
+Thus every pair of outer-two witness states has a certified uncovered set:
+the disagreement cut for an opposite-sign pair and the agreement side for a
+same-sign pair.  Pairwise defects alone do not rule out a cover by three or
+more witnesses, so this remains a boundary lemma rather than a multiplicity
+theorem.
+
 ## Exact sign regression
 
 `tests/test_outer_layer_pair_cover_defect.py` exhausts every signing through
