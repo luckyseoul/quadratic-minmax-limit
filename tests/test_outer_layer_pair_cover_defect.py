@@ -145,3 +145,49 @@ def test_mixed_three_witness_walsh_identity_through_order_four() -> None:
                         assert 8 * uncovered >= (
                             2 * maximum + 4 * len(double_negative) - error_sum
                         )
+
+
+def test_four_witness_signature_collapse_on_all_order_three_signings() -> None:
+    n = 3
+    states = _states(n)
+    state_index = {tuple(state): index for index, state in enumerate(states)}
+    edges = list(itertools.combinations(range(n), 2))
+    for matrix in _signings(n):
+        values = np.einsum("bi,ij,bj->b", states, matrix, states) // 2
+        maximum = int(np.max(np.abs(values)))
+        for indices in itertools.product(range(len(states)), repeat=4):
+            vectors = [states[index] for index in indices]
+            relatives = [vectors[0] * vector for vector in vectors[1:]]
+            for signs in itertools.product((-1, 1), repeat=4):
+                signature = tuple(signs[0] * sign for sign in signs[1:])
+                critical = [
+                    (i, j)
+                    for i, j in edges
+                    if all(
+                        relative[i] * relative[j] == target
+                        for relative, target in zip(relatives, signature, strict=True)
+                    )
+                ]
+                forced_cover = all(
+                    matrix[i, j] * vectors[0][i] * vectors[0][j] == -signs[0]
+                    for i, j in critical
+                )
+                if not forced_cover:
+                    continue
+                walsh = 0
+                for subset in itertools.product((0, 1), repeat=3):
+                    state = vectors[0].copy()
+                    coefficient = 1
+                    for include, relative, target in zip(
+                        subset, relatives, signature, strict=True
+                    ):
+                        if include:
+                            state *= relative
+                            coefficient *= target
+                    walsh += coefficient * int(values[state_index[tuple(state)]])
+                assert signs[0] * walsh == -8 * len(critical)
+                error_sum = sum(
+                    maximum - sign * int(values[index])
+                    for index, sign in zip(indices, signs, strict=True)
+                )
+                assert 8 * len(critical) <= error_sum

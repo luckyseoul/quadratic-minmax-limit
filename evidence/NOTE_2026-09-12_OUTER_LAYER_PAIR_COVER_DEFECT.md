@@ -190,6 +190,41 @@ bounds.  They remain far short of the growing-family bound required by the
 RG2/Banaszczyk route: a fourth witness can in principle cover a set of this
 size.
 
+## Four-witness signature collapse
+
+There is also a sharp constraint on a putative cover by exactly four outer
+states.  Give each state `x_a` its energy sign `tau_a` (`+1` for positive,
+`-1` for negative), gauge by `x_1`, and put
+`r_a=x_1 circ x_a` for `a=2,3,4`.  Let `N_tau` be the number of edges on
+which
+
+```
+r_a(i) r_a(j) = tau_1 tau_a    for a=2,3,4.              (14)
+```
+
+On such an edge all four witnesses fail when `C_ij=tau_1`, so a full cover
+forces `C_ij=-tau_1`.  Expanding the indicator of (14) gives the exact
+eight-state Walsh sum
+
+```
+sum_{S subset {2,3,4}} prod_{a in S}(tau_1 tau_a)
+  Q_A(x_1 circ prod_{a in S} r_a) = -8 tau_1 N_tau.       (15)
+```
+
+The four singleton terms, after multiplication by `tau_1`, are at least
+`4M-(eps_1+...+eps_4)`.  The remaining four Boolean energies are each at
+least `-M`.  Hence every four-state cover obeys
+
+```
+N_tau <= (eps_1+eps_2+eps_3+eps_4)/8.                    (16)
+```
+
+In particular, an outer-two four-cover has `N_tau<=1`.  Thus it must avoid,
+up to one edge, the prescribed matching between the eight relative-signature
+cells.  This is a real signature-collapse condition but not an exclusion:
+a cell support can avoid one prescribed matching.  Any next step must combine
+(16) with the triple-defect mass and a capacity/transport theorem.
+
 ## Exact sign regression
 
 `tests/test_outer_layer_pair_cover_defect.py` exhausts every signing through

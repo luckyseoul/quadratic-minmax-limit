@@ -1496,3 +1496,11 @@ triple at least `M/4-3/4` (with an additional positive term from its
 double-negative signature region).  This is the first route toward a
 growing-cover lower bound, but no capacity theorem prevents a fourth witness
 from covering those sets.
+
+For an exactly four-state cover, the corresponding eight-state Walsh identity
+forces its prescribed relative-signature class to contain at most one edge at
+the outer-two scale.  This is a signature-collapse condition, not a
+four-witness exclusion: a vertex-cell support can avoid one matching of the
+signature cube.  Controller exhaustive order-three algebra and independent
+NUKA replay passed.  The live next implication is to combine this sparse
+matching with the triple-defect mass in a genuine transport/capacity theorem.
