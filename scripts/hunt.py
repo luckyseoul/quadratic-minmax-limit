@@ -51,6 +51,8 @@ def main():
     ap.add_argument("--kick-seed", type=int, default=1)
     ap.add_argument("--out", default=None)
     ap.add_argument("--no-random", action="store_true")
+    ap.add_argument("--deep-every", type=int, default=1)
+    ap.add_argument("--repairs-every", type=int, default=1)
     args = ap.parse_args()
 
     rng = np.random.default_rng(args.kick_seed)
@@ -182,18 +184,24 @@ def main():
     state = {"bestVal": None, "bestKv": None}
 
     def record(Kv, val, tag):
-        if state["bestVal"] is None or val < state["bestVal"] - 1e-9:
-            state["bestVal"] = val
-            state["bestKv"] = Kv.copy()
-            K = Kv_to_K(Kv)
-            val2 = float(xp.max(xp.abs(K_to_Kv(K) @ G)))
-            out = dict(A=K.tolist(), Phi=val, Phi_fresh=val2, order=n, mode=mode,
-                       backend=backend, kick_seed=args.kick_seed, tag=tag,
-                       elapsed_s=round(time.time() - t0, 1))
-            path = args.out or f"hunt{n}_{mode}_{args.kick_seed}.json"
-            json.dump(out, open(path, "w"))
-            print(f"[NEW BEST] Phi={val:.6f} (fresh {val2:.6f}) tag={tag} "
-                  f"t={out['elapsed_s']}s -> {path}", flush=True)
+        if state["bestVal"] is not None and val >= state["bestVal"] - 1e-9:
+            return
+        K = Kv_to_K(Kv)
+        iu = np.triu_indices(n, 1)
+        if not bool(np.all(np.abs(K[iu]) == 1)):
+            print(f"[REJECT] zero off-diagonal entries; not a signing "
+                  f"(tag={tag}, val={val:.3f})", flush=True)
+            return
+        state["bestVal"] = val
+        state["bestKv"] = Kv.copy()
+        val2 = float(xp.max(xp.abs(K_to_Kv(K) @ G)))
+        out = dict(A=K.tolist(), Phi=val, Phi_fresh=val2, order=n, mode=mode,
+                   backend=backend, kick_seed=args.kick_seed, tag=tag,
+                   elapsed_s=round(time.time() - t0, 1))
+        path = args.out or f"hunt{n}_{mode}_{args.kick_seed}.json"
+        json.dump(out, open(path, "w"))
+        print(f"[NEW BEST] Phi={val:.6f} (fresh {val2:.6f}) tag={tag} "
+              f"t={out['elapsed_s']}s -> {path}", flush=True)
 
     t0 = time.time()
     budget = args.minutes * 60
@@ -201,12 +209,9 @@ def main():
     # build seeds
     Kv_seeds = []
     if args.fixed_block:
-        m8 = A
-        Kv_seeds.append(K_to_Kv(np.block([[m8, m8], [m8.T, -m8]])))
-        Kv_seeds.append(K_to_Kv(np.block([[m8, -m8], [-m8.T, -m8]])))
-        for _ in range(6):
+        for _ in range(8):
             B = rng.choice(np.array([-1.0, 1.0], dtype=np.float32), (m, m))
-            Kb = np.block([[m8, B], [B.T, -m8]])
+            Kb = np.block([[A, B], [B.T, -A]])
             Kv_seeds.append(K_to_Kv(Kb))
     else:
         for p in args.seed:
@@ -227,6 +232,11 @@ def main():
     for Kv0 in Kv_seeds:
         if time.time() - t0 > budget:
             break
+        Kcheck = Kv_to_K(Kv0)
+        iu_c = np.triu_indices(n, 1)
+        if not bool(np.all(np.abs(Kcheck[iu_c]) == 1)):
+            print("[skip] seed contains zero off-diagonal entries", flush=True)
+            continue
         Q, val = evalK(Kv0)
         Kv, Q, val, st = descend1(Kv0, Q, val)
         record(Kv, val, f"descent{rounds}")
@@ -270,18 +280,20 @@ def main():
                 a = int(free_idx[int(rng.integers(0, P))])
                 Q = Q - (2.0 * Kv[a]) * G[a]
                 Kv[a] = -Kv[a]
+        best_before = state["bestVal"]
         Q, val = evalK(Kv)
         Kv, Q, val, st = descend1(Kv, Q, val)
         record(Kv, val, f"ils{rounds}")
-        for _ in range(3):
-            v2, mv2 = best2(Kv, Q, val)
-            if mv2 is None:
-                break
-            Q, Kv = flip(Q, Kv, mv2)
-            val = float(xp.max(xp.abs(Q)))
-            Kv, Q, val, _ = descend1(Kv, Q, val)
-            record(Kv, val, "2flip")
-        if deep:
+        if val < best_before or rounds % args.repairs_every == 0:
+            for _ in range(3):
+                v2, mv2 = best2(Kv, Q, val)
+                if mv2 is None:
+                    break
+                Q, Kv = flip(Q, Kv, mv2)
+                val = float(xp.max(xp.abs(Q)))
+                Kv, Q, val, _ = descend1(Kv, Q, val)
+                record(Kv, val, "2flip")
+        if deep and rounds % args.deep_every == 0:
             v3, mv3 = best3(Kv, Q, val)
             if mv3 is not None:
                 Q, Kv = flip(Q, Kv, mv3)
