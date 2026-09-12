@@ -64,7 +64,7 @@ def main() -> None:
     cross = np.einsum("pi,ij,qj->pq", x, b, x, optimize=True)
     direct = int(np.max(np.abs(q[:, None] - q[None, :]) + np.abs(cross)))
     out = {
-        "classification": "exact finite n=5 conditional-minimax solve; one minimizer only",
+        "classification": "exact finite small-order conditional-minimax solve; one minimizer only",
         "n": n,
         "source_phi": int(np.max(np.abs(q))),
         "status": solver.status_name(status),

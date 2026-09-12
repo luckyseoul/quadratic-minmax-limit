@@ -1,0 +1,17 @@
+{
+  "classification": "exact finite lower-bound screen; not an all-orders spectral bridge",
+  "conditional_value": 13,
+  "directions_examined": 32,
+  "max_boolean_direction_energy": 53,
+  "maximizing_direction_witness": {
+    "beta": 13,
+    "energy": 53,
+    "matrix": [[-1, -1, -1, -1, -1], [-1, 1, -1, -1, 1], [-1, 1, -1, 1, -1], [-1, -1, -1, -1, -1], [-1, -1, -1, 1, 1]],
+    "op_norm": 3.3722813232690143,
+    "right_vector": [-1, -1, -1, -1, -1]
+  },
+  "n": 5,
+  "op_norm_squared_lower_bound": 10.6,
+  "source_phi": 4,
+  "workers": 88
+}
