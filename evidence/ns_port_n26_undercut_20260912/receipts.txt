@@ -1,0 +1,93 @@
+Verbatim run receipts — 2026-09-12 NS-port undercut session (n=26, target = norm-61 record)
+==============================================================================================
+
+[1] scripts/ns_undercut.py  (stage 0/1: norm verification + complete 1-flip scan)
+    order (26, 26) target: undercut 61
+    stage0: exact full-cube max = 61.0  [4s scan]
+    live set |Q|>=57: 2912 states; counts per value: {59: 2236, 60: 0, 61: 676}
+
+    best single flips (edge -> newmax):
+      ( 0, 1)  a=-1  newmax=63
+      ( 0, 2)  a=-1  newmax=63
+      ( 0, 3)  a=-1  newmax=63
+      ( 0, 4)  a=+1  newmax=63
+      ( 0, 5)  a=+1  newmax=63
+      ( 0, 6)  a=-1  newmax=63
+      ( 0, 7)  a=+1  newmax=63
+      ( 0, 8)  a=-1  newmax=63
+      ( 0, 9)  a=-1  newmax=63
+      ( 0,10)  a=+1  newmax=63
+      ( 0,11)  a=+1  newmax=63
+      ( 0,12)  a=+1  newmax=63
+    edges achieving <61: 0
+    minimum newmax over all 325 edges: 63
+    (ALL 325 edges give newmax = 63; not just the twelve shown.)
+
+[2] scripts/stage2b.py  (complete pair scan via live-band statistics)
+    distinct best pairs:
+      score=65  (6, 9) (6, 10)
+      score=65  (6, 8) (20, 24)
+      score=65  (6, 8) (20, 25)
+      score=65  (6, 8) (21, 22)
+      score=65  (6, 8) (21, 23)
+      score=65  (6, 8) (21, 24)
+      ... (all shown entries score 65)
+    counts by pair score: {65: 52650, 1000000: 325}
+    (1000000 is the sentinel used to exclude the 325 no-op diagonal entries;
+    every genuine pair of distinct edges scores exactly 65.)
+
+[3] scripts/triple_check.py  (exhaustive over all triples; ~24 s)
+    new best 67 at (0, 1) (0, 2) (0, 3)  [0s]
+    DONE best = 67 at [(0, 1), (0, 2), (0, 3)] | 5668650 triples | 24s
+
+[4] CP-SAT exact k-flip feasibility (cp_sat_undercut.py / cp_sat2.py / cp_sat3w8.py / cp_sat3w2.py)
+    K=1: live rows = 2912
+      status: INFEASIBLE  [1s]  conflicts=0
+    K=2: live rows = 2912
+      status: INFEASIBLE  [32s]  conflicts=0
+    K=3: live rows = 2912
+      status: INFEASIBLE  [19s]  conflicts=0
+    K=4: first encoding:
+      status: INFEASIBLE  [118s]  conflicts=1
+      cardinality rewrite:
+      status: INFEASIBLE  [82s]  conflicts=2
+    K=5: live rows = 83460
+      status: INFEASIBLE  [132s]  conflicts=0   (8 workers; 88 workers hung >40 min)
+    K=6: live rows = 83460
+      status: INFEASIBLE  [128s]  conflicts=0
+    K=7: live rows = 83460
+      status: INFEASIBLE  [731s]  conflicts=68
+    K=8: live=300144 rows; model built [61s]
+      status: INFEASIBLE  [304s]  conflicts=0
+    K=9: live=615264 rows; model built [135s]
+      status: UNKNOWN  [805s]  conflicts=6   (2 workers, 800 s cap)
+    K=10: live=615264 rows; model built [129s]; not resolved.
+
+[5] scripts/sa_k.py  (heuristic drift search from the record; 200 restarts x 3000 swaps)
+    K=4: SA best live-max = 65  [33s]
+    K=5: SA best live-max = 67  [36s]
+    K=6: SA best live-max = 65  [38s]
+    K=7: SA best live-max = 67  [41s]
+    K=8: SA best live-max = 69  [43s]
+
+[6] scripts/hist.py  (complete band census, n=26 record)
+    |Q|=35: 1005836
+    |Q|=37: 786500
+    |Q|=43: 315120
+    |Q|=45: 216684
+    |Q|=51: 52260
+    |Q|=53: 28288
+    |Q|=59: 2236
+    |Q|=61: 676
+    (even values and |Q| in {39,41,47,49,55,57} do not occur.)
+
+[7] scripts/collect_live.py  (band collection for the ILPs)
+    collected 615264 states with |Q|>=43  [ 0.98 s]
+
+Notes
+-----
+- All full-cube evaluations use the complete 2^25 projective state set (x_0 fixed +1);
+  Q(x) is invariant under x -> -x.
+- Targets: any value <= 59 is an undercut of 61 (all Q(x) are odd, 325 signed terms).
+- Exactness of the k-flip reduction: each flip changes Q(x) by exactly +-2, so states with
+  |Q| <= 59 - 2k can never exceed 59 after k flips; only |Q| >= 60 - 2k rows are constrained.

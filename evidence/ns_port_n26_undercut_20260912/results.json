@@ -1,0 +1,36 @@
+{
+  "date": "2026-09-12",
+  "artifact": "ns_port_n26_undercut_20260912",
+  "n": 26,
+  "target_signing": "v100_n26_61 (independent_winners, broad campaign 2026-09-06)",
+  "norm_verified_full_cube": 61,
+  "band_census_absolute_Q": {
+    "61": 676, "59": 2236, "53": 28288, "51": 52260,
+    "45": 216684, "43": 315120, "37": 786500, "35": 1005836,
+    "absent_values": [39, 41, 47, 49, 55, 57],
+    "note": "even values do not occur; every Q(x) is odd (325 signed terms)"
+  },
+  "single_flips": { "count": 325, "result": "every single flip gives max 63" },
+  "pairs": { "count": 52650, "result": "every pair gives max 65" },
+  "triples": {
+    "count": 5668650,
+    "min_result": 67,
+    "argmin_example": [[0, 1], [0, 2], [0, 3]]
+  },
+  "cp_sat_exact_kflip_undercut_bound": {
+    "target": 59,
+    "k1": "INFEASIBLE (1s)",
+    "k2": "INFEASIBLE (32s)",
+    "k3": "INFEASIBLE (19s)",
+    "k4": "INFEASIBLE (82s, cardinality encoding; 118s first encoding)",
+    "k5": "INFEASIBLE (132s, 8 workers)",
+    "k6": "INFEASIBLE (128s)",
+    "k7": "INFEASIBLE (731s)",
+    "k8": "INFEASIBLE (304s, 300144 live rows)",
+    "k9": "UNKNOWN at 805s cap (615264 live rows)",
+    "k10": "not resolved",
+    "cross_validation": "k1, k2 match the independent exhaustive flip scans"
+  },
+  "heuristic_sa": { "k4": 65, "k5": 67, "k6": 65, "k7": 67, "k8": 69 },
+  "interpretation": "The record is repair-rigid to depth 8 (exact): no k-flip repair with k <= 8 lowers its max below 61. Maximizer family is a 3-covering system on the edges (every 1-/2-/3-subset is simultaneously damaging at some tied maximizer). Local to this signing only; no global or asymptotic claim; not evidence for or against convergence; do not rerun the NS port as a route to E(1) or L."
+}

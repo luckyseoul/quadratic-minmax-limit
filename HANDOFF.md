@@ -1399,3 +1399,21 @@ multiplier two (multiplier three remains necessary beyond), with the
 Paley principal embedding and degree-balancing reversals as the degrees of
 freedom to choose. Read `ARTIFACTS.md`, the RG2 note, and the multiplier-ray
 notes BEFORE any new computation on this problem.
+
+## 2026-09-12 night: NS-technique port executed at n=26 — exact negatives (do not repeat)
+
+User-directed: the imported Navier--Stokes techniques were executed at full strength
+(stress set = complete tied-maximizer band; exact scoring; correction cycle) on the
+verified order-26 record signing (norm 61). Exact outcomes: every single flip -> 63
+(all 325); every pair -> 65 (all 52,650); best triple -> 67 (all 5,668,650 evaluated);
+CP-SAT exact: no k-flip repair reaches <= 59 for k = 1..8 (k=1,2 cross-validated by
+brute force; k=9 UNKNOWN at cap). The record is repair-rigid to depth 8. The transfer
+is bookkeeping (stress set / correction cycle), not an engine, and has no path to the
+asymptotic question. Do not re-run these techniques as a route to E(1) or L.
+Artifacts: `evidence/ns_port_n26_undercut_20260912/` (README, receipts.txt, results.json,
+scripts, band data).
+
+Also landed this session: `evidence/NOTE_2026-09-12_paley_fourier_identity.md`
+(exact Fourier identity for the Paley cube-max, one-class rho=1 criterion, explicit
+Cx = p x cylinder family as a cross-check of the k=1 stratum; no prop number, no
+status change).
