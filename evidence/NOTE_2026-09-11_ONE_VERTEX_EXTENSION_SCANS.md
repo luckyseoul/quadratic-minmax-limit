@@ -79,3 +79,42 @@ the order-18 intermediate (`first.txt`, `Phi=33`) extends two-vertex with
 for order 20: the bank's 42 (n=20) and 44 (n=21) are not reachable by this
 growth family, which now also rules out the natural extension attack for
 20/21.
+
+## Extension scans from the new order-16 objects and the S15 closure (2026-09-12)
+
+The order-16 objects newly verified in `NOTE_2026-09-11_ORDER16_HUNT.md`
+(the second `Phi=30` object `nuka16src`, and the clean completion `Phi=32`
+witnesses 823/824) had their exact scans run:
+
+```
+Exact one-vertex (identity scan; witness re-verified by full enumeration):
+  nuka16src (30) -> 17 : 34
+  c823      (32) -> 17 : 34
+  c824      (32) -> 17 : 34
+Exact two-vertex (ternary engine, receipts in the same evidence file):
+  s16src [30, 36, 37] -> 18 : 37
+  c823   [32, 36, 39] -> 18 : 39
+  c824   [32, 36, 39] -> 18 : 39
+```
+
+No improvement (bank 32 at order 17, 33 at order 18). Notable regularities:
+every tested order-16 source (values 30 and 32) has exact one-vertex optimum
+exactly 34; and the engine run on `nuka16src` reproduces the archived
+`nuka16` checkpoint chain `[30, 36, 37]` exactly, cross-confirming both.
+
+### Closure of the S15 one-vertex gap
+
+The exact one-vertex scan from the tie machine's order-15 source `S15`
+(order 15, `Phi = 27`; a different minimizer than `K15`) had never been run —
+the tie intermediate's `Phi = 30` was a path intermediate, not an exact
+one-vertex optimum. Now run (identity scan; witness re-verified by full
+enumeration): **`S15` -> 16 has exact optimum 30**. The minimizing witness
+`b` equals the archived tie `b` entrywise, and the rebuilt extension equals
+`nuka15.tie.first.txt` entrywise. Consequences: `m_16 <= 30` is the **exact
+optimum of the S15 one-vertex family** (no hidden one-vertex gain below 30
+exists), and the archived tie object is reproduced independently through a
+different code path. (Control: the C14 two-vertex intermediate at order 15,
+`Phi = 29`, scans to exactly 32.)
+
+Evidence: `evidence/m16_one_vertex_extensions_20260912.json`,
+`evidence/two_vertex_exact_scans_20260912.json`.

@@ -33,7 +33,9 @@ completion smoke  seed 813 (clean): 179 rounds, floor 32
 ```
 
 ~4,150 deep ILS rounds after the retune at orders 17/18/19 additionally floor
-at the bank records 32 / 33 / 39 (see session logs; no improvements).
+at the bank records 32 / 33 / 39, and further runs at orders 20 / 21
+(2026-09-12) floor at 42 / 44 (see session logs; no improvements). Every
+order in 16–21 floors exactly at its record under this machinery.
 
 ## Corrections (same-day retraction of the completion claim)
 
