@@ -1470,6 +1470,22 @@ the four signature cells of the two relative sign vectors, followed by the
 convex lower bound on the common-agreement edges.  Controller exhaustive
 tests through order four and an independent NUKA replay passed.
 
-This rules out only homogeneous triples.  Mixed-sign triples and larger
-families are still viable, so the RG2 witness-family / rounding gap remains
-open.
+At this point the homogeneous calculation alone did not address mixed-sign
+triples or the RG2 witness-family / rounding gap.
+
+## 2026-09-12 late: mixed triple closure
+
+The same note now closes the apparent three-state mixed-sign exception.
+For one positive and two negative outer states, the edge region on which both
+relative products are negative is forced to have the positive-gauged sign
+`-1` by a putative cover.  The exact four-state Walsh identity with
+`w=x circ y circ z` then gives
+`eps_x+eps_y+eps_z >= 2M+4N_{--}`.  The sign-reversed statement covers two
+positive and one negative state.  Hence no mixed outer-two triple covers all
+edges if `M>3`.  Combined with the homogeneous result, no triple of
+outer-two witnesses can cover all edges once `M>n/2+2`.
+
+Controller exhaustive algebraic regression through order four and an
+independent NUKA replay passed.  This is a cardinality-four lower bound for
+any such cover, not the required growing-family theorem; arbitrary larger
+mixed families remain the live gap.

@@ -134,12 +134,42 @@ eps_x+eps_z+eps_w >= 3M-3n/2.                              (11)
 The same proof after changing all signs applies to three negative states.
 Consequently, three outer-two witnesses of one sign cannot cover every edge
 as soon as `M>n/2+2`.  This is an all-orders obstruction to homogeneous
-three-state covers.  Mixed-sign triples remain possible, so (11) still does
-not provide the growing witness-family theorem needed for RG2.
+three-state covers.  By itself, (11) does not address mixed-sign triples or
+provide the growing witness-family theorem needed for RG2.
+
+## Mixed-sign triple obstruction
+
+In fact the apparent mixed-sign exception is also impossible at the
+outer-two scale.  Let `x` be positive outer and `y,z` negative outer, with
+errors `eps_x,eps_y,eps_z`.  Gauge by `x`, write `r=x circ y`, `s=x circ z`,
+and set `w=x circ y circ z`.  On an edge where both relative products are
+negative, `r_i r_j=s_i s_j=-1`, the three witnesses all fail exactly when
+`C_ij=A_ij x_i x_j=+1`.  Thus a three-state cover forces `C_ij=-1` on that
+region.  If `N_{--}` is its number of edges, the four-state Walsh identity
+is exact:
+
+```
+Q_A(x)-Q_A(y)-Q_A(z)+Q_A(w) = -4N_{--}.                  (12)
+```
+
+The three outer inequalities and `Q_A(w)>=-M` consequently give
+
+```
+eps_x+eps_y+eps_z >= 2M+4N_{--}.                          (13)
+```
+
+The same statement, with signs reversed, holds for two positive and one
+negative state.  In particular a mixed-sign triple of outer-two witnesses
+cannot cover every edge whenever `M>3`.  Together with (11), **no triple of
+outer-two one-edge witnesses covers every edge once `M>n/2+2`**.  This is a
+uniform all-orders cardinality lower bound of four on a putative witness
+cover.  It remains far short of the growing-family bound required by the
+RG2/Banaszczyk route.
 
 ## Exact sign regression
 
 `tests/test_outer_layer_pair_cover_defect.py` exhausts every signing through
-order four and every ordered state pair, checking (1) directly.  It passed on
-the controller under pytest and independently on NUKA under Python 3 by
-calling the same test function directly (NUKA does not have pytest installed).
+order four and every ordered state pair/triple, checking the displayed Walsh
+identities directly.  It passed on the controller under pytest and
+independently on NUKA under Python 3 by calling the same test functions
+directly (NUKA does not have pytest installed).
