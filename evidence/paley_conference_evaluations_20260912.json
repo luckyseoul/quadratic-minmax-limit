@@ -1,0 +1,55 @@
+{
+ "description": "Explicit Paley conference evaluations (exact complete-cube norm, chunked GPU enumeration; integer-valued results).",
+ "date": "2026-09-12",
+ "method": "paley_conference(q) (scripts/paley_structural_lift_family.py); two-block reorder via char_split (scripts/paley_two_block_decomposition.py); Phi = max over 2^(n-1) projective states of |sum((S K) S)/2|, float32 (values are integers; exact), chunk 2^21.",
+ "conference_checks": "Gram: C C^T = q I verified for q=25 (diag err 0, offdiag err 0) and q=37 (0, 0). Two-block identity A = -D and cross-block transpose verified for q=25, 37 (and construction validated at q=13, 17).",
+ "results": [
+  {
+   "q": 13,
+   "order": 14,
+   "phi": 21,
+   "note": "builder validation; equals m_14 (exact); block_phi 9 = m_7"
+  },
+  {
+   "q": 17,
+   "order": 18,
+   "phi": 33,
+   "note": "builder validation; equals the order-18 record; block_phi 12 = m_9"
+  },
+  {
+   "q": 25,
+   "order": 26,
+   "phi": 65,
+   "note": "GF(25); Gram check passed; order-26 record 61 stands; block_phi 30; attains the spectral bound 26*sqrt(25)/2 = 65 exactly"
+  },
+  {
+   "q": 29,
+   "order": 30,
+   "phi": 75,
+   "note": "matches the recorded order-30 value 75"
+  },
+  {
+   "q": 37,
+   "order": 38,
+   "phi": 109,
+   "note": "NEW explicit bound m_38 <= 109; improves spectral 115.58 and coherent-lift 121; block_phi 47; verified on V100 (1243 s) and RX 9070 XT (1178 s), identical value"
+  }
+ ],
+ "sweeps_negative": {
+  "description": "Completion-family sweeps [[A,B],[B^T,-A]], B = sign(alpha*A + beta*G) grid plus random; ~1800 candidates.",
+  "best_over_target_ratios": {
+   "n=10": 1.36,
+   "n=11": 1.14,
+   "n=12": 1.18,
+   "n=14": 1.25
+  },
+  "conclusion": "no record improves; noise-generated cross blocks do not approach the algebraic quality of the known conference-derived completions (C14, C18)."
+ },
+ "spectral_comparison": {
+  "C14": "21 < 25.2",
+  "C18": "33 < 37.1",
+  "C26": "65 = 65.0 (attains)",
+  "C30": "75 < 80.8",
+  "C38": "109 < 115.6"
+ }
+}

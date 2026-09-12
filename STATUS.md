@@ -1,6 +1,6 @@
 # Current mathematical status
 
-Updated 2026-09-11. The original MO limit is OPEN.
+Updated 2026-09-12. The original MO limit is OPEN.
 
 Focused follow-up, 2026-09-11: the exact order-14 Paley one-vertex scan
 found its best extension value 27; this matches the separately certified
@@ -14,6 +14,20 @@ block. This gives only `m_28<=90`, not a cross-block optimum, a general
 construction, or an all-orders implication. See
 `evidence/paley_one_vertex_extension_20260911/` and
 `evidence/paley_two_block_cone_repair_20260911/`.
+
+Focused follow-up, 2026-09-12: explicit Paley conference evaluations (exact
+complete-cube norms, replayed on both GPUs): `Phi(C14)=21` and `Phi(C18)=33`
+(builder validation against the known values), `Phi(C26)=65` (the order-26
+record 61 stands), `Phi(C30)=75` (= the recorded order-30 value), and
+`Phi(C38)=109` — an **explicit new order-38 upper bound `m_38<=109`**,
+improving the general spectral conference bound 115.58 and the coherent-lift
+value 121. The nonsquare-multiplier two-block structure is verified for the
+prime-power cases q=25, 37; the block norm equals `m_k` only at block orders
+7 and 9, not beyond. Completion-construction sweeps (about 1,800
+noise-generated cross-block candidates at source orders 10-14) do not improve
+any record: best-found-over-target ratios 1.14-1.36 relative to
+`2 sqrt(2) m_n`, corroborating the midpoint-law ceiling readings. See
+`evidence/NOTE_2026-09-12_CONFERENCE_EVALUATIONS.md`.
 
 The separate structural Paley lift `B=C+I` is much stronger at the tested
 order: exact complete-cube evaluation gives `Phi=70` at order 28 and
