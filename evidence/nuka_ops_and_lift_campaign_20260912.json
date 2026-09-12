@@ -1,0 +1,77 @@
+{
+ "description": "Nuka ROCm stack audit, cupy reduction pathology, and the diagonal-lift D-optimization campaign (orders 28/30/32/36/38).",
+ "date": "2026-09-12",
+ "rocm_audit": {
+  "cupy_wheel": "amd_cupy-13.5.1 (from ~/.cache/rocm-wheels/) hard-links libamdhip64.so.7, librocblas.so.5, libhipblaslt.so.1 from /opt/rocm/lib (ROCm 7.2.4)",
+  "runtimeGetVersion": 71526333,
+  "LD_LIBRARY_PATH_override_to_core10": "no effect (soname lock)",
+  "rocm10_on_box": "/opt/rocm/core-10.0, version 10.0.0, full toolchain (hipcc, amdclang++) + hipBLAS/hipBLASLt/MIOpen gfx1201",
+  "rocm10_cupy_wheels": "none published (repo.radeon.com/rocm/manylinux tops at rocm-rel-7.2.4; PyPI amd-cupy is a 0.0.2 stub)",
+  "rocm10_hipblas_wide_gemm": {
+   "shape": "(256x18)@(18x2^18)",
+   "ms_per_call": 0.766,
+   "GMAC_per_s": 1577,
+   "note": "vs 0.4 ms V100 cuBLAS; GEMM was never the bottleneck"
+  }
+ },
+ "reduction_pathology": {
+  "full_array_cupy_reductions_67M_f32_nuka": {
+   "cp.max_ms": "75-280",
+   "cp.sum_ms": 120,
+   "cp.argmax_ms": 284,
+   "v100_reference_ms": "~1"
+  },
+  "two_stage_row_reduction": {
+   "expr": "av.reshape(-1,4096).max(axis=1).max()",
+   "ms": 0.62,
+   "speedup": "~450x"
+  },
+  "fix_effect": "order-36 lift pass 42 s -> 5 s on nuka (V100 3 s)"
+ },
+ "lift_campaign": {
+  "object": "K(D) = [[A, A+D],[A+D, -A]], exact 2^(2n-1)-state Phi via M2=(A+D)@Yt wide-GEMM pass",
+  "runs": [
+   {
+    "order": 28,
+    "source": "C14 (m14=21)",
+    "anchor_DI": 70,
+    "best_found": 70,
+    "record": 70,
+    "status": "D=I stands"
+   },
+   {
+    "order": 30,
+    "source": "K15 (m15=27)",
+    "anchor_DI": 83,
+    "best_found": 81,
+    "record": 75,
+    "status": "record stands"
+   },
+   {
+    "order": 32,
+    "source": "bank n16=32",
+    "anchor_DI": 96,
+    "best_found": 94,
+    "record": 80,
+    "status": "record from different 16-source stands"
+   },
+   {
+    "order": 36,
+    "source": "C18 (33)",
+    "anchor_DI": 108,
+    "best_found": 108,
+    "record": 108,
+    "status": "D=I stands (~350 iterations)"
+   },
+   {
+    "order": 38,
+    "source": "K19 witness (39)",
+    "anchor_DI": 121,
+    "best_found": 121,
+    "record": 109,
+    "status": "= archived 121 exactly (validation); C38=109 stands"
+   }
+  ]
+ },
+ "conclusion": "No new finite records. The D=I diagonal lift is the family optimum at all tested orders so far. Nuka ops: two-stage reductions (or hipcc/ROCm10) required for GPU work."
+}

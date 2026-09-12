@@ -102,3 +102,17 @@ Legacy `main_L_from_e1` fields are route-local implication diagnostics,
 not global status. The authoritative original-problem registry is
 `src/original_mo_status.py`. A reviewed proof through another route may
 settle the original question even while every parked Paley lemma is open.
+
+## NUKA ROCm stack audit and reduction pathology, 2026-09-12
+
+The nuka cupy wheel (`amd_cupy-13.5.1`) is ROCm 7.2.4-locked: it hard-links
+`libamdhip64.so.7`/`librocblas.so.5` from `/opt/rocm/lib`, and
+`LD_LIBRARY_PATH=/opt/rocm/core-10.0/lib` does not change the loaded runtime
+(`runtimeGetVersion` 71526333). ROCm 10.0 IS installed
+(`/opt/rocm/core-10.0`, full toolchain) and works via compiled HIP/hipBLAS
+(wide sgemm `(256x18)@(18x2^18)` = 0.766 ms/call, 1577 GMAC/s); no ROCm-10
+cupy wheel is published, so cupy cannot use it. Full-array cupy reductions on
+the 7.2 stack are 100-450x slow on gfx1201 (max/sum/argmax over 67M f32:
+75-284 ms vs ~1 ms on the V100); two-stage row reductions are fast
+(0.62 ms). Use the two-stage pattern or hipcc for nuka GPU work. See
+`evidence/NOTE_2026-09-12_NUKA_STACK_AND_LIFT_CAMPAIGN.md`.
