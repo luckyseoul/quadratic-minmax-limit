@@ -1,0 +1,37 @@
+{
+ "description": "Order-16 rigidity certifications + the core-14 two-vertex closure (2026-09-12).",
+ "date": "2026-09-12",
+ "core14_two_vertex": {
+  "source": "order-14 core of the tie chain (Phi=27)",
+  "engine_result_phis": [
+   27,
+   27,
+   30
+  ],
+  "reading": "the tie intermediate (Phi=30) is the EXACT two-vertex optimum of its own 14-core; no improvement over the record; the family also contains an order-15 minimizer (27)."
+ },
+ "four_flip_balls": {
+  "method": "exhaustive C(120,4) = 8,214,570 four-pair-flip neighbors per object; two-stage (4096-state subsample filter <= 28, full 2^15-state evaluation of survivors); runtime 18 s each.",
+  "results": [
+   {
+    "object": "K16_phi30 (tie intermediate, Phi=30)",
+    "no_candidate_le_28": true,
+    "survivors": 8,
+    "best_full_eval": 34
+   },
+   {
+    "object": "nuka16 source (Phi=30)",
+    "no_candidate_le_28": true,
+    "survivors": 127,
+    "best_full_eval": 34
+   },
+   {
+    "object": "bank best_n16 (Phi=32)",
+    "no_candidate_le_28": true,
+    "survivors": 160,
+    "best_full_eval": 32
+   }
+  ],
+  "conclusion": "no four-flip neighbor of ANY known order-16 object reaches 28; the record m_16 <= 30 is rigid at radius 4 around all three sources. The doubling-instance target 28.28 remains unmet."
+ }
+}
