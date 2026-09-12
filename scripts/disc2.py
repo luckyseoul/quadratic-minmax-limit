@@ -37,8 +37,8 @@ def main():
         X[:, c] = 1 - 2 * ((ux >> (c - 1)) & 1)
     uy = cp.arange(1 << n, dtype=cp.int64)
     Y = cp.ones((1 << n, n), dtype=cp.float32)
-    for c in range(1, n):
-        Y[:, c] = 1 - 2 * ((uy >> (c - 1)) & 1)
+    for c in range(0, n):
+        Y[:, c] = 1 - 2 * ((uy >> c) & 1)
     Af = cp.asarray(A)
     Qx = 0.5 * cp.sum((X @ Af) * X, axis=1)          # (2^{n-1},)
     Qy = 0.5 * cp.sum((Y @ Af) * Y, axis=1)          # (2^n,)

@@ -81,14 +81,15 @@ def main():
           f"{starts} starts [{time.time()-t0:.0f}s]", flush=True)
 
     # ---- batches over the completion family
+    uxn = np.arange(1 << (n - 1), dtype=np.int64)
     Xn = np.ones((1 << (n - 1), n), dtype=np.float32)
     for c in range(1, n):
-        Xn[:, c] = 1 - 2 * ((ux >> (c - 1)) & 1)
+        Xn[:, c] = 1 - 2 * ((uxn >> (c - 1)) & 1)
     # y-states FULL (2^n)
-    uy = cp.arange(1 << n, dtype=cp.int64)
+    uyn = np.arange(1 << n, dtype=np.int64)
     Yn = np.ones((1 << n, n), dtype=np.float32)
     for c in range(1, n):
-        Yn[:, c] = 1 - 2 * ((uy >> (c - 1)) & 1)
+        Yn[:, c] = 1 - 2 * ((uyn >> (c - 1)) & 1)
 
     def active_set_attack(Af, iters=60, topk=400, rng_local=None):
         Qx = 0.5 * np.sum((Xn @ Af) * Xn, axis=1)

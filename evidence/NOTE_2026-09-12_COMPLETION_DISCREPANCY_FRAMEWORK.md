@@ -91,12 +91,31 @@ level sets of `Q_A`.
 - Completion exactness: `min_B = m_{2n}` at `n = 2..7`; `c`-ratios
   (min/target `2 sqrt(2) m_n`): **0.82 (n=7), 0.97 (n=9)** — algebraic
   (character-sum) blocks; search floors `1.13-1.36` elsewhere.
-- **Source variance at n = 8 (new):** over 12 distinct order-8 minimizers
-  the completion floors are {30 (2 sources), 32 (8), 34 (2)} — a four-point
-  spread at fixed source value. Completion-type `Phi = 30` objects exist
-  (from two sources), while the two previously known `Phi = 30` objects are
-  not completions under any partition/switching (exhaustive check over all
-  12,870 partitions). The `Phi = 30` class spans both regimes.
+- **Source variance at n = 8 (WITHDRAWN — see correction below):** the
+  first measurement (12 sources) used a half-space evaluator and reported
+  completion floors {30 (2 sources), 32 (8), 34 (2)}. Those numbers are
+  withdrawn; a corrected sweep is in progress.
+
+**Correction (2026-09-12, same day).** The `disc2`/`deep_b` free-block state
+construction fixed the second block's first coordinate (`y_0 = +1`),
+evaluating a half-space (`2^{2n-2}` of the `2^{2n-1}` projective states).
+Half-space maxima are **lower bounds** on the true values, which gives a
+precise directional audit of everything measured with the defect:
+
+- **Survive (non-improvement certificates):** the exhaustive diagonal-lift
+  family closures at orders 16/18/20 and every "no `D`-opt improvement"
+  statement. Their logic needs only `half <= true` for every tested object
+  plus one independently certified true anchor (the archived full
+  enumerations: 32 / 39 / 40 / 108 / 121), all of which hold and match.
+- **Withdrawn (upper-bound / record claims):** the {30, 32, 34} source table
+  and the claim "completion-type `Phi = 30` objects exist". The "`Phi = 28`"
+  candidates never landed: independent full enumeration (correct space)
+  evaluated them at 42 before any commit — the verification pipeline
+  worked as intended. A corrected 12-source deep sweep with the fixed
+  evaluator (validated: C14 = 21; the defective witness re-evaluates to
+  its true 42) is in progress.
+- The reformulation and the two propositions are unaffected (they concern
+  the exact state space).
 - At `n = 16`, a Hadamard-aligned diagonal completion gives `80 <=
   2 sqrt(2) * 32` (c = 0.88): a below-target completion exists there.
 - Hence: completions reach the target at `n = 7, 9, 16` and have not yet at
