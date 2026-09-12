@@ -1439,3 +1439,20 @@ Also landed this session: `evidence/NOTE_2026-09-12_paley_fourier_identity.md`
 (exact Fourier identity for the Paley cube-max, one-class rho=1 criterion, explicit
 Cx = p x cylinder family as a cross-check of the k=1 stratum; no prop number, no
 status change).
+
+## 2026-09-12 late: outer-layer pair-cover defect
+
+`NOTE_2026-09-12_OUTER_LAYER_PAIR_COVER_DEFECT.md` adds an all-orders
+identity for the actual one-edge witness layers.  If `x` is positive within
+`eps_plus` of `M=Phi(A)` and `y` is negative within `eps_minus`, their
+edge-flip witness sets leave at least
+`b/2+M/2-(eps_plus+eps_minus)/4` edges uncovered, where
+`b=d_H(x,y)(n-d_H(x,y))`.  In particular outer-two witnesses have
+cut size at least `M-2`, and no one positive/one negative pair covers every
+edge when `M>2`.  The exact sign identity was exhaustively regressed through
+order four on the controller and independently replayed on NUKA.
+
+This is a structural strengthening of the edge-flip witness statement, not
+the required outer-layer multiplicity theorem: a larger diffuse family may
+still cover all edges.  It does not supply the Banaszczyk cover condition,
+the RG2 residual diamond, multiplier three, or convergence.
