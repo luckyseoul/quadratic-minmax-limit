@@ -1,0 +1,33 @@
+{
+ "description": "Exact one-vertex extension scans at orders 20-23 (2026-09-12) with witness re-verification by full enumeration.",
+ "date": "2026-09-12",
+ "results": {
+  "from_40_object_20to21": {
+   "source": "D=I lift of C10 (Phi=40, order-20 record)",
+   "ext_phi": 46,
+   "note": "worse than the 21 record 44"
+  },
+  "from_42_object_20to21": {
+   "source": "bank best_n20 (Phi=42)",
+   "ext_phi": 44,
+   "note": "equals the 21 record exactly"
+  },
+  "from_44_object_21to22": {
+   "source": "bank best_n21 (Phi=44)",
+   "ext_phi": 49,
+   "note": "equals the 22 record exactly"
+  },
+  "from_49_object_22to23": {
+   "source": "bank best_n22 (Phi=49)",
+   "ext_phi": 53,
+   "note": "equals the 23 record exactly; run on nuka"
+  },
+  "from_53_object_23to24": {
+   "source": "bank best_n23 (Phi=53)",
+   "ext_phi": 56,
+   "note": "equals the 24 record exactly"
+  }
+ },
+ "tight_chain": "Extensions of the bank winners at 20/21/22/23 saturate exactly at the next records 44/49/53/56; the 21-24 records are matched by iterated one-vertex extensions of the order-20 (42) object. Extension quality is not monotone in source value (the better 40-object extends to 46, worse than the 42-object's 44).",
+ "no_improvements": true
+}

@@ -1,0 +1,43 @@
+{
+ "description": "Exhaustive diagonal-lift family closures (2026-09-12): all 2^m diagonals D for K(D) = [[A, A+D],[A+D, -A]] evaluated exactly via the wide-GEMM pass.",
+ "date": "2026-09-12",
+ "families": {
+  "order16_from_A8(m8=10)": {
+   "n_diagonals": 256,
+   "family_min": 32,
+   "attaining_D_count": 12,
+   "histogram": {
+    "32": 12,
+    "34": 104,
+    "36": 104,
+    "38": 32,
+    "40": 4
+   }
+  },
+  "order18_from_A9(m9=12)": {
+   "n_diagonals": 512,
+   "family_min": 39,
+   "attaining_D_count": 46,
+   "histogram": {
+    "39": 46,
+    "41": 276,
+    "43": 166,
+    "45": 24
+   }
+  },
+  "order20_from_C10(q=9)": {
+   "n_diagonals": 1024,
+   "family_min": 40,
+   "attaining_D_count": 2,
+   "histogram": {
+    "40": 2,
+    "42": 50,
+    "44": 492,
+    "46": 390,
+    "48": 90
+   }
+  }
+ },
+ "notes": "D=I attains the family minimum in all three cases. Phi(D) = Phi(-D) by the y -> -y gauge (attainment counts come in pairs). The order-20 family is exactly closed at the record value 40; order-16 (32) and order-18 (39) closings sit above their records (30; 33 = C18 conference).",
+ "repro": "scripts/exhaustive_lift.py --source SRC.json --out OUT.json (seconds per family at source orders <= 10)"
+}

@@ -118,3 +118,45 @@ different code path. (Control: the C14 two-vertex intermediate at order 15,
 
 Evidence: `evidence/m16_one_vertex_extensions_20260912.json`,
 `evidence/two_vertex_exact_scans_20260912.json`.
+
+## One-vertex scans 20 -> 24 and exhaustive diagonal-lift closures (2026-09-12)
+
+New exact one-vertex extension scans at orders 20-23 (the frontier past the
+earlier table), from the current best objects; all witnesses re-verified by
+full enumeration:
+
+```
+20 (the 40-object, D=I lift of C10) -> 21 : 46    (record 44 stands)
+20 (bank 42-object)                 -> 21 : 44    (= the 21 record)
+21 (44-object)                      -> 22 : 49    (= the 22 record)
+22 (49-object)                      -> 23 : 53    (= the 23 record)
+23 (53-object)                      -> 24 : 56    (= the 24 record)
+```
+
+**Tight chain:** the extensions of the bank winners at 20/21/22/23 saturate
+exactly at the next records 44/49/53/56 — the records at 21-24 are matched
+precisely by iterated one-vertex extensions of the order-20 (42) object
+(42 -> 44 -> 49 -> 53 -> 56). The better order-20 object (the structural 40)
+extends to 46, *worse* than the 42-object's 44: extension quality is not
+monotone in the source value. No record improves at orders 21-24 from this
+family.
+
+### Exhaustive diagonal-lift closures
+
+With the wide-GEMM pass the **complete** diagonal families
+`K(D) = [[A, A+D],[A+D, -A]]` are enumerable at source orders 8-10 (each
+family in under a second):
+
+```
+source A8 (order 8):   min 32 over all 256 D    (12 D attain; D=I optimal)
+source A9 (order 9):   min 39 over all 512 D    (46 D attain; D=I optimal)
+source C10 (q=9):      min 40 over all 1024 D   (2 D attain; D=I optimal)
+```
+
+`Phi(D) = Phi(-D)` by the `y -> -y` gauge (attainment counts come in pairs).
+The **order-20 lift family is exactly closed at 40**, its record value; the
+order-16 (32) and order-18 (39) families close strictly above their records
+(30 from the tie family; 33 = the C18 conference). Evidence:
+`evidence/scan_chain_20260912.json`,
+`evidence/exhaustive_lift_families_20260912.json`; tool
+`scripts/exhaustive_lift.py`.
