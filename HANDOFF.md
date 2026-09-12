@@ -9,6 +9,10 @@ signings gives conditional value 10 and 184 conditional minimizers, all with
 (SHA-256 `0b23ae0975aa6063282f097b0221fb95a9feb876703f18d910b7d47ba22e354f`).
 This is evidence for, not a proof of, the unproved asymptotic conditional
 spectral bridge; see `evidence/conditional_spectral_bridge_probe_20260912/`.
+For the `Phi=4` order-five negative-cycle source, an 88-worker Soulkiller
+CP-SAT solve proves conditional value 13; one returned minimizer has
+`||B||op=3.3722813232690143` and independently replays on the controller.
+This is one finite witness only; see `evidence/conditional_spectral_bridge_n5_20260912/`.
 
 **New finite records and closures since 2026-09-11:**
 
