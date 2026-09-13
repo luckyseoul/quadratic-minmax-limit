@@ -1565,3 +1565,35 @@ Z3 5.1.0: both are `unsat`, recorded in
 checks only the explicit scalar constants, not the probability or entropy
 proof. The historical September 2 rate criterion is updated to remove its
 unnecessary unique-threshold premise.
+
+## 2026-09-13: positive-temperature correction to the gauge precision claim
+
+Section 4.1 of `evidence/NOTE_2026-09-02_UPSTREAM_RELATIVE_GAUGE_BRIDGE.md`
+corrects the earlier conversational assertion that the remaining Navier
+transfer necessarily requires absolute integer-level occupancy cancellation.
+It combines the existing pressure/norm sandwich with the exact partition
+normalization `E_g Z_g=Z_A Z_B Z_C`, using all three blocks at the same raw
+inverse temperature and including the block sign `tau` in the gauge.
+
+If a selected gauge has model value `ell_g` with
+`log rho_g<=ell_g+N epsilon` and
+`sum_i log Z_i+ell_g<=beta T`, then
+`Phi(Y_g)<=T+N(log 2+epsilon)/beta`. For both optional multiplier rays,
+bounded `epsilon` and `beta=[log(n+1)]^2/sqrt(N)` give the explicit
+`O(1/log(n+1)^2)` Dini-summable error budget. The leading model inequality
+and its remainder bound at these growing scaled temperatures are still
+unproved. A fixed-temperature estimate with uncontrolled temperature
+dependence does not meet this criterion. No all-orders completion or
+unconditional composition improvement is claimed.
+
+NUKA ran one serial, exact polynomial normalization check on one fixed
+`3+3` source signing, covering its 32 gauges. The identity held as a Laurent
+polynomial; omitting `tau` broke it. Exact rational norm-sandwich checks
+also passed. This did not repeat the finite connected-layer or repair
+campaigns. Evidence: `evidence/relative_gauge_temperature_20260913/`;
+result SHA-256
+`70a35b1ff14cb26105ff571cc56d557b0e0fbf82b0a87ac3c8bd964615e98d50`.
+Root reviewed the analytic derivation; the finite check is not independent
+human review. This supporting correction did not require a fresh major
+milestone backup. Current mathematical status remains OPEN; the next
+unresolved implication on this route is the pair of inequalities (11).

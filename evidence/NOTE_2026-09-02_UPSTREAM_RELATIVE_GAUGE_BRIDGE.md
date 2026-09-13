@@ -261,6 +261,118 @@ hinge is not the already-proved shell factorization itself. It is a uniform
 sign or lower-tail theorem for the factored occupancy which reaches these
 two critical thresholds with a Dini-summable error.
 
+### 4.1 Positive-temperature certificates do not need integer-level accuracy
+
+Added 2026-09-13. This combines the gauge construction above with the
+standard pressure/norm sandwich in
+`NOTE_2026-09-02_THERMODYNAMIC_INTERPOLATION_GATE.md`. It corrects the
+overstatement that every analytic treatment of the connected layers must
+resolve an exponentially large occupancy to absolute accuracy below one.
+That precision requirement belongs to the occupancy certificate in Section
+3. The following alternative has a different error budget. Neither
+certificate's main inequality has been proved for the required signings.
+
+Write `N=n+k`, and use the **same raw inverse temperature** `beta>0` for
+all three blocks. Define normalized partition functions
+
+```text
+Z_A(beta) = E_x cosh(beta Q_A(x)),
+Z_B(beta) = E_y cosh(beta Q_B(y)),
+Z_C(beta) = E_(x,y) cosh(beta x^T C y),
+Z_g(beta) = E_(x,y) cosh(beta Q_(Y_g)(x,y)).
+```
+
+Expectations here are uniform over full Boolean cubes. With the uniform
+gauge `g=([alpha],[beta_g],tau)` from Section 1, set
+
+```text
+rho_g(beta) = Z_g(beta)/(Z_A(beta) Z_B(beta) Z_C(beta)).   (9)
+```
+
+Then `rho_g>0` and `E_g rho_g=1` exactly. To see this, average over the
+internal gauges first. For each fixed `(x,y)`, the gauged internal spins
+are independent uniform projective spins, so their quadratic energies have
+the same laws as `Q_A` and `Q_B`. Averaging `tau` turns the right-block
+exponential factor into `cosh(beta Q_B)`. In the remaining average,
+`x -> -x` reverses the cross energy and cancels the term containing its
+hyperbolic sine. Expanding the last cosine therefore leaves
+`Z_A Z_B Z_C`. In general omitting `tau` does not give this product.
+The letter `beta_g` denotes the right gauge and is unrelated to temperature.
+
+There are `2^(N-1)` projective spin states. Including the two exponential
+terms in `cosh` gives, for every gauge,
+
+```text
+exp(beta Phi(Y_g))/2^N <= Z_g(beta) <= exp(beta Phi(Y_g)).
+```
+
+Consequently
+
+```text
+Phi(Y_g) <= [log Z_A + log Z_B + log Z_C
+              + log rho_g + N log 2]/beta.              (10)
+```
+
+This gives a precise one-sided error criterion. Let `T` be the desired raw
+norm bound, and suppose a gauge and a real model value `ell_g` satisfy
+
+```text
+log rho_g <= ell_g + N epsilon,       epsilon >= 0,
+log Z_A + log Z_B + log Z_C + ell_g <= beta T.           (11)
+```
+
+Only an upper error bound at the selected gauge is needed; there is no
+requirement to reconstruct every gauge density. Equations (10)--(11) imply
+
+```text
+Phi(Y_g) <= T + N(log 2 + epsilon)/beta.                 (12)
+```
+
+For the two rays in Section 4, take `k=(r-1)n`, `r=2,3`, and set
+
+```text
+T_(2,n) = 2^(3/2) m_n,
+T_(3,n) = (m_n^(2/3)+m_(2n)^(2/3))^(3/2),
+c_n = log(n+1)^2,       beta_n = c_n/sqrt(r n).
+```
+
+If (11) holds for all sufficiently large `n` on both rays with their
+stated optimal internal blocks and `0<=epsilon_(r,n)<=E_0`, where `E_0`
+is independent of `n`, then (12) proves the Section 4 hypotheses with
+
+```text
+Omega_r(n) = r^(3/2)(log 2 + E_0)/log(n+1)^2.           (13)
+```
+
+These errors have the required vanishing dyadic Dini tails. For `L>=2`,
+`a=log L`, `b=log 2`, and `K_r=r^(3/2)(log 2+E_0)`, monotonicity gives
+
+```text
+sum_(j>=0) sup_(u>=2^j L) Omega_r(u)
+ <= K_r sum_(j>=0) 1/(a+jb)^2
+ <= K_r (1/a^2 + 1/(ab)) -> 0.                         (14)
+```
+
+For the second inequality, each `j>=1` term is at most
+`[1/(a+(j-1)b)-1/(a+jb)]/b`; summing telescopes. Thus a one-sided
+`O(N)` error in the **whole log density** is admissible at this temperature
+schedule. It produces an `O(1/log(n+1)^2)` normalized norm error, not an
+integer-level occupancy estimate.
+
+The unresolved content is (11), especially its second inequality and its
+validity at the growing temperatures `c_n`. A fixed-temperature remainder
+bound with uncontrolled dependence on `c` does not suffice. The previously
+recorded `H4/H6/H8` collisions disprove exact recovery from those truncated
+states; they do not disprove a bound on the whole remainder in (11).
+The normalization `E_g rho_g=1` alone also does not supply the generally
+negative log-density bound needed there.
+
+The proof above is analytic. A new, single-fixture rational-polynomial
+check in `relative_gauge_temperature_20260913/` corroborates the exact
+normalization, the projective normalization factor, and the necessity of
+the `tau` average. It does not verify (11), the Dini hypotheses for actual
+signings, or convergence. No new source-signing census is involved.
+
 ## 5. What the current upstream commit actually proves
 
 The upstream commit proves the balanced max-plus identity, exact shell

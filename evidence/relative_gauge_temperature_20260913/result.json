@@ -1,0 +1,127 @@
+{
+  "arithmetic": "integer Laurent coefficients and exact rational evaluation",
+  "classification": "finite_exact_partition_identity_only",
+  "elapsed_seconds": 0.006824292009696364,
+  "fixture": {
+    "cross": [
+      [
+        1,
+        -1,
+        1
+      ],
+      [
+        -1,
+        -1,
+        1
+      ],
+      [
+        1,
+        1,
+        -1
+      ]
+    ],
+    "left": [
+      [
+        0,
+        1,
+        -1
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        -1,
+        1,
+        0
+      ]
+    ],
+    "right": [
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0
+      ]
+    ]
+  },
+  "fixture_sha256": "2124825e358f8d22f1df4ae6b2f80854f965e1a36ba55dbe6c68e1c844cb1fa7",
+  "full_gauge_average_equals_product": true,
+  "gauges_checked": 32,
+  "host": "NUKA",
+  "norm_sandwich_checks_at_exp_beta_two": 32,
+  "omitting_tau_changes_average": true,
+  "original_convergence_proved": false,
+  "passed": true,
+  "product_numerator": [
+    [
+      -13,
+      2
+    ],
+    [
+      -11,
+      16
+    ],
+    [
+      -9,
+      62
+    ],
+    [
+      -7,
+      166
+    ],
+    [
+      -5,
+      356
+    ],
+    [
+      -3,
+      618
+    ],
+    [
+      -1,
+      828
+    ],
+    [
+      1,
+      828
+    ],
+    [
+      3,
+      618
+    ],
+    [
+      5,
+      356
+    ],
+    [
+      7,
+      166
+    ],
+    [
+      9,
+      62
+    ],
+    [
+      11,
+      16
+    ],
+    [
+      13,
+      2
+    ]
+  ],
+  "source_sha256": "0e6b7c021286110d47e031ff48669d822a23ef1872c8b167ab05926a29f1eb73",
+  "source_signings_checked": 1,
+  "temperature_model_inequalities_11_checked": false
+}

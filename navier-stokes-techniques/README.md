@@ -61,7 +61,13 @@ state with a Dini-summable error.
 The related relative-gauge composition route has a different residual: the
 uncontrolled higher connected Eulerian layers beyond the mixed four-cycle.
 The exact factorization and the remaining all-orders targets are in
-`evidence/NOTE_2026-09-02_UPSTREAM_RELATIVE_GAUGE_BRIDGE.md`.  Numerical
+`evidence/NOTE_2026-09-02_UPSTREAM_RELATIVE_GAUGE_BRIDGE.md`. Its Section 4.1
+specifies a sufficient temperature-dependent error budget for a genuine
+correction cycle: a one-sided `O(N)` bound on the whole log-density error
+at `beta=[log(n+1)]^2/sqrt(N)` yields a Dini-summable normalized norm error,
+provided the leading gauge inequality is also proved. Neither hypothesis
+is currently established. Integer-level occupancy cancellation is not a
+universal requirement of this alternative certificate. Numerical
 generalized Laguerre quadrature is not an accelerator there, because the
 relevant shell and Walsh quantities are finite exact sums.  A formal Lean
 artifact would verify a completed theorem, not create the missing

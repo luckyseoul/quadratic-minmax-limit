@@ -2,6 +2,16 @@
 
 Updated 2026-09-13. The original MO limit is OPEN.
 
+Scope correction, 2026-09-13: relative-gauge composition does not universally
+require integer-level occupancy precision. Section 4.1 of
+`evidence/NOTE_2026-09-02_UPSTREAM_RELATIVE_GAUGE_BRIDGE.md` gives a
+positive-temperature certificate: at `beta=[log(n+1)]^2/sqrt(N)`, a
+one-sided `O(N)` error in the whole log density gives an
+`O(1/log(n+1)^2)` normalized norm error with vanishing dyadic Dini tails.
+Its leading gauge inequality and uniform remainder control are unproved.
+A single-fixture exact polynomial check on NUKA corroborates the partition
+normalization only; see `evidence/relative_gauge_temperature_20260913/`.
+
 New all-orders reduction, 2026-09-13: for every fixed `delta>0`, every
 sufficiently large order has exponentially many signings within
 `delta n^(3/2)` of `m_n`. Consequently the bounded disorder counting entropy
