@@ -1,0 +1,112 @@
+{
+  "asymptotic_proof_scope": "analytic proof note, not finite enumeration",
+  "classification": "finite_exact_strategy_and_scalar_corroboration",
+  "elapsed_seconds": 0.015725361998192966,
+  "fixture": {
+    "cross": [
+      [
+        1,
+        1,
+        -1,
+        1
+      ],
+      [
+        1,
+        -1,
+        1,
+        -1
+      ],
+      [
+        -1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "free": [
+      [
+        0,
+        1,
+        -1,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        -1
+      ],
+      [
+        -1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        -1,
+        1,
+        0
+      ]
+    ],
+    "pinned": [
+      [
+        0,
+        -1,
+        1,
+        1
+      ],
+      [
+        -1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0
+      ]
+    ],
+    "seed_set": [
+      0,
+      1
+    ]
+  },
+  "fixture_sha256": "9d926b0e5b7ccb7eb0a9f6952fd539c93ceffe90569eb8df1a881c469297faf5",
+  "host": "NUKA",
+  "original_convergence_proved": false,
+  "passed": true,
+  "scalar": {
+    "floor_constant_lower": "21180/17729",
+    "gap_exceeds_one_over_100": true,
+    "gap_lower": "3795009/354580000",
+    "pi_upper_integral_polynomial_identity": true,
+    "target_difference_constant_upper": "23679/20000"
+  },
+  "source_sha256": "b3cde74b361e881958f5239f3aa4c899c759d58fec326228fd61ffcfcc14202e",
+  "source_signings_checked": 1,
+  "strategy": {
+    "all_strategy_outcomes_bounded_by_actual_diamond": true,
+    "conditional_contexts": 64,
+    "conditional_tt_cancellations": 64,
+    "mean_strategy_score": "43/4",
+    "nonzero_fixed_tau_contexts": 24,
+    "pinned_norm": 4,
+    "strategy_outcomes_checked": 832,
+    "universal_formula_on_fixture": "43/4"
+  }
+}

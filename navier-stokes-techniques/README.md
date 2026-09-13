@@ -73,6 +73,14 @@ relevant shell and Walsh quantities are finite exact sums.  A formal Lean
 artifact would verify a completed theorem, not create the missing
 composition estimate.
 
+Uniform gauge averaging is now excluded as a replacement for selecting a
+good gauge: `evidence/NOTE_2026-09-13_UNIFORM_GAUGE_TRIPLING_OBSTRUCTION.md`
+proves an all-orders tripling gap. Its one-step Boolean correction cancels
+the updated block's quadratic self-interaction exactly under the global
+block-sign average. The resulting lower bound rules out the proposed
+uniform reverse-KL and positive-moment criteria; it does not rule out the
+selected-gauge estimate above.
+
 The finite PSD majorizer scout in
 `evidence/navier_covariance_cone_probe_20260911/` tested the obvious
 weighted extension of the source covariance cone.  Its 88 independent

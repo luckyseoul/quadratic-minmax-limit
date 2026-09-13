@@ -1616,3 +1616,40 @@ not a bound: `E rho=1` yields only `I_beta>=0`, whereas the target may
 require order `N log(n+1)^2` reverse KL. Existing finite connected-layer
 checks and covariance estimates do not prove that scale. No finite campaign
 was run or restarted for this result.
+
+## 2026-09-13: uniform reverse-KL tripling criterion is impossible
+
+`evidence/NOTE_2026-09-13_UNIFORM_GAUGE_TRIPLING_OBSTRUCTION.md` supersedes
+the preceding entry's designation of the uniform reverse-KL bound as an
+open target. For a free order-k block and pinned order-m block, it proves
+`E_g Phi(Y_g)>=Phi(B)+s a_m+(k-s)a_(m+s)` for every `0<=s<=k`, where
+`a_j=E|sum_(i=1)^j epsilon_i|`. Pin a maximizing state, align the first
+`s` free spins with the random cross field, then correct the others. The
+quadratic interaction within the corrected set cancels exactly under
+the global block-sign average; no Gaussian post-update closure is assumed.
+
+At `k=n,m=2n,s=floor(n/2)`, the added cost tends to
+`(2+sqrt(5))/(2sqrt(pi))` after division by `n^(3/2)`. CORE's existing
+`limsup alpha_n<=1/2` bounds the target allowance by
+`(3sqrt(3)-2sqrt(2))/2`. Their difference exceeds `1/100`, with an exact
+rational certificate. Uniformly for all cross seeds and optimal internal
+blocks, the average norm therefore exceeds the tripling target by at
+least `n^(3/2)/200` for all sufficiently large n.
+
+The reverse-KL hypothesis is exactly the uniform average-pressure bound;
+at the proposed temperature it fails by order `n log(n+1)^2`. Fixed
+`O(N)` slack and the stated positive fractional-moment bounds cannot fix
+it. Retire this criterion; do not restart its covariance or positive-moment
+variants. Selected good gauges, negative moments, and nonuniform laws are
+not excluded by this theorem and are not claimed solved or newly justified.
+
+NUKA checked one new fixed `4+4` strategy fixture: 64 exact conditional
+cancellations (24 nonvacuous at fixed block sign), 832 valid strategy
+outcomes, and mean score `43/4`. It also checked the rational constant
+certificate. Receipt: `evidence/uniform_gauge_tripling_obstruction_20260913/`;
+result SHA-256
+`850c0cfe49ed64614a7b586dc4b8f4d9939f1d774286737527a2fd3638dc84ab`.
+Root reviewed the all-orders proof; the finite computation is corroboration,
+not independent human review. The original limit remains OPEN. The next
+unresolved implication in the retained gauge route is the selected-gauge
+bound in Section 4.1, not the retired uniform reverse-KL condition.

@@ -11,10 +11,12 @@ one-sided `O(N)` error in the whole log density gives an
 Its leading gauge inequality and uniform remainder control are unproved.
 A single-fixture exact polynomial check on NUKA corroborates the partition
 normalization only; see `evidence/relative_gauge_temperature_20260913/`.
-Section 4.2 adds an exact sufficient alternative: a reverse-KL lower bound
-for the complete gauge partition density at that temperature selects one
-cross block with the same Dini-summable error. The required KL bound is
-unproved; finite connected-layer data do not establish it.
+Section 4.2's uniform reverse-KL criterion is now ruled out, not merely
+unproved. `evidence/NOTE_2026-09-13_UNIFORM_GAUGE_TRIPLING_OBSTRUCTION.md`
+proves that the uniform mean norm exceeds its tripling target by at least
+`n^(3/2)/200` for every sufficiently large order and every cross seed with
+optimal internal blocks. Its positive-moment restatement fails too. This
+does not exclude one good gauge or change the open status of Section 4.1.
 
 New all-orders reduction, 2026-09-13: for every fixed `delta>0`, every
 sufficiently large order has exponentially many signings within

@@ -373,7 +373,15 @@ normalization, the projective normalization factor, and the necessity of
 the `tau` average. It does not verify (11), the Dini hypotheses for actual
 signings, or convergence. No new source-signing census is involved.
 
-### 4.2 An exact reverse-KL selection criterion
+### 4.2 Uniform reverse-KL criterion: formally sufficient, now ruled out
+
+**Status correction, 2026-09-13:** the tripling hypothesis (17) below is
+impossible for every sufficiently large order, every cross seed, and every
+pair of optimal internal blocks. The all-orders proof is in
+`NOTE_2026-09-13_UNIFORM_GAUGE_TRIPLING_OBSTRUCTION.md`. It also excludes
+the associated positive fractional-moment bounds. The conditional algebra
+is retained here to identify the failed hypothesis. It does not invalidate
+Section 4.1's selected-gauge criterion or exclude one good gauge.
 
 The full density has a direct selection principle which does not introduce
 a layer truncation or a model value. Let `U` be the uniform law on the
@@ -422,8 +430,10 @@ remainder: when the separate block pressures exceed `beta T` by order
 `N log(n+1)^2`, the reverse KL must have that same order. The identity
 `E_g rho_g=1` only gives `I_beta>=0`; neither Jensen's inequality nor a
 finite collection of connected layers gives the positive lower bound in
-(17). Establishing it requires an actual all-orders information or
-free-energy estimate for the gauge density.
+(17). The subsequent obstruction proves more: (17) is exactly a bound on
+the uniform average pressure, and that average overshoots the tripling
+target by a fixed positive normalized amount. Do not retain (17) as an
+open proof target or replace it with its positive-moment restatement.
 
 ## 5. What the current upstream commit actually proves
 
