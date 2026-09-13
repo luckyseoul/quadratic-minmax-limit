@@ -373,6 +373,58 @@ normalization, the projective normalization factor, and the necessity of
 the `tau` average. It does not verify (11), the Dini hypotheses for actual
 signings, or convergence. No new source-signing census is involved.
 
+### 4.2 An exact reverse-KL selection criterion
+
+The full density has a direct selection principle which does not introduce
+a layer truncation or a model value. Let `U` be the uniform law on the
+finite gauge set and put `P_beta(g)=rho_g(beta) U(g)`. By (9), this is a
+probability law. Its reverse relative entropy is
+
+```text
+I_beta(A,B,C) = D(U || P_beta)
+               = - E_g log rho_g(beta).                 (15)
+```
+
+Hence some gauge `g_*` satisfies
+
+```text
+log rho_(g_*)(beta) <= - I_beta(A,B,C).                  (16)
+```
+
+This is only the elementary minimum-at-most-average inequality, but in the
+present normalization it gives the following all-orders sufficient target:
+
+```text
+I_beta(A,B,C)
+ >= log Z_A(beta)+log Z_B(beta)+log Z_C(beta)-beta T.    (17)
+```
+
+Indeed, insert (16) and (17) into (10) to obtain
+
+```text
+Phi(Y_(g_*)) <= T + N log(2)/beta.                       (18)
+```
+
+For `N=r n`, `r=2,3`, and
+`beta=log(n+1)^2/sqrt(r n)`, this supplies the Section 4 hypotheses with
+
+```text
+Omega_r(n) = r^(3/2) log(2)/log(n+1)^2.                 (19)
+```
+
+The dyadic Dini calculation (14) applies verbatim. Thus (17) for the two
+specified optimal-block rays would prove the original convergence question.
+It is a sufficient condition, not a claimed consequence of the existing
+covariance estimates.
+
+This criterion identifies the required scale without a surrogate
+remainder: when the separate block pressures exceed `beta T` by order
+`N log(n+1)^2`, the reverse KL must have that same order. The identity
+`E_g rho_g=1` only gives `I_beta>=0`; neither Jensen's inequality nor a
+finite collection of connected layers gives the positive lower bound in
+(17). Establishing it requires an actual all-orders information or
+free-energy estimate for the gauge density.
+
 ## 5. What the current upstream commit actually proves
 
 The upstream commit proves the balanced max-plus identity, exact shell

@@ -1597,3 +1597,22 @@ Root reviewed the analytic derivation; the finite check is not independent
 human review. This supporting correction did not require a fresh major
 milestone backup. Current mathematical status remains OPEN; the next
 unresolved implication on this route is the pair of inequalities (11).
+
+## 2026-09-13: reverse-KL gauge selection reduction
+
+The same normalized gauge partition density yields a second exact
+all-orders sufficient condition, now in Section 4.2 of
+`evidence/NOTE_2026-09-02_UPSTREAM_RELATIVE_GAUGE_BRIDGE.md`. Let
+`P_beta=rho_g U` be the gauge-tilted law. Then
+`I_beta=D(U||P_beta)=-E_U log rho_g`, so a gauge has
+`log rho_g<=-I_beta`. Consequently, if
+`I_beta>=log Z_A+log Z_B+log Z_C-beta T`, the associated block has
+`Phi<=T+N log(2)/beta`.
+
+At `N=r n`, `r=2,3`, and `beta=log(n+1)^2/sqrt(r n)`, this has the explicit
+Dini-summable normalized error `r^(3/2)log(2)/log(n+1)^2`; therefore the
+two Section 4 ray instances would prove convergence. This is a reduction,
+not a bound: `E rho=1` yields only `I_beta>=0`, whereas the target may
+require order `N log(n+1)^2` reverse KL. Existing finite connected-layer
+checks and covariance estimates do not prove that scale. No finite campaign
+was run or restarted for this result.
