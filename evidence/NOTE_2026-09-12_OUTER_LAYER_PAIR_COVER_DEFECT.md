@@ -1,10 +1,17 @@
-# Outer-layer opposite-sign pair-cover defect
+# Outer-layer pair, triple, and four-state cover defects
+
+**Research scope correction, 2026-09-13:** these small-cover identities do
+not supply a cross-order estimate. The Hadamard follow-up was retired as a
+duplicate research detour at Nick's direction. A coefficient-edge cover is
+distinct from the Boolean-pair vertex cover required in the RG2 criterion;
+a growing minimum coefficient-edge cover size was never established as a
+convergence requirement. The one-edge witness-versus-mass limitation is
+already documented in `NOTE_2026-09-02_BEST_RESPONSE_EDGE_FLIP_NO_GO.md`.
 
 This is an all-orders consequence of the coefficient edge-flip witnesses.
 It gives a quantitative reason that one positive and one negative outer-layer
-state cannot supply the needed global-minimality cover.  It does not establish
-the required growing multiplicity of such states, and does not close the RG2
-rounding problem.
+state cannot supply the one-edge minimality cover. It does not establish
+growing multiplicity of such states or close the RG2 rounding problem.
 
 Let `A` be a complete signing with `M=Phi(A)`.  Suppose that Boolean states
 `x,y` obey
@@ -186,9 +193,8 @@ cannot cover every edge whenever `M>3`.  Together with (11), **no triple of
 outer-two one-edge witnesses covers every edge once `M>n/2+2`**.  This is a
 uniform all-orders cardinality lower bound of four on a putative witness
 cover.  Equations (11a) and (13a) also give linear-in-`M` triple-defect mass
-bounds.  They remain far short of the growing-family bound required by the
-RG2/Banaszczyk route: a fourth witness can in principle cover a set of this
-size.
+bounds. These estimates alone do not control a larger covering family or
+supply the Boolean-pair cover in the RG2 sufficient condition.
 
 ## Four-witness signature collapse
 
@@ -221,9 +227,9 @@ N_tau <= (eps_1+eps_2+eps_3+eps_4)/8.                    (16)
 
 In particular, an outer-two four-cover has `N_tau<=1`.  Thus it must avoid,
 up to one edge, the prescribed matching between the eight relative-signature
-cells.  This is a real signature-collapse condition but not an exclusion:
-a cell support can avoid one prescribed matching.  Any next step must combine
-(16) with the triple-defect mass and a capacity/transport theorem.
+cells (within cells when all energy signs agree). This is a signature-collapse
+condition, not an exclusion. A cell support can avoid one prescribed matching.
+This is not a new convergence route or permission to reopen a Hadamard scan.
 
 ## Exact sign regression
 

@@ -70,8 +70,9 @@ the finite frontier is saturated under all current methods. Best known:
 16:30, 17:32, 18:33, 19:39, 20:40, 21:44, 22:49, 23:53, 24:56, 25:60,
 26:61, 28:70, 30:75, 32:80, 36:108, 38:109.
 
-**Repo state:** `main` is ahead of `origin/main` (NOT pushed; the push has
-been offered repeatedly and waits on the user's word).
+**Historical repo-state note:** the statement below reflects the September 12
+session only. It is not a current publication instruction; commits on the
+active research mission are normally pushed under the standing agreement.
 
 ## 2026-09-11: structural Paley lift family closed as an asymptotic route
 
@@ -1502,5 +1503,38 @@ forces its prescribed relative-signature class to contain at most one edge at
 the outer-two scale.  This is a signature-collapse condition, not a
 four-witness exclusion: a vertex-cell support can avoid one matching of the
 signature cube.  Controller exhaustive order-three algebra and independent
-NUKA replay passed.  The live next implication is to combine this sparse
-matching with the triple-defect mass in a genuine transport/capacity theorem.
+NUKA replay passed.  The formerly proposed transport/capacity continuation
+was retired on 2026-09-13: it is not a convergence criterion and must not be
+treated as a live research queue item.
+
+## 2026-09-13: user-stopped repetition; no Hadamard restart
+
+Nick flagged repeated Hadamard work and directed that the route stay closed.
+The detour rebuilt the Sylvester `H-diag(H)` family already present in the
+September 6 campaign archive. The archive member is
+`original-mo-campaign-root.Z0Um0rAh/original_mo_symmetric_hadamard_trades.py`
+inside `evidence/original_mo_broad_campaign_20260906/independent_and_hadamard.tar.gz`,
+SHA-256 `f8f038f7e047f58959901eaac7f567ec2909633ab76ddd18734126d901aaaed0`.
+The existing amplification losses are in `solution.md`, Proposition 7.2
+and Section 13. The one-edge witness limitation is in
+`NOTE_2026-09-02_BEST_RESPONSE_EDGE_FLIP_NO_GO.md`, Section 3.
+
+The newly created construction module, test module, standalone proof note,
+independent verifier, and result receipt were removed from the active tree.
+The earlier committed pair/triple identities are retained, but their proposed
+growing-cover continuation is not a convergence criterion. Do not reinterpret
+the preceding chronological entries as authorization for another Hadamard
+family scan or small-cover detour. No new global milestone was achieved.
+
+All five removed files remain recoverable in the verified pre-removal backup:
+`/mnt/storage/backups/codex/quadratic-minmax-limit-2212b99a4c24/20260913T003015Z-a5337eec5fd5-four-cover-route-closure.V0ZWS9`.
+Covered HEAD: `a5337eec5fd58a8cb8dfae4a861c6e45c2f80fe2`, plus the full
+then-uncommitted tree. SHA-256 of `SHA256SUMS`:
+`17a307b3399dbb768255c2e3a9774dfb925c6fa619fc6dbf14577705971e70a6`.
+No second backup is needed for this correction. The actual unresolved task
+remains convergence of `m_n/n^(3/2)`; a next attack needs a specific
+unproved implication checked against linked trees and archived results first.
+
+Infrastructure correction from Nick: Horus has replaced Lucky as the
+DNS-only node; Horus is excluded from compute dispatch. ARTIFACTS and the
+mesh manual now reflect this.

@@ -32,6 +32,11 @@ original convergence problem or identify its limit value.
 
 ## NUKA ROCm capability, 2026-09-11
 
+Current role correction, 2026-09-13: Horus has replaced Lucky as the DNS-only
+node. Horus is excluded from research compute dispatch. Older inventories
+that name Lucky in this role are historical; the compute nodes remain
+Soulkiller, NUKA, Jellyfin, and Orin, subject to live availability checks.
+
 NUKA now has a ROCm 10.0 runtime with a dispatchable Radeon RX 9070 XT
 (`gfx1201`), verified by `rocminfo` and a compiled HIP full-cube parity
 scorer.  `rocm-smi` can still report no initialized driver under its WSL

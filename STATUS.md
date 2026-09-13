@@ -1,6 +1,14 @@
 # Current mathematical status
 
-Updated 2026-09-12. The original MO limit is OPEN.
+Updated 2026-09-13. The original MO limit is OPEN.
+
+The recent outer-layer witness lemmas have not supplied a cross-order
+implication. The September 13 Hadamard detour repeated archived construction
+work and was removed from the active checkout at Nick's direction. No new
+global research milestone is claimed. The known Hadamard amplification losses
+are recorded in `solution.md`, Proposition 7.2 and Section 13; the existing
+one-edge witness limitation is in
+`evidence/NOTE_2026-09-02_BEST_RESPONSE_EDGE_FLIP_NO_GO.md`, Section 3.
 
 Focused follow-up, 2026-09-11: the exact order-14 Paley one-vertex scan
 found its best extension value 27; this matches the separately certified

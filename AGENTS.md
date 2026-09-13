@@ -25,6 +25,15 @@ existing evidence and code for that exact object and invariant. Reuse
 stored certificates. A new backend, larger finite census, longer timeout,
 or renamed obstruction is not a new argument.
 
+Include linked worktrees, preserved branch heads, and the research archives
+indexed by `ARTIFACTS.md` in that check. State the reused result and the
+specific unproved implication before implementing or dispatching work.
+
+Nick's correction on 2026-09-13: do not reopen Hadamard routes or family
+scans. Their constructions and amplification barriers are already documented
+(see `solution.md`, Proposition 7.2 and Section 13, and the September 6
+campaign archive). Small-cover corollaries do not justify restarting them.
+
 ## Proof and status discipline
 
 - Separate proved theorems, exhaustive finite certificates, open reductions,
