@@ -1538,3 +1538,30 @@ unproved implication checked against linked trees and archived results first.
 Infrastructure correction from Nick: Horus has replaced Lucky as the
 DNS-only node; Horus is excluded from compute dispatch. ARTIFACTS and the
 mesh manual now reflect this.
+
+## 2026-09-13: bounded counting entropy is a direct all-orders reduction
+
+For `E_n=binom(n,2)` and `C_n(t)` the number of labeled signings with
+`Phi(A)/n^(3/2)<=t`, the new note
+`evidence/NOTE_2026-09-13_BERNOULLI_COUNTING_ENTROPY.md` proves that for every
+fixed `delta>0`, all sufficiently large `n` have at least
+`exp(n^2 h(delta^2/64)/8)` signings at norm at most
+`m_n+delta n^(3/2)`. This uses independent Bernoulli edge flips around an
+arbitrary signing, the existing Bernstein bound, and a Shannon entropy
+argument. It is not a finite signing census and makes no family assumption.
+
+Thus `s_n(t)=log(1+C_n(t))/E_n` satisfies
+`liminf alpha_n=inf{t:limsup s_n(t)>0}` and
+`limsup alpha_n=inf{t:liminf s_n(t)>0}`. Convergence of `s_n(t)` on a dense
+set of thresholds is therefore sufficient for the original convergence
+question. The remaining implication on this direct route is a cross-order
+comparison or convergence theorem for these bounded disorder entropies; no
+such result is claimed. This route does not reopen Hadamard, finite census,
+or the retired outer-witness continuation.
+
+NUKA ran the two real-algebra cutoff counterexample queries once with
+Z3 5.1.0: both are `unsat`, recorded in
+`evidence/bernoulli_counting_entropy_20260913/result.json`. That receipt
+checks only the explicit scalar constants, not the probability or entropy
+proof. The historical September 2 rate criterion is updated to remove its
+unnecessary unique-threshold premise.

@@ -25,10 +25,15 @@ Suppose one could prove, at speed `E_n`,
  -{1\over E_n}\log\Pr\{W_n\le t\}\longrightarrow I(t)               \tag{2}
 \]
 
-with a unique threshold `t_*` across which `I(t)` crosses `log 2`.  Then
-`m_n/n^(3/2) -> t_*`.  Indeed, every nonempty event in the uniform signing
-space has mass at least `2^(-E_n)`.  Thus `I(t)>log 2` forces eventual
-emptiness, whereas `I(t)<log 2` forces a witness.
+on a dense set of thresholds. Then `m_n/n^(3/2)` converges. Indeed, every
+nonempty event in the uniform signing space has mass at least `2^(-E_n)`, so
+the rate is either in `[0,log 2]` or is infinite. If the normalized minima
+had distinct lower and upper limits, a dense threshold strictly between them
+would have an infinite-rate subsequence and a finite-rate subsequence, which
+cannot converge. A separate unique-threshold premise is therefore unnecessary.
+The stronger bounded counting-entropy formulation, including an unconditional
+exponential abundance theorem near every exact minimizer, is proved in
+`NOTE_2026-09-13_BERNOULLI_COUNTING_ENTROPY.md`.
 
 The required event is joint and lower-tailed:
 

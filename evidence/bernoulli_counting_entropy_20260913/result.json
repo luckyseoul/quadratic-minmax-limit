@@ -1,0 +1,24 @@
++{
+  "classification": "symbolic_scalar_corroboration_only",
+  "host": "NUKA",
+  "solver": "5.1.0",
+  "logic": "QF_NRA",
+  "source_sha256": "2b4da2f3832cff07e1d549627141926d3c9b39b6208d4b73f88b42d098d546f3",
+  "checks": [
+    {
+      "conclusion": "r + 8/(3u) <= delta",
+      "elapsed_seconds": 0.0029232759843580425,
+      "name": "normalized_noise_cutoff",
+      "outcome": "unsat",
+      "query": "(declare-fun delta () Real)\n(declare-fun u () Real)\n(declare-fun r () Real)\n(assert (> delta 0.0))\n(assert (> u 0.0))\n(assert (>= r 0.0))\n(assert (<= (* 8.0 r r) (* delta delta)))\n(assert (>= (* 3.0 delta u) 16.0))\n(assert (> (+ (* 3.0 r u) 8.0) (* 3.0 delta u)))\n"
+    },
+    {
+      "conclusion": "log_two/n + log_two/edges <= entropy/2",
+      "elapsed_seconds": 0.001720978005323559,
+      "name": "entropy_loss_cutoff",
+      "outcome": "unsat",
+      "query": "(declare-fun edges () Real)\n(declare-fun n () Real)\n(declare-fun log_two () Real)\n(declare-fun entropy () Real)\n(assert (>= n 2.0))\n(assert (> edges 0.0))\n(assert (= (* 2.0 edges) (* n (- n 1.0))))\n(assert (> log_two 0.0))\n(assert (> entropy 0.0))\n(assert (>= (* n entropy) (* 6.0 log_two)))\n(assert (> (* 2.0 log_two (+ edges n)) (* entropy n edges)))\n(model-add edges () Real (/ (* n (+ (- 1.0) n)) 2.0))\n"
+    }
+  ],
+  "passed": true
+}

@@ -2,6 +2,17 @@
 
 Updated 2026-09-13. The original MO limit is OPEN.
 
+New all-orders reduction, 2026-09-13: for every fixed `delta>0`, every
+sufficiently large order has exponentially many signings within
+`delta n^(3/2)` of `m_n`. Consequently the bounded disorder counting entropy
+`log(1+C_n(t))/binom(n,2)` detects `liminf alpha_n` and `limsup alpha_n`;
+its convergence on a dense set of thresholds would prove convergence of
+`alpha_n`. This is an unconditional abundance theorem and a sufficient
+criterion, not the requested cross-order entropy convergence. The two scalar
+cutoff inequalities have a NUKA Z3 receipt in
+`evidence/bernoulli_counting_entropy_20260913/`; the proof and scope are in
+`evidence/NOTE_2026-09-13_BERNOULLI_COUNTING_ENTROPY.md`.
+
 The recent outer-layer witness lemmas have not supplied a cross-order
 implication. The September 13 Hadamard detour repeated archived construction
 work and was removed from the active checkout at Nick's direction. No new
