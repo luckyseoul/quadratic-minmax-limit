@@ -1544,7 +1544,7 @@ mesh manual now reflect this.
 For `E_n=binom(n,2)` and `C_n(t)` the number of labeled signings with
 `Phi(A)/n^(3/2)<=t`, the new note
 `evidence/NOTE_2026-09-13_BERNOULLI_COUNTING_ENTROPY.md` proves that for every
-fixed `delta>0`, all sufficiently large `n` have at least
+fixed `0<delta<=1`, all sufficiently large `n` have at least
 `exp(n^2 h(delta^2/64)/8)` signings at norm at most
 `m_n+delta n^(3/2)`. This uses independent Bernoulli edge flips around an
 arbitrary signing, the existing Bernstein bound, and a Shannon entropy
