@@ -143,3 +143,29 @@ A full 2^36 enumeration of the 6+6 family was launched on the V100
 (`scripts/glue_gpu_scan.py`, shardable) but not completed within this
 session's budget; it can only confirm 18 and quantify the count of 18-level
 completions. No convergence claim.
+
+## 6. The precise form the data supports (bookkeeping corrected)
+
+The strict one-step form `m_{2n} <= 2 sqrt(2) m_n` is **false at the exact
+values**: n=5 gives 13 > 2 sqrt(2)*4 = 11.31; n=6 gives 18 > 14.14.
+What the recorded CORE-Section-7 route needs is the Dini-summable
+three-halves form `H(2n) <= 2 H(n) + 2 n eta(n)` with
+`H(n) = m_n^(2/3)`. The matched-block values 10, 12, 13, 18 at
+N = 8, 9, 10, 12 are **exactly** `m_N` and equal to the single-block
+constructions of the same order, so at these scales the three-halves
+inequality is met with zero error (`eta(n) <= 0`).
+
+**Testable structural hypothesis** (not proved, not claimed):
+the matched-block gluing family at `(n, n+1)` attains `m_{2n+1}` for every
+n, equivalently `H(N)` is realized by a two-block gluing at every order.
+If true with a Dini-summable error, it would close the doubling route.
+Next checks, in order of cost:
+
+1. exact 2^36 confirmation of the 6+6 family minimum being 18 and the
+   count of 18-level completions (scan running, `glue_gpu_scan.py`);
+2. 7+7 family at N=14 (2^49, needs the sharded GPU scanner) against
+   `m_14 = 21`;
+3. 8+8 family at N=16 against `m_16 <= 30` (2^64; search-only, or
+   restricted to structured cross blocks).
+
+No convergence claim.
