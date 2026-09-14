@@ -1694,15 +1694,3 @@ artifacts.
 Evidence: `evidence/merge_obstruction_20260913/` (note, audit trail, three
 raw JSONs with histograms). No convergence claim; the doubling estimate
 remains open.
-
-## 2026-09-13 addendum: 6+6 gluing attains m_12 = 18
-
-Follow-up with the exact full-cube kernel on the V100: a 6+6 cross
-completion achieving `Phi = 18 = m_12` was found and re-verified exactly
-(`evidence/merge_obstruction_20260913/witness_6p6.json`). An earlier probe
-value of 22 for the same family was a weak-search artifact and is
-superseded. Matched-block family minima: 10 (4+4), 12 (4+5), 13 (5+5),
-18 (6+6), each equal to the recorded `m_N`. A full 2^36 enumeration
-(`scripts/glue_gpu_scan.py`) was launched but not completed; it can only
-confirm 18 and count optimal completions. The doubling estimate remains
-open.
