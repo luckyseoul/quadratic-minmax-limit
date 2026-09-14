@@ -114,3 +114,32 @@ Artifacts: `raw_glue_4p4.json`, `raw_glue_4p5.json`, `raw_glue_5p5.json`
 (full histograms and best completion inside each). Superseded: the earlier
 `glue_*.json` / `glue_hist_*.json` files in this directory, retained only as
 the audit trail of the convention error.
+
+## 5. Addendum (same session, later): N=12 also attains the optimum
+
+A follow-up search with the exact full-cube kernel (V100, `glue_exact_raw.py`
+imported on soulkiller) found a 6+6 cross completion with
+
+    Phi = 18 = m_12 (exact value re-verified by the same kernel),
+
+stored as `witness_6p6.json` (36 cross entries, `verified_exact: true`).
+An earlier, weaker probe in this session reported 22 for the same family;
+that was a search artifact, not a lower bound -- the witness above
+supersedes it. The family minima now read:
+
+| case | family min | recorded `m_N` | source |
+| --- | --- | --- | --- |
+| 4+4 | 10 | 10 | full enumeration 2^16 |
+| 4+5 | 12 | 12 | full enumeration 2^20 |
+| 5+5 | 13 | 13 | full enumeration 2^25 |
+| 6+6 | 18 | 18 | explicit witness, exact re-evaluation |
+
+So the matched-block gluing family attains the optimum at N = 8, 9, 10
+and 12. (The 6+6 family minimum could in principle be lower than 18 by the
+both-sided bound; 18 is an attained value. The recorded `m_12 = 18`
+bounds it from below, so 18 is exactly the family optimum.)
+
+A full 2^36 enumeration of the 6+6 family was launched on the V100
+(`scripts/glue_gpu_scan.py`, shardable) but not completed within this
+session's budget; it can only confirm 18 and quantify the count of 18-level
+completions. No convergence claim.
