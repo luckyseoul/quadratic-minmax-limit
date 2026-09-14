@@ -2,6 +2,16 @@
 
 Updated 2026-09-13. The original MO limit is OPEN.
 
+Session addition, 2026-09-13: matched-block gluing (both diagonal blocks
+chosen as exact optima of orders n, m; free cross block). Full enumerations
+give exact minima 10 (4+4), 12 (4+5), 13 (5+5), each equal to the recorded
+`m_8, m_9, m_10`, with 184/10800/1840 optimal completions. Proved
+both-sided bound `phi_A+phi_C-nm <= Phi(merged) <= phi_A+phi_C+nm`; the
+recorded cross-term floor maximizes over the cross block and therefore does
+not lower-bound the gluing minimax. Finite statements only; the doubling
+estimate remains open. See
+`evidence/merge_obstruction_20260913/NOTE_2026-09-13_MATCHED_BLOCK_GLUING_BOUNDS.md`.
+
 Scope correction, 2026-09-13: relative-gauge composition does not universally
 require integer-level occupancy precision. Section 4.1 of
 `evidence/NOTE_2026-09-02_UPSTREAM_RELATIVE_GAUGE_BRIDGE.md` gives a
