@@ -1,0 +1,25 @@
+{
+  "all_passed": true,
+  "checks": {
+    "arcsine_second_derivative_bound": true,
+    "field_lower_squared": true,
+    "field_squared_lower": true,
+    "paired_root_polynomial_identity": true,
+    "positive_completed_square_cushion": true,
+    "strict_global_bound": true,
+    "update_alpha_coefficient": true,
+    "update_baseline_coefficient": true,
+    "update_field_coefficient": true
+  },
+  "classification": "exact scalar and polynomial corroboration",
+  "conservative_bound_lower": "361809/1111000",
+  "convergence_proved": false,
+  "field_squared_lower": "455/726",
+  "margin_above_13_over_40": "367/555500",
+  "polynomial_certificate": "-4*b*y**2*(-a + b*q)",
+  "polynomial_sign_hypotheses": "a>=b*q; b,q,y>=0",
+  "python": "3.14.4",
+  "script_sha256": "73fda9a3a7c8dd87831e9eec40cb22e6ce1ca958e7e10c3fe3250cfefb4840e9",
+  "signings_enumerated": 0,
+  "sympy": "1.14.0"
+}

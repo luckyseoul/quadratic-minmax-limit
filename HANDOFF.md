@@ -1,5 +1,55 @@
 # Handoff: original convergence problem
 
+## 2026-09-17: new cap-independent paired-field lower bound
+
+The new proof `evidence/NOTE_2026-09-17_PAIRED_POLYNOMIAL_FIELD_LOWER.md`
+gives `liminf alpha_n >= B = 0.3258407554555742... > 13/40`, with
+`B=[81 kappa/2+9 sqrt(kappa(2/3+kappa/2))]/101`, `kappa=2/pi`.
+
+New mathematics: split the actual polynomial-phase sign covariances as
+`C_s=C_0+s 2kappa M/(1+q)+E_s`, with `||E_s||_F=O_L(1)`, retain the
+PSD even tail, and pair the two local variances using
+`(M^3)_ii^2<=q[(M^4)_ii-q^2]`. The resulting field lower is independent
+of fixed L. Reusing scalar Gaussianization and the already-completed
+Boolean-norm mean update gives the displayed B. Existing same-order
+regularization removes L by taking n to infinity before the cap.
+
+Root reviewed the complete analytic chain. NUKA ran the new nine-check
+exact scalar/polynomial certificate once, all passed, exit 0. No signing
+or family census was run. Proof SHA-256:
+`1f4ddcc4eb7f1098ccc480165834fbd784b763ab1ecc7734d0361d7698383a3c`.
+Checker SHA-256:
+`73fda9a3a7c8dd87831e9eec40cb22e6ce1ca958e7e10c3fe3250cfefb4840e9`.
+The receipt and detailed author-review scope are in
+`evidence/paired_polynomial_field_20260917/`. This is not independent
+human review or formal verification of the entire proof.
+
+Nick clarified that the September 17 revert was requested to remove
+duplicate work, not to reject the lower-bound result. Do not interpret
+its commit-message paraphrase as a mathematical retraction or permission
+to rerun completed work. The prior untracked September 15 note/checker
+remain untouched; the old update is an input, not a new contribution.
+
+Convergence remains OPEN. The next unresolved implication is a genuine
+cross-order comparison, such as a lower bound on the integrated optimized
+pressure defect; this theorem does not supply one. Do not spend a new
+campaign retuning the last decimal of B. A separate all-real-domain
+checker was drafted for Soulkiller but not run (Z3 absent in default
+Python); it is outside this commit and not evidence. No owned mesh
+research process was left running.
+
+Verified major-milestone checkpoint (before publication):
+`/mnt/storage/backups/codex/quadratic-minmax-limit-2212b99a4c24/20260917T053401Z-ec5a643658a3-paired-field-global-lower.CFqifY`.
+It covers HEAD `ec5a643658a3c8cb74174679fd4f31f483d34aa4` plus the full
+uncommitted tree, including the new proof and all untracked work. Actual
+mount: `/dev/sda2`, ext4, read-write; bundle, archives, source comparisons,
+unchanged refs/status, and checksums passed. SHA-256 of `SHA256SUMS`:
+`7ffc45fde203f19bd89b438e85d7af907699371c171bc549746ee3c877e89556`.
+NUKA result SHA-256:
+`73b0b787df8def4686675cd4804563b62c33843545a32b794fe74a2731212c32`.
+This receipt paragraph was added after the snapshot. No earlier backup was
+overwritten or deleted.
+
 ## 2026-09-12: session summary — closures, m_38 <= 109, nuka ops
 
 **Conditional spectral bridge diagnostic (finite only):** for the fixed

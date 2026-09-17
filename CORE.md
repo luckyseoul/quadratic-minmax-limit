@@ -139,6 +139,19 @@ the exact nuclear lower via full-source spectral-tail control and gain.
 It supplies neither a numerical \(\varepsilon_0\), convergence, nor a
 limit value; its \(F_1(1)\) is not an unconditional lower bound.
 
+**Explicit paired-field improvement (2026-09-17).** The author-reviewed
+[paired polynomial-phase theorem](evidence/NOTE_2026-09-17_PAIRED_POLYNOMIAL_FIELD_LOWER.md)
+now gives, with \(\kappa=2/\pi\),
+\[
+\liminf_n\alpha_n\ge
+B:=\frac{81\kappa/2+9\sqrt{\kappa(2/3+\kappa/2)}}{101}
+=0.3258407554\ldots>\frac{13}{40}.
+\]
+The paired local-field bound is independent of a fixed operator cap;
+same-order regularization then removes that cap. This supplies neither
+an explicit finite-order cutoff nor convergence. Its exact scalar
+certificate and author-review scope are recorded with the proof.
+
 ## 5. Transfer along ratio-dense subsequences
 
 Let \(2\le n_1<n_2<\cdots\) be an unbounded sequence of integers with
@@ -194,10 +207,10 @@ m_r\le\Phi(C)\le\tfrac12 r\|C\|_{\rm op}
 \]
 Apply Section 5 to the increasing orders \(r_k=q_k+1\). It follows that
 \[
-\frac1\pi<\liminf_n\alpha_n
+\frac{13}{40}<B\le\liminf_n\alpha_n
 \le\limsup_n\alpha_n\le\frac12.
 \]
-The strict lower is the later corollary in Section 4; the conference
+The lower bound is the September 17 result in Section 4; the conference
 construction and ratio-dense transfer supply only the upper bound here.
 This uses conference matrices only as admissible constructions for an
 upper bound. It does not assert that they minimize \(\Phi\), or that the

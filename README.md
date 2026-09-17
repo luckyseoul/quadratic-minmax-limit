@@ -7,7 +7,9 @@ Does the sequence
 converge as `n` tends to infinity?
 
 The original MO limit is OPEN. A proof of existence need not identify its
-value. The proved bounds are `1/pi <= liminf alpha_n <= limsup alpha_n <= 1/2`.
+value. The current author-reviewed bounds are
+`0.3258407554... <= liminf alpha_n <= limsup alpha_n <= 1/2`;
+the exact lower constant and proof are in [CORE.md, Section 4](CORE.md#4-a-uniform-gaussian-lower-bound).
 
 Start with [CORE.md](CORE.md) for the route-neutral mathematics,
 [STATUS.md](STATUS.md) for current claims, and [HANDOFF.md](HANDOFF.md) for
