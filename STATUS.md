@@ -1,6 +1,21 @@
 # Current mathematical status
 
-Updated 2026-09-13. The original MO limit is OPEN.
+Updated 2026-09-17. The original MO limit is OPEN.
+
+Explicit lower bound verified and sharpened, 2026-09-17: the
+[2026-09-15 explicit lower-bound note](evidence/NOTE_2026-09-15_EXPLICIT_ORIGINAL_LOWER_BOUND.md)
+was re-derived line by line, checked numerically on all signings of orders
+2..7, on Paley conference families through order 158, on perturbed and
+random signings (Monte Carlo for (8), exact update-bound checks for (9)),
+and replayed on orin and jellyfin; zero violations, and the published
+margin `88577/250000` reproduces exactly. Its full evidence record is
+`evidence/explicit_original_lower_20260915/` (`SELF_REVIEW.md`, `README.md`,
+`result.json`, `replay_*.json`). The same proof with tighter rational
+enclosures and the exact `d`-bound certifies the conservative constant
+`liminf alpha_n > 1/pi + 4*10^-6` (certified same-method ceiling
+`4.460449...*10^-6`). This was machine review, not independent human
+review, and it is not a formalization; convergence and the value of a
+possible limit remain OPEN.
 
 Scope correction, 2026-09-13: relative-gauge composition does not universally
 require integer-level occupancy precision. Section 4.1 of
@@ -113,11 +128,13 @@ status and reviewed bounds below are unchanged.
 `m_n` is nondecreasing, consecutive `alpha_n` differences tend to zero,
 the limit-point set is an interval, and
 
-`1/pi < liminf alpha_n <= limsup alpha_n <= 1/2`.
+`1/pi + 4*10^-6 < liminf alpha_n <= limsup alpha_n <= 1/2`.
 
-The strict lower is the reviewed source-gain corollary below: there is
-an unspecified eventual uniform positive gap above 1/pi, not a numerical
-gap or a proof of convergence. CORE's finite 1/pi proof is unchanged.
+The strict lower is the source-gain corollary below, now explicit: the
+[2026-09-15 note](evidence/NOTE_2026-09-15_EXPLICIT_ORIGINAL_LOWER_BOUND.md)
+with its verified 2026-09-17 sharpening gives the displayed constant. This
+is still not a proof of convergence. CORE's finite 1/pi proof is unchanged;
+the upper bound and everything else in this section are unaffected.
 
 The upper bound uses conference constructions, not their optimality.
 Ratio-dense transfer and two-multiplier Dini amplification are valid

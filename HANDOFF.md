@@ -1653,3 +1653,45 @@ Root reviewed the all-orders proof; the finite computation is corroboration,
 not independent human review. The original limit remains OPEN. The next
 unresolved implication in the retained gauge route is the selected-gauge
 bound in Section 4.1, not the retired uniform reverse-KL condition.
+
+## 2026-09-17: explicit original lower bound verified, sharpened, landed
+
+The uncommitted 2026-09-15 explicit lower-bound note was picked up and
+completed. What was done:
+
+- Whole-chain re-derivation of the note (imports (2), (3); displays (4)--(11))
+  with no error found; recorded in
+  `evidence/explicit_original_lower_20260915/SELF_REVIEW.md`.
+- Independent numerical corroboration (`verify_estimates.py`, self-contained
+  numpy): all signings of orders 2..7 (2,097,152 at order 7) for the
+  deterministic estimates; 65 family signings (Paley conference `q+1` for
+  prime `q = 1 mod 4` through `q = 157`, forced-flip perturbations, random
+  orders 8..256, all-ones) with Monte Carlo for (8); exhaustive update-bound
+  (9) checks for orders 4..5. Zero violations everywhere; the conference
+  regime reproduces `R = I + S` identically and `f -> sqrt(kappa)`.
+- Exact-rational sharpening within the same proof (`sharpen_constant.py`):
+  `liminf alpha_n > 1/pi + 4*10^-6` certified for every `eps <= 4e-6`
+  (margins in `result_sharpen.json`), controls at `4.5e-6, 5e-6` fail as
+  expected, same-method ceiling `305/68378763 = 4.460449...e-6`, and the
+  note's own `88577/250000` margin reproduced exactly.
+- Cross-machine replay with staged-hash verification: orin (aarch64,
+  `/tmp/qml-explicit-lower-3ZC8qz`) and jellyfin (x86_64,
+  `/tmp/qml-explicit-lower-rcFX6v`), exit status 0; exact certificates
+  bit-identical across all three hosts, float aggregates agree to 1e-9.
+- New test file `tests/test_explicit_original_lower_estimates.py` (builder,
+  exhaustive order 4 with update bound, exact conference frame, certificate
+  and receipt consistency).
+- A dated `## Addendum, 2026-09-17` was appended to
+  `evidence/NOTE_2026-09-15_EXPLICIT_ORIGINAL_LOWER_BOUND.md` (final note
+  SHA-256 `b62d94c49487652f83c1b0b304acda4b7ac1a652db441f605ef101dca9a7f27d`),
+  and `STATUS.md` now displays `1/pi + 4*10^-6 < liminf alpha_n`.
+
+Pending user decisions: whether to promote the explicit constant into
+`CORE.md` Section 4 / the top-level `README.md` (deliberately not done
+here); whether to pursue a sharper `sqrt(d)` coefficient in (5)/(7)/(8),
+which is the only path to a materially larger certified constant (the
+current method's ceiling is `4.460449...e-6`). Convergence remains OPEN; no
+new global milestone is claimed.
+
+Do not re-run these checks as new work; reuse
+`evidence/explicit_original_lower_20260915/` and its receipts.

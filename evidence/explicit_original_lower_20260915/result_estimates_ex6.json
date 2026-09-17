@@ -1,0 +1,74 @@
+{
+ "finished": "2026-09-17T04:29:43Z",
+ "host": "soulkiller",
+ "kappa": 0.6366197723675814,
+ "numpy": "2.4.4",
+ "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.43",
+ "python": "3.14.4",
+ "runs": [
+  {
+   "checks": {
+    "c4": {
+     "inactive": 32768,
+     "max_ratio": null,
+     "violations": 0,
+     "where": null
+    },
+    "c5": {
+     "inactive": 0,
+     "max_ratio": 0.4104861884328723,
+     "violations": 0,
+     "where": {
+      "d": 0.2659945300552369,
+      "idx": 1093
+     }
+    },
+    "c6": {
+     "inactive": 32768,
+     "max_ratio": null,
+     "violations": 0,
+     "where": null
+    },
+    "c7": {
+     "inactive": 0,
+     "max_ratio": 0.26583074292692993,
+     "violations": 0,
+     "where": {
+      "d": 0.20034017147788075,
+      "idx": 1702
+     }
+    },
+    "cX": {
+     "inactive": 32768,
+     "max_ratio": null,
+     "violations": 0,
+     "where": null
+    },
+    "cfv": {
+     "inactive": 0,
+     "max_ratio": 0.5000000000000351,
+     "violations": 0,
+     "where": {
+      "d": 0.007591474982778568,
+      "idx": 5157
+     }
+    },
+    "cv": {
+     "inactive": 0,
+     "max_ratio": 0.12543061837304673,
+     "violations": 0,
+     "where": {
+      "d": 0.24703639348610618,
+      "idx": 5835
+     }
+    }
+   },
+   "mode": "exhaustive",
+   "n": 6,
+   "seconds": 0.67,
+   "signings": 32768
+  }
+ ],
+ "script_sha256": "e6db5e83c4feeffdd7f9f787217ade6e53a9f4325d617786f9c13351ac6cb635",
+ "started": "2026-09-17T04:29:42Z"
+}

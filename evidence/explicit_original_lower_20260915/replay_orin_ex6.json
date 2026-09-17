@@ -1,0 +1,74 @@
+{
+ "finished": "2026-09-17T04:31:30Z",
+ "host": "orin",
+ "kappa": 0.6366197723675814,
+ "numpy": "2.5.2",
+ "platform": "Linux-6.8.12-1021-tegra-aarch64-with-glibc2.39",
+ "python": "3.12.3",
+ "runs": [
+  {
+   "checks": {
+    "c4": {
+     "inactive": 32768,
+     "max_ratio": null,
+     "violations": 0,
+     "where": null
+    },
+    "c5": {
+     "inactive": 0,
+     "max_ratio": 0.410486188432872,
+     "violations": 0,
+     "where": {
+      "d": 0.26599453005523754,
+      "idx": 751
+     }
+    },
+    "c6": {
+     "inactive": 32768,
+     "max_ratio": null,
+     "violations": 0,
+     "where": null
+    },
+    "c7": {
+     "inactive": 0,
+     "max_ratio": 0.26583074263698125,
+     "violations": 0,
+     "where": {
+      "d": 0.20034017147788163,
+      "idx": 1702
+     }
+    },
+    "cX": {
+     "inactive": 32768,
+     "max_ratio": null,
+     "violations": 0,
+     "where": null
+    },
+    "cfv": {
+     "inactive": 0,
+     "max_ratio": 0.5000000000000141,
+     "violations": 0,
+     "where": {
+      "d": 0.007591474982779234,
+      "idx": 1222
+     }
+    },
+    "cv": {
+     "inactive": 0,
+     "max_ratio": 0.12543061863097915,
+     "violations": 0,
+     "where": {
+      "d": 0.24703639348610618,
+      "idx": 4783
+     }
+    }
+   },
+   "mode": "exhaustive",
+   "n": 6,
+   "seconds": 3.27,
+   "signings": 32768
+  }
+ ],
+ "script_sha256": "e6db5e83c4feeffdd7f9f787217ade6e53a9f4325d617786f9c13351ac6cb635",
+ "started": "2026-09-17T04:31:27Z"
+}
