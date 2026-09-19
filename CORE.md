@@ -263,3 +263,53 @@ For example, \(\eta(n)=O(n^{-\delta})\), \(\delta>0\), or
 \(\eta(n)=O((\log n)^{-1-\varepsilon})\), \(\varepsilon>0\), satisfies
 the stated tail condition. Merely knowing \(\eta(n)\to0\) does not
 establish that condition.
+
+## 8. The Paley sequence \(n=p^2+1\) determines the cluster set
+
+Let \(p_k\) be the odd primes and \(n_k=p_k^2+1\). The prime-number
+theorem gives \(p_{k+1}/p_k\to1\), hence \(n_{k+1}/n_k\to1\). Section 5
+therefore yields
+\[
+\liminf_n\alpha_n=\liminf_k\alpha_{n_k},\qquad
+\limsup_n\alpha_n=\limsup_k\alpha_{n_k}.
+\]
+In particular, \(\alpha_n\) converges if and only if \(\alpha_{n_k}\)
+does, and the possible limits coincide. Multipliers two and three are
+not required for this equivalence.
+
+For each odd prime \(p\), the Paley conference matrix \(C\) of order
+\(n=p^2+1\) over \(\mathbf F_{p^2}\) admits an explicit Boolean
+eigenvector with \(Cx=px\) (halfspace of an \(\mathbf F_p\)-linear form;
+see the archived \(\rho=1\) note). Consequently
+\[
+\Phi(C)=\frac12 np=\frac12 n\sqrt{n-1},
+\]
+and \(m_n\le\Phi(C)\). Write
+\[
+\gamma_p=\frac{\Phi(C)-m_n}{n^{3/2}}
+=\frac12\sqrt{1-\frac1n}-\alpha_n\ge0.
+\]
+Then \(\alpha_{n_k}=\frac12\sqrt{1-1/n_k}-\gamma_{p_k}\). As
+\(\sqrt{1-1/n_k}\to1\),
+\[
+\liminf_n\alpha_n=\frac12-\limsup_k\gamma_{p_k},\qquad
+\limsup_n\alpha_n=\frac12-\liminf_k\gamma_{p_k}.
+\]
+Existence of \(\lim\alpha_n\) is therefore equivalent to existence of
+\(\lim\gamma_{p_k}\). The value, if the limit exists, is
+\(\frac12-\lim\gamma_p\).
+
+Two exclusive alternatives, still open:
+
+- \(\gamma_{p_k}\to0\). Then \(\alpha_{n_k}\to\frac12\), hence
+  \(\lim\alpha_n=\frac12\).
+- \(\limsup_k\gamma_{p_k}=c>0\). Then
+  \(\liminf_n\alpha_n\le\frac12-c\). If in fact \(\gamma_{p_k}\to c\),
+  the limit exists and equals \(\frac12-c\). If \(\gamma_{p_k}\) has two
+  distinct cluster points, \(\alpha_n\) diverges.
+
+A matching-size or \(O(n)\) undercut of \(C\) forces \(\gamma_p=O(n^{-1/2})\to0\)
+and would settle the first alternative. No reviewed construction gives a
+uniform \(c>0\), and no reviewed argument forces \(\gamma_p\to0\).
+The uniform lower bound of Section 4 only yields \(\gamma_p\le\frac12-B+o(1)\).
+This section does not reopen Paley gap-2 covers or Hadamard families.

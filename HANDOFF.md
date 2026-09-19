@@ -1,5 +1,15 @@
 # Handoff: original convergence problem
 
+## 2026-09-19: cluster set is Paley n=p^2+1
+
+CORE §8 (corollary of §5 + ρ=1): existence of lim α_n is equivalent to
+convergence of γ_p = (Φ(C)-m_n)/n^{3/2} on n=p^2+1. If γ→0 then L=1/2;
+if γ→c>0 then L=1/2-c; two cluster points of γ would prove divergence.
+Certified: γ_3=0.06325 exact; γ_5≥0.03017 from m_26≤61. No uniform c>0
+construction, no o(n^{3/2}) gap proof. Do not reopen gap-2 covers.
+Next: a construction with γ≥c>0 on this sequence, or an o(n^{3/2}) bound
+on Φ(C)-m_n along it — not another 2n residue census.
+
 ## 2026-09-19: n=9 zero-error two-half diamond fails
 
 The directed-half-cut minimax `min_R B(A,R)` on an exact `m_9=12`

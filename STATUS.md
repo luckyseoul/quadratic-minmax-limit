@@ -2,6 +2,14 @@
 
 Updated 2026-09-19. The original MO limit is OPEN.
 
+CORE §8: along \(n=p^2+1\), Paley saturates \(\Phi=\tfrac12 n\sqrt{n-1}\),
+the sequence is ratio-dense, and
+\(\liminf\alpha_n=\tfrac12-\limsup\gamma_p\),
+\(\limsup\alpha_n=\tfrac12-\liminf\gamma_p\).
+Existence of the original limit is equivalent to convergence of the Paley
+gap \(\gamma_p=(\Phi(C)-m_n)/n^{3/2}\). Not a proof of either side.
+See [the cluster note](evidence/NOTE_2026-09-19_PALEY_P2_CLUSTER.md).
+
 New finite orientation fact (not a proof): an exact `m_9=12` signing
 has `min_R B(A,R)=36>2√2·12`, so the **zero-error** doubling diamond
 fails at n=9 (CP-SAT `B≤34` infeasible). It holds at n=7 and n=8.
