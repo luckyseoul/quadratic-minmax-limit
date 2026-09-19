@@ -2,6 +2,13 @@
 
 Updated 2026-09-19. The original MO limit is OPEN.
 
+The n=26 Paley-beater \(\Phi=61\) is the plus-I coherent lift
+\(K(B)=[[B,B+I],[B+I,-B]]\) of an \(m_{13}=20\) signing. The same lift of
+the 5-cycle is exact \(m_{10}=13\). At n=50 the Paley-\(\mathbf F_{25}\)
+lift has spectrum \(\pm\sqrt{61},\pm\sqrt{41},\pm1\) and local-search
+\(\Phi\ge169\) against Paley 175 (SDP \(\le180\)). See
+[the lift note](evidence/NOTE_2026-09-19_PLUS_I_COHERENT_LIFT.md).
+
 CORE §8: along \(n=p^2+1\), Paley saturates \(\Phi=\tfrac12 n\sqrt{n-1}\),
 the sequence is ratio-dense, and
 \(\liminf\alpha_n=\tfrac12-\limsup\gamma_p\),

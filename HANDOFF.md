@@ -1,5 +1,12 @@
 # Handoff: original convergence problem
 
+## 2026-09-19: plus-I lift is the n=10 and n=26 Paley-beater
+
+K(B)=[[B, B+I],[B+I, -B]]. K(5-cycle)=m_10=13. K(m_13-minimizer)=61,
+which *is* the n=26 record (not a Paley matching). Paley-F_25 lift to
+n=50 has ||K||_op=√61 and local Φ≥169 vs Paley 175, SDP≤180: not certified
+as an undercut. Next: decide Φ(K_50) vs 175, or a uniform bound on Φ(K(B)).
+
 ## 2026-09-19: why γ_p is not closed
 
 Gaussian CORE §4 is saturated at conference (u_ij=0). Lipschitz plus

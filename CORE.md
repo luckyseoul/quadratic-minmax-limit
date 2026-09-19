@@ -321,7 +321,11 @@ exactly \(2\arcsin(1/\sqrt{n-1})\) and the extra factor
 at Paley orders by the same method. Lipschitz plus small switching
 distance is likewise unavailable: the certified \(n=26\) undercutter
 has switching Hamming distance \(122=\Theta(n^{3/2})\) from Paley, with
-\(A^2\) off-diagonal in \(\{0,\pm4\}\) and five nonzeros per row.
+\(A^2\) off-diagonal in \(\{0,\pm4\}\) and six nonzeros per row. It is
+the plus-I lift \(K(B)=\bigl(\begin{smallmatrix}B&B+I\\B+I&-B\end{smallmatrix}\bigr)\)
+of an exact \(m_{13}=20\) block (see
+`evidence/NOTE_2026-09-19_PLUS_I_COHERENT_LIFT.md`). The same lift of the
+5-cycle is the exact minimizer at \(n=10\).
 No reviewed construction gives a uniform \(c>0\), and no reviewed
 argument forces \(\gamma_p\to0\). The uniform lower bound of Section 4
 only yields \(\gamma_p\le\tfrac12-B+o(1)\). This section does not reopen
