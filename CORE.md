@@ -309,7 +309,20 @@ Two exclusive alternatives, still open:
   distinct cluster points, \(\alpha_n\) diverges.
 
 A matching-size or \(O(n)\) undercut of \(C\) forces \(\gamma_p=O(n^{-1/2})\to0\)
-and would settle the first alternative. No reviewed construction gives a
-uniform \(c>0\), and no reviewed argument forces \(\gamma_p\to0\).
-The uniform lower bound of Section 4 only yields \(\gamma_p\le\frac12-B+o(1)\).
-This section does not reopen Paley gap-2 covers or Hadamard families.
+and would settle the first alternative. That implication is not available
+as a proof: the only certified Paley-order undercut at \(n=26\) has
+switching distance \(122=\Theta(n^{3/2})\) from \(C\) (see
+`evidence/NOTE_2026-09-19_BEATER_SHELL.md`).
+
+The CORE Gaussian bound is saturated at conference: \(A^2=(n-1)I\)
+forces the pair quantities \(u_{ij}=0\), so the arcsine difference is
+exactly \(2\arcsin(1/\sqrt{n-1})\) and the extra factor
+\(\arcsin(v)/v\to1\). That estimate cannot be improved to \(\tfrac12\)
+at Paley orders by the same method. Lipschitz plus small switching
+distance is likewise unavailable: the certified \(n=26\) undercutter
+has switching Hamming distance \(122=\Theta(n^{3/2})\) from Paley, with
+\(A^2\) off-diagonal in \(\{0,\pm4\}\) and five nonzeros per row.
+No reviewed construction gives a uniform \(c>0\), and no reviewed
+argument forces \(\gamma_p\to0\). The uniform lower bound of Section 4
+only yields \(\gamma_p\le\tfrac12-B+o(1)\). This section does not reopen
+Paley gap-2 covers or Hadamard families.

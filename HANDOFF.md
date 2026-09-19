@@ -1,5 +1,15 @@
 # Handoff: original convergence problem
 
+## 2026-09-19: why γ_p is not closed
+
+Gaussian CORE §4 is saturated at conference (u_ij=0). Lipschitz plus
+small F is false as a route: the n=26 Φ=61 undercutter has switching
+distance 122 from Paley, A^2 off-diagonal in {0,±4} with six nonzeros
+per row. Max+ can be killed while Φ rises (160 flips, cube max 107).
+The remaining object is an almost-conference family in the Paley-op
+shell with ρ bounded away from 1. See
+`evidence/NOTE_2026-09-19_BEATER_SHELL.md`.
+
 ## 2026-09-19: cluster set is Paley n=p^2+1
 
 CORE §8 (corollary of §5 + ρ=1): existence of lim α_n is equivalent to
