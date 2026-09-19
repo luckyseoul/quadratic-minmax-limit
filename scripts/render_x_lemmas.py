@@ -73,57 +73,54 @@ def page1():
         ax,
         0.06,
         0.920,
-        r"MO 413935  ·  $L=\lim\alpha_n=\frac{1}{2}$  ·  three load-bearing statements",
+        r"MO 413935  ·  limit OPEN  ·  three load-bearing statements",
         fontsize=10,
         color=MUTED,
     )
     _bar(ax, 0.902)
 
-    # Setup
     _card(ax, 0.05, 0.730, 0.90, 0.145)
     _t(ax, 0.08, 0.840, "SETUP", fontsize=11, color=AMBER, fontweight="bold")
     setup = [
-        r"$n=p^2+1$, $p$ odd prime;  $C$ Paley conference;  $\Phi(C)=\frac{1}{2}n\sqrt{n-1}$.",
-        r"Gap-2 undercutter: edge-set $F$ with $\Phi(C\oplus F)=\Phi(C)-2$.",
-        r"Goal: no such $F$ descends further $\Rightarrow m_n\geq\Phi(C)-2\Rightarrow L=\frac{1}{2}$",
-        r"(denseness of $\{p^2+1\}$ + universal $\limsup\alpha_n\leq\frac{1}{2}$).",
+        r"$m_n=\min_A\max_x |Q_A(x)|$,  $Q_A(x)=\sum_{i<j}A_{ij}x_ix_j$,  $\alpha_n=m_n/n^{3/2}$.",
+        r"Question: does $\lim\alpha_n$ exist?  Identifying a value is separate.",
+        r"Reviewed sandwich:  $B\leq\liminf\alpha_n\leq\limsup\alpha_n\leq 1/2$,",
+        r"$B=0.3258407554\ldots>13/40$.  Convergence is not implied.",
     ]
     y = 0.800
     for line in setup:
         _t(ax, 0.08, y, line, fontsize=10, color=TEXT)
         y -= 0.026
 
-    # Lemma A
     _card(ax, 0.05, 0.380, 0.90, 0.320)
-    _t(ax, 0.08, 0.665, "LEMMA A  —  bi-tight covers empty  (Prop 15.167)", fontsize=11, color=GREEN, fontweight="bold")
+    _t(ax, 0.08, 0.665, "LEMMA A  —  paired-field lower bound  (2026-09-17)", fontsize=11, color=GREEN, fontweight="bold")
     la = [
-        r"Let $G$ be the Max$\pm$ edge Gram, $d=n/2$, mult$(\lambda_{\max})\geq d-1$, $\lambda_{\min}\geq 6$.",
-        r"Majorization upper-bounds the top eigenvalue:",
-        r"    $L_*=\dfrac{p^4+24p^2-1}{2(p^2-1)}$.",
-        r"Algebra for primes $p\geq 5$:",
-        r"    $2d-L_*=\dfrac{p^4-24p^2-1}{2(p^2-1)}>0$   (numerator $24$ at $p=5$; increasing thereafter).",
-        r"Hence $\lambda_{\max}\leq L_*<2d$ $\Rightarrow$ $\lambda_{\mathrm{cycle}}<d$ $\Rightarrow$ $\lambda_{\max}(G)=n/2$ simple",
-        r"$\Rightarrow$ no bi-tight size-$2p$ cover (Prop 15.55).  Residual / $16N$ not used.",
+        r"Split polynomial-phase sign covariances $C_s=C_0+s\cdot 2\kappa M/(1+q)+E_s$,",
+        r"$\kappa=2/\pi$,  $\|E_s\|_F=O_L(1)$.  Retain the PSD even tail.",
+        r"Pair local variances by $(M^3)_{ii}^2\leq q[(M^4)_{ii}-q^2]$.",
+        r"Cap $L$ is removed by existing same-order regularization ($n\to\infty$ first).",
+        r"Then $\liminf\alpha_n\geq B=[81\kappa/2+9\sqrt{\kappa(2/3+\kappa/2)}]/101$.",
+        r"This is an all-orders lower bound, not a finite cutoff and not a limit.",
+        r"Nine exact scalar/polynomial checks passed (NUKA).  Not a formalization.",
     ]
     y = 0.625
     for line in la:
         _t(ax, 0.08, y, line, fontsize=10, color=TEXT)
         y -= 0.030
 
-    # Check box
     _card(ax, 0.05, 0.175, 0.90, 0.175, fc=GREEN_CARD)
-    _t(ax, 0.08, 0.310, "CHECK (algebra only)", fontsize=11, color=GREEN, fontweight="bold")
+    _t(ax, 0.08, 0.310, "CHECK", fontsize=11, color=GREEN, fontweight="bold")
     chk = [
-        r"•  At $p=5$:  $L_*=(625+600-1)/(2\cdot 24)=1224/48=25.5$,  $2d=26$,  gap $=0.5$.",
-        r"•  Poly $f(x)=x^2-24x-1>0$ for $x=p^2\geq 25$.",
-        r"•  Chain:  mult$+\,\lambda_{\min}$  $\Rightarrow$  $L_*$  $\Rightarrow$  $\lambda_{\mathrm{cycle}}<d$  $\Rightarrow$  bi-tight empty.",
+        r"•  $\kappa=2/\pi$ $\Rightarrow$ $B\approx 0.3258407554>13/40=0.325$.",
+        r"•  Conference constructions still give only $\limsup\alpha_n\leq 1/2$.",
+        r"•  Proof: evidence/NOTE_2026-09-17_PAIRED_POLYNOMIAL_FIELD_LOWER.md",
     ]
     y = 0.270
     for line in chk:
         _t(ax, 0.08, y, line, fontsize=10, color=TEXT)
         y -= 0.028
 
-    _t(ax, 0.06, 0.100, "github.com/luckyseoul/quadratic-minmax-limit  ·  props 15.167–15.171", fontsize=9, color=MUTED)
+    _t(ax, 0.06, 0.100, "github.com/luckyseoul/quadratic-minmax-limit  ·  CORE.md §4–§7", fontsize=9, color=MUTED)
     _t(ax, 0.94, 0.100, "1 / 2", fontsize=10, color=MUTED, ha="right")
     _t(ax, 0.06, 0.060, "Key lemmas only — full writeup separate", fontsize=9, color=MUTED)
 
@@ -137,48 +134,45 @@ def page2():
     fig, ax = _fig()
 
     _t(ax, 0.06, 0.955, "KEY LEMMAS  (continued)", fontsize=14, color=ACCENT, fontweight="bold")
-    _t(ax, 0.06, 0.920, r"Type I Farkas  ·  deep freeness-fail  ·  assembly", fontsize=10, color=MUTED)
+    _t(ax, 0.06, 0.920, r"two-ray  ·  residue (6.20)  ·  finite census", fontsize=10, color=MUTED)
     _bar(ax, 0.902)
 
-    # Lemma B
     _card(ax, 0.05, 0.620, 0.90, 0.255)
-    _t(ax, 0.08, 0.840, "LEMMA B  —  Type I freeness-fail  (Prop 15.170)", fontsize=11, color=GREEN, fontweight="bold")
+    _t(ax, 0.08, 0.840, "LEMMA B  —  two-ray criterion  (CORE §7 / Prop 6.3)", fontsize=11, color=GREEN, fontweight="bold")
     lb = [
-        r"Type I, $k=3p-2$, freeness fail, gap-2 $\Rightarrow$ $s_-=-1$.  Bad case dualizes to",
-        r"    $(\mathrm{Gsum}\,x)_e = 6/p-4$,   with  $0\leq x_f\leq 1$,  $\sum x=k$,  $x_e=0$.",
-        r"Box–sum lower bound:  $(\mathrm{Gsum}\,x)_e \geq -12k/(p\,n)$.",
-        r"Need $6/p-4 < -12k/(pn)$.  Substitute $k=3p-2$, $n=p^2+1$:",
-        r"    $4p^3-6p^2-32p+18>0$ for all primes $p\geq 5$  (check $p=5$: $500-150-160+18=208>0$).",
-        r"Contradiction $\Rightarrow$ freeness-fail Type I with $s_-\leq -1$ empty.",
+        r"Put $H(n)=m_n^{2/3}$.  If a nonnegative $\eta$ has Dini tail $E(N)\to 0$ and",
+        r"    $H(2n)\leq 2H(n)+2n\eta(n)$,   $H(3n)\leq 3H(n)+3n\eta(n)$",
+        r"for all large $n$, then $\alpha_n$ converges.  Proof: $h=H/n$ changes by $\eta$",
+        r"along words in $\{2,3\}$; $\log 2/\log 3$ irrational $\Rightarrow$ ratio-dense semigroup.",
+        r"This is sufficient, not necessary.  Neither amplification ray is proved.",
+        r"Paley-skew shielding (Prop 6.6) reduces doubling to residue (6.20).",
     ]
     y = 0.800
     for line in lb:
         _t(ax, 0.08, y, line, fontsize=10, color=TEXT)
         y -= 0.028
 
-    # Lemma C
     _card(ax, 0.05, 0.340, 0.90, 0.250)
-    _t(ax, 0.08, 0.555, "LEMMA C  —  deep freeness-fail  (Prop 15.171)", fontsize=11, color=GREEN, fontweight="bold")
+    _t(ax, 0.08, 0.555, "LEMMA C  —  residue (6.20) is live on exact minimizers", fontsize=11, color=AMBER, fontweight="bold")
     lc = [
-        r"Deep class: $s_+=2$, freeness fail, $k\geq 3p$.",
-        r"•  Free covers: weak ND (no further descent).",
-        r"•  Auto-freeness for $k\leq 3p-2$; fail-equality at $k=3p-1$ empty.",
-        r"•  Remaining freeness-fail dualizes to two-level equality",
-        r"      $(\mathrm{Gsum}\,x)_e = 2(8-3k/p)$,  same box LB $-12k/(pn)$.",
-        r"Obstructed for every prime $p\geq 5$  $\Rightarrow$ deep freeness-fail ND.",
+        r"Exact $m_5=4$, $m_6=5$, $m_8=10$: residue occupies $55\%$, $91\%$, $51\%$ of pairs.",
+        r"On that set, Paley-skew $R$ violates the diamond by $0.42$, $0.53$, $0.34$ in",
+        r"units of $n^{3/2}$.  High-$\alpha$ random signings have sparse residue and hold.",
+        r"So closing multiplier two for actual minimizers cannot use the global Paley",
+        r"estimate (6.24).  Coupling of $Q_A$ with $x^TRy$ on a large set is required.",
+        r"Finite only.  Does not close or refute the all-orders ray.",
     ]
     y = 0.515
     for line in lc:
         _t(ax, 0.08, y, line, fontsize=10, color=TEXT)
         y -= 0.028
 
-    # Assembly
-    _card(ax, 0.05, 0.145, 0.90, 0.165, fc=GREEN_CARD)
-    _t(ax, 0.08, 0.275, "ASSEMBLY", fontsize=11, color=GREEN, fontweight="bold")
+    _card(ax, 0.05, 0.145, 0.90, 0.165, fc=AMBER_CARD)
+    _t(ax, 0.08, 0.275, "ASSEMBLY", fontsize=11, color=AMBER, fontweight="bold")
     ass = [
-        r"A + freeness / tight empty + B + C  $\Rightarrow$  $m_n\geq\Phi(C)-2$ on $n=p^2+1$.",
-        r"Denseness (Prop 6.2) + $\limsup\alpha_n\leq\frac{1}{2}$  $\Rightarrow$  $L=\frac{1}{2}$.",
-        r"Not claimed here: residual / $16N$ spectral package (optional; not required for $L$).",
+        r"A + conference upper bound $\Rightarrow$ sandwich.  B is a possible close, unused.",
+        r"C shows the remaining doubling gate is not an empty finite artifact.",
+        r"Original limit remains OPEN.  Do not cite $L=1/2$.",
     ]
     y = 0.235
     for line in ass:
@@ -186,7 +180,7 @@ def page2():
         y -= 0.028
 
     _bar(ax, 0.110, color=DIM)
-    _t(ax, 0.06, 0.055, "github.com/luckyseoul/quadratic-minmax-limit  ·  props 15.167–15.171", fontsize=9.5, color=MUTED)
+    _t(ax, 0.06, 0.055, "github.com/luckyseoul/quadratic-minmax-limit  ·  CORE.md / Prop 6.3, 6.6", fontsize=9.5, color=MUTED)
     _t(ax, 0.94, 0.055, "2 / 2", fontsize=10, color=MUTED, ha="right")
     _t(ax, 0.06, 0.022, "Key lemmas only — full writeup separate", fontsize=9, color=MUTED)
 

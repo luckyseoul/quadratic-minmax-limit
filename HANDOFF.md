@@ -1,5 +1,30 @@
 # Handoff: original convergence problem
 
+## 2026-09-19: residue (6.20) finite census; honest X cards
+
+Uncommitted work checked on soulkiller and nuka. Soulkiller main had the
+two 2026-09-18 cross-transfer handoffs, the reverted-but-kept 2026-09-15
+lower-bound note (leave untouched), and `check_real_domain.py`. The
+`mo_*.py` sweep scripts were in `/home/nick/`, not the repo; they are now
+under `evidence/cross_transfer_20260918/`. Nuka main matched those two
+handoffs only. Nuka `quadratic-minmax-limit-leftover-work` still has dirty
+k7/p13 Paley-orbit files on `codex/leftover-moment-attack` — E1/residual
+route, not reopened.
+
+Finite census of Prop 6.6 residue (6.20): on exact minimizers
+`m_5=4`, `m_6=5`, `m_8=10` the residue is 55%/91%/51% of folded pairs and
+the Paley-skew `R` misses the diamond by `0.42/0.53/0.34` in units of
+`n^{3/2}`. High-α random signings have sparse residue and typically hold.
+See `evidence/NOTE_2026-09-19_RESIDUE_620_FINITE_CENSUS.md`. This is not a
+doubling proof. Next implication: an `A`-dependent bound of `x^T R y` on
+(6.20) for optimizers, or emptiness for large n (already false at n=5,6,8).
+
+X-thread cards in `x-cards/` no longer claim `L=1/2`. Regenerated 2026-09-19
+from `scripts/render_x_twopager.py` and `scripts/render_x_lemmas.py`.
+
+OpenAI referee `suggest_direction` on (6.20) timed out once this session
+(Codex 180s). Do not treat that miss as a Claude consult.
+
 ## 2026-09-17: new cap-independent paired-field lower bound
 
 The new proof `evidence/NOTE_2026-09-17_PAIRED_POLYNOMIAL_FIELD_LOWER.md`

@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-Render a 2-page summary of lim α_n = 1/2 for X / MO 413935.
+Render a 2-page status card for X / MO 413935.
 
+The limit is OPEN. Do not claim existence or the value 1/2.
 Style: dark cards (#0f1419 / #1a2332 / accent #1d9bf0).
 Output: x-cards/page1.jpg, page2.jpg, twopager.pdf (+ evidence/share mirrors)
 """
@@ -68,30 +69,28 @@ def _t(ax, x, y, s, **kw):
 
 
 def page1():
-    """Prize-thread page 1: the answer, not a progress log."""
+    """Prize-thread page 1: honest current status, not a false close."""
     fig, ax = _fig()
 
-    # Header
     _t(ax, 0.06, 0.955, "MIN–MAX  ±1  QUADRATIC  FORM", fontsize=13, color=ACCENT, fontweight="bold")
     _t(
         ax,
         0.06,
         0.920,
-        "MathOverflow 413935  ·  existence of the limit",
+        "MathOverflow 413935  ·  existence of the limit is OPEN",
         fontsize=10,
         color=MUTED,
     )
     _bar(ax, 0.902)
 
-    # Main theorem
-    _card(ax, 0.05, 0.700, 0.90, 0.175, fc=GREEN_CARD)
-    _t(ax, 0.08, 0.840, "THEOREM", fontsize=12, color=GREEN, fontweight="bold")
+    _card(ax, 0.05, 0.700, 0.90, 0.175, fc=AMBER_CARD)
+    _t(ax, 0.08, 0.840, "STATUS", fontsize=12, color=AMBER, fontweight="bold")
     _t(
         ax,
         0.50,
         0.775,
-        r"$L \;=\; \lim_{n\to\infty}\alpha_n \;=\; \frac{1}{2}$",
-        fontsize=22,
+        r"$\lim_{n\to\infty}\alpha_n$  is not proved to exist",
+        fontsize=16,
         color=WHITE,
         ha="center",
         va="center",
@@ -100,12 +99,11 @@ def page1():
         ax,
         0.08,
         0.720,
-        r"The limit exists and equals $\frac{1}{2}$.",
+        r"Existence is the question.  The value $1/2$ is unproved.",
         fontsize=11,
         color=TEXT,
     )
 
-    # The question
     _t(ax, 0.06, 0.655, "THE QUESTION", fontsize=11, color=AMBER, fontweight="bold")
     _t(
         ax,
@@ -128,30 +126,29 @@ def page1():
         color=MUTED,
     )
 
-    # Why 1/2
     _card(ax, 0.05, 0.250, 0.90, 0.260)
-    _t(ax, 0.08, 0.475, "ARGUMENT", fontsize=11, color=GREEN, fontweight="bold")
+    _t(ax, 0.08, 0.475, "REVIEWED SANDWICH", fontsize=11, color=GREEN, fontweight="bold")
     why = [
-        r"1.  Sandwich:  $1/\pi \leq \liminf\alpha_n \leq \limsup\alpha_n \leq 1/2$.",
-        r"2.  On the dense Paley family $n=p^2+1$,  $\Phi(C)=\frac{1}{2}n\sqrt{n-1}$.",
-        r"     If $m_n\geq\Phi(C)-O(1)$, denseness forces $L=\frac{1}{2}$.",
-        r"3.  Every gap-2 undercutter of $C$ is empty or non-descending;",
-        r"     hence $m_n\geq\Phi(C)-2$ and $L=\frac{1}{2}$.",
+        r"1.  $B \leq \liminf\alpha_n \leq \limsup\alpha_n \leq 1/2$,",
+        r"     with $B=0.3258407554\ldots>13/40$ (paired polynomial-field, 2026-09-17).",
+        r"2.  Upper bound: Paley conference matrices, $\Phi(C)\leq\frac{1}{2} n\sqrt{n-1}$,",
+        r"     along $n=q+1$ for primes $q=1$ mod $4$ (ratio-dense).",
+        r"3.  Elementary random signing: $m_n\leq\sqrt{\log 2}\,n^{3/2}$.",
+        r"     Consecutive gaps of $\alpha_n$ vanish; that does not force a limit.",
     ]
     y = 0.430
     for line in why:
         _t(ax, 0.08, y, line, fontsize=10.5, color=TEXT)
-        y -= 0.032
+        y -= 0.028
 
-    # Scope
     _card(ax, 0.05, 0.095, 0.90, 0.120, fc=AMBER_CARD)
     _t(ax, 0.08, 0.180, "REMARK", fontsize=11, color=AMBER, fontweight="bold")
     _t(
         ax,
         0.08,
-        0.130,
-        "An independent residual / 16N spectral package remains open;\n"
-        "it is not required for the limit.",
+        0.125,
+        "A Paley gap-2 argument for $L=1/2$ is not a reviewed completion.\n"
+        "E(1) / residual (ii) are optional routes, not acceptance criteria.",
         fontsize=10.5,
         color=TEXT,
         linespacing=1.4,
@@ -166,7 +163,7 @@ def page1():
         color=MUTED,
     )
     _t(ax, 0.94, 0.050, "1 / 2", fontsize=10, color=MUTED, ha="right")
-    _t(ax, 0.06, 0.022, "2026-08-05", fontsize=9, color=MUTED)
+    _t(ax, 0.06, 0.022, "2026-09-19", fontsize=9, color=MUTED)
 
     path = OUT / "page1.jpg"
     fig.savefig(path, dpi=DPI, facecolor=BG, format="jpeg", pil_kwargs={"quality": 92})
@@ -175,28 +172,27 @@ def page1():
 
 
 def page2():
-    """Prize-thread page 2: what closed, no repo dump."""
+    """Prize-thread page 2: live gate, not a Paley close."""
     fig, ax = _fig()
 
-    _t(ax, 0.06, 0.955, "OUTLINE OF THE PROOF", fontsize=14, color=ACCENT, fontweight="bold")
+    _t(ax, 0.06, 0.955, "WHAT IS PROVED  /  WHAT IS OPEN", fontsize=14, color=ACCENT, fontweight="bold")
     _t(
         ax,
         0.06,
         0.920,
-        r"bi-tight emptiness  ·  Type I  ·  deep freeness-fail  ·  denseness",
+        r"two-ray criterion  ·  Paley-skew shield  ·  residue (6.20)",
         fontsize=10,
         color=MUTED,
     )
     _bar(ax, 0.902)
 
-    # Three pillars
     _card(ax, 0.05, 0.680, 0.90, 0.195)
-    _t(ax, 0.08, 0.840, "①  BI-TIGHT COVERS", fontsize=11, color=GREEN, fontweight="bold")
+    _t(ax, 0.08, 0.840, "①  TWO-RAY CRITERION  (sufficient, not necessary)", fontsize=11, color=GREEN, fontweight="bold")
     _t(
         ax,
         0.08,
         0.790,
-        r"No size-$2p$ bi-tight Max$\pm$ cover of the Paley conference exists for primes $p\geq 5$.",
+        r"If $H(n)=m_n^{2/3}$ obeys Dini-summable doubling and tripling,",
         fontsize=10.5,
         color=TEXT,
     )
@@ -204,7 +200,7 @@ def page2():
         ax,
         0.08,
         0.745,
-        r"Multiplicity of $\lambda_{\max}$ and a lower bound on $\lambda_{\min}$ force the cycle",
+        r"$H(2n)\leq 2H(n)+2n\eta(n)$ and $H(3n)\leq 3H(n)+3n\eta(n)$, then $\alpha_n$ converges.",
         fontsize=10.5,
         color=TEXT,
     )
@@ -212,18 +208,18 @@ def page2():
         ax,
         0.08,
         0.705,
-        r"eigenvalue below the bi-tight threshold (majorization; residual / 16N unused).",
+        r"Neither ray is proved.  Identifying the limit is not required.",
         fontsize=10.5,
         color=TEXT,
     )
 
     _card(ax, 0.05, 0.470, 0.90, 0.185)
-    _t(ax, 0.08, 0.620, "②  TYPE-I FREENESS FAILURE", fontsize=11, color=GREEN, fontweight="bold")
+    _t(ax, 0.08, 0.620, "②  MULTIPLIER TWO  —  residue (6.20)", fontsize=11, color=AMBER, fontweight="bold")
     _t(
         ax,
         0.08,
         0.570,
-        r"The remaining Type-I gap-2 candidate ($k=3p-2$) dualizes to a linear system",
+        r"A balanced Paley-skew $R$ shields every pair except Hamming-central,",
         fontsize=10.5,
         color=TEXT,
     )
@@ -231,7 +227,7 @@ def page2():
         ax,
         0.08,
         0.525,
-        r"on edge variables.  Box and sum constraints are contradictory for every $p\geq 5$.",
+        r"high joint-energy pairs.  Uncoupled $|x^TRy|$ budgets cannot close the diamond.",
         fontsize=10.5,
         color=TEXT,
     )
@@ -239,18 +235,18 @@ def page2():
         ax,
         0.08,
         0.485,
-        "Hence that class admits no further descent.",
+        r"Exact minimizers at $n=5,6,8$: residue is majority, Paley-$R$ misses $\Theta(n^{3/2})$.",
         fontsize=10.5,
         color=TEXT,
     )
 
     _card(ax, 0.05, 0.260, 0.90, 0.185)
-    _t(ax, 0.08, 0.410, "③  DEEP FREENESS FAILURE", fontsize=11, color=GREEN, fontweight="bold")
+    _t(ax, 0.08, 0.410, "③  MULTIPLIER THREE  /  1:2 SPLIT", fontsize=11, color=AMBER, fontweight="bold")
     _t(
         ax,
         0.08,
         0.360,
-        r"Deep covers ($k\geq 3p$) are either free, fail-equality empty, or dualize to a",
+        r"Tetrahedral tripling frame and the $1{:}2$ reduction are proved as identities.",
         fontsize=10.5,
         color=TEXT,
     )
@@ -258,7 +254,7 @@ def page2():
         ax,
         0.08,
         0.315,
-        r"two-level system obstructed by the same box lower bound.",
+        r"The remaining tripling diamond and residuals (6.42)--(6.43) are open.",
         fontsize=10.5,
         color=TEXT,
     )
@@ -266,19 +262,18 @@ def page2():
         ax,
         0.08,
         0.275,
-        r"With freeness and tight emptiness:  $m_n \geq \Phi(C)-2$.",
+        r"A cross-order pressure comparison is also open; $B$ is not a limit value.",
         fontsize=10.5,
         color=TEXT,
     )
 
-    # Main claim
-    _card(ax, 0.05, 0.125, 0.90, 0.105, fc=GREEN_CARD)
-    _t(ax, 0.08, 0.195, "CONCLUSION", fontsize=11, color=GREEN, fontweight="bold")
+    _card(ax, 0.05, 0.125, 0.90, 0.105, fc=AMBER_CARD)
+    _t(ax, 0.08, 0.195, "CONCLUSION", fontsize=11, color=AMBER, fontweight="bold")
     _t(
         ax,
         0.08,
         0.145,
-        r"$L=\frac{1}{2}$.   Writeup and verification: github.com/luckyseoul/quadratic-minmax-limit",
+        r"The original limit is OPEN.   github.com/luckyseoul/quadratic-minmax-limit",
         fontsize=11,
         color=WHITE,
     )
@@ -293,7 +288,7 @@ def page2():
         color=MUTED,
     )
     _t(ax, 0.94, 0.050, "2 / 2", fontsize=10, color=MUTED, ha="right")
-    _t(ax, 0.06, 0.020, "2026-08-05", fontsize=9, color=MUTED)
+    _t(ax, 0.06, 0.020, "2026-09-19", fontsize=9, color=MUTED)
 
     path = OUT / "page2.jpg"
     fig.savefig(path, dpi=DPI, facecolor=BG, format="jpeg", pil_kwargs={"quality": 92})

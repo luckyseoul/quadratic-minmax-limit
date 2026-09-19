@@ -1,6 +1,16 @@
 # Current mathematical status
 
-Updated 2026-09-17. The original MO limit is OPEN.
+Updated 2026-09-19. The original MO limit is OPEN.
+
+Finite residue-(6.20) census (not a proof): on the exact minimizers
+`m_5=4`, `m_6=5`, `m_8=10`, the unshielded Paley-skew set occupies
+55%, 91%, and 51% of folded pairs, and the Prop 6.6 `R` misses the
+mixed-state diamond by `0.42`, `0.53`, and `0.34` in units of
+`n^{3/2}`. High-α random signings are the opposite (sparse residue,
+diamond typically holds). See
+[the census note](evidence/NOTE_2026-09-19_RESIDUE_620_FINITE_CENSUS.md).
+This does not close multiplier two. X-thread cards in `x-cards/` now
+state OPEN rather than `L=1/2`.
 
 New unconditional lower bound: the author-reviewed
 [paired polynomial-field theorem](evidence/NOTE_2026-09-17_PAIRED_POLYNOMIAL_FIELD_LOWER.md)
