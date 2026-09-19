@@ -1,0 +1,10 @@
+{
+  "n": 9,
+  "M": 12,
+  "cap": 34,
+  "status": "INFEASIBLE",
+  "seconds": 179.648,
+  "num_conflicts": 2160,
+  "num_branches": 17669,
+  "min_B": 36
+}

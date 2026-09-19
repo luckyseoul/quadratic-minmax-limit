@@ -2,6 +2,11 @@
 
 Updated 2026-09-19. The original MO limit is OPEN.
 
+New finite orientation fact (not a proof): an exact `m_9=12` signing
+has `min_R B(A,R)=36>2√2·12`, so the **zero-error** doubling diamond
+fails at n=9 (CP-SAT `B≤34` infeasible). It holds at n=7 and n=8.
+See [the n=9 note](evidence/NOTE_2026-09-19_TWO_HALF_N9_ORIENTATION.md).
+
 Finite residue-(6.20) census (not a proof): on the exact minimizers
 `m_5=4`, `m_6=5`, `m_8=10`, the unshielded Paley-skew set occupies
 55%, 91%, and 51% of folded pairs, and the Prop 6.6 `R` misses the

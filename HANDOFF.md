@@ -1,5 +1,16 @@
 # Handoff: original convergence problem
 
+## 2026-09-19: n=9 zero-error two-half diamond fails
+
+The directed-half-cut minimax `min_R B(A,R)` on an exact `m_9=12`
+witness is **36**. CP-SAT with 86 workers: `B<=32` and `B<=34` are
+INFEASIBLE (~3 min each); ILS attains 36. Target `2√2·12≈33.941`, so
+the zero-error form of (6.13) fails at n=9. Orders 7 and 8 still pass
+(existing two-half geometry, not rerun). Normalized excess sequence
+`+0.42,+0.26,−0.19,−0.01,+0.08` at n=5..9 does not stay negative.
+Dini `n^{3/2}` still covers the gap of 2. See
+`evidence/NOTE_2026-09-19_TWO_HALF_N9_ORIENTATION.md`.
+
 ## 2026-09-19: residue (6.20) finite census; honest X cards
 
 Uncommitted work checked on soulkiller and nuka. Soulkiller main had the
