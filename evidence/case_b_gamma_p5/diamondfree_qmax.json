@@ -1,0 +1,14 @@
+{
+  "m": 13,
+  "e_minus": 29,
+  "workers": 75,
+  "node_cap": 8000000,
+  "n_shards": 75,
+  "n_nodes": 295531712,
+  "n_leaves": 17432516,
+  "n_qmax": 0,
+  "n_capped_shards": 36,
+  "hits": [],
+  "wall_s": 230.995,
+  "exhausted": false
+}

@@ -1,0 +1,62 @@
+{
+  "3": {
+    "p": 3,
+    "n": 10,
+    "dim_Vplus": 5,
+    "expected_dim": 5,
+    "generator_commute_err_max": 0.0,
+    "prim": 4,
+    "commutant_dim": 2,
+    "irreducible": false,
+    "svd_tail": [
+      1.4142135623730967,
+      2.356420588222915e-15,
+      2.2196548603408153e-16
+    ]
+  },
+  "5": {
+    "p": 5,
+    "n": 26,
+    "dim_Vplus": 13,
+    "expected_dim": 13,
+    "generator_commute_err_max": 0.0,
+    "prim": 7,
+    "commutant_dim": 2,
+    "irreducible": false,
+    "svd_tail": [
+      1.0000000000000002,
+      3.6189545471094615e-15,
+      2.228767092988645e-15
+    ]
+  },
+  "7": {
+    "p": 7,
+    "n": 50,
+    "dim_Vplus": 25,
+    "expected_dim": 25,
+    "generator_commute_err_max": 0.0,
+    "prim": 8,
+    "commutant_dim": 2,
+    "irreducible": false,
+    "svd_tail": [
+      0.7653668647301793,
+      2.4395370140319793e-15,
+      1.8030196091574188e-15
+    ]
+  },
+  "11": {
+    "p": 11,
+    "n": 122,
+    "dim_Vplus": 61,
+    "expected_dim": 61,
+    "generator_commute_err_max": 0.0,
+    "prim": 13,
+    "commutant_dim": 2,
+    "irreducible": false,
+    "svd_tail": [
+      0.5176380902050415,
+      2.483108567694423e-15,
+      1.159148566155913e-15
+    ]
+  }
+}

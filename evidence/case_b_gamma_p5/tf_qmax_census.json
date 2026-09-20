@@ -1,0 +1,49 @@
+{
+  "m": 13,
+  "p": 5,
+  "note": "Q-maximizer census of triangle-free minus graphs, \u0394\u22646, e\u226528",
+  "self_test": {
+    "all_plus_is_qmax": true,
+    "all_plus_q": 78.0,
+    "all_minus_is_qmax": false,
+    "B13_Mplus": 20.0,
+    "B13_Q1_after_switch": 20.0,
+    "B13_e_minus": 29,
+    "B13_checker_qmax": true,
+    "B13_minus_triangle": true,
+    "B13_gamma": 8,
+    "B13_needed": 8
+  },
+  "emin": 28,
+  "emax": 39,
+  "res": 0,
+  "mod": 1,
+  "n_seen": 163477,
+  "by_e": {
+    "28": 100457,
+    "29": 39920,
+    "30": 15057,
+    "31": 5355,
+    "32": 1840,
+    "33": 587,
+    "34": 186,
+    "35": 54,
+    "36": 18,
+    "37": 3
+  },
+  "n_hits": 0,
+  "hits": [],
+  "wall_s": 6.279,
+  "geng_rc": 0,
+  "geng_stderr": "",
+  "cmd": [
+    "/tmp/nauty2_9_1/geng",
+    "-t",
+    "-q",
+    "-D6",
+    "13",
+    "28:39",
+    "0/1"
+  ],
+  "tf_case_b_counterexamples": 0
+}

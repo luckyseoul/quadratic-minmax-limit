@@ -1,0 +1,20 @@
+{
+  "host": "nuka",
+  "device": "AMD Radeon RX 9070 XT gfx1201",
+  "backend": "hipblas-gfx1201",
+  "rocm": "10.0 hipcc --offload-arch=gfx1201",
+  "source": "scripts/k50_plusi_hip_phi.hip.cpp",
+  "B": "evidence/coherent_BI_lift_20260919/B25.txt",
+  "n": 50,
+  "m": 25,
+  "phi_K": 169,
+  "paley_C50": 175,
+  "gap": 6,
+  "gamma_7_lower": 0.016971,
+  "alpha_upper": 0.478004,
+  "wall_s": 8311.102,
+  "states": 2097152,
+  "tiles": "Px=256 Py=1048576",
+  "smokes": {"n10": 13, "n26": 61},
+  "note": "Exact Phi of this plus-I matrix, not a proof that m_50=169. Implies m_50<=169 and Paley C_50 is undercut by p-1=6. Limit OPEN."
+}

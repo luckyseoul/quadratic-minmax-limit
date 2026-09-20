@@ -26,7 +26,7 @@ Q_{K}(x,y)=Q_B(x)-Q_B(y)+x^TBy+x\cdot y.
 | 5 | 13 | exact \(m_{13}=20\) | 20 | 26 | **61** | 65 | yes; this *is* the campaign record |
 | 5 | 9 | exact \(m_9=12\) | 12 | 18 | 41 | 33 | no (worse) |
 | 3 | 9 | Paley Seidel of \(\mathbf F_9\) | 12 | 18 | **33** | 33 | tie |
-| 7 | 25 | Paley Seidel of \(\mathbf F_{25}\) (record 60) | 60 | 50 | \(\ge169\), SDP \(\le180.3\), spectral \(\le25\sqrt{61}\approx195.3\) | 175 | unresolved |
+| 7 | 25 | Paley Seidel of \(\mathbf F_{25}\) (record 60) | 60 | 50 | **169 exact** (nuka RX 9070 XT hipBLAS, \(2^{49}\) projective states) | 175 | yes, gap \(6=p-1\) |
 
 The n=26 matrix in `ns_port_n26_undercut_20260912/stage01.npz` equals
 \(K(B)\) for the order-13 block \(B=A[:13,:13]\), and \(B+I\) is the off-block.
@@ -53,12 +53,13 @@ The CORE Gaussian bound cannot see this undercut: \(K\) is not conference
 
 ## What this does not prove
 
-The lift beats Paley conference at the two exact Paley orders \(n=10,26\).
-It is not known to beat \(C_{50}\). A uniform \(c>0\) would require
-\(\Phi(K(B_p))/n^{3/2}\le\tfrac12-c\) along \(n=p^2+1=2m\), which is not
-proved. Using a smaller \(\Phi(B)\) can *worsen* the lift (n=18: \(m_9=12\)
-lifts to 41>33).
+The lift beats Paley conference at \(n=10,26,50\) by \(p-1\) (2, 4, 6).
+That is \(o(n^{3/2})\) and does not give a uniform \(c>0\). Using a
+smaller \(\Phi(B)\) can *worsen* the lift (n=18: \(m_9=12\) lifts to
+41>33).
 
 Receipts: `evidence/coherent_BI_lift_20260919/best_n25.json`, n=26 npz,
-scripts `lift_BI_phi_search.py`, `lift_BI_exact_pairs.py`.
-Local-search lower bound 169 on \(K_{50}\) is not an upper bound.
+nuka exact \(K_{50}\): `evidence/k50_nuka_gpu_20260919/` (log + receipt;
+source `scripts/k50_plusi_hip_phi.hip.cpp`). Same binary smoked
+\(\Phi=13\) at n=10 and \(\Phi=61\) at n=26 before the n=50 cube.
+OpenAI referee of the spectrum ansatz: PASS after stating \(v\neq0\).

@@ -2,12 +2,20 @@
 
 Updated 2026-09-19. The original MO limit is OPEN.
 
+Plus-I is ruled out as a definite-\(c\) family
+(\(\|K\|_{\mathrm{op}}\le\sqrt2\|B\|_{\mathrm{op}}+1\); see
+[the Paley-gap attack note](evidence/NOTE_2026-09-19_PALEY_GAP_ATTACK.md)).
+The missing object is still a lower bound
+\(m_{p^2+1}\ge\Phi(C)-o(n^{3/2})\) for arbitrary Seidel \(A\), or a
+construction that is not a plus-I lift of a near-min-op block.
+
 The n=26 Paley-beater \(\Phi=61\) is the plus-I coherent lift
 \(K(B)=[[B,B+I],[B+I,-B]]\) of an \(m_{13}=20\) signing. The same lift of
 the 5-cycle is exact \(m_{10}=13\). At n=50 the Paley-\(\mathbf F_{25}\)
-lift has spectrum \(\pm\sqrt{61},\pm\sqrt{41},\pm1\) and local-search
-\(\Phi\ge169\) against Paley 175 (SDP \(\le180\)). See
-[the lift note](evidence/NOTE_2026-09-19_PLUS_I_COHERENT_LIFT.md).
+lift has spectrum \(\pm\sqrt{61},\pm\sqrt{41},\pm1\) and **exact**
+\(\Phi=169\) against Paley 175 (nuka RX 9070 XT hipBLAS, 8311 s).
+See [the lift note](evidence/NOTE_2026-09-19_PLUS_I_COHERENT_LIFT.md)
+and `evidence/k50_nuka_gpu_20260919/`.
 
 CORE §8: along \(n=p^2+1\), Paley saturates \(\Phi=\tfrac12 n\sqrt{n-1}\),
 the sequence is ratio-dense, and

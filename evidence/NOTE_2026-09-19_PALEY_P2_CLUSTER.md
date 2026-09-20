@@ -31,6 +31,7 @@ has a Boolean eigenvector \(Cx=px\) (halfspace construction, archived
 |---|---|------|-----|-----|-----|
 | 3 | 10 | 15 | 13 exact | 0.41110 | 0.06325 |
 | 5 | 26 | 65 | ≤ 61 record | ≤ 0.46012 | ≥ 0.03017 |
+| 7 | 50 | 175 | ≤ 169 exact \(K_{50}\) | ≤ 0.47800 | ≥ 0.01697 |
 
 The n=26 value 61 is a verified upper bound, not a reviewed exact minimum.
 Paired-field \(B\) only gives \(\gamma_p\le\tfrac12-B+o(1)\approx0.174\).

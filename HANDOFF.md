@@ -1,11 +1,52 @@
 # Handoff: original convergence problem
 
+## 2026-09-19: direction 2 — discrete-derivative superlevel (started)
+
+OpenAI path-choice: superlevel structure, not Fourier/cut-norm and not
+flag algebras. Proved D1–D14. D10 uses a maximizer of \(Q\), not \(|Q|\);
+write \(M_+=\max Q\). D14: at \(p=5\), \(m=13\), every Q-maximizer with
+\(M_+=22\) has a minus triangle, so \(\Gamma\ge6\ge4\) and
+\(\Phi(K)\ge63\ge61=\Phi(C_{26})-4\). Proof: nauty geng enumerated all
+163477 unlabeled triangle-free \(\Delta\le6\) graphs with \(e\ge28\);
+zero satisfied the Q-max cut inequalities. OpenAI math_review PASS
+after a BLOCK on the false \(|Q|\)-maximizer form. Remaining Case B:
+\(M_+\le20\) at \(m=13\) (need \(\Gamma\ge8\); the known block attains
+equality) and all \(p\ge7\). Limit OPEN.
+Note: `evidence/NOTE_2026-09-19_SUPERLEVEL_DISCRETE_DERIVATIVE.md`.
+Tests: `tests/test_superlevel_discrete_derivative.py`. Limit OPEN.
+
+## 2026-09-19: exact Phi(K_50)=169 on nuka RX 9070 XT
+
+hipBLAS gfx1201 full projective cube (\(2^{49}\) states, 8311 s):
+\(\Phi(K(B_{25}))=169\) exactly. Paley \(C_{50}=175\). Certified undercut
+by \(6=p-1\), so \(m_{50}\le169\) and \(\gamma_7\ge0.01697\). Same binary
+smoked n=10 \(\Phi=13\) and n=26 \(\Phi=61\). This is still
+\(o(n^{3/2})\); plus-I remains not a definite-\(c\) family. Receipt:
+`evidence/k50_nuka_gpu_20260919/`. Limit OPEN.
+
+## 2026-09-19: Paley-gap attack — plus-I is not definite c
+
+The missing inequality is still unproved. Plus-I cannot supply a
+uniform \(c>0\): \(\|K(B)\|_{\mathrm{op}}\le\sqrt2\|B\|_{\mathrm{op}}+1\)
+forces \(\Phi(K)/n^{3/2}\le\tfrac12+o(1)\) whenever \(B\) is near-min-op,
+and a larger \(\|B\|_{\mathrm{op}}\) only weakens \(K\) as a beater.
+Certified undercuts remain \(p-1\). Known beaters have 2–3 odd local-field
+values and \(A^2\) off-diagonals in \(\{0,\pm4\}\). Matrix Aut (AΓL with
+square multiplications) has commutant dimension 2 on \(V_+\), so Schur
+does not prove the Max+ frame identity. CORE §4 \(u_{ij}\)-correction is
+\(<10^{-3}\) on the n=26 beater. OpenAI `suggest_direction` (after one
+timeout): fourth-order non-Gaussian rounding on \(D=A^2-(n-1)I\);
+Gibbs interpolation; affine-line amplification (the last is spectrally
+ruled out for plus-I). Note:
+`evidence/NOTE_2026-09-19_PALEY_GAP_ATTACK.md`. Tests:
+`test_plus_i_opnorm_bound`, `test_beater_magnitude`,
+`test_paley_Vplus_commutant`. Limit OPEN.
+
 ## 2026-09-19: plus-I lift is the n=10 and n=26 Paley-beater
 
 K(B)=[[B, B+I],[B+I, -B]]. K(5-cycle)=m_10=13. K(m_13-minimizer)=61,
 which *is* the n=26 record (not a Paley matching). Paley-F_25 lift to
-n=50 has ||K||_op=√61 and local Φ≥169 vs Paley 175, SDP≤180: not certified
-as an undercut. Next: decide Φ(K_50) vs 175, or a uniform bound on Φ(K(B)).
+n=50 has ||K||_op=√61 and **exact** Φ=169 vs Paley 175 (nuka GPU).
 
 ## 2026-09-19: why γ_p is not closed
 

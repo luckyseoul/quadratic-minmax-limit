@@ -1,0 +1,12 @@
+{
+  "start_extra4": 8,
+  "start_has_triangle": 1,
+  "min_extra4": 8,
+  "n_visited": 200000,
+  "n_queue_left": 195058,
+  "hit_cap": true,
+  "n_gamma6_cand": 0,
+  "examples": [],
+  "wall_s": 8.217,
+  "exhausted": false
+}

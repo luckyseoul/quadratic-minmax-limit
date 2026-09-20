@@ -1,0 +1,19 @@
+{
+  "m": 13,
+  "p": 5,
+  "phi22_no_triangle": {
+    "kind": "phi22_no_triangle",
+    "status": "UNKNOWN",
+    "wall_s": 240.179,
+    "conflicts": 90184,
+    "branches": 191578
+  },
+  "phi20_no_k4e": {
+    "kind": "phi20_no_k4e",
+    "status": "UNKNOWN",
+    "wall_s": 240.128,
+    "conflicts": 23319,
+    "branches": 48106
+  },
+  "case_b_holds_at_p5": null
+}

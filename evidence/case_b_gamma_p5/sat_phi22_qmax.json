@@ -1,0 +1,10 @@
+{
+  "kind": "phi22_no_triangle",
+  "status": "UNKNOWN",
+  "wall_s": 60.116,
+  "conflicts": 8078,
+  "branches": 92880,
+  "workers": 16,
+  "tlim": 60.0,
+  "seed": 1
+}
