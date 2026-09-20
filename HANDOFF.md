@@ -2,6 +2,16 @@
 
 ## 2026-09-19: direction 2 — discrete-derivative superlevel (started)
 
+2026-09-20 (gpt-6-astra exchange run): the sufficient energy-shell bound
+\(W\le 2\sqrt2\Phi\) is false on recorded exact minimizers (C5, Paley6,
+plus-I C5, \(B_{13}\)). Linearized midpoint \(\mathbb E\mathcal M\)
+tracks \(W\) and is also above target. Shifted-threshold \(\inf_h\)
+collapses to \(\Psi(A)=\Phi([[A,A],[A,-A]])\) at \(n=5,6\) (12 and 18),
+still above \(2\sqrt2\Phi\). Φ-drop from a global minimizer is empty.
+Corrected leftover: \(\Psi\le 2\sqrt2\Phi+n^{3/2}r(n)\) with summable
+\(r\), or a threshold that beats \(\Psi\) by a definite \(n^{3/2}\).
+Note `evidence/NOTE_2026-09-20_SHELL_W_EXCHANGE.md`. Limit OPEN.
+
 OpenAI path-choice: superlevel structure, not Fourier/cut-norm and not
 flag algebras. Proved D1–D14. D10 uses a maximizer of \(Q\), not \(|Q|\);
 write \(M_+=\max Q\). D14: at \(p=5\), \(m=13\), every Q-maximizer with
