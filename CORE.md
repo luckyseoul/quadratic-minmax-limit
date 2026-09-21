@@ -308,19 +308,21 @@ Two exclusive alternatives, still open:
   the limit exists and equals \(\frac12-c\). If \(\gamma_{p_k}\) has two
   distinct cluster points, \(\alpha_n\) diverges.
 
-A matching-size or \(O(n)\) undercut of \(C\) forces \(\gamma_p=O(n^{-1/2})\to0\)
-and would settle the first alternative. That implication is not available
-as a proof: the only certified Paley-order undercut at \(n=26\) has
-switching distance \(122=\Theta(n^{3/2})\) from \(C\) (see
+A **uniform bound on the optimal gap**, \(\Phi(C)-m_n=O(n)\), would
+force \(\gamma_p=O(n^{-1/2})\to0\) and settle the first alternative.
+A construction with only an \(O(n)\) undercut does not prove that bound:
+it gives a lower bound on \(\gamma_p\), not an upper bound. Nor is such
+a bound contradicted by the finite \(n=26\) witness, whose switching
+distance from \(C\) is 122 (see
 `evidence/NOTE_2026-09-19_BEATER_SHELL.md`).
 
 The CORE Gaussian bound is saturated at conference: \(A^2=(n-1)I\)
 forces the pair quantities \(u_{ij}=0\), so the arcsine difference is
 exactly \(2\arcsin(1/\sqrt{n-1})\) and the extra factor
 \(\arcsin(v)/v\to1\). That estimate cannot be improved to \(\tfrac12\)
-at Paley orders by the same method. Lipschitz plus small switching
-distance is likewise unavailable: the certified \(n=26\) undercutter
-has switching Hamming distance \(122=\Theta(n^{3/2})\) from Paley, with
+at Paley orders by the same method. No uniform small-switching-distance
+hypothesis is proved here. The certified \(n=26\) undercutter
+has switching Hamming distance 122 from Paley, with
 \(A^2\) off-diagonal in \(\{0,\pm4\}\) and six nonzeros per row. It is
 the plus-I lift \(K(B)=\bigl(\begin{smallmatrix}B&B+I\\B+I&-B\end{smallmatrix}\bigr)\)
 of an exact \(m_{13}=20\) block (see

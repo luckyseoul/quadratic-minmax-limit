@@ -1,4 +1,4 @@
-"""Plus-I cannot certify a uniform c>0: ||K||_op ≤ √2 ||B||_op + 1."""
+"""Scope: test the plus-I operator certificate, not a Boolean lower bound."""
 from __future__ import annotations
 
 import numpy as np
@@ -22,14 +22,15 @@ def test_plus_i_opnorm_le_sqrt2_B_plus_one():
         assert opK <= np.sqrt(2.0) * opB + 1.0 + 1e-9
 
 
-def test_plus_i_normalized_spectral_ub_is_half():
-    """n ||K||/2 with the √2-bound and ||B||≥√(m-1) is at most n^{3/2}/2 + O(n)."""
+def test_minimal_op_input_gives_certificate_above_half():
+    """Insert the smallest possible op input; this is not an upper on every B."""
     for m in (5, 13, 25):
         n = 2 * m
         opB = np.sqrt(m - 1.0)
         opK_ub = np.sqrt(2.0) * opB + 1.0
         alpha_ub = (n * opK_ub / 2.0) / (n ** 1.5)
         # √2 √(m-1) * m / (2m)^{3/2} → 1/2
+        assert alpha_ub >= 0.5
         assert alpha_ub < 0.72
         if m >= 25:
             assert alpha_ub < 0.57

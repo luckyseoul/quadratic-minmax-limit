@@ -1,13 +1,49 @@
 # Handoff: original convergence problem
 
+## 2026-09-21: correct unsupported asymptotic exclusions
+
+The September 19 operator upper bound does not exclude a sub-half Boolean
+norm for plus-I. Its valid conclusion is only that the coarse certificate
+`(sqrt(2)||B||op+1)/(2sqrt(2m))` is always at least 1/2 for `m>=2`.
+Larger operator norm weakens this certificate, not necessarily the actual
+construction. The three construction gaps 2,4,6 do not prove an all-orders
+formula or bound the optimal gap from above. CORE §8 and the Paley notes
+now distinguish an upper bound on a construction from a lower bound on
+the optimum. No closed family scan is restarted.
+
+The September 20 finite shell fixtures cannot exclude an asymptotic
+comparison with a Dini error: any finite exceptional set can be covered
+by a nonincreasing finite-support remainder. The Monte Carlo threshold
+grid also does not certify an infimum over every real threshold. These
+scope errors are corrected in the shell note. Its numerical receipts
+are preserved, not reclassified as exact asymptotic counterexamples.
+
+These are proof-status corrections, not a new convergence theorem.
+The original goal remains convergence, and the paired-field lower bound
+is unchanged. Historical entries below are superseded where they make
+the corrected exclusions.
+
+NUKA verification: the one changed scalar test
+`test_minimal_op_input_gives_certificate_above_half` passed by direct
+invocation on its three retained scalar inputs; exit 0. The unchanged
+random-signing test and other suites were not rerun. Fresh staging:
+`/tmp/mo-scope-check-20260921.Rd9fTlnz`. Staged/local test SHA-256:
+`5d61c2a3e8e23c922abc2f96c6c92a3aa000b3974d6a68d35d2edfdc9d7c7b86`.
+The general certificate inequality and finite-support Dini argument are
+proved in the corrected notes; this small regression does not prove them.
+This supporting correction is not a major milestone or destructive edit,
+so no new large-drive snapshot was taken. Prior backups remain intact.
+
 ## 2026-09-19: direction 2 — discrete-derivative superlevel (started)
 
-2026-09-20 (gpt-6-astra exchange run): the sufficient energy-shell bound
-\(W\le 2\sqrt2\Phi\) is false on recorded exact minimizers (C5, Paley6,
-plus-I C5, \(B_{13}\)). Linearized midpoint \(\mathbb E\mathcal M\)
-tracks \(W\) and is also above target. Shifted-threshold \(\inf_h\)
-collapses to \(\Psi(A)=\Phi([[A,A],[A,-A]])\) at \(n=5,6\) (12 and 18),
-still above \(2\sqrt2\Phi\). Φ-drop from a global minimizer is empty.
+2026-09-20 (gpt-6-astra exchange run): numerical evidence challenges the
+zero-error energy-shell bound \(W\le 2\sqrt2\Phi\) on recorded exact
+minimizers (C5, Paley6, plus-I C5, \(B_{13}\)); the widths were estimated,
+not certified exactly. Linearized midpoint \(\mathbb E\mathcal M\)
+tracks \(W\) and is also above target. The shifted-threshold samples
+approach \(\Psi(A)=\Phi([[A,A],[A,-A]])\) at \(n=5,6\) (12 and 18),
+still above \(2\sqrt2\Phi\) on the tested grid. This is not a certified
+real-threshold infimum. Φ-drop from a global minimizer is empty.
 Corrected leftover: \(\Psi\le 2\sqrt2\Phi+n^{3/2}r(n)\) with summable
 \(r\), or a threshold that beats \(\Psi\) by a definite \(n^{3/2}\).
 Note `evidence/NOTE_2026-09-20_SHELL_W_EXCHANGE.md`. Limit OPEN.
@@ -31,23 +67,25 @@ hipBLAS gfx1201 full projective cube (\(2^{49}\) states, 8311 s):
 \(\Phi(K(B_{25}))=169\) exactly. Paley \(C_{50}=175\). Certified undercut
 by \(6=p-1\), so \(m_{50}\le169\) and \(\gamma_7\ge0.01697\). Same binary
 smoked n=10 \(\Phi=13\) and n=26 \(\Phi=61\). This is still
-\(o(n^{3/2})\); plus-I remains not a definite-\(c\) family. Receipt:
+a finite construction gap, not an asymptotic classification. Receipt:
 `evidence/k50_nuka_gpu_20260919/`. Limit OPEN.
 
-## 2026-09-19: Paley-gap attack — plus-I is not definite c
+## 2026-09-19: Paley-gap attack — spectral scope corrected September 21
 
-The missing inequality is still unproved. Plus-I cannot supply a
-uniform \(c>0\): \(\|K(B)\|_{\mathrm{op}}\le\sqrt2\|B\|_{\mathrm{op}}+1\)
-forces \(\Phi(K)/n^{3/2}\le\tfrac12+o(1)\) whenever \(B\) is near-min-op,
-and a larger \(\|B\|_{\mathrm{op}}\) only weakens \(K\) as a beater.
-Certified undercuts remain \(p-1\). Known beaters have 2–3 odd local-field
+The missing inequality is still unproved. The estimate
+\(\|K(B)\|_{\mathrm{op}}\le\sqrt2\|B\|_{\mathrm{op}}+1\)
+gives \(\Phi(K)/n^{3/2}\le\tfrac12+o(1)\) for near-min-op B;
+this upper bound does not exclude an actual smaller limit. A larger
+operator norm only weakens the certificate. The three certified undercuts
+fit \(p-1\), without proving that formula. Known beaters have 2–3 odd local-field
 values and \(A^2\) off-diagonals in \(\{0,\pm4\}\). Matrix Aut (AΓL with
 square multiplications) has commutant dimension 2 on \(V_+\), so Schur
 does not prove the Max+ frame identity. CORE §4 \(u_{ij}\)-correction is
 \(<10^{-3}\) on the n=26 beater. OpenAI `suggest_direction` (after one
 timeout): fourth-order non-Gaussian rounding on \(D=A^2-(n-1)I\);
-Gibbs interpolation; affine-line amplification (the last is spectrally
-ruled out for plus-I). Note:
+Gibbs interpolation; affine-line amplification (not excluded by the
+displayed spectral upper bound). These are suggestions, not new dispatch
+authority or a restart of closed families. Note:
 `evidence/NOTE_2026-09-19_PALEY_GAP_ATTACK.md`. Tests:
 `test_plus_i_opnorm_bound`, `test_beater_magnitude`,
 `test_paley_Vplus_commutant`. Limit OPEN.

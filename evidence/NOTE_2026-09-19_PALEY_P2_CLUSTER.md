@@ -5,8 +5,10 @@ Not a proof that \(\alpha_n\) converges. Not E(1). Original limit OPEN.
 
 **Implication.** Existence of \(\lim\alpha_n\) is equivalent to existence
 of \(\lim m_{p^2+1}/(p^2+1)^{3/2}\) along odd primes \(p\). The two-ray
-criterion is not needed for this equivalence. The o-versus-\(\Theta\)
-Paley gap along this single sequence is the whole question.
+criterion is not needed for this equivalence. Convergence of the normalized
+optimal gap along this sequence is equivalent to the original question;
+merely distinguishing a vanishing gap from a nonvanishing limsup does not
+decide convergence in the second case.
 
 ## 1. Ratio-dense saturating sequence
 
@@ -48,13 +50,17 @@ does not exhibit a uniform \(c>0\).
   If the same \(c\) is also a limit of \(\gamma_p\), then
   \(\lim\alpha_n=\tfrac12-c\).
 - An \(o(n^{3/2})\) bound on \(\Phi(C)-m_n\) along this sequence
-  (in particular any \(O(n)\) Lipschitz undercut size) would give
+  (in particular a uniform \(O(n)\) bound on the optimal gap, not merely
+  on the undercut of one construction) would give
   \(\gamma_p\to0\) and \(\lim\alpha_n=\tfrac12\).
 - Oscillation of \(\gamma_p\) with two cluster points would prove
   nonexistence.
 
-Matching flips at n=10 undercut by 2, which is \(O(n^{-1/2})\) after
-normalization. They cannot produce a uniform \(c>0\). Gap-2 / residual
+Any modification of at most \(Cn\) entries changes the norm by at most
+\(2Cn\), hence has normalized effect at most \(2C/\sqrt n\). This
+uniform Lipschitz statement, not a single n=10 value, excludes a definite
+normalized gain for that restricted modification class. It does not bound
+the optimum over all signings. Gap-2 / residual
 cover trees are not used here.
 
 OpenAI referee `math_review` of the CORE §8 derivation: PASS
@@ -63,5 +69,6 @@ OpenAI referee `math_review` of the CORE §8 derivation: PASS
 ## 4. What this does not do
 
 It does not prove \(\gamma_p\to0\), does not produce a definite \(c>0\),
-and does not replace the paired-field lower bound. It names the only
-sequence whose cluster set can differ from that of \(\alpha_n\).
+and does not replace the paired-field lower bound. It names one ratio-dense
+sequence whose cluster set equals that of \(\alpha_n\); CORE §5 applies
+equally to every other ratio-dense sequence.

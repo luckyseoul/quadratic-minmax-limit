@@ -13,7 +13,7 @@ cannot decrease \(\Phi\). The only remaining exchange on the fibre
 \(\{A:\Phi(A)=m_n\}\) is \(\Phi\)-preserving descent of a secondary
 functional \(W\).
 
-## 2. The sufficient bound \(W\le 2\sqrt2\,\Phi\) is false
+## 2. Finite numerical evidence against the zero-error bound
 
 Write \(W(A)\) for the energy-shell maximum in
 `NOTE_2026-09-05_GAUSSIAN_ENERGY_SHELL_UPPER` display (3), at the
@@ -32,19 +32,27 @@ the equatorial cell. Receipt:
 `evidence/shell_W_minimizer_probe_20260920.json`,
 `scripts/shell_W_minimizer_probe.py`.
 
-So a proof that \(W(A_n)\le 2\sqrt2\,\Phi(A_n)+o(n^{3/2})\) on
-\(W\)-minimizing exact minimizers would contradict these matrices
-unless the \(o(\cdot)\) already dominates at \(n\le 13\), which is
-not a usable Dini tail. The sufficient shell bound is the wrong
-target.
+These fixtures challenge the zero-error bound at the listed orders.
+They do not contradict
+\(W(A_n)\le2\sqrt2\Phi(A_n)+o(n^{3/2})\), nor a Dini-summable
+remainder. Explicitly, for any finite set of exceptions with largest
+order \(N_0\), choose C at least their largest positive normalized
+excess and set \(r(n)=C\) for \(n\le N_0\), \(r(n)=0\) otherwise.
+This is nonnegative and nonincreasing; its dyadic tail is zero once
+the starting order exceeds \(N_0\). Such an envelope does not prove
+the untested orders, but proves that finite exceptions alone cannot
+exclude that asymptotic target. The previous Dini exclusion was invalid.
+Moreover, the receipt uses Monte Carlo for the Gaussian quantities;
+its precision must not be presented as an exact all-orders certificate.
 
 ## 3. Display (3) is not the leak at these orders
 
 The linearized midpoint model of the expected-paired-norm package
 has covariance \(C=I+\kappa(A\otimes A)/\mu\) when \(a=b\). Monte
 Carlo of \(\mathbb E\mathcal M_A(Z)\) on the same four matrices
-agrees with \(W\) to a few percent, and both sit \(\Theta(n^{3/2})\)
-above \(2\sqrt2\Phi\):
+agrees with \(W\) to a few percent, and both have positive measured
+normalized excess at these four orders. No asymptotic \(\Theta\) claim
+follows from that finite table:
 
 | matrix | \(\mathbb E\mathcal M\) | \(\mathbb E\mathcal M-2\sqrt2\Phi\) |
 |---|---|---|
@@ -58,31 +66,33 @@ constant at these \(n\): the actual linearized objective is already
 too large. The Boolean pairing \(B=\mathrm{sign}(G)\) at threshold
 \(h=0\) is the same size (C5: \(\mathbb E\Phi\approx 16.49\)).
 
-The \(O(n^{16/11})\) Gaussian-to-Boolean error is the same order as
-\(n^{3/2}\) for \(n\le 13\), so this table is **not** an asymptotic
+The ratio \(n^{16/11}/n^{3/2}=n^{-1/22}\) is not small at these orders
+(and the implicit constant is separate), so this table is **not** an asymptotic
 counterexample to the reduction \(m_{2n}\le\mathbb E\Phi+\cdots\).
-It **is** a counterexample to using the unoptimized midpoint shell
-bound as a \(2\sqrt2\Phi\) comparison.
+It is numerical evidence against a zero-error \(2\sqrt2\Phi\)
+comparison at the tested orders, not an exact or asymptotic certificate.
 
 ## 4. Shifted thresholds collapse to the coherent pairing
 
 For \(B_h=\mathrm{sign}(G+hA)\) (diagonal zeroed), at \(n=5\) and
 \(n=6\) the Monte Carlo \(\mathbb E\Phi([[A,B_h],[B_h^\top,-A]])\)
-decreases in \(|h|\) and saturates at the deterministic coherent
+decreases on the tested \(|h|\) grid toward the deterministic coherent
 pairing \(\Psi(A):=\Phi([[A,A],[A,-A]])\):
 
-- C5: \(\inf_h \mathbb E\Phi = \Psi=12\), still \(12>11.31=2\sqrt2\Phi\).
+- C5: the observed best value is \(\Psi=12\), still \(12>11.31=2\sqrt2\Phi\).
 - Paley6: \(\Psi=18>14.14\).
 
 Always \(\Psi(A)\ge 2\Phi(A)\), by the diagonal sections \(y=\pm x\).
 Plus-I of C5 is 13, one more than \(\Psi\).
 
-Thus on these minimizers the astra \(\inf_h\) is \(\Psi\), and
-\(\Psi\le 2\sqrt2\Phi\) already fails at \(n=5,6\). The excess at
+These samples do not certify an infimum over every real threshold h.
+The coherent inequality \(\Psi\le 2\sqrt2\Phi\) fails at
+the tested orders \(n=5,6\). The excess at
 \(n=5\) is \(0.69\); if \(\Psi=2\Phi+O(n)\) then
-\(\Psi/n^{3/2}=2\alpha+O(n^{-1/2})\) and \(2\alpha\le\sqrt2<2\sqrt2\alpha\)
-whenever \(\alpha\) stays bounded, so the **asymptotic** comparison
-could still hold. That identity is not proved.
+\(\Psi/n^{3/2}=2\alpha+O(n^{-1/2})\) and
+\(2\alpha<2\sqrt2\alpha\) with a uniform margin since the proved
+lower bound keeps \(\alpha\) bounded away from zero. That hypothesized
+identity would imply the comparison eventually, but is not proved here.
 
 ## 5. Corrected leftover (one implication)
 
@@ -96,5 +106,8 @@ exhibit a threshold \(h=h_n\) at which the Boolean pairing of the
 shifted-threshold theorem beats \(\Psi\) by a definite
 \(n^{3/2}\) term.
 
-Do not prove \(W\le 2\sqrt2\Phi\). Do not treat the \(n\le 13\)
-tables as Dini. Limit OPEN.
+Do not infer an asymptotic exclusion from the \(n\le13\) tables or
+claim a Dini bound from them. Neither the general shell comparison nor
+the displayed coherent-pairing comparison is settled here. The user-closed
+Hadamard/family scans remain closed; this correction is not a restart.
+Limit OPEN.

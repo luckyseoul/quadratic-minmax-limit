@@ -1,13 +1,14 @@
 # Current mathematical status
 
-Updated 2026-09-19. The original MO limit is OPEN.
+Updated 2026-09-21. The original MO limit is OPEN.
 
-Plus-I is ruled out as a definite-\(c\) family
-(\(\|K\|_{\mathrm{op}}\le\sqrt2\|B\|_{\mathrm{op}}+1\); see
-[the Paley-gap attack note](evidence/NOTE_2026-09-19_PALEY_GAP_ATTACK.md)).
-The missing object is still a lower bound
-\(m_{p^2+1}\ge\Phi(C)-o(n^{3/2})\) for arbitrary Seidel \(A\), or a
-construction that is not a plus-I lift of a near-min-op block.
+Scope correction: the plus-I operator estimate limits a coarse upper
+certificate; it does not exclude a definite improvement in the actual
+Boolean norm. Also, the September 20 small-order shell observations do
+not exclude an asymptotic or Dini-summable comparison. The relevant notes
+now retain these quantifiers. No family scan is reopened. A uniform lower
+bound \(m_{p^2+1}\ge\Phi(C)-o(n^{3/2})\) would suffice for the particular
+value 1/2; it is not required for convergence to some other value.
 
 The n=26 Paley-beater \(\Phi=61\) is the plus-I coherent lift
 \(K(B)=[[B,B+I],[B+I,-B]]\) of an \(m_{13}=20\) signing. The same lift of
