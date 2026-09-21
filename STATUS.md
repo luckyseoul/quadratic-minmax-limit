@@ -2,6 +2,16 @@
 
 Updated 2026-09-21. The original MO limit is OPEN.
 
+New supporting lemma: the [conditional-score covariance floor](evidence/NOTE_2026-09-21_ACTUAL_GIBBS_COVARIANCE_FLOOR.md)
+proves `Cov(X) >= diag(E sech^2(h_i))^2 / K(J)`, where
+`K(J)=1+||J||op+2 max_i sum_j J_ij^2`. Actual pressure optimality
+then gives explicit unsigned covariance floors; a global half-product
+minimum also gives a matrix floor throughout its actual single-row cavity
+tilt. The denominator retains the operator norm: no fixed cap is assumed
+for every optimizer. NUKA passed twelve symbolic local-algebra checks.
+This is a lower susceptibility estimate, not an upper fourth-moment bound
+or the missing signed cross-order pressure-defect comparison.
+
 Scope correction: the plus-I operator estimate limits a coarse upper
 certificate; it does not exclude a definite improvement in the actual
 Boolean norm. Also, the September 20 small-order shell observations do

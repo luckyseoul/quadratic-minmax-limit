@@ -1,5 +1,30 @@
 # Handoff: original convergence problem
 
+## 2026-09-21: actual-Gibbs covariance floor
+
+The author-reviewed supporting proof is
+`evidence/NOTE_2026-09-21_ACTUAL_GIBBS_COVARIANCE_FLOOR.md`.
+Its conditional-score identity gives the all-directions matrix bound
+`Cov(X) >= D^2/[1+||J||op+2 max_i sum_j J_ij^2]`,
+`D=diag(E sech^2(h_i))`. Combining it with actual edge-optimality
+controls both half-product phases and the unsigned symmetric Gibbs law.
+Whole-row replacement plus a verified density comparison extends the
+matrix floor to each actual single-row cavity tilt. The older scalar
+row-response result is explicitly reused, not republished as new.
+
+NUKA ran the new serial symbolic check once: twelve identities passed,
+exit 0. Full command, input hashes, result, and author-review limits are in
+`evidence/actual_gibbs_covariance_floor_20260921/`. No signing census,
+unchanged test suite, or old family scan was run. Unfinished pre-existing
+untracked work was left untouched. This supporting lemma did not require
+a new major-milestone backup; prior checkpoints remain preserved.
+
+Next unresolved implication: a lower bound on the signed internal/cross
+pressure-defect integral. The new LOWER covariance bounds do not give an
+upper fluctuation bound or control a growing collection of pinned rows.
+Keep all operator-norm dependence and optimizer hypotheses. No original
+convergence result or improved lower-bound constant is claimed.
+
 ## 2026-09-21: correct unsupported asymptotic exclusions
 
 The September 19 operator upper bound does not exclude a sub-half Boolean

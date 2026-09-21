@@ -1,0 +1,21 @@
+{
+  "classification": "exact symbolic local algebra regression",
+  "sympy_version": "1.14.0",
+  "checks": [
+    "score_1_centered",
+    "score_2_centered",
+    "off_diagonal_spin_score",
+    "diagonal_spin_score",
+    "diagonal_score_covariance",
+    "exact_pair_score_identity",
+    "pair_identity_symmetric",
+    "sech_derivative",
+    "lipschitz_integral_-1",
+    "lipschitz_integral_1",
+    "phase_flip_product",
+    "edge_threshold"
+  ],
+  "count": 12,
+  "status": "PASS",
+  "limitations": "No matrix census; no formal verification of PSD, probabilistic, all-orders, or convergence claims."
+}
