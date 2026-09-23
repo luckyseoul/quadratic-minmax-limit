@@ -1,0 +1,24 @@
+{
+  "classification": "EXACT_ALGEBRA_REGRESSION_NOT_ALL_ORDERS_PROOF",
+  "sympy_version": "1.14.0",
+  "checker_sha256": "498af0d728f5edb4f47183d21825622414156cd9bc198b7eac75e36f884de92c",
+  "passed": 15,
+  "checks": [
+    "Rademacher fourth-moment coefficients",
+    "even half-split",
+    "odd half-split remainder",
+    "odd remainder positive decomposition",
+    "admissible quadratic optimizer value",
+    "finite product constant",
+    "symmetric quadratic perturbation",
+    "layer-cake integral",
+    "cubed softness constant",
+    "normalized fixed-update deficit",
+    "phase-averaged update rearrangement",
+    "retained C5 zero field",
+    "retained C5 fractional face value",
+    "retained C5 value normalization",
+    "single fractional coordinate allowed"
+  ],
+  "original_problem_status": "OPEN"
+}

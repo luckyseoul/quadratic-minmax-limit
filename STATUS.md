@@ -1,6 +1,18 @@
 # Current mathematical status
 
-Updated 2026-09-21. The original MO limit is OPEN.
+Updated 2026-09-23. The original MO limit is OPEN.
+
+New supporting lemma: the [finite Boolean interior gap](evidence/NOTE_2026-09-23_BOOLEAN_INTERIOR_GAP.md)
+proves `Phi(A)-|Q_A(z)| >= epsilon^2 k^3/(96 Phi(A))` when at least
+`k>=2` coordinates of z have `|z_i|<=1-epsilon`. It needs no spectral
+cap or optimizer assumption. Consequently, near-extremal fractional spins
+of low-norm signings have only `o(n)` total coordinate softness. The
+existing mean-update inequality gains an explicit nonnegative term
+depending on the cube of the number of changed coordinates. The proof
+acknowledges the archived asymptotic cubic estimate; it does not rebrand
+that pairing route as new. NUKA passed 15 exact algebra regressions.
+No new numerical lower bound, post-update Gaussian closure, order
+comparison, or convergence theorem is claimed.
 
 New supporting lemma: the [conditional-score covariance floor](evidence/NOTE_2026-09-21_ACTUAL_GIBBS_COVARIANCE_FLOOR.md)
 proves `Cov(X) >= diag(E sech^2(h_i))^2 / K(J)`, where

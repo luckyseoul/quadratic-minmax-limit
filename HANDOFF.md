@@ -1,5 +1,40 @@
 # Handoff: original convergence problem
 
+## 2026-09-23: finite interior gap and mean-update correction
+
+`evidence/NOTE_2026-09-23_BOOLEAN_INTERIOR_GAP.md` gives the cap-free finite
+bound `Phi(A)-|Q_A(z)| >= epsilon^2 k^3/(96 Phi(A))` for `k>=2`
+epsilon-interior coordinates. Its short product proof retains both
+one-sided extrema: `max Q_B * max(-Q_B) >= k^3/96`. Principal restriction
+and symmetric perturbation inside the cube then give the interior gap.
+The layer-cake corollary is
+`sum_i(1-|z_i|) <= 1+3[96 Phi(A)(Phi(A)-|Q_A(z)|)]^(1/3)`.
+
+For the existing mean update at `0<=p<=1/2`, let k_sigma count its changed
+coordinates (keep the old sign at zero local field), and let
+`eta=average_sigma E[k_sigma^3 1_(k_sigma>=2)]/n^3`. The finite inequality is
+
+`(1+p^2)alpha >= (1-p)^2 e+p(1-p)f+p^2 eta/(24 alpha)`.
+
+The added term is new in this update bound. The older asymptotic cubic
+one-sided estimate in the September 6 archive is explicitly reused as
+prior context, not claimed as a new pairing route. The new direct proof
+works at every subset size without a spectral cutoff. It does not supply
+the archived missing linear posterior estimate or a one-vertex row that
+controls all near-maximizers. No lower-bound constant was retuned.
+
+NUKA ran the new serial algebra check once: 15 checks passed, exit 0.
+Full command, hashes, staging path, raw result, and author-review scope
+are in `evidence/boolean_interior_gap_20260923/`. There is no live job.
+Only local algebra was computationally checked; the analytic theorem is
+author-reviewed, without independent human or proof-assistant review.
+This supporting result required no new major-milestone backup.
+
+Next unresolved implication: quantitative control of `e`, `f`, and `eta`
+under actual repeated updates, or an independent cross-order comparison.
+Equation (9) can be used for non-Gaussian laws, but gives no closure for
+their fields. Original convergence remains OPEN, and B is unchanged.
+
 ## 2026-09-23: coherent excess is pinned at the doubling constant
 
 For every signing, \(m_{2n}\le\Psi(A)+n\), by the Seidel block

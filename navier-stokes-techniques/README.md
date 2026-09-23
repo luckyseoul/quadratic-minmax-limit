@@ -58,6 +58,15 @@ Gaussianization and higher-chaos controls cannot simply be applied again.
 Any genuine correction-cycle extension must supply a closed post-update
 state with a Dini-summable error.
 
+The [finite interior-gap lemma](../evidence/NOTE_2026-09-23_BOOLEAN_INTERIOR_GAP.md)
+adds a distribution-free correction to the mean-update bound: at update
+weight `p<=1/2`, the right side gains `p^2 eta/(24 alpha)`, where eta is
+the phase-averaged cubed fraction of changed coordinates (zero for fewer
+than two changes). This applies to actual non-Gaussian laws as well.
+It does not supply their local-field estimates, justify Gaussian closure,
+or settle the cross-order comparison. The archived cubic pairing estimate
+is acknowledged in the proof, and no new numerical constant is claimed.
+
 The related relative-gauge composition route has a different residual: the
 uncontrolled higher connected Eulerian layers beyond the mixed four-cycle.
 The exact factorization and the remaining all-orders targets are in
