@@ -1,5 +1,59 @@
 # Handoff: original convergence problem
 
+## 2026-09-23: coherent excess is pinned at the doubling constant
+
+For every signing, \(m_{2n}\le\Psi(A)+n\), by the Seidel block
+\([[A,A+I],[A+I,-A]]\). Combined with \(\liminf\alpha_n>0\), this forces
+\[
+\limsup\Psi(A_n)/m_n\ge 2\sqrt2
+\]
+for exact minimizers, and \(\Psi\le 2m_n+Cn\) fails infinitely often for
+every fixed \(C\). Claude `deep_review` (`claude-opus-5-5`, effort `max`)
+returned PASS-WITH-NOTE, `do_not_branch`. Since \(m_n=\Theta(n^{3/2})\),
+\(\limsup\Psi/m_n\le 2\sqrt2\) is the same statement as
+\(\Psi\le 2\sqrt2\, m_n+o(n^{3/2})\). That upper bound is sufficient for
+the doubling estimate and is not proved. Summability of the error is a
+stronger demand and still does not, alone, close existence.
+
+OpenAI `suggest_direction` (`gpt-6-astra`) on the next step: attack the
+Paley gaps. Prove \(\gamma_q\le\gamma_p+\varepsilon(p)\) for every prime
+\(q\ge Q(p)\), with \(\varepsilon(p)\to0\) independent of \(q\). A liminf
+seed then forces the Paley limsup and liminf to agree, hence existence,
+without a value. It said not to treat the \(\Psi\) rate or the factor-3
+ray alone as sufficient, because a fixed-factor bound with a vanishing
+error can still oscillate. Claude's direction call at Opus 5.5 / max
+timed out at 680s and returned no verdict.
+
+Restriction gives only the local half of that comparison. For odd primes
+\(p<q\), with \(n=p^2+1\) and \(N=q^2+1\),
+\[
+\gamma_q\le\gamma_p+\tfrac12\Bigl(
+\sqrt{1-1/N}-\sqrt{1-1/n}\,(n/N)^{3/2}\Bigr).
+\]
+A fixed rise \(\delta\) forces \(N/n\ge 1+(4/3)\delta+o(1)\). Consecutive
+Paley gaps therefore satisfy \(\limsup(\gamma_{p_{k+1}}-\gamma_{p_k})\le0\).
+The same majorant tends to \(1/2\) as \(q/p\to\infty\), so monotonicity
+of \(m_n\) does not prove a tail bound \(\varepsilon(p)\to0\) independent
+of \(q\). Note: `evidence/NOTE_2026-09-23_PALEY_GAP_MODULUS.md`.
+Test: `tests/test_paley_gap_modulus.py`.
+
+OpenAI `deep_review` (`gpt-6-astra`) of the closure strategy returned
+BLOCK on one sentence: an increment \(\delta_n=\Theta(\sqrt n)\) does not
+by itself produce a non-summable \(\alpha\)-error. The neutral increment
+is \(m_n((1+1/n)^{3/2}-1)\). The strategy is the one-vertex extension
+bound \(\delta_n\le m_n((1+1/n)^{3/2}-1)+r_n\) with
+\(\sum r_n n^{-3/2}<\infty\). That forces \(\alpha_n\), hence \(\gamma_p\),
+to converge. S1 and S3 remain sufficient side routes. Doubling alone does
+not.
+
+The finite form \(\Psi\le 2m_n+2n\) is already false. The matrix
+`evidence/psi_minimizer_excess_20260923/A8_psi40.txt` has \(\Phi=10=m_8\)
+and \(\Psi=40\). A census of the \(2^{21}\) first-row-positive switching
+representatives found 4200 classes at \(\Phi=10\), none with
+\(|Q-2Q_T|>20\). Note:
+`evidence/NOTE_2026-09-23_PSI_MINIMIZER_EXCESS.md`.
+Test: `tests/test_psi_minimizer_excess.py`. Limit OPEN.
+
 ## 2026-09-21: actual-Gibbs covariance floor
 
 The author-reviewed supporting proof is
@@ -69,9 +123,12 @@ tracks \(W\) and is also above target. The shifted-threshold samples
 approach \(\Psi(A)=\Phi([[A,A],[A,-A]])\) at \(n=5,6\) (12 and 18),
 still above \(2\sqrt2\Phi\) on the tested grid. This is not a certified
 real-threshold infimum. Φ-drop from a global minimizer is empty.
-Corrected leftover: \(\Psi\le 2\sqrt2\Phi+n^{3/2}r(n)\) with summable
-\(r\), or a threshold that beats \(\Psi\) by a definite \(n^{3/2}\).
-Note `evidence/NOTE_2026-09-20_SHELL_W_EXCHANGE.md`. Limit OPEN.
+Identity \(\Psi=\max|2Q-4Q_T|\) stands. The slack
+\(|Q-2Q_T|\le\Phi+n\) is exhaustive through order 7 and **false at
+\(n=8\)** (plus \(K_4\), rest minus: \(|L|=28>\Phi+n=24\)). On that
+signing the centered threshold beats \(2\sqrt2\Phi\) in samples, and
+\(h\to\infty\) is worse. Doubling is an \(\inf_h\) at finite \(h\), not
+\(\Psi\). `evidence/NOTE_2026-09-20_PSI_COHERENT_PAIRING.md`. Limit OPEN.
 
 OpenAI path-choice: superlevel structure, not Fourier/cut-norm and not
 flag algebras. Proved D1–D14. D10 uses a maximizer of \(Q\), not \(|Q|\);
