@@ -238,11 +238,11 @@ H(t)=\min\left\{\frac14,
 \frac1\pi\arctan\frac{\sqrt{\beta(t)}}{C(t)}\right\}>\frac15,
 \]
 where \(\beta(t)=a(t)-\kappa\) and
-\(C(t)=2\sqrt\kappa,t/(1+t^2)\).
+\(C(t)=2\sqrt\kappa\,t/(1+t^2)\).
 For any fixed \(0<u\le1/2\), put
 \[
 d(u)=2\sqrt{u(1-u)/3},\quad
-G(t,u)=2u,d(u)H(t)^{3/2},
+G(t,u)=2u\,d(u)H(t)^{3/2},
 \]
 \[
 A(t,u)=(1-u)^2e(t)+u(1-u)f(t),\qquad c(u)=1+u^2.
