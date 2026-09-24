@@ -351,6 +351,63 @@ See
 This removes the finite-depth stopping point of the lower-bound mechanism,
 but still does not prove convergence of \(\alpha_n\).
 
+**Komlós one-vertex extension theorem (2026-09-24).** The September 2026
+Guo--Fang--Lu resolution of the Komlós vector-balancing conjecture gives a
+new cross-order theorem.  For a signing \(A\) of order \(n\), let
+\(F=\Phi(A)\), quotient the two oriented one-flip-stable skeletons by
+antipodes, merge duplicate constraints, and write \(D_A([x])\) for the
+deficit from \(F\) of the best stable orientation of \([x]\).
+For \(r>0\), define
+\[
+\Xi_A(r)=
+\sum_{\substack{[x]\ {m stable}\
+                  D_A([x])+r<n}}
+\frac1{(D_A([x])+r)^2}.
+\]
+The stable-state extension reduction together with the Komlós constant
+\(K=3\sqrt{2\pi}\) proves
+\[
+\boxed{\Xi_A(r)\le\frac1{18\pi}
+\quad\Longrightarrow\quad
+\exists a\in\{\pm1\}^n:\
+\Phi(A\text{ extended by }a)\le F+r.}
+\]
+Indeed, after weighting each stable constraint by
+\((D_A([x])+r)^{-1}\), every old-vertex column has the same Euclidean
+norm \(\sqrt{\Xi_A(r)}\); Komlós balances all constraints
+simultaneously.
+
+For an exact minimizer let
+\[
+r_n=m_n\left[\left(1+\frac1n\right)^{3/2}-1\right].
+\]
+Then
+\[
+\Xi_{A_n}(r_n)\le\frac1{18\pi}
+\quad\Longrightarrow\quad
+\alpha_{n+1}\le\alpha_n.
+\]
+More generally, replacing \(r_n\) by \(r_n+\rho_n\) with
+\(\sum_n\rho_n/(n+1)^{3/2}<\infty\) gives a Dini-summable
+cross-order convergence criterion.
+
+The contrapositive is unconditional: every upward normalized step forces
+\[
+\boxed{\Xi_{A_n}(r_n)>\frac1{18\pi}}
+\]
+for every exact minimizer.  Since each summand is at most \(r_n^{-2}\),
+an upward step also forces more than
+\[
+\frac{r_n^2}{18\pi}
+=
+\left(\frac{\alpha_n^2}{8\pi}+o(1)\right)n
+\]
+distinct active stable antipodal classes within raw deficit
+\(D_A<n-r_n\) of the Boolean edge.  Thus upward motion of \(\alpha_n\)
+now has a proved linear near-edge degeneracy cost.  See
+[evidence/NOTE_2026-09-24_KOMLOS_ONE_VERTEX_EXTENSION.md](evidence/NOTE_2026-09-24_KOMLOS_ONE_VERTEX_EXTENSION.md).
+This is a cross-order implication, not a convergence proof.
+
 ## 5. Transfer along ratio-dense subsequences
 
 Let \(2\le n_1<n_2<\cdots\) be an unbounded sequence of integers with
