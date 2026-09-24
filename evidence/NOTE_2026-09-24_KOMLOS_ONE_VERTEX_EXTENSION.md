@@ -70,12 +70,12 @@ No multiplicity from the two orientations remains.
 
 Fix a desired increment r>0. A class with
 
-    D_A([x])+r >= n
+    D_A([x])+r > n
 
 is automatically harmless, because |a.x|<=n for every sign row a.
 Let
 
-    T_A(r)={ [x] in T_A : D_A([x])+r<n }
+    T_A(r)={ [x] in T_A : D_A([x])+r<=n }
 
 be the active stable classes, and define
 
@@ -91,7 +91,7 @@ Then:
 
     there exists an incident sign row a such that
 
-        Phi(A extended by a) <= F+r.                       (6)
+        Phi(A extended by a) < F+r.                        (6)
 
 Proof. If T_A(r) is empty there is nothing to prove. Otherwise set
 S=Xi_A(r)>0. For each old vertex i form a vector indexed by active stable
@@ -117,9 +117,9 @@ Therefore
       < K sqrt(S) [D_A([x])+r]
       <= D_A([x])+r,                                      (9)
 
-using K sqrt(S)<=1. For inactive classes the same inequality with <= is
-automatic from |a.x|<=n<=D_A([x])+r. Insert these bounds in (3), proving
-(6). QED.
+using K sqrt(S)<=1. For inactive classes the inequality is strict automatically from
+|a.x|<=n<D_A([x])+r. Thus every class has
+|a.x|-D_A([x])<r. Insert this in (3), proving (6). QED.
 
 This is an ACTUAL sign row, not a fractional or Gaussian row.
 
@@ -172,13 +172,13 @@ The contrapositive is unconditional and useful.
 
 If, for an exact minimizer A_n,
 
-    alpha_(n+1) > alpha_n,                                 (17)
+    alpha_(n+1) >= alpha_n,                                (17)
 
 then necessarily
 
     boxed: Xi_(A_n)(r_n) > 1/(18 pi).                      (18)
 
-So an upward normalized step is impossible unless the minimizer carries a
+So even a FLAT normalized step is impossible unless the minimizer carries a
 definite reciprocal-square mass of one-flip-stable near-edge states.
 
 Since each term in Xi is at most 1/r_n^2, (18) also forces
@@ -190,7 +190,7 @@ Using m_n=alpha_n n^(3/2),
     r_n
       = (3/2) alpha_n sqrt(n) + O(alpha_n/sqrt(n)),
 
-and therefore every upward step satisfies asymptotically
+and therefore every nondecreasing step satisfies asymptotically
 
     |T_(A_n)(r_n)|
       > [alpha_n^2/(8 pi)+o(1)] n.                         (20)
@@ -240,8 +240,13 @@ theorem directly into the missing cross-order step and yields:
 
 1. a deterministic one-vertex sign-row theorem;
 2. a Dini-summable convergence criterion;
-3. an unconditional structural theorem saying every upward alpha step
-   forces linear stable near-edge degeneracy.
+3. an unconditional structural theorem saying every nondecreasing alpha
+   step forces linear stable near-edge degeneracy.
+
+In particular, if alpha_n fails to converge, it must have infinitely many
+nondecreasing steps (an eventually strictly decreasing bounded sequence
+would converge), so the linear-degeneracy obstruction must occur at
+infinitely many orders.
 
 This is independent of the same-order repeated-update lower-bound ladder.
 It attacks the other missing side: movement between n and n+1.
