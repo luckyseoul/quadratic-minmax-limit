@@ -35,7 +35,7 @@ step forces more than
 
 `r_n^2/(18 pi)=(alpha_n^2/(8 pi)+o(1))n`
 
-active one-flip-stable antipodal classes within raw deficit `n-r_n` of
+active one-flip-stable antipodal classes within raw deficit at most `n-r_n` of
 the edge.  So even a flat normalized step has a proved LINEAR near-edge degeneracy
 cost.
 
