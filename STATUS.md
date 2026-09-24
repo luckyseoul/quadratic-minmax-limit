@@ -2,6 +2,18 @@
 
 Updated 2026-09-23. The original MO limit is OPEN.
 
+New stable-skeleton geometry:
+[evidence/NOTE_2026-09-23_STABLE_SKELETON_GEOMETRY.md](evidence/NOTE_2026-09-23_STABLE_SKELETON_GEOMETRY.md)
+shows that if two states are stable in the same orientation and differ on
+`t` coordinates, then every differing coordinate has oriented local field
+at most `2(t-1)`; equivalently the disagreement set lies inside the light
+set `{i:w_i<=2(t-1)}`.  Hence a stable state with margin `h` is Hamming
+separated from every other stable state by at least
+`1+ceil(h/2)`, and the number of stable states within radius `r` is
+bounded by the binomial volume supported on its `2(r-1)`-light
+coordinates.  This adds deterministic packing structure to the stable-state
+one-vertex reduction.
+
 New exact one-vertex reduction:
 [evidence/NOTE_2026-09-23_STABLE_STATE_EXTENSION_REDUCTION.md](evidence/NOTE_2026-09-23_STABLE_STATE_EXTENSION_REDUCTION.md)
 proves that for every proposed new row `a`,
