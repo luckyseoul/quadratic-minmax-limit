@@ -2,6 +2,21 @@
 
 Updated 2026-09-24. The original MO limit is OPEN.
 
+New fixed two-step ACTUAL successor gain:
+[evidence/NOTE_2026-09-24_TWO_STEP_SUCCESSOR_GAIN.md](evidence/NOTE_2026-09-24_TWO_STEP_SUCCESSOR_GAIN.md)
+feeds the positive disagreement of the first non-Gaussian successor into
+one further arbitrary-law mean update. For a second probability `v`,
+the exact lower envelope is
+`T(t,u,v)=D(t,u,v)/C(u,v)`, with
+`C=1+v^2+(1-v^2)u^2` and
+`D=(1-v^2)A+v(1-v)G`.
+Taking the supremum proves
+`liminf alpha_n>=B_2>B_opt`.
+The strict inequality is analytic: at a one-step maximizer, the second-step
+slack is an explicit quadratic in `v` with a strictly negative minimum.
+A numerical locator is about `0.3258669876`; the exact supremum is the
+canonical theorem. This is fixed-time progress, not long-time convergence.
+
 New optimized actual-successor envelope:
 [evidence/NOTE_2026-09-24_OPTIMIZED_SUCCESSOR_ENVELOPE.md](evidence/NOTE_2026-09-24_OPTIMIZED_SUCCESSOR_ENVELOPE.md)
 frees both the fixed Gaussian tilt and the ACTUAL partial-flip probability.
@@ -10,7 +25,8 @@ changed-coordinate floor
 `H(t)=min(1/4, atan(sqrt(beta(t))/C(t))/pi)>1/5`.
 Combining the successor-noise theorem with the sharp deficit closure yields
 an exact two-parameter lower envelope `L(t,u)`, and therefore
-`liminf alpha_n>=B_opt=sup L(t,u)>B_noise`.
+`liminf alpha_n>=B_opt=sup L(t,u)>B_noise`; the later two-step theorem
+strengthens this to `B_2>B_opt`.
 The strict improvement is analytic: the exact angle already beats the
 coarse `1/5` floor at the old parameters, and the old update weight is
 not stationary for the successor-corrected envelope. A numerical locator
@@ -293,7 +309,7 @@ status and reviewed bounds below are unchanged.
 `m_n` is nondecreasing, consecutive `alpha_n` differences tend to zero,
 the limit-point set is an interval, and
 
-`13/40 < B_tilt < B_int < B_both < B_noise < B_opt <= liminf alpha_n <= limsup alpha_n <= 1/2`,
+`13/40 < B_tilt < B_int < B_both < B_noise < B_opt < B_2 <= liminf alpha_n <= limsup alpha_n <= 1/2`,
 where the exact constants are defined in CORE, Section 4.
 
 The lower bounds extend the September 17 paired-field result above. The
