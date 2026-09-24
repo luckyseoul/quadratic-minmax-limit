@@ -269,6 +269,37 @@ pre-successor ratio; implicit differentiation of the new envelope shows
 A numerical locator is about \(0.3258669873\), but the exact supremum above
 is the theorem. Convergence remains OPEN.
 
+**Second actual-update gain (2026-09-24).** The positive disagreement left
+by the first ACTUAL successor can be fed into one further mean update. For a
+second fixed probability \(0\le v\le1/2\), write
+\[
+C(u,v)=1+v^2+(1-v^2)u^2,
+\]
+\[
+D(t,u,v)=(1-v^2)A(t,u)+v(1-v)G(t,u).
+\]
+The arbitrary-law mean-update inequality applied to the actual successor
+gives
+\[
+\liminf_n\alpha_n\ge
+T(t,u,v):=\frac{D(t,u,v)}{C(u,v)}.
+\]
+Hence
+\[
+\boxed{\liminf_n\alpha_n\ge
+B_2:=\sup_{99/100\le t\le1,\ 0<u\le1/2,\ 0\le v\le1/2}
+T(t,u,v)>B_{\rm opt}.}
+\]
+The strict inequality is analytic. At a maximizing pair for the one-step
+envelope, let \(x=B_{\rm opt}\), \(X=(1+u^2)x-A\), and
+\(G=G(t,u)\). The one-step closure gives
+\(X=G^2/[4(2x+G)]\). For the second update the slack at \(\alpha=x\)
+is \(X-Gv+(2x+G-X)v^2\), whose value at
+\(v=G/[2(2x+G-X)]\) is strictly negative. See
+[evidence/NOTE_2026-09-24_TWO_STEP_SUCCESSOR_GAIN.md](evidence/NOTE_2026-09-24_TWO_STEP_SUCCESSOR_GAIN.md).
+A numerical locator is about \(0.3258669876\). This is still a fixed
+two-step result, not a long-time trajectory or convergence theorem.
+
 ## 5. Transfer along ratio-dense subsequences
 
 Let \(2\le n_1<n_2<\cdots\) be an unbounded sequence of integers with
@@ -324,7 +355,7 @@ m_r\le\Phi(C)\le\tfrac12 r\|C\|_{\rm op}
 \]
 Apply Section 5 to the increasing orders \(r_k=q_k+1\). It follows that
 \[
-\frac{13}{40}<B_{\rm tilt}<B_{\rm int}<B_{\rm both}<B_{\rm noise}<B_{\rm opt}
+\frac{13}{40}<B_{\rm tilt}<B_{\rm int}<B_{\rm both}<B_{\rm noise}<B_{\rm opt}<B_2
 \le\liminf_n\alpha_n\le\limsup_n\alpha_n\le\frac12.
 \]
 The lower bound includes the optimized September 24 actual-successor envelope in Section 4; the conference
@@ -447,5 +478,5 @@ of an exact \(m_{13}=20\) block (see
 5-cycle is the exact minimizer at \(n=10\).
 No reviewed construction gives a uniform \(c>0\), and no reviewed
 argument forces \(\gamma_p\to0\). The uniform lower bound of Section 4
-only yields \(\gamma_p\le\tfrac12-B_{\rm opt}+o(1)\). This section does not reopen
+only yields \(\gamma_p\le\tfrac12-B_2+o(1)\). This section does not reopen
 Paley gap-2 covers or Hadamard families.
