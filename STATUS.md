@@ -2,6 +2,19 @@
 
 Updated 2026-09-23. The original MO limit is OPEN.
 
+New sharp pointwise edge-stability law:
+[evidence/NOTE_2026-09-23_POINTWISE_DEFICIT_DISAGREEMENT.md](evidence/NOTE_2026-09-23_POINTWISE_DEFICIT_DISAGREEMENT.md)
+proves that for any oriented Boolean state with deficit
+`D=alpha*n-Q` and weighted synchronous best-response disagreement
+`R=sum_bad |(Mx)_i|`,
+`R <= D+sqrt(2 alpha n D)`.
+This is the exact optimization of the full mean-update interpolation family,
+not a new approximation.  At the O(sqrt(n)) near-edge scale it forces
+`R=O(n^(3/4))` pointwise, with no law or operator cap.  Averaging recovers
+the exact optimized closure
+`alpha >= e-f/2+0.5*sqrt(f^2+(f-2e)^2)`, so the earlier
+`alpha>=e+(f-2e)^2/(16 alpha)` bound is now secondary.
+
 New cap-free posterior closure: the
 [adaptive best-response theorem](evidence/NOTE_2026-09-23_ADAPTIVE_BEST_RESPONSE_CLOSURE.md)
 shows that for any two actual phase laws,
