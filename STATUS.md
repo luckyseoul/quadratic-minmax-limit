@@ -63,17 +63,18 @@ diamond typically holds). See
 This does not close multiplier two. X-thread cards in `x-cards/` now
 state OPEN rather than `L=1/2`.
 
-New unconditional lower bound: the author-reviewed
+Improved unconditional lower bound: the September 17
 [paired polynomial-field theorem](evidence/NOTE_2026-09-17_PAIRED_POLYNOMIAL_FIELD_LOWER.md)
-proves `liminf alpha_n >= B = 0.3258407554555742... > 13/40`.
-Its new paired-field estimate survives removal of the source operator cap
-using the existing same-order regularization theorem. It reuses the old
-Gaussian phases and Boolean-norm mean update; it is not constant tuning
-or a rerun of the completed September 15 argument. NUKA passed nine exact
-scalar/polynomial checks, without a signing census. This is an analytic
-lower bound, not convergence, a finite-order cutoff, or a cross-order
-upper comparison. See `evidence/paired_polynomial_field_20260917/` for
-proof hashes, the receipt, and the limits of author review.
+left the update weight fixed at `p=1/10`. Optimizing that already-proved
+one-parameter inequality gives
+`liminf alpha_n >= B_* = 0.3258474004377944...`, improving the previous
+`0.3258407554555742...` by `6.6449822202e-6`. The exact optimizer is
+`p_*=0.097102496812...`; the cap-removal argument is unchanged because
+`p_*` is fixed and the paired-field limiting inputs are cap-independent.
+Proof:
+`evidence/NOTE_2026-09-23_OPTIMIZED_PAIRED_FIELD_LOWER.md`.
+This is a genuine stronger all-orders asymptotic lower bound, not
+convergence or a finite-order cutoff.
 
 Scope correction, 2026-09-13: relative-gauge composition does not universally
 require integer-level occupancy precision. Section 4.1 of
@@ -186,8 +187,8 @@ status and reviewed bounds below are unchanged.
 `m_n` is nondecreasing, consecutive `alpha_n` differences tend to zero,
 the limit-point set is an interval, and
 
-`13/40 < B <= liminf alpha_n <= limsup alpha_n <= 1/2`,
-where `B=0.3258407554555742...` is defined in CORE, Section 4.
+`13/40 < B_* <= liminf alpha_n <= limsup alpha_n <= 1/2`,
+where `B_*=0.3258474004377944...` is defined in CORE, Section 4.
 
 The numerical lower is the September 17 paired-field result above. The
 older qualitative source-gain corollary remains valid; CORE's finite
