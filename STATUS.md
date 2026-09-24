@@ -2,6 +2,17 @@
 
 Updated 2026-09-23. The original MO limit is OPEN.
 
+New exact one-vertex reduction:
+[evidence/NOTE_2026-09-23_STABLE_STATE_EXTENSION_REDUCTION.md](evidence/NOTE_2026-09-23_STABLE_STATE_EXTENSION_REDUCTION.md)
+proves that for every proposed new row `a`,
+`Phi(A+a)=max_{sigma,x sigma-stable}[sigma Q_A(x)+|a.x|]`.
+Any oriented state with a negative local field can be flipped to raise
+or preserve the extension score because the quadratic energy gain is at
+least 2 while `|a.x|` can fall by at most 2.  Thus all unstable Boolean
+states are removed exactly from the one-vertex problem.  The previous exact
+binomial-tail row criterion now sums only over antipodal one-flip-stable
+states, a strict strengthening of the all-state criterion.
+
 New sharp pointwise edge-stability law:
 [evidence/NOTE_2026-09-23_POINTWISE_DEFICIT_DISAGREEMENT.md](evidence/NOTE_2026-09-23_POINTWISE_DEFICIT_DISAGREEMENT.md)
 proves that for any oriented Boolean state with deficit
