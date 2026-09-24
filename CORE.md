@@ -229,6 +229,46 @@ constant-p updates one now has `eta_j>=p^(6j)/125-o_L(1)` and
 energy conclusion or cross-order comparison is proved. The original
 convergence problem remains OPEN.
 
+**Optimized successor envelope (2026-09-24).** The source tilt and the
+ACTUAL partial-flip probability need not be tied to their earlier historical
+choices. For each fixed \(99/100\le t\le1\), the both-phase argument gives
+the explicit changed-coordinate floor
+\[
+H(t)=\min\left\{\frac14,
+\frac1\pi\arctan\frac{\sqrt{\beta(t)}}{C(t)}\right\}>\frac15,
+\]
+where \(\beta(t)=a(t)-\kappa\) and
+\(C(t)=2\sqrt\kappa,t/(1+t^2)\).
+For any fixed \(0<u\le1/2\), put
+\[
+d(u)=2\sqrt{u(1-u)/3},\quad
+G(t,u)=2u,d(u)H(t)^{3/2},
+\]
+\[
+A(t,u)=(1-u)^2e(t)+u(1-u)f(t),\qquad c(u)=1+u^2.
+\]
+The actual-successor field bound and sharp deficit closure give
+\[
+\liminf_n\alpha_n\ge L(t,u):=
+\frac{A-cG/2+
+\sqrt{(A+cG/2)^2+cG^2/2}}{2c}.
+\]
+Hence
+\[
+\boxed{\liminf_n\alpha_n\ge
+B_{\rm opt}:=
+\sup_{99/100\le t\le1,\ 0<u\le1/2}L(t,u)
+>B_{\rm noise}.}
+\]
+The strict inequality is analytic. At the old tilt \(t_0=993/1000\),
+using the exact angle floor already strictly improves the coarse
+\(H\ge1/5\) value. Moreover the old update weight maximized only the
+pre-successor ratio; implicit differentiation of the new envelope shows
+\(\partial_uL(t_0,u)>0\) at that old weight. See
+[evidence/NOTE_2026-09-24_OPTIMIZED_SUCCESSOR_ENVELOPE.md](evidence/NOTE_2026-09-24_OPTIMIZED_SUCCESSOR_ENVELOPE.md).
+A numerical locator is about \(0.3258669873\), but the exact supremum above
+is the theorem. Convergence remains OPEN.
+
 ## 5. Transfer along ratio-dense subsequences
 
 Let \(2\le n_1<n_2<\cdots\) be an unbounded sequence of integers with
@@ -284,10 +324,10 @@ m_r\le\Phi(C)\le\tfrac12 r\|C\|_{\rm op}
 \]
 Apply Section 5 to the increasing orders \(r_k=q_k+1\). It follows that
 \[
-\frac{13}{40}<B_{\rm tilt}<B_{\rm int}\le\liminf_n\alpha_n
-\le\limsup_n\alpha_n\le\frac12.
+\frac{13}{40}<B_{\rm tilt}<B_{\rm int}<B_{\rm both}<B_{\rm noise}<B_{\rm opt}
+\le\liminf_n\alpha_n\le\limsup_n\alpha_n\le\frac12.
 \]
-The lower bound includes the September 24 interior correction to the paired-field result in Section 4; the conference
+The lower bound includes the optimized September 24 actual-successor envelope in Section 4; the conference
 construction and ratio-dense transfer supply only the upper bound here.
 This uses conference matrices only as admissible constructions for an
 upper bound. It does not assert that they minimize \(\Phi\), or that the
@@ -407,5 +447,5 @@ of an exact \(m_{13}=20\) block (see
 5-cycle is the exact minimizer at \(n=10\).
 No reviewed construction gives a uniform \(c>0\), and no reviewed
 argument forces \(\gamma_p\to0\). The uniform lower bound of Section 4
-only yields \(\gamma_p\le\tfrac12-B_{\rm int}+o(1)\). This section does not reopen
+only yields \(\gamma_p\le\tfrac12-B_{\rm opt}+o(1)\). This section does not reopen
 Paley gap-2 covers or Hadamard families.
