@@ -1,5 +1,37 @@
 # Handoff: original convergence problem
 
+## 2026-09-24: second actual update gives another strict gain
+
+The first ACTUAL successor already has a positive disagreement floor.
+Applying the arbitrary-law mean-update inequality once more to that
+non-Gaussian successor gives, for a second fixed update probability v,
+
+`alpha >= T(t,u,v)=D/C`,
+
+with
+`C=1+v^2+(1-v^2)u^2` and
+`D=(1-v^2)A+v(1-v)G`.
+
+Define
+`B_2=sup_{99/100<=t<=1,0<u<=1/2,0<=v<=1/2} T(t,u,v)`.
+Then
+
+`B_2 > B_opt > B_noise > B_both > B_int > B_tilt`.
+
+The strict step needs no numerical optimizer. At a pair attaining B_opt,
+write `x=B_opt`, `X=(1+u^2)x-A`. The first-step closure gives
+`X=G^2/[4(2x+G)]`. The second-step slack at alpha=x is
+`X-Gv+(2x+G-X)v^2`; its minimizing admissible v makes the slack strictly
+negative. Thus one further actual update excludes alpha=B_opt.
+
+Numerical locator only:
+`t~=0.9934102, u~=0.0974342, v~=0.0046322, B_2~=0.3258669876`.
+Proof:
+`evidence/NOTE_2026-09-24_TWO_STEP_SUCCESSOR_GAIN.md`.
+
+This is fixed-time repeated-update progress. A nondecaying long-time gain
+or cross-order convergence mechanism is still OPEN.
+
 ## 2026-09-24: optimized successor envelope is strictly stronger
 
 Verification pass on the merged September 24 branch checked the
