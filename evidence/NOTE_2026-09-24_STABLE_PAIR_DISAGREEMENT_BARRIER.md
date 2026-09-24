@@ -80,6 +80,14 @@ ell_T>=floor(t/2) also gives
 
     q_T >= floor(t/2)-(D_x+D_y)/2.                          (7)
 
+For completeness, the one-sided bound is elementary. If t is even, take a
+global maximizer z of Q_(A[T]). Every one-spin flip is non-improving, so
+z_i(A[T]z)_i>=0. Each local field is an odd integer, hence at least one;
+summing gives 2P_T>=t. Apply the same argument to -A[T] for N_T. If t is
+odd, restrict first to any t-1 vertices, use the even case there, and extend
+the maximizing assignment by the better of the two signs on the last
+vertex. Thus P_T,N_T>=floor(t/2).
+
 ## 2. Stable-pair local-field mass
 
 Now assume x and y are both sigma-stable. Define
