@@ -1,5 +1,31 @@
 # Handoff: original convergence problem
 
+## 2026-09-23: tilted paired phases improve the bound again
+
+The September 17 Gaussian phases were not optimal at their fixed tilt
+`t=1`.  Keeping `t` symbolic in
+`R_s(t)=(I+s t M)^2/(1+t^2q)` preserves the paired-variance proof and
+the same-order cap removal.  After optimizing the existing Boolean update,
+the exact bound is
+
+`B(t)=e(t)-f(t)/2+0.5*sqrt(f(t)^2+(f(t)-2e(t))^2)`,
+
+with `e(t)=kappa*t/(1+t^2)` and
+`f(t)=sqrt(kappa*(1-kappa*asin(t^2/(1+t^2))+kappa*t^2/(1+t^2)))`.
+The envelope derivative satisfies `B'(1)<0`, so this is a strict
+analytic improvement, not parameter noise.  At the explicit rational
+choice `t=993/1000`,
+
+`liminf alpha_n >= 0.3258530333538241...`
+
+with update weight `p=0.0971801303973218...`.  This gains about
+`5.63291603e-6` over the already optimized `t=1` theorem.
+Proof:
+`evidence/NOTE_2026-09-23_TILTED_PAIRED_FIELD_LOWER.md`.
+Scalar regression:
+`tests/test_tilted_paired_field_lower.py`.
+Original convergence remains OPEN.
+
 ## 2026-09-23: optimized paired-field lower bound
 
 The September 17 paired-field theorem proved the cap-independent limiting
@@ -53,7 +79,7 @@ This supporting result required no new major-milestone backup.
 Next unresolved implication: quantitative control of `e`, `f`, and `eta`
 under actual repeated updates, or an independent cross-order comparison.
 Equation (9) can be used for non-Gaussian laws, but gives no closure for
-their fields. Original convergence remains OPEN, and B is unchanged.
+their fields. Original convergence remains OPEN; the canonical lower bound is now the later tilted-phase value recorded above.
 
 ## 2026-09-23: coherent excess is pinned at the doubling constant
 
