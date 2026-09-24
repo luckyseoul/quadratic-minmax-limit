@@ -1,5 +1,25 @@
 # Handoff: original convergence problem
 
+## 2026-09-23: optimized paired-field lower bound
+
+The September 17 paired-field theorem proved the cap-independent limiting
+mean-update inputs but froze the update weight at `p=1/10`. Optimizing the
+same proved inequality exactly gives
+
+`liminf alpha_n >= B_* = 0.3258474004377944...`
+
+at
+`p_*=0.097102496812...`, an unconditional increase of
+`6.6449822202e-6` over the previous bound. The closed form is
+
+`B_*=e0-f0/2+0.5*sqrt(f0^2+(f0-2e0)^2)`,
+
+with `e0=kappa/2`, `f0=sqrt(kappa*(2/3+kappa/2))`,
+`kappa=2/pi`. Same-order regularization removes the fixed cap exactly as
+before. No new premise, family assumption, or finite census is used.
+Proof: `evidence/NOTE_2026-09-23_OPTIMIZED_PAIRED_FIELD_LOWER.md`.
+Original convergence remains OPEN.
+
 ## 2026-09-23: finite interior gap and mean-update correction
 
 `evidence/NOTE_2026-09-23_BOOLEAN_INTERIOR_GAP.md` gives the cap-free finite
