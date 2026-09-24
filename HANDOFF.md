@@ -1,5 +1,57 @@
 # Handoff: original convergence problem
 
+## 2026-09-24: new Komlós theorem hits the cross-order bottleneck
+
+A literature search for September 2026 mathematics found the Guo--Fang--Lu
+resolution of the Komlós vector-balancing conjecture
+(arXiv:2609.11189, submitted 2026-09-10). Their dimension-free theorem gives
+constant `K=3 sqrt(2 pi)`.
+
+Apply it to the EXACT stable-state one-vertex constraints.  After identifying
+antipodes and merging the two orientations, let `D_A([x])` be the stable
+deficit and, for desired increment r, define
+
+`Xi_A(r)=sum_{D_A([x])+r<n} 1/(D_A([x])+r)^2`.
+
+Weight the constraint [x] by `1/(D_A([x])+r)`. Every old-vertex column
+then has Euclidean norm exactly `sqrt(Xi_A(r))`. Komlós therefore gives
+one ACTUAL sign row balancing every active stable state simultaneously.
+The exact theorem is
+
+`Xi_A(r)<=1/(18 pi)  =>  Phi(extension)<=Phi(A)+r`.
+
+For an exact minimizer and the neutral increment
+`r_n=m_n[(1+1/n)^(3/2)-1]`, this implies
+
+`alpha_(n+1)<=alpha_n`.
+
+With an added `rho_n` satisfying
+`sum rho_n/(n+1)^(3/2)<infinity`, the same theorem gives convergence.
+
+The unconditional contrapositive is already informative: if
+`alpha_(n+1)>alpha_n`, then EVERY exact minimizer has
+`Xi_A(r_n)>1/(18 pi)`. Since no term exceeds `1/r_n^2`, every upward
+step forces more than
+
+`r_n^2/(18 pi)=(alpha_n^2/(8 pi)+o(1))n`
+
+active one-flip-stable antipodal classes within raw deficit `n-r_n` of
+the edge.  So upward motion now has a proved LINEAR near-edge degeneracy
+cost.
+
+This is qualitatively stronger than the old random-row union certificate.
+At deficit zero and r=Theta(sqrt(n)), the random union criterion charges
+constant probability per state and effectively tolerates only O(1)
+constraints. The Komlós certificate charges Theta(1/n) per state and
+tolerates a linear near-edge family before it can fail.
+
+Proof:
+`evidence/NOTE_2026-09-24_KOMLOS_ONE_VERTEX_EXTENSION.md`.
+Main theorem commit: `efcc0257ba77b610709feadac3c04e6a3715b147`.
+
+This is a genuine cross-order advance, but the reciprocal-square bound is
+not yet proved for all minimizers, so convergence remains OPEN.
+
 ## 2026-09-24: zero-field ties remove the finite-depth wall
 
 The previous actual-successor proof kept the old spin at zero local field,
