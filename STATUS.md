@@ -63,18 +63,22 @@ diamond typically holds). See
 This does not close multiplier two. X-thread cards in `x-cards/` now
 state OPEN rather than `L=1/2`.
 
-Improved unconditional lower bound: the September 17
-[paired polynomial-field theorem](evidence/NOTE_2026-09-17_PAIRED_POLYNOMIAL_FIELD_LOWER.md)
-left the update weight fixed at `p=1/10`. Optimizing that already-proved
-one-parameter inequality gives
-`liminf alpha_n >= B_* = 0.3258474004377944...`, improving the previous
-`0.3258407554555742...` by `6.6449822202e-6`. The exact optimizer is
-`p_*=0.097102496812...`; the cap-removal argument is unchanged because
-`p_*` is fixed and the paired-field limiting inputs are cap-independent.
-Proof:
-`evidence/NOTE_2026-09-23_OPTIMIZED_PAIRED_FIELD_LOWER.md`.
-This is a genuine stronger all-orders asymptotic lower bound, not
-convergence or a finite-order cutoff.
+Improved unconditional lower bound: retaining a fixed tilt
+\(0<t\le1\) in the September 17 paired Gaussian phases gives a stronger
+cap-independent field estimate.  The exact one-parameter theorem is in
+[evidence/NOTE_2026-09-23_TILTED_PAIRED_FIELD_LOWER.md](evidence/NOTE_2026-09-23_TILTED_PAIRED_FIELD_LOWER.md).
+The explicit rational choice `t=993/1000`, followed by exact optimization
+of the Boolean update weight, proves
+`liminf alpha_n >= 0.3258530333538241...`.
+This improves the already optimized `t=1` value
+`0.3258530333538241...` by about `5.63291603e-6`, and the original
+September 17 `p=1/10` constant by about `1.227789825e-5`.
+The strict improvement is analytic: the envelope derivative at `t=1`
+is negative.  No new family assumption, finite census, or cross-order
+premise is used.  A regression for the scalar constant is in
+`tests/test_tilted_paired_field_lower.py`.  This is a stronger
+unconditional asymptotic lower bound, not convergence or a finite-order
+cutoff.
 
 Scope correction, 2026-09-13: relative-gauge composition does not universally
 require integer-level occupancy precision. Section 4.1 of
@@ -187,8 +191,8 @@ status and reviewed bounds below are unchanged.
 `m_n` is nondecreasing, consecutive `alpha_n` differences tend to zero,
 the limit-point set is an interval, and
 
-`13/40 < B_* <= liminf alpha_n <= limsup alpha_n <= 1/2`,
-where `B_*=0.3258474004377944...` is defined in CORE, Section 4.
+`13/40 < B_tilt <= liminf alpha_n <= limsup alpha_n <= 1/2`,
+where `B_tilt=0.3258530333538241...` is defined in CORE, Section 4.
 
 The numerical lower is the September 17 paired-field result above. The
 older qualitative source-gain corollary remains valid; CORE's finite
