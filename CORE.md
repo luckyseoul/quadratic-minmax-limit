@@ -360,8 +360,8 @@ deficit from \(F\) of the best stable orientation of \([x]\).
 For \(r>0\), define
 \[
 \Xi_A(r)=
-\sum_{\substack{[x]\ {m stable}\
-                  D_A([x])+r<n}}
+\sum_{\substack{[x]\\ \mathrm{stable}
+                  D_A([x])+r\le n}}
 \frac1{(D_A([x])+r)^2}.
 \]
 The stable-state extension reduction together with the Komlós constant
@@ -370,7 +370,7 @@ The stable-state extension reduction together with the Komlós constant
 \boxed{\Xi_A(r)\le\frac1{18\pi}
 \quad\Longrightarrow\quad
 \exists a\in\{\pm1\}^n:\
-\Phi(A\text{ extended by }a)\le F+r.}
+\Phi(A\text{ extended by }a)<F+r.}
 \]
 Indeed, after weighting each stable constraint by
 \((D_A([x])+r)^{-1}\), every old-vertex column has the same Euclidean
@@ -385,25 +385,25 @@ Then
 \[
 \Xi_{A_n}(r_n)\le\frac1{18\pi}
 \quad\Longrightarrow\quad
-\alpha_{n+1}\le\alpha_n.
+\alpha_{n+1}<\alpha_n.
 \]
 More generally, replacing \(r_n\) by \(r_n+\rho_n\) with
 \(\sum_n\rho_n/(n+1)^{3/2}<\infty\) gives a Dini-summable
 cross-order convergence criterion.
 
-The contrapositive is unconditional: every upward normalized step forces
+The contrapositive is unconditional: every nondecreasing normalized step forces
 \[
 \boxed{\Xi_{A_n}(r_n)>\frac1{18\pi}}
 \]
 for every exact minimizer.  Since each summand is at most \(r_n^{-2}\),
-an upward step also forces more than
+a nondecreasing step also forces more than
 \[
 \frac{r_n^2}{18\pi}
 =
 \left(\frac{\alpha_n^2}{8\pi}+o(1)\right)n
 \]
 distinct active stable antipodal classes within raw deficit
-\(D_A<n-r_n\) of the Boolean edge.  Thus upward motion of \(\alpha_n\)
+\(D_A<n-r_n\) of the Boolean edge.  Thus nondecreasing motion of \(\alpha_n\)
 now has a proved linear near-edge degeneracy cost.  See
 [evidence/NOTE_2026-09-24_KOMLOS_ONE_VERTEX_EXTENSION.md](evidence/NOTE_2026-09-24_KOMLOS_ONE_VERTEX_EXTENSION.md).
 This is a cross-order implication, not a convergence proof.
