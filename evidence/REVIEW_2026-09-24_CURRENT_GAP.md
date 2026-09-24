@@ -118,7 +118,7 @@ This resolves a source-specific part of eta control. The repeated-update
 and cross-order conclusions in Section 3 remain unproved. The production
 completion registry stays empty, so the original problem stays OPEN.
 
-No test or numerical evaluation was run: AGENTS.md requires offloaded
+At that first proof checkpoint no test or numerical evaluation was run: AGENTS.md requires offloaded
 mathematical checks and the NUKA hostname was not resolvable here. The new
 result is an author-reviewed analytic proof with exact scalar comparisons;
 no independent verification is claimed. Existing computational receipts
@@ -129,3 +129,27 @@ review: README's pre-optimization lower bound and STATUS's repeated new
 number in the sentence describing the old t=1 bound. CORE's stray comma
 in the tilted covariance formula is also corrected. No historical proof,
 counterexample, or retired route is removed or restarted.
+
+## 5. Follow-up: an actual-successor implication is now available
+
+The [both-phase residual identity](NOTE_2026-09-24_BOTH_PHASE_DISAGREEMENT.md)
+raises the initial count floor to 1/5 and the eta floor to 1/125.
+The subsequent [independent flip-noise argument](NOTE_2026-09-24_SUCCESSOR_FLIP_NOISE.md)
+proves finite cap-free one-step bounds for the actual successor:
+`mu'>=p^2 mu` and
+`g'>=4p sqrt(p(1-p)/3) mu^(3/2)-O_p(n^(-1/2))`, with `g=f-2e`.
+It needs no post-update Gaussian approximation. With the source energy
+bound and the existing sharp deficit closure it gives the further strict
+constant `B_noise>B_both>B_int`, defined exactly in CORE Section 4.
+
+This materially narrows the initial missing implication: there ARE now
+quantitative actual-law recursions and positive floors at every fixed
+update count. They decay exponentially in that count, however, and the
+energy lower recursion does not establish approach to the Boolean norm.
+Long-time trajectory control and independent cross-order conclusions
+remain unproved. No completion entry is added; convergence stays OPEN.
+
+Both new results have analytic author review only and unexecuted remote
+scalar checkers. The old user-reported check is separately documented in
+`paired_disagreement_floor_20260924/USER_REPORTED_CHECK.md`; it is not a
+receipt for either new theorem.

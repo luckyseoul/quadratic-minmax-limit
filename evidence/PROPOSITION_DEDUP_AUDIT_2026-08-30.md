@@ -8,6 +8,23 @@ The old ledgers are fully preserved on the two branches in `ARTIFACTS.md`.
 No local theorem is made false by parking its route; no open implication
 is made necessary for the original problem by its old status field.
 
+**Both-phase initial floor and actual successor noise (2026-09-24).**
+`NOTE_2026-09-24_BOTH_PHASE_DISAGREEMENT.md` adds a residual-variance
+square identity and pairs the two disagreement angles, improving the
+initial changed fraction from 1/10 to 1/5 and eta from 1/1000 to 1/125.
+`NOTE_2026-09-24_SUCCESSOR_FLIP_NOISE.md` then uses independent partial
+flip coins, a shifted fourth-moment inequality, and the existing sharp
+deficit closure to prove an actual non-Gaussian successor field floor.
+For fixed p, `mu'>=p^2 mu` and
+`f'-2e'>=4p sqrt(p(1-p)/3) mu^(3/2)-O_p(n^(-1/2))` are cap-free.
+The resulting unconditional constant satisfies
+`B_noise>B_both>B_int>B_tilt`, with exact formulas in CORE Section 4.
+These are not the archived cubic posterior-overlap comparison, a renewed
+family search, or Gaussianization of an updated sign law. Fixed-time
+floors decay with the update horizon; no long-time energy convergence or
+cross-order result is asserted. Analytic author review only; the focused
+remote checkers remain unexecuted. Original convergence remains OPEN.
+
 **Cap-free source gain and universal strict lower (2026-09-06).**
 `original_mo_cap_free_source_global_gap_milestone.json` groups
 `NOTE_2026-09-06_ALL_LAW_SECOND_MOMENT_TAIL_GAIN.md` and

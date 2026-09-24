@@ -189,6 +189,46 @@ author-reviewed; no independent or formal verification is claimed. Its
 eta estimate applies to the initial Gaussian phases, not arbitrary
 successor laws. Convergence and a finite-order cutoff remain unproved.
 
+**Both-phase improvement (2026-09-24).** The new
+[residual-variance square identity](evidence/NOTE_2026-09-24_BOTH_PHASE_DISAGREEMENT.md)
+retains both initial disagreement angles. It improves the mean changed
+fraction to `mu_0>=1/5-o_L(1)` and hence `eta_0>=1/125-o_L(1)`.
+The same interior correction gives
+\[
+B_{\rm both}=\frac{B+\sqrt{B^2+p^2/[750(1+p^2)]}}2>B_{\rm int}.
+\]
+
+**Actual successor gain (2026-09-24).** Independently flipping each bad
+coordinate with the same probability \(0<p\le1/2\) gives, for arbitrary
+Boolean source laws,
+\[
+\mu'\ge p^2\mu,\qquad
+g'\ge2p d_p\mu^{3/2}-\frac{2p(d_p+4/3)}{\sqrt n},
+\quad d_p=2\sqrt{p(1-p)/3},\quad g=f-2e.
+\]
+These finite inequalities need no cap or Gaussian successor. The proof is
+[a conditional independent-coin moment argument](evidence/NOTE_2026-09-24_SUCCESSOR_FLIP_NOISE.md).
+For the initial source above, put
+\[
+G=\frac{2p d_p}{5^{3/2}},\qquad G^2=\frac{16p^3(1-p)}{375}.
+\]
+After one actual update, \(g_1\ge G-o_L(1)\) and
+\(e_1\ge(1+p^2)B-p^2\alpha-o_L(1)\). The sharp deficit law gives
+\(\alpha-e_1\ge g_1^2/(8\alpha+4g_1)\). Taking the positive root
+and removing the initial source cap as before proves
+\[
+\boxed{\liminf_n\alpha_n\ge B_{\rm noise}:=
+\frac{B-G/2+\sqrt{(B+G/2)^2+G^2/[2(1+p^2)]}}2
+>B_{\rm both}>B_{\rm int}>B_{\rm tilt}.}
+\]
+The strict comparison has an exact rational certificate in the proof;
+the new scalar checkers have not run. Review is analytic author review,
+not independent or formal verification. At each fixed number \(j\) of
+constant-p updates one now has `eta_j>=p^(6j)/125-o_L(1)` and
+`g_(j+1)>=G p^(3j)-o_L(1)`. These floors decay; no useful long-time
+energy conclusion or cross-order comparison is proved. The original
+convergence problem remains OPEN.
+
 ## 5. Transfer along ratio-dense subsequences
 
 Let \(2\le n_1<n_2<\cdots\) be an unbounded sequence of integers with

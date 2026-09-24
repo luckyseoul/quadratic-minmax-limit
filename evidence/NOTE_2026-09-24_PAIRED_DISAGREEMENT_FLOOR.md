@@ -224,9 +224,17 @@ unpublished changes on the user's other machines were not inspected.
 
 Verification here is analytic author review of (5), (8), (9), (11), (12),
 the positive-root algebra, and the reuse of the joint-Gaussianization proof.
-No matrix census, simulation, numerical constant evaluation, or test run
-was performed. Repository instructions require offloaded mathematical
+At the initial proof checkpoint, no matrix census, simulation, numerical
+constant evaluation, or test run was performed. Repository instructions require offloaded mathematical
 checks; the NUKA preflight failed because its hostname was not resolvable
 from this environment. No mesh receipt or independent review is claimed.
 This is a supporting lemma and constant correction, not a major structural
 milestone; no new large-drive backup was taken.
+
+Subsequent check provenance, including the user's Orin `0` report and
+the prior controller-execution deviation, is recorded in
+`paired_disagreement_floor_20260924/USER_REPORTED_CHECK.md`. The later
+[both-phase estimate](NOTE_2026-09-24_BOTH_PHASE_DISAGREEMENT.md) strengthens
+this initial floor eightfold. The [actual-successor note](NOTE_2026-09-24_SUCCESSOR_FLIP_NOISE.md)
+then supplies a separate finite-time update estimate by independent coin
+moments, not by reapplying this Gaussian argument to successor signs.
