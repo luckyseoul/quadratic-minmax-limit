@@ -48,7 +48,10 @@ The NUKA SSH preflight failed with a socket permission error. No controller
 mathematical test, independent review, or new major-milestone backup is
 claimed. The user's earlier Orin `0` report covers only the OLD checker:
 `evidence/paired_disagreement_floor_20260924/USER_REPORTED_CHECK.md`.
-The new research is a local checkpoint, not a published remote result.
+The research is published on
+`research/paired-disagreement-floor-20260924` at commit
+`bd5f2465ec40615d99da0622c26487b42bc496af`. The checker results remain
+pending.
 
 ## 2026-09-24: the paired source activates the interior correction
 
