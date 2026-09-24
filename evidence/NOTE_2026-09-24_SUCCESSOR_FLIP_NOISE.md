@@ -1,5 +1,14 @@
 # Independent flip noise forces an actual successor-field gap
 
+> **2026-09-24 strengthening.** The `mu'>=p^2 mu` count recurrence below
+> uses the deliberately conservative convention that a zero local field
+> keeps its old spin. The later
+> [tie-resolved theorem](NOTE_2026-09-24_TIE_RESOLVED_INFINITE_LADDER.md)
+> chooses the opposite spin at zero-field best-response ties and proves the
+> strictly stronger finite all-orders bound `mu'>=p mu` for every n.
+> The weighted field-noise and energy inequalities below remain valid and
+> are reused there.
+
 2026-09-24. Supporting analytic results, author-reviewed in this session.
 The original convergence problem remains OPEN. No independent human or
 proof-assistant review is claimed. The new scalar checker has not run.
