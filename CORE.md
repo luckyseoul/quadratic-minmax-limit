@@ -139,31 +139,35 @@ the exact nuclear lower via full-source spectral-tail control and gain.
 It supplies neither a numerical \(\varepsilon_0\), convergence, nor a
 limit value; its \(F_1(1)\) is not an unconditional lower bound.
 
-**Explicit paired-field improvement (2026-09-17; optimized 2026-09-23).**
-The author-reviewed
-[paired polynomial-phase theorem](evidence/NOTE_2026-09-17_PAIRED_POLYNOMIAL_FIELD_LOWER.md)
-gives the cap-independent limiting inputs
+**Explicit paired-field improvement (2026-09-17; tilted and optimized 2026-09-23).**
+The September 17 paired-field argument extends to the fixed Gaussian phases
 \[
-e_0=\kappa/2,\qquad
-f_0=\sqrt{\kappa(2/3+\kappa/2)},\qquad \kappa=2/\pi.
+R_s(t)=\frac{(I+s,tM)^2}{1+t^2q},\qquad 0<t\le1,
 \]
-Optimizing its already-proved mean-update inequality over the fixed update
-weight \(p\), rather than freezing \(p=1/10\), gives
+without changing the cap-removal mechanism.  Put \(\kappa=2/\pi\),
 \[
-\liminf_n\alpha_n\ge B_*:=
-e_0-\frac{f_0}{2}
-+\frac12\sqrt{f_0^2+(f_0-2e_0)^2}
-=0.3258474004377944\ldots>\frac{13}{40}.
+z_t=\frac{t^2}{1+t^2},\qquad
+e(t)=\frac{\kappa t}{1+t^2},\qquad
+f(t)=\sqrt{\kappa\{1-\kappa\arcsin z_t+\kappa z_t\}}.
 \]
-The optimizer is
+The same Boolean mean update, optimized over its fixed update weight, gives
 \[
-p_*=
-\frac{f_0-2e_0}{f_0+\sqrt{f_0^2+(f_0-2e_0)^2}}
-=0.0971024968\ldots .
+\liminf_n\alpha_n\ge B(t):=
+e(t)-\frac{f(t)}2+
+\frac12\sqrt{f(t)^2+[f(t)-2e(t)]^2}.
 \]
-Same-order regularization removes the fixed operator cap exactly as in the
-September 17 proof. See
-[evidence/NOTE_2026-09-23_OPTIMIZED_PAIRED_FIELD_LOWER.md](evidence/NOTE_2026-09-23_OPTIMIZED_PAIRED_FIELD_LOWER.md).
+At \(t=1\) this is the previously optimized
+\(0.3258474004377944\ldots\).  Moreover \(B'(1)<0\), so tilting below
+one gives a strict analytic gain.  The explicit rational choice
+\(t=993/1000\) yields
+\[
+\boxed{\liminf_n\alpha_n\ge
+B_{\rm tilt}:=B(993/1000)
+=0.3258530333538241\ldots>\frac{13}{40}.}
+\]
+The corresponding update weight is
+\(p_*=0.0971801303973218\ldots\).  See
+[evidence/NOTE_2026-09-23_TILTED_PAIRED_FIELD_LOWER.md](evidence/NOTE_2026-09-23_TILTED_PAIRED_FIELD_LOWER.md).
 This supplies neither an explicit finite-order cutoff nor convergence.
 
 ## 5. Transfer along ratio-dense subsequences
@@ -221,10 +225,10 @@ m_r\le\Phi(C)\le\tfrac12 r\|C\|_{\rm op}
 \]
 Apply Section 5 to the increasing orders \(r_k=q_k+1\). It follows that
 \[
-\frac{13}{40}<B_*\le\liminf_n\alpha_n
+\frac{13}{40}<B_{\rm tilt}\le\liminf_n\alpha_n
 \le\limsup_n\alpha_n\le\frac12.
 \]
-The lower bound is the optimized September 23 form of the September 17 result in Section 4; the conference
+The lower bound is the tilted September 23 strengthening of the September 17 result in Section 4; the conference
 construction and ratio-dense transfer supply only the upper bound here.
 This uses conference matrices only as admissible constructions for an
 upper bound. It does not assert that they minimize \(\Phi\), or that the
@@ -344,5 +348,5 @@ of an exact \(m_{13}=20\) block (see
 5-cycle is the exact minimizer at \(n=10\).
 No reviewed construction gives a uniform \(c>0\), and no reviewed
 argument forces \(\gamma_p\to0\). The uniform lower bound of Section 4
-only yields \(\gamma_p\le\tfrac12-B_*+o(1)\). This section does not reopen
+only yields \(\gamma_p\le\tfrac12-B_{\rm tilt}+o(1)\). This section does not reopen
 Paley gap-2 covers or Hadamard families.
