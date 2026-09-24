@@ -7,13 +7,13 @@ New September-2026 discrepancy input attacks the CROSS-ORDER gap:
 applies the new Guo--Fang--Lu Komlós theorem with constant
 `3 sqrt(2 pi)` to the exact stable-state one-vertex reduction.  If
 `Xi_A(r)=sum_active 1/(D_A+r)^2 <=1/(18 pi)`, then an actual incident
-sign row extends A with increment at most r.  At the exact neutral increment
+sign row extends A with increment strictly below r.  At the exact neutral increment
 `r_n=m_n[(1+1/n)^(3/2)-1]`, this gives
-`alpha_(n+1)<=alpha_n`.  A Dini-summable excess gives convergence.
-Conversely, EVERY upward normalized step now forces
+`alpha_(n+1)<alpha_n`.  A Dini-summable excess gives convergence.
+Conversely, EVERY nondecreasing normalized step now forces
 `Xi_A(r_n)>1/(18 pi)` for every exact minimizer, hence more than
 `r_n^2/(18 pi)=(alpha_n^2/(8 pi)+o(1))n` active stable antipodal classes
-within raw deficit `n-r_n` of the edge. This is the first current use of
+within raw deficit `n-r_n` of the edge. Thus any failure of convergence must encounter this linear-degeneracy obstruction infinitely often. This is the first current use of
 this month's Komlós breakthrough directly on the n-to-n+1 bottleneck.
 It does not yet prove the required reciprocal-square mass bound.
 
