@@ -70,17 +70,23 @@ Since both one-sided full extrema are at most F,
 
 ## 2. The complement cannot be one-sided-flat
 
-For B=A[T], principal restriction gives
+For B=A[T], principal restriction and the trivial complete-graph ceiling give
 
-    max(P_T,N_T)=Phi(B)<=F.                                (8)
+    max(P_T,N_T)=Phi(B)<=min(F,binom(t,2)).                 (8)
 
-The exact product bound (1) therefore implies
+The exact product bound (1) therefore implies the STRONGER estimate
 
     min(P_T,N_T)
       >= P_T N_T/max(P_T,N_T)
-      >= Delta_t/F.                                        (9)
+      >= Delta_t/min(F,binom(t,2)).                         (9)
 
-Combining (7) and (9) proves (3).
+Combining (7) and (9) proves
+
+    Phi(A[S])
+      <= F-Delta_t/min(F,binom(t,2))
+      <= F-Delta_t/F.                                      (9a)
+
+Thus (3) is only the host-scale corollary; (9a) is the canonical form.
 
 This proof is finite, requires no optimizer assumption, and applies to every
 choice of the retained principal set S.
@@ -103,9 +109,18 @@ Since a^2 b>=t^3/8,
 
     Delta_t >= t^3/64.                                     (11)
 
-Hence the clean finite corollary
+Hence (9a) gives TWO clean finite corollaries:
 
-    boxed: Phi(A[S]) <= F - t^3/(64F).                     (12)
+    boxed: Phi(A[S]) <= F - t^3/(64F),                     (12)
+
+and, because binom(t,2)<=t^2/2,
+
+    boxed: Phi(A[S]) <= F - t^2/[32(t-1)]
+                        <= F - t/32.                       (12a)
+
+The second bound is independent of the host norm. Thus deleting any t>=2
+vertices from a complete signing forces a raw Boolean-norm loss at least
+t/32 (and in fact at least t^2/[32(t-1)]).
 
 This improves the 1/96 constant implicit in the September 23 interior-gap
 argument. More precisely, as t->infinity,
@@ -118,11 +133,18 @@ So the asymptotic restriction constant is 1/(16pi), almost twice 1/96.
 ## 4. New cross-order inequalities for m_n
 
 Take A to be an exact order-N minimizer. Since every n-vertex principal
-restriction is a legal order-n signing, (3) gives, for t=N-n>=2,
+restriction is a legal order-n signing, (9a) gives, for t=N-n>=2,
 
-    boxed: m_n <= m_N - Delta_t/m_N.                       (14)
+    boxed:
+    m_n <= m_N-Delta_t/min(m_N,binom(t,2))
+        <= m_N-t^2/[32(t-1)]
+        <= m_N-t/32.                                       (14)
 
-Equivalently,
+The host-scale form retained for algebra below is
+
+    m_n <= m_N-Delta_t/m_N.                                (14a)
+
+Equivalently, (14a) gives
 
     m_N^2-m_n m_N-Delta_t >=0,
 
@@ -140,11 +162,15 @@ two orders.
 
 In particular,
 
-    boxed: m_N>m_n whenever N>=n+2.                        (17)
+    boxed: m_N-m_n >= (N-n)/32 whenever N>=n+2.            (17)
 
-Because each m_k is an integer with the parity of binom(k,2), (17) can be
-rounded upward to the least positive integer increment compatible with the
-two endpoint parities.
+Since the difference is integral,
+
+    boxed: m_N-m_n >= ceil((N-n)/32).                      (17a)
+
+The parity of each endpoint is fixed by binom(k,2), so (17a) may be rounded
+further to the least integer at least (N-n)/32 with the required endpoint
+parity. In particular m_N>m_n whenever N>=n+2.
 
 Using the elementary all-orders upper bound
 m_N<=sqrt(log 2) N^(3/2), (14) also gives the explicit separation
@@ -168,5 +194,7 @@ would directly force convergence of alpha_n. It therefore does not settle
 the original limit by itself.
 
 Its useful new content is that restriction is not merely monotone: every
-two-or-more-vertex deletion has a quantified mandatory norm loss, with an
-exact complement constant and a proportional-scale n^(3/2) separation.
+two-or-more-vertex deletion has a quantified mandatory norm loss.  The
+complement ceiling upgrades the loss to at least one thirty-second of the
+number of deleted vertices at ALL scales, while the exact product constant
+gives the stronger proportional-scale n^(3/2) separation when t is macroscopic.
