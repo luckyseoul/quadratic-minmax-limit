@@ -1,5 +1,19 @@
 # Handoff: original convergence problem
 
+## 2026-09-23: stable-skeleton Hamming geometry
+
+If x,y are stable in the same orientation and differ on T, `|T|=t`,
+then every i in T obeys `w_i(x)<=2(t-1)`, and
+`sum_{i in T} w_i(x)<=4 sigma Q_{A[T]}(x_T)`.
+Thus the disagreement set is contained in the `2(t-1)`-light coordinates
+of either endpoint.  A stability margin h forces Hamming separation
+`d_H>=1+ceil(h/2)`, and the local number of stable states within radius r
+is bounded by the corresponding binomial volume on the light-coordinate
+set.  This gives actual packing structure on the exact state family left by
+the one-vertex stable-state reduction.
+Proof:
+`evidence/NOTE_2026-09-23_STABLE_SKELETON_GEOMETRY.md`.
+
 ## 2026-09-23: one-vertex extension reduces exactly to stable states
 
 For any proposed incident row `a`, the extension objective is
