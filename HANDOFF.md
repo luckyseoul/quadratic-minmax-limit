@@ -1,5 +1,48 @@
 # Handoff: original convergence problem
 
+## 2026-09-24: optimized successor envelope is strictly stronger
+
+Verification pass on the merged September 24 branch checked the
+both-phase residual-square identity, the shifted-noise moment bound, the
+phase/state normalizations, the successor energy recursion, and the algebra
+leading to `B_noise`. No contradiction was found in those derivations.
+
+The next positive step removes two unnecessary historical parameter freezes.
+For each fixed `99/100<=t<=1`, retain the exact both-phase disagreement
+angle
+
+`H(t)=min(1/4, atan(sqrt(beta(t))/C(t))/pi)>1/5`.
+
+For an independent actual partial-flip probability `0<u<=1/2`, define
+
+`G(t,u)=2u*2sqrt(u(1-u)/3)*H(t)^(3/2)`,
+
+`A(t,u)=(1-u)^2 e(t)+u(1-u)f(t)`, and `c=1+u^2`.
+
+The actual successor law then satisfies the exact asymptotic envelope
+
+`liminf alpha_n >= L(t,u)`,
+
+where
+
+`L=(A-cG/2+sqrt((A+cG/2)^2+cG^2/2))/(2c)`.
+
+Hence
+
+`B_opt=sup_{99/100<=t<=1,0<u<=1/2} L(t,u)`
+
+is a valid unconditional lower bound. It is STRICTLY stronger than the
+merged `B_noise`: at the old parameters the exact angle already improves
+the coarse `H>=1/5` replacement, and differentiating the new envelope
+shows the old pre-successor update optimizer has positive one-sided
+derivative. A numerical locator is approximately
+`t=0.9934103, u=0.0974340, B_opt~=0.3258669873`; the theorem is the exact
+supremum, not the decimal.
+
+Proof:
+`evidence/NOTE_2026-09-24_OPTIMIZED_SUCCESSOR_ENVELOPE.md`.
+Original convergence remains OPEN.
+
 ## 2026-09-24 follow-up: both phases and actual successor flip noise
 
 Two further analytic results, with author review only:
