@@ -1,5 +1,28 @@
 # Handoff: original convergence problem
 
+## 2026-09-23: cap-free weighted-disagreement closure
+
+For any actual phase law, let `R` be the total local-field mass on
+coordinates whose synchronous best response changes sign.  Independently
+flip each such coordinate with the sample-dependent probability
+`p=R/(4 alpha n)`.  Principal restriction bounds the internal flipped-set
+energy, and polarization gives `p<=3/4`.  The resulting actual Boolean
+update gains at least
+
+`R^2/(4 alpha n)`
+
+conditionally.  Averaging the two phases yields the new distribution-free
+closure
+
+`alpha >= e + (f-2e)^2/(16 alpha)`,
+
+or `f-2e <= 4 sqrt(alpha(alpha-e))`.  This is valid for Gaussian, Gibbs,
+or arbitrary post-update laws and does not use an operator cap or the
+changed-coordinate count `eta`.  It therefore advances the repeated-update
+bottleneck: weighted disagreement is now forced to vanish whenever the
+source energy approaches the Boolean norm.  Proof:
+`evidence/NOTE_2026-09-23_ADAPTIVE_BEST_RESPONSE_CLOSURE.md`.
+
 ## 2026-09-23: tilted paired phases improve the bound again
 
 The September 17 Gaussian phases were not optimal at their fixed tilt
