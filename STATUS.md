@@ -2,6 +2,23 @@
 
 Updated 2026-09-24. The original MO limit is OPEN.
 
+New tie-resolved arbitrary-depth theorem:
+[evidence/NOTE_2026-09-24_TIE_RESOLVED_INFINITE_LADDER.md](evidence/NOTE_2026-09-24_TIE_RESOLVED_INFINITE_LADDER.md)
+uses the freedom at zero local-field best-response ties to strengthen the
+ACTUAL successor count recursion from `mu'>=p^2 mu` to the exact finite
+all-orders `mu'>=p mu` for every n. The field-noise and energy recursions
+survive unchanged. This gives an explicit scalar recursion for arbitrary
+fixed update depth. More importantly, every finite-depth certificate with
+positive disagreement has a further admissible update whose new mean bound
+is strictly larger. Starting beyond the current `B_2` certificate produces
+an infinite strict hierarchy
+`B_2 < B_tie = x_2 < x_3 < ... < B_infty <= 1/2`,
+and `liminf alpha_n >= B_infty`.
+Each rung is proved at fixed finite depth before the scalar supremum is
+taken, so no infinite-time stochastic limit is assumed. This removes the
+previous finite-depth stopping point of the lower-bound mechanism. It still
+does not prove convergence or a cross-order estimate.
+
 New fixed two-step ACTUAL successor gain:
 [evidence/NOTE_2026-09-24_TWO_STEP_SUCCESSOR_GAIN.md](evidence/NOTE_2026-09-24_TWO_STEP_SUCCESSOR_GAIN.md)
 feeds the positive disagreement of the first non-Gaussian successor into
@@ -11,7 +28,8 @@ the exact lower envelope is
 `C=1+v^2+(1-v^2)u^2` and
 `D=(1-v^2)A+v(1-v)G`.
 Taking the supremum proves
-`liminf alpha_n>=B_2>B_opt`.
+`liminf alpha_n>=B_2>B_opt`; the later tie-resolved theorem strengthens
+this to the strictly larger infinite-depth scalar certificate `B_infty>B_2`.
 The strict inequality is analytic: at a one-step maximizer, the second-step
 slack is an explicit quadratic in `v` with a strictly negative minimum.
 A numerical locator is about `0.3258669876`; the exact supremum is the
@@ -37,8 +55,9 @@ New ACTUAL successor control and stronger lower bound:
 [independent flip noise](evidence/NOTE_2026-09-24_SUCCESSOR_FLIP_NOISE.md)
 proves, for arbitrary source laws and fixed independent partial-flip
 probability `0<p<=1/2`,
-`mu'>=p^2 mu` and
+`mu'>=p^2 mu` under its old-sign tie convention and
 `f'-2e'>=4p sqrt(p(1-p)/3) mu^(3/2)-O_p(n^(-1/2))`.
+The later tie-resolved theorem improves the count factor to `p` for every n.
 The estimates are finite and cap-free, with no Gaussian successor assumed.
 Combined with the new initial `mu_0>=1/5-o_L(1)` and sharp deficit
 closure, they give the earlier `B_noise`; the later optimized envelope
@@ -309,7 +328,7 @@ status and reviewed bounds below are unchanged.
 `m_n` is nondecreasing, consecutive `alpha_n` differences tend to zero,
 the limit-point set is an interval, and
 
-`13/40 < B_tilt < B_int < B_both < B_noise < B_opt < B_2 <= liminf alpha_n <= limsup alpha_n <= 1/2`,
+`13/40 < B_tilt < B_int < B_both < B_noise < B_opt < B_2 < B_infty <= liminf alpha_n <= limsup alpha_n <= 1/2`,
 where the exact constants are defined in CORE, Section 4.
 
 The lower bounds extend the September 17 paired-field result above. The
