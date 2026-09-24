@@ -2,6 +2,21 @@
 
 Updated 2026-09-24. The original MO limit is OPEN.
 
+New optimized actual-successor envelope:
+[evidence/NOTE_2026-09-24_OPTIMIZED_SUCCESSOR_ENVELOPE.md](evidence/NOTE_2026-09-24_OPTIMIZED_SUCCESSOR_ENVELOPE.md)
+frees both the fixed Gaussian tilt and the ACTUAL partial-flip probability.
+For each fixed `99/100<=t<=1`, the both-phase source gives the explicit
+changed-coordinate floor
+`H(t)=min(1/4, atan(sqrt(beta(t))/C(t))/pi)>1/5`.
+Combining the successor-noise theorem with the sharp deficit closure yields
+an exact two-parameter lower envelope `L(t,u)`, and therefore
+`liminf alpha_n>=B_opt=sup L(t,u)>B_noise`.
+The strict improvement is analytic: the exact angle already beats the
+coarse `1/5` floor at the old parameters, and the old update weight is
+not stationary for the successor-corrected envelope. A numerical locator
+is about `0.3258669873`; the exact supremum, not that decimal, is the
+canonical theorem. Convergence and cross-order control remain OPEN.
+
 New ACTUAL successor control and stronger lower bound:
 [independent flip noise](evidence/NOTE_2026-09-24_SUCCESSOR_FLIP_NOISE.md)
 proves, for arbitrary source laws and fixed independent partial-flip
@@ -10,7 +25,8 @@ probability `0<p<=1/2`,
 `f'-2e'>=4p sqrt(p(1-p)/3) mu^(3/2)-O_p(n^(-1/2))`.
 The estimates are finite and cap-free, with no Gaussian successor assumed.
 Combined with the new initial `mu_0>=1/5-o_L(1)` and sharp deficit
-closure, they give `liminf alpha_n>=B_noise>B_both>B_int>B_tilt`.
+closure, they give the earlier `B_noise`; the later optimized envelope
+strengthens this further to `B_opt>B_noise>B_both>B_int>B_tilt`.
 The exact new lower constant is in CORE Section 4. These are analytic
 author-reviewed results; the new remote scalar checkers remain unexecuted.
 Fixed-time repeated-update floors now exist, but decay exponentially in
@@ -277,9 +293,8 @@ status and reviewed bounds below are unchanged.
 `m_n` is nondecreasing, consecutive `alpha_n` differences tend to zero,
 the limit-point set is an interval, and
 
-`13/40 < B_tilt < B_int <= liminf alpha_n <= limsup alpha_n <= 1/2`,
-where `B_tilt=0.3258530333538241...` and the stronger exact `B_int` are
-defined in CORE, Section 4.
+`13/40 < B_tilt < B_int < B_both < B_noise < B_opt <= liminf alpha_n <= limsup alpha_n <= 1/2`,
+where the exact constants are defined in CORE, Section 4.
 
 The lower bounds extend the September 17 paired-field result above. The
 older qualitative source-gain corollary remains valid; CORE's finite
