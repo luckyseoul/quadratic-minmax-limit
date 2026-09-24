@@ -360,7 +360,7 @@ deficit from \(F\) of the best stable orientation of \([x]\).
 For \(r>0\), define
 \[
 \Xi_A(r)=
-\sum_{\substack{[x]\\ \mathrm{stable}
+\sum_{\substack{[x]\ \mathrm{stable}\\
                   D_A([x])+r\le n}}
 \frac1{(D_A([x])+r)^2}.
 \]
@@ -403,7 +403,7 @@ a nondecreasing step also forces more than
 \left(\frac{\alpha_n^2}{8\pi}+o(1)\right)n
 \]
 distinct active stable antipodal classes within raw deficit
-\(D_A<n-r_n\) of the Boolean edge.  Thus nondecreasing motion of \(\alpha_n\)
+\(D_A\le n-r_n\) of the Boolean edge.  Thus nondecreasing motion of \(\alpha_n\)
 now has a proved linear near-edge degeneracy cost.  See
 [evidence/NOTE_2026-09-24_KOMLOS_ONE_VERTEX_EXTENSION.md](evidence/NOTE_2026-09-24_KOMLOS_ONE_VERTEX_EXTENSION.md).
 This is a cross-order implication, not a convergence proof.
