@@ -1,5 +1,21 @@
 # Handoff: original convergence problem
 
+## 2026-09-23: one-vertex extension reduces exactly to stable states
+
+For any proposed incident row `a`, the extension objective is
+`max_{sigma,x}[sigma Q_A(x)+|a.x|]`.  If
+`sigma x_i(Ax)_i<0`, flipping coordinate i raises the oriented quadratic
+energy by at least 2, while the absolute row correlation can drop by at most
+2.  Therefore the extension score never decreases under such an improving
+flip.  Iteration terminates at a one-flip-stable state, giving exactly
+
+`Phi(A+a)=max_{sigma,x sigma-stable}[sigma Q_A(x)+|a.x|]`.
+
+Hence the random-row exact-tail criterion needs to sum only over stable
+states, not the full cube.  This is an exact cross-order simplification,
+not a heuristic pruning.  Proof:
+`evidence/NOTE_2026-09-23_STABLE_STATE_EXTENSION_REDUCTION.md`.
+
 ## 2026-09-23: sharp pointwise deficit-disagreement envelope
 
 For any oriented Boolean state x, put
