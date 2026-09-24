@@ -298,7 +298,58 @@ is \(X-Gv+(2x+G-X)v^2\), whose value at
 \(v=G/[2(2x+G-X)]\) is strictly negative. See
 [evidence/NOTE_2026-09-24_TWO_STEP_SUCCESSOR_GAIN.md](evidence/NOTE_2026-09-24_TWO_STEP_SUCCESSOR_GAIN.md).
 A numerical locator is about \(0.3258669876\). This is still a fixed
-two-step result, not a long-time trajectory or convergence theorem.
+two-step result, not a convergence theorem.
+
+**Tie-resolved arbitrary-depth dynamics (2026-09-24).** The old-sign
+zero-field convention in the successor argument is not forced. Choosing
+the opposite spin at every zero-field best-response tie preserves all energy
+identities and improves the finite count recursion, for every order, to
+\[
+\boxed{\mu'\ge p\mu}
+\]
+instead of \(p^2\mu\). The weighted successor-field estimate is unchanged:
+\[
+g'\ge2p d_p\mu^{3/2}-O_p(n^{-1/2}).
+\]
+Consequently the actual non-Gaussian update can be propagated to arbitrary
+fixed depth by a scalar recursion.  If a depth-\(j\) certificate is
+\[
+e_j\ge a_j-b_j\alpha-o(1),\qquad
+\mu_j\ge M_j-o(1),\qquad g_j\ge G_j-o(1),
+\]
+then one further update of probability \(p_j\) gives
+\[
+a_{j+1}=(1-p_j^2)a_j+p_j(1-p_j)G_j,quad
+b_{j+1}=(1-p_j^2)b_j+p_j^2,
+\]
+\[
+M_{j+1}=p_jM_j,qquad
+G_{j+1}=2p_jd_{p_j}M_j^{3/2}.
+\]
+The deficit closure supplies
+\[
+[(1+b_j)\alpha-a_j](\alpha+G_j/2)\ge G_j^2/8-o(1).
+\]
+More strongly, every finite-depth certificate with \(G_j>0\) can be
+extended to a strictly stronger one: if \(x\) is the positive closure
+root and \(X=(1+b_j)x-a_j\), the next update probability
+\[
+p_*={G_j\over2(2x+G_j-X)}
+\]
+lies in \((0,1/2)\) in this chain and makes the next mean bound exceed
+\(x\). Thus there is an infinite strictly increasing hierarchy of
+unconditional liminf bounds
+\[
+B_2<B_{\rm tie}=x_2<x_3<x_4<\cdots<B_\infty\le\frac12,
+\qquad
+\liminf_n\alpha_n\ge B_\infty.
+\]
+Each \(x_j\) comes from a fixed finite number of actual Boolean updates;
+no interchange with an infinite-time stochastic trajectory is used.
+See
+[evidence/NOTE_2026-09-24_TIE_RESOLVED_INFINITE_LADDER.md](evidence/NOTE_2026-09-24_TIE_RESOLVED_INFINITE_LADDER.md).
+This removes the finite-depth stopping point of the lower-bound mechanism,
+but still does not prove convergence of \(\alpha_n\).
 
 ## 5. Transfer along ratio-dense subsequences
 
@@ -355,7 +406,7 @@ m_r\le\Phi(C)\le\tfrac12 r\|C\|_{\rm op}
 \]
 Apply Section 5 to the increasing orders \(r_k=q_k+1\). It follows that
 \[
-\frac{13}{40}<B_{\rm tilt}<B_{\rm int}<B_{\rm both}<B_{\rm noise}<B_{\rm opt}<B_2
+\frac{13}{40}<B_{\rm tilt}<B_{\rm int}<B_{\rm both}<B_{\rm noise}<B_{\rm opt}<B_2<B_\infty
 \le\liminf_n\alpha_n\le\limsup_n\alpha_n\le\frac12.
 \]
 The lower bound includes the optimized September 24 actual-successor envelope in Section 4; the conference
@@ -478,5 +529,5 @@ of an exact \(m_{13}=20\) block (see
 5-cycle is the exact minimizer at \(n=10\).
 No reviewed construction gives a uniform \(c>0\), and no reviewed
 argument forces \(\gamma_p\to0\). The uniform lower bound of Section 4
-only yields \(\gamma_p\le\tfrac12-B_2+o(1)\). This section does not reopen
+only yields \(\gamma_p\le\tfrac12-B_\infty+o(1)\). This section does not reopen
 Paley gap-2 covers or Hadamard families.
