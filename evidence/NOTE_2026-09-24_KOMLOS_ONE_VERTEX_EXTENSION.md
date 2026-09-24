@@ -141,11 +141,11 @@ Hence if an exact minimizer A_n obeys
 
 then the theorem gives
 
-    m_(n+1) <= m_n+r_n,
+    m_(n+1) < m_n+r_n,
 
 so
 
-    boxed: alpha_(n+1) <= alpha_n.                         (13)
+    boxed: alpha_(n+1) < alpha_n.                         (13)
 
 This is a genuine cross-order implication.
 
@@ -166,7 +166,7 @@ Summable positive rises force alpha_n to converge. Thus (14)--(15) are a
 new Dini-summable convergence criterion expressed entirely in the stable
 near-edge spectrum of exact minimizers.
 
-## 5. A new obstruction theorem for every upward step
+## 5. A new obstruction theorem for every nondecreasing step
 
 The contrapositive is unconditional and useful.
 
@@ -202,7 +202,7 @@ stable antipodal classes.
 
 The active window in (19) is explicit:
 
-    D_A([x]) < n-r_n.                                      (21)
+    D_A([x]) <= n-r_n.                                      (21)
 
 Thus these are states within O(n) raw energy of the Boolean edge
 F=Theta(n^(3/2)), not arbitrary local maxima deep in the cube.
