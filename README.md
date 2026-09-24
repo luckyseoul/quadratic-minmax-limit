@@ -18,6 +18,13 @@ stronger than the preceding rung. The construction and proof are in
 reported two-step numerical locator is about `0.3258669876`; no new decimal
 is assigned to `B_infty`.
 
+A separate September-24 cross-order theorem now applies the new
+Guo--Fang--Lu Komlós vector-balancing result to one-vertex extension.
+It gives a deterministic reciprocal-square stable-deficit criterion for
+`alpha_(n+1)<=alpha_n`; conversely, every upward step forces a linear
+family of active stable near-edge states. See
+`evidence/NOTE_2026-09-24_KOMLOS_ONE_VERTEX_EXTENSION.md`.
+
 Start with [CORE.md](CORE.md) for the route-neutral mathematics,
 [STATUS.md](STATUS.md) for current claims, and [HANDOFF.md](HANDOFF.md) for
 continuation. [ARTIFACTS.md](ARTIFACTS.md) records the 2026-09-05 reset and
