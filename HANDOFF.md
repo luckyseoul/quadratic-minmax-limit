@@ -1,5 +1,32 @@
 # Handoff: original convergence problem
 
+## 2026-09-24: the paired source activates the interior correction
+
+Review of main at `889a4c88c8aa0634693e9b7db54de6db4fa7c18d` and all
+eight requested September 23 commits:
+`evidence/REVIEW_2026-09-24_CURRENT_GAP.md`.
+
+The initial tilted Gaussian phases at `t=993/1000` have phase-averaged
+changed-coordinate fraction at least `1/10-o_L(1)` and therefore
+`eta>=1/1000-o_L(1)` for every fixed source cap L, with constants independent
+of L. The new step uses the existing distinguished-coordinate joint
+Gaussianization lemma and a scalar covariance comparison; it does not
+assume a Gaussian post-update law. Keeping the already-optimized weight p
+and writing B for the previous tilted lower constant gives
+
+`liminf alpha_n >= B_int = [B+sqrt(B^2+p^2/(6000*(1+p^2)))]/2 > B`.
+
+The exact expression is the new lower bound; no new decimal evaluation
+is claimed. Proof: `evidence/NOTE_2026-09-24_PAIRED_DISAGREEMENT_FLOOR.md`.
+Review is analytic author review only. No check was run: the NUKA preflight
+failed to resolve its hostname from this environment. This supporting
+lemma required no new major-milestone backup.
+
+This supplies eta control for the INITIAL paired source and makes the
+interior term strictly positive. Quantitative control of actual repeated
+updates, or a neutral-increment extension with summable excess, remains
+missing. The original convergence problem remains OPEN.
+
 ## 2026-09-23: stable-skeleton Hamming geometry
 
 If x,y are stable in the same orientation and differ on T, `|T|=t`,
