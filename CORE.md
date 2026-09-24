@@ -319,11 +319,11 @@ e_j\ge a_j-b_j\alpha-o(1),\qquad
 \]
 then one further update of probability \(p_j\) gives
 \[
-a_{j+1}=(1-p_j^2)a_j+p_j(1-p_j)G_j,quad
+a_{j+1}=(1-p_j^2)a_j+p_j(1-p_j)G_j,\qquad
 b_{j+1}=(1-p_j^2)b_j+p_j^2,
 \]
 \[
-M_{j+1}=p_jM_j,qquad
+M_{j+1}=p_jM_j,\qquad
 G_{j+1}=2p_jd_{p_j}M_j^{3/2}.
 \]
 The deficit closure supplies
