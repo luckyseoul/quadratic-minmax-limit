@@ -2,6 +2,19 @@
 
 Updated 2026-09-23. The original MO limit is OPEN.
 
+New cap-free posterior closure: the
+[adaptive best-response theorem](evidence/NOTE_2026-09-23_ADAPTIVE_BEST_RESPONSE_CLOSURE.md)
+shows that for any two actual phase laws,
+`alpha >= e + (f-2e)^2/(16 alpha)`, equivalently
+`0<=f-2e<=4 sqrt(alpha(alpha-e))`.
+It comes from an actual randomized partial Boolean best-response update
+whose conditional energy gain is at least `R^2/(4 alpha n)`, where `R`
+is the total changed local-field mass.  It needs no operator cap, Gaussian
+closure, or lower bound on the Hamming number of changed coordinates.
+This does not by itself raise the tilted numerical lower bound, but it
+supplies a new distribution-free relation between the two repeated-update
+quantities that were previously uncontrolled.
+
 New supporting lemma: the [finite Boolean interior gap](evidence/NOTE_2026-09-23_BOOLEAN_INTERIOR_GAP.md)
 proves `Phi(A)-|Q_A(z)| >= epsilon^2 k^3/(96 Phi(A))` when at least
 `k>=2` coordinates of z have `|z_i|<=1-epsilon`. It needs no spectral
