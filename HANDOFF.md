@@ -1,5 +1,23 @@
 # Handoff: original convergence problem
 
+## 2026-09-23: sharp pointwise deficit-disagreement envelope
+
+For any oriented Boolean state x, put
+`D=alpha*n-Q(x)` and let
+`R=sum_{i: sign(Mx)_i != x_i}|(Mx)_i|`.
+Optimizing the exact mean-update interpolation parameter state by state gives
+
+`R <= D + sqrt(2 alpha n D)`.
+
+This is equivalent to the whole fixed-p inequality family, but stronger than
+the previously recorded averaged adaptive closure because it is pointwise.
+In particular an O(sqrt(n))-near-edge state has only O(n^(3/4)) weighted
+best-response disagreement.  Averaging and Jensen give exactly
+`f-2e <= 2(alpha-e)+2sqrt(2alpha(alpha-e))`, whose solved form is the
+optimized mean-update bound already used for the tilted Gaussian theorem.
+Proof:
+`evidence/NOTE_2026-09-23_POINTWISE_DEFICIT_DISAGREEMENT.md`.
+
 ## 2026-09-23: cap-free weighted-disagreement closure
 
 For any actual phase law, let `R` be the total local-field mass on
