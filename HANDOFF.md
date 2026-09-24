@@ -1,5 +1,66 @@
 # Handoff: original convergence problem
 
+## 2026-09-24: zero-field ties remove the finite-depth wall
+
+The previous actual-successor proof kept the old spin at zero local field,
+which forced the universal count recursion down to `mu'>=p^2 mu`.
+That convention was unnecessarily destructive. A zero field is a genuine
+best-response tie, so choose the opposite spin instead.
+
+For every original changed-or-tied coordinate i, the successor field is
+independent of i's own flip coin. Conditional on all other coins, if
+`a=x_i F'_i`, then successor disagreement-with-tie occurs with probability
+
+`(1-p) 1_{a<=0}+p 1_{a>=0} >= p`.
+
+At `a=0` the probability is one. Therefore, FINITELY and for every order,
+
+`mu' >= p mu`.
+
+All weighted identities are unchanged because zero fields carry zero
+weight. The shifted-noise proof also survives unchanged, so
+
+`g' >= 2p d_p mu^(3/2)-O_p(n^-1/2)`
+
+and the interior count now propagates as `eta'>=p^3 mu^3-o(1)`, replacing
+the old `p^6` loss.
+
+This produces an arbitrary-fixed-depth scalar recursion for actual
+non-Gaussian successors. If a state has
+`e>=a-b alpha`, count floor M and disagreement floor G, then one update
+with probability p gives
+
+`a'=(1-p^2)a+p(1-p)G`,
+`b'=(1-p^2)b+p^2`,
+`M'=pM`,
+`G'=2p d_p M^(3/2)`.
+
+The deficit closure is
+`[(1+b)alpha-a](alpha+G/2)>=G^2/8`.
+
+There is also a strict continuation theorem. If x is the positive closure
+root and `X=(1+b)x-a`, then choosing
+`p_*=G/[2(2x+G-X)]` makes the NEXT mean certificate strictly exceed x.
+The new count remains positive, so the process can be repeated.
+
+Applied after the existing B_2 state, this gives
+
+`B_2 < B_tie=x_2 < x_3 < x_4 < ... < B_infty <= 1/2`
+
+and, because every rung is a fixed finite-depth theorem before taking the
+scalar supremum,
+
+`liminf alpha_n >= B_infty > B_2`.
+
+Proof:
+`evidence/NOTE_2026-09-24_TIE_RESOLVED_INFINITE_LADDER.md`.
+
+This is the first current result showing that the actual repeated-update
+lower-bound mechanism has NO finite-depth saturation: every certified finite
+stage admits a strictly stronger finite successor stage. It does not yet
+connect different matrix orders, so the original convergence problem remains
+OPEN.
+
 ## 2026-09-24: second actual update gives another strict gain
 
 The first ACTUAL successor already has a positive disagreement floor.
