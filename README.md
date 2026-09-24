@@ -8,11 +8,11 @@ converge as `n` tends to infinity?
 
 The original MO limit is OPEN. A proof of existence need not identify its
 value. The current author-reviewed bounds are
-`B_opt <= liminf alpha_n <= limsup alpha_n <= 1/2`, where
-`B_opt > B_noise > B_both > B_int > B_tilt = 0.3258530333538241...`.
-The exact optimized successor-envelope constant and proof are in
+`B_2 <= liminf alpha_n <= limsup alpha_n <= 1/2`, where
+`B_2 > B_opt > B_noise > B_both > B_int > B_tilt = 0.3258530333538241...`.
+The exact fixed-two-update constant and proof are in
 [CORE.md, Section 4](CORE.md#4-a-uniform-gaussian-lower-bound). A numerical
-locator is about `B_opt ~= 0.3258669873`; the exact supremum is canonical.
+locator is about `B_2 ~= 0.3258669876`; the exact supremum is canonical.
 
 Start with [CORE.md](CORE.md) for the route-neutral mathematics,
 [STATUS.md](STATUS.md) for current claims, and [HANDOFF.md](HANDOFF.md) for
