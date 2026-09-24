@@ -1,6 +1,43 @@
 # Current mathematical status
 
-Updated 2026-09-23. The original MO limit is OPEN.
+Updated 2026-09-24. The original MO limit is OPEN.
+
+New ACTUAL successor control and stronger lower bound:
+[independent flip noise](evidence/NOTE_2026-09-24_SUCCESSOR_FLIP_NOISE.md)
+proves, for arbitrary source laws and fixed independent partial-flip
+probability `0<p<=1/2`,
+`mu'>=p^2 mu` and
+`f'-2e'>=4p sqrt(p(1-p)/3) mu^(3/2)-O_p(n^(-1/2))`.
+The estimates are finite and cap-free, with no Gaussian successor assumed.
+Combined with the new initial `mu_0>=1/5-o_L(1)` and sharp deficit
+closure, they give `liminf alpha_n>=B_noise>B_both>B_int>B_tilt`.
+The exact new lower constant is in CORE Section 4. These are analytic
+author-reviewed results; the new remote scalar checkers remain unexecuted.
+Fixed-time repeated-update floors now exist, but decay exponentially in
+the number of updates. No long-time energy conclusion or cross-order
+comparison has been established; the completion registry remains empty.
+
+New BOTH-phase initial source control:
+[the residual-variance identity](evidence/NOTE_2026-09-24_BOTH_PHASE_DISAGREEMENT.md)
+retains both disagreement angles and proves
+`mu_0>=1/5-o_L(1)`, `eta_0>=1/125-o_L(1)`.
+This improves the earlier eta floor eightfold and alone gives `B_both`.
+The successor argument uses this initial count floor, not an unsupported
+reapplication of Gaussianization after updating.
+
+Earlier source-specific eta control (now strengthened above):
+[the paired-disagreement floor](evidence/NOTE_2026-09-24_PAIRED_DISAGREEMENT_FLOOR.md)
+proves `eta>=1/1000-o_L(1)` for the initial tilted paired Gaussian phases,
+uniformly at each fixed operator cap with a cap-independent lower constant.
+The interior correction and the existing cap removal consequently give
+`liminf alpha_n>=B_int>B_tilt`, with the exact expression in CORE Section 4.
+This was an analytic author-reviewed supporting result. A subsequent
+[user-reported scalar check](evidence/paired_disagreement_floor_20260924/USER_REPORTED_CHECK.md)
+has limited floating-point/exact-rational scope; no independent proof
+review or post-update Gaussian law is claimed.
+The [current-gap review](evidence/REVIEW_2026-09-24_CURRENT_GAP.md) distinguishes
+this positive source estimate from the missing repeated-update and
+cross-order arguments.
 
 New stable-skeleton geometry:
 [evidence/NOTE_2026-09-23_STABLE_SKELETON_GEOMETRY.md](evidence/NOTE_2026-09-23_STABLE_SKELETON_GEOMETRY.md)
@@ -120,7 +157,7 @@ The explicit rational choice `t=993/1000`, followed by exact optimization
 of the Boolean update weight, proves
 `liminf alpha_n >= 0.3258530333538241...`.
 This improves the already optimized `t=1` value
-`0.3258530333538241...` by about `5.63291603e-6`, and the original
+`0.3258474004377944...` by about `5.63291603e-6`, and the original
 September 17 `p=1/10` constant by about `1.227789825e-5`.
 The strict improvement is analytic: the envelope derivative at `t=1`
 is negative.  No new family assumption, finite census, or cross-order
@@ -240,10 +277,11 @@ status and reviewed bounds below are unchanged.
 `m_n` is nondecreasing, consecutive `alpha_n` differences tend to zero,
 the limit-point set is an interval, and
 
-`13/40 < B_tilt <= liminf alpha_n <= limsup alpha_n <= 1/2`,
-where `B_tilt=0.3258530333538241...` is defined in CORE, Section 4.
+`13/40 < B_tilt < B_int <= liminf alpha_n <= limsup alpha_n <= 1/2`,
+where `B_tilt=0.3258530333538241...` and the stronger exact `B_int` are
+defined in CORE, Section 4.
 
-The numerical lower is the September 17 paired-field result above. The
+The lower bounds extend the September 17 paired-field result above. The
 older qualitative source-gain corollary remains valid; CORE's finite
 1/pi proof is unchanged. Convergence is not proved.
 

@@ -1,5 +1,86 @@
 # Handoff: original convergence problem
 
+## 2026-09-24 follow-up: both phases and actual successor flip noise
+
+Two further analytic results, with author review only:
+
+1. [Both-phase disagreement](evidence/NOTE_2026-09-24_BOTH_PHASE_DISAGREEMENT.md)
+   retains the phase previously discarded. A square-completion identity
+   gives a residual-variance floor in both phases, followed by convexity
+   of the Gaussian disagreement angle. For the initial tilted source,
+   `mu_0>=1/5-o_L(1)` and `eta_0>=1/125-o_L(1)`: an eightfold
+   improvement of the earlier conservative eta floor. The interior-only
+   bound becomes `B_both=[B+sqrt(B^2+p^2/(750*(1+p^2)))]/2`.
+2. [Actual successor flip noise](evidence/NOTE_2026-09-24_SUCCESSOR_FLIP_NOISE.md)
+   proves finite cap-free estimates after independently flipping each bad
+   coordinate with probability `0<p<=1/2`. Writing `mu=average E[k]/n`,
+   `g=f-2e`, `d_p=2sqrt(p(1-p)/3)`, and `E_p=d_p+4/3`,
+   `mu'>=p^2 mu` and `g'>=2p d_p mu^(3/2)-2p E_p/sqrt(n)`.
+   These concern the ACTUAL non-Gaussian successor, using conditional
+   flip-coin independence and a shifted fourth-moment estimate.
+
+Keep `t=993/1000`, its existing optimizing p, and `B=B_tilt`. Set
+`G=2p d_p/5^(3/2)`, so `G^2=16p^3(1-p)/375`. The source energy
+bound and sharp deficit closure applied to the actual successor prove
+
+`liminf alpha_n >= B_noise = [B-G/2+sqrt((B+G/2)^2+G^2/(2*(1+p^2)))]/2`.
+
+An exact rational comparison gives `B_noise>B_both>B_int>B_tilt`.
+No new decimal evaluation is claimed. Same-order regularization removes
+the initial fixed cap with the established order of limits. The two gap
+corrections are compared, NOT added to the same successor energy.
+
+There is now quantitative control at every FIXED number j of these
+constant-p updates: `eta_j>=p^(6j)/125-o_L(1)` and
+`g_(j+1)>=G p^(3j)-o_L(1)`, alongside the existing energy recursion.
+The floors decay exponentially. They do not give a useful long-time
+energy limit, state-dependent update control, or cross-order comparison.
+Those are the next unresolved implications. Original convergence is OPEN;
+the completion registry is unchanged.
+
+New checkers, both UNEXECUTED:
+`evidence/both_phase_disagreement_20260924/check.py` and
+`evidence/successor_flip_noise_20260924/check.py`. Each is a serial SymPy
+scalar check with 60-digit (not interval-certified) decimal evaluation.
+Pinned hashes and a fresh-staging remote command are in
+`evidence/successor_flip_noise_20260924/README.md`.
+The NUKA SSH preflight failed with a socket permission error. No controller
+mathematical test, independent review, or new major-milestone backup is
+claimed. The user's earlier Orin `0` report covers only the OLD checker:
+`evidence/paired_disagreement_floor_20260924/USER_REPORTED_CHECK.md`.
+The research is published on
+`research/paired-disagreement-floor-20260924` at commit
+`bd5f2465ec40615d99da0622c26487b42bc496af`. The checker results remain
+pending.
+
+## 2026-09-24: the paired source activates the interior correction
+
+Review of main at `889a4c88c8aa0634693e9b7db54de6db4fa7c18d` and all
+eight requested September 23 commits:
+`evidence/REVIEW_2026-09-24_CURRENT_GAP.md`.
+
+The initial tilted Gaussian phases at `t=993/1000` have phase-averaged
+changed-coordinate fraction at least `1/10-o_L(1)` and therefore
+`eta>=1/1000-o_L(1)` for every fixed source cap L, with constants independent
+of L. The new step uses the existing distinguished-coordinate joint
+Gaussianization lemma and a scalar covariance comparison; it does not
+assume a Gaussian post-update law. Keeping the already-optimized weight p
+and writing B for the previous tilted lower constant gives
+
+`liminf alpha_n >= B_int = [B+sqrt(B^2+p^2/(6000*(1+p^2)))]/2 > B`.
+
+The exact expression was the lower bound at the first checkpoint; it is
+now superseded above. Proof: `evidence/NOTE_2026-09-24_PAIRED_DISAGREEMENT_FLOOR.md`.
+Review is analytic author review only. No check was run at that checkpoint:
+the NUKA preflight failed to resolve its hostname. A subsequent user-reported
+Orin scalar check and its limited scope are recorded in the receipt linked
+above. This supporting lemma required no new major-milestone backup.
+
+This supplies eta control for the INITIAL paired source and makes the
+interior term strictly positive. Quantitative control of actual repeated
+updates, or a neutral-increment extension with summable excess, remains
+missing. The original convergence problem remains OPEN.
+
 ## 2026-09-23: stable-skeleton Hamming geometry
 
 If x,y are stable in the same orientation and differ on T, `|T|=t`,
@@ -149,8 +230,10 @@ This supporting result required no new major-milestone backup.
 
 Next unresolved implication: quantitative control of `e`, `f`, and `eta`
 under actual repeated updates, or an independent cross-order comparison.
-Equation (9) can be used for non-Gaussian laws, but gives no closure for
-their fields. Original convergence remains OPEN; the canonical lower bound is now the later tilted-phase value recorded above.
+Equation (9) alone can be used for non-Gaussian laws, but gives no field
+dynamics. The later September 24 successor note adds a separate finite-time
+field estimate; long-time control is still missing. Original convergence
+remains OPEN; the canonical lower bound is the latest value recorded above.
 
 ## 2026-09-23: coherent excess is pinned at the doubling constant
 
