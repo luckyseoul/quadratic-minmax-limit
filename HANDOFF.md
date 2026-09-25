@@ -1,3 +1,42 @@
+## 2026-09-25: core-signature pairing attacks the one-vertex target directly
+
+The frozen one-vertex route now has a correlation-sensitive certificate that
+does not pay the full reciprocal-square mass `Xi_A(r)`.
+
+Choose a core `C` of active stable classes. Coordinates are grouped by their
+projective sign signatures on `C`; pair coordinates inside each class so
+that every pair cancels every core constraint identically. If `u` coordinates
+remain unmatched and `u<r`, Komlos is applied only to the residual pair
+differences. For a pair `p=(i,j)` with projective relation
+`sigma_j=lambda_p sigma_i`, define
+
+`M_p(r,u)=sum_(s outside C, x_i^s != lambda_p x_j^s) 1/(D_s+r-u)^2`.
+
+If the pairing satisfies
+
+`4 max_p M_p(r,u) <= 1/(18 pi)`,
+
+then there is an ACTUAL incident sign row with extension increment strictly
+below `r`. At `r=r_n` this gives `alpha_(n+1)<alpha_n`; the usual
+Dini-summable excess version also follows.
+
+This replaces the fatal global `Xi` charge by a bottleneck weighted
+DISAGREEMENT charge after annihilating a selected dangerous core. It therefore
+uses redundancy among stable constraints instead of treating them as
+independent rows.
+
+Proof and exact finite search formulation:
+`evidence/NOTE_2026-09-25_CORE_SIGNATURE_PAIRING_EXTENSION.md`.
+Commit: `733be9f82108fb3999208a6720a6b1a5b86bebb3`.
+
+A diagnostic on the recorded exact order-15 minimizer explains why this is
+needed: the neutral old certificate has 301 active antipodal stable classes
+and `Xi_A(r_15)~=14.1414`, versus the required `1/(18 pi)~=0.01768`,
+even though the exact best one-vertex extension only raises `Phi` from
+27 to 30. The next live task is therefore to find/prove a small-core pairing
+with uniformly bounded residual disagreement mass, not to bound `Xi`
+itself.
+
 # Handoff: original convergence problem
 
 ## 2026-09-24: new Komlós theorem hits the cross-order bottleneck
