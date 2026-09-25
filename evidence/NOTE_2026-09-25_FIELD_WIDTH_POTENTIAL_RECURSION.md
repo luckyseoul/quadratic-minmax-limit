@@ -167,7 +167,127 @@ In particular:
 Because F=Theta(n^(3/2)) while there are only n coordinate eliminations,
 the harmless technical condition L>=2 holds throughout the asymptotic regime.
 
-## 6. Explicit second-step formula
+
+
+## 6. Complementary lower bound: normalized width loses at most one
+
+There is also a lower recurrence, after using slab homogeneity to normalize
+every nonzero parent normal by
+
+    ||c||_infty=||d||_infty=1.                              (21)
+
+Write the corresponding normalized half-widths simply as
+
+    w_c=b_c,    w_d=b_d,
+
+and put
+
+    p=c_i,    q=d_i,     0<p,q<=1.                          (22)
+
+For the compatibility child,
+
+    h=q c-p d,
+    beta=q b_c+p b_d-2pq.                                  (23)
+
+As before set g=h/2 and b_g=beta/2. If g is nonzero, let
+
+    m=||g||_infty.
+
+Because the parent infinity norms are one,
+
+    m <= (p+q)/2.                                           (24)
+
+If the weighted parent width
+
+    W=(q w_c+p w_d)/(p+q)                                  (25)
+
+is greater than one, then beta>0 because
+
+    2pq/(p+q) <=1.                                         (26)
+
+Renormalize the child slab by dividing by m. Its normalized half-width is
+
+    w_child=b_g/m.
+
+Using (24) and positivity,
+
+    w_child
+      >= [q w_c+p w_d-2pq]/(p+q)
+      = W-2pq/(p+q)
+      >= W-1.                                               (27)
+
+Therefore
+
+    boxed:
+    w_child
+      >= (q w_c+p w_d)/(p+q)-1.                            (28)
+
+This is the complementary lower estimate to the upper field-width potential.
+
+Original stable slabs have normalized width
+
+    w_x=D_x+r.                                              (29)
+
+Thus along any compatibility tree, normalized width is bounded below by the
+pivot-weighted ancestral average of the original quantities D_x+r, minus one
+for each genuine compatibility step in the corresponding weighted recursion.
+
+In the equal-depth case this takes the clean form
+
+    boxed:
+    generation k child:
+    w >= r + D_bar - k,                                     (30)
+
+where D_bar is a convex combination of the stable deficits at its leaves.
+
+More generally define recursively
+
+    R_leaf=D_leaf,
+    K_leaf=0,
+
+and at a child with pivot weights q,p,
+
+    R_child=(q R_1+p R_2)/(p+q),
+    K_child=1+(q K_1+p K_2)/(p+q).                          (31)
+
+Then, whenever the right side remains positive through the recursion,
+
+    boxed:
+    w_child >= r+R_child-K_child.                           (32)
+
+Hence deep dangerous children can only be assembled from ancestors whose
+pivot-weighted average stable deficit is small enough that it fails to pay
+for the accumulated compatibility cost.
+
+This converts the remaining positivity problem into a near-edge ancestry
+problem rather than an uncontrolled coefficient problem.
+
+## 7. Exact second-step specialization
+
+First-generation normals are in {0,+-1}^n. If two such slabs participate in
+the next genuine elimination, orient them so their pivot entries are both
+one. Their normalized child is
+
+    g=(c-d)/2,                                               (33)
+
+so
+
+    g_j in {0,+-1/2,+-1}.                                   (34)
+
+If the parent potentials are at most F+r-1, then
+
+    boxed:
+    b_g+(1/2)||A g||_1 <= F+r-2.                            (35)
+
+If the two parent normalized half-widths are w_c,w_d, then also
+
+    boxed:
+    w_child >= (w_c+w_d)/2-1.                               (36)
+
+Thus the second transform has simultaneous upper field control and lower
+width control, even though its normal is genuinely non-Boolean.
+
+## 8. Relation to the opposite-phase dominance result
 
 First-generation normals are in {0,+-1}^n. If two such slabs participate in
 the next genuine elimination, orient them so their pivot entries are both
@@ -188,7 +308,7 @@ Thus the second transform's non-Boolean coefficients are quantitatively
 controlled without requiring the two parent constraints to share a switching
 gauge.
 
-## 7. Relation to the opposite-phase dominance result
+
 
 For an opposite-phase first-generation child v=x 1_T with
 d=(D_x+D_y)/2, the previous vertexwise-dominance note gives the sharper
@@ -208,21 +328,19 @@ The new recurrence shows that this is not an isolated opposite-phase
 phenomenon: the same potential is the correct common quantity for every
 compatibility child and it continues through non-Boolean generations.
 
-## 8. What remains open
+## 9. What remains open
 
-Equation (20) is an UPPER control on
+Equations (20) and (32) now give both an upper field-width control and a
+lower normalized-width recursion. They guarantee positivity through every
+branch for which the pivot-weighted ancestral deficit reserve pays the
+accumulated compatibility cost.
 
-    b + (1/2)||A c||_1.
+The remaining obstruction is narrower: one must rule out a deep
+compatibility branch with
 
-It does not by itself prove that every generated half-width b stays positive.
-That is now the precise obstruction. The previous concern that coefficients
-or field magnitudes become uncontrolled after one or two transforms is
-removed.
+    r+R_child-K_child <= 0,
 
-A completion of this route needs a complementary lower estimate forcing
-
-    b>0
-
-for every scalar compatibility constraint encountered through n elimination
-steps, or a direct density/section argument that bypasses those scalar
-positivity checks.
+that is, a branch built from an unusually low pivot-weighted average of
+near-edge stable deficits. The coefficient-growth problem and the generic
+non-Boolean-normal problem are removed; what remains is a near-edge ancestry
+problem in the stable skeleton.
