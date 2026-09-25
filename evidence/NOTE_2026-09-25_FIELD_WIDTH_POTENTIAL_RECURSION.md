@@ -289,27 +289,6 @@ width control, even though its normal is genuinely non-Boolean.
 
 ## 8. Relation to the opposite-phase dominance result
 
-First-generation normals are in {0,+-1}^n. If two such slabs participate in
-the next genuine elimination, orient them so their pivot entries are both
-one. Their normalized child is
-
-    g=(c-d)/2,                                               (21)
-
-so
-
-    g_j in {0,+-1/2,+-1}.                                   (22)
-
-If the parent potentials are at most F+r-1, then
-
-    boxed:
-    b_g+(1/2)||A g||_1 <= F+r-2.                            (23)
-
-Thus the second transform's non-Boolean coefficients are quantitatively
-controlled without requiring the two parent constraints to share a switching
-gauge.
-
-
-
 For an opposite-phase first-generation child v=x 1_T with
 d=(D_x+D_y)/2, the previous vertexwise-dominance note gives the sharper
 direct field estimate
