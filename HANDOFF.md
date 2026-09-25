@@ -1,3 +1,40 @@
+## 2026-09-25: field-width potential controls all transformed normals
+
+The non-Boolean coefficient-growth problem in the Banaszczyk recursion is
+now resolved by a common slab potential.
+
+For a transformed slab `|c.z|<b`, padded by zeros on eliminated
+coordinates, define
+
+`P_A(c,b)=b+(1/2)||A c||_1`.
+
+Every original stable slab satisfies exactly `P_A=F+r`. For the general
+compatibility child
+`h=d_i c-c_i d`,
+`beta=d_i b_c+c_i b_d-2c_i d_i`,
+normalize by `g=h/2, b_g=beta/2`. If the parents have
+`||c||_infty,||d||_infty<=1`, then so does the child, and
+
+`P_A(g,b_g) <= [d_i P_A(c)+c_i P_A(d)]/2-c_i d_i`.
+
+If both parent potentials are at most `L>=2`, the right side is at most
+`L-1` for every nonzero pivot pair `0<c_i,d_i<=1`. Hence every genuine
+compatibility generation drops the potential by at least one unit, while
+zero-pivot slabs persist unchanged.
+
+So arbitrary non-Boolean normals remain infinity-normalized and field-width
+controlled at all depths. The explicit obstruction is now narrower:
+this is an upper potential bound and does not yet force every generated
+half-width to stay positive.
+
+Proof:
+`evidence/NOTE_2026-09-25_FIELD_WIDTH_POTENTIAL_RECURSION.md`.
+Commit: `4c2c9bde89cd5b790bf0dc835d9aa2d5c6c32dca`.
+
+Next live target: find a complementary LOWER estimate on generated
+half-widths, or bypass scalar positivity through an exact section/density
+argument.
+
 ## 2026-09-25: opposite-phase children have vertexwise bipartite dominance
 
 The current Banaszczyk recursion had one explicit structural gap: opposite-
