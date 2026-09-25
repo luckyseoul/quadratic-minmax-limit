@@ -1,3 +1,34 @@
+## 2026-09-25: opposite-phase children have vertexwise bipartite dominance
+
+The current Banaszczyk recursion had one explicit structural gap: opposite-
+phase parent pairs produced child supports with only an aggregate size lower
+bound. That branch now has a stronger inherited constraint.
+
+Switch by the +stable parent x. If y is -stable and T is their disagreement
+cut, write a_i for the signed degree of vertex i inside its own side and c_i
+for its signed degree across T|T^c. Then, vertex by vertex,
+
+`c_i >= |a_i|`.
+
+Thus every signed cross-degree is nonnegative and dominates the magnitude of
+the corresponding internal signed degree. If
+`C=F-(D_x+D_y)/2` is the parent cross energy, then
+
+`||B[T]1||_1 <= C` and `||B[T^c]1||_1 <= C`.
+
+So opposite-phase children are not arbitrary unsupported principal states:
+their support is one side of a vertexwise-dominant signed cut. This is
+strictly stronger than the prior aggregate bound `|T|(n-|T|)>=C` and feeds
+directly into the one-vertex transform route.
+
+Proof:
+`evidence/NOTE_2026-09-25_OPPOSITE_PHASE_BIPARTITE_DOMINANCE.md`.
+Commit: `aaaa0da2bb2a2468b5175b1064b7b841b9b4d5b3`.
+
+This does NOT yet close the recursion or convergence. The next live question
+is whether vertexwise dominance is preserved strongly enough under the next
+coordinate transform to control the resulting non-Boolean normals.
+
 ## 2026-09-25: core-signature pairing attacks the one-vertex target directly
 
 The frozen one-vertex route now has a correlation-sensitive certificate that
