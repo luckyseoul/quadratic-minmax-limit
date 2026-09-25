@@ -1,7 +1,7 @@
 ## 2026-09-25: field-width potential controls all transformed normals
 
-The non-Boolean coefficient-growth problem in the Banaszczyk recursion is
-now resolved by a common slab potential.
+The Banaszczyk recursion now has BOTH an upper field-width invariant and a
+lower normalized-width recursion.
 
 For a transformed slab `|c.z|<b`, padded by zeros on eliminated
 coordinates, define
@@ -12,28 +12,42 @@ Every original stable slab satisfies exactly `P_A=F+r`. For the general
 compatibility child
 `h=d_i c-c_i d`,
 `beta=d_i b_c+c_i b_d-2c_i d_i`,
-normalize by `g=h/2, b_g=beta/2`. If the parents have
-`||c||_infty,||d||_infty<=1`, then so does the child, and
+normalize by `g=h/2, b_g=beta/2`. Infinity norm remains at most one, and
+if both parent potentials are at most `L>=2`, then the child potential is
+at most `L-1`. Thus every genuine compatibility generation drops the
+potential by one; non-Boolean coefficient growth is controlled at all depths.
 
-`P_A(g,b_g) <= [d_i P_A(c)+c_i P_A(d)]/2-c_i d_i`.
+Complementary lower bound: rescale nonzero parent normals to infinity norm
+one and write their normalized half-widths as `w_c,w_d`, with positive
+pivot magnitudes `p=c_i,q=d_i`. Then
 
-If both parent potentials are at most `L>=2`, the right side is at most
-`L-1` for every nonzero pivot pair `0<c_i,d_i<=1`. Hence every genuine
-compatibility generation drops the potential by at least one unit, while
-zero-pivot slabs persist unchanged.
+`w_child >= (q w_c+p w_d)/(p+q)-1`.
 
-So arbitrary non-Boolean normals remain infinity-normalized and field-width
-controlled at all depths. The explicit obstruction is now narrower:
-this is an upper potential bound and does not yet force every generated
-half-width to stay positive.
+Original widths are `D+r`. Hence an equal-depth generation-`k` child
+satisfies
+
+`w >= r + D_bar - k`
+
+for a convexly weighted ancestral stable deficit `D_bar`. The fully
+general recursion uses pivot-weighted reserve/cost variables
+`R_child=(qR_1+pR_2)/(p+q)`,
+`K_child=1+(qK_1+pK_2)/(p+q)`, giving
+`w>=r+R_child-K_child` while positive.
+
+So the remaining obstruction is no longer coefficient growth or generic
+non-Boolean normals. It is a deep compatibility branch whose pivot-weighted
+near-edge deficit reserve fails to pay its accumulated transform cost.
 
 Proof:
 `evidence/NOTE_2026-09-25_FIELD_WIDTH_POTENTIAL_RECURSION.md`.
-Commit: `4c2c9bde89cd5b790bf0dc835d9aa2d5c6c32dca`.
+Commits: `4c2c9bde89cd5b790bf0dc835d9aa2d5c6c32dca`,
+`afbc3e26e8be1d1852f16f511b6a71463ee21a61`,
+cleanup `d286342d1c89dc6fdf0cb60d3d8423f389bed963`.
 
-Next live target: find a complementary LOWER estimate on generated
-half-widths, or bypass scalar positivity through an exact section/density
-argument.
+Next live target: rule out low-deficit ancestry deep enough that
+`r+R-K<=0`, using the stable-skeleton geometry rather than another
+generic discrepancy bound.
+
 
 ## 2026-09-25: opposite-phase children have vertexwise bipartite dominance
 
