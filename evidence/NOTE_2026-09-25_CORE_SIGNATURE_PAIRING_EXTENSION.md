@@ -5,6 +5,17 @@
 incident sign row from a strictly more correlation-sensitive certificate
 than the reciprocal-square mass `Xi_A(r)`.
 
+DUPLICATION AUDIT: the core-signature pairing itself is NOT new. Section 7
+of `NOTE_2026-09-01_ONE_TWO_BIBALANCED_HADAMARD.md` already partitions
+coordinates by complete relative-sign signatures, pairs inside each class,
+annihilates every fixed anchor on the paired core, and records the
+`2^(R-1)` leftover bound. The new content here is specifically the
+one-vertex conversion: after that existing annihilation step, apply the
+Guo--Fang--Lu Komlos theorem to the residual pair-difference vectors with
+state-dependent weights `1/(D_s+r-u)`, yielding the bottleneck residual
+mass criterion (2)--(4). Do not count the signature-pairing mechanism itself
+as a new result.
+
 Let `A` be a complete symmetric zero-diagonal signing of order `n`,
 put `F=Phi(A)`, and let `T_A` be the antipodal stable skeleton from
 `NOTE_2026-09-23_STABLE_STATE_EXTENSION_REDUCTION.md`. For each
