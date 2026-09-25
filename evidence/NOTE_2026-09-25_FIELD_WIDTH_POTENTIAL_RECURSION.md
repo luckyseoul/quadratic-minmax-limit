@@ -3,8 +3,10 @@
 2026-09-25. Direct continuation of the frozen one-vertex extension route.
 This note resolves the coefficient-growth concern left explicit in
 `NOTE_2026-09-25_BANASZCZYK_STABLE_RECURSION.md`. It does NOT prove
-convergence: the remaining issue is a lower/positivity control on the child
-half-widths, not an upper control on transformed normals.
+convergence. It supplies both an upper field-width invariant and a lower
+normalized-width recursion. The remaining issue is to exclude deep
+compatibility ancestry whose pivot-weighted near-edge deficit reserve is too
+small to pay the accumulated transform cost.
 
 Duplication audit: repository searches for "field width invariant",
 "Banaszczyk field norm", "transformed slab potential", "non-Boolean normals
