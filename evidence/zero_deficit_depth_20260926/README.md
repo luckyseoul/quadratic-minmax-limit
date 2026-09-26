@@ -119,6 +119,6 @@ The fast engine was re-validated against the CuPy-fallback revision
     scripts/zero_deficit_transform_depth.py   8e06c760b936ef44c31c2560e51b994e0ac4c9ad8a8a4754c840769839705a21  (10fbea8 + c5df76c CuPy-fallback fix)
     scripts/zero_deficit_depth_fast.py        71e08a794d8a4d18653d95220edb472acabfcfed6007339288e95ccf74fc1e18
 
-Environment: soulkiller, Python 3.14.4, numpy 2.4.4. The two independent
-n=30 Paley runs (reference script single-core; parallel engine with 60
-workers) were still running when this record was written.
+Environment: soulkiller, Python 3.14.4, numpy 2.4.4. The n=30 Paley
+object was attempted with two engines and stopped unfinished (duplicated
+compute; recorded here so it is not mistaken for a pending verification).
