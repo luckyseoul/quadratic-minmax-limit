@@ -1,3 +1,37 @@
+## 2026-09-26: deficit-aware constructive discriminator prepared, not executed
+
+The next discriminator requested below now has an implementation:
+`scripts/deficit_transform_certificate.py`. It includes positive stable
+deficits and both phases, carries exact rational reserve/cost data, and
+recovers an actual incident sign row when its sufficient transform path
+completes. It uses zero-coordinate **sections**, retaining expanded original
+slabs as well as pair constraints. The prior projected zero-deficit depth
+calculation is unchanged.
+
+This checkpoint is **PREPARED, NOT EXECUTED**. No new row, finite norm bound,
+or convergence-producing estimate has been obtained. A stopped transform
+is inconclusive about existence of a row; budget exhaustion is separately
+reported. Cached skeleton completeness is explicitly conditional unless
+the program performs the complete enumeration in that run.
+
+Proof and scope:
+`evidence/NOTE_2026-09-26_DEFICIT_TRANSFORM_CERTIFICATE.md`.
+Provenance and hashes:
+`evidence/deficit_transform_20260926/checkpoint.json`.
+Review is analytic/code author review and syntax validation only. The
+first external verification command, from the repository checkout, is:
+
+```sh
+python3 -m unittest discover -s tests -p test_deficit_transform_certificate.py -v
+```
+
+No test or mathematical computation was dispatched to any host. Honor the
+external-execution instruction in the final checkpoint below; do not turn
+this prepared code into a claimed execution. Before a subsequent research
+run, use the fetch, matrix/output and process deduplication checks below.
+Reuse any saved stable skeleton when changing only the target or ordering.
+No new major milestone or major-milestone backup is claimed.
+
 ## 2026-09-26: zero-deficit transform-depth discriminator executed
 
 The discriminator committed earlier today (`10fbea8`,

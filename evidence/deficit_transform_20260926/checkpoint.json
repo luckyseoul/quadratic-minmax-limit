@@ -1,0 +1,38 @@
+{
+  "backup": null,
+  "base_head": "35200b010905a00c004e15379122b7952d18b110",
+  "classification": "PREPARED_NOT_EXECUTED",
+  "convergence_proved": false,
+  "date": "2026-09-26",
+  "deduplication": {
+    "campaign_archive_matching_members": 0,
+    "campaign_archive_text_code_members_checked": 194,
+    "current_notes_and_code": true,
+    "linked_worktrees_checked": 3,
+    "local_and_remote_branch_refs_checked": 22,
+    "new_object": "deficit-aware transform sections with retained slabs and actual sign recovery",
+    "reused": [
+      "NOTE_2026-09-23_STABLE_STATE_EXTENSION_REDUCTION.md",
+      "NOTE_2026-09-25_BANASZCZYK_STABLE_RECURSION.md",
+      "NOTE_2026-09-25_FIELD_WIDTH_POTENTIAL_RECURSION.md"
+    ]
+  },
+  "files_sha256": {
+    "evidence/NOTE_2026-09-26_DEFICIT_TRANSFORM_CERTIFICATE.md": "bcabf3990550bc15db73c5f62e8e01d5e37731c9c17a6e14500a5725e9dd373a",
+    "scripts/deficit_transform_certificate.py": "5e864e105f59e33e6cb1e803371de0763237de8b2cacebf1c0a35bf0de8735a4",
+    "tests/test_deficit_transform_certificate.py": "d022fa694855658d995ed61c72c0c4bc6ca7fb48adc571c326c7abe2719566a9"
+  },
+  "major_milestone": false,
+  "new_extension_row": false,
+  "new_norm_bound": false,
+  "next_unresolved_implication": "First run the focused external regressions; all-orders success with a summable excess remains unproved.",
+  "owned_compute_jobs_started": 0,
+  "validation": {
+    "analytic_and_code_review": "author review only",
+    "command": "python3 -m unittest discover -s tests -p test_deficit_transform_certificate.py -v",
+    "external_regressions": "NOT_RUN",
+    "independent_review": false,
+    "research_runs": "NOT_RUN",
+    "syntax": "Python ast.parse passed for the program and regression file"
+  }
+}

@@ -1,6 +1,14 @@
 # Current mathematical status
 
-Updated 2026-09-24. The original MO limit is OPEN.
+Updated 2026-09-26. The original MO limit is OPEN.
+
+Prepared, not executed: the
+[deficit-aware transform certificate](evidence/NOTE_2026-09-26_DEFICIT_TRANSFORM_CERTIFICATE.md)
+implements the handoff's next discriminator with both stable phases,
+positive deficits, exact transform sections, and Boolean sign recovery.
+Syntax validation and analytic/code author review are complete; external
+regressions are pending. No new row, norm bound, or summable-error estimate
+has been obtained. This is a prepared tool, not a new mathematical milestone.
 
 New September-2026 discrepancy input attacks the CROSS-ORDER gap:
 [evidence/NOTE_2026-09-24_KOMLOS_ONE_VERTEX_EXTENSION.md](evidence/NOTE_2026-09-24_KOMLOS_ONE_VERTEX_EXTENSION.md)
