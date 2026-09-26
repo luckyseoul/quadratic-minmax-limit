@@ -1,3 +1,47 @@
+## 2026-09-26: final checkpoint before model-upgrade retry
+
+The current attempt did **not** obtain a proof of convergence or a new
+convergence-producing recurrence. Do not reinterpret the September 25--26
+supporting work as such.
+
+Latest valid committed work:
+
+- `f3bff9433ef7` / `afbc3e26e8be`: the Banaszczyk transform recursion
+  has an all-depth field-width upper potential and a complementary normalized
+  width lower recursion. This controls generated non-Boolean normals but does
+  not prove positivity along every ancestry branch.
+- `10fbea8ed3f7`: exact zero-deficit same-phase transform-depth
+  discriminator.
+- `d99955b01db8`: finite K15 discriminator result. For the recorded
+  order-15 exact minimizer, `Phi=27`, neutral buffer
+  `r_15=2.7445120988729617`, and minimax zero-deficit same-phase depth is
+  2, with witness chain `15 -> 8 -> 4`. This is finite evidence only and
+  is **not** a convergence theorem.
+- `c5df76c0ab77`: the discriminator script falls back to NumPy if CuPy
+  runtime compilation fails.
+
+Important strategic record for the next attempt:
+
+1. The user explicitly rejects further accumulation of negative results,
+   obstruction catalogs, finite route-kills, and micro-lemmas as "progress".
+   A useful result must construct an extension/composition with summable
+   error, prove a convergence-producing recurrence, or prove convergence.
+2. Before claiming novelty, perform a repo-wide deduplication audit. Several
+   mechanisms were rediscovered during this campaign.
+3. Do not run substantial calculations inside the model environment. If a
+   calculation is genuinely needed, package it as one explicit command and
+   hand it to the user for the external compute hosts.
+4. Do not assume the one-vertex Banaszczyk architecture deserves further
+   investment merely because much work has accumulated around it. Synthesis
+   or replacement is preferred over another supporting lemma.
+5. The exact target remains a cross-order estimate such as
+   `m_(n+1) <= m_n (1+1/n)^(3/2) + rho_n` with
+   `sum rho_n/(n+1)^(3/2) < infinity`, or an equivalent Dini-summable
+   multiplier-2/-3 composition theorem.
+
+No additional theorem from the final exploratory pass was committed because
+none met that standard.
+
 ## 2026-09-25: field-width potential controls all transformed normals
 
 The Banaszczyk recursion now has BOTH an upper field-width invariant and a
