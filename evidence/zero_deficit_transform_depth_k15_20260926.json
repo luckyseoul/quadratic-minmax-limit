@@ -1,0 +1,32 @@
+{
+  "date": "2026-09-26",
+  "source": "evidence/K15_exact_minimizer_20260911.json",
+  "n": 15,
+  "Phi": 27,
+  "P": 27,
+  "N": 25,
+  "neutral_r": 2.7445120988729617,
+  "zero_deficit_phase": "+",
+  "minimax_zero_deficit_same_phase_depth": 2,
+  "margin_r_minus_depth": 0.7445120988729617,
+  "safe_for_pure_zero_deficit_branch": true,
+  "witness_chain": [
+    {
+      "depth_remaining": 2,
+      "order": 15,
+      "pivot": 0,
+      "child_order": 8,
+      "subset_hex": "0x7fff",
+      "child_hex": "0x20fe"
+    },
+    {
+      "depth_remaining": 1,
+      "order": 8,
+      "pivot": 1,
+      "child_order": 4,
+      "subset_hex": "0x20fe",
+      "child_hex": "0x2054"
+    }
+  ],
+  "scope": "finite discriminator only; not an asymptotic proof"
+}
