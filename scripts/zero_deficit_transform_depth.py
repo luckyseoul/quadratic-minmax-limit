@@ -75,9 +75,14 @@ class Engine:
             try:
                 import cupy as cp
                 self.cp = cp
+                # Force one tiny runtime compilation now.  Importing CuPy can
+                # succeed even when NVRTC/header versions are incompatible.
+                _ = cp.sum(cp.asarray([1], dtype=cp.int16)).item()
                 self.gpu = True
             except Exception as e:
-                print(f"[warn] CuPy unavailable, using NumPy: {e}", file=sys.stderr)
+                print(f"[warn] CuPy runtime unavailable, using NumPy: {e}", file=sys.stderr)
+                self.cp = None
+                self.gpu = False
 
         self.max_cache = {}
         self.depth_cache = {}
