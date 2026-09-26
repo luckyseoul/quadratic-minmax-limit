@@ -1,0 +1,86 @@
+{
+  "matrix": "/tmp/paley_n26.json",
+  "n": 26,
+  "Phi": 65,
+  "P": 65,
+  "N": 65,
+  "neutral_r": 3.7858298242842023,
+  "criterion": "pure zero-deficit same-phase branch is safe iff minimax depth < r",
+  "phases": [
+    {
+      "phase": "+",
+      "root_edge": 65,
+      "root_deficit": 0,
+      "zero_deficit_present": true,
+      "depth": 3,
+      "margin_r_minus_depth": 0.7858298242842023,
+      "safe_for_pure_zero_deficit_branch": true,
+      "best_first_pivot": 0,
+      "chain": [
+        {
+          "depth_remaining": 3,
+          "order": 26,
+          "pivot": 0,
+          "child_order": 20,
+          "subset_hex": "0x3ffffff",
+          "child_hex": "0x36fedfc"
+        },
+        {
+          "depth_remaining": 2,
+          "order": 20,
+          "pivot": 2,
+          "child_order": 14,
+          "subset_hex": "0x36fedfc",
+          "child_hex": "0x6fec58"
+        },
+        {
+          "depth_remaining": 1,
+          "order": 14,
+          "pivot": 3,
+          "child_order": 8,
+          "subset_hex": "0x6fec58",
+          "child_hex": "0x654c40"
+        }
+      ]
+    },
+    {
+      "phase": "-",
+      "root_edge": 65,
+      "root_deficit": 0,
+      "zero_deficit_present": true,
+      "depth": 3,
+      "margin_r_minus_depth": 0.7858298242842023,
+      "safe_for_pure_zero_deficit_branch": true,
+      "best_first_pivot": 0,
+      "chain": [
+        {
+          "depth_remaining": 3,
+          "order": 26,
+          "pivot": 0,
+          "child_order": 20,
+          "subset_hex": "0x3ffffff",
+          "child_hex": "0x3ff07fe"
+        },
+        {
+          "depth_remaining": 2,
+          "order": 20,
+          "pivot": 1,
+          "child_order": 14,
+          "subset_hex": "0x3ff07fe",
+          "child_hex": "0x38f075c"
+        },
+        {
+          "depth_remaining": 1,
+          "order": 14,
+          "pivot": 2,
+          "child_order": 8,
+          "subset_hex": "0x38f075c",
+          "child_hex": "0x20d0550"
+        }
+      ]
+    }
+  ],
+  "principal_blocks_evaluated": 7049,
+  "depth_states_evaluated": 7050,
+  "gpu": false
+}

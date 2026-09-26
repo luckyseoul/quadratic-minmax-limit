@@ -1,0 +1,51 @@
+{
+  "matrix": "evidence/m19_phi39_witness_20260911.json",
+  "n": 19,
+  "Phi": 39,
+  "P": 39,
+  "N": 37,
+  "neutral_r": 3.1191112961273784,
+  "criterion": "pure zero-deficit same-phase branch is safe iff minimax depth < r",
+  "phases": [
+    {
+      "phase": "+",
+      "root_edge": 39,
+      "root_deficit": 0,
+      "zero_deficit_present": true,
+      "depth": 2,
+      "margin_r_minus_depth": 1.1191112961273784,
+      "safe_for_pure_zero_deficit_branch": true,
+      "best_first_pivot": 0,
+      "chain": [
+        {
+          "depth_remaining": 2,
+          "order": 19,
+          "pivot": 0,
+          "child_order": 12,
+          "subset_hex": "0x7ffff",
+          "child_hex": "0x383fe"
+        },
+        {
+          "depth_remaining": 1,
+          "order": 12,
+          "pivot": 1,
+          "child_order": 6,
+          "subset_hex": "0x383fe",
+          "child_hex": "0x38070"
+        }
+      ]
+    },
+    {
+      "phase": "-",
+      "root_edge": 37,
+      "root_deficit": 2,
+      "zero_deficit_present": false,
+      "depth": 0,
+      "margin_r_minus_depth": 3.1191112961273784,
+      "chain": []
+    }
+  ],
+  "principal_blocks_evaluated": 6491,
+  "depth_states_evaluated": 6508,
+  "gpu": false
+}

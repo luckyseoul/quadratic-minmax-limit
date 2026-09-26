@@ -1,0 +1,72 @@
+{
+  "matrix": "/tmp/plusI_n26.json",
+  "n": 26,
+  "Phi": 61,
+  "P": 61,
+  "N": 61,
+  "neutral_r": 3.5528556812513283,
+  "criterion": "pure zero-deficit same-phase branch is safe iff minimax depth < r",
+  "phases": [
+    {
+      "phase": "+",
+      "root_edge": 61,
+      "root_deficit": 0,
+      "zero_deficit_present": true,
+      "depth": 2,
+      "margin_r_minus_depth": 1.5528556812513283,
+      "safe_for_pure_zero_deficit_branch": true,
+      "best_first_pivot": 0,
+      "chain": [
+        {
+          "depth_remaining": 2,
+          "order": 26,
+          "pivot": 0,
+          "child_order": 24,
+          "subset_hex": "0x3ffffff",
+          "child_hex": "0x3ffdffe"
+        },
+        {
+          "depth_remaining": 1,
+          "order": 24,
+          "pivot": 1,
+          "child_order": 16,
+          "subset_hex": "0x3ffdffe",
+          "child_hex": "0x3c3cdec"
+        }
+      ]
+    },
+    {
+      "phase": "-",
+      "root_edge": 61,
+      "root_deficit": 0,
+      "zero_deficit_present": true,
+      "depth": 2,
+      "margin_r_minus_depth": 1.5528556812513283,
+      "safe_for_pure_zero_deficit_branch": true,
+      "best_first_pivot": 0,
+      "chain": [
+        {
+          "depth_remaining": 2,
+          "order": 26,
+          "pivot": 0,
+          "child_order": 24,
+          "subset_hex": "0x3ffffff",
+          "child_hex": "0x3ffdffe"
+        },
+        {
+          "depth_remaining": 1,
+          "order": 24,
+          "pivot": 1,
+          "child_order": 14,
+          "subset_hex": "0x3ffdffe",
+          "child_hex": "0x1ff88c4"
+        }
+      ]
+    }
+  ],
+  "principal_blocks_evaluated": 99943,
+  "depth_states_evaluated": 100404,
+  "engine": "packed-popcount",
+  "workers": 84,
+  "seconds": 1522.68
+}

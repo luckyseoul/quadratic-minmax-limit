@@ -1,0 +1,70 @@
+{
+  "matrix": "/tmp/paley_n14.json",
+  "n": 14,
+  "Phi": 21,
+  "P": 21,
+  "N": 21,
+  "neutral_r": 2.2897126278044553,
+  "criterion": "pure zero-deficit same-phase branch is safe iff minimax depth < r",
+  "phases": [
+    {
+      "phase": "+",
+      "root_edge": 21,
+      "root_deficit": 0,
+      "zero_deficit_present": true,
+      "depth": 2,
+      "margin_r_minus_depth": 0.2897126278044553,
+      "safe_for_pure_zero_deficit_branch": true,
+      "best_first_pivot": 0,
+      "chain": [
+        {
+          "depth_remaining": 2,
+          "order": 14,
+          "pivot": 0,
+          "child_order": 12,
+          "subset_hex": "0x3fff",
+          "child_hex": "0x2ffe"
+        },
+        {
+          "depth_remaining": 1,
+          "order": 12,
+          "pivot": 1,
+          "child_order": 4,
+          "subset_hex": "0x2ffe",
+          "child_hex": "0x2a04"
+        }
+      ]
+    },
+    {
+      "phase": "-",
+      "root_edge": 21,
+      "root_deficit": 0,
+      "zero_deficit_present": true,
+      "depth": 2,
+      "margin_r_minus_depth": 0.2897126278044553,
+      "safe_for_pure_zero_deficit_branch": true,
+      "best_first_pivot": 0,
+      "chain": [
+        {
+          "depth_remaining": 2,
+          "order": 14,
+          "pivot": 0,
+          "child_order": 12,
+          "subset_hex": "0x3fff",
+          "child_hex": "0x2ffe"
+        },
+        {
+          "depth_remaining": 1,
+          "order": 12,
+          "pivot": 1,
+          "child_order": 8,
+          "subset_hex": "0x2ffe",
+          "child_hex": "0x2b9c"
+        }
+      ]
+    }
+  ],
+  "principal_blocks_evaluated": 2419,
+  "depth_states_evaluated": 3342,
+  "gpu": false
+}

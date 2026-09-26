@@ -1,0 +1,72 @@
+{
+  "matrix": "/tmp/A9_exact.json",
+  "n": 9,
+  "Phi": 12,
+  "P": 12,
+  "N": 12,
+  "neutral_r": 2.05456737852613,
+  "criterion": "pure zero-deficit same-phase branch is safe iff minimax depth < r",
+  "phases": [
+    {
+      "phase": "+",
+      "root_edge": 12,
+      "root_deficit": 0,
+      "zero_deficit_present": true,
+      "depth": 2,
+      "margin_r_minus_depth": 0.05456737852613003,
+      "safe_for_pure_zero_deficit_branch": true,
+      "best_first_pivot": 0,
+      "chain": [
+        {
+          "depth_remaining": 2,
+          "order": 9,
+          "pivot": 0,
+          "child_order": 3,
+          "subset_hex": "0x1ff",
+          "child_hex": "0xb0"
+        },
+        {
+          "depth_remaining": 1,
+          "order": 3,
+          "pivot": 4,
+          "child_order": 2,
+          "subset_hex": "0xb0",
+          "child_hex": "0xa0"
+        }
+      ]
+    },
+    {
+      "phase": "-",
+      "root_edge": 12,
+      "root_deficit": 0,
+      "zero_deficit_present": true,
+      "depth": 2,
+      "margin_r_minus_depth": 0.05456737852613003,
+      "safe_for_pure_zero_deficit_branch": true,
+      "best_first_pivot": 0,
+      "chain": [
+        {
+          "depth_remaining": 2,
+          "order": 9,
+          "pivot": 0,
+          "child_order": 8,
+          "subset_hex": "0x1ff",
+          "child_hex": "0x1fe"
+        },
+        {
+          "depth_remaining": 1,
+          "order": 8,
+          "pivot": 1,
+          "child_order": 6,
+          "subset_hex": "0x1fe",
+          "child_hex": "0x1dc"
+        }
+      ]
+    }
+  ],
+  "principal_blocks_evaluated": 150,
+  "depth_states_evaluated": 173,
+  "engine": "packed-popcount",
+  "workers": 4,
+  "seconds": 0.02
+}

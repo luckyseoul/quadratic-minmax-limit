@@ -1,0 +1,86 @@
+{
+  "matrix": "evidence/coherent_BI_lift_20260919/best_n25.json",
+  "n": 25,
+  "Phi": 60,
+  "P": 60,
+  "N": 60,
+  "neutral_r": 3.635763529637961,
+  "criterion": "pure zero-deficit same-phase branch is safe iff minimax depth < r",
+  "phases": [
+    {
+      "phase": "+",
+      "root_edge": 60,
+      "root_deficit": 0,
+      "zero_deficit_present": true,
+      "depth": 3,
+      "margin_r_minus_depth": 0.6357635296379609,
+      "safe_for_pure_zero_deficit_branch": true,
+      "best_first_pivot": 0,
+      "chain": [
+        {
+          "depth_remaining": 3,
+          "order": 25,
+          "pivot": 0,
+          "child_order": 20,
+          "subset_hex": "0x1ffffff",
+          "child_hex": "0x1feeeee"
+        },
+        {
+          "depth_remaining": 2,
+          "order": 20,
+          "pivot": 1,
+          "child_order": 14,
+          "subset_hex": "0x1feeeee",
+          "child_hex": "0x15cee64"
+        },
+        {
+          "depth_remaining": 1,
+          "order": 14,
+          "pivot": 2,
+          "child_order": 8,
+          "subset_hex": "0x15cee64",
+          "child_hex": "0x104e860"
+        }
+      ]
+    },
+    {
+      "phase": "-",
+      "root_edge": 60,
+      "root_deficit": 0,
+      "zero_deficit_present": true,
+      "depth": 3,
+      "margin_r_minus_depth": 0.6357635296379609,
+      "safe_for_pure_zero_deficit_branch": true,
+      "best_first_pivot": 0,
+      "chain": [
+        {
+          "depth_remaining": 3,
+          "order": 25,
+          "pivot": 0,
+          "child_order": 20,
+          "subset_hex": "0x1ffffff",
+          "child_hex": "0x1fbf5fa"
+        },
+        {
+          "depth_remaining": 2,
+          "order": 20,
+          "pivot": 1,
+          "child_order": 14,
+          "subset_hex": "0x1fbf5fa",
+          "child_hex": "0x1e335f0"
+        },
+        {
+          "depth_remaining": 1,
+          "order": 14,
+          "pivot": 4,
+          "child_order": 8,
+          "subset_hex": "0x1e335f0",
+          "child_hex": "0x1433480"
+        }
+      ]
+    }
+  ],
+  "principal_blocks_evaluated": 7046,
+  "depth_states_evaluated": 7047,
+  "gpu": false
+}

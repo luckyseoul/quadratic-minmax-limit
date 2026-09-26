@@ -1,0 +1,46 @@
+{
+  "matrix": "/tmp/twohalf_n7.json",
+  "n": 7,
+  "Phi": 9,
+  "P": 7,
+  "N": 9,
+  "neutral_r": 1.9958910958254603,
+  "criterion": "pure zero-deficit same-phase branch is safe iff minimax depth < r",
+  "phases": [
+    {
+      "phase": "+",
+      "root_edge": 7,
+      "root_deficit": 2,
+      "zero_deficit_present": false,
+      "depth": 0,
+      "margin_r_minus_depth": 1.9958910958254603,
+      "safe_for_pure_zero_deficit_branch": null,
+      "chain": []
+    },
+    {
+      "phase": "-",
+      "root_edge": 9,
+      "root_deficit": 0,
+      "zero_deficit_present": true,
+      "depth": 1,
+      "margin_r_minus_depth": 0.9958910958254603,
+      "safe_for_pure_zero_deficit_branch": true,
+      "best_first_pivot": 0,
+      "chain": [
+        {
+          "depth_remaining": 1,
+          "order": 7,
+          "pivot": 0,
+          "child_order": 4,
+          "subset_hex": "0x7f",
+          "child_hex": "0x1e"
+        }
+      ]
+    }
+  ],
+  "principal_blocks_evaluated": 5,
+  "depth_states_evaluated": 6,
+  "engine": "packed-popcount",
+  "workers": 4,
+  "seconds": 0.0
+}

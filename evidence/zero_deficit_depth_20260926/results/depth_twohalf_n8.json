@@ -1,0 +1,56 @@
+{
+  "matrix": "/tmp/twohalf_n8.json",
+  "n": 8,
+  "Phi": 10,
+  "P": 10,
+  "N": 10,
+  "neutral_r": 1.9324269325229904,
+  "criterion": "pure zero-deficit same-phase branch is safe iff minimax depth < r",
+  "phases": [
+    {
+      "phase": "+",
+      "root_edge": 10,
+      "root_deficit": 0,
+      "zero_deficit_present": true,
+      "depth": 1,
+      "margin_r_minus_depth": 0.9324269325229904,
+      "safe_for_pure_zero_deficit_branch": true,
+      "best_first_pivot": 0,
+      "chain": [
+        {
+          "depth_remaining": 1,
+          "order": 8,
+          "pivot": 0,
+          "child_order": 6,
+          "subset_hex": "0xff",
+          "child_hex": "0xee"
+        }
+      ]
+    },
+    {
+      "phase": "-",
+      "root_edge": 10,
+      "root_deficit": 0,
+      "zero_deficit_present": true,
+      "depth": 1,
+      "margin_r_minus_depth": 0.9324269325229904,
+      "safe_for_pure_zero_deficit_branch": true,
+      "best_first_pivot": 0,
+      "chain": [
+        {
+          "depth_remaining": 1,
+          "order": 8,
+          "pivot": 0,
+          "child_order": 2,
+          "subset_hex": "0xff",
+          "child_hex": "0xa0"
+        }
+      ]
+    }
+  ],
+  "principal_blocks_evaluated": 19,
+  "depth_states_evaluated": 20,
+  "engine": "packed-popcount",
+  "workers": 4,
+  "seconds": 0.0
+}

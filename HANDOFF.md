@@ -1,3 +1,47 @@
+## 2026-09-26: zero-deficit transform-depth discriminator executed
+
+The discriminator committed earlier today (`10fbea8`,
+`scripts/zero_deficit_transform_depth.py`) had never produced an output (a
+0-byte file was its only local artifact). It has now been executed,
+accelerated, and validated.
+
+- **Executions** (raw receipts in
+  `evidence/zero_deficit_depth_20260926/results/`): 14 structured objects --
+  exact minimizers/records at n = 6, 7, 8, 9, 10, 13, 15, 16, 19, 25, 26
+  (the Phi=61 plus-I lift record) and Paley conferences at n = 14, 18, 26.
+  The n = 30 Paley conference has two independent runs (reference script
+  and parallel engine) that were still running at commit time and is not
+  claimed; their outputs land in /tmp/zdf_paley_n30.json and
+  /tmp/zd_paley_n30.json if they complete -- check those, or rerun
+  `scripts/zero_deficit_depth_fast.py /tmp/paley_n30.json`, before starting
+  new n = 30 work.
+- **Result**: the pure zero-deficit same-phase branch is safe
+  (`minimax unit-cost depth < r_n`) at EVERY tested object with n >= 13,
+  margins +0.29 .. +1.55. The single exhaustion is the n = 10 exact
+  minimizer (depth 2 vs r = 1.998; shortfall 0.002). Depth grows slowly
+  over the tested range (1 at n = 6-8; 2 at n = 9-19; 3 at n = 25-26)
+  while `r_n` grows like `~0.68 sqrt(n)`. The n = 26 record object is the
+  safest (depth 2, margin +1.55 -- shallower than the Paley conference at
+  the same order).
+- **Validation**: the reference script, the new packed-popcount parallel
+  engine `scripts/zero_deficit_depth_fast.py` (subclasses the reference
+  `Engine`; only the maximizer-enumeration kernel differs), and an
+  independent pure-Python brute-force implementation of the documented
+  recursion agree on all pinned cases.
+- **K15 twin**: the K15 numbers reproduce the independently recorded
+  `d99955b` result exactly (depth 2; same witness chain 15 -> 8 -> 4):
+  two independent executions agree.
+- **Live target status**: this clears the R = 0 (zero-deficit ancestry)
+  side of the Sep 25 next target for every tested order n >= 13; the
+  n = 10 exhaustion shows the small-order regime is genuinely tight
+  (relevant only if a proof needs small orders). Deficit-carrying
+  ancestry (R > 0) has no discriminator yet.
+
+Do not re-run the same objects as new work. Next useful steps: a
+deficit-aware version of the recursion (R > 0 branches), and an
+enumeration-smart extension to n >= 38 if the depth growth needs pinning
+(brute force is 2^(n-1) per block and is not feasible there).
+
 ## 2026-09-26: final checkpoint before model-upgrade retry
 
 The current attempt did **not** obtain a proof of convergence or a new
