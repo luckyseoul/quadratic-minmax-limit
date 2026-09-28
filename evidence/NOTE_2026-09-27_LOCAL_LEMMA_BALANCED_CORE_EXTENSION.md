@@ -1,11 +1,12 @@
 # Local-lemma balanced-core one-vertex extension
 
-2026-09-27. Direct strengthening of the balanced-core hypergeometric
-one-vertex theorem under the scope freeze. The previous theorem used a union
-bound over all residual active stable states. Here the independent random
-objects are the balanced signings of the core-signature classes, so bad
-events are only locally dependent. The Lovasz local lemma replaces the
-global residual-state count by an overlap degree.
+2026-09-27. Additional balanced-core one-vertex criterion under the scope
+freeze. The previous theorem used a union bound over all residual active
+stable states. Here the independent random objects are the balanced signings
+of the core-signature classes, so the Lovasz local lemma gives a sufficient
+condition using their overlap degree. This can improve the union-bound
+criterion for sparse overlap; the two sufficient tests are not uniformly
+ordered.
 
 Let A be a complete symmetric zero-diagonal signing of order n, let
 F=Phi(A), fix a desired increment r>0, and let
@@ -96,9 +97,12 @@ Equivalently, it is enough that every residual active state obey
     tau_s^2
       >= 8 q_s log[2e(Delta_dep+1)].                        (6)
 
-This strictly replaces the union-bound denominator log(2M), where M was the
-TOTAL number of residual active states, by log[2e(Delta_dep+1)], where only
-states sharing an impure signature class interact.
+The logarithmic factor here is log[2e(Delta_dep+1)], where only states
+sharing an impure signature class interact. The symmetric union-bound test
+uses log(2M), with strict inequality at its boundary, where M is the total
+number of residual active states with nonzero impurity. The local-lemma
+factor is smaller when e(Delta_dep+1)<M; for dense overlap the union-bound
+test can be preferable. Retain both tests.
 
 ## Theorem 3: class-load form
 

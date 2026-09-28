@@ -1,5 +1,11 @@
 # Deficit-aware transform sections with actual sign recovery
 
+September 28 follow-up: all 13 small exact regressions passed once on an
+external CPU host. See `deficit_transform_20260928/regression.json` for
+the hashed inputs, exact command, and full log. No recorded research matrix
+was run. The unexecuted status below is the original September 26 record;
+only its regression status has changed.
+
 This is a bounded constructive discriminator for the one-vertex target, not
 a convergence result. Implementation and regressions are prepared; the
 regressions and research runs have **not been executed** at this checkpoint.

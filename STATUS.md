@@ -1,14 +1,28 @@
 # Current mathematical status
 
-Updated 2026-09-26. The original MO limit is OPEN.
+Updated 2026-09-28. The original MO limit is OPEN.
 
-Prepared, not executed: the
+The
 [deficit-aware transform certificate](evidence/NOTE_2026-09-26_DEFICIT_TRANSFORM_CERTIFICATE.md)
 implements the handoff's next discriminator with both stable phases,
 positive deficits, exact transform sections, and Boolean sign recovery.
-Syntax validation and analytic/code author review are complete; external
-regressions are pending. No new row, norm bound, or summable-error estimate
-has been obtained. This is a prepared tool, not a new mathematical milestone.
+All 13 small exact regression tests passed once on an external CPU host on
+September 28, using hashed inputs and one worker. The
+[raw receipt](evidence/deficit_transform_20260928/regression.json) includes
+the command, input hashes, full test log, and exit status. No recorded
+research matrix was evaluated by that test run. A full-deficit source run
+and a summable-error estimate remain pending; this is implementation
+verification, not a new mathematical milestone.
+
+The September 27
+[balanced-core criterion](evidence/NOTE_2026-09-27_BALANCED_CORE_HYPERGEOMETRIC_EXTENSION.md)
+and [local-lemma criterion](evidence/NOTE_2026-09-27_LOCAL_LEMMA_BALANCED_CORE_EXTENSION.md)
+give additional sufficient one-vertex constructions. The first uses a
+global sum of hypergeometric tail bounds; the second uses overlap between
+impure signature classes. Sparse overlap can make the local-lemma test
+succeed when the global sum fails, but neither sufficient test uniformly
+dominates the other. No core satisfying either criterion with a uniformly
+summable excess has been proved for the required minimizers.
 
 New September-2026 discrepancy input attacks the CROSS-ORDER gap:
 [evidence/NOTE_2026-09-24_KOMLOS_ONE_VERTEX_EXTENSION.md](evidence/NOTE_2026-09-24_KOMLOS_ONE_VERTEX_EXTENSION.md)

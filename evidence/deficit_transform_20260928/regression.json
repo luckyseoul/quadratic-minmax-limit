@@ -1,0 +1,29 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_deficit_transform_certificate.py",
+    "-v"
+  ],
+  "convergence_proved": false,
+  "created_utc": "2026-09-28T04:19:42.219169+00:00",
+  "elapsed_seconds": 0.14849048992618918,
+  "exit_code": 0,
+  "input_sha256": {
+    "scripts/deficit_transform_certificate.py": "5e864e105f59e33e6cb1e803371de0763237de8b2cacebf1c0a35bf0de8735a4",
+    "tests/test_deficit_transform_certificate.py": "d022fa694855658d995ed61c72c0c4bc6ca7fb48adc571c326c7abe2719566a9"
+  },
+  "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+  "schema": "scoped_external_regression_v1",
+  "scope": "only 13 tiny synthetic regression tests; no recorded research matrices or source runs",
+  "source_commit": "fd05d10b334e45c1d3b291cb8d89c7d3aa257eea",
+  "stderr": "test_cache_does_not_gain_an_independent_completeness_claim (test_deficit_transform_certificate.TransformCertificateTests.test_cache_does_not_gain_an_independent_completeness_claim) ... ok\ntest_exact_neutral_floor_and_parity (test_deficit_transform_certificate.TransformCertificateTests.test_exact_neutral_floor_and_parity) ... ok\ntest_exact_sections_match_independent_interval_geometry (test_deficit_transform_certificate.TransformCertificateTests.test_exact_sections_match_independent_interval_geometry) ... ok\ntest_gray_skeleton_matches_direct_definition_on_one_fixture (test_deficit_transform_certificate.TransformCertificateTests.test_gray_skeleton_matches_direct_definition_on_one_fixture) ... ok\ntest_nonintegral_input_and_output_overwrite_are_rejected (test_deficit_transform_certificate.TransformCertificateTests.test_nonintegral_input_and_output_overwrite_are_rejected) ... ok\ntest_positive_deficit_and_mixed_phase_survive (test_deficit_transform_certificate.TransformCertificateTests.test_positive_deficit_and_mixed_phase_survive) ... ok\ntest_primitive_normalization_keeps_all_three_affine_terms (test_deficit_transform_certificate.TransformCertificateTests.test_primitive_normalization_keeps_all_three_affine_terms) ... ok\ntest_recovered_extension_matches_full_cube_on_one_fixture (test_deficit_transform_certificate.TransformCertificateTests.test_recovered_extension_matches_full_cube_on_one_fixture) ... ok\ntest_recovery_satisfies_original_constraints (test_deficit_transform_certificate.TransformCertificateTests.test_recovery_satisfies_original_constraints) ... ok\ntest_resource_stop_is_explicitly_inconclusive (test_deficit_transform_certificate.TransformCertificateTests.test_resource_stop_is_explicitly_inconclusive) ... ok\ntest_retained_slabs_are_needed_for_a_section (test_deficit_transform_certificate.TransformCertificateTests.test_retained_slabs_are_needed_for_a_section) ... ok\ntest_stopped_transform_is_not_an_infeasibility_certificate (test_deficit_transform_certificate.TransformCertificateTests.test_stopped_transform_is_not_an_infeasibility_certificate) ... ok\ntest_strict_boundary_is_not_pruned (test_deficit_transform_certificate.TransformCertificateTests.test_strict_boundary_is_not_pruned) ... ok\n\n----------------------------------------------------------------------\nRan 13 tests in 0.067s\n\nOK\n",
+  "stdout": "",
+  "worker_budget": 1
+}

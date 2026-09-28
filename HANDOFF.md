@@ -1,3 +1,29 @@
+## 2026-09-28: transform regressions passed; September 27 criteria integrated
+
+The 13 small exact tests in `tests/test_deficit_transform_certificate.py`
+passed once on an external CPU host with one worker, at source commit
+`fd05d10b334e45c1d3b291cb8d89c7d3aa257eea`. Both staged input hashes matched
+the reviewed files. Raw receipt:
+`evidence/deficit_transform_20260928/regression.json`, SHA-256
+`ef767d48405195f2c42480f4cfe91c3870f5851ce9be5369f554cc6315b12ab9`.
+The run covered synthetic fixtures only, including exact section geometry,
+both phases, positive deficits, reverse sign recovery, and cache scope.
+It did not evaluate a recorded research matrix or establish convergence.
+The older "regressions pending" statements below describe the September 26
+checkpoint and are superseded by this receipt.
+
+Fetch on September 28 found and fast-forwarded the two September 27 proof
+notes: `NOTE_2026-09-27_BALANCED_CORE_HYPERGEOMETRIC_EXTENSION.md` and
+`NOTE_2026-09-27_LOCAL_LEMMA_BALANCED_CORE_EXTENSION.md`. Their sufficient
+conditions are retained. The local-lemma condition uses impurity overlap;
+it can improve on the global union bound for sparse dependency graphs,
+but it does not uniformly replace that bound in dense graphs.
+
+The open implication is unchanged: construct an extension at the neutral
+increment plus a summable excess for suitable minimizers at all large
+orders. No new research row, bound on the full deficit recursion, or major
+milestone is claimed here. The next full-deficit discriminator has not run.
+
 ## 2026-09-26: deficit-aware constructive discriminator prepared, not executed
 
 The next discriminator requested below now has an implementation:
