@@ -1,0 +1,49 @@
+{
+  "command": [
+    "timeout",
+    "120s",
+    "/usr/bin/python3",
+    "-B",
+    "scripts/deficit_transform_certificate.py",
+    "--matrix",
+    "evidence/K15_exact_minimizer_20260911.json",
+    "--enumerate-stable",
+    "--target-phi",
+    "30",
+    "--max-states",
+    "16384",
+    "--max-pairs",
+    "200000",
+    "--max-facets",
+    "20000",
+    "--save-skeleton",
+    "k15-stable.json",
+    "--output",
+    "k15-result.json"
+  ],
+  "convergence_proved": false,
+  "elapsed_seconds": 0.9064483869588003,
+  "exit_code": 2,
+  "finished_utc": "2026-09-28T04:42:54.347904+00:00",
+  "input_sha256": {
+    "evidence/K15_exact_minimizer_20260911.json": "4de6bae5ce2c3fd144748407b98c3b26bd1bfa397f557130fa7568aa59ad9f37",
+    "scripts/deficit_transform_certificate.py": "5e864e105f59e33e6cb1e803371de0763237de8b2cacebf1c0a35bf0de8735a4"
+  },
+  "outputs": {
+    "k15-result.json": {
+      "bytes": 985,
+      "sha256": "647763aa5579fb3d6f4aed21967c169b74c46541f418d56353e553564f0c26d1"
+    },
+    "k15-stable.json": {
+      "bytes": 83154,
+      "sha256": "fd997da804aaf70855cbca14e31610f872216e83e49cb32f58aa7a8da55e0ff6"
+    }
+  },
+  "schema": "bounded_deficit_transform_execution_v1",
+  "source_commit": "872157cdfab03d1953e633dc728ee3facc7c41d8",
+  "started_utc": "2026-09-28T04:42:53.441450+00:00",
+  "stderr": "",
+  "stdout": "",
+  "timeout_seconds": 120,
+  "worker_budget": 1
+}

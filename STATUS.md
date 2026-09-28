@@ -10,9 +10,12 @@ All 13 small exact regression tests passed once on an external CPU host on
 September 28, using hashed inputs and one worker. The
 [raw receipt](evidence/deficit_transform_20260928/regression.json) includes
 the command, input hashes, full test log, and exit status. No recorded
-research matrix was evaluated by that test run. A full-deficit source run
-and a summable-error estimate remain pending; this is implementation
-verification, not a new mathematical milestone.
+research matrix was evaluated by that test run. A subsequent, separate
+full-deficit K15 run saved the complete 340-class stable skeleton, then
+hit the 20,000-facet cap in the first transform (0.906 seconds, exit 2).
+Its [receipt](evidence/deficit_transform_20260928/k15-result.json) is
+inconclusive about extension feasibility. No row or summable-error bound
+was obtained; the saved states must be reused rather than re-enumerated.
 
 The September 27
 [balanced-core criterion](evidence/NOTE_2026-09-27_BALANCED_CORE_HYPERGEOMETRIC_EXTENSION.md)

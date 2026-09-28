@@ -1,4 +1,4 @@
-## 2026-09-28: transform regressions passed; September 27 criteria integrated
+## 2026-09-28: transform tested and full-deficit K15 run executed
 
 The 13 small exact tests in `tests/test_deficit_transform_certificate.py`
 passed once on an external CPU host with one worker, at source commit
@@ -12,6 +12,30 @@ It did not evaluate a recorded research matrix or establish convergence.
 The older "regressions pending" statements below describe the September 26
 checkpoint and are superseded by this receipt.
 
+The first full-deficit source run then executed once, on the recorded K15
+matrix, targeting extended norm 30. It enumerated all 16,384 projective
+states and saved the complete 340-class stable skeleton. It finished in
+0.906 seconds with `RESOURCE_LIMIT`: the first transform exceeded 20,000
+distinct retained facets. No transform step completed, no row was recovered,
+and no mathematical infeasibility was established. The cap was not raised.
+This is the deficit-aware construction, not a replay of the old zero-deficit
+depth engine.
+
+Retained evidence is in `evidence/deficit_transform_20260928/`:
+
+- `execution.json`: exact command, budgets, input/output hashes, exit 2.
+- `k15-stable.json`: complete saved skeleton; SHA-256
+  `fd997da804aaf70855cbca14e31610f872216e83e49cb32f58aa7a8da55e0ff6`.
+- `k15-result.json`: resource-stop receipt; SHA-256
+  `647763aa5579fb3d6f4aed21967c169b74c46541f418d56353e553564f0c26d1`.
+
+Reuse this skeleton in any justified follow-up; do not enumerate it again.
+The subsequent core profile reads this cache only. Taking all 66 zero-deficit
+states as the balanced core leaves 13 odd signature classes, so that chosen
+core does not satisfy `u<7/2`. This says nothing about every smaller core.
+No core search, larger budget, alternate engine, or additional source run
+was launched.
+
 Fetch on September 28 found and fast-forwarded the two September 27 proof
 notes: `NOTE_2026-09-27_BALANCED_CORE_HYPERGEOMETRIC_EXTENSION.md` and
 `NOTE_2026-09-27_LOCAL_LEMMA_BALANCED_CORE_EXTENSION.md`. Their sufficient
@@ -22,7 +46,8 @@ but it does not uniformly replace that bound in dense graphs.
 The open implication is unchanged: construct an extension at the neutral
 increment plus a summable excess for suitable minimizers at all large
 orders. No new research row, bound on the full deficit recursion, or major
-milestone is claimed here. The next full-deficit discriminator has not run.
+milestone is claimed here. A resource stop and the failure of one chosen
+core are not substitutes for that implication.
 
 ## 2026-09-26: deficit-aware constructive discriminator prepared, not executed
 

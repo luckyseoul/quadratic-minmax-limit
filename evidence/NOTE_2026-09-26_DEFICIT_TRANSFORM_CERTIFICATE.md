@@ -2,9 +2,11 @@
 
 September 28 follow-up: all 13 small exact regressions passed once on an
 external CPU host. See `deficit_transform_20260928/regression.json` for
-the hashed inputs, exact command, and full log. No recorded research matrix
-was run. The unexecuted status below is the original September 26 record;
-only its regression status has changed.
+the hashed inputs, exact command, and full log. A separate full-deficit K15
+run subsequently saved all 340 stable classes and hit the 20,000-facet cap
+during the first transform; see `deficit_transform_20260928/k15-result.json`.
+No row was recovered, and the resource stop is inconclusive. The unexecuted
+status below is the original September 26 record.
 
 This is a bounded constructive discriminator for the one-vertex target, not
 a convergence result. Implementation and regressions are prepared; the
