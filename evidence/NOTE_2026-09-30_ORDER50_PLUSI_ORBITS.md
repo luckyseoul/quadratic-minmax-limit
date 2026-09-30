@@ -23,3 +23,17 @@ and does not meet them. Multiplication by a nonsquare does not preserve
 Every one of the three local-field patterns splits all 1225 edges. This
 does not change the one-edge or two-edge census, and it does not decide
 \(m_{50}\) or the limit.
+
+## States fixed by an involution
+
+Every involution \(x\mapsto -x+b\) in this group is a translate of
+\(x\mapsto -x\), and each has one fixed point. A \(\pm1\) state fixed by
+\(x\mapsto -x\) takes one sign on each pair \(\{t,-t\}\), in both blocks:
+\(2^{26}\) states.
+
+Enumerating that set, the maximum of \(Q\) is 169, attained at exactly 28
+states. The same count at \(-169\) is 28. The six orbits above contribute
+exactly these states: 6 per size-150 orbit and 2 per size-50 orbit. A
+state at \(+169\) outside the six orbits cannot be fixed by any of these
+involutions, so its square-affine stabilizer is trivial and its orbit has
+size 300.
