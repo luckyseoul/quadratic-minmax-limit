@@ -43,4 +43,4 @@ Put `H(n) = F(n)^{2/3}`. At the floor,
     (2 F)^{2/3} = 0.767958349853... n,
     (2 F + R)^{2/3} = 1.293351131286... n.
 
-Concavity lifts `H` by `0.092295663976... n` when the bridge replaces the two blocks, which still sits under `H+H`. Charging the bridge on top of the blocks sits `0.325784240864... n` over `H+H`. That overshoot is exactly the sum-of-maxima gap above; it is not a non-summable `eta` until the joint maximum is shown to miss `2 F + R` by `0.519... n^{3/2}` at the floor, and then by a further Dini-summable tail. A best-response fixed point has no such miss. This note does not produce one.
+Concavity lifts `H` by `0.092295663976... n` when the bridge replaces the two blocks, which still sits under `H+H`. Charging the bridge on top of the blocks sits `0.325784240864... n` over `H+H`. That `H`-overshoot is the image of the `0.519... n^{3/2}` gap under `t -> t^{2/3}`, not the gap itself. It is not a non-summable `eta` until the joint maximum is shown to miss `2 F + R` by `0.519... n^{3/2}` at the floor, and then by a further Dini-summable tail. A best-response fixed point has no such miss. This note does not produce one.
