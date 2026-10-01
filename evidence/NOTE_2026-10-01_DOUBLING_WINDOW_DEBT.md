@@ -1,7 +1,7 @@
 # Doubling debt across the proved window
 
 **Status:** checked arithmetic, not a proof of the miss. The limit stays open.
-No branch of this repo records these window-endpoint figures. Code search on `main` finds neither `0.336493` nor `0.519124`. The eleven other branches (`archive/*`, `codex/leftover-moment-attack`, `maxplus-p11-enumeration`, `navier-stokes-techniques`, `prop15586-maxplus-gram-reduction`, `research/paired-disagreement-floor-20260924`, `residual/p13-u6-common-moments`, `strategy/2026-08-28-unattempted-directions`) are earlier attacks; the paired-disagreement tip only touches `HANDOFF.md`. This note does not repeat Propositions 1–2 of `evidence/NOTE_2026-09-12_COMPLETION_DISCREPANCY_FRAMEWORK.md`. It replaces that note's sample ratio `c ~ 0.45` by the proved window.
+This note is the record of these window-endpoint figures. They are not in `evidence/NOTE_2026-09-01_ORIGINAL_LIMIT_TWO_RAY.md`. The eleven other branches (`archive/*`, `codex/leftover-moment-attack`, `maxplus-p11-enumeration`, `navier-stokes-techniques`, `prop15586-maxplus-gram-reduction`, `research/paired-disagreement-floor-20260924`, `residual/p13-u6-common-moments`, `strategy/2026-08-28-unattempted-directions`) are earlier attacks; the paired-disagreement tip only touches `HANDOFF.md`. This note does not repeat Propositions 1–2 of `evidence/NOTE_2026-09-12_COMPLETION_DISCREPANCY_FRAMEWORK.md`. It replaces that note's sample ratio `c ~ 0.45` by the proved window.
 
 ## Setup
 
@@ -43,4 +43,4 @@ Put `H(n) = F(n)^{2/3}`. At the floor,
     (2 F)^{2/3} = 0.767958349853... n,
     (2 F + R)^{2/3} = 1.293351131286... n.
 
-Concavity lifts `H` by `0.092295663976... n` when the bridge replaces the two blocks, which still sits under `H+H`. Charging the bridge on top of the blocks sits `0.325784240864... n` over `H+H`. That `H`-overshoot is the image of the `0.519... n^{3/2}` gap under `t -> t^{2/3}`, not the gap itself. It is not a non-summable `eta` until the joint maximum is shown to miss `2 F + R` by `0.519... n^{3/2}` at the floor, and then by a further Dini-summable tail. A best-response fixed point has no such miss. This note does not produce one.
+Concavity lifts `H` by `0.092295663976... n` when the bridge replaces the two blocks, which still sits under `H+H`. Charging the bridge on top of the blocks sits `0.325784240864... n` over `H+H`. That overshoot is `S^{2/3} - T^{2/3}`, with `S = 2 F + R` and `T = 2^{3/2} F`. It is not the image of the gap: `(S - T)^{2/3} = 0.645923258003... n`. A miss of exactly `S - T` puts the joint maximum on `T`, so `H(2n) = 2 H(n)` and the doubling error is zero. A Dini tail is the allowance when the miss falls short of `S - T`, not a further cut after that landing. This note does not produce the miss.
