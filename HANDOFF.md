@@ -1,3 +1,59 @@
+## 2026-10-05: existence still open; target (26) not discharged
+
+The original MO limit is OPEN. No theorem file was written, no referee
+was called, and `src/original_mo_status.py` was not edited. A fresh
+import of `original_mo_status()` returns status OPEN, `problem_settled`
+false, `registry_valid` true, and an empty reviewed-completion list.
+
+The implication that settles existence is still existence of
+\(\lim\gamma_p\). CORE §8 equates that with existence of \(\lim\alpha_n\),
+through the Paley orders \(n=p^2+1\). The same question is existence of
+\(\lim K_n\). `evidence/NOTE_2026-09-19_PALEY_P2_CLUSTER.md` states the
+equivalence and does not retract it. A uniform \(O(n)\) bound on the
+optimal Paley gap would force \(\gamma_p\to0\) and
+\(\lim\alpha_n=\tfrac12\). That bound is not proved. No second realized
+cluster point of \(\alpha_n\) was found.
+
+Inequality (25) in
+`evidence/NOTE_2026-09-05_UNIVERSAL_SPECTRAL_MIDPOINT_GAUSSIAN_REDUCTION.md`
+stays the proved reduction: for every complete source, including every
+exact minimizer,
+\(m_{2n}\le\mathbb E\Phi(\mathcal A_Z)+D_0 n^{16/11}\).
+The dyadic target (26),
+\(\mathbb E\Phi(\mathcal A_Z)\le 2\sqrt2\,m_n+o(n^{3/2})\),
+is still unproved. The remainder \(n^{16/11}\) is already small enough
+for the doubling half of CORE §7 once the leading factor is \(2\sqrt2\):
+an additive gap \(O(n^{3/2}/\log^{1+\varepsilon}n)\) makes the dyadic
+envelope \(E(N)\) tend to 0. Doubling alone does not give existence.
+The tripling ray is still required. The finite midpoint ratios in
+`evidence/NOTE_2026-09-11_MULTIPLIER2_SCOUT.md` stay above 1 through
+order 15. They do not prove an asymptotic constant-factor gap.
+
+An iid probe does not refute (26). For a cross block with i.i.d.
+standard normal entries, a sign-flip symmetry of the \(\ell_1\) argmax,
+not separately reviewed, gives
+\(\mathbb E\Phi\ge\mathbb E\max_y\|Zy\|_1\)
+for every Seidel source, because the internal energies average to zero.
+Chernoff's bound caps the maximum by \((\beta_*+o(1))n^{3/2}\), where
+\(\beta_*\approx1.628\) solves the Cramér equation \(I(\beta_*)=\log 2\)
+for the mean of \(|N(0,1)|\). Hamming-shell second moments already have
+negative slack at height \(1.35\,n^{3/2}\), and a boolean-code chaining
+lower bound reaches only about \(1.09\,n^{3/2}\). Neither proves a
+factor above \(\sqrt2\), which is the conference-scale ceiling on
+\(2\sqrt2\,m_n\). Exact gray-code samples of
+\(\max_y\|Gy\|_1/n^{3/2}\), one core per sample, read:
+
+- \(n=12\), 80 reps, mean 1.346, se 0.013
+- \(n=16\), 48 reps, mean 1.377, se 0.013
+- \(n=20\), 28 reps, mean 1.385, se 0.014
+- \(n=24\), 40 reps, mean 1.425, se 0.011
+- \(n=28\), 24 reps, mean 1.431, se 0.011
+- \(n=30\), 16 reps, mean 1.452, se 0.013
+
+\(\sqrt2\approx1.414\). The sample means sit near that line. They do
+not identify a limit, and this law is not the midpoint covariance in
+(26). The original limit remains OPEN.
+
 ## 2026-09-28: transform tested and full-deficit K15 run executed
 
 The 13 small exact tests in `tests/test_deficit_transform_certificate.py`
