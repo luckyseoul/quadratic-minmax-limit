@@ -1,3 +1,59 @@
+## 2026-10-06: existence still open; no new gate discharged
+
+The original MO limit is OPEN. No theorem file was written, and
+`src/original_mo_status.py` was not edited. The production registry stays
+empty. Existence is still equivalent to existence of \(\lim\gamma_p\) on the
+Paley orders \(n=p^2+1\), and to existence of \(\lim K_n\).
+
+One OpenAI `deep_review` (gpt-6-astra) returned PASS, `do_not_branch`, on
+the claim that the height-one fiber calculation does not prove existence or
+nonexistence. That is not a settlement review. Claude was not called.
+
+Checked and left conditional, in this order:
+
+- Coordinate fiber of \(K(A,r,M)\). One maximizer slab has mean fiber
+  \(2rM/(M+r)\), so the uniform test needs \(r\ge3\). The neutral increment
+  exceeds 3 for large \(n\) and does not produce the density. A second tight
+  \(\pm1\) slab cuts the mean. The intersection of every such slab is the
+  \(\ell_1\) ball, with mean fiber \(2r/n\).
+- Dyadic target (26). For an iid normal cross block, sign-flip symmetry gives
+  \(\mathbb E\Phi\ge\mathbb E\max_y\|Gy\|_1\). Exact samples of that maximum,
+  in units of \(n^{3/2}\), sit near \(\sqrt2\approx1.414\) through order 22
+  and do not clear it. The second-moment count stops near \(1.20\). The
+  spherical cap is \(2\). The two-sector factorization
+  \(\Sigma_*=uP\otimes P+vQ\otimes Q\) caps the cross term by a constant in
+  \([2,2\sqrt2]\), above the budget of (26).
+- Cube imbalance of \(P_+\). Exact \(\rho(C_n)\) increases on
+  \(n\in\{6,14,18,30,38,42\}\) and is bounded by 1. Six terms do not prove
+  the tail. Nesterov gives \(\liminf\rho\ge2/\pi\), and a stored interval
+  signing gives \(\limsup\rho\ge0.9882\).
+- Stolz: \(\delta_n/\sqrt n\to\ell\) is not proved. A failure of that
+  hypothesis would not refute existence.
+- Critical pressure (6.52). The identity
+  \(|s_n(c)/c-\alpha_n|\le(\log2)/c\) makes (6.54) circular up to that
+  window. Proposition 6.9 already kills every fixed \(c\).
+- Projective binomial tails. One zero-deficit class does not break the
+  union bound at the neutral increment. Two classes can. A Seidel matrix
+  need not attain both signs of \(Q\).
+- Closing items 2, 4, and 5 in `solution.md`. Multipartite comparison cannot
+  forbid the climb from liminf to limsup. Maximizer delocalisation is not
+  proved, and an \(\Omega(\sqrt n)\) extension cost would not pin
+  \(\delta_n/\sqrt n\). Asymptotic Paley optimality is open; the order-10 gap
+  is 2.
+- Two densities. No stored construction and lower bound pair has the lower
+  bound strictly above the construction. Proposition 6.2 still says any real
+  oscillation is visible on every ratio-dense subsequence.
+- The \(O(n)\) Paley gap. Order 10 has gap 2. The order-50 plus-I value 169
+  against \(\Phi(C)=175\) is only a lower bound of 6 if that signing is
+  minimal. Neither is an \(O(n)\) cap or a superlinear gap on an infinite set.
+- Doubling residue (6.20) was opened and not closed. Emptying it would be
+  only the multiplier-two half. CORE §7 still requires a tripling ray.
+
+Do not reopen the closed September routes, order-16 SAT, K50, or the
+untracked 2026-09-15 and boolean-update files. The next step is still an
+unconditional existence or nonexistence proof. Stop if the statement is
+conditional.
+
 ## 2026-10-05: existence still open; target (26) not discharged
 
 The original MO limit is OPEN. No theorem file was written, no referee
