@@ -1,3 +1,54 @@
+## 2026-10-06 later: existence still open; ladder and restriction slope do not settle
+
+After `8fe73ce` the original MO limit is still OPEN. No theorem file was
+written, and `src/original_mo_status.py` was not edited. The production
+registry stays empty. No referee was called. The user then paused the proof.
+
+Checked and left conditional:
+
+- The public catalogue at `https://github.com/openai/math` (722 manuscripts,
+  372 families) contains no proof or disproof of this Seidel minimum, of
+  MathOverflow 413935, or of \(\gamma_p\). Adjacent families 097, 234,
+  217/227/281, 175/186, 102/161, and 076 stay off the limit.
+- CORE §4 strict corollary \(\liminf\alpha_n>1/\pi\), with unspecified
+  \(\varepsilon_0\). The 2026-09-06 note says \(F_1(1)\) is not that
+  \(\varepsilon_0\). A floor below \(1/2\) leaves the closed interval between
+  liminf and limsup free. The §3 Chernoff cap \(\sqrt{\log 2}\approx0.8326\)
+  is weaker than the conference cap \(1/2\). Boundedness plus
+  \(O(n^{-1/2})\) gaps does not give convergence. Padding over a window of
+  length \(\theta n\) is \(O(n^2)\) against an \(O(n^{3/2})\) climb.
+- Komlós box \(\Xi_A(r)\le1/(18\pi)\). One near-edge class is
+  \(\Theta(1/n)\), below the threshold. A nondecreasing step forces about
+  \((\alpha^2/(8\pi))n\) classes, which is where a forced decrease would have
+  mattered. CORE already calls this a cross-order implication, not a
+  convergence proof.
+- Residue (6.20) and the switching-distance reading of the \(O(n)\) Paley
+  gap. Emptiness of (6.20) is not proved, and emptiness would be only the
+  multiplier-two half. One flipped edge changes \(Q\) by 2, so a uniform
+  \(O(n)\) switching distance is the same \(O(n)\) gap. The \(n=26\) distance
+  122 is one order.
+- Tie-resolved ladder. The scalar recursion of
+  `evidence/NOTE_2026-09-24_TIE_RESOLVED_INFINITE_LADDER.md` keeps every
+  closure root strictly below \(2/5\). The depth-1 mean is at most about
+  \(0.32653\). The field floors sum to less than \(0.112\), each mean step
+  rises by at most \(G/4\), and the closure adds at most another \(G/4\).
+  The resulting cap is about \(0.3726<2/5<1/2\). The certificate was rational
+  arithmetic (12-term Machin bracket, \(399/500>\sqrt{2/\pi}\),
+  \(G_1<11/152\)). It was not shipped. \(B_\infty<2/5\) does not meet the
+  conference cap and does not separate the ends.
+- Half-vertex restriction,
+  `evidence/NOTE_2026-09-24_HALF_VERTEX_RESTRICTION_LOSS.md`:
+  \(m_N-m_n\ge\lfloor(N-n)/2\rfloor\). The coefficient \(1/2\) is attained by
+  \(m_6-m_4=1\). On a doubling window the added mass is \(n/2\), which is
+  \(1/(4\sqrt{2}\sqrt{n})\) in the \(\alpha\) scale. The sandwich already
+  forces an average step of about \(0.400\sqrt{n}\) on \([n,2n]\). The
+  restriction bound is weaker than that on every long window.
+
+Do not reopen those gates, the closed September routes, order-16 SAT, K50,
+or the untracked 2026-09-15 and boolean-update files. Existence is still
+equivalent to \(\lim\gamma_p\) and to \(\lim K_n\). Stop while the statement
+is conditional.
+
 ## 2026-10-06: existence still open; no new gate discharged
 
 The original MO limit is OPEN. No theorem file was written, and
