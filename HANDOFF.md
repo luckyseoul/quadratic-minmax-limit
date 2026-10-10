@@ -1,3 +1,19 @@
+## 2026-10-06 repo layout: main plus two side branches
+
+Tracking is `main` only. The limit is still OPEN. Do not reopen a side
+branch as a live attack, and do not recreate the deleted branch names.
+
+- `speculative/conditional-notes` holds the unadmitted 2026-09-15 explicit
+  lower-bound note and the 2026-09-23 conditional Boolean update, including
+  their scripts and tests. They are not theorems and they are not on `main`.
+- `archive/superseded-experiments` is commit `b6a9aaf`, the 2026-08-31
+  snapshot of superseded proof experiments. It is not an ancestor of `main`.
+- Tag `archive/2026-09-05-reset-edits` is commit `c2e1321`, the pre-reset
+  worktree edits. It is not an ancestor of `main`.
+- Every other former branch name was already contained in `main`. The
+  commits remain on `main`. The extra worktrees were clean checkouts of
+  those commits and were removed.
+
 ## 2026-10-06 later: existence still open; ladder and restriction slope do not settle
 
 After `8fe73ce` the original MO limit is still OPEN. No theorem file was
