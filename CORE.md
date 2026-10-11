@@ -39,6 +39,28 @@ m_{n+d}\le m_n+dn+\frac{d(d-1)}2.
 \]
 It is \(m_n\), not necessarily \(\alpha_n\), that is nondecreasing.
 
+For every \(n\ge5\) the one-step bound sharpens to
+\[
+m_{n+1}\le m_n+n-2.
+\]
+Every Seidel form has second moment \(\binom n2\), so a form constant in
+absolute value on the cube equals \(\sqrt{\binom n2}\). The Gaussian floor
+\(n\sqrt{n-1}/\pi\) is strictly larger for \(n\ge5\), since the ratio of the
+two quantities is \(\sqrt{2n}/\pi>1\). A minimizer therefore has a vector
+\(s\) with \(|Q(s)|\le m_n-2\): every value of \(Q\) has the same parity as
+\(\binom n2\). Extend by the column \(s\). For \(y\in\{\pm1\}^n\),
+\[
+|Q(y)|+s\cdot y\le m_n+n-2.
+\]
+At \(y=s\) the inner product is \(n\) and \(|Q(s)|\) supplies the \(-2\). At
+every other \(y\) the inner product is at most \(n-2\). The same inequality
+holds at \(n=3\) and \(n=4\) by the values \(m_3=3\), \(m_4=4\), \(m_5=4\).
+It is equality at \(n=3\) and at \(n=6\) (\(m_7=9=5+4\)), so a universal
+saving of \(3\) is false. The constant \(2\) is summable against
+\(n^{3/2}\) and does not shrink the cluster set of \(\alpha_n\). The
+neutral increment remains of order \(\sqrt n\), and the excess of \(n-2\)
+over that increment is still of order \(n\).
+
 ## 3. An elementary all-orders upper bound
 
 For every \(n\ge2\),

@@ -1,3 +1,40 @@
+## 2026-10-11: step bound sharpened by 2; window test is not existence
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+Proved, and now in CORE §2: for every \(n\ge5\),
+\(m_{n+1}\le m_n+n-2\). The Gaussian floor already exceeds the flat
+second-moment value \(\sqrt{\binom n2}\), so a minimizer has a vector
+\(s\) with \(|Q(s)|\le m_n-2\), and the column \(s\) extends it with
+increment at most \(n-2\). Equality holds at \(n=3\) and \(n=6\), so the
+saving cannot be \(3\). The constant is summable and does not shrink the
+cluster set. The excess of \(n-2\) over the neutral increment is still of
+order \(n\).
+
+Checked and left conditional:
+
+- Summing the proved one-step modulus across consecutive square Paley
+  orders does not make \((\alpha_{p^2+1})\) Cauchy. The triangle bound is
+  \(2(\sqrt{n+t}-\sqrt n)\) with \(t\) the gap of primes \(1\pmod4\). For
+  primes below \(5000\) the median is about \(24\) and the maximum is
+  \(120\), while \(\alpha_n\) lives in an interval of length under \(0.18\).
+  The bound grows with the prime gap.
+- Claude Opus 5.5 at effort max, on the Paley literature: PASS-WITH-NOTE,
+  `do_not_branch`. A fact about the Paley matrix is a construction, so it
+  upper-bounds \(m_n\). It cannot prove \(\gamma_p\to0\), which is a lower
+  bound for every Seidel matrix of every order \(p^2+1\).
+- The same model, asked for a forward move: PASS-WITH-NOTE,
+  `do_not_branch`, no recommendation. No concrete step toward that
+  all-matrix lower bound or toward two cluster points was visible.
+- The same model, asked to prove the windowed increment bound:
+  PASS-WITH-NOTE, `do_not_branch`. An integer sequence inside the proved
+  scalar axioms oscillates in \((0.42,0.46]\). A second sequence converges
+  to \(0.44\) and still has infinite positive variation on every
+  ratio-dense checkpoint sequence. The window bound is a sufficient test,
+  strictly stronger than existence, and it is not a consequence of the
+  scalar axioms.
+
 ## 2026-10-06 repo layout: main plus two side branches
 
 Tracking is `main` only. The limit is still OPEN. Do not reopen a side
