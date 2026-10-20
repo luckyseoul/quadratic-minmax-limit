@@ -1,3 +1,20 @@
+## 2026-10-20: scalar axioms allow the whole sandwich to oscillate
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+Monotonicity of \(m_n\), the ceiling \(m_{n+1}-m_n\le n-2\), and the
+sandwich \(1/\pi\le\liminf\alpha_n\le\limsup\alpha_n\le 1/2\) do not
+force convergence. For every \(0<\lambda\le\Lambda\le 1/2\) there is an
+integer sequence with those axioms and those exact ends. The case
+\(\lambda=1/\pi\), \(\Lambda=1/2\) has gap \(1/2-1/\pi\). The sequence is
+\(m_n=\lfloor n^{3/2}g(\ln n)+1/2\rfloor\) with a sine of \(\ln n\), slowed
+so the derivative stays positive. It is not a sequence of Seidel minima.
+Proof and check: `evidence/NOTE_2026-10-20_SCALAR_AXIOM_FULL_GAP.md`,
+`scripts/scalar_axiom_full_gap.py`,
+`tests/test_scalar_axiom_full_gap.py`. A convergence proof has to use a
+property of \(\Phi\)-minimizers outside these axioms.
+
 ## 2026-10-20: the frame identity is not a flat-spectrum floor
 
 The original MO limit is still OPEN. Nothing below was entered in
