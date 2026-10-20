@@ -1,3 +1,80 @@
+## 2026-10-18: discrepancy-scale steps do not settle the limit
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`. A fresh import of `original_mo_status()`
+returns status OPEN, `problem_settled` false, `registry_valid` true,
+and an empty reviewed-completion list. No referee was called.
+MathOverflow 413935, read on this date, still has zero answers. The
+acceptance criteria were not weakened. An open status is not a solution.
+
+Do not re-run the checks below. Each one was carried through the rays,
+a summable tail, \(\lim\gamma_p\), an \(O(n)\) Paley gap, and two
+cluster points, and each one stayed conditional.
+
+- Spencer-scale one-step ceiling. A bound \(\Delta_k\le\sqrt{k\log k}\)
+  is already larger than the neutral increment at every \(\alpha\le1/2\).
+  Summing it from \(n\) to \(2n\) produces
+  \((2\sqrt2-1)\,n^{3/2}\) times \(1.4889937073260355\),
+  \(1.8023697236173986\), \(2.067157442164167\), and
+  \(2.5139974016092204\) at \(n=100\), \(10^3\), \(10^4\), and \(10^6\).
+  The zero-error doubling room is that same unit times \(\alpha\le1/2\),
+  so every one of those ratios overshoots. The neutral telescope
+  \(\sum_{k=n}^{2n-1}((k+1)^{3/2}-k^{3/2})=(2n)^{3/2}-n^{3/2}\) matched
+  with relative error \(0\) at \(n=100\), \(10^3\), and \(10^5\).
+  Shipped `exact_m` returns \(m_6=5\) and \(m_7=9\), and
+  \(9-5=4=6-2\), so the proved saving of \(2\) is still sharp. A
+  discrepancy-scale improvement of the one-step bound does not
+  discharge CORE §7. CORE §8 is untouched by this summation.
+- Stored Paley certificates. Shipped
+  `paley_conference_prime_power`, `halfspace_boolean_vector`, `form_Q`,
+  and `spherical_half_bound` at \(p=3,5,7\) give \(\rho=1\) and
+  \(\Phi=15,65,175\), with absolute error \(0\) against the spherical
+  bound. Shipped `dual_gaussian_lower_bound` then caps \(\gamma_p\) by
+  \(0.17236637639833466\), \(0.17816181457225871\), and
+  \(0.17986403617559613\). The cap tends to
+  \(1/2-1/\pi=0.1816901138162093\). Three finite caps are not two
+  cluster points, and the cap does not force \(\gamma_p\to0\) or
+  \(\Phi(C)-m_n=O(n)\).
+- `evidence/NOTE_2026-09-05_SCALAR_TEMPLATE_CUBIC_ALIGNMENT.md`.
+  Inside that template, \(q\ge12/5\) forces
+  \(\Gamma(C)>283/200>\sqrt2\). The square gap is \(89/40000\), and
+  \(17^2\cdot2=578>576\). The note does not bound an arbitrary Boolean
+  signing. Shipped `exact_m` on orders \(2\) through \(8\) returns
+  \(1,3,4,4,5,9,10\).
+- `evidence/NOTE_2026-09-12_COMPLETION_DISCREPANCY_FRAMEWORK.md`.
+  Lemmas T1, T2, and T3 stay open. T1 is the doubling comparison
+  alone. The note's reported order-8 completion floor \(32\) sits
+  above \(2\sqrt2\,m_8\) because \(8\cdot10^2=800<32^2=1024\). That
+  is one construction family at one order. The note leaves \(m_{16}\)
+  open for every other construction.
+- The same pass left these notes conditional. Do not open them again
+  as a route to the limit:
+  `NOTE_2026-09-05_DIRECT_CROSS_COVARIANCE_NORMALIZATION.md`,
+  `NOTE_2026-09-06_ORIGINAL_SOURCE_NEAR_FLAT_STRICT_GAIN.md`,
+  `NOTE_2026-09-06_TWO_CROSS_MOMENT_SOURCE_NUCLEAR_TRANSFER.md`,
+  `NOTE_2026-09-27_BALANCED_CORE_HYPERGEOMETRIC_EXTENSION.md`,
+  `NOTE_2026-09-28_HYBRID_KOMLOS_HYPERGEOMETRIC_EXTENSION.md`,
+  `NOTE_2026-09-28_RANDOM_LEFTOVER_BALANCED_CORE_EXTENSION.md`,
+  `NOTE_2026-09-05_DIAGONAL_MAJORIZER_METRIC_STABILITY.md`,
+  `NOTE_2026-09-05_HALFPRODUCT_NEARMINIMIZER_STRUCTURE.md`,
+  `NOTE_2026-09-24_BOTH_PHASE_DISAGREEMENT.md`,
+  `NOTE_2026-09-24_OPTIMIZED_SUCCESSOR_ENVELOPE.md`,
+  `NOTE_2026-09-24_SUCCESSOR_FLIP_NOISE.md`.
+  The influence renaming \(K_n=n\mu_{n-1}/m_n\) (solution.md
+  Proposition 5.3), the Cesàro test \(\delta_n/\sqrt n\to L\), and the
+  multipartite majorants in solution.md Props 7.1, 7.3, and 8.1 were
+  checked in the same pass. Proposition 5.3 renames the open limit.
+  The Cesàro hypothesis is strictly stronger than existence and is
+  not proved. The multipartite bounds do not forbid a climb from
+  liminf to limsup. The successor checkers print
+  “original convergence OPEN”. A higher floor inside
+  \((B_{\rm tilt},1/2)\) is not existence. Do not assign a new decimal
+  to \(B_\infty\).
+
+Stop while the statement is conditional. The next step is still an
+unconditional existence argument or an unconditional nonexistence
+argument.
+
 ## 2026-10-11: step bound sharpened by 2; window test is not existence
 
 The original MO limit is still OPEN. Nothing below was entered in
