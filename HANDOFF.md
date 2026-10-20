@@ -1,3 +1,25 @@
+## 2026-10-20: the conference cube gap of eight misses Paley
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+Proposition 15.762 says that on every symmetric conference matrix of order
+\(n=p^2+1\), odd \(p\ge5\), both \(Q_C(x)\) and \(\Phi_{\rm sph}=pn/2\) are
+odd, so the defect is even. Either \(Cx=px\) or \(Q_C(x)\le pn/2-8\). If
+there is no Boolean \(\pm p\) eigenvector, then \(\Phi(C)\le pn/2-8\).
+
+Paley is the eigenvector case. Shipped `halfspace_boolean_vector` and
+`form_Q` on `paley_conference_prime_power` for \(p=5\) and \(p=7\) meet
+`spherical_half_bound` exactly, so the energy sits strictly above that
+bound minus \(8\). The gap-eight alternative does not apply to the
+\(\rho=1\) family. A constant defect of \(8\) would be \(o(n^{3/2})\) only
+if it bounded \(m_n\) under \(\Phi(C)\), and that comparison is not proved.
+This does not prove \(\lim\alpha_n\) and does not assign the value \(1/2\).
+`tests/test_conference_cube_gap_not_paley.py`.
+
+The top-degree antipodal audit and the two-half near-pencil reduction
+remain residual-(ii) barriers. They do not prove the limit.
+
 ## 2026-10-20: no fixed temperature squeezes both pressure errors
 
 The original MO limit is still OPEN. Nothing below was entered in
