@@ -7,6 +7,8 @@ Equivalently m_n = (1/2) min_A max_x |x^T A x| over symmetric zero-diagonal ±1 
 """
 from __future__ import annotations
 
+import math
+
 import numpy as np
 from typing import Optional, Tuple, List
 
@@ -353,6 +355,56 @@ def dual_gaussian_lower_bound(n: int) -> float:
     if n < 2:
         raise ValueError("n>=2")
     return n * float(np.sqrt(n - 1)) / float(np.pi)
+
+
+def rademacher_absolute_moment(width: int) -> float:
+    """Mean absolute value of a width-term Rademacher sum."""
+    if width < 1:
+        raise ValueError("width>=1")
+    half = (width - 1) // 2
+    log_moment = (
+        math.log(width)
+        + math.lgamma(width)
+        - math.lgamma(half + 1)
+        - math.lgamma(width - half)
+        - (width - 1) * math.log(2.0)
+    )
+    return math.exp(log_moment)
+
+
+def optimized_product_delta(order: int) -> float:
+    """Largest (order-b)^2 mu_b^2/4 for the two-sided Boolean product floor."""
+    if order < 2:
+        raise ValueError("order>=2")
+    best = 0.0
+    for block in range(1, order):
+        moment = rademacher_absolute_moment(block)
+        value = (order - block) ** 2 * moment * moment / 4.0
+        if value > best:
+            best = value
+    return best
+
+
+def product_forced_minimum(previous_minimum: float, deleted_delta: float) -> float:
+    """Positive root of x = previous + deleted_delta/x."""
+    if previous_minimum < 0 or deleted_delta < 0:
+        raise ValueError("negative input")
+    return 0.5 * (
+        previous_minimum
+        + math.sqrt(previous_minimum * previous_minimum + 4.0 * deleted_delta)
+    )
+
+
+def phase_range_lower(order: int) -> float:
+    """Elementary phase-range floor 2 max (order-b) mu_b."""
+    if order < 2:
+        raise ValueError("order>=2")
+    best = 0.0
+    for block in range(1, order):
+        value = (order - block) * rademacher_absolute_moment(block)
+        if value > best:
+            best = value
+    return 2.0 * best
 
 
 def edge_hamming(A: np.ndarray, B: np.ndarray) -> int:

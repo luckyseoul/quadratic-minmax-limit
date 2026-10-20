@@ -1,3 +1,27 @@
+## 2026-10-20: product and phase-range payments miss the Gaussian floor
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+The optimized two-sided product payment and the phase-range payment are
+proved for every complete signing. On a minimizer they give
+\[
+m_N\ge m_{N-t}+\frac{\Delta_t}{m_N},
+\qquad
+m_N\ge\frac{m_{N-t}+R_t}{2},
+\]
+with \(\Delta_t=\max_b(t-b)^2\mu_b^2/4\) and \(R_t=2\max_b(t-b)\mu_b\).
+Both hypotheses are the moment identities already in the September 24–25
+notes. Fed the strongest past value inside the conference cap, shipped
+`spherical_half_bound`, `optimized_product_delta`, `phase_range_lower`,
+and `dual_gaussian_lower_bound` put the resulting normalized bounds
+strictly under the Gaussian floor once the order ratio reaches \(3/2\),
+and again at a doubling. A short ratio \(11/10\) product bound stays
+between that floor and the conference cap of the later order, which is
+the same vanishing-gap room already in CORE §3. Neither payment forces
+\(\liminf\alpha_n=\limsup\alpha_n\).
+`tests/test_product_phase_range_floor.py`.
+
 ## 2026-10-20: the coherent clique-flip counterfamily stays above 1/2
 
 The original MO limit is still OPEN. Nothing below was entered in
