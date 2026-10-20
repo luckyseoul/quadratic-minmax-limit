@@ -1,3 +1,24 @@
+## 2026-10-20: Max-Lipschitz cannot prove \(k_\star=O(n^{3/2})\)
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+After the best switching, \(\Phi(A)\ge|\Phi(C)-2k/p|\). For a minimizer
+this is
+\[
+\frac p2\bigl(\Phi(C)-m_n\bigr)\le k_\star\le\frac p2\bigl(\Phi(C)+m_n\bigr).
+\]
+The right side is at most \(p\Phi(C)=n(n-1)/2\), and that value is attained
+in the bound whenever \(m_n\) meets the conference value. Divided by
+\(n^{3/2}\) it equals \((n-1)/(2\sqrt n)\), which tends to infinity.
+Shipped `spherical_half_bound` matches \(\Phi(C)=\tfrac12 np\) at
+\(p=3,5,7,11\), and the ratios increase from order \(10\) through order
+\(122\). The proved ceiling is \(\Theta(n^2)\), a factor \(\Theta(\sqrt n)\)
+above \(O(n^{3/2})\). No rearrangement of this inequality yields
+\(k_\star=O(n^{3/2})\). A refutation would need
+\(k_\star/n^{3/2}\to\infty\), which needs \(\gamma_p\) not \(O(n^{-1/2})\).
+That is the same open gap. `tests/test_paley_distance_ceiling.py`.
+
 ## 2026-10-20: the uniform Paley gap is still one distance hypothesis
 
 The original MO limit is still OPEN. Nothing below was entered in
