@@ -70,6 +70,19 @@ cluster points, and each one stayed conditional.
   “original convergence OPEN”. A higher floor inside
   \((B_{\rm tilt},1/2)\) is not existence. Do not assign a new decimal
   to \(B_\infty\).
+- Two notes landed on `main` as `daf2a46` and `1c1fa6d` while the
+  checks above were being written. Do not re-prove them and do not
+  read them as a settlement.
+  `evidence/NOTE_2026-10-11_MAX_PLUS_FRAME_IDENTITY_ALL_P.md` proves
+  the frame identity (F) for every odd prime \(p\). The Max-Lipschitz
+  corollaries still require \(k_\star=o(n^2)\) for minimizers, and
+  that hypothesis is open. The known undercut at \(n=26\) has
+  \(k/N=0.375\).
+  `evidence/NOTE_2026-10-11_FRAME_OBSTRUCTION_SINGLE_ROW_EXTENSION.md`
+  proves a single added row is bounded by \(\sqrt n\). Block
+  extensions with \(d=o(n)\) stay unresolved. Its log-periodic model
+  is an integer sequence inside the step axioms, not a realization
+  of \(m_n\).
 
 Stop while the statement is conditional. The next step is still an
 unconditional existence argument or an unconditional nonexistence
