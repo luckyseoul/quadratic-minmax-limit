@@ -413,6 +413,21 @@ def pushforward_influence_ceiling(correlation: float) -> float:
     return 2.0 + 2.0 * math.sqrt(1.0 - magnitude)
 
 
+def independent_skew_ideal_threshold() -> float:
+    """Level sqrt(log 2 / 2) where log 4 - 4 alpha^2 changes sign."""
+    return math.sqrt(math.log(2.0) / 2.0)
+
+
+def independent_skew_cap_exponent() -> float:
+    """First-moment rate log 4 - 1 at alpha = 1/2."""
+    return math.log(4.0) - 1.0
+
+
+def uniform_partition_threshold() -> float:
+    """Level sqrt(log 2) / (sqrt(2) - 1) from zero near-extremal entropy cost."""
+    return math.sqrt(math.log(2.0)) / (math.sqrt(2.0) - 1.0)
+
+
 def optimized_product_delta(order: int) -> float:
     """Largest (order-b)^2 mu_b^2/4 for the two-sided Boolean product floor."""
     if order < 2:

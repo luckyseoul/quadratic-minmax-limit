@@ -1,3 +1,22 @@
+## 2026-10-20: the independent-skew first moment diverges under the cap
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+For an optimal signing the independent-skew first moment, in the fictitious
+case \(I=0\) on every central cut, is bounded below by
+\(\exp((\log 4-4\alpha^2+o(1))n)\). At the conference cap \(\alpha=1/2\) the
+rate is \(\log 4-1>0\), so the expectation diverges. The sign change of that
+rate is \(\alpha=\sqrt{\log 2/2}\). Shipped
+`independent_skew_ideal_threshold` lies strictly above
+`alpha(spherical_half_bound(n), n)` at orders \(2,10,100,1000\), and shipped
+`uniform_partition_threshold` lies strictly above the ideal level. Counting
+near-maximizers does not remove this central contribution. An existence
+proof for the multiplier-two ray has to use an \(A\)-dependent skew signing,
+or a dependency finer than the first moment. No two cluster points of
+\(m_n\) follow.
+`tests/test_independent_skew_first_moment.py`.
+
 ## 2026-10-20: conference push-forward does not compare \(K_n\)
 
 The original MO limit is still OPEN. Nothing below was entered in
