@@ -384,6 +384,13 @@ def quadratic_variance_chernoff_threshold() -> float:
     return math.sqrt(math.log(2.0) / 6.0)
 
 
+def cut_discrepancy_window(n: int) -> float:
+    """Normalized slack (1 + sqrt(binom(n, 2))) / n^{3/2} from the cut-code comparison."""
+    if n < 2:
+        raise ValueError("n>=2")
+    return (1.0 + math.sqrt(n * (n - 1) / 2.0)) / (n ** 1.5)
+
+
 def optimized_product_delta(order: int) -> float:
     """Largest (order-b)^2 mu_b^2/4 for the two-sided Boolean product floor."""
     if order < 2:

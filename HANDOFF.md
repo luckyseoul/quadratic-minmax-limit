@@ -1,3 +1,19 @@
+## 2026-10-20: cut discrepancy renames the limit
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+For the half-density cut discrepancy \(H_n\), the cut-code note proves
+\(m_n-1\le 4H_n\le m_n+\sqrt{\binom n2}\). Both slack terms are
+\(o(n^{3/2})\), so \(\lim\alpha_n\) exists if and only if
+\(\lim H_n/n^{3/2}\) exists, and the limits then differ by the factor \(4\).
+Shipped `cut_discrepancy_window` is that slack divided by \(n^{3/2}\). It
+decreases, and at a finite order it falls strictly inside the gap between
+`spherical_half_bound` and `dual_gaussian_lower_bound`, and it stays inside
+that gap at twice the order. The comparison does not shrink the cluster set
+of \(\alpha_n\). No value of \(\lim H_n/n^{3/2}\) is proved.
+`tests/test_cut_discrepancy_window.py`.
+
 ## 2026-10-20: the random-order Chernoff level sits inside the sandwich
 
 The original MO limit is still OPEN. Nothing below was entered in
