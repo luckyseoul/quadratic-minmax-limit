@@ -1,3 +1,23 @@
+## 2026-10-20: no fixed temperature squeezes both pressure errors
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+The critical-pressure gate says that if \(s_n(c)\) converges for arbitrarily
+large \(c\), with oscillation \(o(c)\), then \(\alpha_n\) converges. One
+temperature leaves the window \((\log 2)/c\). Common-temperature doubling
+leaves a further defect: shipped `critical_block_excess(n,c)` tends to
+\(c^2/8\), which is \(c/8\) on the \(\alpha\) scale. These two errors meet
+at \(c=\sqrt{8\log 2}\), and the common value is
+`pressure_comparison_window` there. That value lies strictly above the gap
+between `spherical_half_bound` and `dual_gaussian_lower_bound` at orders
+\(10,100,1000\). No single temperature makes both errors smaller than the
+sandwich. Oscillation \(o(c)\) as \(c\to\infty\) is not proved.
+`tests/test_critical_pressure_window.py`.
+
+The top-degree and near-pencil notes are residual-(ii) barriers. The
+two-half random-skew note is the central-cut first moment already recorded.
+
 ## 2026-10-20: arcsine mate rigidity is vacuous at the cap
 
 The original MO limit is still OPEN. Nothing below was entered in

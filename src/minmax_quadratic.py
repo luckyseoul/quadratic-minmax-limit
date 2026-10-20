@@ -541,6 +541,27 @@ def arcsine_rigidity_allowance(level: float) -> float:
     return 64.0 * math.pi * (level - 1.0 / math.pi)
 
 
+def pressure_comparison_window(coupling: float) -> float:
+    """The (log 2)/c slack between s_n(c)/c and alpha_n."""
+    if coupling <= 0.0:
+        raise ValueError("coupling must be positive")
+    return math.log(2.0) / coupling
+
+
+def critical_interpolation_defect(coupling: float) -> float:
+    """Alpha-scale size c/8 of the common-temperature doubling defect."""
+    if coupling <= 0.0:
+        raise ValueError("coupling must be positive")
+    return coupling / 8.0
+
+
+def critical_block_excess(order: int, coupling: float) -> float:
+    """The normalized cross term (n/2) log cosh(c/sqrt(2n))."""
+    if order < 2 or coupling <= 0.0:
+        raise ValueError("bad args")
+    return (order / 2.0) * math.log(math.cosh(coupling / math.sqrt(2.0 * order)))
+
+
 def sigma_square_mass(symmetric: np.ndarray, skew: np.ndarray) -> float:
     """Off-diagonal square mass of A^2-R^2 and AR-RA."""
     difference = symmetric @ symmetric - skew @ skew
