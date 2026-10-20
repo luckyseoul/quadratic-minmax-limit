@@ -1,3 +1,18 @@
+## 2026-10-20: weighted compactness does not pass the filler to \(K_n\)
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+The equimodular note proves that the weighted relaxation \(U_n\) is
+monotone and convergent, and that a \(t\times t\) sign filler has Boolean
+cut norm at least \(t\mu_t\). Shipped `rectangle_switching_lower` exceeds
+`dual_gaussian_lower_bound` on the filler's own order at widths \(8,20,40,80\),
+so the filler is a leading \(t^{3/2}\) term. Normalized on the doubled order
+\(2t\), the same values sit strictly under `dual_gaussian_lower_bound(2t)`.
+Convergence of \(U_n\) does not force convergence of \(K_n=n\mu_{n-1}/m_n\),
+and this filler does not separate \(\liminf\alpha_n\) from \(\limsup\alpha_n\).
+`tests/test_equimodular_filler_floor.py`.
+
 ## 2026-10-20: the Hadamard-frame target sits above the conference cap
 
 The original MO limit is still OPEN. Nothing below was entered in

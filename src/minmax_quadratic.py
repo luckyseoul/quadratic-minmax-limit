@@ -372,6 +372,13 @@ def rademacher_absolute_moment(width: int) -> float:
     return math.exp(log_moment)
 
 
+def rectangle_switching_lower(rows: int, cols: int) -> float:
+    """Boolean cut-norm lower bound rows * mu_cols for a sign rectangle."""
+    if rows < 1 or cols < 1:
+        raise ValueError("bad args")
+    return float(rows) * rademacher_absolute_moment(cols)
+
+
 def optimized_product_delta(order: int) -> float:
     """Largest (order-b)^2 mu_b^2/4 for the two-sided Boolean product floor."""
     if order < 2:
