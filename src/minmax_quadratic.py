@@ -407,6 +407,29 @@ def phase_range_lower(order: int) -> float:
     return 2.0 * best
 
 
+def orthogonal_square_gap_minimum(previous_minimum: float, deleted: int) -> float:
+    """Root of the orthogonal-completion identity with the cross term removed."""
+    if deleted < 2 or previous_minimum < 0:
+        raise ValueError("bad args")
+    binomial = deleted * (deleted - 1) / 2.0
+    return math.sqrt(previous_minimum * previous_minimum + binomial)
+
+
+def max_cross_row_energy(retained: int, deleted: int) -> float:
+    """Largest squared Euclidean energy of a Boolean image of a sign cross block."""
+    if retained < 1 or deleted < 1:
+        raise ValueError("bad args")
+    return float(deleted * retained * retained)
+
+
+def orthogonal_max_cross_minimum(
+    previous_minimum: float, retained: int, deleted: int
+) -> float:
+    """Square-gap root with the cross energy replaced by its row-sum maximum."""
+    base = orthogonal_square_gap_minimum(previous_minimum, deleted)
+    return math.sqrt(base * base + max_cross_row_energy(retained, deleted))
+
+
 def edge_hamming(A: np.ndarray, B: np.ndarray) -> int:
     """Number of undirected disagreeing edges between two Seidel matrices."""
     if A.shape != B.shape:

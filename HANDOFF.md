@@ -1,3 +1,28 @@
+## 2026-10-20: the orthogonal square gap is a lower-order payment
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+The orthogonal-completion identity says that for every Boolean state on a
+principal set,
+\[
+Q(A[S])^2+\binom{t}{2}+\|Bx\|_2^2\le\Phi(A)^2.
+\]
+The proved payment drops the cross term. Shipped
+`orthogonal_square_gap_minimum`, fed `spherical_half_bound` at order 80,
+lands strictly under `dual_gaussian_lower_bound` at the later orders 120
+and 160. The binomial is a fraction \(O(1/n)\) of the squared conference
+value, so at leading order the bound is monotonicity.
+
+A lower bound \(\|Bx_\star\|_2^2=\Omega(n^3)\) is not proved. The row-sum
+maximum of that term is \(t n^2\). Shipped `orthogonal_max_cross_minimum`,
+iterated on six doublings from `dual_gaussian_lower_bound(40)`, stays under
+`spherical_half_bound` by more than \(0.05\). The pure doubling map of that
+maximum has fixed point \(1/\sqrt7\), below the conference cap. That maximum
+is not a theorem about minimizers. The identity does not force
+\(\liminf\alpha_n=\limsup\alpha_n\).
+`tests/test_orthogonal_square_gap.py`.
+
 ## 2026-10-20: product and phase-range payments miss the Gaussian floor
 
 The original MO limit is still OPEN. Nothing below was entered in
