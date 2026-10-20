@@ -493,6 +493,62 @@ def directed_triangle_count(tournament: np.ndarray) -> int:
     return count
 
 
+def pentagon_signing() -> np.ndarray:
+    """Order-5 signing, negative on the cycle and positive on the diagonals."""
+    order = 5
+    signing = np.ones((order, order), dtype=np.float64)
+    np.fill_diagonal(signing, 0.0)
+    for vertex in range(order):
+        neighbor = (vertex + 1) % order
+        signing[vertex, neighbor] = -1.0
+        signing[neighbor, vertex] = -1.0
+    return signing
+
+
+def cosh_pressure(signing: np.ndarray, coupling: float) -> float:
+    """Mean of cosh(coupling * Q / sqrt(n)) over the Boolean cube."""
+    order = int(signing.shape[0])
+    if order < 2 or order > 12:
+        raise ValueError("order must be between 2 and 12")
+    scale = coupling / math.sqrt(order)
+    total = 0.0
+    patterns = 1 << (order - 1)
+    for mask in range(patterns):
+        state = np.ones(order, dtype=np.float64)
+        for index in range(order - 1):
+            state[index + 1] = 1.0 if mask & (1 << index) else -1.0
+        total += math.cosh(scale * form_Q(signing, state))
+    return total / patterns
+
+
+def product_pressure_lower_curve(order: int, coupling: float) -> float:
+    """The proposed universal curve cosh(c sqrt(1-1/n))^(n/2)."""
+    if order < 2:
+        raise ValueError("order>=2")
+    return math.cosh(coupling * math.sqrt(1.0 - 1.0 / order)) ** (order / 2.0)
+
+
+def commutator_square_ceiling(order: int) -> float:
+    """Elementary ceiling of Sigma(A,R)/n^4 for sign pairs."""
+    if order < 3:
+        raise ValueError("order>=3")
+    ratio = 1.0 - 2.0 / order
+    return 8.0 * (1.0 - 1.0 / order) * ratio * ratio
+
+
+def arcsine_rigidity_allowance(level: float) -> float:
+    """Leading allowance 64 pi (alpha - 1/pi) in the mate-rigidity inequality."""
+    return 64.0 * math.pi * (level - 1.0 / math.pi)
+
+
+def sigma_square_mass(symmetric: np.ndarray, skew: np.ndarray) -> float:
+    """Off-diagonal square mass of A^2-R^2 and AR-RA."""
+    difference = symmetric @ symmetric - skew @ skew
+    commutator = symmetric @ skew - skew @ symmetric
+    mask = 1.0 - np.eye(symmetric.shape[0])
+    return float(np.sum((difference * difference + commutator * commutator) * mask))
+
+
 def anticommutator_squared_frobenius(
     symmetric: np.ndarray, skew: np.ndarray
 ) -> float:

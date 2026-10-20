@@ -1,3 +1,35 @@
+## 2026-10-20: arcsine mate rigidity is vacuous at the cap
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+The signed-regular arcsine bound meets \(M/\sqrt2\) exactly at
+\(\alpha=1/\pi\). Away from that floor, a successful orientation forces
+\(\Sigma(A,R)/n^4\le 64\pi(\alpha-1/\pi)\) plus a Dini term. The elementary
+ceiling is \(8(1-1/n)(1-2/n)^2\), since each off-diagonal entry of
+\(A^2\), \(R^2\), \(AR\), and \(RA\) is a sum of \(n-2\) signs. Shipped
+`sigma_square_mass` on the Paley matrices of orders \(6\) and \(14\),
+against `skew_tournament`, respects `commutator_square_ceiling`. At orders
+\(10,100,1000\) that ceiling lies strictly below
+`arcsine_rigidity_allowance` of `alpha(spherical_half_bound(n), n)`. The
+inequality does not constrain signings at the conference cap, and it does
+not construct the orientation.
+`tests/test_arcsine_rigidity_vacuous_at_cap.py`.
+
+## 2026-10-20: the product pressure curve fails at order five
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+The proposed bound
+\(\mathbb E\cosh(cQ/\sqrt n)\ge\cosh(c\sqrt{1-1/n})^{n/2}\) is false for
+every \(c>0\). Shipped `pentagon_signing` has `phi` equal to `exact_m(5)`,
+and `cosh_pressure` lies strictly below `product_pressure_lower_curve` at
+couplings \(0.25\), \(1\), and \(3\). This kills that curve. It does not
+decide \(\lim\alpha_n\). The optimized critical-pressure gate remains a
+separate open hypothesis.
+`tests/test_pressure_lower_curve_order_five.py`.
+
 ## 2026-10-20: tournament feedback can exceed the cube scale
 
 The original MO limit is still OPEN. Nothing below was entered in
