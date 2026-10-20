@@ -1,3 +1,24 @@
+## 2026-10-20: the Hadamard-frame target sits above the conference cap
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+Proposition 6.4 gives \(|L_2(n)-2G_2(n)|\le n\) for the Hadamard-cloud
+subclass. Reaching the multiplier-two threshold on that subclass still
+requires
+\[
+G_2(n)\le\sqrt2\,m_n+n^{3/2}\omega(n)
+\]
+with a Dini-summable \(\omega\). That upper bound is not proved.
+`hadamard_cap_over_sqrt2_floor` equals \(\pi/(2\sqrt2)>1\) at every
+order, because both shipped envelopes are constant multiples of
+\(n\sqrt{n-1}\). `hadamard_cap_exceeds_sqrt2_floor` becomes true at a
+finite order and stays true at twice that order: the linear slack \(+n\)
+in (6.7) is then smaller than the constant-factor gap between the
+conference cap and \(\sqrt2\) times the Gaussian floor. Those two
+envelopes do not prove the display above.
+`tests/test_hadamard_frame_target.py`.
+
 ## 2026-10-20: the orthogonal square gap is a lower-order payment
 
 The original MO limit is still OPEN. Nothing below was entered in

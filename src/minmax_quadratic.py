@@ -430,6 +430,20 @@ def orthogonal_max_cross_minimum(
     return math.sqrt(base * base + max_cross_row_energy(retained, deleted))
 
 
+def hadamard_cap_over_sqrt2_floor(n: int) -> float:
+    """Conference cap divided by sqrt(2) times the Gaussian floor."""
+    return spherical_half_bound(n) / (
+        math.sqrt(2.0) * dual_gaussian_lower_bound(n)
+    )
+
+
+def hadamard_cap_exceeds_sqrt2_floor(n: int) -> bool:
+    """True when the conference cap exceeds sqrt(2) times the floor plus n."""
+    return spherical_half_bound(n) > (
+        math.sqrt(2.0) * dual_gaussian_lower_bound(n) + n
+    )
+
+
 def edge_hamming(A: np.ndarray, B: np.ndarray) -> int:
     """Number of undirected disagreeing edges between two Seidel matrices."""
     if A.shape != B.shape:
