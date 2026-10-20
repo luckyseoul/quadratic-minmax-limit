@@ -1,3 +1,27 @@
+## 2026-10-20: the coherent clique-flip counterfamily stays above 1/2
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+Proposition 6.5n builds complete signings, for every Hadamard order \(r\)
+and every block count \(b\ge2\), whose proved ceiling is
+\[
+\frac{\Phi(A)}{n^{3/2}}
+\le\frac{\sqrt\kappa}{4}+\sqrt{\log2},
+\qquad\kappa=r/b.
+\]
+The second term is the shipped random-method constant
+`random_method_upper_bound`. It is already larger than \(1/2\), and the
+block term is nonnegative for every \(\kappa>0\). No aspect ratio in this
+family undercuts the conference cap. A nonnegative leading coherent defect
+\(L_{\rm cl}-\sqrt2\,\Phi\) forces \(\kappa\) at least about \(64.6\), and at
+that threshold the same ceiling is larger than \(2\). At the note's choice
+\(\kappa=256\) the ceiling is larger than \(4\) while the defect is larger
+than \(1\). The family is not a sequence of minimizers, so it supplies
+neither \(\liminf\alpha_n<\limsup\alpha_n\) nor a squeeze. The minimizer
+form of coherent control stays open, as the proposition already says.
+`tests/test_clique_counterfamily_above_half.py`.
+
 ## 2026-10-20: the Dini two-ray estimate is neither proved nor refuted
 
 The original MO limit is still OPEN. Nothing below was entered in
