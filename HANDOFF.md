@@ -1,3 +1,21 @@
+## 2026-10-20: conference push-forward does not compare \(K_n\)
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+For every symmetric conference matrix the synchronous best-response
+coordinates are pairwise unbiased, so the mean energy after one response
+is \(0\). The coarse ceiling \(2+2\sqrt{1-|E|}\) therefore collapses to
+\(4\). Shipped `best_response_mean_energy` is \(0\) on the Paley
+conference matrices of orders \(6\) and \(14\). Shipped
+`pushforward_influence_ceiling(0)` is \(4\), while the sharp value
+\(n\mu_{n-1}/m_n\) at order \(6\), from `exact_m` and
+`rademacher_absolute_moment`, is strictly smaller. An upper bound of
+\(4\) does not compare \(K_n\) with \(K_{n+1}\). The missing pieces are
+an \(A\)-dependent lower bound on the absolute joint response energy and
+an outer-layer multiplicity theorem from global minimality.
+`tests/test_conference_pushforward_ceiling.py`.
+
 ## 2026-10-20: cut discrepancy renames the limit
 
 The original MO limit is still OPEN. Nothing below was entered in

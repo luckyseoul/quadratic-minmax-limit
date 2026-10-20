@@ -391,6 +391,28 @@ def cut_discrepancy_window(n: int) -> float:
     return (1.0 + math.sqrt(n * (n - 1) / 2.0)) / (n ** 1.5)
 
 
+def best_response_mean_energy(signing: np.ndarray) -> float:
+    """Mean of Q at the synchronous best response, tie value +1."""
+    order = int(signing.shape[0])
+    if order < 2 or order > 14 or signing.shape != (order, order):
+        raise ValueError("order must be between 2 and 14")
+    masks = np.arange(1 << order, dtype=np.uint32)[:, None]
+    bits = (masks >> np.arange(order, dtype=np.uint32)) & 1
+    states = np.where(bits == 1, 1.0, -1.0)
+    fields = states @ signing
+    response = np.where(fields >= 0.0, 1.0, -1.0)
+    image = response @ signing
+    return float(np.mean(0.5 * np.sum(response * image, axis=1)))
+
+
+def pushforward_influence_ceiling(correlation: float) -> float:
+    """Coarse best-response ceiling 2 + 2 sqrt(1 - |correlation|)."""
+    magnitude = abs(correlation)
+    if magnitude > 1.0:
+        raise ValueError("correlation must lie in [-1, 1]")
+    return 2.0 + 2.0 * math.sqrt(1.0 - magnitude)
+
+
 def optimized_product_delta(order: int) -> float:
     """Largest (order-b)^2 mu_b^2/4 for the two-sided Boolean product floor."""
     if order < 2:
