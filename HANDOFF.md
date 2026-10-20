@@ -1,3 +1,28 @@
+## 2026-10-20: the Dini two-ray estimate is neither proved nor refuted
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+Proposition 6.3 needs both
+\(H(2n)\le 2H(n)+2n\eta(n)\) and \(H(3n)\le 3H(n)+3n\eta(n)\) for
+\(H=m^{2/3}\), with the tail \(E(N)=\sum_j\eta^*(2^j N)\to 0\). The
+zero-error case is \(m_{2n}\le 2\sqrt2\,m_n\) and \(m_{3n}\le 3\sqrt3\,m_n\).
+
+Shipped `exact_m` gives \(m_4=4>2\sqrt2\,m_2\) and \(m_6<2\sqrt2\,m_3\).
+Finite failures do not refute the estimate for every large \(n\). Shipped
+`dual_gaussian_lower_bound` sits strictly above its own zero-error
+doubling and tripling targets, because
+\(\sqrt{2n-1}>\sqrt2\sqrt{n-1}\) and
+\(\sqrt{3n-1}>\sqrt3\sqrt{n-1}\). The relative excess is \(O(1/n)\). Along
+dyadic \(n\), that tail sums to a quantity that shrinks as the starting
+index grows, so the floor does not refute a Dini-summable \(\eta\). The
+proved step ceiling produces an \(\eta\) that grows, so it does not prove
+the estimate either.
+
+The remaining hypothesis is exactly the pair of ray inequalities for the
+true \(m_n\), with some \(\eta\) whose dyadic tail \(E(N)\) tends to \(0\).
+`tests/test_dini_two_ray_floor.py`.
+
 ## 2026-10-20: edge, degree, and Frobenius Lipschitz do not cap \(k_\star\)
 
 The original MO limit is still OPEN. Nothing below was entered in
