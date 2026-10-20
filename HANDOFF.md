@@ -1,3 +1,19 @@
+## 2026-10-20: dual-Gaussian does not bound the switching distance by \(O(n^{3/2})\)
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+The other estimate named next to Max-Lipschitz is dual-Gaussian on
+\(W=A\circ C\). It does not give \(k\le\binom n2/2-\Omega(n^{3/2})\).
+Switching distance is \((N-\max Q_W)/2\), and \(\Phi(W)=\max|Q_W|\) need
+not equal the positive peak. For \(W=-(J-I)\), shipped `phi` returns
+\(\binom n2\) and the positive peak found by `form_Q` is \(n/2\), so the
+minimized disagreement is \(N/2-n/4\). That exceeds
+\(N/2\) minus the shipped Gaussian floor at orders \(6\), \(8\), and \(10\).
+A large Boolean norm on the negative side does not produce an
+\(\Omega(n^{3/2})\) agreement surplus. This method does not prove
+\(k_\star=O(n^{3/2})\). `tests/test_dual_gaussian_hamming_ceiling.py`.
+
 ## 2026-10-20: Max-Lipschitz cannot prove \(k_\star=O(n^{3/2})\)
 
 The original MO limit is still OPEN. Nothing below was entered in
