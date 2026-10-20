@@ -1,3 +1,20 @@
+## 2026-10-20: tournament feedback can exceed the cube scale
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+The orientation-structure note proves
+\(0\le B_{\rm ord}(A)-B_*(A)\le 4\tau(S)\). An \(O(n)\) feedback number
+would be harmless on the \(n^{3/2}\) scale. It is not guaranteed.
+Shipped `nearly_regular_tournament` and `directed_triangle_count` give a
+lower bound \(\tau\ge C/(n-2)\) by charging each directed triangle to a
+feedback arc. For that regular family, \(4\tau\) exceeds \(n^{3/2}\) at a
+finite odd order and again four steps later. The missing theorem is
+\(\tau(S_*)=o(n^{3/2})\) for a minimizer, or a near-transitive orientation
+of the same quality. The factor \(\sqrt2\) remains forced on any complete
+dyadic tail, and that sharpness does not supply the matching upper bound.
+`tests/test_tournament_feedback_scale.py`.
+
 ## 2026-10-20: one Boolean anchor is an \(o(n^{3/2})\) shield
 
 The original MO limit is still OPEN. Nothing below was entered in

@@ -478,6 +478,21 @@ def tournament_all_one_l1(tournament: np.ndarray) -> float:
     return float(np.sum(np.abs(tournament.sum(axis=1))))
 
 
+def directed_triangle_count(tournament: np.ndarray) -> int:
+    """Number of directed 3-cycles in a tournament."""
+    order = int(tournament.shape[0])
+    count = 0
+    for i in range(order):
+        for j in range(i + 1, order):
+            for k in range(j + 1, order):
+                score = (
+                    tournament[i, j] + tournament[j, k] + tournament[k, i]
+                )
+                if abs(score) == 3.0:
+                    count += 1
+    return count
+
+
 def anticommutator_squared_frobenius(
     symmetric: np.ndarray, skew: np.ndarray
 ) -> float:
