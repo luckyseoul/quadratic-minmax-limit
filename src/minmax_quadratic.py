@@ -455,6 +455,29 @@ def skew_tournament(order: int) -> np.ndarray:
     return signs - signs.T
 
 
+def nearly_regular_tournament(order: int) -> np.ndarray:
+    """Regular tournament, or a one-vertex deletion of one when order is even."""
+    if order < 2:
+        raise ValueError("order>=2")
+    host = order if order % 2 == 1 else order + 1
+    tournament = np.zeros((host, host), dtype=np.float64)
+    half = host // 2
+    for source in range(host):
+        for step in range(1, half + 1):
+            target = (source + step) % host
+            tournament[source, target] = 1.0
+            tournament[target, source] = -1.0
+    if order % 2 == 1:
+        return tournament
+    keep = np.arange(1, host)
+    return tournament[np.ix_(keep, keep)]
+
+
+def tournament_all_one_l1(tournament: np.ndarray) -> float:
+    """L1 norm of the image of the all-ones vector."""
+    return float(np.sum(np.abs(tournament.sum(axis=1))))
+
+
 def anticommutator_squared_frobenius(
     symmetric: np.ndarray, skew: np.ndarray
 ) -> float:

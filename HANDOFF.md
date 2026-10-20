@@ -1,3 +1,21 @@
+## 2026-10-20: one Boolean anchor is an \(o(n^{3/2})\) shield
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+Any fixed list of Boolean anchors can be shielded from a skew form at cost
+\(Ln\), with \(L\) the number of signature cells. For one anchor the
+optimum is \(0\) when \(n\) is odd and \(n\) when \(n\) is even. Shipped
+`nearly_regular_tournament` and `tournament_all_one_l1` match those two
+values. The even-order cost \(n\) falls below `dual_gaussian_lower_bound`
+at a finite even order, and \(n/n^{3/2}\) is then below the Gaussian
+\(\alpha\) at twice that order. Pairs outside the finite list are not
+controlled. Two projectively distinct anchors cannot both lie in the
+kernel. The direct-limit audit's joint Bernoulli lower tail is the same
+unproved sufficient rate already recorded for the counting entropy, and
+its matrix-Spencer encoding lives in dimension \(2^{n-1}\).
+`tests/test_one_anchor_tournament_floor.py`.
+
 ## 2026-10-20: fixed real part misses both spectral edges
 
 The original MO limit is still OPEN. Nothing below was entered in
