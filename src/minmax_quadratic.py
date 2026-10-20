@@ -379,6 +379,11 @@ def rectangle_switching_lower(rows: int, cols: int) -> float:
     return float(rows) * rademacher_absolute_moment(cols)
 
 
+def quadratic_variance_chernoff_threshold() -> float:
+    """Ideal central-cut level from 12 alpha^2 = log 4."""
+    return math.sqrt(math.log(2.0) / 6.0)
+
+
 def optimized_product_delta(order: int) -> float:
     """Largest (order-b)^2 mu_b^2/4 for the two-sided Boolean product floor."""
     if order < 2:

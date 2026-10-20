@@ -1,3 +1,24 @@
+## 2026-10-20: the random-order Chernoff level sits inside the sandwich
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+The random-order half-cut note gives the exact variance
+\(\operatorname{Var} Z_\pi=(h+D_A)/3\). In the ideal case \(D_A=0\), \(I=0\),
+a central cut, the quadratic-variance union bound needs
+\(\alpha>\sqrt{\log 2/6}\). Shipped
+`quadratic_variance_chernoff_threshold` lies strictly above
+`alpha(dual_gaussian_lower_bound(n), n)` and strictly below
+`alpha(spherical_half_bound(n), n)` at orders \(2,10,100,1000\). The
+argument does not cover the whole sandwich, and the note states that (17)
+is not a lower-tail theorem. The missing object is a uniform joint tail for
+\((I(U,y),D_A(U,y),Z_\pi)\). Global minimality supplies only the lower bound
+\(\Phi\ge m_n\) on directed half-cuts. The rectangle construction in that
+note is not a minimizer. Averaging vertex orders does not prove
+\(\Lambda_\pi\le\sqrt2\,m_n+O(n)\), and it does not produce two cluster
+points of \(\alpha_n\).
+`tests/test_random_order_chernoff_gap.py`.
+
 ## 2026-10-20: weighted compactness does not pass the filler to \(K_n\)
 
 The original MO limit is still OPEN. Nothing below was entered in
