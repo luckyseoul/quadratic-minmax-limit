@@ -1,3 +1,26 @@
+## 2026-10-20: the uniform Paley gap is still one distance hypothesis
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+The uniform gap \(\Phi(C)-m_n=O(n)\) on \(n=p^2+1\) would force
+\(\gamma_p\to0\) and \(\lim\alpha_n=1/2\). By Corollary 6 of
+`evidence/NOTE_2026-10-11_MAX_PLUS_FRAME_IDENTITY_ALL_P.md`,
+\(\Phi(C)-\Phi(A)\le 2k/p\), so for a minimizer this gap is \(O(n)\) if and
+only if its switching distance satisfies \(k_\star=O(n^{3/2})\). That
+distance bound is the remaining hypothesis. It is not proved, and the
+stored distances do not refute it.
+
+Shipped `spherical_half_bound` gives \(\Phi=15,65,175\) at orders
+\(10,26,50\). The known gains are at least \(2,4,6\), hence
+\(0.2n\), \(0.15384615384615385\,n\), and \(0.12n\). The known distances
+are \(k=5\) at order \(10\) (\(k/n^{3/2}=0.15811388300841897\)) and
+\(k=122\) at order \(26\) (\(k/n^{3/2}=0.9202372494945559\)). Order \(50\)
+has no stored distance. One multiple of \(n^{3/2}\) at two orders does
+not prove the bound for every large prime, and it does not make
+\(k/n^{3/2}\) unbounded. The Gaussian floor only caps the gap by
+\((1/2-1/\pi)n^{3/2}\), with \(1/2-1/\pi=0.1816901138162093\).
+
 ## 2026-10-20: scalar axioms allow the whole sandwich to oscillate
 
 The original MO limit is still OPEN. Nothing below was entered in
