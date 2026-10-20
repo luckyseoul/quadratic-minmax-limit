@@ -438,6 +438,38 @@ def zero_defect_spectral_bridge() -> float:
     return 1.0 / (2.0 * math.sqrt(2.0))
 
 
+def anticommutator_frobenius_floor(order: int) -> float:
+    """Parity floor on ||AR+RA||_F^2 for sign pairs of order at least 3."""
+    if order < 3:
+        raise ValueError("order>=3")
+    if order % 2 == 0:
+        return float(2 * order * (order - 2))
+    return float(2 * (order - 1) * (order - 1))
+
+
+def skew_tournament(order: int) -> np.ndarray:
+    """Upper-triangular +1 skew signing."""
+    if order < 2:
+        raise ValueError("order>=2")
+    signs = np.triu(np.ones((order, order), dtype=np.float64), 1)
+    return signs - signs.T
+
+
+def anticommutator_squared_frobenius(
+    symmetric: np.ndarray, skew: np.ndarray
+) -> float:
+    """Squared Frobenius norm of AR+RA."""
+    commutator = symmetric @ skew + skew @ symmetric
+    return float(np.sum(commutator * commutator))
+
+
+def clifford_sphere_requirement(order: int) -> float:
+    """Boolean-norm floor forced by the full complex operator bound."""
+    if order < 2:
+        raise ValueError("order>=2")
+    return order * math.sqrt(2.0 * (order - 1)) / (2.0 * math.sqrt(2.0))
+
+
 def optimized_product_delta(order: int) -> float:
     """Largest (order-b)^2 mu_b^2/4 for the two-sided Boolean product floor."""
     if order < 2:

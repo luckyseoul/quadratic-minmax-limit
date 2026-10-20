@@ -1,3 +1,28 @@
+## 2026-10-20: exact Clifford flattening is parity-impossible
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+For every symmetric sign matrix \(A\) and skew sign matrix \(R\) of order
+\(n\ge3\), \(AR+RA\neq0\). The parity floor is
+\(\|AR+RA\|_F^2\ge2n(n-2)\) for even \(n\) and \(2(n-1)^2\) for odd \(n\).
+Shipped `anticommutator_squared_frobenius` on the Paley matrices of orders
+\(6\) and \(14\), against `skew_tournament`, meets
+`anticommutator_frobenius_floor` and is positive. That floor is only an
+\(O(\sqrt n)\) operator-norm obstruction, so it does not rule out a
+Dini-scale approximate anticommutator.
+
+The full complex operator bound \(\|A+iR\|_{\mathrm{op}}\ge\sqrt{2(n-1)}\)
+would give the doubling diamond only if
+\(m_n\ge n\sqrt{n-1}/2-o(n^{3/2})\). Shipped
+`clifford_sphere_requirement` equals `spherical_half_bound` and lies
+strictly above `dual_gaussian_lower_bound` at orders \(6,14,100\). The
+sphere bound asks for the conference value. It does not prove doubling on
+the Gaussian floor. The Banaszczyk linear-size anchor theorem still leaves
+the vertex cover of the non-anchor pairs unproved, because it does not
+bound \(\Gamma(R)\).
+`tests/test_clifford_parity_floor.py`.
+
 ## 2026-10-20: the zero-defect spectral bridge loses a factor \(\pi/2\)
 
 The original MO limit is still OPEN. Nothing below was entered in
