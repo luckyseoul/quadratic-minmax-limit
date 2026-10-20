@@ -1,3 +1,18 @@
+## 2026-10-20: edge, degree, and Frobenius Lipschitz do not cap \(k_\star\)
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+Propositions 15.20, 15.20b, and 15.20c lower-bound \(\Phi\) by
+\(\Phi(C)-n\sqrt{2k}\), \(\Phi(C)-2k\), and \(\Phi(C)-Dn\). Each forbids
+only small disagreement. At the diameter \(k=\binom n2\), and at maximum
+degree \(n-1\), shipped `spherical_half_bound`,
+`phi_edge_lipschitz_lower`, and `phi_degree_lipschitz_lower` are negative
+on the Paley orders \(10,26,50\). A negative lower bound does not forbid
+that distance. The diameter divided by \(n^{3/2}\) increases over those
+orders, so these inequalities do not imply \(k_\star=O(n^{3/2})\).
+`tests/test_lipschitz_distance_allows_diameter.py`.
+
 ## 2026-10-20: dual-Gaussian does not bound the switching distance by \(O(n^{3/2})\)
 
 The original MO limit is still OPEN. Nothing below was entered in
