@@ -1,3 +1,21 @@
+## 2026-10-20: fixed real part misses both spectral edges
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+Greaves--Mohar--O control the largest eigenvalue of a pure orientation
+because \(iR\) is symmetric about zero. A fixed real part \(A\) destroys
+that symmetry. On \(K_3\) with \(A=J-I\), shipped
+`min_hermitian_op_over_skew` equals \(1+\sqrt3\) for every skew signing,
+and shipped `expected_triangle_polynomial_radius` of \(x^3-6x-2\) is
+strictly smaller. The averaged characteristic polynomial does not select
+a signing that meets both spectral edges. Applying the one-sided theorem
+to \(A\) and to \(-A\) produces two signings. A full operator bound strong
+enough for the half-cut target is the same conference-value demand already
+recorded for the Clifford sphere. The multiplier-two estimate remains
+unproved.
+`tests/test_hermitian_interlacing_gap.py`.
+
 ## 2026-10-20: exact Clifford flattening is parity-impossible
 
 The original MO limit is still OPEN. Nothing below was entered in

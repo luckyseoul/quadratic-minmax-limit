@@ -470,6 +470,40 @@ def clifford_sphere_requirement(order: int) -> float:
     return order * math.sqrt(2.0 * (order - 1)) / (2.0 * math.sqrt(2.0))
 
 
+def complete_positive_signing(order: int) -> np.ndarray:
+    """The Seidel matrix J-I."""
+    if order < 2:
+        raise ValueError("order>=2")
+    return np.ones((order, order), dtype=np.float64) - np.eye(order)
+
+
+def min_hermitian_op_over_skew(signing: np.ndarray) -> float:
+    """Minimum operator norm of signing + iR over skew signings R."""
+    order = int(signing.shape[0])
+    if order < 2 or order > 4 or signing.shape != (order, order):
+        raise ValueError("order must be between 2 and 4")
+    edges = [(i, j) for i in range(order) for j in range(i + 1, order)]
+    best = None
+    base = signing.astype(np.complex128)
+    for mask in range(1 << len(edges)):
+        skew = np.zeros((order, order), dtype=np.complex128)
+        for bit, (i, j) in enumerate(edges):
+            sign = 1.0 if mask & (1 << bit) else -1.0
+            skew[i, j] = 1j * sign
+            skew[j, i] = -1j * sign
+        spectrum = np.linalg.eigvalsh(base + skew)
+        operator = float(np.max(np.abs(spectrum)))
+        if best is None or operator < best:
+            best = operator
+    return float(best)
+
+
+def expected_triangle_polynomial_radius() -> float:
+    """Spectral radius of x^3 - 6x - 2."""
+    roots = np.roots([1.0, 0.0, -6.0, -2.0])
+    return float(np.max(np.abs(roots)))
+
+
 def optimized_product_delta(order: int) -> float:
     """Largest (order-b)^2 mu_b^2/4 for the two-sided Boolean product floor."""
     if order < 2:
