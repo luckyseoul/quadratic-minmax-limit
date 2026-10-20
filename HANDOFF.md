@@ -1,3 +1,26 @@
+## 2026-10-20: the zero-defect spectral bridge loses a factor \(\pi/2\)
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+The random-skew-mate note converts an approximate commuting mate into a
+cube-norm bound by the trace/Frobenius comparison. At zero defect that
+bound is \(D_\to\le(1/(2\sqrt2)+o(1))n^{3/2}\). The outgoing-half target
+at the Gaussian floor is \(n^{3/2}/(\pi\sqrt2)\). Shipped
+`zero_defect_spectral_bridge` divided by `directed_half_floor_constant`
+equals \(\pi/2\). On orders \(10,100,1000\), the same bridge sits strictly
+above \(\alpha/\sqrt2\) for both `dual_gaussian_lower_bound` and
+`spherical_half_bound`. The comparison can meet the target only at the
+endpoint \(\alpha=1/2\) with vanishing defect. It does not prove
+\(D_\to\le m_n/\sqrt2\) on the open interval between those envelopes.
+`tests/test_spectral_bridge_factor.py`.
+
+The ordered-skew prefix identities are equivalent to one-sided cut-flip
+stability, not to existence of \(\lim\alpha_n\). The one-edge convex
+minimax returns the value \(m_n\) and no integral tournament. The
+outgoing-half first moment repeats the already recorded central-cut
+divergence under the conference cap.
+
 ## 2026-10-20: the independent-skew first moment diverges under the cap
 
 The original MO limit is still OPEN. Nothing below was entered in

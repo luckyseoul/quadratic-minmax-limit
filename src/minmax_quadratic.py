@@ -428,6 +428,16 @@ def uniform_partition_threshold() -> float:
     return math.sqrt(math.log(2.0)) / (math.sqrt(2.0) - 1.0)
 
 
+def directed_half_floor_constant() -> float:
+    """Leading constant 1/(pi sqrt(2)) of M/sqrt(2) at the Gaussian floor."""
+    return 1.0 / (math.pi * math.sqrt(2.0))
+
+
+def zero_defect_spectral_bridge() -> float:
+    """Leading constant 1/(2 sqrt(2)) of the zero-defect operator bound on D_to."""
+    return 1.0 / (2.0 * math.sqrt(2.0))
+
+
 def optimized_product_delta(order: int) -> float:
     """Largest (order-b)^2 mu_b^2/4 for the two-sided Boolean product floor."""
     if order < 2:
