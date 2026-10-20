@@ -1,3 +1,21 @@
+## 2026-10-20: phase self-gluing overshoots the factor \(2\sqrt2\)
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+The rank-one phase lift \(K\otimes(A+iR)\) multiplies the fourth-phase
+energy by exactly \(4\). The natural symmetric and skew completions
+\(S_D\) and \(U_E\) change that energy by at most \(2n\) and change
+\(\Phi(S_D)\) by at most \(n\). Charging the Gaussian floor then leaves
+a defect of order \(n^{3/2}\). Shipped `phase_self_gluing_defect` exceeds
+the gap between `spherical_half_bound` and `dual_gaussian_lower_bound`
+at a finite order found by search, and the normalized defect is larger
+at four times that order. At order \(2\), shipped `phi` and `form_Q` on
+the explicit lift obey the linear perturbation bounds. No vanishing
+dyadic error absorbs the excess, so this reuse of the two halves does
+not prove the multiplier-two bound. It does not prove \(\lim\alpha_n\).
+`tests/test_phase_self_gluing_defect.py`.
+
 ## 2026-10-20: the conference cube gap of eight misses Paley
 
 The original MO limit is still OPEN. Nothing below was entered in

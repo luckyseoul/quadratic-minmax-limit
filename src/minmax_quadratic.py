@@ -562,6 +562,21 @@ def critical_block_excess(order: int, coupling: float) -> float:
     return (order / 2.0) * math.log(math.cosh(coupling / math.sqrt(2.0 * order)))
 
 
+def phase_self_gluing_defect(order: int) -> float:
+    """Excess of the phase-compatible rank-one lift over the factor 2*sqrt(2).
+
+    This is the lower bound in the two-half self-gluing note: the amplification
+    4 against 2*sqrt(2), charged at the Gaussian floor, minus the linear
+    perturbation (2+2*sqrt(2))*order. A positive value cannot be absorbed by a
+    vanishing dyadic error.
+    """
+    if order < 2:
+        raise ValueError("order>=2")
+    amplification = 4.0 - 2.0 * math.sqrt(2.0)
+    perturbation = 2.0 + 2.0 * math.sqrt(2.0)
+    return 2.0 * amplification * dual_gaussian_lower_bound(order) - perturbation * order
+
+
 def sigma_square_mass(symmetric: np.ndarray, skew: np.ndarray) -> float:
     """Off-diagonal square mass of A^2-R^2 and AR-RA."""
     difference = symmetric @ symmetric - skew @ skew
