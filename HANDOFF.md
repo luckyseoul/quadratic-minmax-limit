@@ -1,3 +1,20 @@
+## 2026-10-20: the frame identity is not a flat-spectrum floor
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+The Max\(_+\) frame identity does not extend to a functional of a general
+Seidel matrix that is minimized at flat spectra. Corollary 5 of
+`evidence/NOTE_2026-10-11_MAX_PLUS_FRAME_IDENTITY_ALL_P.md` is an inner
+product with one switched Paley matrix. At order \(10\), shipped `phi`
+and `spherical_half_bound` both give \(15\), and the correlation bound
+on that conference matrix is \(15\). A half-flip of the same matrix has
+`phi` \(21\) and frame bound \(5.666666666666667\). The shipped Gaussian
+floor is \(9.549296585513721\). The frame bound lies under that floor.
+Eight random signings of order \(10\) do the same. Do not reopen this
+route as an all-orders floor. The corollary hypothesis \(k_\star=o(n^2)\)
+stays open.
+
 ## 2026-10-18: discrepancy-scale steps do not settle the limit
 
 The original MO limit is still OPEN. Nothing below was entered in
