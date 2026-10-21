@@ -1,3 +1,22 @@
+## 2026-10-21: one minimizer breaks the coherent zero-loss lemma
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+`evidence/NOTE_2026-09-02_COMPLEXIFICATION_OPPOSITE_DIAGONAL_AUDIT.md`
+says a coherent clique flip of a global minimizer would have to stay at
+most \(\sqrt2\) times its Boolean norm for the zero-loss lemma to close
+the opposite-diagonal lift. Shipped `order_four_optimal_signing` has
+shipped `phi` equal to shipped `exact_m(4)`. Shipped `clique_flip_norm`
+on that signing is strictly above \(\sqrt2\) times the height. The
+identity \(2L_{\rm cl}-n\le\Phi({\cal K})\le 2L_{\rm cl}+n\) puts shipped
+`doubling_image` strictly inside that interval, so the lift does not
+decide the multiplier-two comparison. The normalized excess of the clique
+flip over \(\sqrt2\,\Phi\) is strictly smaller than \(1/2-1/\pi\). One
+order does not force \(\liminf\alpha_n=\limsup\alpha_n\) and does not
+split the cluster set. This does not prove \(\lim\alpha_n\).
+`tests/test_opposite_diagonal_zero_loss.py`.
+
 ## 2026-10-21: the ordered-skew endpoint ceiling misses the doubling image
 
 The original MO limit is still OPEN. Nothing below was entered in
