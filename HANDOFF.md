@@ -1,3 +1,21 @@
+## 2026-10-20: the tetrahedral diamond misses its first-moment budget
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+Residue (6.20) remains nonempty on the exact minimizers of orders \(5\),
+\(6\), and \(8\). Emptying it would be only the doubling half.
+
+The tripling ray reduces to the tetrahedral diamond. An independent-skew
+first-moment certificate needs the level \(\sqrt{18\log 2}\). The
+multiplier-three budget is at most \(3^{3/2}/2\). Shipped
+`tetrahedral_union_bound_level` is strictly larger than
+`tetrahedral_budget_level`. On the order-five minimizer, every single-skew
+specialization has \(K_3\) strictly above \(3^{3/2}\) times `phi`. That
+specialization does not meet the sharp constant, and the pairwise diamond
+does not imply the triple one. This does not prove \(\lim\alpha_n\).
+`tests/test_tetrahedral_diamond_budget.py`.
+
 ## 2026-10-20: phase self-gluing overshoots the factor \(2\sqrt2\)
 
 The original MO limit is still OPEN. Nothing below was entered in

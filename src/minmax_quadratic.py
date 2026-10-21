@@ -562,6 +562,56 @@ def critical_block_excess(order: int, coupling: float) -> float:
     return (order / 2.0) * math.log(math.cosh(coupling / math.sqrt(2.0 * order)))
 
 
+def tetrahedral_union_bound_level() -> float:
+    """Independent-skew first-moment level sqrt(18 log 2).
+
+    A per-state union bound on the tetrahedral profile needs this level
+    before the expected number of failures drops below one.
+    """
+    return math.sqrt(18.0 * math.log(2.0))
+
+
+def tetrahedral_budget_level() -> float:
+    """Leading multiplier-three budget 3^{3/2}/2 on the normalized scale."""
+    return (3.0 ** 1.5) / 2.0
+
+
+def min_single_skew_tetrahedral_energy(signing: np.ndarray) -> float:
+    """Minimum of K_3(A; R, -R, R) over skew signings R.
+
+    Order 2..5. The value is the exact single-skew diamond
+    max |Q(x)+Q(y)-Q(z)| + |x^T R y + y^T R z + z^T R x|.
+    """
+    order = int(signing.shape[0])
+    if order < 2 or order > 5 or signing.shape != (order, order):
+        raise ValueError("order must be between 2 and 5")
+    count = 1 << order
+    states = np.ones((count, order), dtype=np.float64)
+    masks = np.arange(count)
+    for index in range(order):
+        states[:, index] = np.where((masks >> index) & 1, -1.0, 1.0)
+    energy = 0.5 * np.einsum("ia,ab,ib->i", states, signing, states)
+    edges = [(i, j) for i in range(order) for j in range(i + 1, order)]
+    best = None
+    for mask in range(1 << len(edges)):
+        skew = np.zeros((order, order), dtype=np.float64)
+        for bit, (i, j) in enumerate(edges):
+            sign = 1.0 if mask & (1 << bit) else -1.0
+            skew[i, j] = sign
+            skew[j, i] = -sign
+        gram = states @ skew @ states.T
+        joint = (
+            energy[:, None, None]
+            + energy[None, :, None]
+            - energy[None, None, :]
+        )
+        cross = gram[:, :, None] + gram[None, :, :] + gram.T[:, None, :]
+        value = float(np.max(np.abs(joint) + np.abs(cross)))
+        if best is None or value < best:
+            best = value
+    return float(best)
+
+
 def phase_self_gluing_defect(order: int) -> float:
     """Excess of the phase-compatible rank-one lift over the factor 2*sqrt(2).
 
