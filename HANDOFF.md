@@ -1,3 +1,22 @@
+## 2026-10-21: lexicographic blow-up scales above the conference cap
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+`evidence/NOTE_2026-09-02_SHARP_INFLUENCE_TENSORIZATION_AUDIT.md`
+equation (9) bounds the lexicographic blow-up of an order-\(n\) signing
+by \(r^2\Phi(A)\pm n m_r\). Shipped `lexicographic_blowup` of the
+order-two seed at block size \(2\) is a Seidel matrix, and shipped
+`phi` on it respects `lexicographic_blowup_ceiling`. With the seed
+height `spherical_half_bound(6)` and block sizes \(2,4,8,16\), both the
+normalized ceiling and the normalized floor are strictly increasing.
+The floor starts above \(1/2\) and the last floor exceeds \(1\). The
+ceiling's total rise exceeds its first step. These bounds describe one
+family of signings whose normalized height leaves the sandwich upward.
+They do not force \(\lim\alpha_n\), and the four block sizes do not form
+two subsequences of \(\alpha_n\) a fixed positive distance apart.
+`tests/test_lexicographic_blowup_scale.py`.
+
 ## 2026-10-21: the Walsh discrepancy radius leaves the sandwich
 
 The original MO limit is still OPEN. Nothing below was entered in

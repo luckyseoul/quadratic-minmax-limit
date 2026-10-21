@@ -388,6 +388,53 @@ def character_block_cap_ratio(q: int) -> float:
     return character_block_height_cap(q) / spherical_half_bound(block_order)
 
 
+def lexicographic_blowup(seed: np.ndarray, block: int) -> np.ndarray:
+    """Lexicographic blow-up with constant cross blocks and positive internals.
+
+    Each vertex of the seed becomes ``block`` vertices. Distinct seed
+    vertices contribute the rank-one block seed_ij * J. Each diagonal
+    block is the Seidel matrix with off-diagonal entries +1.
+    """
+    host = np.asarray(seed, dtype=np.float64)
+    seed_order = int(host.shape[0])
+    if block < 2 or host.shape != (seed_order, seed_order):
+        raise ValueError("block>=2 and a square seed are required")
+    order = seed_order * block
+    blown = np.zeros((order, order), dtype=np.float64)
+    ones = np.ones((block, block), dtype=np.float64)
+    internal = ones - np.eye(block)
+    for i in range(seed_order):
+        for j in range(seed_order):
+            rows = slice(i * block, (i + 1) * block)
+            cols = slice(j * block, (j + 1) * block)
+            if i == j:
+                blown[rows, cols] = internal
+            else:
+                blown[rows, cols] = host[i, j] * ones
+    return blown
+
+
+def lexicographic_blowup_ceiling(seed_height: float, seed_order: int, block: int) -> float:
+    """Upper bound r^2*Phi(A) + n*spherical_half_bound(r) from the blow-up estimate.
+
+    The internal blocks contribute at most n times the spherical cap.
+    """
+    if seed_order < 2 or block < 2 or seed_height < 0.0:
+        raise ValueError("seed_order>=2, block>=2, height>=0 required")
+    return (block * block) * seed_height + seed_order * spherical_half_bound(block)
+
+
+def lexicographic_blowup_floor(seed_height: float, seed_order: int, block: int) -> float:
+    """Lower estimate r^2*Phi(A) - n*spherical_half_bound(r).
+
+    It sits under the constant-block construction because m_r is at most
+    the spherical cap.
+    """
+    if seed_order < 2 or block < 2 or seed_height < 0.0:
+        raise ValueError("seed_order>=2, block>=2, height>=0 required")
+    return (block * block) * seed_height - seed_order * spherical_half_bound(block)
+
+
 def walsh_discrepancy_radius(order: int) -> float:
     """Hereditary discrepancy radius of the degree-two Walsh encoding.
 
