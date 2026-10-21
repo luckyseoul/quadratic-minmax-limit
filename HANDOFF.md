@@ -1,3 +1,23 @@
+## 2026-10-21: the conference-op shell product is the Boolean height
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+`evidence/NOTE_2026-09-19_BEATER_SHELL.md` asks for an infinite family in
+the conference-op shell whose Boolean alignment stays a definite factor
+below 1. Proposition 15.6 writes that alignment as
+\(\rho(A)\|A\|_{\mathrm{op}}/\sqrt{n-1}\), and the product
+\(\rho(A)\|A\|_{\mathrm{op}}\) equals \(2\Phi(A)/n\). Shipped
+`operator_alignment` returns that same value at every operator norm on
+or above the Proposition 15.5 floor. At the certified records
+\((n,\Phi)=(10,13),\ (26,61),\ (50,169)\) the common value is \(13/15\),
+\(61/65\), and \(169/175\). These rise toward \(1\). The normalized gaps
+to `spherical_half_bound` fall, and the last is less than half the first.
+The alignment is a function of the Boolean height alone, so these three
+gaps do not form two subsequences separated by a fixed positive distance.
+This does not prove \(\lim\alpha_n\).
+`tests/test_conference_op_shell_product.py`.
+
 ## 2026-10-21: the near-annihilator family is not a minimizer sequence
 
 The original MO limit is still OPEN. Nothing below was entered in

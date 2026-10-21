@@ -326,6 +326,39 @@ def endpoint_annihilator_height(level: int) -> float:
     return order * singular / 2.0
 
 
+def boolean_operator_product(order: int, height: float) -> float:
+    """Prop 15.6 product rho(A) * ||A||_op = 2 * Phi(A) / n.
+
+    The product is fixed by the Boolean height. It does not take the
+    operator norm as an input.
+    """
+    if order < 2:
+        raise ValueError("order>=2 required")
+    if height < 0:
+        raise ValueError("height>=0 required")
+    return 2.0 * height / order
+
+
+def operator_alignment(order: int, height: float, op_norm: float) -> float:
+    """Prop 15.7 ratio rho(A) * ||A||_op / sqrt(n-1).
+
+    rho is the Prop 15.6 quotient of the Boolean product by op_norm.
+    Every legal operator norm, meaning op_norm^2 >= n-1 as in Prop 15.5,
+    returns the same value 2*height / (n*sqrt(n-1)). A beater of a
+    rho=1 conference matrix is exactly the case where this value is
+    strictly less than 1.
+    """
+    if order < 2:
+        raise ValueError("order>=2 required")
+    if height < 0:
+        raise ValueError("height>=0 required")
+    floor = math.sqrt(order - 1)
+    if op_norm < floor:
+        raise ValueError("op_norm is below the Prop 15.5 floor")
+    rho = boolean_operator_product(order, height) / op_norm
+    return rho * op_norm / floor
+
+
 def order_four_optimal_signing() -> np.ndarray:
     """Globally minimal order-four signing with one negative edge."""
     return np.array(
