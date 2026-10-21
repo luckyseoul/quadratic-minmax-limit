@@ -1,3 +1,31 @@
+## 2026-10-21: coherent-cross ceiling and mixed moments miss the limit
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+`evidence/NOTE_2026-09-05_DIAGONAL_PAYMENT_COMPATIBILITY.md` proves that
+the relaxed payment threshold is at most \(3/2\) times the largest
+conjugate-pair cost, and that a coherent cross \(R=\pm C\) cannot be
+repaired by a diagonal skew filling. Charged at a pair cost of twice the
+block norm, shipped `relaxation_ceiling_exceeds_doubling` stays strictly
+above the doubling image \(2\sqrt2\) times that norm at heights \(1\),
+\(4\), \(100\), and \(10000\). On the note's order-four pair, shipped
+`order_four_coherent_gap` puts the relaxed threshold strictly under
+shipped `doubling_image` and every skew-sign completion strictly over it.
+The normalized sign excess on that one matrix is strictly smaller than
+\(1/2-1/\pi\). One matrix and a factor that stays above the doubling
+image do not force \(\liminf\alpha_n=\limsup\alpha_n\) and do not split
+the cluster set.
+
+`evidence/NOTE_2026-09-05_ACTUAL_DIAGONAL_MIXED_MOMENTS.md` proves
+averaged covariances. Shipped `row_energy_covariance` is positive on one
+zero-diagonal Hermitian block and negative on another, so the identity
+is not a one-sided payment bound. The uniform maximum (D19) is the open
+multiplier-two gate. Shipped `original_mo_limit_closed` and
+`multiplier_two_closed` are both false. This does not prove
+\(\lim\alpha_n\).
+`tests/test_coherent_cross_ceiling.py`.
+
 ## 2026-10-21: the row-tilt moment budget is not a neutral step
 
 The original MO limit is still OPEN. Nothing below was entered in

@@ -237,6 +237,16 @@ def doubling_image(height: float) -> float:
     return 2.0 * math.sqrt(2.0) * height
 
 
+def relaxation_ceiling_exceeds_doubling(pair_cost: int, height: int) -> bool:
+    """Whether (3/2)*pair_cost sits strictly above 2*sqrt(2)*height.
+
+    Squares remove the root: 9 pair_cost^2 > 32 height^2.
+    """
+    if pair_cost < 0 or height < 0:
+        raise ValueError("pair_cost>=0 and height>=0 required")
+    return 9 * pair_cost * pair_cost > 32 * height * height
+
+
 def sum_of_maxima_floor(height: float, block: int) -> float:
     """Two block norms plus the universal ±1 cross floor on that block."""
     if block < 1 or height < 0.0:

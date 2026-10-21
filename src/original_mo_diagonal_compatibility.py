@@ -7,6 +7,7 @@ See NOTE_2026-09-05_DIAGONAL_PAYMENT_COMPATIBILITY.md for the all-orders proof.
 from __future__ import annotations
 
 from fractions import Fraction
+from itertools import product
 from typing import Sequence
 
 Rational = int | Fraction
@@ -92,6 +93,88 @@ def additive_interval_certificate(
     weight = sum((arc[2] for arc in cycle), Fraction(0))
     assert weight < 0
     return {"feasible": False, "negative_cycle": cycle, "weight": weight}
+
+
+def order_four_coherent_gap() -> dict:
+    """Appendix pair: conjugate-pair cost, relaxed threshold, sign norm, real Phi.
+
+    The values are computed from conjugate_pair_parameters and the payment
+    certificate. They are one order-four matrix, not an all-orders ray.
+    """
+    phases = (1, -1, 1j, -1j)
+    cross_real = ((1, 1), (1, -1))
+    cross_skew = ((-1, 1), (1, 1))
+
+    def scalar(zeta, matrix, omega):
+        return (
+            matrix[0][0]
+            + matrix[0][1] * omega
+            + complex(zeta).conjugate() * (matrix[1][0] + matrix[1][1] * omega)
+        )
+
+    def rho(value):
+        return int(max(abs(value.real), abs(value.imag)))
+
+    entries_a, entries_plus, entries_minus = [], [], []
+    for zeta in phases:
+        row_a, row_plus, row_minus = [], [], []
+        for omega in phases:
+            real = scalar(zeta, cross_real, omega)
+            skew = scalar(zeta, cross_skew, omega)
+            row_a.append(int(2 * complex(zeta).real + 2 * complex(omega).real))
+            row_plus.append(rho(real + 1j * skew))
+            row_minus.append(rho(real - 1j * skew))
+        entries_a.append(row_a)
+        entries_plus.append(row_plus)
+        entries_minus.append(row_minus)
+    parameters = [
+        [
+            conjugate_pair_parameters(
+                entries_a[i][j], entries_plus[i][j], entries_minus[i][j]
+            )
+            for j in range(4)
+        ]
+        for i in range(4)
+    ]
+    max_pair = max(c for row in parameters for c, _ in row)
+    if relaxed_payment_certificate(entries_a, entries_plus, entries_minus, 10)["feasible"]:
+        relaxed = 10
+    else:
+        raise RuntimeError("the order-four relaxation is feasible at 10")
+    if relaxed_payment_certificate(
+        entries_a, entries_plus, entries_minus, Fraction(99, 10)
+    )["feasible"]:
+        raise RuntimeError("the order-four relaxation is infeasible below 10")
+    sign_norm = 0
+    for left_sign, right_sign in product((-1, 1), repeat=2):
+        direct_norm = 0
+        for zeta, omega, rotation in product(phases, repeat=3):
+            diagonal = (
+                2 * complex(zeta).real
+                + 2 * complex(omega).real
+                - 2 * left_sign * complex(zeta).imag
+                - 2 * right_sign * complex(omega).imag
+            )
+            cross = scalar(zeta, cross_real, omega) + 1j * scalar(zeta, cross_skew, omega)
+            direct_norm = max(direct_norm, abs(diagonal + 2 * (rotation * cross).real))
+        sign_norm = max(sign_norm, direct_norm)
+    energies = [
+        x[0] * x[1]
+        + x[2] * x[3]
+        + sum(
+            x[i] * cross_real[i][j] * x[2 + j]
+            for i in range(2)
+            for j in range(2)
+        )
+        for x in product((-1, 1), repeat=4)
+    ]
+    real_phi = max(abs(value) for value in energies)
+    return {
+        "max_pair": int(max_pair),
+        "relaxed": relaxed,
+        "sign_norm": int(sign_norm),
+        "real_phi": int(real_phi),
+    }
 
 
 def relaxed_payment_certificate(a, g_plus, g_minus, threshold: Rational) -> dict:
