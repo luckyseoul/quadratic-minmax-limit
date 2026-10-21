@@ -1,3 +1,22 @@
+## 2026-10-21: degree-four preordering does not refute the critical cover
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+`evidence/NOTE_2026-09-02_BIVECTOR_DEGREE4_PREORDERING_NO_GO.md` shows
+that from order \(45\) onward the critical widths dominate every
+degree-four squared-row localizer, including affine SOS multipliers and
+pairwise row products. Shipped `degree_four_width_dominates` is the
+note's rational comparison \(1372(n-1)>60000\), using
+\(\sqrt2<5657/4000\) and \(\pi^2<10\). It is false at order \(44\) and
+true at orders \(45\), \(100\), and \(10000\). On those three orders
+shipped `bivector_critical_excess` stays above \(0.12\). The
+pseudoexpectation can remain feasible whether or not an orientation
+exists, so the barrier does not force
+\(\liminf\alpha_n=\limsup\alpha_n\) and does not split the cluster set.
+This does not prove \(\lim\alpha_n\).
+`tests/test_degree_four_preordering.py`.
+
 ## 2026-10-21: the bivector elliptope score misses the critical excess
 
 The original MO limit is still OPEN. Nothing below was entered in

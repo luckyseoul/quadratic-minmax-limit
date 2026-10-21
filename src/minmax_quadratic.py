@@ -288,6 +288,17 @@ def bivector_critical_excess(order: int) -> float:
     return (math.sqrt(2.0) - 1.0) * dual_gaussian_lower_bound(order) / (order ** 1.5)
 
 
+def degree_four_width_dominates(order: int) -> bool:
+    """Rational certificate that critical widths beat degree-four row support.
+
+    Uses sqrt(2)<5657/4000 and pi^2<10. The resulting comparison
+    1372*(n-1) > 60000 holds for every n>=45 and fails for n<=44.
+    """
+    if order < 2:
+        raise ValueError("order>=2 required")
+    return 1372 * (order - 1) > 60000
+
+
 def order_four_optimal_signing() -> np.ndarray:
     """Globally minimal order-four signing with one negative edge."""
     return np.array(
