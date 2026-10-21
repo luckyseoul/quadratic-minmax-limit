@@ -1,3 +1,22 @@
+## 2026-10-21: the hypercontractive deletion floor is the weaker linear bound
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+`evidence/NOTE_2026-09-24_HYPERCONTRACTIVE_RESTRICTION_LOSS.md` gives
+\(m_N-m_{N-t}\ge\sqrt{\binom{t}{2}}/(2e^2)\) for \(t\ge2\). Shipped
+`hypercontractive_deletion_floor` is strictly below shipped
+`fourth_moment_deletion_floor` and strictly below shipped
+`half_vertex_deletion_floor` at deletions \(2\), \(3\), \(4\), \(100\),
+and \(10000\). Every two-step gain on the stored exact table meets the
+\(t=2\) hypercontractive floor. At the Gaussian level, shipped
+`neutral_mass_increment` across two vertices is strictly larger than that
+floor at orders \(100\) and \(10000\), and the ratio is larger at the
+later order. A weaker linear deletion floor does not force
+\(\liminf\alpha_n=\limsup\alpha_n\) and does not split the cluster set.
+This does not prove \(\lim\alpha_n\).
+`tests/test_hypercontractive_deletion_floor.py`.
+
 ## 2026-10-21: coherent-cross ceiling and mixed moments miss the limit
 
 The original MO limit is still OPEN. Nothing below was entered in

@@ -176,6 +176,20 @@ def fourth_moment_deletion_floor(deleted: int) -> float:
     return coefficient * math.sqrt(deleted * (deleted - 1) / 2.0)
 
 
+def half_vertex_deletion_floor(deleted: int) -> int:
+    """Host-free deletion floor floor(t/2) on m_n - m_{n-t}."""
+    if deleted < 2:
+        raise ValueError("deleted>=2 required")
+    return deleted // 2
+
+
+def hypercontractive_deletion_floor(deleted: int) -> float:
+    """Host-free deletion floor sqrt(binom(t,2))/(2 e^2)."""
+    if deleted < 2:
+        raise ValueError("deleted>=2 required")
+    return math.sqrt(deleted * (deleted - 1) / 2.0) / (2.0 * math.e * math.e)
+
+
 def neutral_mass_increment(level: float, order: int, deleted: int) -> float:
     """m-increment that holds alpha fixed across a deletion of this size."""
     if order <= deleted or deleted < 1 or level < 0.0:
