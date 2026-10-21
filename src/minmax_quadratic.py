@@ -759,6 +759,58 @@ def exact_rank_extension_sum(signing: np.ndarray, height: float) -> float:
     return float(np.sum(2.0 * np.exp(-(widths * widths) / (2.0 * rank))))
 
 
+def spectral_extension_score(signing: np.ndarray, height: float) -> float:
+    """Smallest spectral union bound on the active stable family.
+
+    For each dimension d from 1 through n-1, project the active states onto
+    the top d right singular vectors. A dimension is discarded when any
+    state has margin D+r-sqrt(n)*delta at most 0. The score of a kept
+    dimension is 2 * sum exp(-margin^2 / (2d)). A value below 1 would
+    certify a one-vertex extension below the neutral increment. Every
+    dimension discarded returns infinity.
+    """
+    order = int(signing.shape[0])
+    if order < 2 or signing.shape != (order, order):
+        raise ValueError("square signing of order at least 2 required")
+    count = 1 << (order - 1)
+    states = np.ones((count, order), dtype=np.float64)
+    masks = np.arange(count)
+    for index in range(1, order):
+        states[:, index] = np.where((masks >> (index - 1)) & 1, -1.0, 1.0)
+    fields = states @ signing
+    energy = 0.5 * np.sum(states * fields, axis=1)
+    oriented = states * fields
+    positive = np.all(oriented >= 0, axis=1)
+    negative = np.all(oriented <= 0, axis=1)
+    best = np.full(count, -1.0e18)
+    best = np.where(positive, np.maximum(best, energy), best)
+    best = np.where(negative, np.maximum(best, -energy), best)
+    stable = best > -1.0e17
+    deficit = height - best
+    neutral = height * ((1.0 + 1.0 / order) ** 1.5 - 1.0)
+    active = stable & (deficit + neutral <= order)
+    points = states[active]
+    if points.shape[0] == 0:
+        raise ValueError("no active stable state")
+    widths = deficit[active] + neutral
+    _, _, basis_rows = np.linalg.svd(points, full_matrices=False)
+    best_score = None
+    scale = math.sqrt(order)
+    for dim in range(1, order):
+        basis = basis_rows[:dim]
+        projected = points @ basis.T @ basis
+        delta = np.linalg.norm(points - projected, axis=1)
+        margin = widths - scale * delta
+        if np.any(margin <= 0.0):
+            continue
+        score = float(np.sum(2.0 * np.exp(-(margin * margin) / (2.0 * dim))))
+        if best_score is None or score < best_score:
+            best_score = score
+    if best_score is None:
+        return math.inf
+    return float(best_score)
+
+
 def phase_self_gluing_defect(order: int) -> float:
     """Excess of the phase-compatible rank-one lift over the factor 2*sqrt(2).
 

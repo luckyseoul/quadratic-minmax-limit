@@ -1,3 +1,16 @@
+## 2026-10-21: the spectral discriminator fails at order 15
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+The spectral discriminator asks for a dimension below the order whose top
+singular subspace leaves every active stable state a positive margin and
+whose union bound is below 1. On the stored order-15 minimizer, shipped
+`phi` recovers \(\Phi=27\). Shipped `spectral_extension_score` is strictly
+above 1, so no such dimension certifies a neutral extension of this
+minimizer. This does not prove \(\lim\alpha_n\).
+`tests/test_spectral_extension_score.py`.
+
 ## 2026-10-21: the exact-rank union bound fails at order 15
 
 The original MO limit is still OPEN. Nothing below was entered in
