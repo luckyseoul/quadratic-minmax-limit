@@ -15,8 +15,9 @@ the neutral increment. This does not prove \(\lim\alpha_n\).
 
 A forward direction request, not a review of these discards, was sent to
 OpenAI. The call and one retry both hit the usage limit, with a reset
-quoted at 2:27 AM. Claude was then asked the same forward question and
-timed out at 680 seconds. Neither house returned a direction.
+quoted at 2:27 AM. Claude was asked that same forward question twice.
+Each call timed out at 680 seconds. At 01:37 UTC the OpenAI reset had
+not arrived. Neither house returned a direction. Do not invent one.
 
 ## 2026-10-21: the bootstrapped interior root leaves a conference gap
 
