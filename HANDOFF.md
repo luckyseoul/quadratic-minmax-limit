@@ -1,3 +1,20 @@
+## 2026-10-21: the bivector elliptope score misses the critical excess
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+`evidence/NOTE_2026-09-02_BIVECTOR_ENERGY_LAYER_MINIMAX.md` bounds the
+critical elliptope ratio by \(\pi^2/(4(\sqrt2-1)^2(n-1))\). Shipped
+`bivector_elliptope_score` is strictly below \(1\) at orders \(16\),
+\(100\), and \(10000\), and smaller at each later order. Shipped
+`bivector_critical_excess`, the normalized gap \((\sqrt2-1)\) times the
+Gaussian floor, stays above \(0.12\) on those orders, and the smallest is
+more than nine tenths of the largest. A vanishing relaxation score does
+not cancel that excess, so it does not prove the multiplier-two bound. It
+does not force \(\liminf\alpha_n=\limsup\alpha_n\) and does not split the
+cluster set. This does not prove \(\lim\alpha_n\).
+`tests/test_bivector_elliptope_score.py`.
+
 ## 2026-10-21: one minimizer breaks the coherent zero-loss lemma
 
 The original MO limit is still OPEN. Nothing below was entered in

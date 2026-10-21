@@ -273,6 +273,21 @@ def relaxation_ceiling_exceeds_doubling(pair_cost: int, height: int) -> bool:
     return 9 * pair_cost * pair_cost > 32 * height * height
 
 
+def bivector_elliptope_score(order: int) -> float:
+    """Critical elliptope ratio bound pi^2 / (4 (sqrt(2)-1)^2 (n-1))."""
+    if order < 2:
+        raise ValueError("order>=2 required")
+    gap = math.sqrt(2.0) - 1.0
+    return (math.pi * math.pi) / (4.0 * gap * gap * (order - 1))
+
+
+def bivector_critical_excess(order: int) -> float:
+    """(sqrt(2)-1) times the Gaussian floor, divided by n^{3/2}."""
+    if order < 2:
+        raise ValueError("order>=2 required")
+    return (math.sqrt(2.0) - 1.0) * dual_gaussian_lower_bound(order) / (order ** 1.5)
+
+
 def order_four_optimal_signing() -> np.ndarray:
     """Globally minimal order-four signing with one negative edge."""
     return np.array(
