@@ -280,6 +280,28 @@ def skeleton_ball_volume(order: int, radius: int) -> int:
     return total
 
 
+def row_tilt_fourth_moment_budget(coupling: float, penalty: float) -> float:
+    """Per-row weighted fourth-moment ceiling 2 exp(c^2/2+4λ)(c^2+8λ)."""
+    if coupling < 0.0 or penalty < 0.0:
+        raise ValueError("coupling>=0 and penalty>=0 required")
+    return (
+        2.0
+        * math.exp(0.5 * coupling * coupling + 4.0 * penalty)
+        * (coupling * coupling + 8.0 * penalty)
+    )
+
+
+def row_tilt_window_charge(start: int, coupling: float, penalty: float) -> float:
+    """Sum of the row-summed budget divided by k^{3/2} across one doubling window."""
+    if start < 2:
+        raise ValueError("start>=2 required")
+    budget = row_tilt_fourth_moment_budget(coupling, penalty)
+    total = 0.0
+    for order in range(start, 2 * start):
+        total += (order * budget) / (order ** 1.5)
+    return total
+
+
 def equipartition_product_floor(order: int) -> float:
     """Universal product floor (4/9) m^2 mu_m^2 with m = floor(order/2)."""
     if order < 2:

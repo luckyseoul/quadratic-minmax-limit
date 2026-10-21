@@ -1,3 +1,22 @@
+## 2026-10-21: the row-tilt moment budget is not a neutral step
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+`evidence/NOTE_2026-09-05_WEIGHTED_ROW_TILT_FOURTH_MOMENT.md` bounds a
+weighted fourth-moment integral on one row by
+\(2e^{c^2/2+4\lambda}(c^2+8\lambda)\). Summing over rows is a multiple of
+the order. At coupling \(1\) and penalty \(1/4\), shipped
+`row_tilt_fourth_moment_budget` times the order exceeds shipped
+`neutral_one_step` at the conference level on orders \(100\) and
+\(10000\), and the ratio is larger at the later order. Shipped
+`row_tilt_window_charge`, the same mass divided by \(k^{3/2}\) and summed
+across a doubling window, is larger on \([1000,2000)\) than on
+\([100,200)\). The ceiling does not put the one-step excess under a Dini
+tail, and it does not separate \(\liminf\alpha_n\) from
+\(\limsup\alpha_n\). This does not prove \(\lim\alpha_n\).
+`tests/test_row_tilt_fourth_moment.py`.
+
 ## 2026-10-21: the partition tail sum misses the order-15 minimizer
 
 The original MO limit is still OPEN. Nothing below was entered in
