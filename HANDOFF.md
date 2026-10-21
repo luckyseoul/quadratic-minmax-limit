@@ -1,3 +1,19 @@
+## 2026-10-21: the step equilibrium does not beat the conference cap
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+Suppose \(m_{n+1}-m_n\le K\sqrt n\) for every large \(n\). The resulting
+recurrence has fixed point \(2K/3\). That fixed point lies strictly above
+\(1/2\) whenever \(K>3/4\). On the stored exact table, shipped
+`step_equilibrium_level` of the largest consecutive step ratio is strictly
+above \(1/2\). Any single \(K\) compatible with every certified step
+through order \(15\) is therefore too large to push \(\limsup\alpha_n\)
+below the conference cap. A smaller \(K\) that holds only for all
+sufficiently large \(n\) is not proved, and these finite steps do not
+refute it. This does not prove \(\lim\alpha_n\).
+`tests/test_step_equilibrium_level.py`.
+
 ## 2026-10-21: fixed-beta pressure and one-step chaining stay off the limit
 
 The original MO limit is still OPEN. Nothing below was entered in

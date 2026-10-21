@@ -161,6 +161,17 @@ def exact_m(n: int) -> int:
     return best
 
 
+def step_equilibrium_level(step: float, order: int) -> float:
+    """Fixed point 2K/3 of the recurrence with increment at most K sqrt(n).
+
+    K is step/sqrt(order). The conference cap is 1/2, so a level above 1/2
+    does not shrink limsup alpha_n.
+    """
+    if order < 1 or step < 0.0:
+        raise ValueError("order>=1 and step>=0 required")
+    return (2.0 / 3.0) * (step / math.sqrt(order))
+
+
 def random_sym_pm1(n: int, rng: Optional[np.random.Generator] = None) -> np.ndarray:
     if rng is None:
         rng = np.random.default_rng()
