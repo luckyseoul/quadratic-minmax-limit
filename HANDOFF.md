@@ -1,3 +1,19 @@
+## 2026-10-21: the full-cube partition extension bound is order \(n\)
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+The partition-extension lemma bounds a one-vertex increment by
+\([n\log\cosh\lambda+\log(2S_A(\lambda))]/\lambda\). With the full cube
+\(S_A=2^n\), shipped `partition_extension_full_cube_min` minimizes that
+expression. At the conference level from `spherical_half_bound`, the
+minimum is strictly above shipped `neutral_one_step` at orders \(100\)
+and \(10000\), and the ratio of those two quantities is larger at the
+later order. The estimate is a multiple of \(n\), not of \(\sqrt n\).
+A smaller deficit partition sum is not proved. This does not prove
+\(\lim\alpha_n\).
+`tests/test_partition_extension_full_cube.py`.
+
 ## 2026-10-21: the fourth-moment deletion floor is a harmonic shortfall
 
 The original MO limit is still OPEN. Nothing below was entered in

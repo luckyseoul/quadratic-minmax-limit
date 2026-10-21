@@ -183,6 +183,36 @@ def neutral_mass_increment(level: float, order: int, deleted: int) -> float:
     return level * (order ** 1.5 - (order - deleted) ** 1.5)
 
 
+def partition_extension_ceiling(order: int, lam: float) -> float:
+    """Full-cube form of the partition extension bound.
+
+    The lemma charges n log cosh(lambda) + log(2 S). With S = 2^n this is
+    an explicit upper bound on the one-vertex increment the lemma can certify.
+    """
+    if order < 2 or lam <= 0.0:
+        raise ValueError("order>=2 and lambda>0 required")
+    return (order * math.log(math.cosh(lam)) + (order + 1) * math.log(2.0)) / lam
+
+
+def partition_extension_full_cube_min(order: int) -> float:
+    """Minimum of the full-cube partition ceiling over lambda in (0, 4]."""
+    if order < 2:
+        raise ValueError("order>=2 required")
+    best = None
+    for step in range(1, 4001):
+        value = partition_extension_ceiling(order, step / 1000.0)
+        if best is None or value < best:
+            best = value
+    return float(best)
+
+
+def neutral_one_step(level: float, order: int) -> float:
+    """m_n*((1+1/n)^{3/2}-1), the increment that holds alpha fixed."""
+    if order < 1 or level < 0.0:
+        raise ValueError("order>=1 and level>=0 required")
+    return level * (order ** 1.5) * ((1.0 + 1.0 / order) ** 1.5 - 1.0)
+
+
 def deletion_shortfall_density(order: int, level: float) -> float:
     """Normalized gap between the neutral two-step increment and the floor."""
     if order < 4 or level < 0.0:
