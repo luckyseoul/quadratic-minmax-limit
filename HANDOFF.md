@@ -1,3 +1,19 @@
+## 2026-10-20: exact doubling does not force the slope to converge
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+CORE §7 needs both the doubling ray and the tripling ray, with a
+dyadic tail that tends to zero. Shipped `doubling_only_oscillator` is
+the scalar example \(G(x)=x(1+\varepsilon\sin(2\pi\log_2 x))\). It
+satisfies \(G(2x)=2G(x)\) on the tested points. Its slope attains both
+\(1+\varepsilon\) and \(1-\varepsilon\) at arbitrarily large dyadic
+shifts, and the gap between those slopes does not shrink. The same
+function's tripling defect is a positive constant on the powers of two.
+Exact doubling is not a convergence criterion. This example is not the
+sequence \(m_n\), and it does not prove \(\lim\alpha_n\).
+`tests/test_doubling_only_oscillator.py`.
+
 ## 2026-10-20: the Paley bounds do not split \(\gamma_p\)
 
 The original MO limit is still OPEN. Nothing below was entered in

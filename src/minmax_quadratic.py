@@ -608,6 +608,19 @@ def bibalanced_composition_headroom(order: int) -> float:
     return (composed - small - large) / (order ** 1.5)
 
 
+def doubling_only_oscillator(x: float, amplitude: float) -> float:
+    """Scalar sharpness example for the two-ray criterion.
+
+    G(x)=x(1+amplitude*sin(2π log2(x))) satisfies G(2x)=2G(x). For a
+    sufficiently small positive amplitude the slope G(x)/x keeps oscillating,
+    so exact doubling does not force the normalized sequence to converge.
+    """
+    if x <= 0.0 or not 0.0 < amplitude < 1.0:
+        raise ValueError("x>0 and amplitude in (0,1)")
+    phase = 2.0 * math.pi * math.log2(x)
+    return x * (1.0 + amplitude * math.sin(phase))
+
+
 def paley_gamma_envelope(order: int) -> float:
     """Gaussian upper bound on the Paley gap γ at a conference order.
 
