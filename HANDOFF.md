@@ -1,3 +1,23 @@
+## 2026-10-21: the Walsh discrepancy radius leaves the sandwich
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+`evidence/NOTE_2026-09-02_DIRECT_LIMIT_LITERATURE_AUDIT.md` encodes
+\(m_n\) as the operator norm of a signed sum of \(E=\binom{n}{2}\)
+diagonal Walsh tests. The Akbas--Sra hereditary radius on that encoding
+has the shape \(\kappa\sqrt{E}\,(1+\log(2^n/E))^2\). Shipped
+`walsh_discrepancy_radius` is that shape at \(\kappa=1\). It matches
+the displayed formula at order \(10\). At orders \(10,20,40,80\) it
+stays strictly above `spherical_half_bound`, and the normalized radius
+is strictly increasing. At order \(80\) it is more than ten times the
+order-\(10\) value and greater than \(100\). The excess over the
+spherical cap, divided by \(n^{3/2}\), is strictly increasing on the
+same orders. A growing ceiling above the conference cap does not force
+\(\lim\alpha_n\), and these four radii do not form two subsequences a
+fixed positive distance apart.
+`tests/test_walsh_discrepancy_radius.py`.
+
 ## 2026-10-21: the character-block cap stays above the spherical cap
 
 The original MO limit is still OPEN. Nothing below was entered in

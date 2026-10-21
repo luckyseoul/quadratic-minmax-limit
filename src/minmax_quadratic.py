@@ -388,6 +388,20 @@ def character_block_cap_ratio(q: int) -> float:
     return character_block_height_cap(q) / spherical_half_bound(block_order)
 
 
+def walsh_discrepancy_radius(order: int) -> float:
+    """Hereditary discrepancy radius of the degree-two Walsh encoding.
+
+    The encoding uses E=binom(n,2) diagonal tests. The displayed
+    Akbas--Sra shape, without the universal factor kappa, is
+    sqrt(E) * (1 + log(2^n / E))^2. The logarithm is natural.
+    """
+    if order < 2:
+        raise ValueError("order>=2 required")
+    edges = order * (order - 1) / 2.0
+    log_ratio = order * math.log(2.0) - math.log(edges)
+    return math.sqrt(edges) * (1.0 + log_ratio) ** 2
+
+
 def operator_alignment(order: int, height: float, op_norm: float) -> float:
     """Prop 15.7 ratio rho(A) * ||A||_op / sqrt(n-1).
 
