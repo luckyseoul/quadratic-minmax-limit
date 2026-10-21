@@ -1,3 +1,16 @@
+## 2026-10-21: the exact-rank union bound fails at order 15
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+The exact-rank corollary says that a sum over active stable states of
+\(2\exp(-(D_s+r)^2/(2d_H))\) below 1 produces a one-vertex extension
+below the neutral increment. On the stored order-15 minimizer, shipped
+`phi` recovers \(\Phi=27\). Shipped `exact_rank_extension_sum` is
+strictly above 1, so the certificate does not apply to this minimizer
+and does not prove \(\lim\alpha_n\).
+`tests/test_exact_rank_extension_sum.py`.
+
 ## 2026-10-20: exact doubling does not force the slope to converge
 
 The original MO limit is still OPEN. Nothing below was entered in
