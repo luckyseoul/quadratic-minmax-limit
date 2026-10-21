@@ -299,6 +299,33 @@ def degree_four_width_dominates(order: int) -> bool:
     return 1372 * (order - 1) > 60000
 
 
+def endpoint_annihilator_signing(level: int) -> np.ndarray:
+    """Complete signing A from the replicated near-annihilator family.
+
+    level ell>=1 gives order n=2*4^ell. The Boolean norm is n*d/2 with
+    d=2*sqrt(4^ell)+1, which is above the conference cap.
+    """
+    if level < 1:
+        raise ValueError("level>=1 required")
+    block = 2.0 * np.eye(4) - np.ones((4, 4))
+    hadamard = block
+    for _ in range(level - 1):
+        hadamard = np.kron(hadamard, block)
+    width = 4 ** level
+    paired = np.kron(hadamard, np.ones((2, 2)))
+    return paired - np.eye(2 * width)
+
+
+def endpoint_annihilator_height(level: int) -> float:
+    """Boolean norm n*d/2 of the replicated near-annihilator."""
+    if level < 1:
+        raise ValueError("level>=1 required")
+    width = 4 ** level
+    order = 2 * width
+    singular = 2.0 * math.sqrt(width) + 1.0
+    return order * singular / 2.0
+
+
 def order_four_optimal_signing() -> np.ndarray:
     """Globally minimal order-four signing with one negative edge."""
     return np.array(

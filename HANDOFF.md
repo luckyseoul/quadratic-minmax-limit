@@ -1,3 +1,21 @@
+## 2026-10-21: the near-annihilator family is not a minimizer sequence
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+`evidence/NOTE_2026-09-06_EXACT_ENDPOINT_RANK_STABILITY_BARRIER.md`
+builds complete signings of order \(n=2\cdot4^\ell\) whose Boolean norm
+is \(nd/2\) with \(d=2\sqrt{4^\ell}+1\). The normalized norm tends to
+\(1/\sqrt2\), above the conference cap. Shipped
+`endpoint_annihilator_signing(1)` has order \(8\), and shipped `phi`
+matches shipped `endpoint_annihilator_height`. That value, and the same
+height at levels \(2\) and \(3\), lies strictly above \(1/2\) and strictly
+above `spherical_half_bound` on its order. The normalized heights
+decrease toward \(1/\sqrt2\) and stay above it. The family does not upper
+bound \(m_n\) by a constant below \(1/2\), so it does not force
+\(\liminf\alpha_n<\limsup\alpha_n\). It does not prove \(\lim\alpha_n\).
+`tests/test_endpoint_annihilator_family.py`.
+
 ## 2026-10-21: degree-four preordering does not refute the critical cover
 
 The original MO limit is still OPEN. Nothing below was entered in
