@@ -1,3 +1,17 @@
+## 2026-10-21: Fekete's lemma does not apply to the certified minima
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+Superadditivity or subadditivity of \(m_n/\sqrt n\), or subadditivity of
+\(H(n)=m_n^{2/3}\), would give a limit by Fekete's lemma. On the stored
+exact table, shipped `root_scale` fails superadditivity at orders \(3+3\)
+and fails subadditivity at orders \(5+5\). Shipped `two_thirds_scale`
+fails subadditivity at \(2+2\) and at \(3+5\). The Gaussian chaos whose
+expectation is superadditive is a different sequence. These failures do
+not prove \(\lim\alpha_n\).
+`tests/test_fekete_scale_fails.py`.
+
 ## 2026-10-21: the step equilibrium does not beat the conference cap
 
 The original MO limit is still OPEN. Nothing below was entered in

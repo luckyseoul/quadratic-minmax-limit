@@ -161,6 +161,20 @@ def exact_m(n: int) -> int:
     return best
 
 
+def root_scale(height: float, order: int) -> float:
+    """m / sqrt(n). Fekete would need this to be superadditive or subadditive."""
+    if order < 1 or height < 0.0:
+        raise ValueError("order>=1 and height>=0 required")
+    return height / math.sqrt(order)
+
+
+def two_thirds_scale(height: float) -> float:
+    """H = m^{2/3}. Subadditivity of H is the zero-error form of a Fekete bound."""
+    if height < 0.0:
+        raise ValueError("height>=0 required")
+    return height ** (2.0 / 3.0)
+
+
 def step_equilibrium_level(step: float, order: int) -> float:
     """Fixed point 2K/3 of the recurrence with increment at most K sqrt(n).
 
