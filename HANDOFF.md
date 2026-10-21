@@ -1,3 +1,21 @@
+## 2026-10-21: the CHSH vector step loses a fixed factor
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+`evidence/NOTE_2026-09-02_SHARP_INFLUENCE_TENSORIZATION_AUDIT.md`
+records that the matrix \([[1,1],[1,-1]]\) has scalar bilinear norm \(2\)
+and vector value \(2\sqrt2\). Shipped `chsh_scalar_bilinear` and
+`chsh_vector_value` reproduce those two numbers, and their ratio is
+\(\sqrt2\). Scaling the gap between `spherical_half_bound` and
+`dual_gaussian_lower_bound` by that ratio keeps the image strictly wider
+than the original gap at orders \(10,100,1000\). The upper end of the
+image stays above \(1/2\). The extra width from the factor exceeds the
+drift of the image between the first and last of those orders. A fixed
+factor above one does not force \(\lim\alpha_n\), and this one ratio is
+not two subsequences a fixed positive distance apart.
+`tests/test_chsh_vector_loss.py`.
+
 ## 2026-10-21: random padding is wider than the sandwich
 
 The original MO limit is still OPEN. Nothing below was entered in

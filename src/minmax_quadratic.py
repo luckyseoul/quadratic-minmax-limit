@@ -388,6 +388,42 @@ def character_block_cap_ratio(q: int) -> float:
     return character_block_height_cap(q) / spherical_half_bound(block_order)
 
 
+def chsh_scalar_bilinear() -> float:
+    """Maximum of |x^T H y| over Boolean vectors for the CHSH matrix.
+
+    H is [[1, 1], [1, -1]]. The tensorization audit uses this value as
+    the scalar bilinear norm.
+    """
+    matrix = np.array([[1.0, 1.0], [1.0, -1.0]])
+    best = 0.0
+    for left in (-1.0, 1.0):
+        for right in (-1.0, 1.0):
+            row = np.array([left, right])
+            for first in (-1.0, 1.0):
+                for second in (-1.0, 1.0):
+                    column = np.array([first, second])
+                    best = max(best, abs(float(row @ matrix @ column)))
+    return best
+
+
+def chsh_vector_value() -> float:
+    """CHSH vector value on the same matrix.
+
+    The first pair is the standard basis. The second pair is that basis
+    rotated by a quarter turn. The pairing sum is H_ij times the inner
+    product of the i-th and j-th vectors.
+    """
+    matrix = np.array([[1.0, 1.0], [1.0, -1.0]])
+    left = np.array([[1.0, 0.0], [0.0, 1.0]])
+    scale = math.sqrt(2.0)
+    right = np.array([[1.0 / scale, 1.0 / scale], [1.0 / scale, -1.0 / scale]])
+    total = 0.0
+    for i in range(2):
+        for j in range(2):
+            total += float(matrix[i, j]) * float(left[i] @ right[j])
+    return total
+
+
 def random_padding_increment(order: int, added: int) -> float:
     """Hoeffding union-bound increment for filling ``added`` new vertices.
 
