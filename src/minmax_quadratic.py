@@ -388,6 +388,19 @@ def character_block_cap_ratio(q: int) -> float:
     return character_block_height_cap(q) / spherical_half_bound(block_order)
 
 
+def random_padding_increment(order: int, added: int) -> float:
+    """Hoeffding union-bound increment for filling ``added`` new vertices.
+
+    E = added*(2*order+added-1)/2 new edges and N = order+added. The
+    existence bound is m_N <= m_order + sqrt(2*E*(N*log(2)+1)).
+    """
+    if order < 2 or added < 1:
+        raise ValueError("order>=2 and added>=1 required")
+    edges = added * (2 * order + added - 1) / 2.0
+    total = order + added
+    return math.sqrt(2.0 * edges * (total * math.log(2.0) + 1.0))
+
+
 def lexicographic_blowup(seed: np.ndarray, block: int) -> np.ndarray:
     """Lexicographic blow-up with constant cross blocks and positive internals.
 

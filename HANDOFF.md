@@ -1,3 +1,21 @@
+## 2026-10-21: random padding is wider than the sandwich
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+`evidence/NOTE_2026-09-02_SHARP_INFLUENCE_TENSORIZATION_AUDIT.md`
+equation (8) bounds a random filling of \(k\) new vertices by
+\(m_n+\sqrt{2E(N\log 2+1)}\). Shipped `random_padding_increment` is
+that square root. At orders \(5,10,20,40\) the one-vertex value is
+strictly larger than the proved step \(n-2\). At doubled orders
+\(16,32,64,128\) the increment divided by \(N^{3/2}\) is strictly
+decreasing and stays above \(0.7\), and at each of those orders it
+exceeds the gap between `spherical_half_bound` and
+`dual_gaussian_lower_bound`. The comparison error is larger than the
+sandwich, so this bound does not force \(\lim\alpha_n\) and does not
+produce two subsequences a fixed positive distance apart.
+`tests/test_random_padding_increment.py`.
+
 ## 2026-10-21: lexicographic blow-up scales above the conference cap
 
 The original MO limit is still OPEN. Nothing below was entered in
