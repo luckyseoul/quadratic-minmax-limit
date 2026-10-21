@@ -1,3 +1,23 @@
+## 2026-10-20: the 1:2 shield leaves the product residual
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+Proposition 6.8 builds an order-\(3n\) signing from optimal blocks of
+orders \(n\) and \(2n\). The paired Paley-Hadamard cross is at most
+\(4\sqrt{q k_A k_B}+6n\). On the strip \(k_A k_B\le n^2/100\) the leading
+term is \(0.4 n^{3/2}\). Shipped `bibalanced_gaussian_headroom` is the
+limit of \((T-M-N)/n^{3/2}\) at the Gaussian floors, and it is strictly
+larger than `bibalanced_strip_cross(0.01)`. Shipped
+`bibalanced_composition_headroom` exceeds that strip plus the normalized
+border `bibalanced_border_coefficient` at a finite order found by search,
+and again at four times that order. Doubling the product fraction pushes
+`bibalanced_strip_cross` strictly above the same headroom. The residual
+pairs (6.42)--(6.43) are exactly the pairs this majorant does not cover.
+No second cluster point of \(\gamma_p\) is obtained. This does not prove
+\(\lim\alpha_n\).
+`tests/test_bibalanced_residual_headroom.py`.
+
 ## 2026-10-20: the tetrahedral diamond misses its first-moment budget
 
 The original MO limit is still OPEN. Nothing below was entered in

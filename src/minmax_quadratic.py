@@ -576,6 +576,38 @@ def tetrahedral_budget_level() -> float:
     return (3.0 ** 1.5) / 2.0
 
 
+def bibalanced_gaussian_headroom() -> float:
+    """Limit of (T - M - N)/n^{3/2} at the Gaussian floor.
+
+    T = (M^{2/3} + N^{2/3})^{3/2} with M and N the floors at n and 2n.
+    """
+    return (3.0 * math.sqrt(3.0) - 1.0 - 2.0 * math.sqrt(2.0)) / math.pi
+
+
+def bibalanced_strip_cross(fraction: float) -> float:
+    """Leading coefficient 4*sqrt(fraction) of the paired cross majorant."""
+    if fraction < 0.0:
+        raise ValueError("fraction>=0")
+    return 4.0 * math.sqrt(fraction)
+
+
+def bibalanced_border_coefficient(order: int) -> float:
+    """Normalized size 6*sqrt(n)/n^{3/2} of the unpaired border."""
+    if order < 2:
+        raise ValueError("order>=2")
+    return 6.0 / math.sqrt(order)
+
+
+def bibalanced_composition_headroom(order: int) -> float:
+    """(T - M - N)/n^{3/2} at the Gaussian floors of orders n and 2n."""
+    if order < 2:
+        raise ValueError("order>=2")
+    small = dual_gaussian_lower_bound(order)
+    large = dual_gaussian_lower_bound(2 * order)
+    composed = (small ** (2.0 / 3.0) + large ** (2.0 / 3.0)) ** 1.5
+    return (composed - small - large) / (order ** 1.5)
+
+
 def min_single_skew_tetrahedral_energy(signing: np.ndarray) -> float:
     """Minimum of K_3(A; R, -R, R) over skew signings R.
 
