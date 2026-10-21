@@ -1,3 +1,23 @@
+## 2026-10-21: odd-order plateaus force only a unit step
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+The orthogonal-completion identity says a flat step \(m_{n+1}=m_n\) needs
+a Boolean dot product to vanish, which happens only for even \(n\). On the
+stored exact table every flat step has even order, and every odd order
+from \(3\) through \(13\) steps by at least shipped
+`odd_order_forced_increment`, which is \(1\). At the Gaussian level,
+`neutral_one_step` exceeds that unit at orders \(101\) and \(10001\), and
+the excess is larger at the later order. A unit lower bound does not meet
+the neutral increment. This does not prove \(\lim\alpha_n\).
+`tests/test_odd_order_plateau.py`.
+
+A forward direction request, not a review of these discards, was sent to
+OpenAI. The call and one retry both hit the usage limit, with a reset
+quoted at 2:27 AM. Claude was then asked the same forward question and
+timed out at 680 seconds. Neither house returned a direction.
+
 ## 2026-10-21: the bootstrapped interior root leaves a conference gap
 
 The original MO limit is still OPEN. Nothing below was entered in

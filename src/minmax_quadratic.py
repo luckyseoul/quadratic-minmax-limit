@@ -206,6 +206,15 @@ def partition_extension_full_cube_min(order: int) -> float:
     return float(best)
 
 
+def odd_order_forced_increment() -> float:
+    """Smallest positive Boolean dot product on an odd order.
+
+    A dot product of two ±1 vectors of odd length is a nonzero odd integer,
+    so a flat step m_{n+1}=m_n is impossible when n is odd.
+    """
+    return 1.0
+
+
 def neutral_one_step(level: float, order: int) -> float:
     """m_n*((1+1/n)^{3/2}-1), the increment that holds alpha fixed."""
     if order < 1 or level < 0.0:
