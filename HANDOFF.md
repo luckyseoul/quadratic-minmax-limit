@@ -1,3 +1,21 @@
+## 2026-10-21: the convex half-cut relaxation stops at the Boolean norm
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+`evidence/NOTE_2026-09-02_HALF_CUT_LOCAL_MINIMAX_OBSTRUCTION.md` proves
+that the convex half-cut relaxation has optimum exactly \(\Phi(A)\), while
+the integral target is \(\sqrt2\,\Phi(A)\). A one-edge witness only forces
+a near-maximizer within an additive \(2\). On the stored order-15
+minimizer, shipped `phi` recovers \(\Phi=27\), and shipped
+`fractional_half_cut_gap` exceeds shipped `half_cut_witness_slack`. At
+the conference cap, the slack divided by that gap is strictly smaller at
+order \(10000\) than at order \(100\). The relaxation does not prove
+\(\min_S\Lambda_A(S)\le\sqrt2\,m_n\), so it does not force
+\(\liminf\alpha_n=\limsup\alpha_n\) and does not split the cluster set.
+This does not prove \(\lim\alpha_n\).
+`tests/test_fractional_half_cut_gap.py`.
+
 ## 2026-10-21: the hypercontractive deletion floor is the weaker linear bound
 
 The original MO limit is still OPEN. Nothing below was entered in

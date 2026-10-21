@@ -190,6 +190,18 @@ def hypercontractive_deletion_floor(deleted: int) -> float:
     return math.sqrt(deleted * (deleted - 1) / 2.0) / (2.0 * math.e * math.e)
 
 
+def fractional_half_cut_gap(height: float) -> float:
+    """Distance from the convex half-cut value to the integral target sqrt(2)*height."""
+    if height < 0.0:
+        raise ValueError("height>=0 required")
+    return (math.sqrt(2.0) - 1.0) * height
+
+
+def half_cut_witness_slack() -> float:
+    """Additive drop forced by one anti-aligned near-maximizer."""
+    return 2.0
+
+
 def neutral_mass_increment(level: float, order: int, deleted: int) -> float:
     """m-increment that holds alpha fixed across a deletion of this size."""
     if order <= deleted or deleted < 1 or level < 0.0:
