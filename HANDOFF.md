@@ -1,3 +1,18 @@
+## 2026-10-21: the coupled half-loss stays below neutral doubling
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+The equipartition product floor is \((4/9)m^2\mu_m^2\). Substituted into
+the balanced coupled restriction, it lower-bounds \(m_{2k}-m_k\) by
+\([F-\sqrt{F^2-4\Gamma_k}]/2\). That loss is largest when the host norm
+is smallest. At the Gaussian floor, shipped `coupled_half_loss` is
+strictly below the increment that holds the same level fixed, for
+half-orders \(50\) and \(500\). At half-order \(500\) the loss is
+strictly below half of that increment. The bound does not keep
+\(\alpha_{2k}\) at \(\alpha_k\). This does not prove \(\lim\alpha_n\).
+`tests/test_coupled_half_loss.py`.
+
 ## 2026-10-21: the full-cube partition extension bound is order \(n\)
 
 The original MO limit is still OPEN. Nothing below was entered in

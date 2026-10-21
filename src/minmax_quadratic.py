@@ -221,6 +221,26 @@ def deletion_shortfall_density(order: int, level: float) -> float:
     return gap / (order ** 1.5)
 
 
+def equipartition_product_floor(order: int) -> float:
+    """Universal product floor (4/9) m^2 mu_m^2 with m = floor(order/2)."""
+    if order < 2:
+        raise ValueError("order>=2 required")
+    half = order // 2
+    moment = rademacher_absolute_moment(half)
+    return (4.0 / 9.0) * (half * half) * (moment * moment)
+
+
+def coupled_half_loss(height: float, half: int) -> float:
+    """Balanced coupled loss [F - sqrt(F^2 - 4 Gamma)]/2."""
+    if half < 2 or height <= 0.0:
+        raise ValueError("half>=2 and height>0 required")
+    product = equipartition_product_floor(half)
+    discriminant = height * height - 4.0 * product
+    if discriminant <= 0.0:
+        raise ValueError("product floor exceeds the square of the host norm")
+    return 0.5 * (height - math.sqrt(discriminant))
+
+
 def two_thirds_scale(height: float) -> float:
     """H = m^{2/3}. Subadditivity of H is the zero-error form of a Fekete bound."""
     if height < 0.0:
