@@ -608,6 +608,26 @@ def bibalanced_composition_headroom(order: int) -> float:
     return (composed - small - large) / (order ** 1.5)
 
 
+def paley_gamma_envelope(order: int) -> float:
+    """Gaussian upper bound on the Paley gap γ at a conference order.
+
+    It is the difference of the spherical and Gaussian normalized floors.
+    """
+    if order < 2:
+        raise ValueError("order>=2")
+    return alpha(spherical_half_bound(order), order) - alpha(
+        dual_gaussian_lower_bound(order), order
+    )
+
+
+def linear_undercut_gamma(prime: int) -> float:
+    """Normalized gap (p-1)/n^{3/2} at the Paley order n=p^2+1."""
+    if prime < 3:
+        raise ValueError("prime>=3")
+    order = prime * prime + 1
+    return (prime - 1) / (order ** 1.5)
+
+
 def min_single_skew_tetrahedral_energy(signing: np.ndarray) -> float:
     """Minimum of K_3(A; R, -R, R) over skew signings R.
 

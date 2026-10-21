@@ -1,3 +1,21 @@
+## 2026-10-20: the Paley bounds do not split \(\gamma_p\)
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+CORE §8 equates two cluster points of \(\gamma_p\) with divergence of
+\(\alpha_n\). Shipped `paley_gamma_envelope` is the Gaussian upper bound
+on that gap. Its distance to \(1/2-1/\pi\) is positive and strictly
+smaller at orders \(100\) and \(1000\) than at the previous tested order,
+so the envelope tends to one constant. Shipped `linear_undercut_gamma`
+is the normalized gap \((p-1)/n^{3/2}\) at \(n=p^2+1\). On \(p=3,5,7,11\)
+it is strictly decreasing, and a search finds an odd integer whose value
+is below one tenth of \(1/2-1/\pi\) and below half the value at \(p=3\).
+Every such undercut lies strictly under the envelope at the same order.
+A vanishing lower bound and a single upper constant are not two cluster
+points of \(\gamma_p\). This does not prove \(\lim\alpha_n\).
+`tests/test_paley_gamma_two_bounds.py`.
+
 ## 2026-10-20: the 1:2 shield leaves the product residual
 
 The original MO limit is still OPEN. Nothing below was entered in
