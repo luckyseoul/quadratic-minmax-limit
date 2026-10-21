@@ -230,6 +230,27 @@ def deletion_shortfall_density(order: int, level: float) -> float:
     return gap / (order ** 1.5)
 
 
+def doubling_image(height: float) -> float:
+    """2*sqrt(2)*height, the zero-error double of one block norm."""
+    if height < 0.0:
+        raise ValueError("height>=0 required")
+    return 2.0 * math.sqrt(2.0) * height
+
+
+def sum_of_maxima_floor(height: float, block: int) -> float:
+    """Two block norms plus the universal ±1 cross floor on that block."""
+    if block < 1 or height < 0.0:
+        raise ValueError("block>=1 and height>=0 required")
+    return 2.0 * height + rectangle_switching_lower(block, block)
+
+
+def aligned_extreme_cross_budget(height: float) -> float:
+    """Largest cross term that keeps 2*height + cross inside the doubling image."""
+    if height < 0.0:
+        raise ValueError("height>=0 required")
+    return 2.0 * (math.sqrt(2.0) - 1.0) * height
+
+
 def equipartition_product_floor(order: int) -> float:
     """Universal product floor (4/9) m^2 mu_m^2 with m = floor(order/2)."""
     if order < 2:

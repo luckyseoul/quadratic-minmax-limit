@@ -1,3 +1,24 @@
+## 2026-10-21: the equal-block bridge floor misses the doubling target
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+Every ±1 cross block of width \(n\) has cut norm at least
+`rectangle_switching_lower`. Adding that floor to two block norms is the
+sum-of-maxima comparison in
+`evidence/NOTE_2026-10-01_DOUBLING_WINDOW_DEBT.md`. At the conference
+level \(1/2\), shipped `sum_of_maxima_floor` exceeds shipped
+`doubling_image` at block orders \(64\) and \(4096\). The excess divided
+by \(n^{3/2}\) is larger than \(0.35\) at both orders, and larger at the
+later order. An aligned extreme pair can keep the joint value inside the
+doubling image only when its cross term is at most
+`aligned_extreme_cross_budget`, and that budget stays strictly below the
+cross floor. The same sum divided by \((2n)^{3/2}\) stays strictly above
+\(1/2\). The comparison does not put \(m_{2n}\) under \(2\sqrt2\,m_n\),
+and it does not pull the doubled normalized norm down to the block level.
+This does not prove \(\lim\alpha_n\).
+`tests/test_doubling_window_debt.py`.
+
 ## 2026-10-21: odd-order plateaus force only a unit step
 
 The original MO limit is still OPEN. Nothing below was entered in
