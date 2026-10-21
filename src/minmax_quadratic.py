@@ -258,6 +258,28 @@ def ancestry_mass_threshold(level: float, order: int) -> float:
     return 2.0 ** neutral_one_step(level, order)
 
 
+def even_order_stable_separation() -> int:
+    """Minimum Hamming distance of distinct same-orientation stable states at even order.
+
+    Every local field is an odd integer, so a stable margin is at least 1 and
+    the separation is at least 2.
+    """
+    return 2
+
+
+def skeleton_ball_volume(order: int, radius: int) -> int:
+    """Worst-case count of other stable states inside a Hamming ball of this radius.
+
+    The light set in the skeleton bound can be the full vertex set.
+    """
+    if order < 1 or radius < 0:
+        raise ValueError("order>=1 and radius>=0 required")
+    total = 0
+    for distance in range(1, min(radius, order) + 1):
+        total += math.comb(order, distance)
+    return total
+
+
 def equipartition_product_floor(order: int) -> float:
     """Universal product floor (4/9) m^2 mu_m^2 with m = floor(order/2)."""
     if order < 2:

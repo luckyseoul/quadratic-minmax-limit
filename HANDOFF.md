@@ -1,3 +1,21 @@
+## 2026-10-21: stable-skeleton packing misses the ancestry bar
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+`evidence/NOTE_2026-09-23_STABLE_SKELETON_GEOMETRY.md` confines nearby
+same-orientation stable states to the light coordinates of either
+endpoint. At even order every local field is odd, so shipped
+`even_order_stable_separation` is \(2\). On the stored table the step
+from order \(4\) to order \(5\) is \(0\), which is strictly below shipped
+`neutral_one_step` at that height. Replacing the light set by the full
+vertex set, shipped `skeleton_ball_volume` at radius the integer part of
+the conference-level neutral increment exceeds shipped
+`ancestry_mass_threshold` at orders \(64\) and \(1024\), and the ratio is
+larger at the later order. The packing does not put the skeleton under
+the mass bar and does not force \(\liminf\alpha_n=\limsup\alpha_n\).
+`tests/test_skeleton_packing_volume.py`.
+
 ## 2026-10-21: ancestry mass does not extend the order-15 minimizer
 
 The original MO limit is still OPEN. Nothing below was entered in
