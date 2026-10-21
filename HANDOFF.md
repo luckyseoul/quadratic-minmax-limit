@@ -1,3 +1,21 @@
+## 2026-10-21: the partition tail sum misses the order-15 minimizer
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+`evidence/NOTE_2026-09-23_PARTITION_EXTENSION.md` gives a sufficient
+one-row test: if the sum over antipodal states of the Rademacher tail
+\(P\{|S_n|\ge D(x)+r\}\) is strictly below 1, the extension increment is
+strictly below \(r\). At the neutral increment that would force
+\(\alpha_{n+1}<\alpha_n\) for that minimizer. On the stored order-15
+minimizer, shipped `phi` recovers \(\Phi=27\). Shipped `rademacher_tail`
+at the neutral margin is strictly below 1, and shipped
+`partition_tail_sum` on the actual deficit spectrum is strictly larger
+than that one-state tail and at least 1. The certificate does not apply.
+One failed sufficient test does not separate \(\liminf\alpha_n\) from
+\(\limsup\alpha_n\). This does not prove \(\lim\alpha_n\).
+`tests/test_partition_tail_sum.py`.
+
 ## 2026-10-21: stable-skeleton packing misses the ancestry bar
 
 The original MO limit is still OPEN. Nothing below was entered in

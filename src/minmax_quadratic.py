@@ -987,6 +987,46 @@ def one_vertex_extension_minimum(signing: np.ndarray) -> float:
     return float(best)
 
 
+def rademacher_tail(order: int, threshold: float) -> float:
+    """Probability that an order-term Rademacher sum has absolute value at least threshold."""
+    if order < 1 or order > 20 or threshold < 0.0:
+        raise ValueError("order in 1..20 and threshold>=0 required")
+    if threshold > order:
+        return 0.0
+    favorable = 0
+    for negatives in range(order + 1):
+        if abs(order - 2 * negatives) + 1e-8 >= threshold:
+            favorable += math.comb(order, negatives)
+    return favorable / float(2 ** order)
+
+
+def partition_tail_sum(signing: np.ndarray, height: float, margin: float) -> float:
+    """Sum of Rademacher tails over one representative of each antipodal pair.
+
+    The partition-extension note says a sum strictly below 1 produces a one-row
+    extension of Boolean norm strictly less than height + margin.
+    """
+    order = int(signing.shape[0])
+    if order < 2 or order > 16 or signing.shape != (order, order):
+        raise ValueError("order must be between 2 and 16")
+    if height < 0.0 or margin < 0.0:
+        raise ValueError("height>=0 and margin>=0 required")
+    host = np.asarray(signing, dtype=np.float64)
+    count = 1 << (order - 1)
+    states = np.ones((count, order), dtype=np.float64)
+    masks = np.arange(count)
+    for index in range(1, order):
+        states[:, index] = np.where((masks >> (index - 1)) & 1, -1.0, 1.0)
+    energy = np.abs(0.5 * np.einsum("ia,ab,ib->i", states, host, states))
+    total = 0.0
+    for value in energy:
+        deficit = height - float(value)
+        if deficit < 0.0:
+            deficit = 0.0
+        total += rademacher_tail(order, deficit + margin)
+    return float(total)
+
+
 def exact_rank_extension_sum(signing: np.ndarray, height: float) -> float:
     """Exact-rank union bound on the active stable family.
 
