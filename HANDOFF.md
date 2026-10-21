@@ -1,3 +1,30 @@
+## 2026-10-21: fixed-beta pressure and one-step chaining stay off the limit
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+At a fixed temperature \(\beta>0\), the symmetric pressure of a minimizer
+lies between \(\beta m_n-n\log 2\) and \(\beta m_n\). Dividing by
+\(\beta n^{3/2}\) leaves a window of size \((\log 2)/(\beta\sqrt n)\).
+Shipped `fixed_beta_entropy_window` is strictly smaller at order \(1400\)
+than at order \(14\). On the Paley matrices of orders \(6\) and \(14\),
+shipped `fixed_beta_pressure_gap` at \(\beta=1\) is positive and strictly
+below \(n\log 2\). Block subadditivity does not turn that into a Cauchy
+sequence: the doubling cross term is \(n^2\log\cosh\beta\), and shipped
+`fixed_beta_block_defect` is larger at order \(1400\) than at order \(14\).
+
+Chaining the one-step inequality at the moving critical temperature, across
+one doubling, sums to \((c^2/2)\log 2\). Shipped
+`one_step_critical_pressure_sum` at \(c=1\) is closer to that positive
+constant from start \(10000\) than from start \(100\), and the later sum
+stays above half the constant. The older doubling defect \(c^2/8\) is
+smaller and already recorded; it does not tend to \(0\) either.
+
+The selected-half bound \(m_{2n}\ge 2m_n-(n-1)\) is the factor \(2\), not
+\(2\sqrt2\). That comparison is already in
+`evidence/NOTE_2026-09-05_SELECTED_HALF_RESTRICTION.md`.
+`tests/test_fixed_beta_and_one_step_pressure.py`.
+
 ## 2026-10-21: the spectral discriminator fails at order 15
 
 The original MO limit is still OPEN. Nothing below was entered in

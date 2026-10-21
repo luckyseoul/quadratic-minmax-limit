@@ -562,6 +562,52 @@ def critical_block_excess(order: int, coupling: float) -> float:
     return (order / 2.0) * math.log(math.cosh(coupling / math.sqrt(2.0 * order)))
 
 
+def fixed_beta_entropy_window(order: int, beta: float) -> float:
+    """Normalized ceiling (log 2)/(beta sqrt(n)) on the fixed-beta pressure gap."""
+    if order < 2 or beta <= 0.0:
+        raise ValueError("order>=2 and beta>0 required")
+    return math.log(2.0) / (beta * math.sqrt(order))
+
+
+def fixed_beta_block_defect(order: int, beta: float) -> float:
+    """Doubling cross term n^2 log cosh(beta), divided by n^{3/2}."""
+    if order < 2 or beta <= 0.0:
+        raise ValueError("order>=2 and beta>0 required")
+    return math.sqrt(order) * math.log(math.cosh(beta))
+
+
+def one_step_critical_pressure_sum(start: int, coupling: float) -> float:
+    """Sum of the one-step cosh defects from start through one doubling."""
+    if start < 2 or coupling <= 0.0:
+        raise ValueError("start>=2 and coupling>0 required")
+    total = 0.0
+    for index in range(start, 2 * start):
+        step = coupling / math.sqrt(index + 1.0)
+        total += (index / (index + 1.0)) * math.log(math.cosh(step))
+    return total
+
+
+def fixed_beta_pressure_gap(signing: np.ndarray, beta: float) -> float:
+    """beta*Phi(A) minus the log-mean of cosh(beta Q) on the half-cube.
+
+    For every signing the minimum of that log-mean lies between
+    beta*m_n - n log 2 and beta*m_n. The returned gap is the loss on this
+    one signing.
+    """
+    order = int(signing.shape[0])
+    if order < 2 or order > 16 or signing.shape != (order, order) or beta <= 0.0:
+        raise ValueError("square signing of order 2..16 and beta>0 required")
+    count = 1 << (order - 1)
+    states = np.ones((count, order), dtype=np.float64)
+    masks = np.arange(count)
+    for index in range(1, order):
+        states[:, index] = np.where((masks >> (index - 1)) & 1, -1.0, 1.0)
+    energy = 0.5 * np.einsum("ia,ab,ib->i", states, signing, states)
+    height = float(np.max(np.abs(energy)))
+    mean_cosh = float(np.mean(np.cosh(beta * energy)))
+    return beta * height - math.log(mean_cosh)
+
+
 def tetrahedral_union_bound_level() -> float:
     """Independent-skew first-moment level sqrt(18 log 2).
 
