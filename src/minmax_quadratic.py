@@ -273,6 +273,53 @@ def relaxation_ceiling_exceeds_doubling(pair_cost: int, height: int) -> bool:
     return 9 * pair_cost * pair_cost > 32 * height * height
 
 
+def ordered_skew_range_ceiling(height: float, order: int) -> float:
+    """Largest ordered-skew cross term allowed by prefix energies of size at most height.
+
+    Each of the order steps can move Q by at most twice the height, and the
+    cross term is half of that total variation, so the ceiling is order*height.
+    """
+    if order < 2 or height < 0.0:
+        raise ValueError("order>=2 and height>=0 required")
+    return float(order) * height
+
+
+def _antipodal_states(order: int) -> np.ndarray:
+    count = 1 << (order - 1)
+    states = np.ones((count, order), dtype=np.float64)
+    masks = np.arange(count)
+    for index in range(1, order):
+        states[:, index] = np.where((masks >> (index - 1)) & 1, -1.0, 1.0)
+    return states
+
+
+def ordered_skew_total_variation(signing: np.ndarray) -> float:
+    """Max of (1/2) sum |q_k-q_{k-1}| over index-order prefix flips."""
+    host = np.asarray(signing, dtype=np.float64)
+    order = int(host.shape[0])
+    if order < 2 or order > 16 or host.shape != (order, order):
+        raise ValueError("order must be between 2 and 16")
+    current = _antipodal_states(order)
+    total = np.zeros(current.shape[0], dtype=np.float64)
+    for index in range(order):
+        field = current @ host
+        total += np.abs(-2.0 * current[:, index] * field[:, index])
+        current[:, index] *= -1.0
+    return float(0.5 * np.max(total))
+
+
+def ordered_skew_cut_norm(signing: np.ndarray) -> float:
+    """Max over Boolean states of ||R^prec y||_1."""
+    host = np.asarray(signing, dtype=np.float64)
+    order = int(host.shape[0])
+    if order < 2 or order > 16 or host.shape != (order, order):
+        raise ValueError("order must be between 2 and 16")
+    upper = np.triu(host, 1)
+    skew = upper - upper.T
+    images = _antipodal_states(order) @ skew.T
+    return float(np.max(np.sum(np.abs(images), axis=1)))
+
+
 def sum_of_maxima_floor(height: float, block: int) -> float:
     """Two block norms plus the universal ±1 cross floor on that block."""
     if block < 1 or height < 0.0:

@@ -1,3 +1,24 @@
+## 2026-10-21: the ordered-skew endpoint ceiling misses the doubling image
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+`evidence/NOTE_2026-09-02_ORDERED_SKEW_PREFIX_HALF_CUT.md` writes the
+ordered skew cross term as half the total variation of the prefix
+energies. If every prefix energy is at most the Boolean norm, that
+variation is at most \(n\) times the norm. Shipped
+`ordered_skew_total_variation` matches shipped `ordered_skew_cut_norm`
+on a random order-6 signing and on the stored order-15 minimizer. Shipped
+`ordered_skew_range_ceiling` is strictly above shipped `doubling_image`
+at the conference level on orders \(100\) and \(10000\), and the ratio is
+larger at the later order. On the order-15 minimizer, shipped `phi`
+recovers \(\Phi=27\), the realized variation stays within the ceiling,
+and the ceiling stays strictly above the doubling image. The endpoint
+bound does not put the cross term under \(2\sqrt2\,m_n\). It does not
+force \(\liminf\alpha_n=\limsup\alpha_n\) and does not split the cluster
+set. This does not prove \(\lim\alpha_n\).
+`tests/test_ordered_skew_range_ceiling.py`.
+
 ## 2026-10-21: conference signings stay outside arcsine saturation
 
 The original MO limit is still OPEN. Nothing below was entered in
