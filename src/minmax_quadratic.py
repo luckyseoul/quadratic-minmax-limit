@@ -230,6 +230,44 @@ def equipartition_product_floor(order: int) -> float:
     return (4.0 / 9.0) * (half * half) * (moment * moment)
 
 
+def bootstrap_interior_root(tilt: float, weight: float) -> float:
+    """Largest root of the bootstrapped interior equality at these parameters.
+
+    The root is a lower bound for liminf alpha_n. It is not a limit.
+    """
+    if not 0.0 < tilt <= 1.0 or not 0.0 < weight <= 0.5:
+        raise ValueError("tilt in (0,1] and weight in (0,1/2] required")
+    kappa = 2.0 / math.pi
+    zed = tilt * tilt / (1.0 + tilt * tilt)
+    aye = 1.0 - kappa * math.asin(zed) + kappa * zed
+    energy = kappa * tilt / (1.0 + tilt * tilt)
+    field = math.sqrt(kappa * aye)
+    beta = aye - kappa
+    width = 2.0 * math.sqrt(kappa) * tilt / (1.0 + tilt * tilt)
+    height = min(0.25, math.atan(math.sqrt(beta) / width) / math.pi)
+    response = (1.0 - weight) ** 2 * energy + weight * (1.0 - weight) * field
+    star = 2.0 / (27.0 * math.pi)
+
+    def residual(level: float) -> float:
+        left = ((1.0 + weight * weight) * level - response) * (
+            level * level - star * (1.0 - height) ** 3
+        )
+        right = 4.0 * star * weight * weight * level * height ** 3
+        return left - right
+
+    low = 0.2
+    high = 0.5
+    if residual(low) >= 0.0 or residual(high) <= 0.0:
+        raise ValueError("bootstrapped equality has no root in [0.2, 0.5]")
+    for _ in range(80):
+        mid = 0.5 * (low + high)
+        if residual(mid) < 0.0:
+            low = mid
+        else:
+            high = mid
+    return 0.5 * (low + high)
+
+
 def coupled_half_loss(height: float, half: int) -> float:
     """Balanced coupled loss [F - sqrt(F^2 - 4 Gamma)]/2."""
     if half < 2 or height <= 0.0:

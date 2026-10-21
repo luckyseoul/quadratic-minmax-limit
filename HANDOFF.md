@@ -1,3 +1,17 @@
+## 2026-10-21: the bootstrapped interior root leaves a conference gap
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+`evidence/NOTE_2026-09-24_RESTRICTION_BOOTSTRAPPED_INTERIOR_GAP.md`
+turns the complement's product payment into a lower bound for
+\(\liminf\alpha_n\). At the note's rational parameters \(t=4967/5000\)
+and \(p=61/625\), shipped `bootstrap_interior_root` lies strictly above
+\(1/\pi\), strictly below \(2/5\), and more than \(0.15\) below \(1/2\).
+A floor inside the sandwich is not equality of the two ends. This does
+not prove \(\lim\alpha_n\). Do not assign this root to \(B_\infty\).
+`tests/test_bootstrap_interior_gap.py`.
+
 ## 2026-10-21: the coupled half-loss stays below neutral doubling
 
 The original MO limit is still OPEN. Nothing below was entered in
