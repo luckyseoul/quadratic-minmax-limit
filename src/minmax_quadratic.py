@@ -339,6 +339,55 @@ def boolean_operator_product(order: int, height: float) -> float:
     return 2.0 * height / order
 
 
+def character_block_indices(q: int) -> tuple[np.ndarray, np.ndarray]:
+    """Infinity-squares split for a prime q ≡ 1 (mod 4).
+
+    Index 0 is infinity and index a+1 is the field element a. The second
+    block is 0 followed by nu times the same squares.
+    """
+    if q < 5 or q % 4 != 1 or not _is_prime(q):
+        raise ValueError("q>=5 prime and q≡1 mod 4 required")
+    squares = sorted({(r * r) % q for r in range(1, q)})
+    square_set = set(squares)
+    nu = next(element for element in range(1, q) if element not in square_set)
+    residues = np.asarray(squares, dtype=int)
+    squares_block = np.concatenate(([0], residues + 1))
+    nonsquares_block = np.concatenate(([1], (nu * residues) % q + 1))
+    return squares_block, nonsquares_block
+
+
+def character_block_gram_gap(q: int) -> float:
+    """Max entry of A^2 + B B^T - q I on the character blocks.
+
+    C^2 = q I and the two-block form force the gap to vanish.
+    """
+    conference = paley_conference_matrix(q)
+    squares_block, nonsquares_block = character_block_indices(q)
+    block = conference[np.ix_(squares_block, squares_block)]
+    cross = conference[np.ix_(squares_block, nonsquares_block)]
+    gram = block @ block + cross @ cross.T
+    eye = q * np.eye(block.shape[0])
+    return float(np.max(np.abs(gram - eye)))
+
+
+def character_block_height_cap(q: int) -> float:
+    """Spectral height cap (1/2)*k*sqrt(q) on the character block.
+
+    k=(q+1)/2. Positive-semidefiniteness of B B^T and A^2+B B^T=q I
+    give ||A||_op <= sqrt(q), hence Phi(A) <= (1/2)*k*sqrt(q).
+    """
+    if q < 5 or q % 4 != 1:
+        raise ValueError("q>=5 and q≡1 mod 4 required")
+    block_order = (q + 1) // 2
+    return 0.5 * block_order * math.sqrt(q)
+
+
+def character_block_cap_ratio(q: int) -> float:
+    """Block cap divided by the spherical cap on the same block order."""
+    block_order = (q + 1) // 2
+    return character_block_height_cap(q) / spherical_half_bound(block_order)
+
+
 def operator_alignment(order: int, height: float, op_norm: float) -> float:
     """Prop 15.7 ratio rho(A) * ||A||_op / sqrt(n-1).
 

@@ -1,3 +1,24 @@
+## 2026-10-21: the character-block cap stays above the spherical cap
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+`evidence/NOTE_2026-09-11_PALEY_TWO_BLOCK_DECOMPOSITION.md` splits a
+Paley conference matrix of order \(q+1\), \(q\equiv1\pmod4\), into
+blocks \([[A,B],[B^{\mathsf T},-A]]\). The conference equation then
+forces \(A^2+BB^{\mathsf T}=qI\). Shipped `character_block_gram_gap` is
+below \(10^{-8}\) at primes \(5,13,17,29\). The resulting height cap is
+\(\tfrac12 k\sqrt q\) with \(k=(q+1)/2\). Shipped
+`character_block_cap_ratio` is strictly above \(\sqrt2\) at primes
+\(5,13,29,101\), and smaller at each later prime. The normalized caps
+rise through an interval that stays above \(1/2\), and the width of
+that interval is smaller than the distance from its left end down to
+\(1/2\). The cap is a weaker bound than `spherical_half_bound` on the
+same block. It does not force \(\lim\alpha_n\), and these caps do not
+form two subsequences a fixed positive distance apart inside the
+sandwich.
+`tests/test_character_block_cap.py`.
+
 ## 2026-10-21: the conference-op shell product is the Boolean height
 
 The original MO limit is still OPEN. Nothing below was entered in
