@@ -1,3 +1,22 @@
+## 2026-10-21: ancestry mass does not extend the order-15 minimizer
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+`evidence/NOTE_2026-09-28_ENTROPY_COST_COMPATIBILITY.md` says a
+compatibility tree of mass \(Z_T<2^r\) produces a one-row extension
+strictly below \(F+r\). At the neutral increment that would force
+\(\alpha_{n+1}<\alpha_n\) for that minimizer. On the stored order-15
+minimizer, shipped `phi` recovers \(\Phi=27\). Shipped
+`one_vertex_extension_minimum` is at least that height plus shipped
+`neutral_one_step`, so the strict extension does not exist and the mass
+certificate does not apply. Shipped `ancestry_mass_threshold` at this
+level sits strictly between \(2\) and the number of antipodal states.
+A bar of size \(2^{\Theta(\sqrt n)}\) inside a cube of size \(2^{n-1}\)
+does not put every compatibility tree under the bar. This does not
+prove \(\lim\alpha_n\).
+`tests/test_ancestry_mass_extension.py`.
+
 ## 2026-10-21: the equal-block bridge floor misses the doubling target
 
 The original MO limit is still OPEN. Nothing below was entered in

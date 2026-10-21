@@ -251,6 +251,13 @@ def aligned_extreme_cross_budget(height: float) -> float:
     return 2.0 * (math.sqrt(2.0) - 1.0) * height
 
 
+def ancestry_mass_threshold(level: float, order: int) -> float:
+    """2 to the neutral increment. A compatibility tree under this mass keeps positive width."""
+    if order < 1 or level < 0.0:
+        raise ValueError("order>=1 and level>=0 required")
+    return 2.0 ** neutral_one_step(level, order)
+
+
 def equipartition_product_floor(order: int) -> float:
     """Universal product floor (4/9) m^2 mu_m^2 with m = floor(order/2)."""
     if order < 2:
@@ -931,6 +938,31 @@ def approximate_rank_obstruction(signing: np.ndarray, height: float) -> float:
         if closest is None or score < closest:
             closest = score
     return float(closest - neutral)
+
+
+def one_vertex_extension_minimum(signing: np.ndarray) -> float:
+    """Minimum Boolean norm of a one-row extension.
+
+    For every row a, Phi(A extended by a) equals max_x (|Q(x)| + |a·x|).
+    Antipodal rows and states are represented with the first coordinate +1.
+    """
+    order = int(signing.shape[0])
+    if order < 2 or order > 16 or signing.shape != (order, order):
+        raise ValueError("order must be between 2 and 16")
+    host = np.asarray(signing, dtype=np.float64)
+    count = 1 << (order - 1)
+    states = np.ones((count, order), dtype=np.float64)
+    masks = np.arange(count)
+    for index in range(1, order):
+        states[:, index] = np.where((masks >> (index - 1)) & 1, -1.0, 1.0)
+    energy = np.abs(0.5 * np.einsum("ia,ab,ib->i", states, host, states))
+    best = None
+    for start in range(0, count, 512):
+        dots = np.abs(states[start : start + 512] @ states.T)
+        piece = float((dots + energy).max(axis=1).min())
+        if best is None or piece < best:
+            best = piece
+    return float(best)
 
 
 def exact_rank_extension_sum(signing: np.ndarray, height: float) -> float:
