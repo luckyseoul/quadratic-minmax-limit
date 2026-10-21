@@ -168,6 +168,29 @@ def root_scale(height: float, order: int) -> float:
     return height / math.sqrt(order)
 
 
+def fourth_moment_deletion_floor(deleted: int) -> float:
+    """Lower bound c4*sqrt(binom(t,2)) on m_n - m_{n-t} for t>=2."""
+    if deleted < 2:
+        raise ValueError("deleted>=2 required")
+    coefficient = (math.sqrt(18.0) - math.sqrt(14.0)) / 2.0
+    return coefficient * math.sqrt(deleted * (deleted - 1) / 2.0)
+
+
+def neutral_mass_increment(level: float, order: int, deleted: int) -> float:
+    """m-increment that holds alpha fixed across a deletion of this size."""
+    if order <= deleted or deleted < 1 or level < 0.0:
+        raise ValueError("order>deleted>=1 and level>=0 required")
+    return level * (order ** 1.5 - (order - deleted) ** 1.5)
+
+
+def deletion_shortfall_density(order: int, level: float) -> float:
+    """Normalized gap between the neutral two-step increment and the floor."""
+    if order < 4 or level < 0.0:
+        raise ValueError("order>=4 and level>=0 required")
+    gap = neutral_mass_increment(level, order, 2) - fourth_moment_deletion_floor(2)
+    return gap / (order ** 1.5)
+
+
 def two_thirds_scale(height: float) -> float:
     """H = m^{2/3}. Subadditivity of H is the zero-error form of a Fekete bound."""
     if height < 0.0:

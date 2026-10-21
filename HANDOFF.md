@@ -1,3 +1,21 @@
+## 2026-10-21: the fourth-moment deletion floor is a harmonic shortfall
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+`evidence/NOTE_2026-09-24_FOURTH_MOMENT_RESTRICTION_LOSS.md` gives
+\(m_n-m_{n-t}\ge c_4\sqrt{\binom t2}\) for \(t\ge2\), with
+\(c_4=(\sqrt{18}-\sqrt{14})/2\). Shipped
+`fourth_moment_deletion_floor` is that quantity. Every two-step gain on
+the stored exact table meets the \(t=2\) floor. At the Gaussian level,
+shipped `neutral_mass_increment` is strictly larger than the floor at
+orders \(100\) and \(10000\). Shipped `deletion_shortfall_density`,
+multiplied by the order, stays positive and changes by less than five
+percent between those orders. The shortfall is a constant multiple of
+\(1/n\). Its sum over a doubling does not tend to \(0\). This does not
+prove \(\lim\alpha_n\).
+`tests/test_fourth_moment_deletion_floor.py`.
+
 ## 2026-10-21: Fekete's lemma does not apply to the certified minima
 
 The original MO limit is still OPEN. Nothing below was entered in
