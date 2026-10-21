@@ -52,6 +52,20 @@ No second cluster point of \(\gamma_p\) is obtained. This does not prove
 \(\lim\alpha_n\).
 `tests/test_bibalanced_residual_headroom.py`.
 
+## 2026-10-20: the approximate-rank certificate fails at order 15
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+The approximate-rank corollary says that a dimension \(d\) with
+\(d+\varepsilon_d<r_n\) produces a one-vertex extension below the neutral
+increment. On the stored order-15 minimizer, shipped `phi` recovers
+\(\Phi=27\). Zero-deficit stable states alone force
+\(d+\varepsilon_d\) above \(r_{15}\) at every dimension, so shipped
+`approximate_rank_obstruction` is positive. The certificate does not
+apply to this minimizer and does not prove \(\lim\alpha_n\).
+`tests/test_approximate_rank_certificate.py`.
+
 ## 2026-10-20: the tetrahedral diamond misses its first-moment budget
 
 The original MO limit is still OPEN. Nothing below was entered in

@@ -677,6 +677,50 @@ def min_single_skew_tetrahedral_energy(signing: np.ndarray) -> float:
     return float(best)
 
 
+def approximate_rank_obstruction(signing: np.ndarray, height: float) -> float:
+    """How far the approximate-rank certificate misses the neutral increment.
+
+    The certificate asks for a dimension d with d + epsilon_d < r_n.
+    Zero-deficit stable states give a lower bound on epsilon_d through the
+    optimal average squared distance to a d-dimensional subspace. The return
+    value is the smallest such lower bound of d + epsilon_d, minus r_n.
+    A positive value means the certificate fails at every dimension.
+    """
+    order = int(signing.shape[0])
+    if order < 2 or signing.shape != (order, order):
+        raise ValueError("square signing of order at least 2 required")
+    count = 1 << (order - 1)
+    states = np.ones((count, order), dtype=np.float64)
+    masks = np.arange(count)
+    for index in range(1, order):
+        states[:, index] = np.where((masks >> (index - 1)) & 1, -1.0, 1.0)
+    fields = states @ signing
+    energy = 0.5 * np.sum(states * fields, axis=1)
+    oriented = states * fields
+    positive = np.all(oriented >= 0, axis=1)
+    negative = np.all(oriented <= 0, axis=1)
+    best = np.full(count, -1.0e18)
+    best = np.where(positive, np.maximum(best, energy), best)
+    best = np.where(negative, np.maximum(best, -energy), best)
+    stable = best > -1.0e17
+    deficit = height - best
+    neutral = height * ((1.0 + 1.0 / order) ** 1.5 - 1.0)
+    active = stable & (deficit + neutral <= order)
+    zero = states[active & (deficit <= 0.25)]
+    if zero.shape[0] == 0:
+        raise ValueError("no zero-deficit stable state")
+    spectrum = np.linalg.eigvalsh(zero.T @ zero)[::-1]
+    total = float(np.sum(spectrum))
+    closest = None
+    for dim in range(order):
+        tail = total - float(np.sum(spectrum[:dim]))
+        average = max(tail / zero.shape[0], 0.0)
+        score = dim + np.sqrt(order * average)
+        if closest is None or score < closest:
+            closest = score
+    return float(closest - neutral)
+
+
 def phase_self_gluing_defect(order: int) -> float:
     """Excess of the phase-compatible rank-one lift over the factor 2*sqrt(2).
 
