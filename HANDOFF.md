@@ -1,3 +1,22 @@
+## 2026-10-21: conference signings stay outside arcsine saturation
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+`evidence/NOTE_2026-09-02_GAUSSIAN_SATURATION_CENTRAL_SADDLE.md` forces
+Hamming-central opposite near-extremizers only along signings whose
+Boolean norm, divided by \(n^{3/2}\), tends to \(1/\pi\). Shipped
+`arcsine_saturation_level` is that arcsine value. Its distance to shipped
+`spherical_half_bound`, divided by \(n^{3/2}\), is strictly above \(0.18\)
+at orders \(100\) and \(10000\), and larger at the later order. The same
+level sits strictly above shipped `dual_gaussian_lower_bound`, and that
+normalized excess is smaller at the later order. Conference signings do
+not enter the saturation regime. The regime itself assumes minimizers
+approach \(1/\pi\), which is not proved. A gap between these two
+envelopes is not two cluster points of \(\alpha_n\). This does not prove
+\(\lim\alpha_n\).
+`tests/test_arcsine_saturation_gap.py`.
+
 ## 2026-10-21: the convex half-cut relaxation stops at the Boolean norm
 
 The original MO limit is still OPEN. Nothing below was entered in

@@ -584,6 +584,18 @@ def spherical_half_bound(n: int) -> float:
     return 0.5 * n * np.sqrt(n - 1)
 
 
+def arcsine_saturation_level(order: int) -> float:
+    """Arcsine Gaussian value L_n = n(n-1)/pi * asin(1/sqrt(n-1))."""
+    if order < 2:
+        raise ValueError("order>=2 required")
+    return (
+        order
+        * (order - 1)
+        / math.pi
+        * math.asin(1.0 / math.sqrt(order - 1))
+    )
+
+
 def alpha(m: float, n: int) -> float:
     return m / (n ** 1.5)
 
