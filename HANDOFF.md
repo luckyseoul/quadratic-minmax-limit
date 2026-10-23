@@ -1,3 +1,20 @@
+## 2026-10-23: modulus consult, do not branch
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+OpenAI `deep_review` on `gpt-6.1-sol` at effort `ultra`, no subprocess
+timer, returned PASS, confidence 0.98, `caller_action` `do_not_branch`.
+Findings, open questions, and recommendations were empty. The missing
+statement it named is an unconditional bound \(|\alpha_m-\alpha_n|\le\omega(n)\)
+for the actual minima, uniformly in \(m\ge n\), with \(\omega(n)\to 0\).
+That is the same modulus as \(\omega_N\to 0\). It is not proved. Do not
+open a branch from this note.
+
+Claude Opus 5.5 at effort `max` was called second, also with the timer
+off. The print call returned no verdict: `loggedIn` was false and the
+OAuth session had expired. Do not treat that miss as a review.
+
 ## 2026-10-21: the CHSH vector step loses a fixed factor
 
 The original MO limit is still OPEN. Nothing below was entered in
