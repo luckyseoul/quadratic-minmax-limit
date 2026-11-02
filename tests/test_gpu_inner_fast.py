@@ -11,6 +11,8 @@ from pathlib import Path
 import numpy as np
 import pytest
 
+pytest.importorskip("numba", reason="numba not installed")
+
 TOOL = Path(__file__).resolve().parents[1] / "scripts" / "maxplus_profile_enum"
 sys.path.insert(0, str(TOOL))
 

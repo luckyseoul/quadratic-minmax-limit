@@ -1,0 +1,6 @@
+# Dev/test dependencies only. Runtime code uses numpy/scipy where noted.
+# Install with: pip install -r requirements-dev.txt
+pytest>=8.0
+pytest-xdist>=3.0
+numpy>=1.26
+scipy>=1.11
