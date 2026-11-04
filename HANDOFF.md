@@ -1,3 +1,28 @@
+## 2026-11-04: one-sided all-future criterion
+
+The original MO limit is still OPEN. Nothing in this entry is a completion proof and nothing was entered in `src/original_mo_status.py`.
+
+A weaker sufficient condition than the previously targeted two-sided modulus is enough for convergence. Define
+`alpha_n = m_n / n^(3/2)`, `L_- = liminf alpha_n`, and `L_+ = limsup alpha_n`.
+If there exists `epsilon_n -> 0` such that, for every sufficiently large `n`,
+`alpha_m <= alpha_n + epsilon_n` uniformly for all `m >= n`, then `alpha_n` converges.
+
+Proof: choose `n_j` with `alpha_{n_j} -> L_-`. The uniform one-sided bound gives
+`sup_{m >= n_j} alpha_m <= alpha_{n_j} + epsilon_{n_j}`. Letting `j -> infinity`
+yields `L_+ <= L_-`; since always `L_- <= L_+`, equality follows.
+
+This reduces the convergence target from a two-sided all-future modulus
+`|alpha_m-alpha_n| <= omega(n)` to the one-sided upper comparison above.
+The existing monotonicity/restriction facts do not establish this direction:
+`m_n <= m_m` for `m >= n` only yields the lower comparison
+`alpha_m >= alpha_n (n/m)^(3/2)`.
+No unconditional one-sided upper comparison is proved here.
+
+Next serious attack: obtain an all-future upper comparison for actual minima,
+or an equivalent cross-order construction whose normalized error tends to zero.
+Do not count adjacent-step control alone as sufficient unless its errors have a
+summable tail strong enough to imply the uniform all-future bound.
+
 ## 2026-10-23: modulus consult, do not branch
 
 The original MO limit is still OPEN. Nothing below was entered in
