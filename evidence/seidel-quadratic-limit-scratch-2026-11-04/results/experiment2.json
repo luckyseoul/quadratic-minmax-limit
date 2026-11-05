@@ -1,0 +1,321 @@
+﻿{
+    "hypothesis":  "Iterated sharp-step padding and the conference ceiling 1/2 do not supply a vanishing one-sided all-future modulus on the exact F(1..15) table; several super-neutral one-step increments reopen local excess.",
+    "open_problem":  "existence of lim alpha_n (Ivanisvili, MathOverflow 413935)",
+    "attack_source":  "HANDOFF 2026-11-04 + CORE.md one-step bound n-2",
+    "prior_experiment":  "experiment1 (finite E_n under n^{-1/2})",
+    "series":  [
+                   {
+                       "n":  1,
+                       "F":  0,
+                       "alpha_n":  0,
+                       "delta_n":  1,
+                       "hard_cap_n_minus_2":  null,
+                       "neutral_r_n":  0,
+                       "super_neutral":  true,
+                       "conference_residual":  0.5,
+                       "padding_excess_max_d500":  null,
+                       "padding_excess_argmax_d":  null
+                   },
+                   {
+                       "n":  2,
+                       "F":  1,
+                       "alpha_n":  0.35355339059327373,
+                       "delta_n":  2,
+                       "hard_cap_n_minus_2":  null,
+                       "neutral_r_n":  0.83711730708738363,
+                       "super_neutral":  true,
+                       "conference_residual":  0.14644660940672627,
+                       "padding_excess_max_d500":  null,
+                       "padding_excess_argmax_d":  null
+                   },
+                   {
+                       "n":  3,
+                       "F":  3,
+                       "alpha_n":  0.57735026918962573,
+                       "delta_n":  1,
+                       "hard_cap_n_minus_2":  null,
+                       "neutral_r_n":  1.6188021535170056,
+                       "super_neutral":  false,
+                       "conference_residual":  -0.077350269189625731,
+                       "padding_excess_max_d500":  null,
+                       "padding_excess_argmax_d":  null
+                   },
+                   {
+                       "n":  4,
+                       "F":  4,
+                       "alpha_n":  0.5,
+                       "delta_n":  0,
+                       "hard_cap_n_minus_2":  null,
+                       "neutral_r_n":  1.5901699437494745,
+                       "super_neutral":  false,
+                       "conference_residual":  0,
+                       "padding_excess_max_d500":  null,
+                       "padding_excess_argmax_d":  null
+                   },
+                   {
+                       "n":  5,
+                       "F":  4,
+                       "alpha_n":  0.35777087639996635,
+                       "delta_n":  1,
+                       "hard_cap_n_minus_2":  3,
+                       "neutral_r_n":  1.258136552049594,
+                       "super_neutral":  false,
+                       "conference_residual":  0.14222912360003365,
+                       "padding_excess_max_d500":  10.767435581471032,
+                       "padding_excess_argmax_d":  500
+                   },
+                   {
+                       "n":  6,
+                       "F":  5,
+                       "alpha_n":  0.34020690871988585,
+                       "delta_n":  4,
+                       "hard_cap_n_minus_2":  4,
+                       "neutral_r_n":  1.3007201234520871,
+                       "super_neutral":  true,
+                       "conference_residual":  0.15979309128011415,
+                       "padding_excess_max_d500":  10.796052127495713,
+                       "padding_excess_argmax_d":  500
+                   },
+                   {
+                       "n":  7,
+                       "F":  9,
+                       "alpha_n":  0.48595432244043507,
+                       "delta_n":  1,
+                       "hard_cap_n_minus_2":  5,
+                       "neutral_r_n":  1.9958910958254603,
+                       "super_neutral":  false,
+                       "conference_residual":  0.014045677559564929,
+                       "padding_excess_max_d500":  10.661522222363477,
+                       "padding_excess_argmax_d":  500
+                   },
+                   {
+                       "n":  8,
+                       "F":  10,
+                       "alpha_n":  0.44194173824159216,
+                       "delta_n":  2,
+                       "hard_cap_n_minus_2":  6,
+                       "neutral_r_n":  1.9324269325229904,
+                       "super_neutral":  true,
+                       "conference_residual":  0.058058261758407836,
+                       "padding_excess_max_d500":  10.716391691187807,
+                       "padding_excess_argmax_d":  500
+                   },
+                   {
+                       "n":  9,
+                       "F":  12,
+                       "alpha_n":  0.44444444444444442,
+                       "delta_n":  1,
+                       "hard_cap_n_minus_2":  7,
+                       "neutral_r_n":  2.05456737852613,
+                       "super_neutral":  false,
+                       "conference_residual":  0.05555555555555558,
+                       "padding_excess_max_d500":  10.724736690537178,
+                       "padding_excess_argmax_d":  500
+                   },
+                   {
+                       "n":  10,
+                       "F":  13,
+                       "alpha_n":  0.41109609582188933,
+                       "delta_n":  4,
+                       "hard_cap_n_minus_2":  8,
+                       "neutral_r_n":  1.99796652883317,
+                       "super_neutral":  true,
+                       "conference_residual":  0.088903904178110671,
+                       "padding_excess_max_d500":  10.768749934256471,
+                       "padding_excess_argmax_d":  500
+                   },
+                   {
+                       "n":  11,
+                       "F":  17,
+                       "alpha_n":  0.46597207798381651,
+                       "delta_n":  1,
+                       "hard_cap_n_minus_2":  9,
+                       "neutral_r_n":  2.3700955354340114,
+                       "super_neutral":  false,
+                       "conference_residual":  0.034027922016183487,
+                       "padding_excess_max_d500":  10.724703864742359,
+                       "padding_excess_argmax_d":  500
+                   },
+                   {
+                       "n":  12,
+                       "F":  18,
+                       "alpha_n":  0.4330127018922193,
+                       "delta_n":  2,
+                       "hard_cap_n_minus_2":  10,
+                       "neutral_r_n":  2.2962434947947927,
+                       "super_neutral":  false,
+                       "conference_residual":  0.0669872981077807,
+                       "padding_excess_max_d500":  10.768138760634136,
+                       "padding_excess_argmax_d":  500
+                   },
+                   {
+                       "n":  13,
+                       "F":  20,
+                       "alpha_n":  0.4266924586347916,
+                       "delta_n":  1,
+                       "hard_cap_n_minus_2":  11,
+                       "neutral_r_n":  2.3515178562424355,
+                       "super_neutral":  false,
+                       "conference_residual":  0.0733075413652084,
+                       "padding_excess_max_d500":  10.784927434468733,
+                       "padding_excess_argmax_d":  500
+                   },
+                   {
+                       "n":  14,
+                       "F":  21,
+                       "alpha_n":  0.40089186286863659,
+                       "delta_n":  6,
+                       "hard_cap_n_minus_2":  12,
+                       "neutral_r_n":  2.2897126278044553,
+                       "super_neutral":  true,
+                       "conference_residual":  0.0991081371313634,
+                       "padding_excess_max_d500":  10.821017748478182,
+                       "padding_excess_argmax_d":  500
+                   },
+                   {
+                       "n":  15,
+                       "F":  27,
+                       "alpha_n":  0.46475800154489005,
+                       "delta_n":  null,
+                       "hard_cap_n_minus_2":  null,
+                       "neutral_r_n":  null,
+                       "super_neutral":  false,
+                       "conference_residual":  0.035241998455109946,
+                       "padding_excess_max_d500":  10.767777500237367,
+                       "padding_excess_argmax_d":  500
+                   }
+               ],
+    "h2":  {
+               "prediction_1_padding_excess_ge_0_1":  {
+                                                          "holds":  true,
+                                                          "rows":  [
+                                                                       {
+                                                                           "n":  5,
+                                                                           "Pmax":  10.767435581471032,
+                                                                           "argmax_d":  500,
+                                                                           "ok":  true
+                                                                       },
+                                                                       {
+                                                                           "n":  6,
+                                                                           "Pmax":  10.796052127495713,
+                                                                           "argmax_d":  500,
+                                                                           "ok":  true
+                                                                       },
+                                                                       {
+                                                                           "n":  7,
+                                                                           "Pmax":  10.661522222363477,
+                                                                           "argmax_d":  500,
+                                                                           "ok":  true
+                                                                       },
+                                                                       {
+                                                                           "n":  8,
+                                                                           "Pmax":  10.716391691187807,
+                                                                           "argmax_d":  500,
+                                                                           "ok":  true
+                                                                       },
+                                                                       {
+                                                                           "n":  9,
+                                                                           "Pmax":  10.724736690537178,
+                                                                           "argmax_d":  500,
+                                                                           "ok":  true
+                                                                       },
+                                                                       {
+                                                                           "n":  10,
+                                                                           "Pmax":  10.768749934256471,
+                                                                           "argmax_d":  500,
+                                                                           "ok":  true
+                                                                       },
+                                                                       {
+                                                                           "n":  11,
+                                                                           "Pmax":  10.724703864742359,
+                                                                           "argmax_d":  500,
+                                                                           "ok":  true
+                                                                       },
+                                                                       {
+                                                                           "n":  12,
+                                                                           "Pmax":  10.768138760634136,
+                                                                           "argmax_d":  500,
+                                                                           "ok":  true
+                                                                       },
+                                                                       {
+                                                                           "n":  13,
+                                                                           "Pmax":  10.784927434468733,
+                                                                           "argmax_d":  500,
+                                                                           "ok":  true
+                                                                       },
+                                                                       {
+                                                                           "n":  14,
+                                                                           "Pmax":  10.821017748478182,
+                                                                           "argmax_d":  500,
+                                                                           "ok":  true
+                                                                       },
+                                                                       {
+                                                                           "n":  15,
+                                                                           "Pmax":  10.767777500237367,
+                                                                           "argmax_d":  500,
+                                                                           "ok":  true
+                                                                       }
+                                                                   ],
+                                                          "note":  "Iterated F(n+1)\u003c=F(n)+n-2 majorant; P_n(d)-\u003einfty as d-\u003einfty."
+                                                      },
+               "prediction_2_conference_residual_stubborn":  {
+                                                                 "holds":  true,
+                                                                 "min_rho_n_8_15":  0.034027922016183487,
+                                                                 "monotone_decreasing":  false,
+                                                                 "rows":  [
+                                                                              {
+                                                                                  "n":  8,
+                                                                                  "rho":  0.058058261758407836
+                                                                              },
+                                                                              {
+                                                                                  "n":  9,
+                                                                                  "rho":  0.05555555555555558
+                                                                              },
+                                                                              {
+                                                                                  "n":  10,
+                                                                                  "rho":  0.088903904178110671
+                                                                              },
+                                                                              {
+                                                                                  "n":  11,
+                                                                                  "rho":  0.034027922016183487
+                                                                              },
+                                                                              {
+                                                                                  "n":  12,
+                                                                                  "rho":  0.0669872981077807
+                                                                              },
+                                                                              {
+                                                                                  "n":  13,
+                                                                                  "rho":  0.0733075413652084
+                                                                              },
+                                                                              {
+                                                                                  "n":  14,
+                                                                                  "rho":  0.0991081371313634
+                                                                              },
+                                                                              {
+                                                                                  "n":  15,
+                                                                                  "rho":  0.035241998455109946
+                                                                              }
+                                                                          ],
+                                                                 "note":  "epsilon_n = 1/2 - alpha_n does not visibly tend to 0 on the exact prefix."
+                                                             },
+               "prediction_3_at_least_three_super_neutral_steps":  {
+                                                                       "holds":  true,
+                                                                       "count":  4,
+                                                                       "ns":  [
+                                                                                  6,
+                                                                                  8,
+                                                                                  10,
+                                                                                  14
+                                                                              ],
+                                                                       "note":  "delta_n = F(n+1)-F(n) exceeds constant-alpha neutral increment r_n."
+                                                                   },
+               "h2_overall_holds":  true
+           },
+    "implication":  "A proof via the one-sided criterion needs a cross-order construction strictly below the conference gap, or a rate alpha_n -\u003e L; recursive n-2 stepping alone cannot close it.",
+    "elapsed_sec":  0.976,
+    "limitations":  [
+                        "Analytic ceiling 1/2 is a limsup bound, not a proved per-n bound.",
+                        "Exact prefix only through n=15.",
+                        "Does not prove or disprove convergence."
+                    ]
+}

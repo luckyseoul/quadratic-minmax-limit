@@ -1,0 +1,5 @@
+best_block_Phi=32
+A_Phi8=10
+target_reached=False
+evals=223883
+seconds=360

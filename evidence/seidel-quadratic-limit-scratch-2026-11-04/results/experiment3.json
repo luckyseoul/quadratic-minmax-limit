@@ -1,0 +1,346 @@
+﻿{
+    "hypothesis":  "Exact doublings already achieve sub-neutral composition; worst mature (n\u003e=5) doubling eta \u003c= 0.10; F(16) in {28,30} decides whether n=8 doubling stays sub-neutral.",
+    "open_problem":  "existence of lim alpha_n; also F(16) in {28,30}",
+    "attack_source":  "cross-order / doubling form of HANDOFF 2026-11-04 one-sided criterion",
+    "doublings":  [
+                      {
+                          "n":  1,
+                          "m":  2,
+                          "F_n":  0,
+                          "F_m":  1,
+                          "neutral_2n":  0,
+                          "slack_F":  -1,
+                          "alpha_n":  0,
+                          "alpha_m":  0.35355339059327373,
+                          "eta":  0.35355339059327373,
+                          "sub_neutral":  false
+                      },
+                      {
+                          "n":  2,
+                          "m":  4,
+                          "F_n":  1,
+                          "F_m":  4,
+                          "neutral_2n":  2.8284271247461903,
+                          "slack_F":  -1.1715728752538097,
+                          "alpha_n":  0.35355339059327373,
+                          "alpha_m":  0.5,
+                          "eta":  0.14644660940672627,
+                          "sub_neutral":  false
+                      },
+                      {
+                          "n":  3,
+                          "m":  6,
+                          "F_n":  3,
+                          "F_m":  5,
+                          "neutral_2n":  8.4852813742385713,
+                          "slack_F":  3.4852813742385713,
+                          "alpha_n":  0.57735026918962573,
+                          "alpha_m":  0.34020690871988585,
+                          "eta":  -0.23714336046973988,
+                          "sub_neutral":  true
+                      },
+                      {
+                          "n":  4,
+                          "m":  8,
+                          "F_n":  4,
+                          "F_m":  10,
+                          "neutral_2n":  11.313708498984761,
+                          "slack_F":  1.3137084989847612,
+                          "alpha_n":  0.5,
+                          "alpha_m":  0.44194173824159216,
+                          "eta":  -0.058058261758407836,
+                          "sub_neutral":  true
+                      },
+                      {
+                          "n":  5,
+                          "m":  10,
+                          "F_n":  4,
+                          "F_m":  13,
+                          "neutral_2n":  11.313708498984761,
+                          "slack_F":  -1.6862915010152388,
+                          "alpha_n":  0.35777087639996635,
+                          "alpha_m":  0.41109609582188933,
+                          "eta":  0.053325219421922976,
+                          "sub_neutral":  false
+                      },
+                      {
+                          "n":  6,
+                          "m":  12,
+                          "F_n":  5,
+                          "F_m":  18,
+                          "neutral_2n":  14.142135623730951,
+                          "slack_F":  -3.857864376269049,
+                          "alpha_n":  0.34020690871988585,
+                          "alpha_m":  0.4330127018922193,
+                          "eta":  0.092805793172333451,
+                          "sub_neutral":  false
+                      },
+                      {
+                          "n":  7,
+                          "m":  14,
+                          "F_n":  9,
+                          "F_m":  21,
+                          "neutral_2n":  25.455844122715714,
+                          "slack_F":  4.455844122715714,
+                          "alpha_n":  0.48595432244043507,
+                          "alpha_m":  0.40089186286863659,
+                          "eta":  -0.085062459571798477,
+                          "sub_neutral":  true
+                      }
+                  ],
+    "near_doublings":  [
+                           {
+                               "n":  5,
+                               "m":  9,
+                               "ratio":  1.8,
+                               "F_n":  4,
+                               "F_m":  12,
+                               "neutral_F":  9.6598136627990918,
+                               "slack_F":  -2.3401863372009082,
+                               "eta":  0.086673568044478067,
+                               "sub_neutral":  false
+                           },
+                           {
+                               "n":  5,
+                               "m":  10,
+                               "ratio":  2,
+                               "F_n":  4,
+                               "F_m":  13,
+                               "neutral_F":  11.313708498984761,
+                               "slack_F":  -1.6862915010152388,
+                               "eta":  0.053325219421922976,
+                               "sub_neutral":  false
+                           },
+                           {
+                               "n":  5,
+                               "m":  11,
+                               "ratio":  2.2,
+                               "F_n":  4,
+                               "F_m":  17,
+                               "neutral_F":  13.052509337288368,
+                               "slack_F":  -3.9474906627116315,
+                               "eta":  0.10820120158385016,
+                               "sub_neutral":  false
+                           },
+                           {
+                               "n":  6,
+                               "m":  11,
+                               "ratio":  1.8333333333333333,
+                               "F_n":  5,
+                               "F_m":  17,
+                               "neutral_F":  12.411725340416048,
+                               "slack_F":  -4.5882746595839521,
+                               "eta":  0.12576516926393067,
+                               "sub_neutral":  false
+                           },
+                           {
+                               "n":  6,
+                               "m":  12,
+                               "ratio":  2,
+                               "F_n":  5,
+                               "F_m":  18,
+                               "neutral_F":  14.142135623730951,
+                               "slack_F":  -3.857864376269049,
+                               "eta":  0.092805793172333451,
+                               "sub_neutral":  false
+                           },
+                           {
+                               "n":  6,
+                               "m":  13,
+                               "ratio":  2.1666666666666665,
+                               "F_n":  5,
+                               "F_m":  20,
+                               "neutral_F":  15.946234897536389,
+                               "slack_F":  -4.0537651024636112,
+                               "eta":  0.086485549914905757,
+                               "sub_neutral":  false
+                           },
+                           {
+                               "n":  7,
+                               "m":  13,
+                               "ratio":  1.8571428571428572,
+                               "F_n":  9,
+                               "F_m":  20,
+                               "neutral_F":  22.77773195220054,
+                               "slack_F":  2.77773195220054,
+                               "eta":  -0.059261863805643467,
+                               "sub_neutral":  true
+                           },
+                           {
+                               "n":  7,
+                               "m":  14,
+                               "ratio":  2,
+                               "F_n":  9,
+                               "F_m":  21,
+                               "neutral_F":  25.455844122715714,
+                               "slack_F":  4.455844122715714,
+                               "eta":  -0.085062459571798477,
+                               "sub_neutral":  true
+                           },
+                           {
+                               "n":  7,
+                               "m":  15,
+                               "ratio":  2.1428571428571428,
+                               "F_n":  9,
+                               "F_m":  27,
+                               "neutral_F":  28.231394967439709,
+                               "slack_F":  1.2313949674397087,
+                               "eta":  -0.021196320895545018,
+                               "sub_neutral":  true
+                           },
+                           {
+                               "n":  8,
+                               "m":  15,
+                               "ratio":  1.875,
+                               "F_n":  10,
+                               "F_m":  27,
+                               "neutral_F":  25.674494883054663,
+                               "slack_F":  -1.3255051169453367,
+                               "eta":  0.02281626330329789,
+                               "sub_neutral":  false
+                           }
+                       ],
+    "f16_knife_edge":  {
+                           "F8":  10,
+                           "alpha_8":  0.44194173824159216,
+                           "neutral_F16":  28.284271247461902,
+                           "cases":  [
+                                         {
+                                             "F16":  28,
+                                             "alpha_16":  0.4375,
+                                             "eta_8":  -0.0044417382415921636,
+                                             "sub_neutral":  true,
+                                             "slack_F":  0.284271247461902
+                                         },
+                                         {
+                                             "F16":  30,
+                                             "alpha_16":  0.46875,
+                                             "eta_8":  0.026808261758407836,
+                                             "sub_neutral":  false,
+                                             "slack_F":  -1.715728752538098
+                                         }
+                                     ]
+                       },
+    "h3":  {
+               "prediction_1_some_exact_subneutral_doubling":  {
+                                                                   "holds":  true,
+                                                                   "pairs":  [
+                                                                                 "3-\u003e6",
+                                                                                 "4-\u003e8",
+                                                                                 "7-\u003e14"
+                                                                             ],
+                                                                   "rows":  [
+                                                                                {
+                                                                                    "n":  3,
+                                                                                    "m":  6,
+                                                                                    "F_n":  3,
+                                                                                    "F_m":  5,
+                                                                                    "neutral_2n":  8.4852813742385713,
+                                                                                    "slack_F":  3.4852813742385713,
+                                                                                    "alpha_n":  0.57735026918962573,
+                                                                                    "alpha_m":  0.34020690871988585,
+                                                                                    "eta":  -0.23714336046973988,
+                                                                                    "sub_neutral":  true
+                                                                                },
+                                                                                {
+                                                                                    "n":  4,
+                                                                                    "m":  8,
+                                                                                    "F_n":  4,
+                                                                                    "F_m":  10,
+                                                                                    "neutral_2n":  11.313708498984761,
+                                                                                    "slack_F":  1.3137084989847612,
+                                                                                    "alpha_n":  0.5,
+                                                                                    "alpha_m":  0.44194173824159216,
+                                                                                    "eta":  -0.058058261758407836,
+                                                                                    "sub_neutral":  true
+                                                                                },
+                                                                                {
+                                                                                    "n":  7,
+                                                                                    "m":  14,
+                                                                                    "F_n":  9,
+                                                                                    "F_m":  21,
+                                                                                    "neutral_2n":  25.455844122715714,
+                                                                                    "slack_F":  4.455844122715714,
+                                                                                    "alpha_n":  0.48595432244043507,
+                                                                                    "alpha_m":  0.40089186286863659,
+                                                                                    "eta":  -0.085062459571798477,
+                                                                                    "sub_neutral":  true
+                                                                                }
+                                                                            ]
+                                                               },
+               "prediction_2_worst_mature_doubling_eta_le_0_10":  {
+                                                                      "holds":  true,
+                                                                      "from_n":  5,
+                                                                      "worst_eta":  0.092805793172333451,
+                                                                      "rows":  [
+                                                                                   {
+                                                                                       "n":  5,
+                                                                                       "m":  10,
+                                                                                       "F_n":  4,
+                                                                                       "F_m":  13,
+                                                                                       "neutral_2n":  11.313708498984761,
+                                                                                       "slack_F":  -1.6862915010152388,
+                                                                                       "alpha_n":  0.35777087639996635,
+                                                                                       "alpha_m":  0.41109609582188933,
+                                                                                       "eta":  0.053325219421922976,
+                                                                                       "sub_neutral":  false
+                                                                                   },
+                                                                                   {
+                                                                                       "n":  6,
+                                                                                       "m":  12,
+                                                                                       "F_n":  5,
+                                                                                       "F_m":  18,
+                                                                                       "neutral_2n":  14.142135623730951,
+                                                                                       "slack_F":  -3.857864376269049,
+                                                                                       "alpha_n":  0.34020690871988585,
+                                                                                       "alpha_m":  0.4330127018922193,
+                                                                                       "eta":  0.092805793172333451,
+                                                                                       "sub_neutral":  false
+                                                                                   },
+                                                                                   {
+                                                                                       "n":  7,
+                                                                                       "m":  14,
+                                                                                       "F_n":  9,
+                                                                                       "F_m":  21,
+                                                                                       "neutral_2n":  25.455844122715714,
+                                                                                       "slack_F":  4.455844122715714,
+                                                                                       "alpha_n":  0.48595432244043507,
+                                                                                       "alpha_m":  0.40089186286863659,
+                                                                                       "eta":  -0.085062459571798477,
+                                                                                       "sub_neutral":  true
+                                                                                   }
+                                                                               ]
+                                                                  },
+               "prediction_3_F16_on_neutral_knife_edge":  {
+                                                              "holds":  true,
+                                                              "neutral_F16":  28.284271247461902,
+                                                              "F8":  10,
+                                                              "case_28_subneutral":  true,
+                                                              "case_30_subneutral":  false,
+                                                              "cases":  [
+                                                                            {
+                                                                                "F16":  28,
+                                                                                "alpha_16":  0.4375,
+                                                                                "eta_8":  -0.0044417382415921636,
+                                                                                "sub_neutral":  true,
+                                                                                "slack_F":  0.284271247461902
+                                                                            },
+                                                                            {
+                                                                                "F16":  30,
+                                                                                "alpha_16":  0.46875,
+                                                                                "eta_8":  0.026808261758407836,
+                                                                                "sub_neutral":  false,
+                                                                                "slack_F":  -1.715728752538098
+                                                                            }
+                                                                        ]
+                                                          },
+               "h3_overall_holds":  true
+           },
+    "implication":  "Deciding F(16) is the immediate computational bottleneck for the first unavailable doubling test of the one-sided criterion. Exact pair 7-\u003e14 is already sub-neutral.",
+    "elapsed_sec":  0.215,
+    "limitations":  [
+                        "Only exact through 15; F(16) open.",
+                        "Doubling is one ratio; all-future needs every m\u003e=n.",
+                        "Does not prove convergence."
+                    ]
+}

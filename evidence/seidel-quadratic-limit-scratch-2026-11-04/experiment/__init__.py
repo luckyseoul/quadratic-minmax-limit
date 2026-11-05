@@ -1,0 +1,1 @@
+"""First experiment for Ivanisvili's Seidel quadratic limit question."""

@@ -1,0 +1,428 @@
+﻿{
+    "hypothesis":  "Finite one-sided excess E_n(15) is eventually decreasing for n\u003e=8 and dominated by n^{-1/2}; mixed excess with F(16)\u003c=30, F(17)\u003c=32, alpha\u003c=1/2 likewise.",
+    "open_problem":  "existence of lim alpha_n (Ivanisvili, MathOverflow 413935)",
+    "attack_source":  "luckyseoul/quadratic-minmax-limit HANDOFF 2026-11-04 one-sided all-future criterion",
+    "references":  [
+                       "https://github.com/luckyseoul/quadratic-minmax-limit",
+                       "https://github.com/Robby955/mo-413935-research",
+                       "https://oeis.org/A399208",
+                       "https://mathoverflow.net/questions/413935"
+                   ],
+    "exact_verification":  {
+                               "1":  {
+                                         "computed":  0,
+                                         "oeis":  0,
+                                         "match":  true
+                                     },
+                               "2":  {
+                                         "computed":  1,
+                                         "oeis":  1,
+                                         "match":  true
+                                     },
+                               "3":  {
+                                         "computed":  3,
+                                         "oeis":  3,
+                                         "match":  true
+                                     },
+                               "4":  {
+                                         "computed":  4,
+                                         "oeis":  4,
+                                         "match":  true
+                                     },
+                               "5":  {
+                                         "computed":  4,
+                                         "oeis":  4,
+                                         "match":  true
+                                     },
+                               "6":  {
+                                         "computed":  5,
+                                         "oeis":  5,
+                                         "match":  true
+                                     }
+                           },
+    "series":  [
+                   {
+                       "n":  1,
+                       "F":  0,
+                       "alpha_n":  0,
+                       "suffix_max_alpha":  0.57735026918962573,
+                       "E_n_15":  0.57735026918962573,
+                       "E_bar_n":  0.57735026918962573,
+                       "eps_inv_sqrt":  1,
+                       "E_n_over_eps":  0.57735026918962573,
+                       "E_bar_over_eps":  0.57735026918962573,
+                       "analytic_lower":  0,
+                       "analytic_upper":  0.5
+                   },
+                   {
+                       "n":  2,
+                       "F":  1,
+                       "alpha_n":  0.35355339059327373,
+                       "suffix_max_alpha":  0.57735026918962573,
+                       "E_n_15":  0.223796878596352,
+                       "E_bar_n":  0.223796878596352,
+                       "eps_inv_sqrt":  0.70710678118654746,
+                       "E_n_over_eps":  0.31649658092772603,
+                       "E_bar_over_eps":  0.31649658092772603,
+                       "analytic_lower":  0.22507907903927654,
+                       "analytic_upper":  0.5
+                   },
+                   {
+                       "n":  3,
+                       "F":  3,
+                       "alpha_n":  0.57735026918962573,
+                       "suffix_max_alpha":  0.57735026918962573,
+                       "E_n_15":  0,
+                       "E_bar_n":  0,
+                       "eps_inv_sqrt":  0.57735026918962584,
+                       "E_n_over_eps":  0,
+                       "E_bar_over_eps":  0,
+                       "analytic_lower":  0.25989893374455869,
+                       "analytic_upper":  0.5
+                   },
+                   {
+                       "n":  4,
+                       "F":  4,
+                       "alpha_n":  0.5,
+                       "suffix_max_alpha":  0.5,
+                       "E_n_15":  0,
+                       "E_bar_n":  0,
+                       "eps_inv_sqrt":  0.5,
+                       "E_n_over_eps":  0,
+                       "E_bar_over_eps":  0,
+                       "analytic_lower":  0.27566444771089604,
+                       "analytic_upper":  0.5
+                   },
+                   {
+                       "n":  5,
+                       "F":  4,
+                       "alpha_n":  0.35777087639996635,
+                       "suffix_max_alpha":  0.48595432244043507,
+                       "E_n_15":  0.12818344604046872,
+                       "E_bar_n":  0.14222912360003365,
+                       "eps_inv_sqrt":  0.44721359549995793,
+                       "E_n_over_eps":  0.28662689893666432,
+                       "E_bar_over_eps":  0.31803398874989486,
+                       "analytic_lower":  0.28470501736687082,
+                       "analytic_upper":  0.5
+                   },
+                   {
+                       "n":  6,
+                       "F":  5,
+                       "alpha_n":  0.34020690871988585,
+                       "suffix_max_alpha":  0.48595432244043507,
+                       "E_n_15":  0.14574741372054922,
+                       "E_bar_n":  0.15979309128011415,
+                       "eps_inv_sqrt":  0.40824829046386307,
+                       "E_n_over_eps":  0.35700679494566151,
+                       "E_bar_over_eps":  0.39141153805825568,
+                       "analytic_lower":  0.29057584156627364,
+                       "analytic_upper":  0.5
+                   },
+                   {
+                       "n":  7,
+                       "F":  9,
+                       "alpha_n":  0.48595432244043507,
+                       "suffix_max_alpha":  0.48595432244043507,
+                       "E_n_15":  0,
+                       "E_bar_n":  0.014045677559564929,
+                       "eps_inv_sqrt":  0.3779644730092272,
+                       "E_n_over_eps":  0,
+                       "E_bar_over_eps":  0.03716136981800941,
+                       "analytic_lower":  0.29469769058526663,
+                       "analytic_upper":  0.5
+                   },
+                   {
+                       "n":  8,
+                       "F":  10,
+                       "alpha_n":  0.44194173824159216,
+                       "suffix_max_alpha":  0.46597207798381651,
+                       "E_n_15":  0.024030339742224349,
+                       "E_bar_n":  0.058058261758407836,
+                       "eps_inv_sqrt":  0.35355339059327373,
+                       "E_n_over_eps":  0.067968064743773732,
+                       "E_bar_over_eps":  0.16421356237309517,
+                       "analytic_lower":  0.29775163423068823,
+                       "analytic_upper":  0.5
+                   },
+                   {
+                       "n":  9,
+                       "F":  12,
+                       "alpha_n":  0.44444444444444442,
+                       "suffix_max_alpha":  0.46597207798381651,
+                       "E_n_15":  0.021527633539372093,
+                       "E_bar_n":  0.05555555555555558,
+                       "eps_inv_sqrt":  0.33333333333333331,
+                       "E_n_over_eps":  0.064582900618116279,
+                       "E_bar_over_eps":  0.16666666666666674,
+                       "analytic_lower":  0.30010543871903539,
+                       "analytic_upper":  0.5
+                   },
+                   {
+                       "n":  10,
+                       "F":  13,
+                       "alpha_n":  0.41109609582188933,
+                       "suffix_max_alpha":  0.46597207798381651,
+                       "E_n_15":  0.054875982161927184,
+                       "E_bar_n":  0.088903904178110671,
+                       "eps_inv_sqrt":  0.31622776601683794,
+                       "E_n_over_eps":  0.17353309247046081,
+                       "E_bar_over_eps":  0.28113883008418961,
+                       "analytic_lower":  0.3019752726269222,
+                       "analytic_upper":  0.5
+                   },
+                   {
+                       "n":  11,
+                       "F":  17,
+                       "alpha_n":  0.46597207798381651,
+                       "suffix_max_alpha":  0.46597207798381651,
+                       "E_n_15":  0,
+                       "E_bar_n":  0.034027922016183487,
+                       "eps_inv_sqrt":  0.30151134457776363,
+                       "E_n_over_eps":  0,
+                       "E_bar_over_eps":  0.11285784972315445,
+                       "analytic_lower":  0.30349656826326687,
+                       "analytic_upper":  0.5
+                   },
+                   {
+                       "n":  12,
+                       "F":  18,
+                       "alpha_n":  0.4330127018922193,
+                       "suffix_max_alpha":  0.46475800154489005,
+                       "E_n_15":  0.031745299652670755,
+                       "E_bar_n":  0.0669872981077807,
+                       "eps_inv_sqrt":  0.28867513459481292,
+                       "E_n_over_eps":  0.10996894379984874,
+                       "E_bar_over_eps":  0.23205080756887736,
+                       "analytic_lower":  0.30475851369919588,
+                       "analytic_upper":  0.5
+                   },
+                   {
+                       "n":  13,
+                       "F":  20,
+                       "alpha_n":  0.4266924586347916,
+                       "suffix_max_alpha":  0.46475800154489005,
+                       "E_n_15":  0.038065542910098449,
+                       "E_bar_n":  0.0733075413652084,
+                       "eps_inv_sqrt":  0.27735009811261457,
+                       "E_n_over_eps":  0.13724726679073468,
+                       "E_bar_over_eps":  0.26431409927045629,
+                       "analytic_lower":  0.30582224647510692,
+                       "analytic_upper":  0.5
+                   },
+                   {
+                       "n":  14,
+                       "F":  21,
+                       "alpha_n":  0.40089186286863659,
+                       "suffix_max_alpha":  0.46475800154489005,
+                       "E_n_15":  0.063866138676253459,
+                       "E_bar_n":  0.0991081371313634,
+                       "eps_inv_sqrt":  0.2672612419124244,
+                       "E_n_over_eps":  0.23896520954273265,
+                       "E_bar_over_eps":  0.37082869338697061,
+                       "analytic_lower":  0.30673108130627,
+                       "analytic_upper":  0.5
+                   },
+                   {
+                       "n":  15,
+                       "F":  27,
+                       "alpha_n":  0.46475800154489005,
+                       "suffix_max_alpha":  0.46475800154489005,
+                       "E_n_15":  0,
+                       "E_bar_n":  0.035241998455109946,
+                       "eps_inv_sqrt":  0.2581988897471611,
+                       "E_n_over_eps":  0,
+                       "E_bar_over_eps":  0.13649167310370836,
+                       "analytic_lower":  0.30751656551506606,
+                       "analytic_upper":  0.5
+                   }
+               ],
+    "upper_envelopes":  {
+                            "16":  {
+                                       "F_upper":  30,
+                                       "alpha_upper":  0.46875
+                                   },
+                            "17":  {
+                                       "F_upper":  32,
+                                       "alpha_upper":  0.45653764712721506
+                                   },
+                            "analytic_ceiling":  0.5
+                        },
+    "h1":  {
+               "prediction_1_E_n_eventually_decreasing":  {
+                                                              "from_n":  8,
+                                                              "holds":  false,
+                                                              "deltas":  [
+                                                                             {
+                                                                                 "from":  8,
+                                                                                 "to":  9,
+                                                                                 "delta_E":  -0.0025027062028522562
+                                                                             },
+                                                                             {
+                                                                                 "from":  9,
+                                                                                 "to":  10,
+                                                                                 "delta_E":  0.033348348622555091
+                                                                             },
+                                                                             {
+                                                                                 "from":  10,
+                                                                                 "to":  11,
+                                                                                 "delta_E":  -0.054875982161927184
+                                                                             },
+                                                                             {
+                                                                                 "from":  11,
+                                                                                 "to":  12,
+                                                                                 "delta_E":  0.031745299652670755
+                                                                             },
+                                                                             {
+                                                                                 "from":  12,
+                                                                                 "to":  13,
+                                                                                 "delta_E":  0.0063202432574276934
+                                                                             },
+                                                                             {
+                                                                                 "from":  13,
+                                                                                 "to":  14,
+                                                                                 "delta_E":  0.02580059576615501
+                                                                             },
+                                                                             {
+                                                                                 "from":  14,
+                                                                                 "to":  15,
+                                                                                 "delta_E":  -0.063866138676253459
+                                                                             }
+                                                                         ],
+                                                              "note":  "Expected fragile: alpha_n oscillates even though m_n is monotone (CORE.md Â§2)."
+                                                          },
+               "prediction_2_exact_excess_below_inv_sqrt":  {
+                                                                "from_n":  8,
+                                                                "holds":  true,
+                                                                "rows":  [
+                                                                             {
+                                                                                 "n":  8,
+                                                                                 "E":  0.024030339742224349,
+                                                                                 "eps":  0.35355339059327373,
+                                                                                 "ok":  true
+                                                                             },
+                                                                             {
+                                                                                 "n":  9,
+                                                                                 "E":  0.021527633539372093,
+                                                                                 "eps":  0.33333333333333331,
+                                                                                 "ok":  true
+                                                                             },
+                                                                             {
+                                                                                 "n":  10,
+                                                                                 "E":  0.054875982161927184,
+                                                                                 "eps":  0.31622776601683794,
+                                                                                 "ok":  true
+                                                                             },
+                                                                             {
+                                                                                 "n":  11,
+                                                                                 "E":  0,
+                                                                                 "eps":  0.30151134457776363,
+                                                                                 "ok":  true
+                                                                             },
+                                                                             {
+                                                                                 "n":  12,
+                                                                                 "E":  0.031745299652670755,
+                                                                                 "eps":  0.28867513459481292,
+                                                                                 "ok":  true
+                                                                             },
+                                                                             {
+                                                                                 "n":  13,
+                                                                                 "E":  0.038065542910098449,
+                                                                                 "eps":  0.27735009811261457,
+                                                                                 "ok":  true
+                                                                             },
+                                                                             {
+                                                                                 "n":  14,
+                                                                                 "E":  0.063866138676253459,
+                                                                                 "eps":  0.2672612419124244,
+                                                                                 "ok":  true
+                                                                             },
+                                                                             {
+                                                                                 "n":  15,
+                                                                                 "E":  0,
+                                                                                 "eps":  0.2581988897471611,
+                                                                                 "ok":  true
+                                                                             }
+                                                                         ]
+                                                            },
+               "prediction_3_mixed_excess_below_inv_sqrt":  {
+                                                                "from_n":  8,
+                                                                "holds":  true,
+                                                                "rows":  [
+                                                                             {
+                                                                                 "n":  8,
+                                                                                 "Ebar":  0.058058261758407836,
+                                                                                 "eps":  0.35355339059327373,
+                                                                                 "ok":  true
+                                                                             },
+                                                                             {
+                                                                                 "n":  9,
+                                                                                 "Ebar":  0.05555555555555558,
+                                                                                 "eps":  0.33333333333333331,
+                                                                                 "ok":  true
+                                                                             },
+                                                                             {
+                                                                                 "n":  10,
+                                                                                 "Ebar":  0.088903904178110671,
+                                                                                 "eps":  0.31622776601683794,
+                                                                                 "ok":  true
+                                                                             },
+                                                                             {
+                                                                                 "n":  11,
+                                                                                 "Ebar":  0.034027922016183487,
+                                                                                 "eps":  0.30151134457776363,
+                                                                                 "ok":  true
+                                                                             },
+                                                                             {
+                                                                                 "n":  12,
+                                                                                 "Ebar":  0.0669872981077807,
+                                                                                 "eps":  0.28867513459481292,
+                                                                                 "ok":  true
+                                                                             },
+                                                                             {
+                                                                                 "n":  13,
+                                                                                 "Ebar":  0.0733075413652084,
+                                                                                 "eps":  0.27735009811261457,
+                                                                                 "ok":  true
+                                                                             },
+                                                                             {
+                                                                                 "n":  14,
+                                                                                 "Ebar":  0.0991081371313634,
+                                                                                 "eps":  0.2672612419124244,
+                                                                                 "ok":  true
+                                                                             },
+                                                                             {
+                                                                                 "n":  15,
+                                                                                 "Ebar":  0.035241998455109946,
+                                                                                 "eps":  0.2581988897471611,
+                                                                                 "ok":  true
+                                                                             }
+                                                                         ],
+                                                                "note":  "Uses F(16)\u003c=30, F(17)\u003c=32, and analytic ceiling 1/2."
+                                                            },
+               "h1_overall_holds":  false
+           },
+    "A399208":  [
+                    0,
+                    1,
+                    3,
+                    4,
+                    4,
+                    5,
+                    9,
+                    10,
+                    12,
+                    13,
+                    17,
+                    18,
+                    20,
+                    21,
+                    27
+                ],
+    "elapsed_sec":  0.354,
+    "limitations":  [
+                        "Finite N=15 cannot prove an all-future epsilon_n -\u003e 0.",
+                        "Mixed excess uses possibly loose upper envelopes.",
+                        "Does not settle existence of lim alpha_n."
+                    ]
+}
