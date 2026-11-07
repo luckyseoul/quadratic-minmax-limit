@@ -1,3 +1,26 @@
+## 2026-11-07: mixed-center BSC accounting; original limit OPEN
+
+The November 4 L1 principal-restriction theorem is a genuine new constraint
+on low-loss restrictions, but it bounds the loss from BELOW. It does not
+prove the all-future UPPER comparison for actual minima. The November 4
+BSC bridges are exact for their stipulated kernels but still lack an
+identification with the source MOP-DINF-CLOSURE factors.
+
+`evidence/NOTE_2026-11-07_MIXED_CENTER_BSC_ACCOUNTING.md` proves the
+exact mixed-center, mixed-temperature reverse-BSC budget margin
+`|E| Gamma - 2 sum_e w_e y_e z_e`, with weighted-majority center z.
+Uniform-in-output recovery holds iff `2W <= |E| Gamma`. Its matching
+forward-surprisal penalty is `|E|s+2W` in the worst output. This relaxes
+exact same-center synchronization within the BSC algebra and quantifies
+the missing compatibility assumption; it does NOT yet supply a signing
+construction or the original all-future normalized upper comparison.
+No entry was made in `src/original_mo_status.py`.
+
+Do not restart retired Hadamard/Paley family scans, autopilot,
+unchanged finite campaigns, generic doubling, random padding, or one-step
+chaining. The remaining live target is still an all-future upper comparison
+for the actual minima (or a genuinely equivalent cross-order construction).
+
 ## 2026-11-04: one-sided all-future criterion
 
 The original MO limit is still OPEN. Nothing in this entry is a completion proof and nothing was entered in `src/original_mo_status.py`.
