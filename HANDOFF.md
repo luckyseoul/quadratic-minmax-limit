@@ -1,20 +1,17 @@
-## 2026-11-10: Fable's proof attempt misses \(q^{3/2}\)
+## 2026-11-10: Fable's ray writeup duplicates the September blow-up
 
 The original MO limit is still OPEN. Nothing below was entered in
 `src/original_mo_status.py`.
 
-Fable 5.2 at effort high was told to prove
-\(m_{qn}\le q^{3/2}m_n+C n^{3/2-\delta}\) for \(q=2,3\). It returned a
-writeup and said the stated theorem is not proved. The blow-up with
-constant cross-blocks and \(+1\) inside fibres gives
-\(m_{qn}\le q^2 m_n+3n\), and the same signing shows the factor \(q^2\)
-is tight for that construction. A Chernoff signing plus an elementary
-half-split lower bound gives
-\(m_{qn}\le 4.1\, q^{3/2} m_n\) for \(n\ge 100\), which is a larger
-leading factor than \(q^2\) when \(q\in\{2,3\}\). The twisted lift
-reduces the sharp constant to a bound on
-\(|Q_A(\varepsilon)-2Q_{A|T}(\varepsilon)|\) that fails for a general
-signing. Do not record the sharp inequality as a theorem.
+Fable 5.2 was asked to prove
+\(m_{qn}\le q^{3/2}m_n+C n^{3/2-\delta}\). The writeup it returned is
+not a new bound. The factor \(q^2\), the endpoint maximization of
+\(Q_A(s)\), and the matching lower estimate are equation (9) of
+`evidence/NOTE_2026-09-02_SHARP_INFLUENCE_TENSORIZATION_AUDIT.md`
+(2 September 2026), already logged on 21 October under lexicographic
+blow-up. Section 6 of that note is the balanced-tensor obstruction,
+including the fixed \(\sqrt2\) loss. Do not cite the 10 November
+writeup as a source. The sharp \(q^{3/2}\) inequality stays unproved.
 
 ## 2026-11-10: Fable blocks the power-saving ray bound
 
