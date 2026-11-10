@@ -1,3 +1,28 @@
+## 2026-11-10: Fable blocks the power-saving ray bound
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+The submitted claim was: there exist \(C,\delta>0\) and \(n_0\) such that
+for every \(n\ge n_0\) and both \(q=2,3\),
+\(m_{qn}\le q^{3/2}m_n+C n^{3/2-\delta}\). Any signing of order \(qn\) is
+allowed. The comma in the source was read as one error term.
+
+Claude Fable 5.2 (`claude-fable-5-2`, effort max) `math_review` returned
+BLOCK, confidence 0.9, `caller_action` `branch_only_on_this_block`. The
+payload contained no proof. Fable neither proved nor refuted the
+inequality. The gap it named is a lifting lemma: a Seidel signing \(B\) of
+order \(qn\) with \(\Phi(B)\le q^{3/2}\Phi(A)+C n^{3/2-\delta}\). Routes
+it checked and rejected at the leading constant were the \(J_q\) blow-up
+(leading factor \(q^2\), not \(q^{3/2}\)), the block signing
+\([[A,A],[A,-A]]\) (it got \(6\Phi(A)\), not \(2\sqrt2\Phi(A)\)), a
+\(3\times3\) core whose spectral norm is at least \(2\) rather than
+\(\sqrt3\), and a cross-block triangle inequality whose cost sits above
+the room under \(q^{3/2}\). Do not record the inequality as a theorem.
+It remains the two-ray input to Proposition 6.3 with
+\(\eta(n)=O(n^{-\delta})\), still unproved. Do not open a new attack
+from this BLOCK beyond that already-open hypothesis.
+
 ## 2026-11-07: mixed-center BSC accounting; original limit OPEN
 
 The November 4 L1 principal-restriction theorem is a genuine new constraint
