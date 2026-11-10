@@ -1,3 +1,21 @@
+## 2026-11-10: Fable's "novel" routes are September objects
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+Asked for approaches outside the known list, Fable 5.2 named three.
+Two are already in the 2 September audits. The polar convexification is
+the Boolean Sidon constant of
+`evidence/NOTE_2026-09-02_ORIGINAL_MO_L1_INFLUENCE_CALCULUS.md`: Sidon
+theory gives the power \(n^{3/2}\) and does not give a cross-order law.
+The two-temperature regularization is the critical-pressure sandwich (1)--(2)
+of `evidence/NOTE_2026-09-02_THERMODYNAMIC_INTERPOLATION_GATE.md`. The
+weighted homotopy is not that blow-up; it is the same shape as the exact
+optimized-path identity in
+`evidence/NOTE_2026-09-05_GLOBAL_OPTIMIZER_VARIATIONAL_CONTROL.md`,
+whose own heading says it is not a cross-order bound. Do not open a
+branch from this consult.
+
 ## 2026-11-10: Fable's ray writeup duplicates the September blow-up
 
 The original MO limit is still OPEN. Nothing below was entered in
