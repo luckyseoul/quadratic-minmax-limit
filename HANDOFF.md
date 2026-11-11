@@ -1,3 +1,29 @@
+## 2026-11-11: order-36 lift plateau at 108 is a matching-frustration cost
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+The coherent lift `K0 = [[A,A],[A,-A]]` of a Paley source has zeros in its
+cross-block diagonal (they are the diagonal of `A`), so it is a relaxation,
+not a signing. Exact full-cube values:
+
+     q   order   Phi(K0)   Phi(B=A+-I)   relax attained
+     5    12      18          18          yes
+     13   28      70          70          yes
+     17   36     102         108          NO
+
+At order 36 the relax value 102 is exactly what the ROM law predicted, but
+no completion reaches it: the 204 distinct matching patterns at the relax
+maximum are not co-orientable, the extremal set alone forces 106, and the
+wave-6 exhaustion of all `2^18` diagonals (32 sources, 8,388,608
+completions) gives 108. So the 108 plateau is the price of the sign alphabet
+on 18 entries, not a search failure. Prediction 2 (`Phi <= 104` at order 36)
+remains open and would have to come from outside this family.
+
+Tool: `scripts/rom_law/lift_frustration.py`. Receipt:
+`evidence/coherent_lift_frustration_20261111/result.json`. Note:
+`evidence/NOTE_2026-11-11_COHERENT_LIFT_FRUSTRATION.md`.
+
 ## 2026-11-11: Phi(C42) = 129 falsifies the random-orthogonal law's first prediction
 
 The original MO limit is still OPEN. Nothing below was entered in

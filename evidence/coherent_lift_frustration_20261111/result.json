@@ -1,0 +1,82 @@
+[
+ {
+  "q": 5,
+  "order": 12,
+  "states": 2048,
+  "Phi_relax": 18.0,
+  "Phi_B=A+I": 18.0,
+  "Phi_B=A-I": 18.0,
+  "distinct_matching_patterns_at_max": 10,
+  "best_single_d_on_extremal_set": 16.0,
+  "completion_holds_relax_max": true,
+  "extremal_frustration": -2.0,
+  "d_minimax": [
+   -1,
+   -1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "q": 13,
+  "order": 28,
+  "states": 134217728,
+  "Phi_relax": 70.0,
+  "Phi_B=A+I": 70.0,
+  "Phi_B=A-I": 70.0,
+  "distinct_matching_patterns_at_max": 78,
+  "best_single_d_on_extremal_set": 68.0,
+  "completion_holds_relax_max": true,
+  "extremal_frustration": -2.0,
+  "d_minimax": [
+   -1,
+   -1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "q": 17,
+  "order": 36,
+  "states": 34359738368,
+  "Phi_relax": 102.0,
+  "Phi_B=A+I": 108.0,
+  "Phi_B=A-I": 108.0,
+  "distinct_matching_patterns_at_max": 204,
+  "best_single_d_on_extremal_set": 106.0,
+  "completion_holds_relax_max": false,
+  "extremal_frustration": 4.0,
+  "d_minimax": [
+   -1,
+   -1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ }
+]
