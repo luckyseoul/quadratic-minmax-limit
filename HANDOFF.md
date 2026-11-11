@@ -1,3 +1,29 @@
+## 2026-11-11: Phi(C42) = 129 falsifies the random-orthogonal law's first prediction
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+The 2026-11-11 random-orthogonal-model law predicted
+`Phi(C42) in {127, 125}` and stated that `Phi(C42) >= 129` would count
+against it. The full `2^41` projective cube now gives exactly
+**`Phi(C42) = 129`** (`x^T C42 x = +-258`). An explicit state
+(bitmask `67778113536`, 18 negative spins, `x_41 = +1`) has
+`x^T C42 x = 258` in exact integer arithmetic, so the falsification does
+not rest on the enumeration; the enumeration shows no larger value and
+attainment on both signs. In alpha units the miss is small
+(`129/42^(3/2) = 0.47393`, Haar-law value about `0.4736`): the magnitude
+survives, the parity-step prediction does not.
+
+Harness: sharded Gray-code walker `scripts/rom_law/gs2s.c` (prefix-fixed
+slices of the branch's `gs2.c`), 4096 shards x `2^29`, 88 threads, 567 s;
+validated end-to-end against C14 = 21, C18 = 33 and C38 = 109 (256 shards,
+37 s). Branch builder equals the repo builder at q = 13, 41.
+
+Receipt: `evidence/rom_law_20261111/c42_result.json`; note:
+`evidence/NOTE_2026-11-11_C42_FALSIFIES_ROM_LAW.md`. The remaining
+predictions of the law are untouched; do not cite the law as a theorem or
+the C42 value as a bound on `m_42`.
+
 ## 2026-11-11: flat-order minima sit on the random orthogonal model
 
 The original MO limit is still OPEN. Nothing below was entered in

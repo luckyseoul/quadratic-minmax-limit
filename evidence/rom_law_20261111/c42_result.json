@@ -1,0 +1,21 @@
+{
+ "date": "2026-11-11",
+ "object": "Paley conference C_42 (q=41), branch builder == repo builder",
+ "states_enumerated": 2199023255552,
+ "shards": 4096,
+ "shard_size": 536870912,
+ "wall_seconds": 567,
+ "host": "soulkiller (88 threads)",
+ "max_xTCx": 258.0,
+ "min_xTCx": -258.0,
+ "Phi": 129.0,
+ "S42": 134.46560898608982,
+ "Phi_over_S": 0.9593531087442945,
+ "alpha_42": 0.4739317177407108,
+ "witness_mask": 67778113536,
+ "witness_exact_xTCx": 258,
+ "witness_note": "x_41=+1 projective rep; 18 negative spins; verified in exact Python integers",
+ "law_prediction": "127 or 125 (NOTE_2026-11-11 section 5 item 1)",
+ "verdict": "prediction falsified; Phi(C42)=129 >= 129, the note's own stop rule",
+ "validation": "sharded harness reproduces C14=21, C18=33, C38=109"
+}
