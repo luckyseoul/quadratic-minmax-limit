@@ -1,3 +1,25 @@
+## 2026-11-11: Phi(C54) >= 189 refutes the law's order-54 prediction
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+Paley `C54` (q = 53; `C C^T = 53 I` checked exactly) has an explicit Boolean
+state with `(1/2) x^T C54 x = 189`, verified in exact integer arithmetic
+(bitmask `10774371055909017`). Hence `189 <= Phi(C54) <= 196`; the halved form
+is a sum of 1431 terms of `+-1`, so `Phi(C54)` is odd and lies in
+`{189, 191, 193, 195}`. The law predicted 187 or 185, and its own Haar mean
+was 188.5, so the prediction is refuted at the central estimate, not just at
+the parity step.
+
+Lower bound only: 2 signs x 16 rounds x 131072 restarts plus 12 kick rounds
+found 189 immediately and never improved it. Closing the remaining three
+candidates needs an exact `2^53` enumeration (~29 core-days) or a
+branch-and-bound; neither was run.
+
+Tool: `scripts/rom_law/c54_search.py`. Receipt:
+`evidence/c54_20261111/witness.json`. Note:
+`evidence/NOTE_2026-11-11_C54_LOWER_BOUND.md`.
+
 ## 2026-11-11: order-36 lift plateau at 108 is a matching-frustration cost
 
 The original MO limit is still OPEN. Nothing below was entered in
