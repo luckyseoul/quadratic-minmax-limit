@@ -1,0 +1,19 @@
+{
+  "host": "nuka",
+  "device": "AMD Radeon RX 9070 XT gfx1201",
+  "backend": "hipblas-gfx1201",
+  "rocm": "10.0 hipcc --offload-arch=gfx1201",
+  "source": "scripts/k50_plusi_hip_phi.hip.cpp (patched: 4th arg dsign)",
+  "B": "evidence/coherent_BI_lift_20260919/B25.txt",
+  "B_md5": "4877cb1cb3ed29b09e91d1dcab1372fd",
+  "n": 50,
+  "m": 25,
+  "dsign": -1,
+  "phi_K": 169,
+  "paley_C50": 175,
+  "gap": 6,
+  "wall_s": 8245.568,
+  "tiles": "Px=256 Py=1048576 (full 2^49-state sweep, 1024 progress ticks, 1/1 complete)",
+  "plus_i_reference": "evidence/k50_nuka_gpu_20260919/receipt.json (Phi 169, 8311.102 s)",
+  "note": "Exact Phi of the minus-I matrix. Both coherent lifts of B25 give 169, so this family offers no order-50 value <= 167. Prediction 4 remains open; m_50 <= 169, limit OPEN."
+}

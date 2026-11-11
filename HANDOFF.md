@@ -1,3 +1,23 @@
+## 2026-11-11: order-50 minus-I lift is 169; both signs exhausted
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+The order-50 coherent lift `K = [[B, B+dI],[B+dI, -B]]` of the campaign's
+`B25` now has exact values on both signs over the full `2^49` cube:
+
+    d = +1 :  Phi = 169   (8311 s, September receipt)
+    d = -1 :  Phi = 169   (8246 s, this run)
+
+Both runs reached `1/1` completion on the same source (md5
+`4877cb1cb3ed29b09e91d1dcab1372fd`) and the same tiling. Prediction 4 of the
+ROM law ("some signing of order 50 has `Phi <= 167`") is therefore not met by
+this family: it is exhausted at 169, six above Paley `C50` (175) and two above
+the prediction.
+
+Receipt: `evidence/k50_lift_20261111/minus_i_result.json`; note:
+`evidence/NOTE_2026-11-11_K50_MINUS_I.md`.
+
 ## 2026-11-11: Phi(C54) >= 189 refutes the law's order-54 prediction
 
 The original MO limit is still OPEN. Nothing below was entered in
