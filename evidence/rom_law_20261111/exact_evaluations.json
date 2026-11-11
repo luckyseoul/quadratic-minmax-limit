@@ -1,0 +1,42 @@
+{
+ "validation": {
+  "Phi(C6)": 5,
+  "Phi(C14)": 21,
+  "Phi(C18)": 33
+ },
+ "lifts": {
+  "order12 K(C6,C6-I)": 18,
+  "order12 K(C6,C6+I)": 18,
+  "order28 K(C14,C14-I)": 70,
+  "order28 K(C14,C14+I)": 70,
+  "order36 K(C18,C18-I)": {
+   "maxQ": 108,
+   "minQ": -108,
+   "Phi": 108,
+   "states": "2^35 projective"
+  }
+ },
+ "restrictions": {
+  "C14 minus 1,2,3,4": [
+   20,
+   20,
+   19,
+   17
+  ],
+  "C18 minus 1,2,3,4": [
+   32,
+   32,
+   29,
+   27
+  ],
+  "C30 minus 1..6": [
+   72,
+   70,
+   69,
+   65,
+   64,
+   58
+  ],
+  "C38 minus 2": 108
+ }
+}

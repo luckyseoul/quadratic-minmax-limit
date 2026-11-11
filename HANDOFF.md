@@ -1,3 +1,75 @@
+## 2026-11-11: flat-order minima sit on the random orthogonal model
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`.
+
+Fable 5.2 (`claude-fable-5-2`) was asked for a route outside the list.
+It did not prove convergence and it did not bound \(m_N\) by \(m_n\).
+What it recorded is a comparison that is not in the September audits:
+the exact minima and records at flat-spectrum orders against exhaustive
+ground states of Haar-conjugated flat spectra
+\(J=O\,\mathrm{diag}(\pm1)\,O^T\), the random orthogonal model of
+Marinari, Parisi and Ritort. At orders 6, 8, 10, 12, 14, 16, 18, 20, 24,
+26, 28, 30 and 38 the value on file equals the Haar mean times the
+spectral ceiling \(S_n\), rounded down to the admissible parity, or one
+parity step lower. Every gap lies in \([0,2.7]\) and does not grow with
+\(n\). Table, Haar means and receipts:
+`evidence/NOTE_2026-11-11_RANDOM_ORTHOGONAL_MODEL_LAW.md`,
+`evidence/rom_law_20261111/`, `scripts/rom_law/`,
+`tests/test_rom_law_note.py`.
+
+Proved in the note: a first-moment lemma capping the Haar model at
+\(\sqrt{15}/8=0.48412\ldots\) in \(\alpha\) units, and the vector
+inequality \(V^+(A)V^-(A)\ge n^2(n-1)/4\) over the elliptope, with
+equality at conference matrices and at the all-negative signing. The
+lemma is about Haar conjugates, which are not sign matrices. The
+inequality is vector-side, and its Boolean analogue fails at order 10
+(\(13^2<225\)). Neither is a cross-order bound. Do not record the law as
+a theorem, do not cite the table as a bound on any \(m_n\), and do not
+open a branch from the vector inequality.
+
+New exact evaluations, CPU, full projective cube: the trace-zero
+Hadamard lift \([[C,C-I],[C-I,-C]]\) of \(C_{18}\) has
+\(\Phi=108=S_{36}\) with both signs attained, \(C_{38}\) minus two
+points has \(\Phi=108\), and the same lift of \(C_{14}\) has
+\(\Phi=70\). So `m_36<=108` is unchanged and the order-36 lift is
+crystalline, like \(C_{10}\) and \(C_{26}\). These two order-36 numbers
+were single discriminators for the note's prediction 2. They are not a
+reopening of the Hadamard route.
+
+GPU suggestion. One job, with the answer written down first. Evaluate
+\(\Phi(C_{42})\), \(q=41\), over the \(2^{41}\) projective states with
+the complete-cube kernel of
+`evidence/NOTE_2026-09-12_CONFERENCE_EVALUATIONS.md`, on the V100, and
+replay on NUKA as was done for \(C_{38}\). The implication under test is
+the law, not the limit. The law predicts 127 or 125 against the spectral
+value 134.47; the Haar mean at order 42 is 0.9585 by annealing, so the
+product is 128.9. The \(C_{38}\) timings, 1243 s on the V100 and 1178 s
+on the RX 9070 XT, scale by \(2^4(42/38)^2\) to about six and a half
+hours per host. All energies are odd integers of size at most 861, so
+the float32 path stays exact. `scripts/rom_law/paley.py` builds the
+matrix for prime \(q\) and reproduces \(C_{14}\to21\) and
+\(C_{18}\to33\). Reading of the outcome:
+
+- 127 or 125: the law survives one more order and `m_42` gets an
+  explicit bound. Record it and stop.
+- 129 or more: the law is dead. Record that and stop.
+- 123 or less: sign matrices beat the Haar model by a growing margin and
+  \(\sqrt{15}/8\) is too high as a candidate value. Record that and stop.
+
+No outcome settles the limit, and one hit does not license other \(q\).
+If the 13 September correction is read as covering this evaluation, skip
+it; nothing else in this entry depends on it.
+
+Only if a GPU is then idle: order 36, where the law expects a signing at
+104 or below, most likely 102. This is a search, so fix the budget
+before starting. Do not seed it from the Hadamard lift; no single-edge
+move leaves its maximiser set. A capped search that floors at 106 or 108
+is evidence against the law and should be recorded as such.
+
+The live target is unchanged: an all-future upper comparison for the
+actual minima, or an equivalent cross-order construction.
+
 ## 2026-11-10: Fable's "novel" routes are September objects
 
 The original MO limit is still OPEN. Nothing below was entered in
