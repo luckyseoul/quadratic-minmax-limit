@@ -77,6 +77,13 @@ here. What changes is the reading of the plateau:
 - If 104 is reachable at order 36, it must come from a signing *outside* the
   coherent lift family: every member of that family is `>= 108`, and its
   relaxation floor of 102 is unreachable by construction.
+- The 102 is not one alignment among many. Permuting the matching,
+  `K(sigma) = [[A, A_sigma], [A_sigma^T, -A]]` with
+  `(A_sigma)_{ij} = A_{i,sigma(j)}`, moves the relax maximum to 122--130 and
+  the completed values to 126--132 over 12 random permutations
+  (`evidence/coherent_lift_frustration_20261111/sigma_trials.json`). The
+  identity alignment is a knife edge, so the 108 floor is not the signature of
+  a weak search over alignments.
 - The law's table has nine exact matches and four one-step-low rows. The
   single large gap is order 36 (`108` against about `103.4`), and it is
   exactly the order at which this coherent lift is frustrated. That gap is
