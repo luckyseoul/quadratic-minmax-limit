@@ -9,6 +9,18 @@ one proved vector inequality (§6), exact finite evaluations (§2, §4), and an
 empirical law with predictions that can fail (§3, §5). It contains no
 convergence proof and no cross-order bound for the actual minima.
 
+**Correction (2026-11-11, later the same day).** Statement (U) of §7, in the
+prime-order Paley form given there, is false for the full prime family. For
+`q = a² + b²` with `b` odd there is a state with `xᵀCx = (q+1) b`, so the
+counting bound fails whenever `b/√q > √15/4`: first at `q = 173`, at 11 of the
+80 primes below 1000, and at a positive proportion of primes by Hecke
+equidistribution. The band prediction of §5 was already refuted at orders 42
+and 54 (`NOTE_2026-11-11_C42_FALSIFIES_ROM_LAW.md`,
+`NOTE_2026-11-11_C54_LOWER_BOUND.md`); the values it matched at the conference
+orders are an arithmetic ceiling, attained. See
+`NOTE_2026-11-11_CONFERENCE_PARITY_CEILING.md`. Lemma 1 (§1) and the vector
+inequality (§6) are unaffected.
+
 Dedup check before writing: `random orthogonal`, `Marinari`, `R-transform`,
 `free probability`, `sqrt(15)`, `0.4841`, `n^2(n-1)/4` have no hits in
 `*.md`/`*.py`; `Haar` appears only in an August counterexample built from

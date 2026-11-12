@@ -1,3 +1,91 @@
+## 2026-11-11: conference parity ceiling; Phi(C54) = 189, Phi(C102) = 501, Phi(C62) = 229; no uniform Paley gap
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`. Draft; independent review pending. Parent
+checkpoint: `e6ab7bd`.
+
+**Proved** (`evidence/NOTE_2026-11-11_CONFERENCE_PARITY_CEILING.md`, sections 1, 2, 4):
+
+- *Parity lemma, all orders.* For every symmetric conference matrix `C` of
+  order `n = q+1` and Boolean `x`, the local fields `h_i = x_i (Cx)_i` are all
+  congruent mod 4. This is Proposition 15.762's switched degree-parity lemma;
+  its proof needs `4 | n-2`, not `8 | n-2`.
+- *Ceiling.* With `sum h_i^2 = q n`: `Phi(C) <= max_r min_{kappa = r (4)}
+  n (q + kappa^2 - 4) / (4 kappa)`, sharpened by integrality of
+  `(sum t, sum t^2)` for `h = c + 4t` and by the row identity `D h = q 1`.
+  It holds for every symmetric conference matrix of that order and satisfies
+  `1 - ceiling/S = O(1/q)`, so it cannot give a fixed gap.
+- *Torus witness.* For prime `q = a^2 + b^2`, `b` odd, an explicit state has
+  `x^T C x = (q+1) b` with fields in `{b-a, b+a}`. So
+  `rho(C_{q+1}) >= b / sqrt(q)`. Checked exactly on all 80 primes
+  `q = 1 (mod 4)` below 1000.
+
+**Exact values** (section 3):
+
+    order   spectral   ceiling   Phi(Paley)
+     42      134.47      129       129     (now also without the 2^41 run)
+     54      196.56      189       189     NEW: closes {189,191,193,195} below
+     62      242.12      235       229     NEW: first Paley off its ceiling
+    102      512.54      501       501     NEW
+
+At every Paley order up to 54 the Paley value IS the ceiling; that is why the
+Haar band of the ROM law failed there. Orders 54 and 102 are three-line
+arithmetic plus a witness. Order 62: admissible values from the top are
+`235, 229, ...` (231 and 233 are inadmissible); the six field patterns at 235
+are excluded by `scripts/parity_ceiling/defect.c`, a search over sparse defect
+vectors `e = (Cx - 7x)/4` (supports 12 and 15) instead of `2^61` states:
+224,280 + 520,107,727 nodes, 0 solutions. The solver agrees with brute force
+on all 245 admissible patterns at orders 14 and 18. Independent support: every
+state with a nontrivial stabiliser in `PSL(2,61)` has `|Q| <= 229` (exact
+quotients), and 1,030,000 annealing restarts stop at 229.
+
+Explicit upper bounds (draft, per order): `m_54 <= 189`, `m_62 <= 229`
+(`229 / 62^1.5 = 0.4691`), `m_102 <= 501`; from the ceiling alone
+`m_74 <= 305`, `m_90 <= 417`, `m_98 <= 473`, `m_110 <= 565`, `m_114 <= 599`.
+
+**Retired / retracted.**
+
+- The 08-29 target "`rho <= 1 - eta` uniformly on the ratio-dense prime
+  subfamily" is false for the full prime Paley family: `Phi(C174) >= 1131`
+  (`rho >= 0.9884`), and by Hecke equidistribution `limsup rho = 1`.
+- Statement (U) of the ROM note, in its prime-Paley form, is false (11 of the
+  80 primes below 1000 exceed `sqrt(15)/4`; first at `q = 173`). A correction
+  line was added to that note.
+
+**Witnesses only** (not exact): `Phi(C74) >= 297` (ceiling 305),
+`Phi(C90) >= 401` (417), `Phi(C98) >= 457` (473), `Phi(C110) >= 555` (565),
+`Phi(C114) >= 591` (599). The best states at 62, 74, 90, 98 have stabilisers
+of order 6, 2, 2, 2; the ceiling orders have stabilisers of order 14 to 60.
+Annealing is not a certificate at larger orders: at `q = 173` it stops at 1085
+and never finds the torus state.
+
+**Next unresolved target.** A uniform gap off resonance: for some explicit
+ratio-dense set of primes, every `+-1` sequence `f` of length `q` has
+`M_N(f) + (sum f -+ sqrt q)^2 / 2 >= eta q^2`, where `M_N` is the Fourier mass
+on the nonsquares (section 6 gives the exact identity
+`S - Q = (M_N + (s - x_inf sqrt q)^2 / 2) / sqrt q`). That would give
+`limsup alpha_n < 1/2`. Theorem 4 says the set must avoid small `a/b`, and
+the order-102 and order-114 states say it must avoid the sporadic
+large-stabiliser cases. Order 62 is the base case on file.
+
+Not a substitute for that: more annealing, or enumerating `C74`. `Phi(C74)`
+is in `{297, 303, 305}` with 26 patterns to exclude; `defect` does not finish
+those (loose supports of 14 to 26) and a faster solver would only add one
+more finite point.
+
+**For the reviewer.** (1) Lemma 1 and Theorem 2 are a page; check the
+`(mod 4)` step and the equality case. (2) `defect.c`: the reduction
+`(C + c) e = m x` and the three symmetry pins (inf, 0, then 1 or the least
+nonsquare). (3) Re-run the three order-62 commands in
+`scripts/parity_ceiling/README.md` on soulkiller (minutes). (4) The
+Momihara-Suda statements were read from the arXiv listing and a machine
+summary, not line by line.
+
+Files: `evidence/NOTE_2026-11-11_CONFERENCE_PARITY_CEILING.md`;
+`evidence/parity_ceiling_20261111/` (ceilings, torus, witnesses,
+small_maximisers, symmetric_states, stabilisers, c62_exclusion);
+`scripts/parity_ceiling/`; `tests/test_parity_ceiling_note.py` (9 tests, pass).
+
 ## 2026-11-11: order-50 minus-I lift is 169; both signs exhausted
 
 The original MO limit is still OPEN. Nothing below was entered in

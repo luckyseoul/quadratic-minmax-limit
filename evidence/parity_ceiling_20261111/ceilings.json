@@ -1,0 +1,295 @@
+[
+ {
+  "q": 5,
+  "n": 6,
+  "spectral": 6.708203932499369,
+  "closed_form": 5,
+  "integral_ceiling": 5,
+  "ceiling": 5,
+  "class": 1,
+  "example_fields": {
+   "1": 5,
+   "5": 1
+  },
+  "n_multisets": 1
+ },
+ {
+  "q": 9,
+  "n": 10,
+  "spectral": 15.0,
+  "closed_form": 15,
+  "integral_ceiling": 15,
+  "ceiling": 15,
+  "class": 3,
+  "example_fields": {
+   "3": 10
+  },
+  "n_multisets": 1
+ },
+ {
+  "q": 13,
+  "n": 14,
+  "spectral": 25.238858928247925,
+  "closed_form": 23,
+  "integral_ceiling": 21,
+  "ceiling": 21,
+  "class": 1,
+  "example_fields": {
+   "1": 7,
+   "5": 7
+  },
+  "n_multisets": 1
+ },
+ {
+  "q": 17,
+  "n": 18,
+  "spectral": 37.107950630558946,
+  "closed_form": 33,
+  "integral_ceiling": 33,
+  "ceiling": 33,
+  "class": 1,
+  "example_fields": {
+   "1": 6,
+   "5": 12
+  },
+  "n_multisets": 1
+ },
+ {
+  "q": 25,
+  "n": 26,
+  "spectral": 65.0,
+  "closed_form": 65,
+  "integral_ceiling": 65,
+  "ceiling": 65,
+  "class": 1,
+  "example_fields": {
+   "5": 26
+  },
+  "n_multisets": 1
+ },
+ {
+  "q": 29,
+  "n": 30,
+  "spectral": 80.77747210701756,
+  "closed_form": 79,
+  "integral_ceiling": 77,
+  "ceiling": 75,
+  "class": 3,
+  "example_fields": {
+   "3": 15,
+   "7": 15
+  },
+  "n_multisets": 1
+ },
+ {
+  "q": 37,
+  "n": 38,
+  "spectral": 115.57248807566617,
+  "closed_form": 111,
+  "integral_ceiling": 109,
+  "ceiling": 109,
+  "class": 1,
+  "example_fields": {
+   "1": 1,
+   "5": 30,
+   "9": 6,
+   "13": 1
+  },
+  "n_multisets": 2
+ },
+ {
+  "q": 41,
+  "n": 42,
+  "spectral": 134.46560898608982,
+  "closed_form": 129,
+  "integral_ceiling": 129,
+  "ceiling": 129,
+  "class": 1,
+  "example_fields": {
+   "5": 30,
+   "9": 12
+  },
+  "n_multisets": 1
+ },
+ {
+  "q": 49,
+  "n": 50,
+  "spectral": 175.0,
+  "closed_form": 175,
+  "integral_ceiling": 175,
+  "ceiling": 175,
+  "class": 3,
+  "example_fields": {
+   "7": 50
+  },
+  "n_multisets": 1
+ },
+ {
+  "q": 53,
+  "n": 54,
+  "spectral": 196.562967010574,
+  "closed_form": 195,
+  "integral_ceiling": 195,
+  "ceiling": 189,
+  "class": 1,
+  "example_fields": {
+   "5": 27,
+   "9": 27
+  },
+  "n_multisets": 1
+ },
+ {
+  "q": 61,
+  "n": 62,
+  "spectral": 242.11773995310628,
+  "closed_form": 237,
+  "integral_ceiling": 235,
+  "ceiling": 235,
+  "class": 3,
+  "example_fields": {
+   "3": 2,
+   "7": 50,
+   "11": 9,
+   "15": 1
+  },
+  "n_multisets": 2
+ },
+ {
+  "q": 73,
+  "n": 74,
+  "spectral": 316.1281385767486,
+  "closed_form": 311,
+  "integral_ceiling": 305,
+  "ceiling": 305,
+  "class": 1,
+  "example_fields": {
+   "5": 18,
+   "9": 54,
+   "17": 2
+  },
+  "n_multisets": 8
+ },
+ {
+  "q": 89,
+  "n": 90,
+  "spectral": 424.5291509425471,
+  "closed_form": 421,
+  "integral_ceiling": 417,
+  "ceiling": 417,
+  "class": 1,
+  "example_fields": {
+   "5": 6,
+   "9": 72,
+   "13": 12
+  },
+  "n_multisets": 1
+ },
+ {
+  "q": 97,
+  "n": 98,
+  "spectral": 482.5940322880091,
+  "closed_form": 475,
+  "integral_ceiling": 473,
+  "ceiling": 473,
+  "class": 1,
+  "example_fields": {
+   "9": 87,
+   "13": 6,
+   "17": 5
+  },
+  "n_multisets": 7
+ },
+ {
+  "q": 101,
+  "n": 102,
+  "spectral": 512.5436566771654,
+  "closed_form": 505,
+  "integral_ceiling": 501,
+  "ceiling": 501,
+  "class": 1,
+  "example_fields": {
+   "5": 2,
+   "9": 80,
+   "13": 18,
+   "17": 1,
+   "21": 1
+  },
+  "n_multisets": 15
+ },
+ {
+  "q": 109,
+  "n": 110,
+  "spectral": 574.2168579900803,
+  "closed_form": 567,
+  "integral_ceiling": 565,
+  "ceiling": 565,
+  "class": 1,
+  "example_fields": {
+   "9": 75,
+   "13": 35
+  },
+  "n_multisets": 1
+ },
+ {
+  "q": 113,
+  "n": 114,
+  "spectral": 605.918311325875,
+  "closed_form": 601,
+  "integral_ceiling": 599,
+  "ceiling": 599,
+  "class": 3,
+  "example_fields": {
+   "7": 17,
+   "11": 94,
+   "15": 3
+  },
+  "n_multisets": 1
+ },
+ {
+  "q": 173,
+  "n": 174,
+  "spectral": 1144.3063401030338,
+  "closed_form": 1141,
+  "integral_ceiling": 1141,
+  "ceiling": 1133,
+  "class": 1,
+  "example_fields": {
+   "9": 13,
+   "13": 152,
+   "17": 4,
+   "21": 5
+  },
+  "n_multisets": 16
+ },
+ {
+  "q": 229,
+  "n": 230,
+  "spectral": 1740.265784298479,
+  "closed_form": 1737,
+  "integral_ceiling": 1731,
+  "ceiling": 1731,
+  "class": 3,
+  "example_fields": {
+   "11": 14,
+   "15": 201,
+   "19": 13,
+   "23": 2
+  },
+  "n_multisets": 4
+ },
+ {
+  "q": 293,
+  "n": 294,
+  "spectral": 2516.2346869876824,
+  "closed_form": 2513,
+  "integral_ceiling": 2509,
+  "ceiling": 2509,
+  "class": 1,
+  "example_fields": {
+   "13": 13,
+   "17": 263,
+   "21": 18
+  },
+  "n_multisets": 1
+ }
+]

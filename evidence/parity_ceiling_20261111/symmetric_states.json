@@ -1,0 +1,424 @@
+{
+ "note": "max and -min agree in every row; 'anneal' rows are lower bounds on the quotient maximum (qopt sa, 4000 restarts x 400 sweeps); produced by scripts/parity_ceiling/sym.py",
+ "rows": [
+  {
+   "q": 13,
+   "n": 14,
+   "best": 21,
+   "all_exact": true,
+   "by_order": [
+    {
+     "l": 2,
+     "torus": "split",
+     "orbits": 8,
+     "mode": "exact",
+     "best_abs": 21
+    },
+    {
+     "l": 3,
+     "torus": "split",
+     "orbits": 6,
+     "mode": "exact",
+     "best_abs": 19
+    },
+    {
+     "l": 7,
+     "torus": "non-split",
+     "orbits": 2,
+     "mode": "exact",
+     "best_abs": 21
+    }
+   ]
+  },
+  {
+   "q": 17,
+   "n": 18,
+   "best": 33,
+   "all_exact": true,
+   "by_order": [
+    {
+     "l": 2,
+     "torus": "split",
+     "orbits": 10,
+     "mode": "exact",
+     "best_abs": 33
+    },
+    {
+     "l": 3,
+     "torus": "non-split",
+     "orbits": 6,
+     "mode": "exact",
+     "best_abs": 33
+    }
+   ]
+  },
+  {
+   "q": 29,
+   "n": 30,
+   "best": 75,
+   "all_exact": true,
+   "by_order": [
+    {
+     "l": 2,
+     "torus": "split",
+     "orbits": 16,
+     "mode": "exact",
+     "best_abs": 75
+    },
+    {
+     "l": 3,
+     "torus": "non-split",
+     "orbits": 10,
+     "mode": "exact",
+     "best_abs": 75
+    },
+    {
+     "l": 5,
+     "torus": "non-split",
+     "orbits": 6,
+     "mode": "exact",
+     "best_abs": 75
+    },
+    {
+     "l": 7,
+     "torus": "split",
+     "orbits": 6,
+     "mode": "exact",
+     "best_abs": 69
+    }
+   ]
+  },
+  {
+   "q": 37,
+   "n": 38,
+   "best": 109,
+   "all_exact": true,
+   "by_order": [
+    {
+     "l": 2,
+     "torus": "split",
+     "orbits": 20,
+     "mode": "exact",
+     "best_abs": 109
+    },
+    {
+     "l": 3,
+     "torus": "split",
+     "orbits": 14,
+     "mode": "exact",
+     "best_abs": 109
+    },
+    {
+     "l": 19,
+     "torus": "non-split",
+     "orbits": 2,
+     "mode": "exact",
+     "best_abs": 19
+    }
+   ]
+  },
+  {
+   "q": 41,
+   "n": 42,
+   "best": 129,
+   "all_exact": true,
+   "by_order": [
+    {
+     "l": 2,
+     "torus": "split",
+     "orbits": 22,
+     "mode": "exact",
+     "best_abs": 129
+    },
+    {
+     "l": 3,
+     "torus": "non-split",
+     "orbits": 14,
+     "mode": "exact",
+     "best_abs": 129
+    },
+    {
+     "l": 5,
+     "torus": "split",
+     "orbits": 10,
+     "mode": "exact",
+     "best_abs": 129
+    },
+    {
+     "l": 7,
+     "torus": "non-split",
+     "orbits": 6,
+     "mode": "exact",
+     "best_abs": 119
+    }
+   ]
+  },
+  {
+   "q": 53,
+   "n": 54,
+   "best": 189,
+   "all_exact": true,
+   "by_order": [
+    {
+     "l": 2,
+     "torus": "split",
+     "orbits": 28,
+     "mode": "exact",
+     "best_abs": 189
+    },
+    {
+     "l": 3,
+     "torus": "non-split",
+     "orbits": 18,
+     "mode": "exact",
+     "best_abs": 189
+    },
+    {
+     "l": 13,
+     "torus": "split",
+     "orbits": 6,
+     "mode": "exact",
+     "best_abs": 131
+    }
+   ]
+  },
+  {
+   "q": 61,
+   "n": 62,
+   "best": 229,
+   "all_exact": true,
+   "by_order": [
+    {
+     "l": 2,
+     "torus": "split",
+     "orbits": 32,
+     "mode": "exact",
+     "best_abs": 229
+    },
+    {
+     "l": 3,
+     "torus": "split",
+     "orbits": 22,
+     "mode": "exact",
+     "best_abs": 229
+    },
+    {
+     "l": 5,
+     "torus": "split",
+     "orbits": 14,
+     "mode": "exact",
+     "best_abs": 221
+    },
+    {
+     "l": 31,
+     "torus": "non-split",
+     "orbits": 2,
+     "mode": "exact",
+     "best_abs": 155
+    }
+   ]
+  },
+  {
+   "q": 73,
+   "n": 74,
+   "best": 297,
+   "all_exact": false,
+   "by_order": [
+    {
+     "l": 2,
+     "torus": "split",
+     "orbits": 38,
+     "mode": "anneal",
+     "best_abs": 297
+    },
+    {
+     "l": 3,
+     "torus": "split",
+     "orbits": 26,
+     "mode": "exact",
+     "best_abs": 295
+    },
+    {
+     "l": 37,
+     "torus": "non-split",
+     "orbits": 2,
+     "mode": "exact",
+     "best_abs": 111
+    }
+   ]
+  },
+  {
+   "q": 89,
+   "n": 90,
+   "best": 401,
+   "all_exact": false,
+   "by_order": [
+    {
+     "l": 2,
+     "torus": "split",
+     "orbits": 46,
+     "mode": "anneal",
+     "best_abs": 401
+    },
+    {
+     "l": 3,
+     "torus": "non-split",
+     "orbits": 30,
+     "mode": "exact",
+     "best_abs": 399
+    },
+    {
+     "l": 5,
+     "torus": "non-split",
+     "orbits": 18,
+     "mode": "exact",
+     "best_abs": 385
+    },
+    {
+     "l": 11,
+     "torus": "split",
+     "orbits": 10,
+     "mode": "exact",
+     "best_abs": 353
+    }
+   ]
+  },
+  {
+   "q": 97,
+   "n": 98,
+   "best": 457,
+   "all_exact": false,
+   "by_order": [
+    {
+     "l": 2,
+     "torus": "split",
+     "orbits": 50,
+     "mode": "anneal",
+     "best_abs": 457
+    },
+    {
+     "l": 3,
+     "torus": "split",
+     "orbits": 34,
+     "mode": "exact",
+     "best_abs": 455
+    },
+    {
+     "l": 7,
+     "torus": "non-split",
+     "orbits": 14,
+     "mode": "exact",
+     "best_abs": 441
+    }
+   ]
+  },
+  {
+   "q": 101,
+   "n": 102,
+   "best": 501,
+   "all_exact": false,
+   "by_order": [
+    {
+     "l": 2,
+     "torus": "split",
+     "orbits": 52,
+     "mode": "anneal",
+     "best_abs": 501
+    },
+    {
+     "l": 3,
+     "torus": "non-split",
+     "orbits": 34,
+     "mode": "exact",
+     "best_abs": 483
+    },
+    {
+     "l": 5,
+     "torus": "split",
+     "orbits": 22,
+     "mode": "exact",
+     "best_abs": 501
+    },
+    {
+     "l": 17,
+     "torus": "non-split",
+     "orbits": 6,
+     "mode": "exact",
+     "best_abs": 459
+    }
+   ]
+  },
+  {
+   "q": 109,
+   "n": 110,
+   "best": 555,
+   "all_exact": false,
+   "by_order": [
+    {
+     "l": 2,
+     "torus": "split",
+     "orbits": 56,
+     "mode": "anneal",
+     "best_abs": 555
+    },
+    {
+     "l": 3,
+     "torus": "split",
+     "orbits": 38,
+     "mode": "anneal",
+     "best_abs": 541
+    },
+    {
+     "l": 5,
+     "torus": "non-split",
+     "orbits": 22,
+     "mode": "exact",
+     "best_abs": 555
+    },
+    {
+     "l": 11,
+     "torus": "non-split",
+     "orbits": 10,
+     "mode": "exact",
+     "best_abs": 539
+    }
+   ]
+  },
+  {
+   "q": 113,
+   "n": 114,
+   "best": 591,
+   "all_exact": false,
+   "by_order": [
+    {
+     "l": 2,
+     "torus": "split",
+     "orbits": 58,
+     "mode": "anneal",
+     "best_abs": 591
+    },
+    {
+     "l": 3,
+     "torus": "non-split",
+     "orbits": 38,
+     "mode": "anneal",
+     "best_abs": 591
+    },
+    {
+     "l": 7,
+     "torus": "split",
+     "orbits": 18,
+     "mode": "exact",
+     "best_abs": 561
+    },
+    {
+     "l": 19,
+     "torus": "non-split",
+     "orbits": 6,
+     "mode": "exact",
+     "best_abs": 513
+    }
+   ]
+  }
+ ]
+}

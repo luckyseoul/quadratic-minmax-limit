@@ -1,0 +1,136 @@
+{
+ "note": "exact order of the stabiliser in PSL(2,q) (signed permutations modulo global sign) of the stored best state; computed by enumerating all group elements",
+ "rows": [
+  {
+   "q": 13,
+   "Q": 21,
+   "stabiliser_order": 14,
+   "fields": {
+    "1": 7,
+    "5": 7
+   }
+  },
+  {
+   "q": 17,
+   "Q": 33,
+   "stabiliser_order": 24,
+   "fields": {
+    "1": 6,
+    "5": 12
+   }
+  },
+  {
+   "q": 29,
+   "Q": 75,
+   "stabiliser_order": 30,
+   "fields": {
+    "3": 15,
+    "7": 15
+   }
+  },
+  {
+   "q": 37,
+   "Q": 109,
+   "stabiliser_order": 18,
+   "fields": {
+    "1": 2,
+    "5": 27,
+    "9": 9
+   }
+  },
+  {
+   "q": 41,
+   "Q": 129,
+   "stabiliser_order": 60,
+   "fields": {
+    "5": 30,
+    "9": 12
+   }
+  },
+  {
+   "q": 53,
+   "Q": 189,
+   "stabiliser_order": 54,
+   "fields": {
+    "5": 27,
+    "9": 27
+   }
+  },
+  {
+   "q": 61,
+   "Q": 229,
+   "stabiliser_order": 6,
+   "fields": {
+    "1": 2,
+    "5": 24,
+    "9": 33,
+    "13": 3
+   }
+  },
+  {
+   "q": 73,
+   "Q": 297,
+   "stabiliser_order": 2,
+   "fields": {
+    "1": 4,
+    "5": 19,
+    "9": 42,
+    "13": 9
+   }
+  },
+  {
+   "q": 89,
+   "Q": 401,
+   "stabiliser_order": 2,
+   "fields": {
+    "1": 2,
+    "5": 20,
+    "9": 48,
+    "13": 18,
+    "17": 2
+   }
+  },
+  {
+   "q": 97,
+   "Q": 457,
+   "stabiliser_order": 2,
+   "fields": {
+    "1": 4,
+    "5": 12,
+    "9": 57,
+    "13": 22,
+    "17": 3
+   }
+  },
+  {
+   "q": 101,
+   "Q": 501,
+   "stabiliser_order": 50,
+   "fields": {
+    "1": 2,
+    "9": 75,
+    "13": 25
+   }
+  },
+  {
+   "q": 109,
+   "Q": 555,
+   "stabiliser_order": 10,
+   "fields": {
+    "7": 40,
+    "11": 55,
+    "15": 15
+   }
+  },
+  {
+   "q": 113,
+   "Q": 591,
+   "stabiliser_order": 24,
+   "fields": {
+    "7": 30,
+    "11": 72,
+    "15": 12
+   }
+  }
+ ]
+}

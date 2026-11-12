@@ -1,0 +1,147 @@
+{
+ "q": 61,
+ "n": 62,
+ "statement": "Phi(C62) = 229: no Boolean x has Q_{C62}(x) = 235, the only admissible value between the witness value 229 and the parity ceiling 235",
+ "admissible_values_from_the_top": [
+  235,
+  229,
+  227,
+  221
+ ],
+ "patterns_at_235": [
+  {
+   "3": 2,
+   "7": 50,
+   "11": 9,
+   "15": 1
+  },
+  {
+   "3": 3,
+   "7": 47,
+   "11": 12
+  }
+ ],
+ "runs": [
+  {
+   "pattern": {
+    "3": 2,
+    "7": 50,
+    "11": 9,
+    "15": 1
+   },
+   "command": "defect 61 7 2 1 -1 2 1 9",
+   "nodes": 224280,
+   "solutions": 0
+  },
+  {
+   "pattern": {
+    "3": 3,
+    "7": 47,
+    "11": 12
+   },
+   "command": "SECOND_SIGN=1 defect 61 7 -1 3 1 12",
+   "nodes": 31000721,
+   "solutions": 0
+  },
+  {
+   "pattern": {
+    "3": 3,
+    "7": 47,
+    "11": 12
+   },
+   "command": "SECOND_SIGN=-1 defect 61 7 -1 3 1 12",
+   "nodes": 489107006,
+   "solutions": 0
+  },
+  {
+   "pattern": {
+    "7": 55,
+    "11": 6,
+    "19": 1
+   },
+   "command": "defect 61 7 3 1 1 6",
+   "nodes": 1,
+   "solutions": 0
+  },
+  {
+   "pattern": {
+    "7": 56,
+    "11": 3,
+    "15": 3
+   },
+   "command": "defect 61 7 2 3 1 3",
+   "nodes": 1,
+   "solutions": 0
+  },
+  {
+   "pattern": {
+    "3": 1,
+    "7": 53,
+    "11": 6,
+    "15": 2
+   },
+   "command": "defect 61 7 2 2 -1 1 1 6",
+   "nodes": 1,
+   "solutions": 0
+  },
+  {
+   "pattern": {
+    "-1": 1,
+    "7": 50,
+    "11": 11
+   },
+   "command": "defect 61 7 -2 1 1 11",
+   "nodes": 1,
+   "solutions": 0
+  }
+ ],
+ "validation": {
+  "what": "solver verdict against brute-force enumeration of all states at orders 14 and 18, over every field multiset admissible by parity and the second moment",
+  "multisets_tested": 245,
+  "occurring": 89,
+  "mismatches": 0,
+  "positive_controls_found": [
+   "17 5 -1 6",
+   "41 5 1 12",
+   "37 5 -1 2 1 9",
+   "29 3 1 15",
+   "13 1 1 7"
+  ]
+ },
+ "witness": {
+  "Q": 229,
+  "source": "witnesses.json",
+  "annealing_restarts": 1030000,
+  "hits": 252869
+ },
+ "symmetric_states": {
+  "best": 229,
+  "all_quotients_exact": true,
+  "source": "symmetric_states.json"
+ },
+ "patterns_at_235_by_integrality": 6,
+ "patterns_failing_row_identity": [
+  {
+   "7": 55,
+   "11": 6,
+   "19": 1
+  },
+  {
+   "7": 56,
+   "11": 3,
+   "15": 3
+  },
+  {
+   "3": 1,
+   "7": 53,
+   "11": 6,
+   "15": 2
+  },
+  {
+   "-1": 1,
+   "7": 50,
+   "11": 11
+  }
+ ],
+ "rerun_check": "SECOND_SIGN=1 half repeated with the repository copy of defect.c: 31000721 nodes, 0 solutions (identical)"
+}
