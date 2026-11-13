@@ -1,0 +1,199 @@
+{
+ "source": "graph6 strings of SRG(45,22,10,11) graphs, file strongly-regular-graphs/SRG45-22-10-11.txt of the public repository github.com/kguo-sagecode (read as data only)",
+ "order": 46,
+ "graphs": [
+  {
+   "graph6": "lLfe\\`lU}gWJCyMhlEtXRJvHzJM{LEiyafqQ?B~xwYt@Yy\\ozpILfyB^@UoahnETwfLHxLitNDZIYHvu@USIVyW@o@ontF|KFRfePIffUdWZanGweMg[RqhVJIsLRcajormFMBmecYpdqRHom\\IKaLMji_NjGX[???N~~~",
+   "witness": "-++-+--------++-++---+----+-+++++-+-++-+-+-++-",
+   "Q": 147,
+   "fields": {
+    "3": 10,
+    "7": 33,
+    "11": 3
+   },
+   "descendant_K4_profile": [
+    [
+     1553,
+     20
+    ],
+    [
+     1549,
+     10
+    ],
+    [
+     1551,
+     10
+    ],
+    [
+     1555,
+     5
+    ],
+    [
+     1575,
+     1
+    ]
+   ]
+  },
+  {
+   "graph6": "l\\qHj\\YtKyXaPyeX{Ix{XUmQufBU`rbwieyI?B~|Ow^EXnD@|ZbqimQLoz`md|_M]XoZBsRQ_wzqeDNJPJME^QeHG?K|~X{E]Fu{IobyXlMIleegTFiLIxkjPjU_TXBpeYLuQRdD\\IrPhPahvTGL`eUW^gbgp`{???N~~~",
+   "witness": "+++-+-++++++--++++----++---+-+--+-++++-+---+++",
+   "Q": 147,
+   "fields": {
+    "3": 10,
+    "7": 33,
+    "11": 3
+   },
+   "descendant_K4_profile": [
+    [
+     1553,
+     20
+    ],
+    [
+     1549,
+     10
+    ],
+    [
+     1551,
+     10
+    ],
+    [
+     1555,
+     5
+    ],
+    [
+     1575,
+     1
+    ]
+   ]
+  },
+  {
+   "graph6": "lZbgxvQqZQ`vn@xEQx\\pYLxVJWedcirfPfeE?B~yw\\eEJrp`LzJUdrPuTMcyNZBXyZcGUj_|IJ[afRMjpSSQ~RACO?[{|fkTUUbrYOmrJcbOF~KqGvQm`zKpTqhzBpSJtHQkTg[Ypp\\@[rHuVHgYghLo|x_`F`{???N~~~",
+   "witness": "---+++-+-+++--+------+-+-+--------++++-+-+++--",
+   "Q": 147,
+   "fields": {
+    "3": 10,
+    "7": 33,
+    "11": 3
+   },
+   "descendant_K4_profile": [
+    [
+     1553,
+     20
+    ],
+    [
+     1549,
+     10
+    ],
+    [
+     1551,
+     10
+    ],
+    [
+     1555,
+     5
+    ],
+    [
+     1575,
+     1
+    ]
+   ]
+  },
+  {
+   "graph6": "l~qjYu\\LwbgtaeJQ]?{mZVFgyjeRKJEeectJ?B~{SlrGsmwJOzgC\\wz}@B|uRZ`ShMxRDb]iEYwy[ZSmUpNGymTJofGetBYuAZoueqauQvpUcsm`gz@mJQLFHMeeF[]?aFFskhLSRltchRGzTqbcqKj_^`w|?F[???N~~~",
+   "witness": "----+---+++-++++-------+++-+------+++++++-----",
+   "Q": 147,
+   "fields": {
+    "3": 10,
+    "7": 33,
+    "11": 3
+   },
+   "descendant_K4_profile": [
+    [
+     1553,
+     20
+    ],
+    [
+     1549,
+     10
+    ],
+    [
+     1551,
+     10
+    ],
+    [
+     1555,
+     5
+    ],
+    [
+     1575,
+     1
+    ]
+   ]
+  },
+  {
+   "graph6": "l~qjYu\\LwbgtaeJQ]?{mZVFgyjeRKbEeUctF?B~{SlrGsmwJOzgC\\wz}@B|uRZPSWvh`eczpKYwyXZSmUqN_ymUJcfGbtBquAjoleqbURNpUckjagz@]MSLFHYecf[]?aFFskhLSRltchRCzTqbcqSj_^`w|?F[???N~~~",
+   "witness": "-+-++---++---+--++--+++-+---++-+-+------+---++",
+   "Q": 147,
+   "fields": {
+    "3": 10,
+    "7": 33,
+    "11": 3
+   },
+   "descendant_K4_profile": [
+    [
+     1553,
+     20
+    ],
+    [
+     1549,
+     10
+    ],
+    [
+     1551,
+     10
+    ],
+    [
+     1555,
+     5
+    ],
+    [
+     1575,
+     1
+    ]
+   ]
+  },
+  {
+   "graph6": "l~qjYu\\LwbgtaeJQ]?{mZVFgyjeREdHkLbTJ?B~{SltGsmwJOzWC\\wz}@B|uR\\QKWuxbEc|oiYwyYZSmUpN_ymUJcfGRmBquGjcleqRYbNpUcsjagz@]MSLFHUecf[]?aFFskhLPUltciRGvTqbaqcZ_^`w|?F[???N~~~",
+   "witness": "++-+----+++-++++--+--+-++--++--+++++++-++-+-+-",
+   "Q": 147,
+   "fields": {
+    "3": 10,
+    "7": 33,
+    "11": 3
+   },
+   "descendant_K4_profile": [
+    [
+     1553,
+     20
+    ],
+    [
+     1549,
+     10
+    ],
+    [
+     1551,
+     10
+    ],
+    [
+     1555,
+     5
+    ],
+    [
+     1575,
+     1
+    ]
+   ]
+  }
+ ],
+ "distinct_K4_profiles": 1
+}

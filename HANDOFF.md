@@ -1,3 +1,88 @@
+## 2026-11-13: Paley phase model; rho -> 1 along all prime Paley orders (modulo one citation review); Phi(Mathon C46) = 147
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`. Draft; independent review pending. Parent
+checkpoint: `076b8c4`.
+
+**Proved** (`evidence/NOTE_2026-11-13_PALEY_PHASE_MODEL.md`, sections 1-2).
+In the coordinates `z_s = x(g^s)` on `GF(q)*` the Paley form is
+
+    sum chi(g^s - g^t) z_s z_t = (q-1) sum_k J_k zhat(k) zhat(M-k),   M = (q-1)/2,
+
+with `J_k = J(chi, psi^k)` Jacobi sums, `|J_k| = sqrt(q)`, `J_{M-k} = J_k`:
+frequency `k` couples only to `M-k`, through one phase `phi_k = arg J_k`.
+
+- *Theorem R (exact).* For the square wave of frequency `k` and shift `delta`
+  (state written out in the note), with `M' = M/gcd(k,M)`, `k' = k/gcd(k,M)`:
+
+      Q = 1 + (q-1) sqrt(q)/2 * (4/M'^2) sum_{m odd < M'}
+              sin(phi_{mk}) sin(pi m (2 delta + k')/M') / sin^2(pi m/M').
+
+  Checked against exact integers, including even `k` and `gcd > 1`.
+- *Corollary R2.* If the phases at `k, 3k, ..., (2r-1)k` are within the stated
+  tolerance `eta` of `-+pi/2` with alternating signs, then
+  `rho >= 1 - eta - 4/(pi^2 r) - 2 pi^2 r^2/M'^2`.
+- The quartic states of 11-11 and 11-12 are the one self-paired frequency
+  `k = M/2`.
+
+**Proved modulo review of one citation** (section 3). *Theorem S:*
+`Phi(C_{q+1}) / S -> 1` as `q -> infinity` through primes `q = 1 (mod 4)`.
+The proof is Corollary R2 plus joint equidistribution of
+`(phi_k, phi_3k, ..., phi_(2r-1)k)` over odd `k`, taken from Theorem 4 of
+A. Rojas-León, *Equidistribution and independence of Gauss sums*,
+arXiv:2207.12439v3. The linear-independence hypothesis of that theorem is
+verified in the note. The application was made from the statement of the
+theorem, not its proof.
+
+**Consequences.**
+
+- E(2) of `solution.md` on prime orders, with `rho_* = 1`.
+- The "uniform bound off resonance" target of the 11-11 and 11-12 entries is
+  withdrawn: no set of primes has one. A dated update is in the 11-11 note.
+- No Paley matrix of prime order can certify a constant below 1/2. E(1) and
+  every lower bound on `m_n` are untouched.
+- Heuristic only: the mechanism needs a flat spectrum and a cyclic symmetry
+  of order comparable to `n`. Candidates for a constant below 1/2 should have
+  no such symmetry.
+
+**Certificates** (`evidence/phase_model_20261113/`). Best square-wave state per
+prime, exact integer `Q`: `rho` = 0.853 (101), 0.909 (1009), 0.944 (10009),
+0.9615 (100049), 0.9653 (1000033). Not maxima: 437 against the exact 501 at
+`q = 101`. Counts of frequencies with `r` aligned harmonics match the Haar
+prediction (436 against 435.4 for `r = 3`, tolerance 0.3, `q = 500009`);
+22 mixed Weyl sums times `sqrt(q)` are at most 7.0.
+
+**Exact at order 46.** The parity ceiling with the row identity gives
+`Phi(C) <= 147` for every symmetric conference matrix of order 46 (one
+admissible field pattern `{3:10, 7:33, 11:3}`). Mathon's matrix attains it
+(six descendant graphs, one switching class by the 4-clique profile). So
+`m_46 <= 147`, `alpha_46 <= 0.4712`. First exact value on file for a
+non-Paley conference matrix.
+
+**Operational.** `phase_lib.exact_Q` evaluates the Paley conference form in
+exact integers at `q = 10^6` in about 12 seconds on one core (Kronecker
+substitution), so witnesses at that size need no floating-point trust.
+
+**Next unresolved target.** (1) Review items (i)-(iii) under Theorem S.
+(2) The order-50 test: a conference matrix of order 50 with no Boolean `+-7`
+eigenvector has `Phi <= 167 < 169` by Prop 15.762. Nets, Pasechnik and
+two-block group-developed matrices are all regularizable. E. Spence's file
+`conf2graph.50` (known regular two-graphs on 50 vertices) decides it but is
+served as binary and was not readable from the session; it needs to be added
+to the repository by hand. (3) Rate in Theorem S; not attempted.
+
+**For the reviewer.** (1) The proof of Theorem R (half a page).
+(2) `python3 scripts/phase_model/verify.py` (seconds). (3) The hypothesis check
+in section 3 against arXiv:2207.12439v3, Theorem 1 and Theorem 4. (4) The scan
+regenerates in about five minutes on one core.
+
+Files: `evidence/NOTE_2026-11-13_PALEY_PHASE_MODEL.md`;
+`evidence/phase_model_20261113/` (identities, scan, mathon46);
+`scripts/phase_model/` (phase_lib, verify, scan, README);
+`tests/test_paley_phase_model_note.py` (27 tests, pass). The three failures in
+`tests/test_corrected_proof_ledger_parity.py` predate this branch and are
+unchanged.
+
 ## 2026-11-12: Paley-core lift undercut is at most p-1 for every p; Phi(C198) = 1373; windows for all primes below 1000
 
 The original MO limit is still OPEN. Nothing below was entered in

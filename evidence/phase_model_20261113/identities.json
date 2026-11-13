@@ -1,0 +1,181 @@
+[
+ {
+  "q": 13,
+  "twisted_circulant": true,
+  "h_parity_symmetry": true,
+  "abs_J_squared_is_q": true,
+  "J_0_and_J_M_are_minus_1": true,
+  "J_M_minus_k_equals_J_k": true,
+  "quartic_frequency": {
+   "a": 2,
+   "b": 3,
+   "abs_Im_J_is_a": true,
+   "abs_Re_J_is_b": true
+  },
+  "fourier_identity_max_error": 3.552713678800501e-15,
+  "square_formula": {
+   "trials": 40,
+   "with_gcd_above_1": 13,
+   "max_abs_error": 1.509903313490213e-14
+  }
+ },
+ {
+  "q": 29,
+  "twisted_circulant": true,
+  "h_parity_symmetry": true,
+  "abs_J_squared_is_q": true,
+  "J_0_and_J_M_are_minus_1": true,
+  "J_M_minus_k_equals_J_k": true,
+  "quartic_frequency": {
+   "a": 2,
+   "b": 5,
+   "abs_Im_J_is_a": true,
+   "abs_Re_J_is_b": true
+  },
+  "fourier_identity_max_error": 1.4210854715202004e-14,
+  "square_formula": {
+   "trials": 40,
+   "with_gcd_above_1": 6,
+   "max_abs_error": 4.689582056016661e-13
+  }
+ },
+ {
+  "q": 61,
+  "twisted_circulant": true,
+  "h_parity_symmetry": true,
+  "abs_J_squared_is_q": true,
+  "J_0_and_J_M_are_minus_1": true,
+  "J_M_minus_k_equals_J_k": true,
+  "quartic_frequency": {
+   "a": 6,
+   "b": 5,
+   "abs_Im_J_is_a": true,
+   "abs_Re_J_is_b": true
+  },
+  "fourier_identity_max_error": 1.4210854715202004e-14,
+  "square_formula": {
+   "trials": 40,
+   "with_gcd_above_1": 22,
+   "max_abs_error": 1.4637180356658064e-12
+  }
+ },
+ {
+  "q": 101,
+  "twisted_circulant": true,
+  "h_parity_symmetry": true,
+  "abs_J_squared_is_q": true,
+  "J_0_and_J_M_are_minus_1": true,
+  "J_M_minus_k_equals_J_k": true,
+  "quartic_frequency": {
+   "a": 10,
+   "b": 1,
+   "abs_Im_J_is_a": true,
+   "abs_Re_J_is_b": true
+  },
+  "fourier_identity_max_error": 2.842170943040401e-14,
+  "square_formula": {
+   "trials": 40,
+   "with_gcd_above_1": 10,
+   "max_abs_error": 1.1084466677857563e-11
+  }
+ },
+ {
+  "q": 181,
+  "twisted_circulant": true,
+  "h_parity_symmetry": true,
+  "abs_J_squared_is_q": true,
+  "J_0_and_J_M_are_minus_1": true,
+  "J_M_minus_k_equals_J_k": true,
+  "quartic_frequency": {
+   "a": 10,
+   "b": 9,
+   "abs_Im_J_is_a": true,
+   "abs_Re_J_is_b": true
+  },
+  "fourier_identity_max_error": 2.842170943040401e-14,
+  "square_formula": {
+   "trials": 40,
+   "with_gcd_above_1": 14,
+   "max_abs_error": 4.303046807763167e-11
+  }
+ },
+ {
+  "q": 197,
+  "twisted_circulant": true,
+  "h_parity_symmetry": true,
+  "abs_J_squared_is_q": true,
+  "J_0_and_J_M_are_minus_1": true,
+  "J_M_minus_k_equals_J_k": true,
+  "quartic_frequency": {
+   "a": 14,
+   "b": 1,
+   "abs_Im_J_is_a": true,
+   "abs_Re_J_is_b": true
+  },
+  "fourier_identity_max_error": 1.1368683772161603e-13,
+  "square_formula": {
+   "trials": 40,
+   "with_gcd_above_1": 4,
+   "max_abs_error": 8.0831341620069e-11
+  }
+ },
+ {
+  "q": 1009,
+  "twisted_circulant": true,
+  "h_parity_symmetry": true,
+  "abs_J_squared_is_q": true,
+  "J_0_and_J_M_are_minus_1": true,
+  "J_M_minus_k_equals_J_k": true,
+  "quartic_frequency": {
+   "a": 28,
+   "b": 15,
+   "abs_Im_J_is_a": true,
+   "abs_Re_J_is_b": true
+  },
+  "fourier_identity_max_error": 6.252776074688882e-13,
+  "square_formula": {
+   "trials": 40,
+   "with_gcd_above_1": 27,
+   "max_abs_error": 2.4901964934542775e-09
+  }
+ },
+ {
+  "q": 2521,
+  "twisted_circulant": true,
+  "h_parity_symmetry": true,
+  "abs_J_squared_is_q": true,
+  "J_0_and_J_M_are_minus_1": true,
+  "J_M_minus_k_equals_J_k": true,
+  "quartic_frequency": {
+   "a": 36,
+   "b": 35,
+   "abs_Im_J_is_a": true,
+   "abs_Re_J_is_b": true
+  },
+  "fourier_identity_max_error": 9.094947017729282e-13,
+  "square_formula": {
+   "trials": 40,
+   "with_gcd_above_1": 27,
+   "max_abs_error": 1.9988874555565417e-08
+  }
+ },
+ {
+  "q": 10009,
+  "h_parity_symmetry": true,
+  "abs_J_squared_is_q": true,
+  "J_0_and_J_M_are_minus_1": true,
+  "J_M_minus_k_equals_J_k": true,
+  "quartic_frequency": {
+   "a": 100,
+   "b": 3,
+   "abs_Im_J_is_a": true,
+   "abs_Re_J_is_b": true
+  },
+  "fourier_identity_max_error": 3.637978807091713e-12,
+  "square_formula": {
+   "trials": 40,
+   "with_gcd_above_1": 21,
+   "max_abs_error": 9.061041055247188e-07
+  }
+ }
+]

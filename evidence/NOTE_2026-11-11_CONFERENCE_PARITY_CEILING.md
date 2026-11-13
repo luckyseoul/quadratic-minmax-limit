@@ -301,6 +301,12 @@ Readings, none of them a theorem beyond order 62:
 primes, that `M_N(f) + ½ (s ∓ √q)² ≥ η q²` for every `±1` sequence `f` of
 length `q`. Order 62 (`(1 − ρ)/2 = 2.7%` of `q²`) is the base case on file.
 
+**Update 2026-11-13.** No such set of primes exists with a fixed `η > 0`:
+`ρ(C_{q+1}) → 1` along all primes `q ≡ 1 (mod 4)` (Theorem S of
+`NOTE_2026-11-13_PALEY_PHASE_MODEL.md`, proved modulo review of one cited
+equidistribution theorem). The order-62 value stands as a finite fact; the
+target above is withdrawn, not proved.
+
 ## Sources
 
 - K. Momihara, S. Suda, *Conference matrices with maximum excess and

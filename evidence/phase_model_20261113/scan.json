@@ -1,0 +1,769 @@
+[
+ {
+  "q": 101,
+  "order": 102,
+  "primitive_root": 2,
+  "full_scan": true,
+  "k": 17,
+  "delta": 4,
+  "t_over_M": 0.5,
+  "Q_square": 437,
+  "rho_square": 0.8526102982779712,
+  "Q_polished": 437,
+  "rho_polished": 0.8526102982779712,
+  "harmonic_products": [
+   0.9773,
+   0.7695,
+   -0.445,
+   0.7186,
+   0.3774,
+   -0.1216,
+   0.9787,
+   0.445
+  ],
+  "weyl_max": 0.6965260331469925,
+  "weyl_max_times_sqrt_q": 7.000000000000001,
+  "weyl_vectors": 22,
+  "boxes": [
+   {
+    "harmonics": 1,
+    "theta": 0.3,
+    "count": 10,
+    "haar_prediction": 9.54929658551372
+   },
+   {
+    "harmonics": 2,
+    "theta": 0.3,
+    "count": 2,
+    "haar_prediction": 0.9118906527810399
+   },
+   {
+    "harmonics": 3,
+    "theta": 0.3,
+    "count": 2,
+    "haar_prediction": 0.0870791429696386
+   },
+   {
+    "harmonics": 3,
+    "theta": 0.5,
+    "count": 2,
+    "haar_prediction": 0.40314418041499367
+   },
+   {
+    "harmonics": 4,
+    "theta": 0.5,
+    "count": 2,
+    "haar_prediction": 0.06416238909177711
+   }
+  ],
+  "seconds": 0.0
+ },
+ {
+  "q": 229,
+  "order": 230,
+  "primitive_root": 6,
+  "full_scan": true,
+  "k": 29,
+  "delta": 14,
+  "t_over_M": 0.5,
+  "Q_square": 1477,
+  "rho_square": 0.8487209329323196,
+  "Q_polished": 1549,
+  "rho_polished": 0.8900939235695078,
+  "harmonic_products": [
+   0.9412,
+   0.9857,
+   -0.294,
+   0.6517,
+   -0.3602,
+   0.1238,
+   -0.324,
+   0.5074
+  ],
+  "weyl_max": 0.29231844640218596,
+  "weyl_max_times_sqrt_q": 4.4235807860262,
+  "weyl_vectors": 22,
+  "boxes": [
+   {
+    "harmonics": 1,
+    "theta": 0.3,
+    "count": 12,
+    "haar_prediction": 21.77239621497128
+   },
+   {
+    "harmonics": 2,
+    "theta": 0.3,
+    "count": 0,
+    "haar_prediction": 2.079110688340771
+   },
+   {
+    "harmonics": 3,
+    "theta": 0.3,
+    "count": 0,
+    "haar_prediction": 0.19854044597077602
+   },
+   {
+    "harmonics": 3,
+    "theta": 0.5,
+    "count": 0,
+    "haar_prediction": 0.9191687313461856
+   },
+   {
+    "harmonics": 4,
+    "theta": 0.5,
+    "count": 0,
+    "haar_prediction": 0.14629024712925182
+   }
+  ],
+  "seconds": 0.0
+ },
+ {
+  "q": 509,
+  "order": 510,
+  "primitive_root": 2,
+  "full_scan": true,
+  "k": 231,
+  "delta": 202,
+  "t_over_M": 0.5,
+  "Q_square": 5005,
+  "rho_square": 0.8699714693825769,
+  "Q_polished": 5243,
+  "rho_polished": 0.9113407420525176,
+  "harmonic_products": [
+   0.9944,
+   0.8585,
+   0.2911,
+   -0.9307,
+   -0.9177,
+   -0.9162,
+   0.4818,
+   0.9331
+  ],
+  "weyl_max": 0.26498743348574855,
+  "weyl_max_times_sqrt_q": 5.9783889980353635,
+  "weyl_vectors": 22,
+  "boxes": [
+   {
+    "harmonics": 1,
+    "theta": 0.3,
+    "count": 54,
+    "haar_prediction": 48.5104266544097
+   },
+   {
+    "harmonics": 2,
+    "theta": 0.3,
+    "count": 10,
+    "haar_prediction": 4.632404516127683
+   },
+   {
+    "harmonics": 3,
+    "theta": 0.3,
+    "count": 2,
+    "haar_prediction": 0.44236204628576414
+   },
+   {
+    "harmonics": 3,
+    "theta": 0.5,
+    "count": 2,
+    "haar_prediction": 2.047972436508168
+   },
+   {
+    "harmonics": 4,
+    "theta": 0.5,
+    "count": 2,
+    "haar_prediction": 0.3259449365862277
+   }
+  ],
+  "seconds": 0.0
+ },
+ {
+  "q": 1009,
+  "order": 1010,
+  "primitive_root": 11,
+  "full_scan": true,
+  "k": 65,
+  "delta": 344,
+  "t_over_M": 1.494047619047619,
+  "Q_square": 14585,
+  "rho_square": 0.9092210299059255,
+  "Q_polished": 14753,
+  "rho_polished": 0.9196940592528021,
+  "harmonic_products": [
+   0.9991,
+   0.615,
+   0.7715,
+   0.5864,
+   0.8914,
+   0.6074,
+   -0.8227,
+   -0.8692
+  ],
+  "weyl_max": 0.16789054646484763,
+  "weyl_max_times_sqrt_q": 5.3330029732408315,
+  "weyl_vectors": 22,
+  "boxes": [
+   {
+    "harmonics": 1,
+    "theta": 0.3,
+    "count": 104,
+    "haar_prediction": 96.25690958197829
+   },
+   {
+    "harmonics": 2,
+    "theta": 0.3,
+    "count": 4,
+    "haar_prediction": 9.191857780032882
+   },
+   {
+    "harmonics": 3,
+    "theta": 0.3,
+    "count": 0,
+    "haar_prediction": 0.8777577611339572
+   },
+   {
+    "harmonics": 3,
+    "theta": 0.5,
+    "count": 0,
+    "haar_prediction": 4.063693338583136
+   },
+   {
+    "harmonics": 4,
+    "theta": 0.5,
+    "count": 0,
+    "haar_prediction": 0.6467568820451133
+   }
+  ],
+  "seconds": 0.0
+ },
+ {
+  "q": 2017,
+  "order": 2018,
+  "primitive_root": 5,
+  "full_scan": true,
+  "k": 1025,
+  "delta": 739,
+  "t_over_M": 0.48313492063492064,
+  "Q_square": 41033,
+  "rho_square": 0.9055014599592421,
+  "Q_polished": 41585,
+  "rho_polished": 0.9176827970756485,
+  "harmonic_products": [
+   0.97,
+   0.9103,
+   0.8636,
+   0.8061,
+   0.5561,
+   -0.4829,
+   -0.2765,
+   -0.6992
+  ],
+  "weyl_max": 0.11133124230483697,
+  "weyl_max_times_sqrt_q": 4.999999999999999,
+  "weyl_vectors": 22,
+  "boxes": [
+   {
+    "harmonics": 1,
+    "theta": 0.3,
+    "count": 192,
+    "haar_prediction": 192.51381916395658
+   },
+   {
+    "harmonics": 2,
+    "theta": 0.3,
+    "count": 16,
+    "haar_prediction": 18.383715560065763
+   },
+   {
+    "harmonics": 3,
+    "theta": 0.3,
+    "count": 0,
+    "haar_prediction": 1.7555155222679144
+   },
+   {
+    "harmonics": 3,
+    "theta": 0.5,
+    "count": 8,
+    "haar_prediction": 8.127386677166273
+   },
+   {
+    "harmonics": 4,
+    "theta": 0.5,
+    "count": 0,
+    "haar_prediction": 1.2935137640902266
+   }
+  ],
+  "seconds": 0.0
+ },
+ {
+  "q": 5009,
+  "order": 5010,
+  "primitive_root": 3,
+  "full_scan": true,
+  "k": 3561,
+  "delta": 98,
+  "t_over_M": 1.5003993610223643,
+  "Q_square": 168473,
+  "rho_square": 0.9502700974882704,
+  "Q_polished": 168535,
+  "rho_polished": 0.9506198078041327,
+  "harmonic_products": [
+   0.9978,
+   0.9541,
+   0.9851,
+   0.7003,
+   0.1939,
+   0.15,
+   0.9573,
+   0.4655
+  ],
+  "weyl_max": 0.06568177280894388,
+  "weyl_max_times_sqrt_q": 4.648580778489553,
+  "weyl_vectors": 22,
+  "boxes": [
+   {
+    "harmonics": 1,
+    "theta": 0.3,
+    "count": 500,
+    "haar_prediction": 478.2287730025271
+   },
+   {
+    "harmonics": 2,
+    "theta": 0.3,
+    "count": 40,
+    "haar_prediction": 45.66748389127448
+   },
+   {
+    "harmonics": 3,
+    "theta": 0.3,
+    "count": 0,
+    "haar_prediction": 4.360923479919502
+   },
+   {
+    "harmonics": 3,
+    "theta": 0.5,
+    "count": 16,
+    "haar_prediction": 20.189460555182883
+   },
+   {
+    "harmonics": 4,
+    "theta": 0.5,
+    "count": 8,
+    "haar_prediction": 3.2132524457161975
+   }
+  ],
+  "seconds": 1.1
+ },
+ {
+  "q": 10009,
+  "order": 10010,
+  "primitive_root": 11,
+  "full_scan": true,
+  "k": 2495,
+  "delta": 3,
+  "t_over_M": 0.4998001598721023,
+  "Q_square": 472657,
+  "rho_square": 0.9439449506732693,
+  "Q_polished": 473857,
+  "rho_polished": 0.9463414748775187,
+  "harmonic_products": [
+   0.9999,
+   0.9637,
+   0.9973,
+   0.0324,
+   0.9805,
+   0.3018,
+   0.7288,
+   -0.9527
+  ],
+  "weyl_max": 0.049977515176118335,
+  "weyl_max_times_sqrt_q": 4.999999999999999,
+  "weyl_vectors": 22,
+  "boxes": [
+   {
+    "harmonics": 1,
+    "theta": 0.3,
+    "count": 940,
+    "haar_prediction": 955.693602278213
+   },
+   {
+    "harmonics": 2,
+    "theta": 0.3,
+    "count": 80,
+    "haar_prediction": 91.26201653032648
+   },
+   {
+    "harmonics": 3,
+    "theta": 0.3,
+    "count": 12,
+    "haar_prediction": 8.714880628401431
+   },
+   {
+    "harmonics": 3,
+    "theta": 0.5,
+    "count": 44,
+    "haar_prediction": 40.346669575932566
+   },
+   {
+    "harmonics": 4,
+    "theta": 0.5,
+    "count": 8,
+    "haar_prediction": 6.421371900305053
+   }
+  ],
+  "seconds": 1.6
+ },
+ {
+  "q": 20021,
+  "order": 20022,
+  "primitive_root": 3,
+  "full_scan": true,
+  "k": 1223,
+  "delta": 1865,
+  "t_over_M": 0.4948051948051948,
+  "Q_square": 1343749,
+  "rho_square": 0.94863208594645,
+  "Q_polished": 1347821,
+  "rho_polished": 0.9515067521631124,
+  "harmonic_products": [
+   0.9974,
+   0.9893,
+   0.9718,
+   0.8433,
+   0.9535,
+   0.1516,
+   -0.7566,
+   -0.9537
+  ],
+  "weyl_max": 0.028890355893525923,
+  "weyl_max_times_sqrt_q": 4.0878577493631685,
+  "weyl_vectors": 22,
+  "boxes": [
+   {
+    "harmonics": 1,
+    "theta": 0.3,
+    "count": 1912,
+    "haar_prediction": 1911.7691764198466
+   },
+   {
+    "harmonics": 2,
+    "theta": 0.3,
+    "count": 236,
+    "haar_prediction": 182.5605086867642
+   },
+   {
+    "harmonics": 3,
+    "theta": 0.3,
+    "count": 28,
+    "haar_prediction": 17.43324442252165
+   },
+   {
+    "harmonics": 3,
+    "theta": 0.5,
+    "count": 108,
+    "haar_prediction": 80.70946491908174
+   },
+   {
+    "harmonics": 4,
+    "theta": 0.5,
+    "count": 8,
+    "haar_prediction": 12.845310296173778
+   }
+  ],
+  "seconds": 4.4
+ },
+ {
+  "q": 50021,
+  "order": 50022,
+  "primitive_root": 2,
+  "full_scan": false,
+  "k": 19659,
+  "delta": 8943,
+  "t_over_M": 1.5011995201919233,
+  "Q_square": 5358669,
+  "rho_square": 0.9579651075257861,
+  "Q_polished": 5362851,
+  "rho_polished": 0.9587127204273617,
+  "harmonic_products": [
+   0.9909,
+   0.975,
+   0.9878,
+   0.9889,
+   0.9979,
+   0.3989,
+   -0.0371,
+   0.327
+  ],
+  "weyl_max": 0.025544398390170597,
+  "weyl_max_times_sqrt_q": 5.7131004977909265,
+  "weyl_vectors": 22,
+  "boxes": [
+   {
+    "harmonics": 1,
+    "theta": 0.3,
+    "count": 4786,
+    "haar_prediction": 4776.558152073962
+   },
+   {
+    "harmonics": 2,
+    "theta": 0.3,
+    "count": 478,
+    "haar_prediction": 456.12770452107617
+   },
+   {
+    "harmonics": 3,
+    "theta": 0.3,
+    "count": 38,
+    "haar_prediction": 43.55698731341323
+   },
+   {
+    "harmonics": 3,
+    "theta": 0.5,
+    "count": 186,
+    "haar_prediction": 201.65271904357985
+   },
+   {
+    "harmonics": 4,
+    "theta": 0.5,
+    "count": 66,
+    "haar_prediction": 32.094027023706914
+   }
+  ],
+  "seconds": 1.4
+ },
+ {
+  "q": 100049,
+  "order": 100050,
+  "primitive_root": 6,
+  "full_scan": false,
+  "k": 22241,
+  "delta": 26421,
+  "t_over_M": 1.500939549016472,
+  "Q_square": 15214481,
+  "rho_square": 0.9615318374059395,
+  "Q_polished": 15276329,
+  "rho_polished": 0.9654405360385042,
+  "harmonic_products": [
+   0.9999,
+   0.998,
+   0.8429,
+   0.7364,
+   0.9962,
+   0.3669,
+   0.8926,
+   0.7263
+  ],
+  "weyl_max": 0.013613751155206242,
+  "weyl_max_times_sqrt_q": 4.306100722044621,
+  "weyl_vectors": 22,
+  "boxes": [
+   {
+    "harmonics": 1,
+    "theta": 0.3,
+    "count": 9488,
+    "haar_prediction": 9553.880247874766
+   },
+   {
+    "harmonics": 2,
+    "theta": 0.3,
+    "count": 912,
+    "haar_prediction": 912.3283602943748
+   },
+   {
+    "harmonics": 3,
+    "theta": 0.3,
+    "count": 52,
+    "haar_prediction": 87.12094095826404
+   },
+   {
+    "harmonics": 3,
+    "theta": 0.5,
+    "count": 404,
+    "haar_prediction": 403.3376896215929
+   },
+   {
+    "harmonics": 4,
+    "theta": 0.5,
+    "count": 64,
+    "haar_prediction": 64.19318703854117
+   }
+  ],
+  "seconds": 7.9
+ },
+ {
+  "q": 200009,
+  "order": 200010,
+  "primitive_root": 3,
+  "full_scan": false,
+  "k": 175993,
+  "delta": 86901,
+  "t_over_M": 1.4978100875964961,
+  "Q_square": 43219001,
+  "rho_square": 0.966336181340649,
+  "Q_polished": 43236225,
+  "rho_polished": 0.9667212937681068,
+  "harmonic_products": [
+   0.9998,
+   0.9855,
+   0.9434,
+   0.9897,
+   0.9741,
+   -0.0621,
+   0.2064,
+   0.8231
+  ],
+  "weyl_max": 0.008927312472372733,
+  "weyl_max_times_sqrt_q": 3.9925053372598223,
+  "weyl_vectors": 22,
+  "boxes": [
+   {
+    "harmonics": 1,
+    "theta": 0.3,
+    "count": 19276,
+    "haar_prediction": 19099.35711475428
+   },
+   {
+    "harmonics": 2,
+    "theta": 0.3,
+    "count": 1872,
+    "haar_prediction": 1823.8542568143023
+   },
+   {
+    "harmonics": 3,
+    "theta": 0.3,
+    "count": 208,
+    "haar_prediction": 174.1652522707148
+   },
+   {
+    "harmonics": 3,
+    "theta": 0.5,
+    "count": 880,
+    "haar_prediction": 806.3206123644206
+   },
+   {
+    "harmonics": 4,
+    "theta": 0.5,
+    "count": 144,
+    "haar_prediction": 128.32991117468157
+   }
+  ],
+  "seconds": 17.6
+ },
+ {
+  "q": 500009,
+  "order": 500010,
+  "primitive_root": 3,
+  "full_scan": false,
+  "k": 97749,
+  "delta": 138631,
+  "t_over_M": 1.5000199996800052,
+  "Q_square": 170547233,
+  "rho_square": 0.9647328623476291,
+  "Q_polished": 170547313,
+  "rho_polished": 0.9647333148828455,
+  "harmonic_products": [
+   0.9981,
+   0.9276,
+   0.9998,
+   0.9997,
+   0.9796,
+   0.58,
+   0.9989,
+   0.9945
+  ],
+  "weyl_max": 0.004746218640004015,
+  "weyl_max_times_sqrt_q": 3.3561135899553802,
+  "weyl_vectors": 22,
+  "boxes": [
+   {
+    "harmonics": 1,
+    "theta": 0.3,
+    "count": 47252,
+    "haar_prediction": 47747.246871295436
+   },
+   {
+    "harmonics": 2,
+    "theta": 0.3,
+    "count": 4500,
+    "haar_prediction": 4559.526215157422
+   },
+   {
+    "harmonics": 3,
+    "theta": 0.3,
+    "count": 436,
+    "haar_prediction": 435.40268117963063
+   },
+   {
+    "harmonics": 3,
+    "theta": 0.5,
+    "count": 2140,
+    "haar_prediction": 2015.7531536094016
+   },
+   {
+    "harmonics": 4,
+    "theta": 0.5,
+    "count": 376,
+    "haar_prediction": 320.8170784500129
+   }
+  ],
+  "seconds": 35.5
+ },
+ {
+  "q": 1000033,
+  "order": 1000034,
+  "primitive_root": 5,
+  "full_scan": false,
+  "k": 617699,
+  "delta": 316170,
+  "t_over_M": 0.49999800006399797,
+  "Q_square": 482674929,
+  "rho_square": 0.9653011098838208,
+  "Q_polished": 482681409,
+  "rho_polished": 0.9653140692293684,
+  "harmonic_products": [
+   0.9994,
+   0.9555,
+   0.935,
+   0.4901,
+   0.9496,
+   0.8657,
+   0.9852,
+   0.9999
+  ],
+  "weyl_max": 0.00448493099408427,
+  "weyl_max_times_sqrt_q": 4.485004994835171,
+  "weyl_vectors": 22,
+  "boxes": [
+   {
+    "harmonics": 1,
+    "theta": 0.3,
+    "count": 95112,
+    "haar_prediction": 95496.02163004456
+   },
+   {
+    "harmonics": 2,
+    "theta": 0.3,
+    "count": 8812,
+    "haar_prediction": 9119.19833281929
+   },
+   {
+    "harmonics": 3,
+    "theta": 0.3,
+    "count": 952,
+    "haar_prediction": 870.8192950221364
+   },
+   {
+    "harmonics": 3,
+    "theta": 0.5,
+    "count": 4016,
+    "haar_prediction": 4031.5708102876697
+   },
+   {
+    "harmonics": 4,
+    "theta": 0.5,
+    "count": 600,
+    "haar_prediction": 641.6444228822804
+   }
+  ],
+  "seconds": 174.9
+ }
+]
