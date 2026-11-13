@@ -1,0 +1,105 @@
+{
+ "note": "searches on the plus-I lift K(Q_m) at the crystalline orders 82 and 122; 'dilation L' is the quotient by j -> s j, s of order L, acting on both blocks",
+ "m41_order82": {
+  "flat": 369,
+  "square_wave_state": 361,
+  "quotients": [
+   {
+    "dilation": 2,
+    "orbits": 42,
+    "mode": "anneal",
+    "best": 361
+   },
+   {
+    "dilation": 4,
+    "orbits": 22,
+    "mode": "exact",
+    "best": 345
+   },
+   {
+    "dilation": 5,
+    "orbits": 18,
+    "mode": "exact",
+    "best": 361
+   },
+   {
+    "dilation": 10,
+    "orbits": 10,
+    "mode": "exact",
+    "best": 361
+   },
+   {
+    "dilation": 20,
+    "orbits": 6,
+    "mode": "exact",
+    "best": 121
+   }
+  ],
+  "full_cube_annealing": {
+   "restarts": 6000,
+   "sweeps": 1500,
+   "best": 361,
+   "hits": 18
+  }
+ },
+ "m61_order122": {
+  "flat": 671,
+  "square_wave_state": 661,
+  "quotients": [
+   {
+    "dilation": 2,
+    "orbits": 62,
+    "mode": "anneal",
+    "best": 661
+   },
+   {
+    "dilation": 3,
+    "orbits": 42,
+    "mode": "anneal",
+    "best": 661
+   },
+   {
+    "dilation": 5,
+    "orbits": 26,
+    "mode": "exact",
+    "best": 661
+   },
+   {
+    "dilation": 6,
+    "orbits": 22,
+    "mode": "exact",
+    "best": 613
+   },
+   {
+    "dilation": 10,
+    "orbits": 14,
+    "mode": "exact",
+    "best": 581
+   },
+   {
+    "dilation": 15,
+    "orbits": 10,
+    "mode": "exact",
+    "best": 661
+   },
+   {
+    "dilation": 30,
+    "orbits": 6,
+    "mode": "exact",
+    "best": 181
+   }
+  ],
+  "full_cube_annealing": {
+   "restarts": 6000,
+   "sweeps": 1500,
+   "best": 645,
+   "hits": 3
+  }
+ },
+ "gf25_order50": {
+  "flat": 175,
+  "square_wave_state_plus": 169,
+  "square_wave_state_minus": 169,
+  "exact_on_file": 169
+ }
+}

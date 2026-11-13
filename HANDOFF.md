@@ -1,3 +1,68 @@
+## 2026-11-12: Paley-core lift undercut is at most p-1 for every p; Phi(C198) = 1373; windows for all primes below 1000
+
+The original MO limit is still OPEN. Nothing below was entered in
+`src/original_mo_status.py`. Draft; independent review pending. Parent
+checkpoint: `581b955`.
+
+**Proved** (`evidence/NOTE_2026-11-12_QUARTIC_RESONANCE.md`, sections 1-3).
+`m` prime, `m = a^2 + b^2 = 1 (mod 4)`, `a` even; `psi` the quartic character;
+the *square wave* is `+1` on two consecutive quartic classes of `GF(m)*` and
+`-1` on the other two. One Jacobi sum `J(chi, psi)` (`|Re J| = b`,
+`|Im J| = a`) evaluates every form on these states.
+
+- *Theorem L (lifts).* Both coherent lifts `K_+-(Q_m)` of the Paley core have
+  a square-wave pair `(u, v)` with `|Q_K| = (m-1)(a+b) + 1`. If `2m - 1 = p^2`
+  then `a + b = p`, so
+
+      Phi(K_+-(Q_m)) >= m p - (p-1) = Phi(C_{p^2+1}) - (p-1).
+
+  This is the inequality left open in D9 of
+  `NOTE_2026-09-19_SUPERLEVEL_DISCRETE_DERIVATIVE.md`, in the direction that
+  matters for `gamma_p`: the Paley-core lift family can never certify more
+  than `gamma_p >= (p-1)/n^(3/2)`. Equality at `p = 3, 5, 7` (13, 61, 169 on
+  file; the `GF(25)` state evaluates to 169 for both signs). Checked exactly
+  for all 59 primes `m < 700`, both signs; lift state values at orders 82,
+  122, 226, 362: 361, 661, 1681, 3421.
+- *Theorem Q (Paley).* `Phi(C_{q+1}) >= (q-1) a / 2 + 1`. With Theorem 4 of the
+  parity-ceiling note, `rho >= max(cos w, sin w) - O(1/q)`, `tan w = a/b`.
+
+**Exact.** `Phi(C198) = 1373` (`q = 197 = 14^2 + 1`): Theorem Q meets the
+parity ceiling. Ten exact Paley values are now on file at prime `q`:
+5, 13, 17, 29, 37, 41, 53, 61, 101, 197.
+
+**Windows.** `evidence/quartic_resonance_20261112/windows.json` has rigorous
+`L <= Phi(C_{q+1}) <= U` for all 80 primes `q = 1 (mod 4)` below 1000. `L` is
+the best state fixed by a subgroup with at most 26 orbits (both tori, A4, S4,
+A5), each quotient maximised exactly; `U` is the parity ceiling. Narrow
+windows: `173: [1131, 1133]`, `229: [1725, 1731]`, `257: [2049, 2055]`,
+`293: [2499, 2509]`, `401: [4001, 4009]`, `577: [6913, 6921]`,
+`677: [8789, 8797]`. Certified `L/S >= 0.97` at 28 of 80 primes. A wide window
+is not a bound on `Phi`.
+
+**Operational.** Full-cube annealing on the order-122 lift stops at 645 and
+never finds the 661 state; the 10-orbit quotient finds it at once. Do not read
+an annealing shortfall on a lift or a Paley matrix as an undercut. Use orbit
+quotients (`scripts/parity_ceiling/sym.py`, `windows.py`).
+
+**Retired.** Exhaustive or annealed evaluation of Paley-core lifts at orders
+82, 122, ... as a route to a permanent gap: the undercut is at most `p - 1`
+there by theorem. Lifts of other blocks are not covered.
+
+**Next unresolved target.** Unchanged from the 2026-11-11 entry (a uniform
+bound off resonance on an explicit ratio-dense set of primes). The set now
+has to avoid `a/b` small (torus), `b/a` small (square wave), and the
+small-orbit states in `windows.json`.
+
+**For the reviewer.** (1) The Lemma `Q g_alpha = g_{conj(alpha J)}` and the
+two short proofs. (2) `python3 scripts/parity_ceiling/quartic.py 1000`
+(seconds). (3) The order-198 hand argument in section 4. (4) The windows
+table regenerates in about 25 minutes on two cores.
+
+Files: `evidence/NOTE_2026-11-12_QUARTIC_RESONANCE.md`;
+`evidence/quartic_resonance_20261112/` (quartic, windows, lift_search);
+`scripts/parity_ceiling/{quartic,windows}.py`;
+`tests/test_quartic_resonance_note.py` (8 tests, pass).
+
 ## 2026-11-11: conference parity ceiling; Phi(C54) = 189, Phi(C102) = 501, Phi(C62) = 229; no uniform Paley gap
 
 The original MO limit is still OPEN. Nothing below was entered in

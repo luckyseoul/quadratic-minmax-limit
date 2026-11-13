@@ -12,6 +12,8 @@ OPEN; nothing here bounds `m_n` from below or makes a cross-order claim.
 | `sym.py` + `qopt.c` | best Paley state fixed by an automorphism of prime order (orbit quotient; exact Gray code up to 34 orbits, annealing above) |
 | `defect.c` | exact decision: does `C_{q+1}` have a state with a prescribed field multiset (sparse defect-vector search) |
 | `sa.c` | annealing lower bounds for `Phi(C_{q+1})` (witnesses only) |
+| `quartic.py` | square-wave states on quartic classes: Paley value `(q-1)a/2+1`, lift value `(m-1)(a+b)+1` (note of 2026-11-12) |
+| `windows.py` | rigorous windows `L <= Phi(C_{q+1}) <= U` from small-orbit quotients and the parity ceiling |
 
 Run from the repository root:
 
@@ -26,7 +28,9 @@ QOPT=/tmp/qopt python3 scripts/parity_ceiling/sym.py 61        # all four quotie
 SECOND_SIGN=1  /tmp/defect 61 7  -1 3  1 12                    # pattern {3:3, 7:47, 11:12}, half 1
 SECOND_SIGN=-1 /tmp/defect 61 7  -1 3  1 12                    # half 2 (minutes each)
 /tmp/sa 61 30000 1500 101                                      # q restarts sweeps seed
-python3 -m pytest tests/test_parity_ceiling_note.py -q
+python3 scripts/parity_ceiling/quartic.py 1000                  # both square-wave identities, exact
+QOPT=/tmp/qopt python3 scripts/parity_ceiling/windows.py 5 1000  # windows table, ~25 min on two cores
+python3 -m pytest tests/test_parity_ceiling_note.py tests/test_quartic_resonance_note.py -q
 ```
 
 `defect` arguments: `q c t1 n1 t2 n2 ...` where `c` is the modal field value
